@@ -1,5 +1,11 @@
 <template>
   <div class="hello">
+
+    <sidebar-pushable class="test">
+      <sidebar visible />
+      <sidebar-pusher>Hello world</sidebar-pusher>
+    </sidebar-pushable>
+
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -21,8 +27,15 @@
 </template>
 
 <script>
+import Sidebar from './Modules/Sidebar';
+
 export default {
   name: 'hello',
+  components: {
+    Sidebar,
+    SidebarPushable: Sidebar.Pushable,
+    SidebarPusher: Sidebar.Pusher,
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
@@ -49,5 +62,11 @@ li {
 
 a {
   color: #42b983;
+}
+
+.test {
+  border: 1px solid red;
+  height: 500px;
+  width: 500px;
 }
 </style>
