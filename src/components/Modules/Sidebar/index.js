@@ -7,14 +7,13 @@ const Sidebar = Vue.component('Sidebar', {
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
     as: Object,
-    class: String,
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),
     visible: Boolean,
     width: Enum(['very thin', 'thin', 'wide', 'very wide']),
   },
   render(createElement) {
     return createElement(this.as || 'div', {
-      class: `${this.class || ''} ui sidebar vertical menu ${this.direction} ${this.visible ? 'visible' : ''}`,
+      class: `ui sidebar vertical menu ${this.direction} ${this.visible ? 'visible' : ''}`,
     });
   },
 });

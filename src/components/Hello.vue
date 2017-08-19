@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
 
+    <button @click="visible = !visible">toggle visibility</button>
     <sidebar-pushable class="test">
-      <sidebar visible />
+      <sidebar :visible="visible" />
       <sidebar-pusher>Hello world</sidebar-pusher>
     </sidebar-pushable>
 
@@ -39,6 +40,7 @@ export default {
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
+      visible: false,
     };
   },
 };
