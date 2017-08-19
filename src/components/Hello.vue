@@ -3,7 +3,7 @@
 
     <button @click="visible = !visible">toggle visibility</button>
     <sidebar-pushable class="test">
-      <sidebar :visible="visible" />
+      <sidebar :visible="visible" pippo="baudo" />
       <sidebar-pusher>Hello world</sidebar-pusher>
     </sidebar-pushable>
 
@@ -28,14 +28,14 @@
 </template>
 
 <script>
-import Sidebar from './Modules/Sidebar';
+import { Sidebar, SidebarPushable, SidebarPusher } from '.';
 
 export default {
   name: 'hello',
   components: {
     Sidebar,
-    SidebarPushable: Sidebar.Pushable,
-    SidebarPusher: Sidebar.Pusher,
+    SidebarPushable,
+    SidebarPusher,
   },
   data() {
     return {
