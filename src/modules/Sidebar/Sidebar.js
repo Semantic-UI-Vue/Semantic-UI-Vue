@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { Enum } from '@/lib/PropTypes';
+import { Enum } from 'src/lib/PropTypes';
 
 export default Vue.component('Sidebar', {
   props: {
