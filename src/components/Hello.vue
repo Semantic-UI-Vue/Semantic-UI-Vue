@@ -3,7 +3,7 @@
 
     <button @click="visible = !visible">toggle visibility</button>
     <sidebar-pushable class="test">
-      <sidebar :visible="visible" pippo="baudo" />
+      <sidebar :visible="visible" animation="overlay" />
       <sidebar-pusher>Hello world</sidebar-pusher>
     </sidebar-pushable>
 

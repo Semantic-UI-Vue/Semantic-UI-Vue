@@ -9,9 +9,22 @@ export default Vue.component('Sidebar', {
     visible: Boolean,
     width: Enum(['very thin', 'thin', 'wide', 'very wide']),
   },
+  data() {
+    return {
+      animating: false,
+    };
+  },
+  watch: {
+    visible() {
+      this.animating = true;
+      setTimeout(() => {
+        this.animating = false;
+      }, 500);
+    },
+  },
   render(createElement) {
     return createElement(this.as || 'div', {
-      class: `ui sidebar vertical menu ${this.direction} ${this.visible ? 'visible' : ''}`,
+      class: `ui sidebar vertical menu ${this.direction} ${this.animation}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`,
     });
   },
 });
