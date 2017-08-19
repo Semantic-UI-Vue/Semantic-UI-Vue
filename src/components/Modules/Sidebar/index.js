@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { Enum } from '../../../PropTypes';
+import { Enum } from '@/lib/PropTypes';
 import Pushable from './Pushable';
 import Pusher from './Pusher';
 
