@@ -26,7 +26,10 @@ export default {
     },
   },
   render() {
-    const as = this.as;
-    return <as class={`ui sidebar vertical menu ${this.direction} ${this.animation}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`} />;
+    return (
+      <this.as class={`ui sidebar vertical menu ${this.direction} ${this.animation || ''}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`}>
+        {this.$slots.default}
+      </this.as>
+    );
   },
 };

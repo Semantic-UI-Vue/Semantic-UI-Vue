@@ -7,6 +7,6 @@ export default {
     },
   },
   render() {
-    return <this.as class="pusher"><slot /></this.as>;
+    return <this.as class="pusher">{this.$slots.default}</this.as>;
   },
 };

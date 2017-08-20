@@ -7,7 +7,6 @@ export default {
     },
   },
   render() {
-    const as = this.as;
-    return <as class="pushable"><slot /></as>;
+    return <this.as class="pushable">{this.$slots.default}</this.as>;
   },
 };
