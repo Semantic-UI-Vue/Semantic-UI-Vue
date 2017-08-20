@@ -5,7 +5,7 @@ const pascalCase = name => upperFirst(camelCase(name));
 
 export default function getElementType(instance, defaultEl = 'div') {
   const tag = pascalCase(instance.$vnode.data.tag);
-  if (tag === pascalCase(instance.name)) return defaultEl;
+  if (!tag) return defaultEl;
 
   const context = instance.$vnode.context;
   const entry = Object
