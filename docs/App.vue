@@ -48,8 +48,8 @@
           </a>
         </sui-menu-menu>
       </sui-menu-item>
+      <router-view is="sui-sidebar-pusher"></router-view>
     </sui-menu>
-    <router-view></router-view>
   </div>
 </template>
 
