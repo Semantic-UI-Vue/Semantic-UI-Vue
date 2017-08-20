@@ -22,9 +22,20 @@
           inverted
           placeholder="Start typing..."
           transparent
+          v-model="search"
         />
       </sui-menu-item>
-      <sui-menu-item v-for="mod in modules">
+      <sui-menu-menu v-if="search">
+        <a
+          is="sui-menu-item"
+          :active="!index"
+          v-for="(entry, index) in matchingComponents"
+        >
+          {{ entry.content }}
+          <span class="press-enter" v-if="!index">Press Enter</span>
+        </a>
+      </sui-menu-menu>
+      <sui-menu-item v-if="!search" v-for="mod in modules">
         <sui-header>{{ mod.name }}</sui-header>
         <sui-menu-menu>
           <a
@@ -43,12 +54,25 @@
 
 <script>
 import 'semantic-ui-css/semantic.css';
+import * as components from 'src';
 import * as collections from 'src/collections';
 import * as elements from 'src/elements';
 import * as modules from 'src/modules';
 
 export default {
   name: 'app',
+  computed: {
+    matchingComponents() {
+      return this.modules
+        .map(({ name, components }) => (
+          components
+            .filter(compName => new RegExp(this.search, 'i').test(compName))
+            .map(component => ({ content: component }))
+        ))
+        .reduce((acc, arr) => acc.concat(arr), [])
+        .sort((a, b) => a.component > b.component)
+    }
+  },
   data() {
     const shouldShow = ([,component]) => (
       !(component.meta && component.meta.parent)
@@ -68,8 +92,9 @@ export default {
           name: 'Modules',
           components: Object.entries(modules).filter(shouldShow).map(([k]) => k),
         },
-      ]
-    }
+      ],
+      search: '',
+    };
   },
   components: {
     Test: {
@@ -79,3 +104,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.press-enter {
+  color: rgb(53, 189, 178);
+  float: right;
+}
+</style>

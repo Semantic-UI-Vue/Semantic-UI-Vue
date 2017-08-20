@@ -7,12 +7,17 @@ export default {
     icon: String,
     inverted: Boolean,
     transparent: Boolean,
+    value: String,
   },
   render() {
     const ElementType = getElementType(this);
     return (
       <ElementType {...getChildProps(this)} class={`ui input${this.transparent ? ' transparent' : ''}${this.inverted ? ' inverted' : ''}${this.icon ? ' icon' : ''}`}>
-        <input {...{ attrs: this.$attrs }} />
+        <input
+          value={this.value}
+          onInput={e => this.$emit('input', e.target.value)}
+          {...{ attrs: this.$attrs }}
+        />
         {this.icon && <Icon name={this.icon} />}
       </ElementType>
     );
