@@ -1,13 +1,10 @@
-import { getChildProps } from 'src/lib';
-import { ElType } from 'src/lib/PropTypes';
+import { getChildProps, getElementType } from 'src/lib';
 
 export default {
   name: 'SuiSidebarPusher',
-  props: {
-    as: ElType(),
-  },
   render() {
-    return <this.as {...getChildProps(this)} class="pusher">{this.$slots.default}</this.as>;
+    const ElementType = getElementType(this);
+    return <ElementType {...getChildProps(this)} class="pusher">{this.$slots.default}</ElementType>;
   },
   meta: {
     parent: 'SuiSidebar',

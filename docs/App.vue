@@ -1,6 +1,6 @@
 <template>
   <div id="app" is="sui-sidebar-pushable">
-    <sui-sidebar as="sui-menu" inverted="true" vertical="true" visible>
+    <sui-menu is="sui-sidebar" inverted="true" vertical="true" visible>
       <sui-menu-item>
         <sui-image src="/static/images/logo.png" spaced="right" size="mini" />
         <strong>Semantic UI Vue</strong>
@@ -36,7 +36,7 @@
           </a>
         </sui-menu-menu>
       </sui-menu-item>
-    </sui-sidebar>
+    </sui-menu>
     <router-view></router-view>
   </div>
 </template>
@@ -71,5 +71,11 @@ export default {
       ]
     }
   },
+  components: {
+    Test: {
+      name: 'Test',
+      template: '<div style="border: 5px solid red"><slot /></div>',
+    },
+  }
 };
 </script>

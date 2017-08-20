@@ -1,10 +1,9 @@
-import { getChildProps } from 'src/lib';
-import { ElType, Enum } from 'src/lib/PropTypes';
+import { getChildProps, getElementType } from 'src/lib';
+import { Enum } from 'src/lib/PropTypes';
 
 export default {
   name: 'SuiImage',
   props: {
-    as: ElType('img'),
     size: Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
     spaced: Enum(['left', 'right'], { type: Boolean }),
     src: {
@@ -20,14 +19,16 @@ export default {
     },
   },
   render() {
+    const ElementType = getElementType(this, 'img');
+
     return (
-      <this.as
+      <ElementType
         {...getChildProps(this)}
         class={`ui image ${this.size || ''} ${this.getSpacedClass()}`}
         src={this.src}
       >
         {this.$slots.default}
-      </this.as>
+      </ElementType>
     );
   },
 };

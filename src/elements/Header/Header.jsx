@@ -1,16 +1,13 @@
-import { getChildProps } from 'src/lib';
-import { ElType } from 'src/lib/PropTypes';
+import { getChildProps, getElementType } from 'src/lib';
 
 export default {
   name: 'SuiHeader',
-  props: {
-    as: ElType(),
-  },
   render() {
+    const ElementType = getElementType(this);
     return (
-      <this.as {...getChildProps(this)} class="header">
+      <ElementType {...getChildProps(this)} class="header">
         {this.$slots.default}
-      </this.as>
+      </ElementType>
     );
   },
 };

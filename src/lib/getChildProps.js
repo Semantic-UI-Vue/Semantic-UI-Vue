@@ -1,10 +1,9 @@
-import _Vue from 'vue';
-import _camelCase from 'lodash/camelCase';
+import Vue from 'vue';
+import camelCase from 'lodash/camelCase';
+import getElementType from './getElementType';
 
 export default function getChildProps(instance) {
-  const camelCase = _camelCase;
-  const Vue = _Vue;
-  const el = instance.as;
+  const el = getElementType(instance);
   let childProps;
 
   if (typeof el === 'string') {

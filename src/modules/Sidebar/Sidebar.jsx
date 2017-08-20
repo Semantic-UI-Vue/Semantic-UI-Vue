@@ -1,12 +1,10 @@
-import Vue from 'vue';
-import { getChildProps } from 'src/lib';
-import { ElType, Enum } from 'src/lib/PropTypes';
+import { getElementType, getChildProps } from 'src/lib';
+import { Enum } from 'src/lib/PropTypes';
 
 export default {
   name: 'SuiSidebar',
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
-    as: ElType(),
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),
     visible: Boolean,
     width: Enum(['very thin', 'thin', 'wide', 'very wide']),
@@ -25,15 +23,15 @@ export default {
     },
   },
   render() {
-    const V = Vue; // eslint-disable-line
+    const ElementType = getElementType(this);
 
     return (
-      <this.as
+      <ElementType
         {...getChildProps(this)}
         class={`ui sidebar vertical menu ${this.direction} ${this.animation || ''}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`}
       >
         {this.$slots.default}
-      </this.as>
+      </ElementType>
     );
   },
 };

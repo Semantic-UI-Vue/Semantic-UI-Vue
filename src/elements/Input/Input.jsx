@@ -1,21 +1,20 @@
-import { getChildProps } from 'src/lib';
-import { ElType } from 'src/lib/PropTypes';
+import { getChildProps, getElementType } from 'src/lib';
 import Icon from 'src/elements/Icon/Icon';
 
 export default {
   name: 'SuiInput',
   props: {
-    as: ElType(),
     icon: String,
     inverted: Boolean,
     transparent: Boolean,
   },
   render() {
+    const ElementType = getElementType(this);
     return (
-      <this.as {...getChildProps(this)} class={`ui input${this.transparent ? ' transparent' : ''}${this.inverted ? ' inverted' : ''}${this.icon ? ' icon' : ''}`}>
+      <ElementType {...getChildProps(this)} class={`ui input${this.transparent ? ' transparent' : ''}${this.inverted ? ' inverted' : ''}${this.icon ? ' icon' : ''}`}>
         <input {...{ attrs: this.$attrs }} />
         {this.icon && <Icon name={this.icon} />}
-      </this.as>
+      </ElementType>
     );
   },
 };

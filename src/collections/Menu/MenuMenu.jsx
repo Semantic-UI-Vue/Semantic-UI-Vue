@@ -1,16 +1,13 @@
-import { getChildProps } from 'src/lib';
-import { ElType } from 'src/lib/PropTypes';
+import { getChildProps, getElementType } from 'src/lib';
 
 export default {
   name: 'SuiMenuMenu',
-  props: {
-    as: ElType(),
-  },
   render() {
+    const ElementType = getElementType(this);
     return (
-      <this.as {...getChildProps(this)} class="menu">
+      <ElementType {...getChildProps(this)} class="menu">
         {this.$slots.default}
-      </this.as>
+      </ElementType>
     );
   },
   meta: {
