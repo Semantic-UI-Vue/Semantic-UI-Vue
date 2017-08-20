@@ -26,26 +26,26 @@
         />
       </sui-menu-item>
       <sui-menu-menu v-if="search">
-        <a
+        <router-link
           is="sui-menu-item"
           :active="!index"
-          :href="entry.href"
+          :to="entry.href"
           v-for="(entry, index) in matchingComponents"
         >
           {{ entry.content }}
           <span class="press-enter" v-if="!index">Press Enter</span>
-        </a>
+        </router-link>
       </sui-menu-menu>
       <sui-menu-item v-if="!search" v-for="mod in modules">
         <sui-header>{{ mod.name }}</sui-header>
         <sui-menu-menu>
-          <a
+          <router-link
             is="sui-menu-item"
-            :href="getUrl(mod.name, comp)"
+            :to="getUrl(mod.name, comp)"
             v-for="comp in mod.components"
           >
             {{ comp }}
-          </a>
+          </router-link>
         </sui-menu-menu>
       </sui-menu-item>
       <router-view is="sui-sidebar-pusher"></router-view>
