@@ -1,5 +1,17 @@
+import uniq from 'lodash/uniq';
+
 export function Enum(values = [], obj = {}) {
-  return { ...obj, type: String, validator: value => values.includes(value) };
+  let type;
+
+  if (obj.type && Array.isArray(obj.type)) {
+    type = uniq([...obj.type, String]);
+  } else if (obj.type) {
+    type = [String, obj.type];
+  } else {
+    type = String;
+  }
+
+  return { ...obj, type, validator: value => values.includes(value) };
 }
 
 export function ElType(type = 'div', obj = {}) {

@@ -1,6 +1,10 @@
 <template>
   <div id="app" is="sui-sidebar-pushable">
-    <sui-sidebar as="sui-menu" inverted="true" vertical="true" visible></sui-sidebar>
+    <sui-sidebar as="sui-menu" inverted="true" vertical="true" visible>
+      <sui-menu-item>
+        <sui-image src="/static/images/logo.png" spaced="right" size="mini" />
+      </sui-menu-item>
+    </sui-sidebar>
     <router-view></router-view>
   </div>
 </template>
