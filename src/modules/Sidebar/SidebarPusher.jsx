@@ -9,4 +9,7 @@ export default {
   render() {
     return <this.as {...getChildProps(this)} class="pusher">{this.$slots.default}</this.as>;
   },
+  meta: {
+    parent: 'SuiSidebar',
+  },
 };

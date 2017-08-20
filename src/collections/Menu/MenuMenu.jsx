@@ -13,4 +13,7 @@ export default {
       </this.as>
     );
   },
+  meta: {
+    parent: 'SuiMenu',
+  },
 };

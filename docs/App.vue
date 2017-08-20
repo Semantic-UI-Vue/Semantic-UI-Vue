@@ -24,6 +24,18 @@
           transparent
         />
       </sui-menu-item>
+      <sui-menu-item v-for="mod in modules">
+        <sui-header>{{ mod.name }}</sui-header>
+        <sui-menu-menu>
+          <a
+            is="sui-menu-item"
+            href="/hello"
+            v-for="comp in mod.components"
+          >
+            {{ comp }}
+          </a>
+        </sui-menu-menu>
+      </sui-menu-item>
     </sui-sidebar>
     <router-view></router-view>
   </div>
@@ -31,8 +43,33 @@
 
 <script>
 import 'semantic-ui-css/semantic.css';
+import * as collections from 'src/collections';
+import * as elements from 'src/elements';
+import * as modules from 'src/modules';
 
 export default {
   name: 'app',
+  data() {
+    const shouldShow = ([,component]) => (
+      !(component.meta && component.meta.parent)
+    );
+
+    return {
+      modules: [
+        {
+          name: 'Elements',
+          components: Object.entries(elements).filter(shouldShow).map(([k]) => k),
+        },
+        {
+          name: 'Collections',
+          components: Object.entries(collections).filter(shouldShow).map(([k]) => k),
+        },
+        {
+          name: 'Modules',
+          components: Object.entries(modules).filter(shouldShow).map(([k]) => k),
+        },
+      ]
+    }
+  },
 };
 </script>
