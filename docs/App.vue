@@ -16,6 +16,14 @@
           </a>
         </sui-menu-menu>
       </sui-menu-item>
+      <sui-menu-item>
+        <sui-input
+          icon="search"
+          inverted
+          placeholder="Start typing..."
+          transparent
+        />
+      </sui-menu-item>
     </sui-sidebar>
     <router-view></router-view>
   </div>
