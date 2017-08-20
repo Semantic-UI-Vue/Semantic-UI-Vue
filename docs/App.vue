@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-
+  <div id="app" is="sui-sidebar-pushable">
+    <sui-sidebar></sui-sidebar>
     <router-view></router-view>
   </div>
 </template>

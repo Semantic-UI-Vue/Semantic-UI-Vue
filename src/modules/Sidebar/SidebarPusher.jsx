@@ -1,5 +1,5 @@
 export default {
-  name: 'sui-sidebar-pusher',
+  name: 'SuiSidebarPusher',
   props: {
     as: {
       type: [Object, String],

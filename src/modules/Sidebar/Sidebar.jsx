@@ -1,7 +1,7 @@
 import { Enum } from 'src/lib/PropTypes';
 
 export default {
-  name: 'sui-sidebar',
+  name: 'SuiSidebar',
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
     as: {

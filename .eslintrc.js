@@ -52,5 +52,13 @@ module.exports = {
     'vue/no-side-effects-in-computed-properties': 'error',
     'vue/order-in-components': 'error',
     'vue/require-prop-types': 'error',
+    'vue/attribute-hyphenation': 'error',
+    'vue/html-quotes': 'error',
+    'vue/html-self-closing': 'error',
+    'vue/max-attributes-per-line': 'error',
+    'vue/name-property-casing': 'error',
+    // 'vue/no-multi-spaces': 'error',
+    'vue/v-bind-style': 'error',
+    'vue/v-on-style': 'error',
   }
 }

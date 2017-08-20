@@ -1,5 +1,5 @@
 export default {
-  name: 'sui-sidebar-pushable',
+  name: 'SuiSidebarPushable',
   props: {
     as: {
       type: [Object, String],

@@ -10,8 +10,8 @@ Vue.use(SemanticUI);
 
 /* eslint-disable no-new */
 new Vue({
+  components: { App },
   el: '#app',
   router,
   template: '<App/>',
-  components: { App },
 });
