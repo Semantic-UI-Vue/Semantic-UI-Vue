@@ -3,6 +3,18 @@
     <sui-sidebar as="sui-menu" inverted="true" vertical="true" visible>
       <sui-menu-item>
         <sui-image src="/static/images/logo.png" spaced="right" size="mini" />
+        <strong>Semantic UI Vue</strong>
+      </sui-menu-item>
+      <sui-menu-item>
+        <sui-header>Getting Started</sui-header>
+        <sui-menu-menu>
+          <a is="sui-menu-item" href="/introduction">Introduction</a>
+          <a is="sui-menu-item" href="/usage">Usage</a>
+          <a is="sui-menu-item" href="/usage">
+            Github
+            <sui-icon name="github" />
+          </a>
+        </sui-menu-menu>
       </sui-menu-item>
     </sui-sidebar>
     <router-view></router-view>
@@ -16,13 +28,3 @@ export default {
   name: 'app',
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>
