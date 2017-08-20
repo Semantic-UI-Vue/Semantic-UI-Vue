@@ -28,6 +28,7 @@
       <sui-menu-menu v-if="search">
         <router-link
           is="sui-menu-item"
+          :key="entry.component"
           :active="!index"
           :to="entry.href"
           v-for="(entry, index) in matchingComponents"
@@ -36,11 +37,12 @@
           <span class="press-enter" v-if="!index">Press Enter</span>
         </router-link>
       </sui-menu-menu>
-      <sui-menu-item v-if="!search" v-for="mod in modules">
+      <sui-menu-item :key="mod.name" v-if="!search" v-for="mod in modules">
         <sui-header>{{ mod.name }}</sui-header>
         <sui-menu-menu>
           <router-link
             is="sui-menu-item"
+            :key="comp"
             :to="getUrl(mod.name, comp)"
             v-for="comp in mod.components"
           >
