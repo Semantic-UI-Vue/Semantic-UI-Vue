@@ -29,6 +29,7 @@
         <a
           is="sui-menu-item"
           :active="!index"
+          :href="entry.href"
           v-for="(entry, index) in matchingComponents"
         >
           {{ entry.content }}
@@ -40,7 +41,7 @@
         <sui-menu-menu>
           <a
             is="sui-menu-item"
-            href="/hello"
+            :href="getUrl(mod.name, comp)"
             v-for="comp in mod.components"
           >
             {{ comp }}
@@ -67,7 +68,10 @@ export default {
         .map(({ name, components }) => (
           components
             .filter(compName => new RegExp(this.search, 'i').test(compName))
-            .map(component => ({ content: component }))
+            .map(component => ({
+              content: component,
+              href: this.getUrl(name, component),
+            }))
         ))
         .reduce((acc, arr) => acc.concat(arr), [])
         .sort((a, b) => a.component > b.component)
@@ -101,7 +105,12 @@ export default {
       name: 'Test',
       template: '<div style="border: 5px solid red"><slot /></div>',
     },
-  }
+  },
+  methods: {
+    getUrl(mod, comp) {
+      return `/${mod}/${comp}`.toLowerCase();
+    },
+  },
 };
 </script>
 
