@@ -1,10 +1,13 @@
-import Vue from 'vue';
 import { Enum } from 'src/lib/PropTypes';
 
-export default Vue.component('Sidebar', {
+export default {
+  name: 'sui-sidebar',
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
-    as: Object,
+    as: {
+      type: Object,
+      default: 'div',
+    },
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),
     visible: Boolean,
     width: Enum(['very thin', 'thin', 'wide', 'very wide']),
@@ -22,9 +25,9 @@ export default Vue.component('Sidebar', {
       }, 500);
     },
   },
-  render(createElement) {
-    return createElement(this.as || 'div', {
+  render(h) {
+    return h(this.as, {
       class: `ui sidebar vertical menu ${this.direction} ${this.animation}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`,
     });
   },
-});
+};

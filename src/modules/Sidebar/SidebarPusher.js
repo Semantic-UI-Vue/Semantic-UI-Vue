@@ -1,12 +1,14 @@
-import Vue from 'vue';
-
-export default Vue.component('SidebarPusher', {
+export default {
+  name: 'sui-sidebar-pusher',
   props: {
-    as: Object,
+    as: {
+      type: Object,
+      default: 'div',
+    },
   },
-  render(createElement) {
-    return createElement(this.as || 'div', {
+  render(h) {
+    return h(this.as, {
       class: 'pusher',
     }, this.$slots.default);
   },
-});
+};
