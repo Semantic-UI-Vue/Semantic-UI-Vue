@@ -1,5 +1,9 @@
-import * as Modules from './modules';
+import * as collections from './collections';
+import * as modules from './modules';
 
 export default (Vue) => {
-  Object.values(Modules).forEach(Comp => Vue.component(Comp.name, Comp));
+  Object.values({
+    ...collections,
+    ...modules,
+  }).forEach(Comp => Vue.component(Comp.name, Comp));
 };

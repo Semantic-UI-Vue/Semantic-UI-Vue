@@ -1,6 +1,6 @@
 <template>
   <div id="app" is="sui-sidebar-pushable">
-    <sui-sidebar visible></sui-sidebar>
+    <sui-sidebar as="sui-menu" inverted="true" vertical="true" visible></sui-sidebar>
     <router-view></router-view>
   </div>
 </template>

@@ -1,12 +1,12 @@
+import { getChildProps } from 'src/lib';
+import { ElType } from 'src/lib/PropTypes';
+
 export default {
   name: 'SuiSidebarPushable',
   props: {
-    as: {
-      type: [Object, String],
-      default: 'div',
-    },
+    as: ElType(),
   },
   render() {
-    return <this.as class="pushable">{this.$slots.default}</this.as>;
+    return <this.as {...getChildProps(this)} class="pushable">{this.$slots.default}</this.as>;
   },
 };
