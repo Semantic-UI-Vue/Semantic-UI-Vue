@@ -2,13 +2,11 @@ export default {
   name: 'sui-sidebar-pusher',
   props: {
     as: {
-      type: Object,
+      type: [Object, String],
       default: 'div',
     },
   },
-  render(h) {
-    return h(this.as, {
-      class: 'pusher',
-    }, this.$slots.default);
+  render() {
+    return <this.as class="pusher"><slot /></this.as>;
   },
 };

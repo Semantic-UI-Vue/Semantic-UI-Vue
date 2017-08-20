@@ -2,14 +2,17 @@
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   parserOptions: {
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
   env: {
     browser: true,
   },
-  extends: 'airbnb-base',
+  extends: [
+    'airbnb-base',
+    'plugin:vue/recommended',
+  ],
   // required to lint *.vue files
   plugins: [
     'html'
@@ -34,6 +37,20 @@ module.exports = {
       'optionalDependencies': ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+
+    'vue/no-dupe-keys': 'error',
+    'vue/no-reserved-keys': 'error',
+    'vue/no-shared-component-data': 'error',
+    'vue/no-template-key': 'error',
+    'vue/require-render-return': 'error',
+    'vue/require-valid-default-prop': 'error',
+    'vue/return-in-computed-property': 'error',
+    'vue/html-end-tags': 'error',
+    'vue/no-async-in-computed-properties': 'error',
+    'vue/no-duplicate-attributes': 'error',
+    'vue/no-side-effects-in-computed-properties': 'error',
+    'vue/order-in-components': 'error',
+    'vue/require-prop-types': 'error',
   }
 }

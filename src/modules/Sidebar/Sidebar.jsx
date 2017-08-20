@@ -5,7 +5,7 @@ export default {
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
     as: {
-      type: Object,
+      type: [Object, String],
       default: 'div',
     },
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),
@@ -25,9 +25,8 @@ export default {
       }, 500);
     },
   },
-  render(h) {
-    return h(this.as, {
-      class: `ui sidebar vertical menu ${this.direction} ${this.animation}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`,
-    });
+  render() {
+    const as = this.as;
+    return <as class={`ui sidebar vertical menu ${this.direction} ${this.animation}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`} />;
   },
 };
