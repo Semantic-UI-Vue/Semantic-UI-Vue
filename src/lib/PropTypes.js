@@ -11,5 +11,11 @@ export function Enum(values = [], obj = {}) {
     type = String;
   }
 
-  return { ...obj, type, validator: value => values.includes(value) };
+  return { ...obj, choices: values, type, validator: value => values.includes(value) };
 }
+
+Enum.Size = Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']);
+Enum.Color = Enum([
+  'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+  'violet', 'purple', 'pink', 'brown', 'grey', 'black',
+]);

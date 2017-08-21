@@ -1,6 +1,12 @@
 <template>
   <div id="app" is="sui-sidebar-pushable">
-    <sui-menu is="sui-sidebar" inverted="true" vertical="true" visible>
+    <sui-menu
+      class="docs-sidebar"
+      is="sui-sidebar"
+      inverted="true"
+      vertical="true"
+      visible
+    >
       <sui-menu-item>
         <sui-image src="/static/images/logo.png" spaced="right" size="mini" />
         <strong>Semantic UI Vue</strong>
@@ -51,7 +57,9 @@
         </sui-menu-menu>
       </sui-menu-item>
     </sui-menu>
-    <router-view is="sui-sidebar-pusher"></router-view>
+    <div class="docs-container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -124,5 +132,22 @@ export default {
 .press-enter {
   color: rgb(53, 189, 178);
   float: right;
+}
+
+.docs-container {
+  margin-left: 250px;
+  min-width: 550px;
+  max-width: 1150px;
+}
+
+.docs-sidebar {
+  position: fixed!important;
+  top: 0px!important;
+  bottom: 0px!important;
+  left: 0px!important;
+  width: 250px!important;
+  padding-bottom: 1em!important;
+  background: rgb(27, 28, 29)!important;
+  overflow-y: scroll!important;
 }
 </style>
