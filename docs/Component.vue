@@ -1,5 +1,5 @@
 <template>
-  <sui-grid :columns="one" padded>
+  <sui-grid :columns="1" padded>
     <sui-grid-column>
       <h1 is="sui-header">
         {{ capitalize(this.component) }}

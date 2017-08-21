@@ -1,4 +1,4 @@
-import { getChildProps, getElementType } from 'src/lib';
+import { classes, getChildProps, getElementType, num } from 'src/lib';
 
 export default {
   name: 'SuiGrid',
@@ -18,7 +18,9 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
-        class={`ui${this.padded ? ' padded' : ''}${this.columns ? ` ${this.columns} column` : ''} grid`}
+        class={classes(
+          'ui', this.padded && 'padded', this.columns && `${num(this.columns)} column`, 'grid',
+        )}
       >
         {this.$slots.default}
       </ElementType>
