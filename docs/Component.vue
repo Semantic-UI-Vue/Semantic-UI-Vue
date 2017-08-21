@@ -2,7 +2,7 @@
   <sui-grid :columns="1" padded>
     <sui-grid-column>
       <h1 is="sui-header">
-        {{ capitalize(this.component) }}
+        {{ title }}
         <sui-header-subheader>
           {{ this.componentOpts.description }}
         </sui-header-subheader>
@@ -14,11 +14,19 @@
         </sui-list-item>
       </sui-list>
 
-      <sui-list class="docs-info" link size="small">
+      <sui-list class="docs-info" link>
         <sui-list-item>
           <sui-list-icon name="github" />
           <sui-list-content>
-            <code>src/elements/List/List.js</code>
+            <code>
+              <a href="#">src/{{this.type}}/{{title}}/{{title}}.js</a>
+            </code>
+          </sui-list-content>
+        </sui-list-item>
+        <sui-list-item>
+          <sui-list-icon name="book" />
+          <sui-list-content>
+            <a href="#">Semantic UI {{title}} Docs</a>
           </sui-list-content>
         </sui-list-item>
       </sui-list>
@@ -33,6 +41,9 @@ import * as components from 'src';
 export default {
   name: 'Example',
   computed: {
+    title() {
+      return capitalize(this.component);
+    },
     componentOpts() {
       return components[capitalize(this.component)];
     },
@@ -41,7 +52,6 @@ export default {
     type: String,
     component: String,
   },
-  methods: { capitalize },
 };
 </script>
 
@@ -58,5 +68,21 @@ export default {
   right: 0px!important;
   box-shadow: rgb(247, 247, 247) 0px 0px 1em 0.5em!important;
   background: rgb(247, 247, 247)!important;
+}
+
+code {
+  padding: 0;
+  padding-top: 0.1em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 87.5%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+
+code:after,
+code:before {
+  letter-spacing: -0.2em;
+  content: "\00a0";
 }
 </style>
