@@ -6,7 +6,7 @@
         <strong>Semantic UI Vue</strong>
       </sui-menu-item>
       <sui-menu-item>
-        <sui-header>Getting Started</sui-header>
+        <sui-menu-header>Getting Started</sui-menu-header>
         <sui-menu-menu>
           <a is="sui-menu-item" href="/introduction">Introduction</a>
           <a is="sui-menu-item" href="/usage">Usage</a>
@@ -38,7 +38,7 @@
         </router-link>
       </sui-menu-menu>
       <sui-menu-item :key="mod.name" v-if="!search" v-for="mod in modules">
-        <sui-header>{{ mod.name }}</sui-header>
+        <sui-menu-header>{{ mod.name }}</sui-menu-header>
         <sui-menu-menu>
           <router-link
             is="sui-menu-item"
@@ -117,6 +117,10 @@ export default {
 </script>
 
 <style scoped>
+#app {
+  background-color: #F7F7F9;
+}
+
 .press-enter {
   color: rgb(53, 189, 178);
   float: right;

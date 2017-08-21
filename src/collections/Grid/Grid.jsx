@@ -2,9 +2,16 @@ import { getChildProps, getElementType } from 'src/lib';
 
 export default {
   name: 'SuiGrid',
+  description: 'A grid is used to harmonize negative space in a layout.',
   props: {
-    columns: Number,
-    padded: Boolean,
+    columns: {
+      type: Number,
+      description: 'Represents column count per row in Grid.',
+    },
+    padded: {
+      type: Boolean,
+      description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
+    },
   },
   render() {
     const ElementType = getElementType(this);

@@ -9,3 +9,7 @@ export default (Vue) => {
     ...modules,
   }).forEach(Comp => Vue.component(Comp.name, Comp));
 };
+
+export * from './collections';
+export * from './elements';
+export * from './modules';
