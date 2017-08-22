@@ -23,6 +23,7 @@ export default {
           'ui',
           this.vertical && 'vertical',
           this.compact && 'compact',
+          this.inverted && 'inverted',
           this.secondary && 'secondary',
           this.color,
           'menu',
