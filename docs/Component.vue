@@ -63,6 +63,26 @@
         </div>
 
         <sui-divider />
+
+        <sui-table v-if="componentProps.length" basic="very" compact="very">
+          <sui-table-header>
+            <sui-table-row>
+              <sui-table-header-cell>Name</sui-table-header-cell>
+              <sui-table-header-cell>Default</sui-table-header-cell>
+              <sui-table-header-cell>Type</sui-table-header-cell>
+              <sui-table-header-cell>Description</sui-table-header-cell>
+            </sui-table-row>
+          </sui-table-header>
+
+          <sui-table-body>
+            <sui-table-row v-for="prop in componentProps" :key="prop.name">
+              <sui-table-cell>{{prop.name}}</sui-table-cell>
+              <sui-table-cell>{{prop.default}}</sui-table-cell>
+              <sui-table-cell>{{prop.type}}</sui-table-cell>
+              <sui-table-cell>{{prop.description}}</sui-table-cell>
+            </sui-table-row>
+          </sui-table-body>
+        </sui-table>
       </div>
     </sui-grid-column>
   </sui-grid>
@@ -99,6 +119,23 @@ export default {
       return Object
         .values(components)
         .filter(c => get(c, 'meta.parent') === this.component.name);
+    },
+    componentProps() {
+      if (!this.currentComponent.props) return [];
+
+      return Object
+        .entries(this.currentComponent.props)
+        .map(([name, value]) => {
+          if (!value) {
+            return { name };
+          }
+
+          if (typeof value === 'function') {
+            return { name, type: value.name };
+          }
+
+          return { ...value, name, type: value.type.name };
+        })
     },
   },
   methods: {
