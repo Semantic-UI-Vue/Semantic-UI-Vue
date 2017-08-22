@@ -30,6 +30,19 @@
           </sui-list-content>
         </sui-list-item>
       </sui-list>
+
+      <h4 class="props-switcher" is="sui-header" color="green">
+        <a href="#">
+          <sui-icon name="toggle on" />
+          Props:
+        </a>
+      </h4>
+
+      <sui-menu color="green" compact secondary size="small">
+        <sui-menu-item active link>Header</sui-menu-item>
+        <sui-menu-item link>HeaderContent</sui-menu-item>
+        <sui-menu-item link>HeaderSubheader</sui-menu-item>
+      </sui-menu>
     </sui-grid-column>
   </sui-grid>
 </template>
@@ -40,6 +53,11 @@ import * as components from 'src';
 
 export default {
   name: 'Example',
+  data() {
+    return {
+      showProps: true,
+    };
+  },
   computed: {
     title() {
       return capitalize(this.component);
@@ -68,6 +86,16 @@ export default {
   right: 0px!important;
   box-shadow: rgb(247, 247, 247) 0px 0px 1em 0.5em!important;
   background: rgb(247, 247, 247)!important;
+}
+
+.props-switcher {
+  display: inline-flex!important;
+  margin: 1em 0.5em 1em 0px!important;
+  cursor: pointer!important;
+}
+
+.props-switcher>a {
+  color: inherit;
 }
 
 code {

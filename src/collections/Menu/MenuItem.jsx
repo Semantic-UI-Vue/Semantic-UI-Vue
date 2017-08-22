@@ -1,15 +1,19 @@
-import { getChildProps, getElementType } from 'src/lib';
+import { classes, getChildProps, getElementType } from 'src/lib';
 
 export default {
   name: 'SuiMenuItem',
   props: {
     active: Boolean,
     content: String,
+    link: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} class={`item${this.active ? ' active' : ''}`}>
+      <ElementType
+        {...getChildProps(this)}
+        class={classes(this.active && 'active', this.link && 'link', 'item')}
+      >
         {this.$slots.default || this.content}
       </ElementType>
     );

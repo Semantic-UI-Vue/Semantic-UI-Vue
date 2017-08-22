@@ -1,4 +1,5 @@
-import { getChildProps, getElementType } from 'src/lib';
+import { classes, getChildProps, getElementType } from 'src/lib';
+import { Enum } from 'src/lib/PropTypes';
 import SuiMenuItem from './MenuItem';
 
 export default {
@@ -6,8 +7,11 @@ export default {
   components: { SuiMenuItem },
   props: {
     activeIndex: Number,
+    color: Enum.Color,
+    compact: Boolean,
     inverted: Boolean,
     items: Array,
+    secondary: Boolean,
     vertical: Boolean,
   },
   render() {
@@ -15,7 +19,14 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
-        class={`ui menu${this.vertical ? ' vertical' : ''}${this.inverted ? ' inverted' : ''}`}
+        class={classes(
+          'ui',
+          this.vertical && 'vertical',
+          this.compact && 'compact',
+          this.secondary && 'secondary',
+          this.color,
+          'menu',
+        )}
       >
         {this.$slots.default || this.items.map((item, index) => (
           <SuiMenuItem {...{ props: item }} active={item.active || this.activeIndex === index}/>
