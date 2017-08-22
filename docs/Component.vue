@@ -4,7 +4,7 @@
       <h1 is="sui-header">
         {{ title }}
         <sui-header-subheader>
-          {{ this.componentOpts.description }}
+          {{ component.description }}
         </sui-header-subheader>
       </h1>
 
@@ -31,44 +31,93 @@
         </sui-list-item>
       </sui-list>
 
-      <h4 class="props-switcher" is="sui-header" color="green">
-        <a href="#">
-          <sui-icon name="toggle on" />
+      <h4 class="props-switcher" is="sui-header" :color="propSwitcherColor">
+        <a href="javascript:void 0" @click="toggleProps">
+          <sui-icon :name="propSwitcherIcon" />
           Props:
         </a>
       </h4>
 
       <sui-menu color="green" compact secondary size="small">
-        <sui-menu-item active link>Header</sui-menu-item>
-        <sui-menu-item link>HeaderContent</sui-menu-item>
-        <sui-menu-item link>HeaderSubheader</sui-menu-item>
+        <sui-menu-item
+          :active="currentComponent === component"
+          link
+          @click.native="currentComponent = component"
+        >
+          {{ component.name }}
+        </sui-menu-item>
+        <sui-menu-item
+          v-for="subcomponent in subcomponents"
+          :key="subcomponent.name"
+          :active="currentComponent === subcomponent"
+          link
+          @click.native="currentComponent = subcomponent"
+        >
+          {{ subcomponent.name }}
+        </sui-menu-item>
       </sui-menu>
+
+      <div v-if="currentComponent">
+        <div class="current-component-description">
+          {{ currentComponent.description }}
+        </div>
+
+        <sui-divider />
+      </div>
     </sui-grid-column>
   </sui-grid>
 </template>
 
 <script>
 import capitalize from 'lodash/capitalize';
+import get from 'lodash/get';
 import * as components from 'src';
 
+const getComponentFromName = name => components[capitalize(name)];
+
 export default {
-  name: 'Example',
+  name: 'Component',
   data() {
     return {
-      showProps: true,
+      currentComponent: getComponentFromName(this.componentName),
     };
   },
   computed: {
     title() {
-      return capitalize(this.component);
+      return capitalize(this.componentName);
     },
-    componentOpts() {
-      return components[capitalize(this.component)];
+    component() {
+      return getComponentFromName(this.componentName);
+    },
+    propSwitcherColor() {
+      return this.currentComponent ? 'green' : 'grey';
+    },
+    propSwitcherIcon() {
+      return `toggle ${this.currentComponent ? 'on' : 'off'}`;
+    },
+    subcomponents() {
+      return Object
+        .values(components)
+        .filter(c => get(c, 'meta.parent') === this.component.name);
+    },
+  },
+  methods: {
+    toggleProps() {
+      if (this.currentComponent) {
+        this.currentComponent = null;
+      } else {
+        this.currentComponent = this.component;
+      }
+    },
+  },
+  watch: {
+    componentName(v) {
+      this.currentComponent = getComponentFromName(v);
     },
   },
   props: {
     type: String,
-    component: String,
+    componentName: String,
   },
 };
 </script>
@@ -96,6 +145,11 @@ export default {
 
 .props-switcher>a {
   color: inherit;
+}
+
+.current-component-description {
+  font-size: 1.08em;
+  color: rgb(119, 119, 119);
 }
 
 code {

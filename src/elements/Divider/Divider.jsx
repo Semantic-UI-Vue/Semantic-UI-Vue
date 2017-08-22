@@ -1,16 +1,13 @@
 import { getChildProps, getElementType } from 'src/lib';
 
 export default {
-  name: 'SuiListContent',
+  name: 'SuiDivider',
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} class="content">
-        {this.$slots.default}
+      <ElementType {...getChildProps(this)} class="ui divider">
+        {this.$slots.default || this.content}
       </ElementType>
     );
-  },
-  meta: {
-    parent: 'SuiList',
   },
 };
