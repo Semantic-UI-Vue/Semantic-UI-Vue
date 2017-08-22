@@ -76,8 +76,10 @@
 
           <sui-table-body>
             <sui-table-row v-for="prop in componentProps" :key="prop.name">
-              <sui-table-cell>{{prop.name}}</sui-table-cell>
-              <sui-table-cell>{{prop.default}}</sui-table-cell>
+              <sui-table-cell><code>{{prop.name}}</code></sui-table-cell>
+              <sui-table-cell>
+                <code v-if="prop.default">{{prop.default}}</code>
+              </sui-table-cell>
               <sui-table-cell>{{prop.type}}</sui-table-cell>
               <sui-table-cell>{{prop.description}}</sui-table-cell>
             </sui-table-row>
