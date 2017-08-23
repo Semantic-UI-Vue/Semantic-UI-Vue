@@ -7,7 +7,7 @@ import InvertedDivider from './InvertedDivider.example';
 
 export default [
   {
-    section: 'Types',
+    title: 'Types',
     examples: [
       {
         title: 'Divider',
@@ -33,7 +33,7 @@ export default [
     ],
   },
   {
-    section: 'Variations',
+    title: 'Variations',
     examples: [
       {
         name: 'Inverted',

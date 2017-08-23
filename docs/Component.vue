@@ -86,7 +86,7 @@
           </sui-table-body>
         </sui-table>
 
-        <examples :componentName="title" />
+        <examples-list :component="title" />
       </div>
     </sui-grid-column>
   </sui-grid>
@@ -96,7 +96,7 @@
 import capitalize from 'lodash/capitalize';
 import get from 'lodash/get';
 import * as components from 'src';
-import Examples from './Examples';
+import ExamplesList from './ExamplesList';
 
 const getComponentFromName = name => components[capitalize(name)];
 
@@ -161,7 +161,7 @@ export default {
     type: String,
     componentName: String,
   },
-  components: { Examples },
+  components: { ExamplesList },
 };
 </script>
 

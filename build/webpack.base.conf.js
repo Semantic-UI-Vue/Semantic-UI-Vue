@@ -29,6 +29,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(example\.vue|babelrc)$/,
+        loader: 'raw-loader',
+      },
+      {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
@@ -39,6 +43,7 @@ module.exports = {
       },
       {
         test: /\.vue$/,
+        exclude: /\.example\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
