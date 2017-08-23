@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div is="sui-container" class="example-list-container">
+    <sui-rail class="docs-rail" dividing position="right">
+      <h1>Hello world</h1>
+    </sui-rail>
     <sui-grid
       :key="section.title"
       v-for="section in sections"
@@ -43,5 +46,16 @@ export default {
 <style scoped>
 .section-header {
   margin-bottom: 1.5em;
+}
+
+.example-list-container {
+  margin-right: 387px!important;
+  width: auto;
+  max-width: 960px!important;
+  position: relative;
+}
+
+.docs-rail {
+  width: 319px;
 }
 </style>

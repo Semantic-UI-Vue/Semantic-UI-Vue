@@ -124,6 +124,12 @@ export default {
 };
 </script>
 
+<style>
+html {
+  overflow: hidden;
+}
+</style>
+
 <style scoped>
 #app {
   background-color: #F7F7F9;
@@ -137,7 +143,6 @@ export default {
 .docs-container {
   margin-left: 250px;
   min-width: 550px;
-  max-width: 1150px;
   max-height: 100%;
   overflow-y: scroll;
 }
