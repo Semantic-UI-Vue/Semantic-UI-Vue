@@ -14,6 +14,7 @@ export default {
   },
   mounted() {
     const editor = ace.edit(this.$el);
+    editor.$blockScrolling = Infinity;
     editor.getSession().setMode('ace/mode/html');
     editor.setTheme('ace/theme/tomorrow');
     editor.renderer.setShowGutter(false);
@@ -22,6 +23,9 @@ export default {
     editor.setValue(this.value);
     editor.selection.selectFileStart();
     editor.selection.moveTo(Infinity, Infinity);
+    editor.setOptions({
+      maxLines: Infinity
+    });
     window.editors = window.editors ? window.editors.concat([editor]) : [editor];
   },
   template: '<div></div>',
@@ -30,7 +34,6 @@ export default {
 
 <style scoped>
 .editor {
-  height: 450px;
   background: transparent!important;
 }
 </style>

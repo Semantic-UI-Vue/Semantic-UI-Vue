@@ -1,12 +1,34 @@
 <template>
-  <div>
-    <h4 is="sui-header">{{ title }}</h4>
-    <p>{{ description }}</p>
-    <div :class="exampleClass">
+  <sui-grid
+    :class="containerClass"
+    columns="1"
+    divided
+  >
+    <sui-grid-column>
+      <h3 class="example-header" is="sui-header">{{ title }}</h3>
+      <p>{{ description }}</p>
+      <sui-menu class="options-menu" color="green" icon compact small text>
+        <a is="sui-menu-item">
+          <sui-icon color="grey" fitted name="linkify" size="large" />
+        </a>
+        <a is="sui-menu-item">
+          <sui-icon color="grey" fitted name="window maximize" size="large" />
+        </a>
+        <a is="sui-menu-item" :active="showHtml">
+          <sui-icon :color="htmlColor" fitted name="html5" size="large" />
+        </a>
+        <a is="sui-menu-item" :active="showCode">
+          <sui-icon :color="codeColor" fitted name="code" size="large" />
+        </a>
+      </sui-menu>
+    </sui-grid-column>
+    <sui-grid-column :class="exampleClass">
       <div :is="compiled" />
-    </div>
-    <editor v-model="source" />
-  </div>
+    </sui-grid-column>
+    <sui-grid-column>
+      <editor v-model="source" />
+    </sui-grid-column>
+  </sui-grid>
 </template>
 
 <script>
@@ -21,7 +43,9 @@ export default {
   name: 'Example',
   data() {
     return {
-      exampleClass: `example-${Math.random().toString().slice(-5)}`,
+      showCode: true,
+      showHtml: false,
+      exampleClass: `rendered-example example-${Math.random().toString().slice(-5)}`,
       source: '',
     };
   },
@@ -31,6 +55,17 @@ export default {
     component: String,
   },
   computed: {
+    codeColor() {
+      return this.showCode ? undefined : 'grey';
+    },
+    htmlColor() {
+      return this.showHtml ? undefined : 'grey';
+    },
+    containerClass() {
+      return this.showCode || this.showHtml ?
+        'example-container active' :
+        'example-container';
+    },
     compiled() {
       const base = {
         name: `${upperFirst(camelCase(this.title))}Example`,
@@ -78,3 +113,29 @@ export default {
   components: { Editor },
 };
 </script>
+
+<style scoped>
+.example-container {
+  position: relative;
+}
+
+.example-container.active {
+  box-shadow: rgb(204, 204, 204) 0px 0px 30px;
+}
+
+.options-menu {
+  transition: opacity 200ms;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0;
+}
+
+.example-container:hover .options-menu {
+  opacity: 1;
+}
+
+.example-header {
+  margin: 0!important;
+}
+</style>

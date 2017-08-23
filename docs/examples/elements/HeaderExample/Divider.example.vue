@@ -1,8 +1,5 @@
 <template>
   <div>
-    <p class="red">
-      {{ hello }}
-    </p>
     <img src="/static/images/wireframes/short-paragraph.png" />
     <sui-divider />
     <img src="/static/images/wireframes/short-paragraph.png" />
@@ -11,17 +8,6 @@
 
 <script>
 export default {
-  name: 'MyTest',
-  data() {
-    return {
-      hello: 'world',
-    };
-  },
+  name: 'DividerExample',
 }
 </script>
-
-<style scoped>
-.red {
-  color: red;
-}
-</style>

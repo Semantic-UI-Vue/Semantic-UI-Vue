@@ -8,6 +8,7 @@ export default {
       type: Number,
       description: 'Represents column count per row in Grid.',
     },
+    divided: Boolean,
     padded: {
       type: Boolean,
       description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
@@ -19,7 +20,11 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          'ui', this.padded && 'padded', this.columns && `${num(this.columns)} column`, 'grid',
+          'ui',
+          this.padded && 'padded',
+          this.divided && 'devided',
+          this.columns && `${num(this.columns)} column`,
+          'grid',
         )}
       >
         {this.$slots.default}

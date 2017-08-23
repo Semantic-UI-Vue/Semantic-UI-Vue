@@ -1,13 +1,20 @@
 <template>
   <div>
-    <template v-for="section in sections">
-      <h2 is="sui-header">{{ section.title }}</h2>
-      <example
-        v-for="(example, index) in section.examples"
-        v-bind="example"
-        :key="index"
-      />
-    </template>
+    <sui-grid
+      :key="section.title"
+      v-for="section in sections"
+      columns="1"
+      padded
+    >
+      <sui-grid-column>
+        <h2 class="section-header" is="sui-header">{{ section.title }}</h2>
+        <example
+          v-for="(example, index) in section.examples"
+          v-bind="example"
+          :key="index"
+        />
+      </sui-grid-column>
+    </sui-grid>
   </div>
 </template>
 
@@ -32,3 +39,9 @@ export default {
   components: { Example },
 };
 </script>
+
+<style scoped>
+.section-header {
+  margin-bottom: 1.5em;
+}
+</style>

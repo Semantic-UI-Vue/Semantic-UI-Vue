@@ -1,95 +1,97 @@
 <template>
-  <sui-grid :columns="1" padded>
-    <sui-grid-column>
-      <h1 is="sui-header">
-        {{ title }}
-        <sui-header-subheader>
-          {{ component.description }}
-        </sui-header-subheader>
-      </h1>
+  <div>
+    <sui-grid :columns="1" padded>
+      <sui-grid-column>
+        <h1 is="sui-header">
+          {{ title }}
+          <sui-header-subheader>
+            {{ component.description }}
+          </sui-header-subheader>
+        </h1>
 
-      <sui-list class="space" horizontal link size="small">
-        <sui-list-item>
-          <sui-header color="grey" size="tiny"  />
-        </sui-list-item>
-      </sui-list>
+        <sui-list class="space" horizontal link size="small">
+          <sui-list-item>
+            <sui-header color="grey" size="tiny"  />
+          </sui-list-item>
+        </sui-list>
 
-      <sui-list class="docs-info" link>
-        <sui-list-item>
-          <sui-list-icon name="github" />
-          <sui-list-content>
-            <code>
-              <a href="#">src/{{this.type}}/{{title}}/{{title}}.js</a>
-            </code>
-          </sui-list-content>
-        </sui-list-item>
-        <sui-list-item>
-          <sui-list-icon name="book" />
-          <sui-list-content>
-            <a href="#">Semantic UI {{title}} Docs</a>
-          </sui-list-content>
-        </sui-list-item>
-      </sui-list>
+        <sui-list class="docs-info" link>
+          <sui-list-item>
+            <sui-list-icon name="github" />
+            <sui-list-content>
+              <code>
+                <a href="#">src/{{this.type}}/{{title}}/{{title}}.js</a>
+              </code>
+            </sui-list-content>
+          </sui-list-item>
+          <sui-list-item>
+            <sui-list-icon name="book" />
+            <sui-list-content>
+              <a href="#">Semantic UI {{title}} Docs</a>
+            </sui-list-content>
+          </sui-list-item>
+        </sui-list>
 
-      <h4 class="props-switcher" is="sui-header" :color="propSwitcherColor">
-        <a href="javascript:void 0" @click="toggleProps">
-          <sui-icon :name="propSwitcherIcon" />
-          Props:
-        </a>
-      </h4>
+        <h4 class="props-switcher" is="sui-header" :color="propSwitcherColor">
+          <a href="javascript:void 0" @click="toggleProps">
+            <sui-icon :name="propSwitcherIcon" />
+            Props:
+          </a>
+        </h4>
 
-      <sui-menu color="green" compact secondary size="small">
-        <sui-menu-item
-          :active="currentComponent === component"
-          link
-          @click.native="currentComponent = component"
-        >
-          {{ component.name }}
-        </sui-menu-item>
-        <sui-menu-item
-          v-for="subcomponent in subcomponents"
-          :key="subcomponent.name"
-          :active="currentComponent === subcomponent"
-          link
-          @click.native="currentComponent = subcomponent"
-        >
-          {{ subcomponent.name }}
-        </sui-menu-item>
-      </sui-menu>
+        <sui-menu color="green" compact secondary size="small">
+          <sui-menu-item
+            :active="currentComponent === component"
+            link
+            @click.native="currentComponent = component"
+          >
+            {{ component.name }}
+          </sui-menu-item>
+          <sui-menu-item
+            v-for="subcomponent in subcomponents"
+            :key="subcomponent.name"
+            :active="currentComponent === subcomponent"
+            link
+            @click.native="currentComponent = subcomponent"
+          >
+            {{ subcomponent.name }}
+          </sui-menu-item>
+        </sui-menu>
 
-      <div v-if="currentComponent">
-        <div class="current-component-description">
-          {{ currentComponent.description }}
+        <div v-if="currentComponent">
+          <div class="current-component-description">
+            {{ currentComponent.description }}
+          </div>
+
+          <sui-divider />
+
+          <sui-table v-if="componentProps.length" basic="very" compact="very">
+            <sui-table-header>
+              <sui-table-row>
+                <sui-table-header-cell>Name</sui-table-header-cell>
+                <sui-table-header-cell>Default</sui-table-header-cell>
+                <sui-table-header-cell>Type</sui-table-header-cell>
+                <sui-table-header-cell>Description</sui-table-header-cell>
+              </sui-table-row>
+            </sui-table-header>
+
+            <sui-table-body>
+              <sui-table-row v-for="prop in componentProps" :key="prop.name">
+                <sui-table-cell><code>{{prop.name}}</code></sui-table-cell>
+                <sui-table-cell>
+                  <code v-if="prop.default">{{prop.default}}</code>
+                </sui-table-cell>
+                <sui-table-cell>{{prop.type}}</sui-table-cell>
+                <sui-table-cell>{{prop.description}}</sui-table-cell>
+              </sui-table-row>
+            </sui-table-body>
+          </sui-table>
+
         </div>
-
-        <sui-divider />
-
-        <sui-table v-if="componentProps.length" basic="very" compact="very">
-          <sui-table-header>
-            <sui-table-row>
-              <sui-table-header-cell>Name</sui-table-header-cell>
-              <sui-table-header-cell>Default</sui-table-header-cell>
-              <sui-table-header-cell>Type</sui-table-header-cell>
-              <sui-table-header-cell>Description</sui-table-header-cell>
-            </sui-table-row>
-          </sui-table-header>
-
-          <sui-table-body>
-            <sui-table-row v-for="prop in componentProps" :key="prop.name">
-              <sui-table-cell><code>{{prop.name}}</code></sui-table-cell>
-              <sui-table-cell>
-                <code v-if="prop.default">{{prop.default}}</code>
-              </sui-table-cell>
-              <sui-table-cell>{{prop.type}}</sui-table-cell>
-              <sui-table-cell>{{prop.description}}</sui-table-cell>
-            </sui-table-row>
-          </sui-table-body>
-        </sui-table>
-
-        <examples-list :component="title" />
-      </div>
-    </sui-grid-column>
-  </sui-grid>
+      </sui-grid-column>
+    </sui-grid>
+    <examples-list :component="title" />
+  </div>
 </template>
 
 <script>
