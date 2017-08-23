@@ -48,15 +48,12 @@ export default {
     readonly: Boolean,
   },
   mounted() {
-    const emitValue = debounce((value) => {
-      this.$emit('input', value);
-    }, 1000);
-
     const editor = ace.edit(this.$el);
+    this.editor = editor;
     editor.$blockScrolling = Infinity;
     editor.getSession().setMode('ace/mode/html');
     editor.getSession().on('change', () => {
-      emitValue(editor.getValue());
+      this.$emit('input', editor.getValue());
     });
     editor.setTheme('ace/theme/tomorrow');
     editor.setShowPrintMargin(false);
@@ -68,6 +65,12 @@ export default {
     editor.renderer.setShowGutter(false);
     editor.session.setTabSize(2);
     editor.selection.moveTo(Infinity, Infinity);
+  },
+  watch: {
+    value(value) {
+      this.editor.setValue(value);
+      this.editor.selection.moveTo(Infinity, Infinity);
+    },
   },
   template: '<div></div>',
 };

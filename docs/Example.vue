@@ -42,7 +42,7 @@
             <sui-icon name="copy" />
             Copy
           </a>
-          <a is="sui-menu-item" black>
+          <a is="sui-menu-item" black @click.native="resetSource">
             <sui-icon name="refresh" />
             Reset
           </a>
@@ -146,6 +146,9 @@ export default {
         wrap_attributes_indent_size: 2,
         end_with_newline: false,
       });
+    },
+    resetSource() {
+      this.source = this.component;
     },
     init() {
       this.setStyle();
