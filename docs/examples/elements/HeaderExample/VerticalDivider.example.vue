@@ -1,21 +1,32 @@
 <template>
-  <sui-grid columns="3" relaxed>
+  <sui-grid :columns="3" relaxed="very">
     <sui-grid-column>
-      <sui-segment basic>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-      </sui-segment>
+      <demo-p v-for="j in [1, 2, 3, 4]" :key="j" />
     </sui-grid-column>
-    <sui-divider vertical>Or</sui-divider>
+    <sui-divider vertical>and</sui-divider>
     <sui-grid-column>
-      <sui-segment basic>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-      </sui-segment>
+      <demo-p v-for="j in [1, 2, 3, 4]" :key="j" />
     </sui-grid-column>
-    <sui-divider vertical>And</sui-divider>
+    <sui-divider vertical>or</sui-divider>
     <sui-grid-column>
-      <sui-segment basic>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-      </sui-segment>
+      <demo-p v-for="j in [1, 2, 3, 4]" :key="j" />
     </sui-grid-column>
   </sui-grid>
 </template>
+
+<script>
+export default {
+  name: 'VerticalDivider',
+  components: {
+    demoP: {
+      template: '<img src="/static/images/wireframes/short-paragraph.png" />'
+    },
+  },
+};
+</script>
+
+<style>
+img {
+  width: 100%;
+}
+</style>

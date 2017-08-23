@@ -6,6 +6,7 @@ export default {
   props: {
     color: Enum.Color,
     content: String,
+    floated: Enum(['left', 'right']),
     size: Enum.Size,
     sub: Boolean,
   },
@@ -14,7 +15,14 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
-        class={classes('ui', this.color, this.size, this.sub && 'sub', 'header')}
+        class={classes(
+          'ui',
+          this.floated && `${this.floated} floated`,
+          this.color,
+          this.size,
+          this.sub && 'sub',
+          'header',
+        )}
       >
         {this.$slots.default || this.content}
       </ElementType>

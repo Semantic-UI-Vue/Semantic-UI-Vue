@@ -61,7 +61,7 @@
     </sui-grid-column>
 
     <sui-grid-column v-if="showHtml">
-      <sui-divider horizontal>RENDERED HTML</sui-divider>
+      <sui-divider horizontal>rendered html</sui-divider>
       <editor :value="rendered" readonly />
     </sui-grid-column>
   </sui-grid>
@@ -83,7 +83,7 @@ export default {
     return {
       showCode: false,
       showHtml: false,
-      exampleClass: `rendered-example example-${Math.random().toString().slice(-5)}`,
+      exampleClass: `example-${Math.random().toString().slice(-5)}`,
       source: '',
       rendered: '',
       copied: false,

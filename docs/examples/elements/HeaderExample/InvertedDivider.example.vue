@@ -1,7 +1,16 @@
 <template>
-  <div>
-    <img src="/images/wireframes/short-paragraph.png" />
-    <sui-divider />
-    <img src="/images/wireframes/short-paragraph.png" />
+  <div class="ui inverted segment">
+    <p></p>
+    <sui-divider inverted />
+    <p></p>
+    <h4 is="sui-divider" horizontal inverted>
+      Horizontal
+    </h4>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'InvertedDivider',
+};
+</script>

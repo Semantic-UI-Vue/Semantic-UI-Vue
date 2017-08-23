@@ -1,4 +1,5 @@
 import { classes, getChildProps, getElementType, num } from 'src/lib';
+import { Enum } from 'src/lib/PropTypes';
 
 export default {
   name: 'SuiGrid',
@@ -13,6 +14,9 @@ export default {
       type: Boolean,
       description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
     },
+    relaxed: [Boolean, String],
+    stackable: Boolean,
+    verticalAlign: Enum(['bottom', 'middle', 'top']),
   },
   render() {
     const ElementType = getElementType(this);
@@ -21,9 +25,13 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.verticalAlign && `${this.verticalAlign} aligned`,
           this.padded && 'padded',
           this.divided && 'devided',
           this.columns && `${num(this.columns)} column`,
+          this.relaxed !== true && this.relaxed,
+          this.relaxed && 'relaxed',
+          this.stackable && 'stackable',
           'grid',
         )}
       >
