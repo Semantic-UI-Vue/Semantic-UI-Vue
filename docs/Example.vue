@@ -37,20 +37,21 @@
 
     <sui-grid-column v-if="showCode">
       <sui-divider fitted horizontal>
-        <sui-menu text>
-          <a is="sui-menu-item" black>
+        <sui-menu color="green" text>
+          <a is="sui-menu-item" :active="copied" @click.native="copySource">
             <sui-icon name="copy" />
-            Copy
+            <template v-if="copied">Copied!</template>
+            <template v-if="!copied">Copy</template>
           </a>
-          <a is="sui-menu-item" black @click.native="resetSource">
+          <a is="sui-menu-item" @click.native="resetSource">
             <sui-icon name="refresh" />
             Reset
           </a>
-          <a is="sui-menu-item" black>
+          <a is="sui-menu-item">
             <sui-icon name="github" />
             Edit
           </a>
-          <a is="sui-menu-item" black>
+          <a is="sui-menu-item">
             <sui-icon name="bug" />
             Issue
           </a>
@@ -71,6 +72,7 @@ import * as Babel from 'babel-standalone';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
 import { html } from 'js-beautify';
+import copyToClipboard from 'copy-to-clipboard';
 import * as examples from 'docs/examples';
 const parser = require('vue-loader/lib/parser');
 import Editor from './Editor';
@@ -84,6 +86,7 @@ export default {
       exampleClass: `rendered-example example-${Math.random().toString().slice(-5)}`,
       source: '',
       rendered: '',
+      copied: false,
     };
   },
   props: {
@@ -147,12 +150,17 @@ export default {
         end_with_newline: false,
       });
     },
-    resetSource() {
-      this.source = this.component;
-    },
     init() {
       this.setStyle();
       this.setHtml();
+    },
+    copySource() {
+      copyToClipboard(this.source);
+      this.copied = true;
+      setTimeout(() => this.copied = false, 1000);
+    },
+    resetSource() {
+      this.source = this.component;
     },
   },
   watch: {

@@ -1,9 +1,11 @@
 import { classes, getChildProps, getElementType } from 'src/lib';
+import { Enum } from 'src/lib/PropTypes';
 
 export default {
   name: 'SuiMenuItem',
   props: {
     active: Boolean,
+    color: Enum.Color,
     content: String,
     link: Boolean,
   },
