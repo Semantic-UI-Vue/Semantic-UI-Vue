@@ -138,6 +138,8 @@ export default {
   margin-left: 250px;
   min-width: 550px;
   max-width: 1150px;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .docs-sidebar {

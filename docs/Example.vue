@@ -5,7 +5,7 @@
     <div :class="exampleClass">
       <div :is="compiled" />
     </div>
-    <textarea v-model="source" />
+    <editor v-model="source" />
   </div>
 </template>
 
@@ -15,6 +15,7 @@ import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
 import * as examples from 'docs/examples';
 const parser = require('vue-loader/lib/parser');
+import Editor from './Editor';
 
 export default {
   name: 'Example',
@@ -74,5 +75,6 @@ export default {
   mounted() {
     this.setStyle();
   },
+  components: { Editor },
 };
 </script>
