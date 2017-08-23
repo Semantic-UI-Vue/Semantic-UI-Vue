@@ -1,7 +1,7 @@
 <template>
   <sui-grid
     :class="containerClass"
-    columns="1"
+    :columns="1"
     divided
   >
     <sui-grid-column>
@@ -14,19 +14,54 @@
         <a is="sui-menu-item">
           <sui-icon color="grey" fitted name="window maximize" size="large" />
         </a>
-        <a is="sui-menu-item" :active="showHtml">
+        <a
+          is="sui-menu-item"
+          :active="showHtml"
+          @click.native="showHtml = !showHtml"
+        >
           <sui-icon :color="htmlColor" fitted name="html5" size="large" />
         </a>
-        <a is="sui-menu-item" :active="showCode">
+        <a
+          is="sui-menu-item"
+          :active="showCode"
+          @click.native="showCode = !showCode"
+        >
           <sui-icon :color="codeColor" fitted name="code" size="large" />
         </a>
       </sui-menu>
     </sui-grid-column>
+
     <sui-grid-column :class="exampleClass">
-      <div :is="compiled" />
+      <div ref="compiled" :is="compiled" />
     </sui-grid-column>
-    <sui-grid-column>
+
+    <sui-grid-column v-if="showCode">
+      <sui-divider fitted horizontal>
+        <sui-menu text>
+          <a is="sui-menu-item" black>
+            <sui-icon name="copy" />
+            Copy
+          </a>
+          <a is="sui-menu-item" black>
+            <sui-icon name="refresh" />
+            Reset
+          </a>
+          <a is="sui-menu-item" black>
+            <sui-icon name="github" />
+            Edit
+          </a>
+          <a is="sui-menu-item" black>
+            <sui-icon name="bug" />
+            Issue
+          </a>
+        </sui-menu>
+      </sui-divider>
       <editor v-model="source" />
+    </sui-grid-column>
+
+    <sui-grid-column v-if="showHtml">
+      <sui-divider horizontal>RENDERED HTML</sui-divider>
+      <editor :value="rendered" readonly />
     </sui-grid-column>
   </sui-grid>
 </template>
@@ -35,6 +70,7 @@
 import * as Babel from 'babel-standalone';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
+import { html } from 'js-beautify';
 import * as examples from 'docs/examples';
 const parser = require('vue-loader/lib/parser');
 import Editor from './Editor';
@@ -43,10 +79,11 @@ export default {
   name: 'Example',
   data() {
     return {
-      showCode: true,
+      showCode: false,
       showHtml: false,
       exampleClass: `rendered-example example-${Math.random().toString().slice(-5)}`,
       source: '',
+      rendered: '',
     };
   },
   props: {
@@ -98,17 +135,33 @@ export default {
         });
       });
     },
+    setHtml() {
+      const markup = this.$refs.compiled.$el.outerHTML;
+      const preFormattedHTML = markup
+        .replace(/><(?!\/i|\/label|\/span|option)/g, '>\n<')
+      this.rendered =  html(preFormattedHTML, {
+        indent_size: 2,
+        indent_char: ' ',
+        wrap_attributes: 'auto',
+        wrap_attributes_indent_size: 2,
+        end_with_newline: false,
+      });
+    },
+    init() {
+      this.setStyle();
+      this.setHtml();
+    },
   },
   watch: {
     compiled() {
-      this.setStyle();
+      this.init();
     },
   },
   beforeMount() {
     this.source = this.component;
   },
   mounted() {
-    this.setStyle();
+    this.init();
   },
   components: { Editor },
 };
@@ -117,6 +170,9 @@ export default {
 <style scoped>
 .example-container {
   position: relative;
+  margin-bottom: 2em !important;
+  padding-bottom: 1em !important;
+  transition: box-shadow 300ms;
 }
 
 .example-container.active {

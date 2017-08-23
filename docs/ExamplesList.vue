@@ -3,7 +3,7 @@
     <sui-grid
       :key="section.title"
       v-for="section in sections"
-      columns="1"
+      :columns="1"
       padded
     >
       <sui-grid-column>

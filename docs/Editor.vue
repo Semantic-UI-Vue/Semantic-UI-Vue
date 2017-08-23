@@ -4,6 +4,7 @@
 
 <script>
 import ace from 'brace';
+import debounce from 'lodash/debounce';
 import 'brace/mode/html';
 import 'brace/theme/tomorrow';
 
@@ -11,22 +12,30 @@ export default {
   name: 'Editor',
   props: {
     value: String,
+    readonly: Boolean,
   },
   mounted() {
+    const emitValue = debounce((value) => {
+      this.$emit('input', value);
+    }, 1000);
+
     const editor = ace.edit(this.$el);
     editor.$blockScrolling = Infinity;
     editor.getSession().setMode('ace/mode/html');
-    editor.setTheme('ace/theme/tomorrow');
-    editor.renderer.setShowGutter(false);
+    editor.getSession().on('change', () => {
+      emitValue(editor.getValue());
+    });
     editor.session.setTabSize(2);
-    editor.setShowPrintMargin(false);
-    editor.setValue(this.value);
+    editor.renderer.setShowGutter(false);
     editor.selection.selectFileStart();
     editor.selection.moveTo(Infinity, Infinity);
+    editor.setTheme('ace/theme/tomorrow');
+    editor.setShowPrintMargin(false);
+    editor.setValue(this.value);
     editor.setOptions({
       maxLines: Infinity
     });
-    window.editors = window.editors ? window.editors.concat([editor]) : [editor];
+    editor.setReadOnly(this.readonly);
   },
   template: '<div></div>',
 };
