@@ -29,6 +29,7 @@
           placeholder="Start typing..."
           transparent
           v-model="search"
+          @keypress.native="openFirst"
         />
       </sui-menu-item>
       <sui-menu-menu v-if="search">
@@ -119,6 +120,11 @@ export default {
   methods: {
     getUrl(mod, comp) {
       return `/${mod}/${comp}`.toLowerCase();
+    },
+    openFirst(e) {
+      if (e.keyCode === 13 && this.search && this.matchingComponents.length) {
+        this.$router.push(this.matchingComponents[0].href);
+      }
     },
   },
 };
