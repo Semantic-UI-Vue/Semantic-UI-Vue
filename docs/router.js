@@ -5,7 +5,7 @@ import Component from './Component';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/:type/:componentName',
@@ -14,3 +14,12 @@ export default new Router({
     },
   ],
 });
+
+router.afterEach((to) => {
+  if (to.hash) {
+    const el = document.getElementById(to.hash.substr(1));
+    if (el) el.scrollIntoView();
+  }
+});
+
+export default router;

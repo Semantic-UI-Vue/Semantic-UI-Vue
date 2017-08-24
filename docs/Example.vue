@@ -5,7 +5,9 @@
     divided
   >
     <sui-grid-column>
-      <h3 class="example-header" is="sui-header">{{ title }}</h3>
+      <h3 class="example-header" is="sui-header" :id="kebabCase(title)">
+        {{ title }}
+      </h3>
       <p>{{ description }}</p>
       <sui-menu class="options-menu" color="green" icon compact small text>
         <a is="sui-menu-item">
@@ -71,6 +73,7 @@
 import * as Babel from 'babel-standalone';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
+import kebabCase from 'lodash/kebabCase';
 import { html } from 'js-beautify';
 import copyToClipboard from 'copy-to-clipboard';
 import * as examples from 'docs/examples';
@@ -162,6 +165,7 @@ export default {
     resetSource() {
       this.source = this.component;
     },
+    kebabCase,
   },
   watch: {
     compiled() {

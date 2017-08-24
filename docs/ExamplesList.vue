@@ -12,13 +12,15 @@
             <b>{{ section.title }}</b>
           </a>
           <sui-accordion-content is="sui-menu-menu">
-            <sui-menu-item
+            <router-link
+              is="sui-menu-item"
               :key="example.title"
               v-if="example.title"
               v-for="example in section.examples"
+              :to="{ hash: kebabCase(example.title) }"
             >
               {{ example.title }}
-            </sui-menu-item>
+            </router-link>
           </sui-accordion-content>
         </sui-menu-item>
       </sui-accordion>
@@ -42,6 +44,7 @@
 </template>
 
 <script>
+import kebabCase from 'lodash/kebabCase';
 import Example from './Example';
 import * as examples from 'docs/examples';
 
@@ -60,6 +63,14 @@ export default {
     },
   },
   components: { Example },
+  methods: { kebabCase },
+  mounted() {
+    // go to hash
+    if (this.$route.hash) {
+      const el = document.getElementById(this.$route.hash.substr(1));
+      if (el) el.scrollIntoView();
+    }
+  },
 };
 </script>
 
