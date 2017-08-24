@@ -16,7 +16,7 @@
         <sui-menu-menu>
           <a is="sui-menu-item" href="/introduction">Introduction</a>
           <a is="sui-menu-item" href="/usage">Usage</a>
-          <a is="sui-menu-item" href="/usage">
+          <a is="sui-menu-item" href="https://github.com/mariolamacchia/semantic-ui-vue">
             Github
             <sui-icon name="github" />
           </a>

@@ -49,11 +49,14 @@
             <sui-icon name="refresh" />
             Reset
           </a>
-          <a is="sui-menu-item">
+          <a is="sui-menu-item" :href="link">
             <sui-icon name="github" />
             Edit
           </a>
-          <a is="sui-menu-item">
+          <a
+            is="sui-menu-item"
+            href="https://github.com/mariolamacchia/semantic-ui-vue/issues/new"
+          >
             <sui-icon name="bug" />
             Issue
           </a>
@@ -76,7 +79,6 @@ import camelCase from 'lodash/camelCase';
 import kebabCase from 'lodash/kebabCase';
 import { html } from 'js-beautify';
 import copyToClipboard from 'copy-to-clipboard';
-import * as examples from 'docs/examples';
 const parser = require('vue-loader/lib/parser');
 import Editor from './Editor';
 
@@ -96,6 +98,7 @@ export default {
     title: String,
     description: String,
     component: String,
+    baseUrl: String,
   },
   computed: {
     codeColor() {
@@ -126,6 +129,10 @@ export default {
       } catch(e) {
         return base;
       }
+    },
+    link() {
+      const name = this.compiled.name;
+      return `${this.baseUrl}/${name}.example.vue`;
     },
   },
   methods: {

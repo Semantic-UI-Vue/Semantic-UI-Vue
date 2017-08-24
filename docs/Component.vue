@@ -20,14 +20,18 @@
             <sui-list-icon name="github" />
             <sui-list-content>
               <code>
-                <a href="#">src/{{this.type}}/{{title}}/{{title}}.js</a>
+                <a :href="githubLink" target="_blank">
+                  src/{{type}}/{{title}}/{{title}}.jsx
+                </a>
               </code>
             </sui-list-content>
           </sui-list-item>
           <sui-list-item>
             <sui-list-icon name="book" />
             <sui-list-content>
-              <a href="#">Semantic UI {{title}} Docs</a>
+              <a :href="semanticLink" target="_blank">
+                Semantic UI {{title}} Docs
+              </a>
             </sui-list-content>
           </sui-list-item>
         </sui-list>
@@ -90,7 +94,7 @@
         </div>
       </sui-grid-column>
     </sui-grid>
-    <examples-list :component="title" />
+    <examples-list :type="type" :component="title" />
   </div>
 </template>
 
@@ -112,6 +116,12 @@ export default {
   computed: {
     title() {
       return capitalize(this.componentName);
+    },
+    githubLink() {
+      return `https://github.com/mariolamacchia/semantic-ui-vue/blob/master/src/${this.type}/${this.title}/${this.title}.jsx`;
+    },
+    semanticLink() {
+      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`
     },
     component() {
       return getComponentFromName(this.componentName);
@@ -204,6 +214,7 @@ code {
   margin: 0;
   font-size: 87.5%;
   background-color: rgba(0, 0, 0, 0.04);
+  display: inline;
   border-radius: 3px;
 }
 

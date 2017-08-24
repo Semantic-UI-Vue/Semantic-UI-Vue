@@ -37,6 +37,7 @@
           v-for="(example, index) in section.examples"
           v-bind="example"
           :key="index"
+          :base-url="exampleBaseUrl"
         />
       </sui-grid-column>
     </sui-grid>
@@ -51,6 +52,7 @@ import * as examples from 'docs/examples';
 export default {
   name: 'ExamplesList',
   props: {
+    type: String,
     component: String,
   },
   computed: {
@@ -60,6 +62,9 @@ export default {
         .find(([name]) => name === `${this.component}Example`)
 
       return entry ? entry[1] : [];
+    },
+    exampleBaseUrl() {
+      return `https://github.com/mariolamacchia/semantic-ui-vue/edit/master/docs/examples/${this.type}/${this.component}Example`;
     },
   },
   components: { Example },
