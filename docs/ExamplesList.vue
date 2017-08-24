@@ -1,7 +1,27 @@
 <template>
   <div is="sui-container" class="example-list-container">
     <sui-rail class="docs-rail" dividing position="right">
-      <h1>Hello world</h1>
+      <h4 is="sui-header">{{ component }}</h4>
+      <sui-accordion is="sui-menu" vertical following fluid text>
+        <sui-menu-item
+          :key="section.title"
+          v-for="section in sections"
+        >
+          <a is="sui-accordion-title">
+            <sui-icon name="dropdown" />
+            <b>{{ section.title }}</b>
+          </a>
+          <sui-accordion-content is="sui-menu-menu">
+            <sui-menu-item
+              :key="example.title"
+              v-if="example.title"
+              v-for="example in section.examples"
+            >
+              {{ example.title }}
+            </sui-menu-item>
+          </sui-accordion-content>
+        </sui-menu-item>
+      </sui-accordion>
     </sui-rail>
     <sui-grid
       :key="section.title"
