@@ -138,7 +138,7 @@ html {
 
 <style scoped>
 #app {
-  background-color: #F7F7F9;
+  background-color: #F7F7F7;
 }
 
 .press-enter {
@@ -149,7 +149,7 @@ html {
 .docs-container {
   margin-left: 250px;
   min-width: 550px;
-  max-height: 100%;
+  height: 100%;
   overflow-y: scroll;
 }
 

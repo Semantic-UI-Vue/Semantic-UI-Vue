@@ -2,11 +2,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Component from './Component';
+import GettingStarted from './GettingStarted';
 
 Vue.use(Router);
 
 const router = new Router({
   routes: [
+    {
+      path: '/',
+      component: GettingStarted,
+    },
     {
       path: '/:type/:componentName',
       component: Component,
