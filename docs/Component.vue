@@ -20,9 +20,7 @@
             <sui-list-icon name="github" />
             <sui-list-content>
               <code>
-                <a :href="githubLink" target="_blank">
-                  src/{{type}}/{{title}}/{{title}}.jsx
-                </a>
+                <a :href="githubLink" target="_blank">src/{{type}}/{{title}}/{{title}}.jsx</a>
               </code>
             </sui-list-content>
           </sui-list-item>
@@ -214,7 +212,6 @@ code {
   margin: 0;
   font-size: 87.5%;
   background-color: rgba(0, 0, 0, 0.04);
-  display: inline;
   border-radius: 3px;
 }
 
