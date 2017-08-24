@@ -14,8 +14,7 @@
       <sui-menu-item>
         <sui-menu-header>Getting Started</sui-menu-header>
         <sui-menu-menu>
-          <a is="sui-menu-item" href="/introduction">Introduction</a>
-          <a is="sui-menu-item" href="/usage">Usage</a>
+          <router-link is="sui-menu-item" to="/">Usage</router-link>
           <a is="sui-menu-item" href="https://github.com/mariolamacchia/semantic-ui-vue">
             Github
             <sui-icon name="github" />
