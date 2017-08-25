@@ -1,27 +1,13 @@
-# semantic-ui-vue
+# Semantic UI Vue
+## Introduction
 
-> Semantic-UI Vue integration
+Semantic UI Vue is the Vue integration for Semantic UI.
 
-## Build Setup
+It is higly inspired on [Semantic UI React](https://react.semantic-ui.com)
+If you have used it already, you will find Semantic UI Vue's API to be almost the same.
 
-``` bash
-# install dependencies
-npm install
+Semantic UI Vue is still under heavy development. Please, feel free to contribute.
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Usage
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Coming soon!
