@@ -55,7 +55,6 @@ var webpackConfig = merge(baseWebpackConfig, {
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
         : config.build.index,
-      baseUrl: process.env.NODE_ENV == 'production'? '/Semantic-UI-Vue/' : '/',
       template: 'index.html',
       inject: true,
       minify: {
