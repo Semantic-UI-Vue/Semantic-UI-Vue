@@ -5,6 +5,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/docs
+  local_dir: "${TRAVIS_BUILD_DIR}/dist/docs"
   on:
     branch: master
