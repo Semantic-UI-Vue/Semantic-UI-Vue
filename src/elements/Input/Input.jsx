@@ -1,5 +1,5 @@
-import { getChildProps, getElementType } from 'src/lib';
-import Icon from 'src/elements/Icon/Icon';
+import { getChildProps, getElementType } from '../../lib';
+import Icon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiInput',

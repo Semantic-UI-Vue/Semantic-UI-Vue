@@ -1,5 +1,5 @@
-import { getChildProps, getElementType } from 'src/lib';
-import { Enum } from 'src/lib/PropTypes';
+import { getChildProps, getElementType } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiImage',

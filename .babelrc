@@ -8,7 +8,7 @@
     }],
     "es2015", "stage-2"
   ],
-  "plugins": ["transform-runtime", "transform-vue-jsx"],
+  "plugins": [["transform-runtime", { "polyfill": false }], "transform-vue-jsx"],
   "env": {
     "test": {
       "presets": ["env", "stage-2"],

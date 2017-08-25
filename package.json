@@ -4,6 +4,12 @@
   "description": "Semantic-UI Vue integration",
   "author": "Mario Lamacchia <mario.lamacchia@nokia.com>",
   "private": true,
+  "main": "dist/commonjs/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",

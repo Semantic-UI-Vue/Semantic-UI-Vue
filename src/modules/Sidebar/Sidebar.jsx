@@ -1,5 +1,5 @@
-import { getElementType, getChildProps } from 'src/lib';
-import { Enum } from 'src/lib/PropTypes';
+import { getElementType, getChildProps } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSidebar',

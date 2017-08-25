@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from 'src/lib';
+import { classes, getChildProps, getElementType } from '../../lib';
 
 export default {
   name: 'SuiContainer',

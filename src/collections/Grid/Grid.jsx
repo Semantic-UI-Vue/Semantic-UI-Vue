@@ -1,5 +1,5 @@
-import { classes, getChildProps, getElementType, num } from 'src/lib';
-import { Enum } from 'src/lib/PropTypes';
+import { classes, getChildProps, getElementType, num } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGrid',

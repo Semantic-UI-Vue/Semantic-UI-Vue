@@ -1,4 +1,4 @@
-import { getChildProps, getElementType } from 'src/lib';
+import { getChildProps, getElementType } from '../../lib';
 
 export default {
   name: 'SuiTableRow',
