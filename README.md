@@ -1,3 +1,4 @@
+![Semantic UI Vue](/static/images/logo.png)
 # Semantic UI Vue
 ## Introduction
 
