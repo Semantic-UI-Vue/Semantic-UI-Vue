@@ -8,7 +8,7 @@
       visible
     >
       <sui-menu-item>
-        <sui-image src="/static/images/logo.png" spaced="right" size="mini" />
+        <sui-image :src="`${publicPath}static/images/logo.png`" spaced="right" size="mini" />
         <strong>Semantic UI Vue</strong>
       </sui-menu-item>
       <sui-menu-item>
@@ -108,6 +108,7 @@ export default {
         },
       ],
       search: '',
+      publicPath,
     };
   },
   components: {

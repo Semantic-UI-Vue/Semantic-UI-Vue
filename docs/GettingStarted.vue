@@ -1,7 +1,7 @@
 <template>
   <div is="sui-container">
     <div class="logo">
-      <img src="/static/images/logo.png" />
+      <img :src="`${publicPath}static/images/logo.png`" />
     </div>
     <h1>Semantic UI Vue</h1>
     <h2 is="sui-header" dividing>Introduction</h2>
@@ -23,6 +23,13 @@
     </p>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'GettingStarted',
+  data() { return { publicPath }; },
+};
+</script>
 
 <style scoped>
 .logo {

@@ -29,7 +29,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
-      'process.env': env
+      'process.env': env,
+      publicPath: `'${baseWebpackConfig.output.publicPath}'`,
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -65,7 +66,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
+      chunksSortMode: 'dependency',
+      publicPath: baseWebpackConfig.output.publicPath,
     }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({

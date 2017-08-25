@@ -19,7 +19,8 @@ module.exports = merge(baseWebpackConfig, {
   devtool: '#cheap-module-eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': config.dev.env
+      'process.env': config.dev.env,
+      publicPath: `'${baseWebpackConfig.output.publicPath}'`,
     }),
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.HotModuleReplacementPlugin(),
@@ -28,7 +29,8 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      publicPath: baseWebpackConfig.output.publicPath,
     }),
     new FriendlyErrorsPlugin()
   ]
