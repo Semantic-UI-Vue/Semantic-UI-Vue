@@ -5,4 +5,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist/docs
   on:
-    tags: true
+    branch: master
