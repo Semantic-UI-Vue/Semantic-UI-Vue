@@ -4,12 +4,13 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiLabel',
   props: {
-    pointing: Enum(['left', 'right']),
-    color: Enum.color,
     basic: {
       type: Boolean,
       description: 'A label can reduce its complexity.',
     },
+    color: Enum.Color,
+    image: Boolean,
+    pointing: Enum(['left', 'right']),
   },
   render() {
     const ElementType = getElementType(this);
@@ -21,6 +22,7 @@ export default {
           this.color,
           this.pointing && `${this.pointing} pointing`,
           this.basic && 'basic',
+          this.image && 'image',
           'label',
         )}
       >
