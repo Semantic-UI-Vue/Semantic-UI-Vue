@@ -1,9 +1,11 @@
-import { getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiImage',
   props: {
+    disabled: Boolean,
+    hidden: Boolean,
     size: Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
     spaced: Enum(['left', 'right'], { type: Boolean }),
     src: {
@@ -21,14 +23,21 @@ export default {
   render() {
     const ElementType = getElementType(this, 'img');
 
-    return (
-      <ElementType
-        {...getChildProps(this)}
-        class={`ui image ${this.size || ''} ${this.getSpacedClass()}`}
+    const img = (
+      <img
+        class={classes(
+          'ui',
+          this.size,
+          this.spaced !== true && this.spaced,
+          this.spaced && 'spaced',
+          this.hidden && 'hidden',
+          this.disabled && 'disabled',
+          'image',
+        )}
         src={this.src}
-      >
-        {this.$slots.default}
-      </ElementType>
+      />
     );
+
+    return ElementType === 'img' ? img : <ElementType {...getChildProps(this)}>{img}</ElementType>;
   },
 };
