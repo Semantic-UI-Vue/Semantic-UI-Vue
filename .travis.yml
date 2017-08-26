@@ -8,5 +8,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: "${TRAVIS_BUILD_DIR}/dist/docs"
+  repo: https://github.com/Semantic-UI-Vue/semantic-ui-vue.github.io
   on:
     branch: master
