@@ -13,4 +13,7 @@ export default {
       <ElementType {...getChildProps(this)} class="or" {...{ attrs }}/>
     );
   },
+  meta: {
+    parent: 'SuiButton',
+  },
 };
