@@ -13,7 +13,7 @@ export default [
         component: Image,
       },
       {
-        title: 'ImageLink',
+        title: 'Image Link',
         description: 'An image can be formatted to link to other content',
         component: ImageLink,
       },
