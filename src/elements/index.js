@@ -1,6 +1,7 @@
 export * from './Button';
 export * from './Container';
 export * from './Divider';
+export * from './Flag';
 export * from './Header';
 export * from './Icon';
 export * from './Image';
