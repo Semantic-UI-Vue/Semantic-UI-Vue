@@ -5,11 +5,13 @@ export default {
   name: 'SuiIcon',
   props: {
     color: Enum.Color,
+    disabled: Boolean,
     fitted: Boolean,
     name: {
       type: String,
       required: true,
     },
+    loading: Boolean,
     size: Enum.Size,
   },
   render() {
@@ -17,7 +19,15 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
-        class={classes(this.color, this.name, this.size, this.fitted && 'fitted', 'icon')}
+        class={classes(
+          this.color,
+          this.name,
+          this.size,
+          this.disabled && 'disabled',
+          this.fitted && 'fitted',
+          this.loading && 'loading',
+          'icon',
+        )}
       />
     );
   },
