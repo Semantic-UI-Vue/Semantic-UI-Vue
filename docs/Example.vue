@@ -178,6 +178,9 @@ export default {
     compiled() {
       this.init();
     },
+    component(value) {
+      this.source = value;
+    },
   },
   beforeMount() {
     this.source = this.component;
