@@ -8,6 +8,7 @@ export default {
     content: String,
     dividing: Boolean,
     floated: Enum(['left', 'right']),
+    icon: Boolean,
     size: Enum.Size,
     sub: Boolean,
   },
@@ -22,6 +23,7 @@ export default {
           this.color,
           this.size,
           this.dividing && 'dividing',
+          this.icon && 'icon',
           this.sub && 'sub',
           'header',
         )}

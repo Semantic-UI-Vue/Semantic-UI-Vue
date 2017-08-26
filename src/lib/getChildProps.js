@@ -21,7 +21,7 @@ export default function getChildProps(instance) {
     return {};
   }
 
-  const props = Object.entries(instance.$vnode.data.attrs)
+  const obj = Object.entries(instance.$vnode.data.attrs)
     .filter(([name]) => camelCase(name) in childProps)
     .map(([name, value]) => {
       const ccName = camelCase(name);
@@ -34,5 +34,5 @@ export default function getChildProps(instance) {
     })
     .reduce((acc, [name, value]) => ({ ...acc, [name]: value }), {});
 
-  return { props };
+  return { props: obj, attrs: obj };
 }

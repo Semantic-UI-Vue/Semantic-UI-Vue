@@ -1,10 +1,12 @@
 import { classes, getChildProps, getElementType } from '../../lib';
 
 export default {
-  name: 'SuiSegment',
+  name: 'SuiMessage',
   props: {
-    inverted: Boolean,
-    vertical: Boolean,
+    info: {
+      type: Boolean,
+      description: 'A message may be formatted to display information.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -13,9 +15,8 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          this.inverted && 'inverted',
-          this.vertical && 'vertical',
-          'segment',
+          this.info && 'info',
+          'message',
         )}
       >
         {this.$slots.default || this.content}

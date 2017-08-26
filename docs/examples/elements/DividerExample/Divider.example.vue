@@ -1,8 +1,8 @@
 <template>
   <div>
-    <img src="/static/images/wireframes/short-paragraph.png" />
+    <docs-short-paragraph />
     <sui-divider />
-    <img src="/static/images/wireframes/short-paragraph.png" />
+    <docs-short-paragraph />
   </div>
 </template>
 
