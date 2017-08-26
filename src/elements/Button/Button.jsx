@@ -9,8 +9,8 @@ export default {
       description: 'A button can show it is currently the active user selection.',
     },
     animated: Enum(['fade', 'vertical'], {
-      description: 'A button can animate to show hidden content.',
       type: Boolean,
+      description: 'A button can animate to show hidden content.',
     }),
     attached: Enum(['left', 'right', 'top', 'bottom'], {
       description: 'A button can be attached to the top or bottom of other content.',
@@ -92,31 +92,46 @@ export default {
   },
   render() {
     const ElementType = getElementType(this, 'button');
-    const LabelType = this.$slots.label ? getElementType(this.$slots.label) : null;
+
+    const label = this.$slots.label;
+
     const classList = classes(
       'ui',
       this.inverted && 'inverted',
+      !label && this.labelPosition && this.labelPosition,
+      !label && this.labelPosition && 'labeled',
       this.color,
       this.primary && 'primary',
       this.secondary && 'secondary',
+      this.positive && 'positive',
+      this.negative && 'negative',
       this.basic && 'basic',
-      this.$slots.label && 'labeled',
+      this.icon && !(this.content || this.$slots.default) && 'icon',
+      !label && this.icon && this.labelPosition && 'icon',
       'button',
     );
 
-    return (
+    const button = (
       <ElementType
         {...getChildProps(this)}
         class={classList}
         role="button"
       >
-        {this.$slots.label && <LabelType>{this.$slots.label}</LabelType>}
-        {this.$slots.label ? (
-          <button class={classList}>{this.content || this.$slots.default}</button>
-        ) : (
-          this.content || this.$slots.default
-        )}
+        {this.icon && <suiIcon name={this.icon} />}
+        {this.content || this.$slots.default}
       </ElementType>
     );
+
+    if (label) {
+      return (
+        <div class={classes('ui', this.labelPosition, 'labeled', 'button')}>
+          {this.labelPosition === 'left' && label}
+          {button}
+          {this.labelPosition !== 'left' && label}
+        </div>
+      );
+    }
+
+    return button;
   },
 };

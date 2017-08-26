@@ -3,7 +3,7 @@ import camelCase from 'lodash/camelCase';
 import getElementType from './getElementType';
 
 export default function getChildProps(instance) {
-  if (!instance.$attrs) return {};
+  if (!instance.$vnode.data.attrs) return {};
 
   const el = getElementType(instance);
   let childProps;
@@ -21,7 +21,7 @@ export default function getChildProps(instance) {
     return {};
   }
 
-  const props = Object.entries(instance.$attrs)
+  const props = Object.entries(instance.$vnode.data.attrs)
     .filter(([name]) => camelCase(name) in childProps)
     .map(([name, value]) => {
       const ccName = camelCase(name);

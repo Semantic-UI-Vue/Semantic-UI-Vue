@@ -5,5 +5,6 @@ export * from './Header';
 export * from './Icon';
 export * from './Image';
 export * from './Input';
+export * from './Label';
 export * from './List';
 export * from './Rail';
