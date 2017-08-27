@@ -10,3 +10,4 @@ export { default as LabelExample } from './LabelExample';
 export { default as ListExample } from './ListExample';
 export { default as LoaderExample } from './LoaderExample';
 export { default as RailExample } from './RailExample';
+export { default as RevealExample } from './RevealExample';

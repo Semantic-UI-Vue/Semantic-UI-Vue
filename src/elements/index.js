@@ -9,5 +9,6 @@ export * from './Input';
 export * from './Label';
 export * from './List';
 export * from './Loader';
-export * from './Segment';
 export * from './Rail';
+export * from './Reveal';
+export * from './Segment';
