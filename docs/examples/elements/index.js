@@ -11,3 +11,4 @@ export { default as ListExample } from './ListExample';
 export { default as LoaderExample } from './LoaderExample';
 export { default as RailExample } from './RailExample';
 export { default as RevealExample } from './RevealExample';
+export { default as SegmentExample } from './SegmentExample';
