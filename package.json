@@ -1,9 +1,8 @@
 {
-  "name": "semantic-ui-vue",
-  "version": "1.0.0",
+  "name": "sui-vue",
+  "version": "0.0.1",
   "description": "Semantic-UI Vue integration",
   "author": "Mario Lamacchia <mario.lamacchia@nokia.com>",
-  "private": true,
   "main": "dist/commonjs/index.js",
   "files": [
     "src",
@@ -21,16 +20,13 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
-    "semantic-ui-css": "^2.2.12",
-    "vue": "^2.3.3",
-    "vue-router": "^2.6.0"
+    "babel-helper-vue-jsx-merge-props": "^2.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
-    "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-loader": "^7.1.1",
     "babel-plugin-istanbul": "^4.1.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
@@ -85,12 +81,15 @@
     "phantomjs-prebuilt": "^2.1.14",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.0",
+    "semantic-ui-css": "^2.2.12",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "sinon": "^2.1.0",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.8",
+    "vue": "^2.3.3",
     "vue-loader": "^12.1.0",
+    "vue-router": "^2.6.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
