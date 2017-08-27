@@ -1,9 +1,10 @@
 ![Semantic UI Vue](/static/images/logo.png)
+
 # Semantic UI Vue
 
 ## Introduction
 
-Semantic UI Vue is the Vue integration for Semantic UI.
+Semantic UI Vue is the Vue integration for [Semantic UI](https://semantic-ui.com/).
 
 It is higly inspired on [Semantic UI React](https://react.semantic-ui.com)
 If you have used it already, you will find Semantic UI Vue's API to be almost the same.
