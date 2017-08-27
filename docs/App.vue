@@ -9,7 +9,12 @@
     >
       <sui-menu-item>
         <sui-image :src="`${publicPath}static/images/logo.png`" spaced="right" size="mini" />
-        <strong>Semantic UI Vue</strong>
+        <strong>
+          Semantic UI Vue
+          <small>
+            <em>{{ version }}</em>
+          </small>
+        </strong>
       </sui-menu-item>
       <sui-menu-item>
         <sui-menu-header>Getting Started</sui-menu-header>
@@ -109,6 +114,7 @@ export default {
       ],
       search: '',
       publicPath,
+      version: process.version,
     };
   },
   components: {

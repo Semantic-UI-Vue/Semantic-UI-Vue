@@ -1,7 +1,9 @@
 var path = require('path')
+var webpack = require('webpack')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var pjson = require('../package.json');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -77,5 +79,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.version': `'${pjson.version}'`,
+    }),
+  ]
 }
