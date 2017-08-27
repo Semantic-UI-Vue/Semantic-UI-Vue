@@ -8,5 +8,6 @@ export * from './Image';
 export * from './Input';
 export * from './Label';
 export * from './List';
+export * from './Loader';
 export * from './Segment';
 export * from './Rail';
