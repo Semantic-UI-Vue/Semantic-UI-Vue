@@ -4,11 +4,17 @@ node_js:
 script:
   - npm run build
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: "${TRAVIS_BUILD_DIR}/dist/docs"
-  repo: Semantic-UI-Vue/semantic-ui-vue.github.io
-  target_branch: master
-  on:
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: "${TRAVIS_BUILD_DIR}/dist/docs"
+    repo: Semantic-UI-Vue/semantic-ui-vue.github.io
+    target_branch: master
+    on:
+      branch: master
+  - provider: npm
+    skip_cleanup: true
+    api_key: $NPM_TOKEN
+    email: "mariolamacchia@gmail.com"
+    on:
+      tags: true
