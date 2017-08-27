@@ -24,6 +24,10 @@
             Github
             <sui-icon name="github" />
           </a>
+          <a is="sui-menu-item" href="https://semantic-ui.com/">
+            Semantic UI
+            <i class="icon semantic-ui"><img src="https://semantic-ui.com/favicon.ico" /></i>
+          </a>
         </sui-menu-menu>
       </sui-menu-item>
       <sui-menu-item>
@@ -178,5 +182,9 @@ code {
   padding-bottom: 1em!important;
   background: rgb(27, 28, 29)!important;
   overflow-y: scroll!important;
+}
+
+.semantic-ui.icon {
+  height: 12px;
 }
 </style>
