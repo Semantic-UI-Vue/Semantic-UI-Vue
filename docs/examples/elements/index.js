@@ -7,3 +7,4 @@ export { default as IconExample } from './IconExample';
 export { default as ImageExample } from './ImageExample';
 export { default as InputExample } from './InputExample';
 export { default as LabelExample } from './LabelExample';
+export { default as ListExample } from './ListExample';
