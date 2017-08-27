@@ -31,7 +31,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(example\.vue|babelrc)$/,
+        test: /\.(example\.vue|md)$/,
         loader: 'raw-loader',
       },
       {

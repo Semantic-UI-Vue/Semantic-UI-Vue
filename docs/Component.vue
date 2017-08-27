@@ -205,16 +205,6 @@ export default {
   color: rgb(119, 119, 119);
 }
 
-code {
-  padding: 0;
-  padding-top: 0.1em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 87.5%;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 3px;
-}
-
 code:after,
 code:before {
   letter-spacing: -0.2em;

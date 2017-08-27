@@ -140,6 +140,16 @@ export default {
 html {
   overflow: hidden;
 }
+
+code {
+  padding: 0;
+  padding-top: 0.1em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 87.5%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
 </style>
 
 <style scoped>

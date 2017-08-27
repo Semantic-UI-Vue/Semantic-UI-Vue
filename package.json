@@ -74,6 +74,7 @@
     "karma-webpack": "^2.0.2",
     "lodash": "^4.17.4",
     "lolex": "^1.5.2",
+    "marked": "^0.3.6",
     "mocha": "^3.2.0",
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",

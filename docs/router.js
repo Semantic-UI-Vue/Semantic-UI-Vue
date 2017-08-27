@@ -2,7 +2,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Component from './Component';
-import GettingStarted from './GettingStarted';
+import DocsPage from './DocsPage';
+import QuickStart from '../README.md';
 
 Vue.use(Router);
 
@@ -10,7 +11,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: GettingStarted,
+      component: DocsPage,
+      props: { markdown: QuickStart },
     },
     {
       path: '/:type/:componentName',
