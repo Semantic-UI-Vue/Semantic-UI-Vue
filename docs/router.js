@@ -20,6 +20,7 @@ const router = new Router({
       props: true,
     },
   ],
+  linkExactActiveClass: 'active',
 });
 
 router.afterEach((to) => {
