@@ -5,6 +5,7 @@ export default {
   name: 'SuiGrid',
   description: 'A grid is used to harmonize negative space in a layout.',
   props: {
+    centered: Boolean,
     columns: {
       type: Number,
       description: 'Represents column count per row in Grid.',
@@ -27,7 +28,8 @@ export default {
           'ui',
           this.verticalAlign && `${this.verticalAlign} aligned`,
           this.padded && 'padded',
-          this.divided && 'devided',
+          this.divided && 'divided',
+          this.centered && 'centered',
           this.columns && `${num(this.columns)} column`,
           this.relaxed !== true && this.relaxed,
           this.relaxed && 'relaxed',

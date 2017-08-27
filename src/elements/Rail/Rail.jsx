@@ -4,7 +4,9 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiRail',
   props: {
+    attached: Boolean,
     dividing: Boolean,
+    internal: Boolean,
     position: Enum(['left', 'right']),
   },
   render() {
@@ -12,7 +14,14 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
-        class={classes('ui', this.dividing && 'dividing', this.position, 'rail')}
+        class={classes(
+          'ui',
+          this.dividing && 'dividing',
+          this.attached && 'attached',
+          this.internal && 'internal',
+          this.position,
+          'rail',
+        )}
       >
         {this.$slots.default}
       </ElementType>

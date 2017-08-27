@@ -1,8 +1,8 @@
 <template>
   <div>
-    <docs-short-paragraph />
+    <docs-paragraph short />
     <sui-divider />
-    <docs-short-paragraph />
+    <docs-paragraph short />
   </div>
 </template>
 

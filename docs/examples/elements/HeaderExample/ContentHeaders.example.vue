@@ -13,19 +13,19 @@
 
     <div :style="style">
       <sui-header size="huge">Huge header</sui-header>
-      <docs-short-paragraph />
+      <docs-paragraph short />
 
       <sui-header size="large">Large header</sui-header>
-      <docs-short-paragraph />
+      <docs-paragraph short />
 
       <sui-header size="medium">Medium header</sui-header>
-      <docs-short-paragraph />
+      <docs-paragraph short />
 
       <sui-header size="small">Small header</sui-header>
-      <docs-short-paragraph />
+      <docs-paragraph short />
 
       <sui-header size="tiny">Tiny header</sui-header>
-      <docs-short-paragraph />
+      <docs-paragraph short />
     </div>
   </sui-segment>
 </template>

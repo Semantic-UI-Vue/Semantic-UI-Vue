@@ -2,7 +2,7 @@
   <div class="ui segment">
     <h2 is="sui-header" floated="right">Floated Content</h2>
     <sui-divider clearing />
-    <docs-short-paragraph />
+    <docs-paragraph short />
   </div>
 </template>
 

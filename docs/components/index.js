@@ -1,5 +1,5 @@
-import ShortParagraph from './ShortParagraph';
+import Paragraph from './Paragraph';
 
 export default (Vue) => {
-  Vue.component(ShortParagraph.name, ShortParagraph);
+  Vue.component(Paragraph.name, Paragraph);
 };
