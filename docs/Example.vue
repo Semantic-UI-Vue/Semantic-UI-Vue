@@ -55,7 +55,7 @@
           </a>
           <a
             is="sui-menu-item"
-            href="https://github.com/mariolamacchia/semantic-ui-vue/issues/new"
+            href="https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/issues/new"
           >
             <sui-icon name="bug" />
             Issue

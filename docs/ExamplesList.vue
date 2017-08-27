@@ -64,7 +64,7 @@ export default {
       return entry ? entry[1] : [];
     },
     exampleBaseUrl() {
-      return `https://github.com/mariolamacchia/semantic-ui-vue/edit/master/docs/examples/${this.type}/${this.component}Example`;
+      return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/edit/master/docs/examples/${this.type}/${this.component}Example`;
     },
   },
   components: { Example },

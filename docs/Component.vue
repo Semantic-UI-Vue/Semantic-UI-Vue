@@ -116,7 +116,7 @@ export default {
       return capitalize(this.componentName);
     },
     githubLink() {
-      return `https://github.com/mariolamacchia/semantic-ui-vue/blob/master/src/${this.type}/${this.title}/${this.title}.jsx`;
+      return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/blob/master/src/${this.type}/${this.title}/${this.title}.jsx`;
     },
     semanticLink() {
       return `https://semantic-ui.com/${this.type}/${this.componentName}.html`
