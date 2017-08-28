@@ -1,8 +1,13 @@
 {
   "name": "sui-vue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Semantic-UI Vue integration",
   "author": "Mario Lamacchia <mario.lamacchia@mariolamacchia.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Semantic-UI-Vue/Semantic-UI-Vue.git"
+  },
+  "homepage": "https://semantic-ui-vue.github.io",
   "main": "dist/commonjs/index.js",
   "files": [
     "src",
