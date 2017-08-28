@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Component from './Component';
 import DocsPage from './DocsPage';
 import QuickStart from '../README.md';
+import Contributing from '../CONTRIBUTING.md';
 
 Vue.use(Router);
 
@@ -13,6 +14,11 @@ const router = new Router({
       path: '/',
       component: DocsPage,
       props: { markdown: QuickStart },
+    },
+    {
+      path: '/contributing',
+      component: DocsPage,
+      props: { markdown: Contributing },
     },
     {
       path: '/:type/:componentName',

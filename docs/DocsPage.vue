@@ -14,7 +14,11 @@ renderer.heading = (text, level) => (
 export default {
   name: 'DocsPage',
   props: ['markdown'],
-  data() { return { content: marked(this.markdown, { renderer }) }; },
+  computed: {
+    content() {
+      return marked(this.markdown, { renderer });
+    },
+  },
 };
 </script>
 

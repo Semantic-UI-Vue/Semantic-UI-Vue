@@ -20,6 +20,9 @@
         <sui-menu-header>Getting Started</sui-menu-header>
         <sui-menu-menu>
           <router-link is="sui-menu-item" to="/">Quick Start</router-link>
+          <router-link is="sui-menu-item" to="/contributing">
+            Contributing
+          </router-link>
           <a is="sui-menu-item" href="https://github.com/Semantic-UI-Vue/Semantic-UI-Vue">
             Github
             <sui-icon name="github" />
