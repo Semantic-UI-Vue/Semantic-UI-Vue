@@ -187,7 +187,7 @@ code {
   overflow-y: scroll!important;
 }
 
-.semantic-ui.icon {
+.semantic-ui.icon img {
   height: 12px;
 }
 </style>
