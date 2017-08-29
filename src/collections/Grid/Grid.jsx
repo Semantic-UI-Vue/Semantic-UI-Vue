@@ -5,12 +5,15 @@ export default {
   name: 'SuiGrid',
   description: 'A grid is used to harmonize negative space in a layout.',
   props: {
+    celled: Boolean,
     centered: Boolean,
     columns: {
       type: Number,
       description: 'Represents column count per row in Grid.',
     },
-    divided: Boolean,
+    divided: Enum(['vertically'], {
+      type: Boolean,
+    }),
     padded: {
       type: Boolean,
       description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
@@ -26,11 +29,15 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          this.verticalAlign && `${this.verticalAlign} aligned`,
+          this.verticalAlign,
+          this.verticalAlign && 'aligned',
           this.padded && 'padded',
-          this.divided && 'divided',
+          this.divided,
+          (this.divided || this.divided === '') && 'divided',
           this.centered && 'centered',
-          this.columns && `${num(this.columns)} column`,
+          this.celled && 'celled',
+          num(this.columns),
+          this.columns && 'column',
           this.relaxed !== true && this.relaxed,
           this.relaxed && 'relaxed',
           this.stackable && 'stackable',

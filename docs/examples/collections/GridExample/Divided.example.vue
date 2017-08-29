@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'GridExample',
+  name: 'DividedExample',
 };
 </script>
