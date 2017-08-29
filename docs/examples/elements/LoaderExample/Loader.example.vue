@@ -10,7 +10,7 @@
         <sui-loader />
       </sui-dimmer>
 
-      <docs-paragraph short />
+      <docs-wireframe name="short-paragraph" />
     </sui-segment>
   </div>
 </template>

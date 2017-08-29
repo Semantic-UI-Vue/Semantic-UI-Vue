@@ -7,19 +7,19 @@
     </sui-message>
 
     <h1 is="sui-header">First header</h1>
-    <docs-paragraph short />
+    <docs-wireframe name="short-paragraph" />
 
     <h2 is="sui-header">Second header</h2>
-    <docs-paragraph short />
+    <docs-wireframe name="short-paragraph" />
 
     <h3 is="sui-header">Third header</h3>
-    <docs-paragraph short />
+    <docs-wireframe name="short-paragraph" />
 
     <h4 is="sui-header">Fourth header</h4>
-    <docs-paragraph short />
+    <docs-wireframe name="short-paragraph" />
 
     <h5 is="sui-header">Fifth header</h5>
-    <docs-paragraph short />
+    <docs-wireframe name="short-paragraph" />
   </div>
 </template>
 

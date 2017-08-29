@@ -4,7 +4,7 @@
      <sui-loader content="Loading..." />
    </sui-dimmer>
 
-   <docs-paragraph short />
+   <docs-wireframe name="short-paragraph" />
  </sui-segment>
 </template>
 

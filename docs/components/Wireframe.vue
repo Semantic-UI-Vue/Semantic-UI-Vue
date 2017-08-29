@@ -1,14 +1,14 @@
 <template>
   <img
-    :src="`static/images/wireframes/${short ? 'short' : ''}paragraph.png`"
+    :src="`static/images/wireframes/${name}.png`"
     alt="paragraph"
   />
 </template>
 
 <script>
 export default {
-  name: 'DocsParagraph',
-  props: ['short'],
+  name: 'DocsWireframe',
+  props: ['name'],
 };
 </script>
 

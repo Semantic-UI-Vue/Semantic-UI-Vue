@@ -1,5 +1,5 @@
-import Paragraph from './Paragraph';
+import Wireframe from './Wireframe';
 
 export default (Vue) => {
-  Vue.component(Paragraph.name, Paragraph);
+  Vue.component(Wireframe.name, Wireframe);
 };

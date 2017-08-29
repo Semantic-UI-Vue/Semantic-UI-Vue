@@ -1,8 +1,8 @@
 <template>
   <div>
-    <docs-paragraph short />
+    <docs-wireframe name="short-paragraph" />
     <sui-divider />
-    <docs-paragraph short />
+    <docs-wireframe name="short-paragraph" />
   </div>
 </template>
 
