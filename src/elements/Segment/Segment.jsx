@@ -20,7 +20,7 @@ export default {
         class={classes(
           'ui',
           this.inverted && 'inverted',
-          this.stacked && this.stacked,
+          this.stacked,
           (this.stacked || this.stacked === '') && 'stacked',
           this.piled && 'piled',
           this.raised && 'raised',
