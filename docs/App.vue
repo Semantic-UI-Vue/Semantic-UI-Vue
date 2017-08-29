@@ -190,4 +190,14 @@ code {
 .semantic-ui.icon img {
   height: 12px;
 }
+
+@media screen and (max-width: 767px) {
+  .docs-sidebar {
+    display: none!important;
+  }
+
+  .docs-container {
+    margin-left: 0!important;
+  }
+}
 </style>

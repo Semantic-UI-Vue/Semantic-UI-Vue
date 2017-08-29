@@ -85,13 +85,23 @@ export default {
 }
 
 .example-list-container {
-  margin-right: 387px!important;
   width: auto;
   max-width: 960px!important;
   position: relative;
 }
 
 .docs-rail {
-  width: 319px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .example-list-container {
+    margin-right: 387px!important;
+  }
+
+  .docs-rail {
+    display: block;
+    width: 319px;
+  }
 }
 </style>
