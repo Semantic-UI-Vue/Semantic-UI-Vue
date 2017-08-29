@@ -35,7 +35,7 @@
             :key="index"
             :base-url="exampleBaseUrl"
           />
-        </div> 
+        </div>
       </sui-segment>
     </sui-grid>
   </div>
@@ -85,6 +85,7 @@ export default {
   width: auto;
   max-width: 960px!important;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .docs-rail {
