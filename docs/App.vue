@@ -1,8 +1,33 @@
 <template>
-  <div id="app" is="sui-sidebar-pushable">
-    <docs-menu class="docs-sidebar" />
-    <div class="docs-container">
-      <router-view></router-view>
+  <div id="app">
+    <div class="docs-desktop" is="sui-sidebar-pushable">
+      <docs-menu class="docs-sidebar" :visible="true" />
+      <div class="docs-container">
+        <router-view></router-view>
+      </div>
+    </div>
+
+    <div class="docs-mobile docs-top-bar" is="sui-menu" fixed inverted>
+      <sui-container>
+        <a
+          is="sui-menu-item"
+          href="javascript:void 0"
+          icon="content"
+          @click.native="open = !open"
+        />
+        <sui-menu-item>Semantic UI Vue</sui-menu-item>
+      </sui-container>
+    </div>
+    <docs-menu class="docs-mobile" :visible="open" />
+    <div class="docs-mobile" is="sui-sidebar-pushable">
+      <div
+        is="sui-sidebar-pusher"
+        class="docs-mobile-container"
+        :dimmed="open"
+        @click.native="open = false"
+      >
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +42,11 @@ import DocsMenu from './Menu';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      open: false,
+    }
+  },
   components: { DocsMenu },
 };
 </script>
@@ -34,6 +64,7 @@ code {
   font-size: 87.5%;
   background-color: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
+  overflow-x: auto;
 }
 </style>
 
@@ -45,7 +76,7 @@ code {
 .docs-container {
   margin-left: 250px;
   min-width: 550px;
-  height: 100%;
+  height: 100vh;
   overflow-y: scroll;
 }
 
@@ -60,13 +91,22 @@ code {
   overflow-y: scroll!important;
 }
 
+.docs-mobile {
+  display: none!important;
+}
+
+.docs-mobile-container {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
 @media screen and (max-width: 767px) {
-  .docs-sidebar {
+  .docs-desktop {
     display: none!important;
   }
 
-  .docs-container {
-    margin-left: 0!important;
+  .docs-mobile {
+    display: block!important;
   }
 }
 </style>

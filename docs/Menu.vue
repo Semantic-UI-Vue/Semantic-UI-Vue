@@ -3,7 +3,8 @@
     is="sui-sidebar"
     inverted="true"
     vertical="true"
-    visible
+    animation="overlay"
+    :visible="visible"
   >
     <sui-menu-item>
       <sui-image :src="`${publicPath}static/images/logo.png`" spaced="right" size="mini" />
@@ -77,6 +78,7 @@ import * as elements from 'src/elements';
 import * as modules from 'src/modules';
 
 export default {
+  props: ['visible'],
   computed: {
     matchingComponents() {
       return this.modules
