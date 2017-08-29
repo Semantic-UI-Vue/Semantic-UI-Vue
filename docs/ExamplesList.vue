@@ -25,20 +25,17 @@
         </sui-menu-item>
       </sui-accordion>
     </sui-rail>
-    <sui-grid
-      :key="section.title"
-      v-for="section in sections"
-      :columns="1"
-      padded
-    >
+    <sui-grid :columns="1" padded>
       <sui-segment is="sui-grid-column">
-        <h2 class="section-header" is="sui-header">{{ section.title }}</h2>
-        <example
-          v-for="(example, index) in section.examples"
-          v-bind="example"
-          :key="index"
-          :base-url="exampleBaseUrl"
-        />
+        <div :key="section.title" v-for="section in sections">
+          <h2 class="section-header" is="sui-header">{{ section.title }}</h2>
+          <example
+            v-for="(example, index) in section.examples"
+            v-bind="example"
+            :key="index"
+            :base-url="exampleBaseUrl"
+          />
+        </div> 
       </sui-segment>
     </sui-grid>
   </div>
