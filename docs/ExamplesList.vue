@@ -1,6 +1,6 @@
 <template>
   <div is="sui-container" class="example-list-container">
-    <sui-rail class="docs-rail" dividing position="right">
+    <sui-rail class="docs-rail" position="right">
       <h4 is="sui-header">{{ component }}</h4>
       <sui-accordion is="sui-menu" vertical following fluid text>
         <sui-menu-item
@@ -31,7 +31,7 @@
       :columns="1"
       padded
     >
-      <sui-grid-column>
+      <sui-segment is="sui-grid-column">
         <h2 class="section-header" is="sui-header">{{ section.title }}</h2>
         <example
           v-for="(example, index) in section.examples"
@@ -39,7 +39,7 @@
           :key="index"
           :base-url="exampleBaseUrl"
         />
-      </sui-grid-column>
+      </sui-segment>
     </sui-grid>
   </div>
 </template>
