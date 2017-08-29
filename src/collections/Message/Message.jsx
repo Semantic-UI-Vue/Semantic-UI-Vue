@@ -19,7 +19,7 @@ export default {
           'message',
         )}
       >
-        {this.$slots.default || this.content}
+        {this.$slots.default}
       </ElementType>
     );
   },

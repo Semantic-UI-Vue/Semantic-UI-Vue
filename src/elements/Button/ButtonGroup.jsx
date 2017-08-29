@@ -9,7 +9,7 @@ export default {
         {...getChildProps(this)}
         class={classes('ui', 'buttons')}
       >
-        {this.$slots.default || this.content}
+        {this.$slots.default}
       </ElementType>
     );
   },

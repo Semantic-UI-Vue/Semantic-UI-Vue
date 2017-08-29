@@ -15,7 +15,7 @@ export default {
       <ElementType {...getChildProps(this)} class="content">
         {this.title && <SuiStepTitle>{this.title}</SuiStepTitle>}
         {this.description && <SuiStepDescription>{this.description}</SuiStepDescription>}
-        {this.$slots.default || this.content}
+        {this.$slots.default}
       </ElementType>
     );
   },
