@@ -1,6 +1,5 @@
 <template>
-  <div is="sui-container" v-html="content" class="markdown">
-  </div>
+  <div v-html="content" class="markdown" />
 </template>
 
 <script>
@@ -34,7 +33,7 @@ export default {
 }
 
 .markdown {
-  padding-top: 20px;
+  padding: 20px;
   padding-bottom: 50px;
 }
 </style>

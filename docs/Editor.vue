@@ -68,8 +68,10 @@ export default {
   },
   watch: {
     value(value) {
-      this.editor.setValue(value);
-      this.editor.selection.moveTo(Infinity, Infinity);
+      if (value !== this.editor.getValue()) {
+        this.editor.setValue(value);
+        this.editor.selection.moveTo(Infinity, Infinity);
+      }
     },
   },
   template: '<div></div>',

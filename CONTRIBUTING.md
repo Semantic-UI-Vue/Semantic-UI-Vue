@@ -13,7 +13,9 @@ Once it is clear what you need to do:
 
 * Fork the project
 * Clone it:
-  ```$ git clone https://github.com/<your username>/Semantic-UI-Vue```
+  ```
+  $ git clone https://github.com/<your username>/Semantic-UI-Vue
+  ```
 * Make your changes. Here are some good guidelines:
   * Don't worry about making a lot of commits, they will be squashed when the PR is merged
   * Write clear commit messages
