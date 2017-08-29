@@ -1,3 +1,4 @@
+export * from './Breadcrumb';
 export * from './Grid';
 export * from './Menu';
 export * from './Message';
