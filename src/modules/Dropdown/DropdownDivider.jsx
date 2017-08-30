@@ -8,4 +8,7 @@ export default {
       <ElementType {...getChildProps(this)} role="option" class={classes('divider')} />
     );
   },
+  meta: {
+    parent: 'SuiDropdown',
+  },
 };

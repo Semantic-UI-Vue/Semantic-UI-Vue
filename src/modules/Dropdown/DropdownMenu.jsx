@@ -10,4 +10,7 @@ export default {
       </ElementType>
     );
   },
+  meta: {
+    parent: 'SuiDropdown',
+  },
 };
