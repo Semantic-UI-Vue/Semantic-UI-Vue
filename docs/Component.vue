@@ -37,11 +37,22 @@
         <h4 class="props-switcher" is="sui-header" :color="propSwitcherColor">
           <a href="javascript:void 0" @click="toggleProps">
             <sui-icon :name="propSwitcherIcon" />
-            Props:
+            <template v-if="subcomponents.length">
+              Props:
+            </template>
+            <template v-if="!subcomponents.length">
+              Props
+            </template>
           </a>
         </h4>
 
-        <sui-menu color="green" compact secondary size="small">
+        <sui-menu
+          v-if="subcomponents.length"
+          color="green"
+          compact
+          secondary
+          size="small"
+        >
           <sui-menu-item
             :active="currentComponent === component"
             link

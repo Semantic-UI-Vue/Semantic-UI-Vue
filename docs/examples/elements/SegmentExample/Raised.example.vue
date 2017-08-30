@@ -1,6 +1,6 @@
 <template lang="html">
   <sui-segment raised>
-    <docs-paragraph />
+    <docs-wireframe name="paragraph" />
   </sui-segment>
 </template>
 

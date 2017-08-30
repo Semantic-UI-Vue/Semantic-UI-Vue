@@ -26,7 +26,7 @@ export default {
           'divider',
         )}
       >
-        {this.$slots.default || this.content}
+        {this.$slots.default}
       </ElementType>
     );
   },

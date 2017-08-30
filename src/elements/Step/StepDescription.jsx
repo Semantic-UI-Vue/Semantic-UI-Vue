@@ -6,7 +6,7 @@ export default {
     const ElementType = getElementType(this);
     return (
       <ElementType {...getChildProps(this)} class="description">
-        {this.$slots.default || this.content}
+        {this.$slots.default}
       </ElementType>
     );
   },

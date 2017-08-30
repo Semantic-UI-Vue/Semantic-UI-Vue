@@ -2,8 +2,8 @@
   <sui-grid centered :columns="3">
     <sui-grid-column>
       <sui-segment>
-        <docs-paragraph />
-        <docs-paragraph />
+        <docs-wireframe name="paragraph" />
+        <docs-wireframe name="paragraph" />
 
         <sui-rail attached position="left">
           <sui-segment>Left Rail Content</sui-segment>
