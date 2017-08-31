@@ -4,6 +4,7 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiSegment',
   props: {
+    attached: Boolean,
     inverted: Boolean,
     piled: Boolean,
     raised: Boolean,
@@ -19,6 +20,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.attached && 'attached',
           this.inverted && 'inverted',
           this.stacked,
           (this.stacked || this.stacked === '') && 'stacked',

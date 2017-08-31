@@ -100,6 +100,8 @@ export default {
       this.inverted && 'inverted',
       !label && this.labelPosition && this.labelPosition,
       !label && this.labelPosition && 'labeled',
+      this.attached,
+      this.attached && 'attached',
       this.color,
       this.size,
       this.primary && 'primary',

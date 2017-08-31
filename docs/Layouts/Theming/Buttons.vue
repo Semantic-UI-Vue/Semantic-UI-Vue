@@ -19,17 +19,16 @@
 
         <div is="sui-button-group">
           <button is="sui-button">Combo</button>
-          <!-- <div class="ui floating dropdown icon button" tabindex="0">
-            <i class="dropdown icon"></i>
-            <div class="menu" tabindex="-1">
-              <div class="item">Choice 1</div>
-              <div class="item">Choice 2</div>
-              <div class="item">Choice 3</div>
+          <div is="sui-dropdown" button floating icon="dropdown">
+            <div is="sui-dropdown-menu">
+              <div is="sui-dropdown-item">Choice 1</div>
+              <div is="sui-dropdown-item">Choice 2</div>
+              <div is="sui-dropdown-item">Choice 3</div>
             </div>
-          </div> -->
+          </div>
         </div>
 
-        <!-- <div class="ui floating search dropdown button">
+        <div class="ui floating search dropdown button">
           <input class="search" autocomplete="off" tabindex="0"><span class="text">Search Dropdown</span>
           <div class="menu" tabindex="-1">
             <div class="item">Arabic</div>
@@ -54,7 +53,7 @@
             <div class="item">Turkish</div>
             <div class="item">Vietnamese</div>
           </div>
-        </div> -->
+        </div>
 
         <div is="sui-divider" />
 
@@ -105,17 +104,17 @@
 
         <div is="sui-divider" />
 
-        <!-- <div class="ui two top attached buttons">
-          <div class="ui button">One</div>
-          <div class="ui button">Two</div>
+        <div is="sui-button-group" attached="top" :widths="2">
+          <div is="sui-button">One</div>
+          <div is="sui-button">Two</div>
         </div>
-        <div class="ui attached segment">
-          <img src="../assets/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div is="sui-segment" attached>
+          <img src="static/images/wireframes/paragraph.png" is="sui-image" />
         </div>
-        <div class="ui two bottom attached buttons">
-          <div class="ui button">One</div>
-          <div class="ui button">Two</div>
-        </div> -->
+        <div is="sui-button-group" attached="bottom" :widths="2">
+          <div is="sui-button">One</div>
+          <div is="sui-button">Two</div>
+        </div>
 
       </div>
       <div class="column">
