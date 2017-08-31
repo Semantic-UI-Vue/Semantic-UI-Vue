@@ -5,7 +5,9 @@ export default {
   name: 'SuiSegment',
   props: {
     attached: Boolean,
+    basic: Boolean,
     inverted: Boolean,
+    padded: Boolean,
     piled: Boolean,
     raised: Boolean,
     stacked: Enum(['tall'], {
@@ -21,6 +23,8 @@ export default {
         class={classes(
           'ui',
           this.attached && 'attached',
+          this.basic && 'basic',
+          this.padded && 'padded',
           this.inverted && 'inverted',
           this.stacked,
           (this.stacked || this.stacked === '') && 'stacked',
