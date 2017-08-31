@@ -14,10 +14,10 @@
     <h2 is="sui-header" dividing>Table</h2>
     <docs-table />
 
-    <h2 is="sui-header" dividing>Input</h2>
+    <!-- <h2 is="sui-header" dividing>Input</h2> -->
     <!-- <docs-input /> -->
 
-    <h2 is="sui-header" dividing>Card</h2>
+    <!-- <h2 is="sui-header" dividing>Card</h2> -->
     <!-- <docs-card /> -->
   </div>
 </template>
