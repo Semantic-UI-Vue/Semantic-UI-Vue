@@ -6,7 +6,7 @@
     <docs-site />
 
     <h2 is="sui-header" dividing>Menu</h2>
-    <!-- <docs-menu /> -->
+    <docs-menu />
 
     <h2 is="sui-header" dividing>Buttons</h2>
     <docs-buttons />
@@ -24,7 +24,7 @@
 
 <script>
 import DocsSite from './Site';
-// import DocsMenu from './Menu';
+import DocsMenu from './Menu';
 import DocsButtons from './Buttons';
 // import DocsTable from './Table';
 // import DocsInput from './Input';
@@ -33,7 +33,7 @@ import DocsButtons from './Buttons';
 export default {
   components: {
     DocsSite,
-    // DocsMenu,
+    DocsMenu,
     DocsButtons,
     // DocsTable,
     // DocsInput,

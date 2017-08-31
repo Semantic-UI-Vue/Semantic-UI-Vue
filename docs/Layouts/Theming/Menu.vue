@@ -1,23 +1,23 @@
 <template lang="html">
-  <body>
-    <div class="ui menu">
-      <div class="header item">Brand</div>
-      <a class="active item">Link</a>
-      <a class="item">Link</a>
-      <div class="ui dropdown item" tabindex="0">
+  <div>
+    <div is="sui-menu">
+      <div is="sui-menu-item" header>Brand</div>
+      <a is="sui-menu-item" active>Link</a>
+      <a is="sui-menu-item">Link</a>
+      <!-- <div class="ui dropdown item" tabindex="0">
         Dropdown
         <i class="dropdown icon"></i>
-        <div class="menu" tabindex="-1">
-          <div class="item">Action</div>
-          <div class="item">Another Action</div>
-          <div class="item">Something else here</div>
-          <div class="divider"></div>
-          <div class="item">Separated Link</div>
-          <div class="divider"></div>
-          <div class="item">One more separated link</div>
+        <div is="sui-menu-menu" tabindex="-1">
+          <div is="sui-menu-item">Action</div>
+          <div is="sui-menu-item">Another Action</div>
+          <div is="sui-menu-item">Something else here</div>
+          <div is="sui-menu-divider"></div>
+          <div is="sui-menu-item">Separated Link</div>
+          <div is="sui-menu-divider"></div>
+          <div is="sui-menu-item">One more separated link</div>
         </div>
-      </div>
-      <div class="right menu">
+      </div> -->
+      <!-- <div is="sui-menu" class="right menu">
         <div class="item">
           <div class="ui action left icon input">
             <i class="search icon"></i>
@@ -26,17 +26,17 @@
           </div>
         </div>
         <a class="item">Link</a>
-      </div>
+      </div> -->
     </div>
 
-    <div class="ui inverted menu">
-      <div class="header item">Brand</div>
-      <div class="active item">Link</div>
-      <a class="item">Link</a>
-      <div class="ui dropdown item" tabindex="0">
+    <div is="sui-menu" inverted>
+      <div is="sui-menu-item" header>Brand</div>
+      <div is="sui-menu-item" active>Link</div>
+      <a is="sui-menu-item">Link</a>
+      <!-- <div class="ui dropdown item" tabindex="0">
         Dropdown
         <i class="dropdown icon"></i>
-        <div class="menu" tabindex="-1">
+        <div is="sui-menu" class="menu" tabindex="-1">
           <div class="item">Action</div>
           <div class="item">Another Action</div>
           <div class="item">Something else here</div>
@@ -45,8 +45,8 @@
           <div class="divider"></div>
           <div class="item">One more separated link</div>
         </div>
-      </div>
-      <div class="right menu">
+      </div> -->
+      <!-- <div is="sui-menu-menu" class="right menu">
         <div class="item">
           <div class="ui transparent inverted icon input">
             <i class="search icon"></i>
@@ -54,16 +54,16 @@
           </div>
         </div>
         <a class="item">Link</a>
-      </div>
+      </div> -->
     </div>
 
-    <div class="ui secondary menu">
-      <div class="active item">Link</div>
-      <a class="item">Link</a>
-      <div class="ui dropdown item" tabindex="0">
+    <div is="sui-menu" secondary>
+      <div is="sui-menu-item" active>Link</div>
+      <a is="sui-menu-item">Link</a>
+      <!-- <div class="ui dropdown item" tabindex="0">
         Dropdown
         <i class="dropdown icon"></i>
-        <div class="menu" tabindex="-1">
+        <div is="sui-menu" class="menu" tabindex="-1">
           <div class="item">Action</div>
           <div class="item">Another Action</div>
           <div class="item">Something else here</div>
@@ -72,8 +72,8 @@
           <div class="divider"></div>
           <div class="item">One more separated link</div>
         </div>
-      </div>
-      <div class="right menu">
+      </div> -->
+      <!-- <div is="sui-menu-menu" class="right menu">
         <div class="item">
           <div class="ui action left icon input">
             <i class="search icon"></i>
@@ -83,7 +83,7 @@
         </div>
         <div class="ui dropdown item" tabindex="0">
           Dropdown Left<i class="dropdown icon"></i>
-          <div class="menu" tabindex="-1">
+          <div is="sui-menu" class="menu" tabindex="-1">
             <a class="item">Link</a>
             <a class="item">Link</a>
             <div class="divider"></div>
@@ -91,12 +91,12 @@
             <div class="item">
               <i class="dropdown icon"></i>
               Sub Menu
-              <div class="menu">
+              <div is="sui-menu" class="menu">
                 <a class="item">Link</a>
                 <div class="item">
                   <i class="dropdown icon"></i>
                   Sub Sub Menu
-                  <div class="menu">
+                  <div is="sui-menu" class="menu">
                     <a class="item">Link</a>
                     <a class="item">Link</a>
                   </div>
@@ -108,40 +108,40 @@
           </div>
         </div>
         <a class="item">Link</a>
-      </div>
+      </div> -->
     </div>
 
-    <div class="ui three column doubling grid">
-      <div class="column">
-        <div class="ui secondary pointing menu">
-          <div class="active item">Link</div>
-          <a class="item">Link</a>
-          <a class="item">Link</a>
+    <div is="sui-grid" :columns="3" doubling>
+      <div is="sui-grid-column">
+        <div is="sui-menu" secondary pointing>
+          <div is="sui-menu-item" active>Link</div>
+          <a is="sui-menu-item">Link</a>
+          <a is="sui-menu-item">Link</a>
         </div>
       </div>
 
-      <div class="column">
-        <div class="ui tabular menu">
-          <div class="active item">Link</div>
-          <a class="item">Link</a>
-          <a class="item">Link</a>
+      <div is="sui-grid-column">
+        <div is="sui-menu" tabular>
+          <div is="sui-menu-item" active>Link</div>
+          <a is="sui-menu-item">Link</a>
+          <a is="sui-menu-item">Link</a>
         </div>
       </div>
 
-      <div class="column">
-        <div class="ui pointing menu">
-          <div class="active item">Link</div>
-          <a class="item">Link</a>
-          <div class="right item">
+      <div is="sui-grid-column">
+        <div is="sui-menu" pointing>
+          <div is="sui-menu-item" active>Link</div>
+          <a is="sui-menu-item">Link</a>
+          <!-- <div class="right item">
             Right Text
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 
 
     <div style="clear: both; display: block;"></div>
-  </body>
+  </div>
 </template>
 
 <script>
