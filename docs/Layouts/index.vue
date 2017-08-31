@@ -15,7 +15,13 @@
 
       <div is="sui-card-group" :widths="3" stackable>
         <router-link to="/layouts/theming" is="sui-card">
-          <sui-image href="static/images/layouts/theming.png" />
+          <sui-image src="static/images/layouts/theming.png" />
+          <sui-card-content>
+            <sui-card-header>Theming</sui-card-header>
+            <sui-card-description>
+              Examples of many common UI components, useful for testing custom themes.
+            </sui-card-description>
+          </sui-card-content>
         </router-link>
       </div>
 
