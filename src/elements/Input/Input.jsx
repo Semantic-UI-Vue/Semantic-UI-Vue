@@ -1,10 +1,13 @@
 import { classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
-import Icon from '../../elements/Icon/Icon';
+import SuiButton from '../../elements/Button/Button';
+import SuiIcon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiInput',
+  components: { SuiButton, SuiIcon },
   props: {
+    action: String,
     focus: Boolean,
     icon: String,
     iconPosition: Enum(['left', 'right']),
@@ -17,7 +20,7 @@ export default {
     const ElementType = getElementType(this);
     let icon;
     if (this.loading || this.icon) {
-      icon = <Icon name={this.loading ? 'loading' : this.icon} />;
+      icon = <SuiIcon name={this.loading ? 'loading' : this.icon} />;
     }
 
     return (
@@ -25,6 +28,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.action && 'action',
           this.focus && 'focus',
           this.transparent && 'transparent',
           this.inverted && 'inverted',
@@ -40,6 +44,7 @@ export default {
           {...{ attrs: this.$attrs }}
         />
         {icon}
+        {this.action && <SuiButton content={this.action} />}
       </ElementType>
     );
   },

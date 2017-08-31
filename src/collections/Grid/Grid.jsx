@@ -14,6 +14,7 @@ export default {
     divided: Enum(['vertically'], {
       type: Boolean,
     }),
+    doubling: Boolean,
     padded: {
       type: Boolean,
       description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
@@ -32,6 +33,7 @@ export default {
           num(this.columns),
           this.columns && 'column',
           this.stackable && 'stackable',
+          this.doubling && 'doubling',
           this.padded && 'padded',
           this.verticalAlign,
           this.verticalAlign && 'aligned',

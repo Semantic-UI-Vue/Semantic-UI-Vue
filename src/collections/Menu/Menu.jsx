@@ -14,6 +14,8 @@ export default {
     inverted: Boolean,
     items: Array,
     secondary: Boolean,
+    pointing: Boolean,
+    tabular: Boolean,
     text: Boolean,
     vertical: Boolean,
   },
@@ -31,6 +33,8 @@ export default {
           this.icon && 'icon',
           this.inverted && 'inverted',
           this.secondary && 'secondary',
+          this.pointing && 'pointing',
+          this.tabular && 'tabular',
           this.color,
           'menu',
         )}
