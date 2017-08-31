@@ -119,13 +119,13 @@
 
       </div>
       <div class="column">
-        <button is="sui-button" mini>Mini</button>
-        <button is="sui-button" tiny>Tiny</button>
-        <button is="sui-button" small>Small</button>
-        <button is="sui-button" large>Large</button>
-        <button is="sui-button" big>Big</button>
-        <button is="sui-button" huge>Huge</button>
-        <button is="sui-button" massive>Massive</button>
+        <button is="sui-button" size="mini">Mini</button>
+        <button is="sui-button" size="tiny">Tiny</button>
+        <button is="sui-button" size="small">Small</button>
+        <button is="sui-button" size="large">Large</button>
+        <button is="sui-button" size="big">Big</button>
+        <button is="sui-button" size="huge">Huge</button>
+        <button is="sui-button" size="massive">Massive</button>
         <div is="sui-divider" />
         <div class="spaced">
           <button is="sui-button" color="yellow">Yellow</button>
@@ -163,4 +163,7 @@ export default {
 </script>
 
 <style lang="css">
+.spaced > .button {
+  margin-bottom: 1em;
+}
 </style>
