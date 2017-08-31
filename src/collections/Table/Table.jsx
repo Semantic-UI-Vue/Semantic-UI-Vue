@@ -13,6 +13,7 @@ export default {
       type: Boolean,
       description: 'A table may sometimes need to be more compact to make more rows visible at a time.',
     }),
+    textAlign: Enum(['left', 'right']),
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -21,6 +22,8 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.textAlign,
+          this.textAlign && 'aligned',
           this.basic !== true && this.basic,
           this.basic && 'basic',
           this.compact !== true && this.compact,

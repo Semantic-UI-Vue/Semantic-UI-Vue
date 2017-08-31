@@ -12,7 +12,7 @@
     <docs-buttons />
 
     <h2 is="sui-header" dividing>Table</h2>
-    <!-- <docs-table /> -->
+    <docs-table />
 
     <h2 is="sui-header" dividing>Input</h2>
     <!-- <docs-input /> -->
@@ -26,7 +26,7 @@
 import DocsSite from './Site';
 import DocsMenu from './Menu';
 import DocsButtons from './Buttons';
-// import DocsTable from './Table';
+import DocsTable from './Table';
 // import DocsInput from './Input';
 // import DocsCard from './Card';
 
@@ -35,7 +35,7 @@ export default {
     DocsSite,
     DocsMenu,
     DocsButtons,
-    // DocsTable,
+    DocsTable,
     // DocsInput,
     // DocsCard,
   },
