@@ -1,6 +1,6 @@
 <template lang="html">
-  <div is="sui-container">
-    <h1 is="sui-header">Theming Examples</h1>
+  <div class="theming-container" is="sui-container">
+    <h1 class="docs-header">Theming Examples</h1>
 
     <h2 is="sui-header" dividing>Site</h2>
     <docs-site />
@@ -43,4 +43,19 @@ export default {
 </script>
 
 <style lang="css">
+.theming-container {
+  padding-top: 3em;
+}
+
+.docs-header {
+  font-size: 3em;
+  text-align: center;
+  font-weight: normal;
+}
+
+.theming-container > h2.dividing.header {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 4em 0em 3em;
+}
 </style>

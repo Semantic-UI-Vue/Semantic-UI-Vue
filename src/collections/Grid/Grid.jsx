@@ -29,18 +29,18 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          this.verticalAlign,
-          this.verticalAlign && 'aligned',
-          this.padded && 'padded',
-          this.divided,
-          (this.divided || this.divided === '') && 'divided',
-          this.centered && 'centered',
-          this.celled && 'celled',
           num(this.columns),
           this.columns && 'column',
+          this.stackable && 'stackable',
+          this.padded && 'padded',
+          this.verticalAlign,
+          this.verticalAlign && 'aligned',
+          this.centered && 'centered',
+          this.divided,
+          (this.divided || this.divided === '') && 'divided',
+          this.celled && 'celled',
           this.relaxed !== true && this.relaxed,
           this.relaxed && 'relaxed',
-          this.stackable && 'stackable',
           'grid',
         )}
       >
