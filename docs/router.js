@@ -3,6 +3,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Component from './Component';
 import DocsPage from './DocsPage';
+import Theming from './Layouts/Theming';
 import QuickStart from '../README.md';
 import Contributing from '../CONTRIBUTING.md';
 
@@ -19,6 +20,10 @@ const router = new Router({
       path: '/contributing',
       component: DocsPage,
       props: { markdown: Contributing },
+    },
+    {
+      path: '/layout/theming',
+      component: Theming,
     },
     {
       path: '/:type/:componentName',
