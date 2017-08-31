@@ -14,7 +14,7 @@ Vue.use(Router);
 const router = new Router({
   routes: [
     {
-      path: '/layout/theming',
+      path: '/layouts/theming',
       component: Theming,
     },
     {
@@ -32,7 +32,7 @@ const router = new Router({
           props: { markdown: Contributing },
         },
         {
-          path: '/layout',
+          path: '/layouts',
           component: Layouts,
         },
         {
