@@ -4,19 +4,17 @@
       <div is="sui-menu-item" header>Brand</div>
       <a is="sui-menu-item" active>Link</a>
       <a is="sui-menu-item">Link</a>
-      <!-- <div class="ui dropdown item" tabindex="0">
-        Dropdown
-        <i class="dropdown icon"></i>
-        <div is="sui-menu-menu" tabindex="-1">
-          <div is="sui-menu-item">Action</div>
-          <div is="sui-menu-item">Another Action</div>
-          <div is="sui-menu-item">Something else here</div>
-          <div is="sui-menu-divider"></div>
-          <div is="sui-menu-item">Separated Link</div>
-          <div is="sui-menu-divider"></div>
-          <div is="sui-menu-item">One more separated link</div>
+      <sui-dropdown is="sui-menu-item" text="Dropdown">
+        <div is="sui-dropdown-menu" tabindex="-1">
+          <div is="sui-dropdown-item">Action</div>
+          <div is="sui-dropdown-item">Another Action</div>
+          <div is="sui-dropdown-item">Something else here</div>
+          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-item">Separated Link</div>
+          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-item">One more separated link</div>
         </div>
-      </div> -->
+      </sui-dropdown>
       <div is="sui-menu-menu" position="right">
         <div is="sui-menu-item">
           <div
@@ -36,19 +34,17 @@
       <div is="sui-menu-item" header>Brand</div>
       <a is="sui-menu-item" active>Link</a>
       <a is="sui-menu-item">Link</a>
-      <!-- <div class="ui dropdown item" tabindex="0">
-        Dropdown
-        <i class="dropdown icon"></i>
-        <div is="sui-menu-menu" tabindex="-1">
-          <div is="sui-menu-item">Action</div>
-          <div is="sui-menu-item">Another Action</div>
-          <div is="sui-menu-item">Something else here</div>
-          <div is="sui-menu-divider"></div>
-          <div is="sui-menu-item">Separated Link</div>
-          <div is="sui-menu-divider"></div>
-          <div is="sui-menu-item">One more separated link</div>
+      <sui-dropdown is="sui-menu-item" text="Dropdown">
+        <div is="sui-dropdown-menu" tabindex="-1">
+          <div is="sui-dropdown-item">Action</div>
+          <div is="sui-dropdown-item">Another Action</div>
+          <div is="sui-dropdown-item">Something else here</div>
+          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-item">Separated Link</div>
+          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-item">One more separated link</div>
         </div>
-      </div> -->
+      </sui-dropdown>
       <div is="sui-menu-menu" position="right">
         <div is="sui-menu-item">
           <div

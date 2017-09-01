@@ -23,7 +23,11 @@ export default {
       this.menu = menu;
     },
     openMenu(e) {
-      if (e.target === this.$el) {
+      if (
+        e.target === this.$el ||
+        e.target === this.$refs.text ||
+        e.target === this.$refs.icon
+      ) {
         e.stopPropagation();
         this.menu.setOpen(true);
       }
@@ -33,7 +37,7 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this, 'button');
+    const ElementType = getElementType(this, this.button ? 'button' : 'div');
     return (
       <ElementType
         role="listbox"
@@ -50,9 +54,12 @@ export default {
           'dropdown',
         )}
         onClick={this.openMenu}
+        nativeOnClick={this.openMenu}
       >
-        {this.text && <div class="text" role="alert" aria-live="polite">{this.text}</div>}
-        <i aria-hidden="true" class={`${this.icon || 'dropdown'} icon`}></i>
+        {this.text &&
+          <div ref="text" class="text" role="alert" aria-live="polite">{this.text}</div>
+        }
+        <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`}></i>
         {this.$slots.default}
       </ElementType>
     );
