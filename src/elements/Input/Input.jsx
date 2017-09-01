@@ -8,6 +8,7 @@ export default {
   components: { SuiButton, SuiIcon },
   props: {
     action: String,
+    error: Boolean,
     focus: Boolean,
     icon: String,
     iconPosition: Enum(['left', 'right']),
@@ -29,6 +30,7 @@ export default {
         class={classes(
           'ui',
           this.action && 'action',
+          this.error && 'error',
           this.focus && 'focus',
           this.transparent && 'transparent',
           this.inverted && 'inverted',

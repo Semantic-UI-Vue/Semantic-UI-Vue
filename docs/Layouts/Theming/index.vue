@@ -14,8 +14,8 @@
     <h2 is="sui-header" dividing>Table</h2>
     <docs-table />
 
-    <!-- <h2 is="sui-header" dividing>Input</h2> -->
-    <!-- <docs-input /> -->
+    <h2 is="sui-header" dividing>Input</h2>
+    <docs-input />
 
     <!-- <h2 is="sui-header" dividing>Card</h2> -->
     <!-- <docs-card /> -->
@@ -27,7 +27,7 @@ import DocsSite from './Site';
 import DocsMenu from './Menu';
 import DocsButtons from './Buttons';
 import DocsTable from './Table';
-// import DocsInput from './Input';
+import DocsInput from './Input';
 // import DocsCard from './Card';
 
 export default {
@@ -36,7 +36,7 @@ export default {
     DocsMenu,
     DocsButtons,
     DocsTable,
-    // DocsInput,
+    DocsInput,
     // DocsCard,
   },
 }
