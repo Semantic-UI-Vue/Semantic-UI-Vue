@@ -12,10 +12,28 @@ export default {
   data() {
     return {
       open: false,
+      menu: null,
     };
   },
+  mounted() {
+    document.body.addEventListener('click', this.closeMenu);
+  },
+  methods: {
+    register(menu) {
+      this.menu = menu;
+    },
+    openMenu(e) {
+      if (e.target === this.$el) {
+        e.stopPropagation();
+        this.menu.setOpen(true);
+      }
+    },
+    closeMenu() {
+      this.menu.setOpen(false);
+    },
+  },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = getElementType(this, 'button');
     return (
       <ElementType
         role="listbox"
@@ -31,6 +49,7 @@ export default {
           'icon',
           'dropdown',
         )}
+        onClick={this.openMenu}
       >
         {this.text && <div class="text" role="alert" aria-live="polite">{this.text}</div>}
         <i aria-hidden="true" class={`${this.icon || 'dropdown'} icon`}></i>
