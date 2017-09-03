@@ -27,7 +27,7 @@ Once Semantic UI Vue has been installed, you will need to import it in your main
 
 ```
 import Vue form 'vue';
-import SuiVue from 'sui';
+import SuiVue from 'sui-vue';
 
 /* ... */
 
