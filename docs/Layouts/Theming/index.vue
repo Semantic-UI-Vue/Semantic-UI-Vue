@@ -17,8 +17,8 @@
     <h2 is="sui-header" dividing>Input</h2>
     <docs-input />
 
-    <!-- <h2 is="sui-header" dividing>Card</h2> -->
-    <!-- <docs-card /> -->
+    <h2 is="sui-header" dividing>Card</h2>
+    <docs-card />
   </div>
 </template>
 
@@ -28,7 +28,7 @@ import DocsMenu from './Menu';
 import DocsButtons from './Buttons';
 import DocsTable from './Table';
 import DocsInput from './Input';
-// import DocsCard from './Card';
+import DocsCard from './Card';
 
 export default {
   components: {
@@ -37,7 +37,7 @@ export default {
     DocsButtons,
     DocsTable,
     DocsInput,
-    // DocsCard,
+    DocsCard,
   },
 }
 </script>

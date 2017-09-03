@@ -18,7 +18,11 @@ export default {
           'dimmer',
         )}
       >
-        {this.$slots.default}
+        <div class="content">
+          <div class="center">
+            {this.$slots.default}
+          </div>
+        </div>
       </ElementType>
     );
   },

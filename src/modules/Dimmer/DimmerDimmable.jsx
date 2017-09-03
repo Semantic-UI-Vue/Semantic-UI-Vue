@@ -1,23 +1,19 @@
 import { classes, getChildProps, getElementType } from '../../lib';
 
 export default {
-  name: 'SuiCardContent',
+  name: 'SuiDimmerDimmable',
   props: {
-    extra: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
     return (
       <ElementType
         {...getChildProps(this)}
-        class={classes(this.extra && 'extra', 'content')}
+        class={classes(
+          'dimmable',
+        )}
       >
         {this.$slots.default}
-        {this.$slots.right && (
-          <div class="right floated">
-            {this.$slots.right}
-          </div>
-        )}
       </ElementType>
     );
   },
