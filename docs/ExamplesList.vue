@@ -1,43 +1,58 @@
 <template>
   <div is="sui-container" class="example-list-container">
-    <sui-rail class="docs-rail" position="right">
-      <h4 is="sui-header">{{ component }}</h4>
-      <sui-accordion is="sui-menu" vertical following fluid text>
-        <sui-menu-item
-          :key="section.title"
-          v-for="section in sections"
-        >
-          <a is="sui-accordion-title">
-            <sui-icon name="dropdown" />
-            <b>{{ section.title }}</b>
-          </a>
-          <sui-accordion-content is="sui-menu-menu">
-            <router-link
-              is="sui-menu-item"
-              :key="example.title"
-              v-if="example.title"
-              v-for="example in section.examples"
-              :to="{ hash: kebabCase(example.title) }"
-            >
-              {{ example.title }}
-            </router-link>
-          </sui-accordion-content>
-        </sui-menu-item>
-      </sui-accordion>
-    </sui-rail>
-    <sui-grid :columns="1" padded>
-      <sui-segment is="sui-grid-column">
-        <div :key="section.title" v-for="section in sections">
-          <h2 class="section-header" is="sui-header">{{ section.title }}</h2>
-          <example
-            v-for="(example, index) in section.examples"
-            v-bind="example"
-            :key="index"
-            :base-url="exampleBaseUrl"
-          />
-        </div>
+    <template v-if="!sections.length">
+      <sui-segment>
+        <h2>No examples available :(</h2>
+        <p>
+          This component does not have any examples available yet!
+          We will work to add examples ASAP.
+        </p>
+        <p>
+          In a hurry? Feel free to add it yourself, we would love contributions!
+          <router-link to="/contributing">Read more.</router-link>
+        </p>
       </sui-segment>
-    </sui-grid>
+    </template>
+    <template v-if="sections.length">
+      <sui-rail class="docs-rail" position="right">
+        <h4 is="sui-header">{{ component }}</h4>
+        <sui-accordion is="sui-menu" vertical following fluid text>
+          <sui-menu-item
+            :key="section.title"
+            v-for="section in sections"
+          >
+            <a is="sui-accordion-title">
+              <sui-icon name="dropdown" />
+              <b>{{ section.title }}</b>
+            </a>
+            <sui-accordion-content is="sui-menu-menu">
+              <router-link
+                is="sui-menu-item"
+                :key="example.title"
+                v-if="example.title"
+                v-for="example in section.examples"
+                :to="{ hash: kebabCase(example.title) }"
+              >
+                {{ example.title }}
+              </router-link>
+            </sui-accordion-content>
+          </sui-menu-item>
+        </sui-accordion>
+      </sui-rail>
+      <sui-grid :columns="1" padded>
+        <sui-segment is="sui-grid-column">
+          <div :key="section.title" v-for="section in sections">
+            <h2 class="section-header" is="sui-header">{{ section.title }}</h2>
+            <example
+              v-for="(example, index) in section.examples"
+              v-bind="example"
+              :key="index"
+              :base-url="exampleBaseUrl"
+            />
+          </div>
+        </sui-segment>
+      </sui-grid>
+    </template>
   </div>
 </template>
 
