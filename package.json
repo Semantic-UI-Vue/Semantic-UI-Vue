@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
