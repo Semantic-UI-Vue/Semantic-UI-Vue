@@ -56,7 +56,7 @@
             <img class="ui fluid image" src="static/images/avatar/tom.jpg">
           </div>
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
         </div>
       </div>
@@ -69,48 +69,45 @@
             <img class="ui fluid image" src="static/images/avatar/nan.jpg">
           </div>
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
         </div>
       </div>
     </div>
-    <div class="ui four cards">
+
+    <div is="sui-card-group" :items-per-row="4">
       <div is="sui-card">
-        <div class="extra content">
-          <span class="left floated like">
-            <i class="like icon"></i>
-            Like
-          </span>
-          <span class="right floated star">
-            <i class="star icon"></i>
-            Favorite
+        <div is="sui-card-content" extra>
+          <sui-icon name="like" /> Like
+          <span slot="right">
+            <sui-icon name="star" /> Favorite
           </span>
         </div>
-        <div class="content">
-          <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
+        <div is="sui-card-content">
+          <sui-image src="static/images/wireframes/paragraph.png" />
         </div>
       </div>
       <div is="sui-card">
-        <div class="content">
+        <div is="sui-card-content">
           <div class="header">
             <img src="static/images/wireframes/square-image.png" class="ui avatar right spaced image">
             Abbreviated Header
           </div>
           <div class="description">
-            <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
+            <sui-image src="static/images/wireframes/paragraph.png" />
           </div>
         </div>
-        <div class="ui two bottom attached buttons">
-          <div class="ui button">
+        <div is="sui-button-group" attached="bottom" :widths="2">
+          <div is="sui-button">
             Action 1
           </div>
-          <div class="ui button">
+          <div is="sui-button">
             Action 2
           </div>
         </div>
       </div>
       <a href="#" class="ui card">
-        <div class="content">
+        <div is="sui-card-content">
           <div class="header">Cute Dog</div>
           <div class="meta">
             <span class="category">Animals</span>
@@ -119,7 +116,7 @@
             <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
           </div>
         </div>
-        <div class="extra content">
+        <div is="sui-card-content" extra>
           <div class="right floated author">
             <img src="static/images/wireframes/square-image.png" class="ui avatar image"> Username
           </div>
@@ -134,7 +131,7 @@
             Action 2
           </div>
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
         </div>
         <div class="ui two bottom attached basic buttons">
@@ -148,67 +145,66 @@
       </div>
     </div>
 
-
-    <div class="ui four cards">
-      <div class="card">
-        <div class="content">
+    <div is="sui-card-group" :items-per-row="4">
+      <div is="sui-card">
+        <div is="sui-card-content">
           Content 1
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 2
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 3
         </div>
-        <div class="extra content">
+        <div is="sui-card-content" extra>
           Extra Content
         </div>
       </div>
-      <div class="card">
-        <div class="content">
+      <div is="sui-card">
+        <div is="sui-card-content">
           Content 1
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 2
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 3
         </div>
-        <div class="extra content">
+        <div is="sui-card-content" extra>
           Extra Content
         </div>
       </div>
-      <div class="card">
-        <div class="content">
+      <div is="sui-card">
+        <div is="sui-card-content">
           Content 1
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 2
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 3
         </div>
-        <div class="extra content">
+        <div is="sui-card-content" extra>
           Extra Content
         </div>
       </div>
-      <div class="card">
-        <div class="content">
+      <div is="sui-card">
+        <div is="sui-card-content">
           Content 1
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 2
         </div>
-        <div class="content">
+        <div is="sui-card-content">
           Content 3
         </div>
-        <div class="extra content">
+        <div is="sui-card-content" extra>
           Extra Content
         </div>
       </div>
     </div>
 
-    <div class="ui four cards">
+    <div is="sui-card-group" :items-per-row="4">
       <div class="card">
         <div class="image">
           <img src="static/images/wireframes/image.png">
@@ -242,7 +238,6 @@
         </div>
       </div>
     </div>
-
 
     <div style="clear: both; display: block;"></div>
   </div>
