@@ -39,9 +39,9 @@ export default {
           'menu',
         )}
       >
-        {this.$slots.default || this.items.map((item, index) => (
+        {this.$slots.default || (this.items && this.items.map((item, index) => (
           <SuiMenuItem {...{ props: item }} active={item.active || this.activeIndex === index}/>
-        ))}
+        )))}
       </ElementType>
     );
   },
