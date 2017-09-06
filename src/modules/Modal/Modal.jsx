@@ -32,7 +32,11 @@ export default {
         )}
         onClick={this.close}
         onNativeClick={this.close}
-      />
+      >
+        <div class={classes('ui modal visible active')}>
+          {this.$slots.default}
+        </div>
+      </ElementType>
     );
   },
 };

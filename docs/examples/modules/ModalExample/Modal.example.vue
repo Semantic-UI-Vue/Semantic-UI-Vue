@@ -1,7 +1,17 @@
 <template lang="html">
   <div>
     <sui-button @click.native="toggle">Show Modal</sui-button>
-    <sui-modal v-model="open"></sui-modal>
+    <sui-modal v-model="open">
+      <sui-modal-header>Select a Photo</sui-modal-header>
+      <sui-modal-content image>
+        <sui-image wrapped size="medium" src="static/images/avatar/large/rachel.png" />
+        <sui-modal-description>
+          <sui-header>Default Profile Image</sui-header>
+          <p>We've found the following gravatar image associated with your e-mail address.</p>
+          <p>Is it okay to use this photo?</p>
+        </sui-modal-description>
+      </sui-modal-content>
+    </sui-modal>
   </div>
 </template>
 
