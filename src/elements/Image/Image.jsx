@@ -12,6 +12,7 @@ export default {
       type: String,
       required: true,
     },
+    wrapped: Boolean,
   },
   methods: {
     getSpacedClass() {
@@ -21,23 +22,25 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this, 'img');
-
-    const img = (
-      <img
-        class={classes(
-          'ui',
-          this.size,
-          this.spaced !== true && this.spaced,
-          this.spaced && 'spaced',
-          this.hidden && 'hidden',
-          this.disabled && 'disabled',
-          'image',
-        )}
-        src={this.src}
-      />
+    const ElementType = getElementType(this, 'div');
+    const classNames = classes(
+      'ui',
+      this.size,
+      this.spaced !== true && this.spaced,
+      this.spaced && 'spaced',
+      this.hidden && 'hidden',
+      this.disabled && 'disabled',
+      'image',
     );
 
-    return ElementType === 'img' ? img : <ElementType {...getChildProps(this)}>{img}</ElementType>;
+    if (this.wrapped) {
+      return (
+        <ElementType class={classNames}>
+          <img src={this.src} />
+        </ElementType>
+      );
+    }
+
+    return <img class={classNames} src={this.src} />;
   },
 };
