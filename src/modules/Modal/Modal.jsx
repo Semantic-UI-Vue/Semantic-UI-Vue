@@ -120,6 +120,11 @@ export default {
   },
   watch: {
     open(newValue) {
+      if (newValue) {
+        requestAnimationFrame(() => {
+          this.updatePosition();
+        });
+      }
       this.visualState = newValue ? opening : closing;
     },
     visualState(newValue) {
@@ -129,7 +134,7 @@ export default {
   mounted() {
     const modal = this.$el.querySelector('.ui.modal');
     this.modal = modal;
-    this.offsetY = -modal.clientHeight / 2;
+    this.updatePosition();
     this.loading = false;
     this.$el.addEventListener(eventAnimationEnd, this.onAnimationEnded, false);
   },
@@ -148,6 +153,9 @@ export default {
     },
     onAnimationEnded() {
       this.visualState = this.open ? open : closed;
+    },
+    updatePosition() {
+      this.offsetY = -this.modal.clientHeight / 2;
     },
   },
   render() {
