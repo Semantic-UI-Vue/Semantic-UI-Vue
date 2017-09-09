@@ -8,7 +8,7 @@ import { eventAnimationEnd } from './animationHelper';
 
 const closed = 'closed';
 const opening = 'opening';
-const opened = 'opened';
+const open = 'open';
 const closing = 'closing';
 const changed = 'changed';
 
@@ -22,7 +22,7 @@ function withDirections(animation) {
 
 const dimmerVariations = ['', 'inverted'];
 const modalVariations = ['', 'fullscreen', 'basic', 'small', 'large'];
-const modalTransitions = [
+const animations = [
   'scale', 'drop', 'horizontal flip', 'vertical flip', 'fade',
   ...withDirections('fade'), ...withDirections('fly'), ...withDirections('swing'),
 ];
@@ -36,7 +36,7 @@ function classBuilder(visualState, animation) {
     case opening:
       return `${buildAnimation(animation, true)} active`;
 
-    case opened:
+    case open:
       return 'visible active';
 
     case closing:
@@ -50,46 +50,46 @@ function classBuilder(visualState, animation) {
 export default {
   name: 'SuiModal',
   model: {
-    prop: 'opened',
+    prop: 'open',
     event: changed,
   },
   directives: { onClickaway },
   props: {
-    opened: {
-      type: Boolean,
-      default: false,
-    },
-    hasImage: {
-      type: Boolean,
-      default: false,
+    animation: {
+      type: String,
+      default: 'scale',
+      validator(value) {
+        return animations.indexOf(value) !== -1;
+      },
     },
     animationDuration: {
       type: Number,
       default: 500,
     },
-    showCloseIcon: {
+    closeIcon: {
       type: Boolean,
       default: false,
     },
-    dimmerVariation: {
+    dimmer: {
       type: String,
       default: '',
       validator(value) {
         return dimmerVariations.indexOf(value) !== -1;
       },
     },
-    modalVariation: {
+    image: {
+      type: Boolean,
+      default: false,
+    },
+    open: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
       type: String,
       default: '',
       validator(value) {
         return modalVariations.indexOf(value) !== -1;
-      },
-    },
-    modalTransition: {
-      type: String,
-      default: 'scale',
-      validator(value) {
-        return modalTransitions.indexOf(value) !== -1;
       },
     },
   },
@@ -103,11 +103,11 @@ export default {
   },
   computed: {
     dimmerClass() {
-      return addClass(classBuilder(this.visualState, 'fade'), this.dimmerVariation);
+      return addClass(classBuilder(this.visualState, 'fade'), this.dimmer);
     },
 
     modalClass() {
-      return addClass(classBuilder(this.visualState, this.modalTransition), this.modalVariation);
+      return addClass(classBuilder(this.visualState, this.animation), this.size);
     },
 
     visibility() {
@@ -115,11 +115,11 @@ export default {
     },
 
     display() {
-      return (this.loading || this.opened) ? 'block' : 'none';
+      return (this.loading || this.open) ? 'block' : 'none';
     },
   },
   watch: {
-    opened(newValue) {
+    open(newValue) {
       this.visualState = newValue ? opening : closing;
     },
     visualState(newValue) {
@@ -137,19 +137,16 @@ export default {
     this.$el.removeEventListener(eventAnimationEnd, this.onAnimationEnded, false);
   },
   methods: {
-    close() {
-      this.$emit(changed, false);
-    },
-    open() {
-      this.$emit(changed, true);
+    toggle(value) {
+      this.$emit(changed, value);
     },
     clickAway() {
-      if (this.visualState === opened) {
+      if (this.visualState === open) {
         this.$emit('clickAwayModal');
       }
     },
     onAnimationEnded() {
-      this.visualState = this.opened ? opened : closed;
+      this.visualState = this.open ? open : closed;
     },
   },
   render() {
@@ -176,7 +173,7 @@ export default {
           onClickaway={this.clickAway}
           style={contentStyle}
         >
-          {this.showCloseIcon && <i class="close icon" onClick={this.close} />}
+          {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)} />}
 
           <div class="header">
             <slot name="header">
@@ -184,7 +181,7 @@ export default {
             </slot>
           </div>
 
-          <div class={classes('content', this.hasImage && 'image')}>
+          <div class={classes('content', this.image && 'image')}>
             <slot name="content">
               <p>Content</p>
             </slot>
@@ -192,7 +189,7 @@ export default {
 
           <div class="actions">
             <slot name="actions">
-              <div class="ui positive right button" onClick="close">
+              <div class="ui positive right button" onClick={() => this.toggle(false)}>
                 OK
               </div>
             </slot>
