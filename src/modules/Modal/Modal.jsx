@@ -187,14 +187,6 @@ export default {
           {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)} />}
 
           {this.$slots.default}
-
-          <div class="actions">
-            <slot name="actions">
-              <div class="ui positive right button" onClick={() => this.toggle(false)}>
-                OK
-              </div>
-            </slot>
-          </div>
         </div>
       </div>
     );

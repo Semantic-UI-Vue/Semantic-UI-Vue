@@ -11,6 +11,11 @@
           <p>Is it okay to use this photo?</p>
         </sui-modal-description>
       </sui-modal-content>
+      <sui-modal-actions>
+        <sui-button floated="right" positive @click.native="toggle">
+          OK
+        </sui-button>
+      </sui-modal-actions>
     </sui-modal>
   </div>
 </template>
