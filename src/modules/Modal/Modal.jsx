@@ -143,6 +143,7 @@ export default {
     clickAway() {
       if (this.visualState === open) {
         this.$emit('clickAwayModal');
+        this.toggle(false);
       }
     },
     onAnimationEnded() {
@@ -163,29 +164,21 @@ export default {
       animationDuration: `${this.animationDuration}ms`,
     };
 
+    const clickAway = {
+      directives: [
+        { name: 'on-clickaway', value: this.clickAway },
+      ],
+    };
+
     return (
       <div
         class={classes('ui dimmer modals page modal-component', this.dimmerClass)}
         style={containerStyle}
       >
-        <div
-          class={classes('ui modal', this.modalClass)}
-          onClickaway={this.clickAway}
-          style={contentStyle}
-        >
+        <div class={classes('ui modal', this.modalClass)} style={contentStyle} {...clickAway}>
           {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)} />}
 
-          <div class="header">
-            <slot name="header">
-              header
-            </slot>
-          </div>
-
-          <div class={classes('content', this.image && 'image')}>
-            <slot name="content">
-              <p>Content</p>
-            </slot>
-          </div>
+          {this.$slots.default}
 
           <div class="actions">
             <slot name="actions">
