@@ -96,7 +96,7 @@ export default {
   data() {
     return {
       offsetY: 0,
-      visualState: closed,
+      visualState: this.open ? open : closed,
       hidden: true,
       loading: true,
     };
