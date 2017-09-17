@@ -1,0 +1,9 @@
+export { default as Comment } from './Comment';
+export { default as CommentAction } from './CommentAction';
+export { default as CommentActions } from './CommentActions';
+export { default as CommentAuthor } from './CommentAuthor';
+export { default as CommentAvatar } from './CommentAvatar';
+export { default as CommentContent } from './CommentContent';
+export { default as CommentGroup } from './CommentGroup';
+export { default as CommentMetadata } from './CommentMetadata';
+export { default as CommentText } from './CommentText';
