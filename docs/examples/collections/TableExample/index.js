@@ -1,4 +1,5 @@
 import Table from './Table.example';
+import TableRating from './TableRating.example';
 
 export default [
   {
@@ -8,6 +9,9 @@ export default [
         title: 'Table',
         description: 'A standard table',
         component: Table,
+      },
+      {
+        component: TableRating,
       },
     ],
   },
