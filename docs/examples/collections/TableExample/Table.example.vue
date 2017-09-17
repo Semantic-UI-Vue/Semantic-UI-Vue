@@ -31,7 +31,7 @@
     <sui-table-footer>
       <sui-table-row>
         <sui-table-header-cell colspan="3">
-          <sui-menu floated="right" pagination>
+          <sui-menu v-sui-floated:right pagination>
             <a is="sui-menu-item" icon>
               <sui-icon name="left chevron" />
             </a>
