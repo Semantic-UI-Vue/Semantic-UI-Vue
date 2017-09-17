@@ -11,6 +11,11 @@ export default {
     maxRating: Number,
     rating: Number,
   },
+  data() {
+    return {
+      selected: 0,
+    };
+  },
   render() {
     const ElementType = getElementType(this);
     return (
@@ -24,15 +29,23 @@ export default {
         role="radiogroup"
       >
         {[...new Array(this.maxRating)].map((v, i) => {
+          const elementValue = i + 1;
           const active = this.rating > i;
+          const selected = this.selected > i;
           return (
             <i
               aria-checked={active.toString()}
-              aria-posinset={i + 1}
+              aria-posinset={elementValue}
               aria-setsize={this.maxRating}
-              class={classes(active && 'active', 'icon')}
+              class={classes(active && 'active', selected && 'selected', 'icon')}
               tabindex="0"
               role="radio"
+              onMouseover={() => {
+                this.selected = elementValue;
+              }}
+              onMouseleave={() => {
+                this.selected = 0;
+              }}
             />
           );
         })}
