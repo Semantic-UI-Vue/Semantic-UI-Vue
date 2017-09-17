@@ -1,6 +1,7 @@
 import Table from './Table.example';
-import TableRating from './TableRating.example';
 import TableAvatar from './TableAvatar.example';
+import TableGit from './TableGit.example';
+import TableRating from './TableRating.example';
 
 export default [
   {
@@ -16,6 +17,9 @@ export default [
       },
       {
         component: TableAvatar,
+      },
+      {
+        component: TableGit,
       },
     ],
   },
