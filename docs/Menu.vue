@@ -79,6 +79,7 @@ import * as components from 'src';
 import * as collections from 'src/collections';
 import * as elements from 'src/elements';
 import * as modules from 'src/modules';
+import * as views from 'src/views';
 
 export default {
   props: ['visible'],
@@ -111,6 +112,10 @@ export default {
         {
           name: 'Collections',
           components: Object.entries(collections).filter(shouldShow).map(([k]) => k),
+        },
+        {
+          name: 'Views',
+          components: Object.entries(views).filter(shouldShow).map(([k]) => k),
         },
         {
           name: 'Modules',

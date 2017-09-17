@@ -22,4 +22,7 @@ export default {
       </ElementType>
     );
   },
+  meta: {
+    parent: 'SuiCard',
+  },
 };
