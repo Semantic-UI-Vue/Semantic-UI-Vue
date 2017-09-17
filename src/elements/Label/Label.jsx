@@ -11,6 +11,7 @@ export default {
     color: Enum.Color,
     image: Boolean,
     pointing: Enum(['left', 'right']),
+    ribbon: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
@@ -23,6 +24,7 @@ export default {
           this.pointing && `${this.pointing} pointing`,
           this.basic && 'basic',
           this.image && 'image',
+          this.ribbon && 'ribbon',
           'label',
         )}
       >
