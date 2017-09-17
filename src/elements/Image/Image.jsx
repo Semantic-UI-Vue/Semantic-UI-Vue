@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -8,6 +8,7 @@ export default {
     hidden: Boolean,
     size: Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
     spaced: Enum(['left', 'right'], { type: Boolean }),
+    shape: Enum(['rounded', 'circular']),
     src: {
       type: String,
       required: true,
@@ -26,6 +27,7 @@ export default {
     const classNames = classes(
       'ui',
       this.size,
+      this.shape,
       this.spaced !== true && this.spaced,
       this.spaced && 'spaced',
       this.hidden && 'hidden',

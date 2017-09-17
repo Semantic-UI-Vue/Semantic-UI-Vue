@@ -9,6 +9,7 @@ export default {
     dividing: Boolean,
     floated: Enum(['left', 'right']),
     icon: Boolean,
+    image: Boolean,
     size: Enum.Size,
     sub: Boolean,
   },
@@ -24,6 +25,7 @@ export default {
           this.size,
           this.dividing && 'dividing',
           this.icon && 'icon',
+          this.image && 'image',
           this.sub && 'sub',
           'header',
         )}
