@@ -17,7 +17,7 @@
         </sui-table-cell>
         <sui-table-cell singleLine>Power Output</sui-table-cell>
         <sui-table-cell>
-          <sui-rating icon="star" :default-rating="3" :max-rating="3" />
+          <sui-rating icon="star" :rating="3" :max-rating="3" />
         </sui-table-cell>
         <sui-table-cell textAlign="right">
           80% <br />
@@ -34,7 +34,7 @@
         </sui-table-cell>
         <sui-table-cell singleLine>Weight</sui-table-cell>
         <sui-table-cell>
-          <sui-rating icon="star" :default-rating="3" :max-rating="3" />
+          <sui-rating icon="star" :rating="3" :max-rating="3" />
         </sui-table-cell>
         <sui-table-cell textAlign="right">
           100% <br />
