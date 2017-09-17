@@ -9,6 +9,8 @@ export default {
       type: Boolean,
       description: 'A table can reduce its complexity to increase readability.',
     }),
+    celled: Boolean,
+    collapsing: Boolean,
     compact: Enum(['very'], {
       type: Boolean,
       description: 'A table may sometimes need to be more compact to make more rows visible at a time.',
@@ -26,6 +28,8 @@ export default {
           this.textAlign && 'aligned',
           this.basic !== true && this.basic,
           this.basic && 'basic',
+          this.celled && 'celled',
+          this.collapsing && 'collapsing',
           this.compact !== true && this.compact,
           this.compact && 'compact',
           'table',
