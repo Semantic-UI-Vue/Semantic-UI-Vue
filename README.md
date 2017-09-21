@@ -18,7 +18,7 @@ Semantic UI Vue is still under heavy development. Please, feel free to contribut
 The Semantic UI Vue package can be installed via NPM:
 
 ```
-$ npm install sui-vue --save
+$ npm install semantic-ui-vue --save
 ```
 
 Installing Semantic UI Vue provides the JavaScript for your components. You'll also need to include a stylesheet to provide the styling for your components.
@@ -27,7 +27,7 @@ Once Semantic UI Vue has been installed, you will need to import it in your main
 
 ```
 import Vue form 'vue';
-import SuiVue from 'sui-vue';
+import SuiVue from 'semantic-ui-vue';
 
 /* ... */
 
