@@ -25,3 +25,8 @@ notifications:
     on_success: always
     on_failure: always
     on_start: never
+  email:
+    recipients:
+      - mariolamacchia@gmail.com
+    on_success: never
+    on_failure: always
