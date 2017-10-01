@@ -24,8 +24,6 @@ Once it is clear what you need to do:
 
 As soon as you get started, submit a pull request. Don't worry if it's still WIP. We don't want more people to work on the same thing. That's frustrating.
 
-Please make sure to submit PRs against the development branch! Master represents the state of the latest release.
-
 ## What you can do
 
 ### Missing components
