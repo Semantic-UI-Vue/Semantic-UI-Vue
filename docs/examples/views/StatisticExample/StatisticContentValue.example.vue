@@ -39,12 +39,6 @@
 
 <script>
 export default {
-  name: 'StatisticExample',
+  name: 'StatisticContentValueExample',
 };
 </script>
-
-<style>
-  .single-example {
-    padding: 20px 0;
-  }
-</style>

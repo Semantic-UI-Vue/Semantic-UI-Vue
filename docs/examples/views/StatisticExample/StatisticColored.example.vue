@@ -101,6 +101,6 @@
 
 <script>
 export default {
-  name: 'StatisticGroupExample',
+  name: 'StatisticColoredExample',
 };
 </script>

@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'StatisticExample',
+  name: 'StatisticHorizontalExample',
 };
 </script>
 

@@ -7,12 +7,6 @@
 
 <script>
 export default {
-  name: 'StatisticExample',
+  name: 'StatisticContentLabelExample',
 };
 </script>
-
-<style>
-  .single-example {
-    padding: 20px 0;
-  }
-</style>
