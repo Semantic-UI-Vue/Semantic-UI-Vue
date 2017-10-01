@@ -18,3 +18,10 @@ deploy:
     email: "mariolamacchia@gmail.com"
     on:
       tags: true
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/77811bc03dbeeebf8544
+    on_success: always
+    on_failure: always
+    on_start: never
