@@ -5876,7 +5876,7 @@ vue-template-es2015-compiler@^1.2.2:
 
 vue-test-utils@^1.0.0-beta.1:
   version "1.0.0-beta.1"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/vue-test-utils/-/vue-test-utils-1.0.0-beta.1.tgz#a3c6450d64f084190b92b22f84626e53191ba32b"
+  resolved "https://registry.yarnpkg.com/vue-test-utils/-/vue-test-utils-1.0.0-beta.1.tgz#a3c6450d64f084190b92b22f84626e53191ba32b"
   dependencies:
     lodash "^4.17.4"
 
