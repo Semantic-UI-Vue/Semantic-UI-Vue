@@ -37,7 +37,7 @@ There are still a lot of components or components' functionalities missing. Plea
 Any help to bring the code coverage up is very welcome. To see the current state file by file:
 
 * Run `npm test`
-* Open *test/unit/coverage/lcov-report/index.html*
+* Open *test/coverage/lcov-report/index.html*
 
 ### Documentation
 

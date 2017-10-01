@@ -20,9 +20,9 @@
     "build:docs": "node build/build-docs.js",
     "build:commonjs": "babel src -d dist/commonjs",
     "build": "npm run build:docs && npm run build:commonjs",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit/specs"
+    "lint": "eslint --ext .js,.vue src test/specs"
   },
   "dependencies": {
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
