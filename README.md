@@ -2,6 +2,8 @@
 
 # Semantic UI Vue
 
+[![codecov](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue/branch/master/graph/badge.svg)](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue)
+
 ## Introduction
 
 Semantic UI Vue is the Vue integration for [Semantic UI](https://semantic-ui.com/).
