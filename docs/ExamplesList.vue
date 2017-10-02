@@ -101,6 +101,7 @@ export default {
   max-width: 960px!important;
   position: relative;
   margin-bottom: 20px;
+  padding:0 15px;
 }
 
 .docs-rail {
@@ -110,6 +111,7 @@ export default {
 @media screen and (min-width: 1200px) {
   .example-list-container {
     margin-right: 387px!important;
+    margin-left: 0 !important;
   }
 
   .docs-rail {
