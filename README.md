@@ -1,8 +1,9 @@
 ![Semantic UI Vue](/static/images/logo.png)
 
-# Semantic UI Vue
-
+[![Build Status](https://travis-ci.org/Semantic-UI-Vue/Semantic-UI-Vue.svg?branch=master)](https://travis-ci.org/Semantic-UI-Vue/Semantic-UI-Vue)
 [![codecov](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue/branch/master/graph/badge.svg)](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue)
+
+# Semantic UI Vue
 
 ## Introduction
 

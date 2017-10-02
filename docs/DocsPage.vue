@@ -27,6 +27,11 @@ export default {
   display: block;
 }
 
+.markdown a>img {
+  margin: 0;
+  display: inline;
+}
+
 .markdown code {
   display: block;
   padding: 5px 10px;
