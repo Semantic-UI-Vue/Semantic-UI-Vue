@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - node
 script:
+  - npm test
+  - npm run report-coverage
   - npm run build
 deploy:
   - provider: pages
