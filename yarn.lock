@@ -133,7 +133,7 @@ argparse@^1.0.7:
 
 argv@0.0.2:
   version "0.0.2"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/argv/-/argv-0.0.2.tgz#ecbd16f8949b157183711b1bda334f37840185ab"
+  resolved "https://registry.yarnpkg.com/argv/-/argv-0.0.2.tgz#ecbd16f8949b157183711b1bda334f37840185ab"
 
 arr-diff@^2.0.0:
   version "2.0.0"
@@ -1327,7 +1327,7 @@ code-point-at@^1.0.0:
 
 codecov@^2.3.0:
   version "2.3.0"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/codecov/-/codecov-2.3.0.tgz#ad25a2c6e0442d13740d9d4ddbb9a3e2714330f4"
+  resolved "https://registry.yarnpkg.com/codecov/-/codecov-2.3.0.tgz#ad25a2c6e0442d13740d9d4ddbb9a3e2714330f4"
   dependencies:
     argv "0.0.2"
     request "2.81.0"
@@ -5747,7 +5747,7 @@ url@^0.11.0:
 
 urlgrey@0.4.4:
   version "0.4.4"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/urlgrey/-/urlgrey-0.4.4.tgz#892fe95960805e85519f1cd4389f2cb4cbb7652f"
+  resolved "https://registry.yarnpkg.com/urlgrey/-/urlgrey-0.4.4.tgz#892fe95960805e85519f1cd4389f2cb4cbb7652f"
 
 user-home@^1.1.1:
   version "1.1.1"
