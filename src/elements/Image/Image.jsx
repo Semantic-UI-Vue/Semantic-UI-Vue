@@ -15,13 +15,6 @@ export default {
     },
     wrapped: Boolean,
   },
-  methods: {
-    getSpacedClass() {
-      if (this.spaced === true) return 'spaced';
-      if (this.spaced) return `${this.spaced} spaced`;
-      return '';
-    },
-  },
   render() {
     const ElementType = getElementType(this, 'div');
     const classNames = classes(

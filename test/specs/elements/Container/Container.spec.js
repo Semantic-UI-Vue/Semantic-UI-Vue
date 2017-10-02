@@ -6,6 +6,7 @@ describe('Container', () => {
   testClassFromProps(Container, [
     'ui', 'container',
   ]);
+
   it('should create a SUI Container', () => {
     const container = shallow(Container);
     expect(container.is('div')).to.equal(true);
