@@ -20,7 +20,7 @@ Semantic UI Vue is still under heavy development. Please, feel free to contribut
 
 The Semantic UI Vue package can be installed via NPM:
 
-```
+```bash
 $ npm install semantic-ui-vue --save
 ```
 
@@ -28,7 +28,7 @@ Installing Semantic UI Vue provides the JavaScript for your components. You'll a
 
 Once Semantic UI Vue has been installed, you will need to import it in your main file (usually *index.js* or *main.js*) and tell Vue to use it:
 
-```
+```js
 import Vue form 'vue';
 import SuiVue from 'semantic-ui-vue';
 
@@ -46,7 +46,7 @@ Now you are ready to go! Check out the components' examples to see how to use th
 You can use the default Semantic UI stylesheet by including a Semantic UI CDN link in yourindex.html file.
 This is the quickest way to get started with Semantic UI Vue. You won't be able to use custom themes with this method.
 
-```
+```html
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
 ```
 
@@ -55,13 +55,13 @@ This is the quickest way to get started with Semantic UI Vue. You won't be able 
 The Semantic UI CSS package is automatically synced with the main Semantic UI repository to provide a lightweight CSS only version of Semantic UI.
 Semantic UI CSS can be installed as a package in your project using NPM. You won't be able to use custom themes with this method.
 
-```
+```js
 $ npm install semantic-ui-css --save
 ```
 
 After install, you'll need to include the minified CSS file in your index.js file:
 
-```
+```js
 import 'semantic-ui-css/semantic.min.css';
 ```
 
@@ -72,12 +72,12 @@ Semantic UI includes Gulp build tools so your project can preserve its own theme
 
 Detailed documentation on theming in Semantic UI is provided here.
 
-```
+```js
 $ npm install semantic-ui --save-dev
 ```
 
 After building the project with Gulp, you'll need to include the minified CSS file in your index.js file:
 
-```
+```js
 import '../semantic/dist/semantic.min.css';
 ```
