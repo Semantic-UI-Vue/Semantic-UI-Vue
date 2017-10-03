@@ -40,6 +40,7 @@ export default {
 .markdown {
   padding: 20px;
   padding-bottom: 50px;
+  max-width: 1200px;
 }
 </style>
 

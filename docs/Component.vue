@@ -217,7 +217,7 @@ export default {
 }
 
 .component-container {
-  max-width: 1293px;
+  max-width: 1200px;
 }
 
 code:after,
