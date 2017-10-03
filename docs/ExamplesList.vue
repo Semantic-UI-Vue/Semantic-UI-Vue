@@ -107,6 +107,12 @@ export default {
   display: none;
 }
 
+@media screen and (min-width: 1600px) {
+  .example-list-container {
+    margin-left: 0px !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .example-list-container {
     margin-right: 387px!important;
