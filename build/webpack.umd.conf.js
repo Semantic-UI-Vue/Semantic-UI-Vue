@@ -32,12 +32,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       'process.env': env,
       publicPath: `'${baseWebpackConfig.output.publicPath}'`,
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      sourceMap: true
-    }),
+    new webpack.optimize.UglifyJsPlugin({ output: {comments: false} }),
   ]
 })
 
