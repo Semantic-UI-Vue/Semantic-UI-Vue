@@ -13,7 +13,7 @@ var webpackConfig = require('./webpack.umd.conf')
 var spinner = ora('building for umd...')
 spinner.start()
 
-rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
+rm(path.join(__dirname, '../dist/umd'), err => {
   if (err) throw err
   webpack(webpackConfig, function (err, stats) {
     spinner.stop()
