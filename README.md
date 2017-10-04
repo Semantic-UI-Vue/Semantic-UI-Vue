@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Semantic-UI-Vue/Semantic-UI-Vue.svg?branch=master)](https://travis-ci.org/Semantic-UI-Vue/Semantic-UI-Vue)
 [![codecov](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue/branch/master/graph/badge.svg)](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue)
+[![Join the chat at https://gitter.im/Semantic-UI-Vue/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Semantic-UI-Vue/Lobby)
 
 # Semantic UI Vue
 
@@ -13,6 +14,14 @@ It is higly inspired on [Semantic UI React](https://react.semantic-ui.com)
 If you have used it already, you will find Semantic UI Vue's API to be almost the same.
 
 Semantic UI Vue is still under heavy development. Please, feel free to contribute.
+
+## Contact us!
+
+Do you have a question? Do you want to submit a bug, or suggest an improvement?
+
+Please do! Especially at this stage, we really need this.
+
+To do so, do not hesitate to [join our chat on Gitter](https://gitter.im/Semantic-UI-Vue/Lobby), or [submit an issue](https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/issues/new) (it doesn't have to be a bug). Read the [CONTRIBUTING.md](https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/blob/master/CONTRIBUTING.md) for more details
 
 ## Installing
 
