@@ -15,11 +15,13 @@ If you have used it already, you will find Semantic UI Vue's API to be almost th
 
 Semantic UI Vue is still under heavy development. Please, feel free to contribute.
 
+Here is a JSFiddle for a quick look: https://jsfiddle.net/pvjvekce/
+
 ## Contact us!
 
 Do you have a question? Do you want to submit a bug, or suggest an improvement?
 
-Please do! Especially at this stage, we really need this.
+Please contact us! Especially at this stage, we really need this.
 
 To do so, do not hesitate to [join our chat on Gitter](https://gitter.im/Semantic-UI-Vue/Lobby), or [submit an issue](https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/issues/new) (it doesn't have to be a bug). Read the [CONTRIBUTING.md](https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/blob/master/CONTRIBUTING.md) for more details
 
@@ -44,6 +46,39 @@ import SuiVue from 'semantic-ui-vue';
 /* ... */
 
 Vue.use(SuiVue);
+```
+
+If you are not using Webpack, you can add the script in your html:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- head -->
+</head>
+<body>
+  <div id="app"></div>
+  <script src="node_modules/vue/dist/vue.min.js"></script>
+  <script src="node_modules/semantic-ui-vue/dist/umd/semantic-ui-vue.min.js"></script>
+  <script>
+  Vue.use(SemanticUIVue);
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!'
+    },
+    template: '<span><sui-button primary>click me</sui-button>{{message}}</span>'
+  });
+  </script>
+</body>
+</html>
+```
+
+Or, in alternative, you can import it using a CDN:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+<script src="https://unpkg.com/semantic-ui-vue/dist/umd/semantic-ui-vue.min.js"></script>
 ```
 
 Now you are ready to go! Check out the components' examples to see how to use them.
