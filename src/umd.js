@@ -1,5 +1,11 @@
-import * as SemanticUIVue from './index';
+import * as _SemanticUIVue from './index';
 
-module.exports = {
-  ...SemanticUIVue,
-};
+function SemanticUIVue(...args) {
+  _SemanticUIVue.default(...args);
+}
+
+Object.keys(_SemanticUIVue).forEach((key) => {
+  SemanticUIVue[key] = _SemanticUIVue[key];
+});
+
+module.exports = SemanticUIVue;
