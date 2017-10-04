@@ -22,7 +22,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     filename: 'semantic-ui-vue.min.js',
     libraryTarget: 'umd',
     library: 'SemanticUIVue',
-    path: path.join(__dirname, '../umd'),
+    path: path.join(__dirname, '../dist/umd'),
     publicPath: '/',
     pathinfo: true
   },
