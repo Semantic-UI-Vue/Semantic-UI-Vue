@@ -10,7 +10,7 @@
 
 Semantic UI Vue is the Vue integration for [Semantic UI](https://semantic-ui.com/).
 
-It is higly inspired on [Semantic UI React](https://react.semantic-ui.com)
+It is highly inspired on [Semantic UI React](https://react.semantic-ui.com)
 If you have used it already, you will find Semantic UI Vue's API to be almost the same.
 
 Semantic UI Vue is still under heavy development. Please, feel free to contribute.
@@ -112,7 +112,7 @@ import 'semantic-ui-css/semantic.min.css';
 #### Semantic UI package
 
 Install the full Semantic UI package.
-Semantic UI includes Gulp build tools so your project can preserve its own theme changes, allowing you to customise the style variables.
+Semantic UI includes Gulp build tools so your project can preserve its own theme changes, allowing you to customize the style variables.
 
 Detailed documentation on theming in Semantic UI is provided here.
 
