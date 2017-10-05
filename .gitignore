@@ -12,3 +12,6 @@ test/coverage
 *.ntvs*
 *.njsproj
 *.sln
+
+# npm output
+package-lock.json
