@@ -27,3 +27,4 @@ Enum.Color = Enum([
   'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
   'violet', 'purple', 'pink', 'brown', 'grey', 'black',
 ]);
+Enum.VerticalAlign = Enum(['top', 'middle', 'bottom']);
