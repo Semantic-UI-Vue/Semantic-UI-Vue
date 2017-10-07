@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-accordion is="sui-menu" activeIndex=1 vertical exclusive fluid styled>
+    <sui-accordion is="sui-menu" activeIndex=1 vertical exclusive styled>
       <sui-accordion-title is="sui-menu-header" active>
         <sui-icon name="dropdown" />
         Size

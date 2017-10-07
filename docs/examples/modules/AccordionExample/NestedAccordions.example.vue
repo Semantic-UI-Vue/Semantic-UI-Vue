@@ -1,14 +1,14 @@
 <template lang="html">
   <div>
-    <sui-accordion exclusive fluid styled>
+    <sui-accordion exclusive styled>
       <sui-accordion-title>Level 1</sui-accordion-title>
       <sui-accordion-content active>
         Welcome to level 1
-        <sui-accordion exclusive fluid styled>
+        <sui-accordion exclusive styled>
           <sui-accordion-title>Level 1A</sui-accordion-title>
           <sui-accordion-content active>
             Level 1A Contents
-            <sui-accordion exclusive fluid styled>
+            <sui-accordion exclusive styled>
               <sui-accordion-title>Level 1A-A</sui-accordion-title>
               <sui-accordion-content>Level 1A-A Contents</sui-accordion-content>
               <sui-accordion-title>Level 1A-B</sui-accordion-title>
@@ -24,11 +24,11 @@
       <sui-accordion-title>Level 2</sui-accordion-title>
       <sui-accordion-content>
         Welcome to level 2
-        <sui-accordion exclusive fluid styled>
+        <sui-accordion exclusive styled>
           <sui-accordion-title>Level 2A</sui-accordion-title>
           <sui-accordion-content active>
             Level 2A Contents
-            <sui-accordion exclusive fluid styled>
+            <sui-accordion exclusive styled>
               <sui-accordion-title>Level 2A-A</sui-accordion-title>
               <sui-accordion-content>Level 2A-A Contents</sui-accordion-content>
               <sui-accordion-title>Level 2A-B</sui-accordion-title>

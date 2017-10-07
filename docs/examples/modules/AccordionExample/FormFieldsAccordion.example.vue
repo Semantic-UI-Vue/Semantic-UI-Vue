@@ -11,7 +11,7 @@
           <input placeholder="Last Name" />
         </sui-form-field>
         <sui-form-field>
-          <sui-accordion fluid>
+          <sui-accordion>
             <a is="sui-accordion-title">
               <sui-icon name="dropdown" />
               Optional Details
