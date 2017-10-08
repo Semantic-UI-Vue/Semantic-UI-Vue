@@ -5,27 +5,27 @@ export default {
   props: {
     cube: {
       type: Boolean,
-      default: 'false',
+      default: false,
       description: 'Transform the shape in a cube.',
     },
     text: {
       type: Boolean,
-      default: 'false',
+      default: false,
       description: 'Adapt the shape to allow for sides of text to be displayed.',
     },
     irregular: {
       type: Boolean,
-      default: 'false',
+      default: false,
       description: 'Adapt the shape to its content.',
     },
     square: {
       type: Boolean,
-      default: 'false',
+      default: false,
       description: 'Force shape to remain a regular square.',
     },
     auto: {
       type: Boolean,
-      default: 'false',
+      default: false,
       description: 'Choose between irregular and square depending from the content.',
     },
   },
