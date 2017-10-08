@@ -6,6 +6,7 @@
 
 <script>
 import 'semantic-ui-css/semantic.css';
+import 'semantic-ui-css/semantic.js';
 import * as components from 'src';
 import * as collections from 'src/collections';
 import * as elements from 'src/elements';
