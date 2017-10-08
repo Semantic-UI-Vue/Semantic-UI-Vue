@@ -1,14 +1,7 @@
 import { classes, getElementType, getChildProps } from '../../lib';
 
 export default {
-  name: 'SuiShapeSide',
-  props: {
-    active: {
-      type: Boolean,
-      default: false,
-      description: 'Set the first side to be showed.',
-    }
-  },
+  name: 'SuiShapeSides',
   render() {
     const ElementType = getElementType(this);
 
@@ -16,8 +9,7 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          this.active && 'active',
-          'side',
+          'sides'
         )}
       >
         {this.$slots.default}
@@ -25,6 +17,6 @@ export default {
     );
   },
   meta: {
-    parent: 'SuiShapeSides',
+    parent: 'SuiShape',
   },
 };
