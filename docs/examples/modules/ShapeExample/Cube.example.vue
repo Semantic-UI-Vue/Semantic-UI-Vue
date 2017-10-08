@@ -17,7 +17,10 @@
     </sui-shape>
 
     <div style="margin-top:15px">
-      <sui-button content="Flip up" @click.native="flipUp"></sui-button>
+      <sui-button content="Left" @click.native="flip" data-direction="left"></sui-button>
+      <sui-button content="Up" @click.native="flip" data-direction="up"></sui-button>
+      <sui-button content="Down" @click.native="flip" data-direction="down"></sui-button>
+      <sui-button content="Right" @click.native="flip" data-direction="right"></sui-button>
     </div>
   </div>
 </template>
@@ -31,8 +34,9 @@ export default {
     };
   },
   methods: {
-    flipUp(event) {
-      $('.cube').shape('flip up');
+    flip(event) {
+      const direction = event.target.getAttribute('data-direction');
+      $('.cube').shape(`flip ${direction}`);
     },
   },
 };
