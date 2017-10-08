@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-shape :text>
+    <sui-shape text="true">
       <sui-shape-side class="header">Did you know? This side starts visible.</sui-shape-side>
       <sui-shape-side class="header">Help, its another side!</sui-shape-side>
       <sui-shape-side class="header">This is the last side</sui-shape-side>
