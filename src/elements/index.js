@@ -13,3 +13,4 @@ export * from './Rail';
 export * from './Reveal';
 export * from './Segment';
 export * from './Step';
+export * from './Progress';
