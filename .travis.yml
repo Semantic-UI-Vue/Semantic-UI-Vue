@@ -1,8 +1,13 @@
+dist: trusty
 language: node_js
 node_js:
   - node
 script:
+  - npm test
+  - npm run report-coverage
   - npm run build
+addons:
+  chrome: stable
 deploy:
   - provider: pages
     skip_cleanup: true
@@ -11,10 +16,22 @@ deploy:
     repo: Semantic-UI-Vue/semantic-ui-vue.github.io
     target_branch: master
     on:
-      branch: master
+      tags: true
   - provider: npm
     skip_cleanup: true
     api_key: $NPM_TOKEN
     email: "mariolamacchia@gmail.com"
     on:
       tags: true
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/77811bc03dbeeebf8544
+    on_success: always
+    on_failure: always
+    on_start: never
+  email:
+    recipients:
+      - mariolamacchia@gmail.com
+    on_success: never
+    on_failure: always

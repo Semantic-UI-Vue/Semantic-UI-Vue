@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="component-container">
     <sui-grid :columns="1" padded>
       <sui-grid-column>
         <h1 is="sui-header">
@@ -71,7 +71,7 @@
           </sui-menu-item>
         </sui-menu>
 
-        <div v-if="currentComponent">
+        <div class="table-container">
           <div class="current-component-description">
             {{ currentComponent.description }}
           </div>
@@ -214,6 +214,10 @@ export default {
 .current-component-description {
   font-size: 1.08em;
   color: rgb(119, 119, 119);
+}
+
+.component-container {
+  max-width: 1200px;
 }
 
 code:after,

@@ -1,5 +1,6 @@
 import { classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
+import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiButton',
@@ -123,7 +124,7 @@ export default {
         class={classList}
         role="button"
       >
-        {this.icon && <suiIcon name={this.icon} />}
+        {this.icon && <Icon name={this.icon} />}
         {this.content || this.$slots.default}
       </ElementType>
     );

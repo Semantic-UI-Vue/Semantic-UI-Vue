@@ -35,7 +35,7 @@ module.exports = {
     }],
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
-      'optionalDependencies': ['test/unit/index.js']
+      'optionalDependencies': ['test/index.js']
     }],
     'import/prefer-default-export': 'off',
     // allow debugger during development

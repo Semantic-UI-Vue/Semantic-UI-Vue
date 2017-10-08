@@ -3,7 +3,7 @@ import camelCase from 'lodash/camelCase';
 import getElementType from './getElementType';
 
 export default function getChildProps(instance) {
-  if (!instance.$vnode.data.attrs) return {};
+  if (!(instance.$vnode && instance.$vnode.data.attrs)) return {};
 
   const el = getElementType(instance);
   let childProps;

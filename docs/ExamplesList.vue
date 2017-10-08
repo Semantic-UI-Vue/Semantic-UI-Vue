@@ -110,6 +110,7 @@ export default {
 @media screen and (min-width: 1200px) {
   .example-list-container {
     margin-right: 387px!important;
+    margin-left: 0px !important;
   }
 
   .docs-rail {

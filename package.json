@@ -1,6 +1,6 @@
 {
   "name": "semantic-ui-vue",
-  "version": "0.0.17",
+  "version": "0.0.24",
   "description": "Semantic-UI Vue integration",
   "author": "Mario Lamacchia <mario.lamacchia@mariolamacchia.com>",
   "repository": {
@@ -19,10 +19,12 @@
     "start": "node build/dev-server.js",
     "build:docs": "node build/build-docs.js",
     "build:commonjs": "babel src -d dist/commonjs",
-    "build": "npm run build:docs && npm run build:commonjs",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "build:umd": "node build/build-umd.js",
+    "build": "npm run build:docs && npm run build:commonjs && npm run build:umd",
+    "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit/specs"
+    "lint": "eslint --ext .js,.vue src test/specs",
+    "report-coverage": "codecov"
   },
   "dependencies": {
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
@@ -48,6 +50,7 @@
     "brace": "^0.10.0",
     "chai": "^3.5.0",
     "chalk": "^2.0.1",
+    "codecov": "^2.3.0",
     "connect-history-api-fallback": "^1.3.0",
     "copy-to-clipboard": "^3.0.8",
     "copy-webpack-plugin": "^4.0.1",
@@ -72,6 +75,7 @@
     "inject-loader": "^3.0.0",
     "js-beautify": "^1.6.14",
     "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
     "karma-mocha": "^1.3.0",
     "karma-phantomjs-launcher": "^1.0.2",
@@ -100,6 +104,7 @@
     "vue-router": "^2.6.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.3",
+    "vue-test-utils": "^1.0.0-beta.1",
     "webpack": "^2.6.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
