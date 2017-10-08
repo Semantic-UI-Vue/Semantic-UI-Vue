@@ -37,12 +37,12 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          this.cube && '',
-          this.text && '',
+          this.cube && 'cube',
+          this.text && 'text',
           'shape',
-          this.irregular && '',
-          this.auto && '',
-          this.square && '',
+          this.irregular && 'irregular',
+          this.auto && 'auto',
+          this.square && 'square',
         )}
       >
         {this.$slots.default}
