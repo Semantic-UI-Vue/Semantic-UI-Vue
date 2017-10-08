@@ -13,14 +13,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'ShapeExample',
-    created() {
-      $('.flip-up-btn').on('click', (_event) => {
-        $('.shape').shape('flip up');
-      });
-    },
-  };
+export default {
+  name: 'ShapeExample',
+  created() {
+    $('.flip-up-btn').on('click', (_event) => {
+      $('.shape').shape('flip up');
+    });
+  },
+};
 </script>
 
 <style lang="css">
