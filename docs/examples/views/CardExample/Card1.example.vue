@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <sui-card>
-      <sui-image src="https://semantic-ui.com/images/avatar2/large/kristy.png" />
+      <sui-image src="static/images/avatar/large/kristy.png" />
       <sui-card-content>
         <sui-card-header>Kristy</sui-card-header>
         <sui-card-meta>Joined in 2013</sui-card-meta>
