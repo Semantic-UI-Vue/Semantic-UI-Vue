@@ -35,6 +35,6 @@
 
 <script>
 export default {
-    name: 'ItemGroupExample',
+  name: 'ItemGroupExample',
 };
 </script>
