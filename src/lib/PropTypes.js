@@ -22,7 +22,8 @@ export function Enum(values = [], obj = {}) {
   };
 }
 
-Enum.Size = Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']);
+Enum.State = Enum(['active', 'disabled', 'error', 'warning', 'success']);
+Enum.Size = Enum(['mini', 'tiny', 'small', 'standard', 'medium', 'large', 'big', 'huge', 'massive']);
 Enum.Color = Enum([
   'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
   'violet', 'purple', 'pink', 'brown', 'grey', 'black',
