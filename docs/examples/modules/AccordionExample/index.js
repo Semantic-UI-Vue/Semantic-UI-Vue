@@ -1,6 +1,5 @@
 import Accordion from './Accordion.example';
 import AccordionStyled from './AccordionStyled.example';
-import AccordionFluid from './AccordionFluid.example';
 import AccordionInverted from './AccordionInverted.example';
 import NestedAccordions from './NestedAccordions.example';
 import FormFieldsAccordion from './FormFieldsAccordion.example';
@@ -25,11 +24,6 @@ export default [
   {
     title: 'Variations',
     examples: [
-      {
-        title: 'Fluid',
-        description: 'An accordion can take up the width of its container',
-        component: AccordionFluid,
-      },
       {
         title: 'Inverted',
         description: 'An accordion can be formatted to appear on dark backgrounds',
