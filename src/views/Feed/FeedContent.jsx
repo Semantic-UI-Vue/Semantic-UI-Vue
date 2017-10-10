@@ -3,6 +3,10 @@ import { classes, getChildProps, getElementType } from '../../lib';
 export default {
   name: 'SuiFeedContent',
   props: {
+    content: {
+      type: String,
+      description: 'Shorthand for primary content'
+    }
   },
   render() {
     const ElementType = getElementType(this);
@@ -10,11 +14,10 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          'ui',
-          'feed',
+          'content',
         )}
       >
-        {this.$slots.default}
+        {this.content ? this.content : this.$slots.default}
       </ElementType>
     );
   },

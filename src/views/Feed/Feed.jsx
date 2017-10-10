@@ -4,7 +4,9 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiFeed',
   props: {
-    size: Enum.Size
+    size: Enum(['small', 'large'], {
+      description: 'A feed can have different sizes (small | large)'
+    })
   },
   render() {
     const ElementType = getElementType(this);
@@ -13,6 +15,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.size,
           'feed',
         )}
       >
