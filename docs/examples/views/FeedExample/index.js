@@ -1,5 +1,9 @@
-import ImageLabel from './ImageLabel.example';
-import ImageLabelShorthand from './ImageLabelShorthand.example';
+import ImageLabelExample from './ImageLabel.example';
+import ImageLabelShorthandExample from './ImageLabelShorthand.example';
+import IconLabelExample from './IconLabel.example';
+import IconLabelShorthandExample from './IconLabelShorthand.example';
+import ContentDateExample from './ContentDate.example';
+import ContentDateShorthandExample from './ContentDateShorthand.example';
 
 export default [
   {
@@ -11,11 +15,29 @@ export default [
       {
         title: 'Image Label',
         description: 'An event can contain an image label',
-        component: ImageLabel,
+        component: ImageLabelExample,
       },
       {
         description: 'You can do the same using shorthands',
-        component: ImageLabelShorthand,
+        component: ImageLabelShorthandExample,
+      },
+      {
+        title: 'Icon Label',
+        description: 'An event can contain an icon label',
+        component: IconLabelExample,
+      },
+      {
+        description: 'You can do the same using shorthands',
+        component: IconLabelShorthandExample,
+      },
+      {
+        title: 'Content Date',
+        description: 'Event content can contain a date',
+        component: ContentDateExample,
+      },
+      {
+        description: 'You can do the same using shorthands',
+        component: ContentDateShorthandExample,
       },
     ],
   },

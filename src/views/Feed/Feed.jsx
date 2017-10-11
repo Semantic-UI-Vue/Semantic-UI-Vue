@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiFeed',
+  description: 'A feed presents user activity chronologically',
   props: {
     size: Enum(['small', 'large'], {
       description: 'A feed can have different sizes (small | large)'

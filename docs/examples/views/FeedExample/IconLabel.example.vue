@@ -2,10 +2,13 @@
   <sui-feed>
     <sui-feed-event>
       <sui-feed-label>
-        <sui-image src='static/images/avatar/small/elliot.jpg' />
+        <sui-icon name='pencil' />
       </sui-feed-label>
       <sui-feed-content>
-        You added Elliot Fu to the group <a>Coworkers</a>
+        <sui-feed-date>Today</sui-feed-date>
+        <sui-feed-summary>
+          You posted on your friend <a>Stevie Feliciano's</a> wall.
+        </sui-feed-summary>
       </sui-feed-content>
     </sui-feed-event>
   </sui-feed>
@@ -13,6 +16,6 @@
 
 <script>
 export default {
-  name: 'ImageLabelExample',
+  name: 'IconLabelExample',
 };
 </script>

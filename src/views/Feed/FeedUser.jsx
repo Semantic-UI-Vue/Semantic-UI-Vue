@@ -10,8 +10,7 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          'ui',
-          'feed',
+          'user',
         )}
       >
         {this.$slots.default}

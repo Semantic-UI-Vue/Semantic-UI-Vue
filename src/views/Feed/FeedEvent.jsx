@@ -15,6 +15,14 @@ export default {
     icon: {
       type: String,
       description: 'An event can contain icon label'
+    },
+    date: {
+      type: String,
+      description: 'Shorthand for FeedDate'
+    },
+    summary: {
+      type: String,
+      description: 'Shorthand for FeedSummary'
     }
   },
   render() {
@@ -27,10 +35,16 @@ export default {
         )}
       >
         {(this.image || this.icon) ?
-        <FeedLabel image={this.image} icon={this.icon} /> : ''}
+        <FeedLabel
+          image={this.image}
+          icon={this.icon} /> : ''}
         {this.$slots.default}
-        {this.content ?
-        <FeedContent content={this.content} /> : ''}
+        {(this.content || this.date || this.summary) ?
+        <FeedContent
+          content={this.content}
+          date={this.date}
+          summary={this.summary}
+        /> : ''}
       </ElementType>
     );
   },
