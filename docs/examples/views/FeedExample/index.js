@@ -4,6 +4,10 @@ import IconLabelExample from './IconLabel.example';
 import IconLabelShorthandExample from './IconLabelShorthand.example';
 import ContentDateExample from './ContentDate.example';
 import ContentDateShorthandExample from './ContentDateShorthand.example';
+import SummaryDateExample from './SummaryDate.example';
+import SummaryDateShorthandExample from './SummaryDateShorthand.example';
+import ExtraImagesExample from './ExtraImages.example';
+import ExtraImagesShorthandExample from './ExtraImagesShorthand.example';
 
 export default [
   {
@@ -39,6 +43,25 @@ export default [
         description: 'You can do the same using shorthands',
         component: ContentDateShorthandExample,
       },
+      {
+        title: 'Summary Date',
+        description: 'An event summary can contain a date',
+        component: SummaryDateExample,
+      },
+      {
+        description: 'You can do the same using shorthands',
+        component: SummaryDateShorthandExample,
+      },
+      {
+        title: 'Extra Images',
+        description: 'An event can contain extra images.',
+        component: ExtraImagesExample,
+      },
+      {
+        description: 'You can do the same using shorthands',
+        component: ExtraImagesShorthandExample,
+      },
+
     ],
   },
 ];

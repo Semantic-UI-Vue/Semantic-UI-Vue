@@ -15,12 +15,6 @@ export default {
   },
   render() {
     const ElementType = getElementType(this);
-    let content = this.$slots.default;
-    if (this.image) {
-      content = <Image src={this.image} />;
-    } else if (this.icon) {
-      content = <Icon name={this.icon} />;
-    }
     return (
       <ElementType
         {...getChildProps(this)}
@@ -28,7 +22,8 @@ export default {
           'label',
         )}
       >
-        {content}
+        {this.image ? <Image src={this.image} /> :
+          (this.icon ? <Icon name={this.icon} /> : this.$slots.default) }
       </ElementType>
     );
   },

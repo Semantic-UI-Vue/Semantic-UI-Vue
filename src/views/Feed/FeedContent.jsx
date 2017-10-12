@@ -1,5 +1,5 @@
 import { classes, getChildProps, getElementType } from '../../lib';
-import { FeedDate, FeedSummary } from './';
+import { FeedDate, FeedSummary, FeedExtra } from './';
 
 export default {
   name: 'SuiFeedContent',
@@ -15,6 +15,10 @@ export default {
     summary: {
       type: String,
       description: 'Shorthand for FeedSummary'
+    },
+    extraImages: {
+      type: Array,
+      description: 'Shorthand for FeedExtra with images'
     }
   },
   render() {
@@ -29,6 +33,7 @@ export default {
         {this.date ? <FeedDate content={this.date} /> : ''}
         {this.content ? this.content : this.$slots.default}
         {this.summary ? <FeedSummary content={this.summary} /> : ''}
+        {this.extraImages ? <FeedExtra images={this.extraImages} /> : ''}
       </ElementType>
     );
   },

@@ -1,8 +1,21 @@
 import { classes, getChildProps, getElementType } from '../../lib';
+import { Image } from '../../elements';
 
 export default {
   name: 'SuiFeedExtra',
   props: {
+    content: {
+      type: String,
+      description: 'Shorthand for primary content'
+    },
+    images: {
+      type: [Array, Boolean],
+      description: 'An event can contain additional information like a set of images'
+    },
+    text: {
+      type: String,
+      description: 'An event can contain additional text information'
+    }
   },
   render() {
     const ElementType = getElementType(this);
@@ -10,11 +23,16 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          'ui',
-          'feed',
+          this.images && 'images',
+          (this.text || this.content) && 'text',
+          'extra',
         )}
       >
+        {this.content ? this.content :
+          (this.text ? this.text : '')}
         {this.$slots.default}
+        {(this.images && (this.images instanceof Array) && this.images.length > 0) ?
+          this.images.map(image => <Image src={image} />) : ''}
       </ElementType>
     );
   },

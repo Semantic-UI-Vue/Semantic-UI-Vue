@@ -23,6 +23,10 @@ export default {
     summary: {
       type: String,
       description: 'Shorthand for FeedSummary'
+    },
+    extraImages: {
+      type: Array,
+      description: 'Shorthand for FeedExtra with images'
     }
   },
   render() {
@@ -39,11 +43,12 @@ export default {
           image={this.image}
           icon={this.icon} /> : ''}
         {this.$slots.default}
-        {(this.content || this.date || this.summary) ?
+        {(this.content || this.date || this.summary || this.extraImages) ?
         <FeedContent
           content={this.content}
           date={this.date}
           summary={this.summary}
+          extraImages={this.extraImages}
         /> : ''}
       </ElementType>
     );
