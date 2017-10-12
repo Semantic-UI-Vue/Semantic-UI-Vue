@@ -6,7 +6,7 @@ export default {
   props: {
     content: {
       type: String,
-      description: 'Shorthand for FeedContent'
+      description: 'Shorthand for SuiFeedContent'
     },
     image: {
       type: String,
@@ -18,19 +18,23 @@ export default {
     },
     date: {
       type: String,
-      description: 'Shorthand for FeedDate'
+      description: 'Shorthand for SuiFeedDate'
     },
     summary: {
       type: String,
-      description: 'Shorthand for FeedSummary'
+      description: 'Shorthand for SuiFeedSummary'
     },
     extraImages: {
       type: Array,
-      description: 'Shorthand for FeedExtra with images'
+      description: 'Shorthand for SuiFeedExtra with images'
     },
     extraText: {
       type: String,
-      description: 'Shorthand for FeedExtra with text'
+      description: 'Shorthand for SuiFeedExtra with text'
+    },
+    meta: {
+      type: String,
+      description: 'Shorthand for SuiFeedMeta'
     }
   },
   render() {
@@ -42,19 +46,18 @@ export default {
           'event',
         )}
       >
-        {(this.image || this.icon) ?
-        <FeedLabel
-          image={this.image}
-          icon={this.icon} /> : ''}
-        {this.$slots.default}
-        {(this.content || this.date || this.summary || this.extraImages || this.extraText) ?
+        {this.image && <FeedLabel image={this.image} />}
+        {this.icon && <FeedLabel icon={this.icon} />}
+        {(this.content || this.date || this.summary || this.extraImages || this.extraText || this.meta) &&
         <FeedContent
           content={this.content}
           date={this.date}
           summary={this.summary}
           extraImages={this.extraImages}
           extraText={this.extraText}
-        /> : ''}
+          meta={this.meta}
+        /> }
+        {this.$slots.default}
       </ElementType>
     );
   },

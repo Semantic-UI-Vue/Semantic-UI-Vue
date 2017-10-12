@@ -19,21 +19,23 @@ export default {
   },
   render() {
     const ElementType = getElementType(this);
-    const hasText = this.text || this.content;
-    const hasImages = this.images && (this.images instanceof Array) && this.images.length > 0;
     return (
       <ElementType
         {...getChildProps(this)}
         class={classes(
           this.images && 'images',
-          hasText && 'text',
+          (this.text || this.content) && 'text',
           'extra',
         )}
       >
-        {hasText ? this.content : ''}
-        {this.$slots.default}
-        {hasImages ?
-          this.images.map(image => <Image src={image} />) : ''}
+        {
+          this.$slots.default ||
+          [
+            this.content,
+            this.images && (this.images instanceof Array)
+              && this.images.map(image => <Image src={image} />)
+          ]
+        }
       </ElementType>
     );
   },

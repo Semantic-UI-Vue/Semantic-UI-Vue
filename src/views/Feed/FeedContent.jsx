@@ -1,5 +1,5 @@
 import { classes, getChildProps, getElementType } from '../../lib';
-import { FeedDate, FeedSummary, FeedExtra } from './';
+import { FeedDate, FeedSummary, FeedExtra, FeedMeta } from './';
 
 export default {
   name: 'SuiFeedContent',
@@ -10,19 +10,23 @@ export default {
     },
     date: {
       type: String,
-      description: 'Shorthand for FeedDate'
+      description: 'Shorthand for SuiFeedDate'
     },
     summary: {
       type: String,
-      description: 'Shorthand for FeedSummary'
+      description: 'Shorthand for SuiFeedSummary'
     },
     extraImages: {
       type: Array,
-      description: 'Shorthand for FeedExtra with images'
+      description: 'Shorthand for SuiFeedExtra with images'
     },
     extraText: {
       type: String,
-      description: 'Shorthand for FeedExtra with text'
+      description: 'Shorthand for SuiFeedExtra with text'
+    },
+    meta: {
+      type: String,
+      description: 'Shorthand for SuiFeedMeta'
     }
   },
   render() {
@@ -34,11 +38,17 @@ export default {
           'content',
         )}
       >
-        {this.date ? <FeedDate content={this.date} /> : ''}
-        {this.content ? this.content : this.$slots.default}
-        {this.summary ? <FeedSummary content={this.summary} /> : ''}
-        {(this.extraImages || this.extraText) ?
-          <FeedExtra images={this.extraImages} text={true} content={this.extraText} /> : ''}
+        {
+          this.$slots.default ||
+          [
+            this.date && <FeedDate content={this.date} />,
+            this.content,
+            this.summary && <FeedSummary content={this.summary} />,
+            this.extraText && <FeedExtra text={true} content={this.extraText} />,
+            this.extraImages && <FeedExtra images={this.extraImages} />,
+            this.meta && <FeedMeta content={this.meta} />
+          ]
+        }
       </ElementType>
     );
   },

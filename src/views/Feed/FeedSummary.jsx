@@ -1,5 +1,5 @@
 import { classes, getChildProps, getElementType } from '../../lib';
-import FeedDate from './FeedDate';
+import { FeedDate, FeedUser } from './FeedDate';
 
 export default {
   name: 'SuiFeedSummary',
@@ -10,8 +10,12 @@ export default {
     },
     date: {
       type: String,
-      description: 'Shorthand for sui-feed-date'
+      description: 'Shorthand for SuiFeedDate'
     },
+    user: {
+      type: String,
+      description: 'Shorthand for SuiFeedUser'
+    }
   },
   render() {
     const ElementType = getElementType(this);
@@ -19,12 +23,17 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          'summary',
+          'summary'
         )}
       >
-        {this.content ? this.content : this.$slots.default}
-        {this.date ?
-        <FeedDate content={this.date} /> : ''}
+        {
+          this.$slots.default ||
+          [
+            this.user && <FeedUser content={this.user} />,
+            this.content,
+            this.date && <FeedDate content={this.date} />
+          ]
+        }
       </ElementType>
     );
   },

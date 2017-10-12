@@ -17,7 +17,7 @@ export default {
           'date',
         )}
       >
-        {this.content ? this.content : this.$slots.default}
+        {this.$slots.default || this.content}
       </ElementType>
     );
   },

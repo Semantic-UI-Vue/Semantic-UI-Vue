@@ -1,8 +1,17 @@
 import { classes, getChildProps, getElementType } from '../../lib';
+import { FeedLike } from './';
 
 export default {
   name: 'SuiFeedMeta',
   props: {
+    content: {
+      type: String,
+      description: 'Shorthand for primary content'
+    },
+    like: {
+      type: String,
+      description: 'Shorthand for SuiFeedLike'
+    }
   },
   render() {
     const ElementType = getElementType(this);
@@ -10,11 +19,16 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          'ui',
-          'feed',
+          'meta',
         )}
       >
-        {this.$slots.default}
+        {
+          this.$slots.default ||
+          [
+            this.like && <FeedLike content={this.like} />,
+            this.content
+          ]
+        }
       </ElementType>
     );
   },

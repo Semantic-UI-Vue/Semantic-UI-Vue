@@ -4,6 +4,10 @@ import { Icon, Image } from '../../elements';
 export default {
   name: 'SuiFeedLabel',
   props: {
+    content: {
+      type: String,
+      description: 'Shorthand for primary content'
+    },
     image: {
       type: String,
       description: 'An event can contain image label'
@@ -22,8 +26,14 @@ export default {
           'label',
         )}
       >
-        {this.image ? <Image src={this.image} /> :
-          (this.icon ? <Icon name={this.icon} /> : this.$slots.default) }
+        {
+          this.$slots.default ||
+          [
+            this.content,
+            this.icon && <Icon name={this.icon} />,
+            this.image && <Image src={this.image} />
+          ]
+        }
       </ElementType>
     );
   },
