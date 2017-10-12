@@ -8,6 +8,8 @@ import SummaryDateExample from './SummaryDate.example';
 import SummaryDateShorthandExample from './SummaryDateShorthand.example';
 import ExtraImagesExample from './ExtraImages.example';
 import ExtraImagesShorthandExample from './ExtraImagesShorthand.example';
+import ExtraTextExample from './ExtraText.example';
+import ExtraTextShorthandExample from './ExtraTextShorthand.example';
 
 export default [
   {
@@ -61,7 +63,15 @@ export default [
         description: 'You can do the same using shorthands',
         component: ExtraImagesShorthandExample,
       },
-
+      {
+        title: 'Extra Text',
+        description: 'An event can contain extra text.',
+        component: ExtraTextExample,
+      },
+      {
+        description: 'You can do the same using shorthands',
+        component: ExtraTextShorthandExample,
+      },
     ],
   },
 ];
