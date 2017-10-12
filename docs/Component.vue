@@ -160,6 +160,10 @@ export default {
             return { name, type: value.name };
           }
 
+          if (value.type instanceof Array) {
+            return { ...value, name, type: value.type.map(type => type.name).join('|') };
+          }
+
           return { ...value, name, type: value.type.name };
         })
     },
