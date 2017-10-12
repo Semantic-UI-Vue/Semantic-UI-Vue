@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType } from '../../lib';
 
 export default {
   name: 'SuiFeedDate',
+  description: 'An event or an event summary can contain a date',
   props: {
     content: {
       type: String,

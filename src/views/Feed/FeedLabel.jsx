@@ -3,6 +3,7 @@ import { Icon, Image } from '../../elements';
 
 export default {
   name: 'SuiFeedLabel',
+  description: 'An event can contain an image or icon label',
   props: {
     content: {
       type: String,

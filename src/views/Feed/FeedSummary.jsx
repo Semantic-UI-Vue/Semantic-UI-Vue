@@ -1,8 +1,9 @@
 import { classes, getChildProps, getElementType } from '../../lib';
-import { FeedDate, FeedUser } from './FeedDate';
+import { FeedDate, FeedUser } from './';
 
 export default {
   name: 'SuiFeedSummary',
+  description: 'A feed can contain a summary',
   props: {
     content: {
       type: String,

@@ -3,6 +3,7 @@ import { Icon } from '../../elements';
 
 export default {
   name: 'SuiFeedLike',
+  description: 'A feed can contain a like element',
   props: {
     content: {
       type: String,
@@ -14,7 +15,7 @@ export default {
     }
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = getElementType(this, 'a');
     return (
       <ElementType
         {...getChildProps(this)}

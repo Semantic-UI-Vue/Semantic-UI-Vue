@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType } from '../../lib';
 
 export default {
   name: 'SuiFeedUser',
+  description: 'A feed can contain a user element',
   props: {
     content: {
       type: String,
@@ -9,7 +10,7 @@ export default {
     }
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = getElementType(this, 'a');
     return (
       <ElementType
         {...getChildProps(this)}
@@ -17,7 +18,7 @@ export default {
           'user',
         )}
       >
-        {this.$slots.default ? this.$slots.default : this.content}
+        {this.$slots.default || this.content}
       </ElementType>
     );
   },

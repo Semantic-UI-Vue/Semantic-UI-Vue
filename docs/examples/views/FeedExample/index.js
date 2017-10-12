@@ -1,3 +1,5 @@
+import FeedExample from './Feed.example';
+import FeedShorthandExample from './FeedShorthand.example';
 import ImageLabelExample from './ImageLabel.example';
 import ImageLabelShorthandExample from './ImageLabelShorthand.example';
 import IconLabelExample from './IconLabel.example';
@@ -10,10 +12,23 @@ import ExtraImagesExample from './ExtraImages.example';
 import ExtraImagesShorthandExample from './ExtraImagesShorthand.example';
 import ExtraTextExample from './ExtraText.example';
 import ExtraTextShorthandExample from './ExtraTextShorthand.example';
+import SizeSmallExample from './SizeSmall.example';
+import SizeLargeExample from './SizeLarge.example';
 
 export default [
   {
     title: 'Types',
+    examples: [
+      {
+        title: 'Feed',
+        description: 'A feed',
+        component: FeedExample,
+      },
+      {
+        description: 'You can also pass an array of events to generate the markup',
+        component: FeedShorthandExample,
+      },
+    ],
   },
   {
     title: 'Content',
@@ -71,6 +86,19 @@ export default [
       {
         description: 'You can do the same using shorthands',
         component: ExtraTextShorthandExample,
+      },
+    ],
+  },
+  {
+    title: 'Variations',
+    examples: [
+      {
+        title: 'Size',
+        description: 'A feed can have different sizes',
+        component: SizeSmallExample,
+      },
+      {
+        component: SizeLargeExample,
       },
     ],
   },

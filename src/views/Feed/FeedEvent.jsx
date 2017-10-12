@@ -3,6 +3,7 @@ import { FeedLabel, FeedContent } from './';
 
 export default {
   name: 'SuiFeedEvent',
+  description: 'A feed contains an event',
   props: {
     content: {
       type: String,
