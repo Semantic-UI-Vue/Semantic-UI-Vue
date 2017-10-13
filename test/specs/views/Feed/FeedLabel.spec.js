@@ -32,6 +32,20 @@ describe('FeedLabel', () => {
     expect(label.find('img').hasAttribute('src', '/test-image.jpg')).to.equal(true);
   });
 
+  it('should only render default slot if both props and default slot exist', () => {
+    const label = shallow(FeedLabel, {
+      propsData: {
+        image: '/test-image.jpg',
+      },
+      slots: {
+        default: '<span>Only render this</span>',
+      },
+    });
+    expect(label.is('div')).to.equal(true);
+    expect(label.hasClass('label')).to.equal(true);
+    expect(label.text()).to.equal('Only render this');
+  });
+
   it('should create a SUI FeedLabel with default slot', () => {
     const label = shallow(FeedLabel, { slots: { default: '<span>LABEL</span>' } });
     expect(label.is('div')).to.equal(true);

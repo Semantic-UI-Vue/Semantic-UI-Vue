@@ -46,6 +46,26 @@ describe('FeedContent', () => {
     expect(content.findAll('div').at(5).text()).to.equal('4 likes');
   });
 
+  it('should only render default slot if both props and default slot exist', () => {
+    const content = shallow(FeedContent, {
+      propsData: {
+        content: 'Main content here',
+        date: '1 hour ago',
+        summary: 'Summary text',
+        extraImages: ['/image0.png', '/image1.png'],
+        extraText: 'Extra text here',
+        meta: '4 likes',
+      },
+      slots: {
+        default: '<div>Main content here</div>',
+      },
+    });
+    expect(content.is('div')).to.equal(true);
+    expect(content.hasClass('content')).to.equal(true);
+    expect(content.findAll('div').length).is.equal(2);
+    expect(content.findAll('div').at(1).text()).to.equal('Main content here');
+  });
+
   it('should create a SUI FeedContent with default slot', () => {
     const content = shallow(FeedContent, { slots: { default: '<span>Main content here</span>' } });
     expect(content.is('div')).to.equal(true);

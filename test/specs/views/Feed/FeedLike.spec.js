@@ -25,6 +25,21 @@ describe('FeedLike', () => {
     expect(like.find('i').hasClass('like')).to.equal(true);
   });
 
+  it('should only render default slot if both props and default slot exist', () => {
+    const like = shallow(FeedLike, {
+      propsData: {
+        icon: 'like',
+        content: '4 likes',
+      },
+      slots: {
+        default: '<span>Only render this</span>',
+      },
+    });
+    expect(like.is('a')).to.equal(true);
+    expect(like.hasClass('like')).to.equal(true);
+    expect(like.text()).to.equal('Only render this');
+  });
+
   it('should create a SUI FeedLike with default slot', () => {
     const like = shallow(FeedLike, { slots: { default: '<span>4 likes</span>' } });
     expect(like.is('a')).to.equal(true);

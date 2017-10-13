@@ -33,6 +33,22 @@ describe('FeedSummary', () => {
     expect(summary.findAll('div').at(1).text()).to.equal('2 hours ago');
   });
 
+  it('should only render default slot if both props and default slot exist', () => {
+    const summary = shallow(FeedSummary, {
+      propsData: {
+        date: '2 hours ago',
+        content: 'This is a summary',
+        user: 'Jenny',
+      },
+      slots: {
+        default: '<span>Only render this</span>',
+      },
+    });
+    expect(summary.is('div')).to.equal(true);
+    expect(summary.hasClass('summary')).to.equal(true);
+    expect(summary.text()).to.equal('Only render this');
+  });
+
   it('should create a SUI FeedSummary with default slot', () => {
     const summary = shallow(FeedSummary, { slots: { default: '<span>Summary text</span>' } });
     expect(summary.is('div')).to.equal(true);

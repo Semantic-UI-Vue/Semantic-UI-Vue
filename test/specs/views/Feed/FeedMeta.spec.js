@@ -25,6 +25,20 @@ describe('FeedMeta', () => {
     expect(meta.find('a').text()).to.equal('4 likes');
   });
 
+  it('should only render default slot if both props and default slot exist', () => {
+    const meta = shallow(FeedMeta, {
+      propsData: {
+        like: '4 likes',
+      },
+      slots: {
+        default: '<span>Only render this</span>',
+      },
+    });
+    expect(meta.is('div')).to.equal(true);
+    expect(meta.hasClass('meta')).to.equal(true);
+    expect(meta.text()).to.equal('Only render this');
+  });
+
   it('should create a SUI FeedMeta with default slot', () => {
     const meta = shallow(FeedMeta, { slots: { default: '<span>Meta text</span>' } });
     expect(meta.is('div')).to.equal(true);

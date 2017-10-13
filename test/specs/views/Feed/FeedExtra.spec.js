@@ -39,6 +39,23 @@ describe('FeedExtra', () => {
     expect(extra.findAll('img').at(1).hasAttribute('src', '/image1.png')).to.equal(true);
   });
 
+  it('should only render default slot if both props and default slot exist', () => {
+    const extra = shallow(FeedExtra, {
+      propsData: {
+        images: [
+          '/image0.png',
+          '/image1.png',
+        ],
+      },
+      slots: {
+        default: '<span>Only render this</span>',
+      },
+    });
+    expect(extra.is('div')).to.equal(true);
+    expect(extra.hasClass('extra')).to.equal(true);
+    expect(extra.text()).to.equal('Only render this');
+  });
+
   it('should create a SUI FeedExtra with default slot', () => {
     const extra = shallow(FeedExtra, { slots: { default: '<span>More text here</span>' } });
     expect(extra.is('div')).to.equal(true);
