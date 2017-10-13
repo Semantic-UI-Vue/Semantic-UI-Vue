@@ -1,9 +1,10 @@
 <template lang="html">
   <sui-feed>
     <sui-feed-event :image=image
-                    :date=date
-                    :summary=summary
-                    :extraText=extraText />
+      :date=date
+      :summary=summary
+      :extraText=extraText
+    />
 
     <sui-feed-event>
       <sui-feed-label :image=image />
