@@ -1,19 +1,19 @@
-import FeedExample from './Feed.example';
-import FeedShorthandExample from './FeedShorthand.example';
-import ImageLabelExample from './ImageLabel.example';
-import ImageLabelShorthandExample from './ImageLabelShorthand.example';
-import IconLabelExample from './IconLabel.example';
-import IconLabelShorthandExample from './IconLabelShorthand.example';
 import ContentDateExample from './ContentDate.example';
 import ContentDateShorthandExample from './ContentDateShorthand.example';
-import SummaryDateExample from './SummaryDate.example';
-import SummaryDateShorthandExample from './SummaryDateShorthand.example';
 import ExtraImagesExample from './ExtraImages.example';
 import ExtraImagesShorthandExample from './ExtraImagesShorthand.example';
 import ExtraTextExample from './ExtraText.example';
 import ExtraTextShorthandExample from './ExtraTextShorthand.example';
-import SizeSmallExample from './SizeSmall.example';
+import FeedExample from './Feed.example';
+import FeedShorthandExample from './FeedShorthand.example';
+import IconLabelExample from './IconLabel.example';
+import IconLabelShorthandExample from './IconLabelShorthand.example';
+import ImageLabelExample from './ImageLabel.example';
+import ImageLabelShorthandExample from './ImageLabelShorthand.example';
+import SummaryDateExample from './SummaryDate.example';
+import SummaryDateShorthandExample from './SummaryDateShorthand.example';
 import SizeLargeExample from './SizeLarge.example';
+import SizeSmallExample from './SizeSmall.example';
 
 export default [
   {
