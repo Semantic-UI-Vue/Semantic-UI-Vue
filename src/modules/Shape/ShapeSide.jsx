@@ -7,7 +7,12 @@ export default {
       type: Boolean,
       default: false,
       description: 'Set the first side to be showed.',
-    }
+    },
+    header: {
+      type: Boolean,
+      default: false,
+      description: 'The side is an header.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -17,6 +22,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           this.active && 'active',
+          this.header && 'header',
           'side',
         )}
       >

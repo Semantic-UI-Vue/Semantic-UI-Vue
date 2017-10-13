@@ -14,4 +14,9 @@ describe('ShapeSide', () => {
     const side = shallow(ShapeSide, { propsData: {} });
     expect(side.element.classList.contains('active')).to.equal(false);
   });
+
+  it('should create a header side', () => {
+    const side = shallow(ShapeSide, { propsData: { header: true } });
+    expect(side.element.classList.contains('header')).to.equal(true);
+  });
 });
