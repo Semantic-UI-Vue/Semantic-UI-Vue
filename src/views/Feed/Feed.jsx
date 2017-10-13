@@ -27,7 +27,8 @@ export default {
       >
         {
           this.$slots.default ||
-          (this.events &&
+          (
+            this.events &&
             this.events.map(event => <FeedEvent {...{ props: event }} />)
           )
         }
