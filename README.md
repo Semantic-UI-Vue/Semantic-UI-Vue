@@ -40,7 +40,7 @@ Installing Semantic UI Vue provides the JavaScript for your components. You'll a
 Once Semantic UI Vue has been installed, you will need to import it in your main file (usually *index.js* or *main.js*) and tell Vue to use it:
 
 ```js
-import Vue form 'vue';
+import Vue from 'vue';
 import SuiVue from 'semantic-ui-vue';
 
 /* ... */

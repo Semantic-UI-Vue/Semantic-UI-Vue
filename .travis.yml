@@ -3,6 +3,7 @@ language: node_js
 node_js:
   - node
 script:
+  - npm run lint
   - npm test
   - npm run report-coverage
   - npm run build
