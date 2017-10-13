@@ -1,6 +1,6 @@
 import { classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
-import { FeedEvent } from './';
+import FeedEvent from './FeedEvent';
 
 export default {
   name: 'SuiFeed',
