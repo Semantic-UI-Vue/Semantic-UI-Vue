@@ -34,9 +34,10 @@ describe('FeedExtra', () => {
     expect(extra.hasClass('extra')).to.equal(true);
     expect(extra.hasClass('images')).to.equal(true);
     expect(extra.contains('img')).to.equal(true);
-    expect(extra.findAll('img').length).to.equal(2);
-    expect(extra.findAll('img').at(0).hasAttribute('src', '/image0.png')).to.equal(true);
-    expect(extra.findAll('img').at(1).hasAttribute('src', '/image1.png')).to.equal(true);
+    const divs = extra.findAll('img');
+    expect(divs.length).to.equal(2);
+    expect(divs.at(0).hasAttribute('src', '/image0.png')).to.equal(true);
+    expect(divs.at(1).hasAttribute('src', '/image1.png')).to.equal(true);
   });
 
   it('should only render default slot if both props and default slot exist', () => {

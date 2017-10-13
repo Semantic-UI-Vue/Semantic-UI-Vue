@@ -28,9 +28,10 @@ describe('FeedSummary', () => {
     expect(summary.contains('a')).to.equal(true);
     expect(summary.find('a').hasClass('user')).to.equal(true);
     expect(summary.find('a').text()).to.equal('Jenny');
-    expect(summary.findAll('div').length).to.equal(2);
-    expect(summary.findAll('div').at(1).hasClass('date')).to.equal(true);
-    expect(summary.findAll('div').at(1).text()).to.equal('2 hours ago');
+    const divs = summary.findAll('div');
+    expect(divs.length).to.equal(2);
+    expect(divs.at(1).hasClass('date')).to.equal(true);
+    expect(divs.at(1).text()).to.equal('2 hours ago');
   });
 
   it('should only render default slot if both props and default slot exist', () => {
