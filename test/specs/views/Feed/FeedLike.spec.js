@@ -20,8 +20,9 @@ describe('FeedLike', () => {
     const like = shallow(FeedLike, { propsData: { icon: 'like', content: '4 likes' } });
     expect(like.is('a')).to.equal(true);
     expect(like.hasClass('like')).to.equal(true);
+    expect(like.text()).to.equal('4 likes');
     expect(like.contains('i')).to.equal(true);
-    expect(like.find('i').hasClass('like'));
+    expect(like.find('i').hasClass('like')).to.equal(true);
   });
 
   it('should create a SUI FeedLike with default slot', () => {
