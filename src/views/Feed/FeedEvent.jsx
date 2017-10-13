@@ -40,6 +40,8 @@ export default {
   },
   render() {
     const ElementType = getElementType(this);
+    const hasContent = this.content || this.date || this.summary ||
+      this.extraImages || this.extraText || this.meta;
     return (
       <ElementType
         {...getChildProps(this)}
@@ -49,7 +51,7 @@ export default {
       >
         {this.image && <FeedLabel image={this.image} />}
         {this.icon && <FeedLabel icon={this.icon} />}
-        {(this.content || this.date || this.summary || this.extraImages || this.extraText || this.meta) &&
+        {hasContent &&
         <FeedContent
           content={this.content}
           date={this.date}
