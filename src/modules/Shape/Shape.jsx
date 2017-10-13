@@ -1,4 +1,5 @@
 import { classes, getElementType, getChildProps } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiShape',
