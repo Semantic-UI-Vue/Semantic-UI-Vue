@@ -3,11 +3,23 @@ import { classes, getChildProps, getElementType } from '../../lib';
 export default {
   name: 'SuiDropdown',
   props: {
-    button: Boolean,
-    icon: String,
-    floating: Boolean,
+    button: {
+      type: Boolean,
+      description: 'A dropdown button style.',
+    },
+    icon: {
+      type: String,
+      description: 'Change default button to other button.',
+    },
+    floating: {
+      type: Boolean,
+      description: 'A dropdown menu can appear to be floating below an element.',
+    },
     search: Boolean,
-    text: String,
+    text: {
+      type: String,
+      description: 'Text of dropdown',
+    },
   },
   data() {
     return {
