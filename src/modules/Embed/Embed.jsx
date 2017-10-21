@@ -96,8 +96,6 @@ export default {
   },
   render() {
     const self = this;
-    console.log(self.active);
-    console.log(self.isActive);
     function getSrc() {
       const autoplay = self.computedAutoplay || true,
         brandedUI = self.computedBrandUI || false,
