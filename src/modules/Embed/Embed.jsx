@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import { Icon } from '../../elements';
@@ -107,7 +108,7 @@ export default {
         id = getValue(self.computedId, ''),
         source = self.computedSource,
         url = self.computedUrl;
-        
+
       if (source === 'youtube') {
         return [
           `//www.youtube.com/embed/${id}`,
@@ -135,11 +136,18 @@ export default {
       return url;
     };
 
+    function getStyleString(styleObj) {
+      return Object.entries(styleObj).reduce((styleString, entry) => (
+          styleString + entry[0] + ':' + entry[1] + ';'
+        ), '');
+    };
+
     function renderEmbed() {
       if (!self.isActive) return null;
       if (self.$slots.default) return self.$slots.default;
       const iframe = self.iframe || {};
       const embedSrc = getSrc();
+      const style = iframe.style ? getStyleString(iframe.style) : '';
       return (
         <div class='embed'>
           <iframe src={iframe.src || embedSrc}
@@ -149,6 +157,7 @@ export default {
             height={iframe.height || '100%'}
             scrooling={iframe.scrolling || 'no'}
             title={iframe.title || `Embedded content from ${self.computedSource}`}
+            style={style}
           />
         </div>
       );

@@ -33,6 +33,10 @@
       </sui-menu>
     </sui-grid-column>
 
+    <sui-grid-column v-if="info">
+      <sui-message :info="!!info" :content="info" />
+    </sui-grid-column>
+
     <sui-grid-column :class="exampleClass">
       <div ref="compiled" :is="compiled" />
     </sui-grid-column>
@@ -99,6 +103,7 @@ export default {
     description: String,
     component: String,
     baseUrl: String,
+    info: String,
   },
   computed: {
     codeColor() {
