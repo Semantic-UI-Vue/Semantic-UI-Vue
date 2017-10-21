@@ -96,15 +96,18 @@ export default {
   },
   render() {
     const self = this;
+    function getValue(prop, defaultValue) {
+      return (typeof prop === 'undefined') ? defaultValue : prop;
+    }
     function getSrc() {
-      const autoplay = self.computedAutoplay || true,
-        brandedUI = self.computedBrandUI || false,
-        color = self.computedColor || '#444444',
-        hd = self.computedHd || true,
-        id = self.computedId || '',
+      const autoplay = getValue(self.computedAutoplay, true),
+        brandedUI = getValue(self.computedBrandUI, false),
+        color = getValue(self.computedColor, '#444444'),
+        hd = getValue(self.computedHd, true),
+        id = getValue(self.computedId, ''),
         source = self.computedSource,
         url = self.computedUrl;
-
+        
       if (source === 'youtube') {
         return [
           `//www.youtube.com/embed/${id}`,
