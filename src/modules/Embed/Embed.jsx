@@ -37,6 +37,7 @@ export default {
     autoplay: {
       type: Boolean,
       description: 'Setting to true or false will force autoplay',
+      default: true,
     },
     brandedUI: {
       type: Boolean,
@@ -44,11 +45,13 @@ export default {
     },
     color: {
       type: String,
-      description: 'Specifies what default chrome color with Vimeo or YouTube'
+      description: 'Specifies what default chrome color with Vimeo or YouTube',
+      default: '#444444',
     },
     hd: {
       type: Boolean,
       description: 'Specifies whether to display YouTuber/Vimeo video in high-definition',
+      default: true,
     },
     id: {
       type: String,
@@ -60,29 +63,8 @@ export default {
     },
   },
   computed: {
-    computedSource: function() {
-      return !this.url && this.source;
-    },
-    computedAutoplay: function() {
-      return this.computedSource && this.autoplay;
-    },
-    computedBrandUI: function() {
-      return this.computedSource && this.brandedUI;
-    },
-    computedColor: function() {
-      return this.computedSource && this.color;
-    },
-    computedHd: function() {
-      return this.computedSource && this.hd;
-    },
-    computedId: function() {
-      return this.computedSource && this.id;
-    },
-    computedIframe: function() {
-      return this.computedSource && this.iframe;
-    },
-    computedUrl: function() {
-      return !this.source && this.url;
+    isActiveState: function() {
+      return this.active || this.isActive;
     },
   },
   methods: {
@@ -90,24 +72,16 @@ export default {
       this.isActive = true;
     },
   },
-  beforeUpdate() {
-    if (this.active) {
-      this.setActive();
-    }
-  },
   render() {
     const self = this;
-    function getValue(prop, defaultValue) {
-      return (typeof prop === 'undefined') ? defaultValue : prop;
-    }
     function getSrc() {
-      const autoplay = getValue(self.computedAutoplay, true),
-        brandedUI = getValue(self.computedBrandUI, false),
-        color = getValue(self.computedColor, '#444444'),
-        hd = getValue(self.computedHd, true),
-        id = getValue(self.computedId, ''),
-        source = self.computedSource,
-        url = self.computedUrl;
+      const source = !self.url && self.source,
+        url = !self.source && self.url,
+        autoplay = source && self.autoplay,
+        brandedUI = source && self.brandedUI,
+        color = source && self.color,
+        hd = source && self.hd,
+        id = source && self.id;
 
       if (source === 'youtube') {
         return [
@@ -143,7 +117,7 @@ export default {
     };
 
     function renderEmbed() {
-      if (!self.isActive) return null;
+      if (!self.isActiveState) return null;
       if (self.$slots.default) return self.$slots.default;
       const iframe = self.iframe || {};
       const embedSrc = getSrc();
@@ -155,8 +129,8 @@ export default {
             frameBorder={iframe.frameBorder || 0}
             width={iframe.width || '100%'}
             height={iframe.height || '100%'}
-            scrooling={iframe.scrolling || 'no'}
-            title={iframe.title || `Embedded content from ${self.computedSource}`}
+            scrolling={iframe.scrolling || 'no'}
+            title={iframe.title || `Embedded content from ${self.source || 'custom host'}`}
             style={style}
           />
         </div>
@@ -171,7 +145,7 @@ export default {
         class={classes(
           'ui',
           this.aspectRatio,
-          this.isActive && 'active',
+          this.isActiveState && 'active',
           'embed'
         )}
       >
