@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, classMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiStatistic',
+  mixins: [classMixin],
   props: {
     horizontal: {
       type: Boolean,
@@ -15,10 +16,6 @@ export default {
       type: Boolean,
       description: 'Should the colors be inverted',
     },
-    inGroup: {
-      type: Boolean,
-      description: 'For now manual override, when used inside Statistic Group, to avoid adding extra ui class',
-    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -26,7 +23,7 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          !this.inGroup && 'ui',
+          this.getUIClass(),
           'statistic',
           this.color,
           this.size,
