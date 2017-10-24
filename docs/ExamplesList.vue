@@ -71,7 +71,7 @@ export default {
     sections() {
       const entry = Object
         .entries(examples)
-        .find(([name]) => name === `${this.component}Example`)
+        .find(([name]) => name === `${this.component}Example`);
 
       return entry ? entry[1] : [];
     },

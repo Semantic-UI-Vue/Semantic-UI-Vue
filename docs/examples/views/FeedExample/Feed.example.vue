@@ -2,7 +2,7 @@
   <sui-feed>
     <sui-feed-event>
       <sui-feed-label>
-        <img src='static/images/avatar/small/elliot.jpg' />
+        <img src='static/images/avatar/small/elliot.jpg' >
       </sui-feed-label>
       <sui-feed-content>
         <sui-feed-summary>
@@ -26,8 +26,8 @@
           <sui-feed-date>4 days ago</sui-feed-date>
         </sui-feed-summary>
         <sui-feed-extra :images=true>
-          <a><img src='static/images/wireframes/image.png' /></a>
-          <a><img src='static/images/wireframes/image.png' /></a>
+          <a><img src='static/images/wireframes/image.png' ></a>
+          <a><img src='static/images/wireframes/image.png' ></a>
         </sui-feed-extra>
         <sui-feed-meta>
           <sui-feed-like>
@@ -80,8 +80,8 @@
           <sui-feed-date>4 days ago</sui-feed-date>
         </sui-feed-summary>
         <sui-feed-extra :images=true>
-          <a><img src='static/images/wireframes/image.png' /></a>
-          <a><img src='static/images/wireframes/image.png' /></a>
+          <a><img src='static/images/wireframes/image.png' ></a>
+          <a><img src='static/images/wireframes/image.png' ></a>
         </sui-feed-extra>
         <sui-feed-meta>
           <sui-feed-like>

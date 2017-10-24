@@ -11,7 +11,7 @@
 
     <sui-button content='Activate'
       icon='bomb'
-      labelPosition='left'
+      label-position='left'
       @click.native="handleClick"
     />
   </div>
@@ -26,7 +26,7 @@ export default {
     };
   },
   methods: {
-    handleClick: function() {
+    handleClick() {
       this.active = true;
     },
   },

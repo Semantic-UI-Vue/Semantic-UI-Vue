@@ -9,9 +9,9 @@
           <div is="sui-dropdown-item">Action</div>
           <div is="sui-dropdown-item">Another Action</div>
           <div is="sui-dropdown-item">Something else here</div>
-          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-divider"/>
           <div is="sui-dropdown-item">Separated Link</div>
-          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-divider"/>
           <div is="sui-dropdown-item">One more separated link</div>
         </div>
       </sui-dropdown>
@@ -39,9 +39,9 @@
           <div is="sui-dropdown-item">Action</div>
           <div is="sui-dropdown-item">Another Action</div>
           <div is="sui-dropdown-item">Something else here</div>
-          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-divider"/>
           <div is="sui-dropdown-item">Separated Link</div>
-          <div is="sui-dropdown-divider"></div>
+          <div is="sui-dropdown-divider"/>
           <div is="sui-dropdown-item">One more separated link</div>
         </div>
       </sui-dropdown>
@@ -151,7 +151,7 @@
 
 <script>
 export default {
-}
+};
 </script>
 
 <style lang="css">

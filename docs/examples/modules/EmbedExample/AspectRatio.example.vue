@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-embed aspectRatio='4:3'
+  <sui-embed aspect-ratio='4:3'
     id='HTZudKi36bo'
     placeholder='static/images/extras/image-4by3.jpg'
     source='youtube'
@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'AspectRatioExample'
+  name: 'AspectRatioExample',
 };
 </script>

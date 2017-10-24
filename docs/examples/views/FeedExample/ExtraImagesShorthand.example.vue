@@ -3,12 +3,12 @@
     <sui-feed-event :image=image
       :date=date
       :summary=summary
-      :extraImages=extraImages
+      :extra-images=extraImages
     />
 
     <sui-feed-event>
       <sui-feed-label :image=image />
-      <sui-feed-content :date=date :summary=summary :extraImages=extraImages />
+      <sui-feed-content :date=date :summary=summary :extra-images=extraImages />
     </sui-feed-event>
 
     <sui-feed-event>
@@ -33,8 +33,8 @@ export default {
       extraImages: [
         'static/images/wireframes/image.png',
         'static/images/wireframes/image-text.png',
-      ]
-    }
-  }
+      ],
+    };
+  },
 };
 </script>

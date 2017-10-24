@@ -11,7 +11,7 @@
       <sui-feed-content
         content='You added Elliot Fu to the group Coworkers' />
     </sui-feed-event>
-    
+
   </sui-feed>
 </template>
 

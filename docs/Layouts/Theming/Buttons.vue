@@ -98,7 +98,7 @@
 
         <div is="sui-button-group">
           <button is="sui-button">1</button>
-          <div is="sui-button-or"></div>
+          <div is="sui-button-or"/>
           <button is="sui-button">2</button>
         </div>
 
@@ -158,7 +158,7 @@
 
 <script>
 export default {
-}
+};
 </script>
 
 <style lang="css">

@@ -12,7 +12,7 @@
         date='Today'
         summary="You posted on your friend Stevie Feliciano's wall." />
     </sui-feed-event>
-    
+
   </sui-feed>
 </template>
 

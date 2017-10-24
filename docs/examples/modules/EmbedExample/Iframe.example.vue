@@ -1,6 +1,6 @@
 <template lang="html">
   <sui-embed :autoplay=false
-    :brandedUI=false
+    :branded-ui=false
     color='white'
     :hd=false
     id='gJscrxxl_Bg'
@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'IframeExample'
+  name: 'IframeExample',
 };
 </script>

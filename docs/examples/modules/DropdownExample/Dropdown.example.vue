@@ -6,11 +6,11 @@
       <sui-dropdown-item>Open... <span class="description">ctrl + o</span></sui-dropdown-item>
       <sui-dropdown-item>Save as... <span class="description">ctrl + s</span></sui-dropdown-item>
       <sui-dropdown-item>Rename <span class="description">ctrl + r</span></sui-dropdown-item>
-      <sui-dropdown-item>Make a copy</sui-dropdown-item>      
-      <sui-dropdown-item><sui-icon name="folder" />Move to folder</sui-dropdown-item>      
-      <sui-dropdown-item><sui-icon name="trash" />Move to trash</sui-dropdown-item>      
+      <sui-dropdown-item>Make a copy</sui-dropdown-item>
+      <sui-dropdown-item><sui-icon name="folder" />Move to folder</sui-dropdown-item>
+      <sui-dropdown-item><sui-icon name="trash" />Move to trash</sui-dropdown-item>
       <sui-dropdown-divider/>
-      <sui-dropdown-item>Download as...</sui-dropdown-item>                
+      <sui-dropdown-item>Download as...</sui-dropdown-item>
     </sui-dropdown-menu>
   </sui-dropdown>
 </div>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'DropdownExample'
+  name: 'DropdownExample',
 };
 </script>
 

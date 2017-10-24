@@ -1,6 +1,6 @@
 <template lang="html">
   <sui-embed :autoplay=false
-    :brandedUI=false
+    :branded-ui=false
     color='white'
     :hd=false
     id='D0WnZyxp_Wo'
@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'SourceSettingsExample'
+  name: 'SourceSettingsExample',
 };
 </script>

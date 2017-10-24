@@ -1,9 +1,9 @@
 <template lang="html">
   <div>
-    <sui-card-group :itemsPerRow="3">
+    <sui-card-group :items-per-row="3">
       <sui-card>
         <sui-card-content>
-          <sui-image src="static/images/avatar/small/elliot.jpg" class="right floated"></sui-image>
+          <sui-image src="static/images/avatar/small/elliot.jpg" class="right floated"/>
           <sui-card-header>Elliot Fu</sui-card-header>
           <sui-card-meta>Friends of Veronika</sui-card-meta>
           <sui-card-description>
@@ -21,7 +21,7 @@
       </sui-card>
       <sui-card>
         <sui-card-content>
-          <sui-image src="static/images/avatar/small/jenny.jpg" class="right floated"></sui-image>
+          <sui-image src="static/images/avatar/small/jenny.jpg" class="right floated"/>
           <sui-card-header>Jenny Hess</sui-card-header>
           <sui-card-meta>New Member</sui-card-meta>
           <sui-card-description>

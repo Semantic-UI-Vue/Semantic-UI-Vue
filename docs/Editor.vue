@@ -1,5 +1,5 @@
 <template>
-  <div class="editor" />
+  <div class="editor" ></div>
 </template>
 
 <script>
@@ -7,11 +7,11 @@ import ace from 'brace';
 import debounce from 'lodash/debounce';
 import kebabCase from 'lodash/kebabCase';
 import * as components from 'src';
-import 'brace/ext/language_tools'
+import 'brace/ext/language_tools';
 import 'brace/mode/html';
 import 'brace/theme/tomorrow';
 
-const languageTools = ace.acequire('ace/ext/language_tools')
+const languageTools = ace.acequire('ace/ext/language_tools');
 
 const semanticUIVueCompleter = {
   getCompletions(editor, session, pos, prefix, callback) {
@@ -26,7 +26,7 @@ const semanticUIVueCompleter = {
 
       if (props) {
         Object.keys(props).forEach((propName) => {
-          if (completions.find(({ value }) => value === propName)) return
+          if (completions.find(({ value }) => value === propName)) return;
           completions.push({
             caption: propName,
             value: kebabCase(propName),

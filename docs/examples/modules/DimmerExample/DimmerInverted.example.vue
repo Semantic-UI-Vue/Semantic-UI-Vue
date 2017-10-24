@@ -1,13 +1,13 @@
 <template lang="html">
     <div>
-        <img src="/static/images/logo.png" />
-        <sui-dimmer :active="enable" :inverted="true"></sui-dimmer>
+        <img src="/static/images/logo.png" >
+        <sui-dimmer :active="enable" :inverted="true"/>
     </div>
 </template>
 <script>
 export default {
-    name: 'DimmerBasicExample',
-    data() {
+  name: 'DimmerBasicExample',
+  data() {
     return { enable: true };
   },
 };

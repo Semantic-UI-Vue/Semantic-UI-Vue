@@ -1,5 +1,5 @@
 <template>
-  <div v-html="content" class="markdown" />
+  <div v-html="content" class="markdown"></div>
 </template>
 
 <script>
@@ -12,7 +12,9 @@ renderer.heading = (text, level) => (
 
 export default {
   name: 'DocsPage',
-  props: ['markdown'],
+  props: {
+    markdown: String,
+  },
   computed: {
     content() {
       return marked(this.markdown, { renderer });

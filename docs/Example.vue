@@ -9,26 +9,53 @@
         {{ title }}
       </h3>
       <p>{{ description }}</p>
-      <sui-menu class="options-menu" color="green" icon compact small text>
+      <sui-menu
+        class="options-menu"
+        color="green"
+        icon
+        compact
+        small
+        text
+      >
         <a is="sui-menu-item">
-          <sui-icon color="grey" fitted name="linkify" size="large" />
+          <sui-icon
+            color="grey"
+            fitted
+            name="linkify"
+            size="large"
+          />
         </a>
         <a is="sui-menu-item">
-          <sui-icon color="grey" fitted name="window maximize" size="large" />
+          <sui-icon
+            color="grey"
+            fitted
+            name="window maximize"
+            size="large"
+          />
         </a>
         <a
           is="sui-menu-item"
           :active="showHtml"
           @click.native="showHtml = !showHtml"
         >
-          <sui-icon :color="htmlColor" fitted name="html5" size="large" />
+          <sui-icon
+            :color="htmlColor"
+            fitted
+            name="html5"
+            size="large"
+          />
         </a>
         <a
           is="sui-menu-item"
           :active="showCode"
           @click.native="showCode = !showCode"
         >
-          <sui-icon :color="codeColor" fitted name="code" size="large" />
+          <sui-icon
+            :color="codeColor"
+            fitted
+            name="code"
+            size="large"
+          />
         </a>
       </sui-menu>
     </sui-grid-column>
@@ -83,11 +110,20 @@ import camelCase from 'lodash/camelCase';
 import kebabCase from 'lodash/kebabCase';
 import { html } from 'js-beautify';
 import copyToClipboard from 'copy-to-clipboard';
-const parser = require('vue-loader/lib/parser');
 import Editor from './Editor';
+
+const parser = require('vue-loader/lib/parser');
 
 export default {
   name: 'Example',
+  components: { Editor },
+  props: {
+    title: String,
+    description: String,
+    component: String,
+    baseUrl: String,
+    info: String,
+  },
   data() {
     return {
       showCode: false,
@@ -97,13 +133,6 @@ export default {
       rendered: '',
       copied: false,
     };
-  },
-  props: {
-    title: String,
-    description: String,
-    component: String,
-    baseUrl: String,
-    info: String,
   },
   computed: {
     codeColor() {
@@ -125,13 +154,13 @@ export default {
       try {
         const parsed = parser(this.source);
         const { code } = Babel.transform(
-          parsed.script.content, { presets: ['es2015', 'stage-2'] }
+          parsed.script.content, { presets: ['es2015', 'stage-2'] },
         );
         const compiled = eval(`const exports = {};${code}`);
         compiled.template = parsed.template.content;
 
         return { ...base, ...compiled };
-      } catch(e) {
+      } catch (e) {
         return base;
       }
     },
@@ -139,6 +168,20 @@ export default {
       const name = this.compiled.name;
       return `${this.baseUrl}/${name}.example.vue`;
     },
+  },
+  watch: {
+    compiled() {
+      this.init();
+    },
+    component(value) {
+      this.source = value;
+    },
+  },
+  beforeMount() {
+    this.source = this.component;
+  },
+  mounted() {
+    this.init();
   },
   methods: {
     setStyle() {
@@ -156,8 +199,8 @@ export default {
     setHtml() {
       const markup = this.$refs.compiled.$el.outerHTML;
       const preFormattedHTML = markup
-        .replace(/><(?!\/i|\/label|\/span|option)/g, '>\n<')
-      this.rendered =  html(preFormattedHTML, {
+        .replace(/><(?!\/i|\/label|\/span|option)/g, '>\n<');
+      this.rendered = html(preFormattedHTML, {
         indent_size: 2,
         indent_char: ' ',
         wrap_attributes: 'auto',
@@ -172,28 +215,15 @@ export default {
     copySource() {
       copyToClipboard(this.source);
       this.copied = true;
-      setTimeout(() => this.copied = false, 1000);
+      setTimeout(() => {
+        this.copied = false;
+      }, 1000);
     },
     resetSource() {
       this.source = this.component;
     },
     kebabCase,
   },
-  watch: {
-    compiled() {
-      this.init();
-    },
-    component(value) {
-      this.source = value;
-    },
-  },
-  beforeMount() {
-    this.source = this.component;
-  },
-  mounted() {
-    this.init();
-  },
-  components: { Editor },
 };
 </script>
 

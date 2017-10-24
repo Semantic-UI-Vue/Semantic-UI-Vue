@@ -13,7 +13,7 @@ import * as modules from 'src/modules';
 import DocsMenu from './Menu';
 
 export default {
-  name: 'app',
+  name: 'App',
 };
 </script>
 

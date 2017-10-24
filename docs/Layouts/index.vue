@@ -31,5 +31,5 @@
 
 <script>
 export default {
-}
+};
 </script>

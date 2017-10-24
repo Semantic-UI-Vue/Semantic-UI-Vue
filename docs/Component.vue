@@ -130,7 +130,7 @@ export default {
       return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/blob/master/src/${this.type}/${this.title}/${this.title}.jsx`;
     },
     semanticLink() {
-      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`
+      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`;
     },
     component() {
       return getComponentFromName(this.componentName);
@@ -165,7 +165,7 @@ export default {
           }
 
           return { ...value, name, type: value.type.name };
-        })
+        });
     },
   },
   methods: {

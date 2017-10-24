@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-card-group :itemsPerRow="3">
+    <sui-card-group :items-per-row="3">
       <sui-card>
         <sui-image src="static/images/avatar/large/matthew.png" />
         <sui-card-content>

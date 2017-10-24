@@ -19,8 +19,8 @@ export default {
   name: 'ContentDateExample',
   data() {
     return {
-      imageSrc: 'static/images/avatar/small/jenny.jpg'
-    }
-  }
+      imageSrc: 'static/images/avatar/small/jenny.jpg',
+    };
+  },
 };
 </script>

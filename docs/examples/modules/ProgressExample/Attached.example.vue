@@ -17,8 +17,8 @@ export default {
   },
   computed: {
     label() {
-      return `${this.percent}% Funded`
-    }
+      return `${this.percent}% Funded`;
+    },
   },
   methods: {
     decrease() {

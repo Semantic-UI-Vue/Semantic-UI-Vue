@@ -1,6 +1,6 @@
 <template lang="html">
   <sui-statistics-group>
-    <sui-statistic inGroup color="red">
+    <sui-statistic in-group color="red">
       <sui-statistic-value>
         27
       </sui-statistic-value>
@@ -8,7 +8,7 @@
         Red
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="orange">
+    <sui-statistic in-group color="orange">
       <sui-statistic-value>
         8
       </sui-statistic-value>
@@ -16,7 +16,7 @@
         Orange
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="yellow">
+    <sui-statistic in-group color="yellow">
       <sui-statistic-value>
         28
       </sui-statistic-value>
@@ -24,7 +24,7 @@
         Yellow
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="olive">
+    <sui-statistic in-group color="olive">
       <sui-statistic-value>
         7
       </sui-statistic-value>
@@ -32,7 +32,7 @@
         Olive
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="green">
+    <sui-statistic in-group color="green">
       <sui-statistic-value>
         14
       </sui-statistic-value>
@@ -40,7 +40,7 @@
         Green
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="teal">
+    <sui-statistic in-group color="teal">
       <sui-statistic-value>
         82
       </sui-statistic-value>
@@ -48,7 +48,7 @@
         Teal
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="blue">
+    <sui-statistic in-group color="blue">
       <sui-statistic-value>
         1
       </sui-statistic-value>
@@ -56,7 +56,7 @@
         Blue
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="violet">
+    <sui-statistic in-group color="violet">
       <sui-statistic-value>
         22
       </sui-statistic-value>
@@ -64,7 +64,7 @@
         Violet
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="purple">
+    <sui-statistic in-group color="purple">
       <sui-statistic-value>
         23
       </sui-statistic-value>
@@ -72,7 +72,7 @@
         Purple
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="pink">
+    <sui-statistic in-group color="pink">
       <sui-statistic-value>
         15
       </sui-statistic-value>
@@ -80,7 +80,7 @@
         Pink
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="brown">
+    <sui-statistic in-group color="brown">
       <sui-statistic-value>
         36
       </sui-statistic-value>
@@ -88,7 +88,7 @@
         Brown
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup color="grey">
+    <sui-statistic in-group color="grey">
       <sui-statistic-value>
         49
       </sui-statistic-value>

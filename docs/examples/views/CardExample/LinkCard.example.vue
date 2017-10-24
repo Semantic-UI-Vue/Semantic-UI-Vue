@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <sui-card>
-      <a href="#"><sui-image src="static/images/avatar/large/steve.jpg"></sui-image></a>
+      <a href="#"><sui-image src="static/images/avatar/large/steve.jpg"/></a>
       <sui-card-content>
         <sui-card-header><a>Steve Jobes</a></sui-card-header>
         <sui-card-meta>

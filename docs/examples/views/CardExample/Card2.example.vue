@@ -14,7 +14,7 @@
         <sui-icon name="comment" /> 3 comments
       </sui-card-content>
       <sui-card-content extra>
-        <sui-input placeholder="Add Comment" icon="heart outline" iconPosition="left" :transparent="true" />
+        <sui-input placeholder="Add Comment" icon="heart outline" icon-position="left" :transparent="true" />
       </sui-card-content>
     </sui-card>
   </div>

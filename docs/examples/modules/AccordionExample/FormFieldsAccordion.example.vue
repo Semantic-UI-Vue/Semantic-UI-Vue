@@ -4,11 +4,11 @@
       <sui-form>
         <sui-form-field>
           <label>First Name</label>
-          <input placeholder="First Name" />
+          <input placeholder="First Name" >
         </sui-form-field>
         <sui-form-field>
           <label>Last Name</label>
-          <input placeholder="Last Name" />
+          <input placeholder="Last Name" >
         </sui-form-field>
         <sui-form-field>
           <sui-accordion>
@@ -18,7 +18,7 @@
             </a>
             <sui-accordion-content>
                 <label>Maiden Name</label>
-                <input placeholder="Maiden Name" />
+                <input placeholder="Maiden Name" >
             </sui-accordion-content>
           </sui-accordion>
         </sui-form-field>

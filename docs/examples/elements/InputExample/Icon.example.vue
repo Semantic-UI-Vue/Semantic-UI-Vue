@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'IconExample'
-}
+  name: 'IconExample',
+};
 </script>

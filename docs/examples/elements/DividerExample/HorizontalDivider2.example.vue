@@ -43,5 +43,5 @@
 <script>
 export default {
   name: 'HorizontalDivider2Example',
-}
+};
 </script>

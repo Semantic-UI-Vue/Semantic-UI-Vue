@@ -3,12 +3,12 @@
     <sui-feed-event :image=image
       :date=date
       :summary=summary
-      :extraText=extraText
+      :extra-text=extraText
     />
 
     <sui-feed-event>
       <sui-feed-label :image=image />
-      <sui-feed-content :date=date :summary=summary :extraText=extraText />
+      <sui-feed-content :date=date :summary=summary :extra-text=extraText />
     </sui-feed-event>
 
     <sui-feed-event>
@@ -30,8 +30,8 @@ export default {
       image: 'static/images/avatar/small/laura.jpg',
       date: '3 days ago',
       summary: 'Laura Faucet created a post',
-      extraText: "Have you seen what's going on in Israel? Can you believe it."
-    }
-  }
+      extraText: "Have you seen what's going on in Israel? Can you believe it.",
+    };
+  },
 };
 </script>
