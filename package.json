@@ -23,7 +23,7 @@
     "build": "npm run build:docs && npm run build:commonjs && npm run build:umd",
     "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue,.jsx src test/specs",
+    "lint": "eslint --ext .js,.vue,.jsx docs src test/specs",
     "report-coverage": "codecov"
   },
   "dependencies": {
@@ -62,7 +62,6 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-html": "^3.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-vue": "beta",
     "eventsource-polyfill": "^0.9.6",
