@@ -7,12 +7,12 @@ export default {
   props: {
     content: {
       type: String,
-      description: 'Shorthand for primary content'
+      description: 'Shorthand for primary content',
     },
     like: {
       type: String,
-      description: 'Shorthand for SuiFeedLike'
-    }
+      description: 'Shorthand for SuiFeedLike',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -24,10 +24,9 @@ export default {
         )}
       >
         {
-          this.$slots.default ||
-          [
+          this.$slots.default || [
             this.like && <FeedLike content={this.like} />,
-            this.content
+            this.content,
           ]
         }
       </ElementType>

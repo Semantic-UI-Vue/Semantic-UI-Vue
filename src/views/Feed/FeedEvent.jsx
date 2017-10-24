@@ -7,36 +7,36 @@ export default {
   props: {
     content: {
       type: String,
-      description: 'Shorthand for SuiFeedContent'
+      description: 'Shorthand for SuiFeedContent',
     },
     image: {
       type: String,
-      description: 'An event can contain image label'
+      description: 'An event can contain image label',
     },
     icon: {
       type: String,
-      description: 'An event can contain icon label'
+      description: 'An event can contain icon label',
     },
     date: {
       type: String,
-      description: 'Shorthand for SuiFeedDate'
+      description: 'Shorthand for SuiFeedDate',
     },
     summary: {
       type: String,
-      description: 'Shorthand for SuiFeedSummary'
+      description: 'Shorthand for SuiFeedSummary',
     },
     extraImages: {
       type: Array,
-      description: 'Shorthand for SuiFeedExtra with images'
+      description: 'Shorthand for SuiFeedExtra with images',
     },
     extraText: {
       type: String,
-      description: 'Shorthand for SuiFeedExtra with text'
+      description: 'Shorthand for SuiFeedExtra with text',
     },
     meta: {
       type: String,
-      description: 'Shorthand for SuiFeedMeta'
-    }
+      description: 'Shorthand for SuiFeedMeta',
+    },
   },
   render() {
     const ElementType = getElementType(this);

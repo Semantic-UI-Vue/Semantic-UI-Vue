@@ -7,12 +7,12 @@ export default {
   description: 'A feed presents user activity chronologically',
   props: {
     size: Enum(['small', 'large'], {
-      description: 'A feed can have different sizes (small | large)'
+      description: 'A feed can have different sizes (small | large)',
     }),
     events: {
       type: Array,
-      description: 'Shorthand array of props for FeedEvent'
-    }
+      description: 'Shorthand array of props for FeedEvent',
+    },
   },
   render() {
     const ElementType = getElementType(this);

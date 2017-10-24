@@ -1,22 +1,16 @@
-import _ from 'lodash';
 import { classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import { Icon } from '../../elements';
 
 export default {
   name: 'SuiEmbed',
-  data() {
-    return {
-      isActive: false,
-    }
-  },
   props: {
     active: {
       type: Boolean,
       description: 'An embed can be active',
     },
     aspectRatio: Enum(['4:3', '16:9', '21:9'], {
-      description: 'An embed can specify an alternative aspect ratio (4:3 | 16:9 | 21:9)'
+      description: 'An embed can specify an alternative aspect ratio (4:3 | 16:9 | 21:9)',
     }),
     icon: {
       type: String,
@@ -28,11 +22,11 @@ export default {
       description: 'A placeholder image for embed',
     },
     source: Enum(['youtube', 'vimeo'], {
-      description: 'Specifies a source to use. Cannot be used together with url'
+      description: 'Specifies a source to use. Cannot be used together with url',
     }),
     url: {
       type: String,
-      description: 'Specifies a url to use for embed. Cannot be used together with source'
+      description: 'Specifies a url to use for embed. Cannot be used together with source',
     },
     autoplay: {
       type: Boolean,
@@ -62,8 +56,13 @@ export default {
       description: 'Shorthand for HTML iframe',
     },
   },
+  data() {
+    return {
+      isActive: false,
+    };
+  },
   computed: {
-    isActiveState: function() {
+    isActiveState() {
       return this.active || this.isActive;
     },
   },
@@ -75,13 +74,13 @@ export default {
   render() {
     const self = this;
     function getSrc() {
-      const source = !self.url && self.source,
-        url = !self.source && self.url,
-        autoplay = source && self.autoplay,
-        brandedUI = source && self.brandedUI,
-        color = source && self.color,
-        hd = source && self.hd,
-        id = source && self.id;
+      const source = !self.url && self.source;
+      const url = !self.source && self.url;
+      const autoplay = source && self.autoplay;
+      const brandedUI = source && self.brandedUI;
+      const color = source && self.color;
+      const hd = source && self.hd;
+      const id = source && self.id;
 
       if (source === 'youtube') {
         return [
@@ -104,17 +103,17 @@ export default {
           `&amp;color=${encodeURIComponent(color)}`,
           '&amp;portrait=false',
           '&amp;title=false',
-        ].join('')
+        ].join('');
       }
 
       return url;
-    };
+    }
 
     function getStyleString(styleObj) {
       return Object.entries(styleObj).reduce((styleString, entry) => (
-          styleString + entry[0] + ':' + entry[1] + ';'
-        ), '');
-    };
+        `${styleString}${entry[0]}:${entry[1]};`
+      ), '');
+    }
 
     function renderEmbed() {
       if (!self.isActiveState) return null;
@@ -135,7 +134,7 @@ export default {
           />
         </div>
       );
-    };
+    }
 
     const ElementType = getElementType(this);
     return (
@@ -146,7 +145,7 @@ export default {
           'ui',
           this.aspectRatio,
           this.isActiveState && 'active',
-          'embed'
+          'embed',
         )}
       >
         {this.icon && <Icon name={this.icon} />}

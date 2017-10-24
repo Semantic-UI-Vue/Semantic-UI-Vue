@@ -7,19 +7,29 @@ export default {
   props: {
     content: {
       type: String,
-      description: 'Shorthand for primary content'
+      description: 'Shorthand for primary content',
     },
     images: {
       type: [Array, Boolean],
-      description: 'An event can contain additional information like a set of images'
+      description: 'An event can contain additional information like a set of images',
     },
     text: {
       type: Boolean,
-      description: 'An event can contain additional text information'
-    }
+      description: 'An event can contain additional text information',
+    },
   },
   render() {
     const ElementType = getElementType(this);
+
+    const defaultContentImage = (
+      Array.isArray(this.images) && this.images.map(image => <Image src={image} />)
+    );
+
+    const defaultContent = [
+      this.content,
+      defaultContentImage,
+    ];
+
     return (
       <ElementType
         {...getChildProps(this)}
@@ -29,14 +39,7 @@ export default {
           'extra',
         )}
       >
-        {
-          this.$slots.default ||
-          [
-            this.content,
-            this.images && (this.images instanceof Array)
-              && this.images.map(image => <Image src={image} />)
-          ]
-        }
+        {this.$slots.default || defaultContent}
       </ElementType>
     );
   },

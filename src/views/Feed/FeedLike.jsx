@@ -7,12 +7,12 @@ export default {
   props: {
     content: {
       type: String,
-      description: 'Shorthand for primary content'
+      description: 'Shorthand for primary content',
     },
     icon: {
       type: String,
-      description: 'Shorthand for icon. Mutually exclusive with children'
-    }
+      description: 'Shorthand for icon. Mutually exclusive with children',
+    },
   },
   render() {
     const ElementType = getElementType(this, 'a');
@@ -24,10 +24,9 @@ export default {
         )}
       >
         {
-          this.$slots.default ||
-          [
+          this.$slots.default || [
             this.icon && <Icon name={this.icon} />,
-            this.content
+            this.content,
           ]
         }
       </ElementType>
