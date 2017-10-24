@@ -23,7 +23,7 @@
     "build": "npm run build:docs && npm run build:commonjs && npm run build:umd",
     "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/specs",
+    "lint": "eslint --ext .js,.vue,.jsx src test/specs",
     "report-coverage": "codecov"
   },
   "dependencies": {
