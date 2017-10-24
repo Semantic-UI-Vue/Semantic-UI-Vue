@@ -24,8 +24,9 @@
           <a href="#">18 studies</a>
         </sui-table-cell>
         <sui-table-cell>
-          Creatine supplementation is the reference compound for increasing muscular creatine levels; there is
-          variability in this increase, however, with some nonresponders.
+          Creatine supplementation is the reference compound for increasing
+          muscular creatine levels; there is variability in this increase,
+          however, with some nonresponders.
         </sui-table-cell>
       </sui-table-row>
       <sui-table-row>
@@ -41,7 +42,8 @@
           <a href="#">65 studies</a>
         </sui-table-cell>
         <sui-table-cell>
-          Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess
+          Creatine is the reference compound for power improvement, with numbers
+          from one meta-analysis to assess
           potency
         </sui-table-cell>
       </sui-table-row>

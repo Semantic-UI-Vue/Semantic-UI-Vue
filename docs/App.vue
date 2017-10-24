@@ -6,11 +6,6 @@
 
 <script>
 import 'semantic-ui-css/semantic.css';
-import * as components from 'src';
-import * as collections from 'src/collections';
-import * as elements from 'src/elements';
-import * as modules from 'src/modules';
-import DocsMenu from './Menu';
 
 export default {
   name: 'App',

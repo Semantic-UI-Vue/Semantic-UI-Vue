@@ -24,7 +24,9 @@ export default {
   methods: {
     handleDismiss() {
       this.visible = false;
-      setTimeout(() => this.visible = true, 2000);
+      setTimeout(() => {
+        this.visible = true;
+      }, 2000);
     },
   },
 };

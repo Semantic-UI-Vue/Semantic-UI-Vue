@@ -8,7 +8,9 @@
 <script>
 export default {
   name: 'DocsWireframe',
-  props: ['name'],
+  props: {
+    name: String,
+  },
 };
 </script>
 

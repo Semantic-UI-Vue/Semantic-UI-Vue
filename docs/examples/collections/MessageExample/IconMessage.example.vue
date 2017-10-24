@@ -7,7 +7,7 @@
     />
 
     <sui-message icon>
-      <sui-icon name='circle notched' loading />
+      <sui-icon name="circle notched" loading />
       <sui-message-content>
         <sui-message-header>Just one second</sui-message-header>
         We are fetching that content for you.

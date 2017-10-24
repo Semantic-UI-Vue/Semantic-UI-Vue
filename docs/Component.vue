@@ -9,7 +9,12 @@
           </sui-header-subheader>
         </h1>
 
-        <sui-list class="space" horizontal link size="small">
+        <sui-list
+          class="space"
+          horizontal
+          link
+          size="small"
+        >
           <sui-list-item>
             <sui-header color="grey" size="tiny"  />
           </sui-list-item>
@@ -117,6 +122,11 @@ const getComponentFromName = name => components[capitalize(name)];
 
 export default {
   name: 'Component',
+  components: { ExamplesList },
+  props: {
+    type: String,
+    componentName: String,
+  },
   data() {
     return {
       currentComponent: getComponentFromName(this.componentName),
@@ -168,6 +178,11 @@ export default {
         });
     },
   },
+  watch: {
+    componentName(v) {
+      this.currentComponent = getComponentFromName(v);
+    },
+  },
   methods: {
     toggleProps() {
       if (this.currentComponent) {
@@ -177,16 +192,6 @@ export default {
       }
     },
   },
-  watch: {
-    componentName(v) {
-      this.currentComponent = getComponentFromName(v);
-    },
-  },
-  props: {
-    type: String,
-    componentName: String,
-  },
-  components: { ExamplesList },
 };
 </script>
 

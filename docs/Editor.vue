@@ -4,7 +4,6 @@
 
 <script>
 import ace from 'brace';
-import debounce from 'lodash/debounce';
 import kebabCase from 'lodash/kebabCase';
 import * as components from 'src';
 import 'brace/ext/language_tools';
@@ -43,9 +42,18 @@ languageTools.addCompleter(semanticUIVueCompleter);
 
 export default {
   name: 'Editor',
+  template: '<div></div>',
   props: {
     value: String,
     readonly: Boolean,
+  },
+  watch: {
+    value(value) {
+      if (value !== this.editor.getValue()) {
+        this.editor.setValue(value);
+        this.editor.selection.moveTo(Infinity, Infinity);
+      }
+    },
   },
   mounted() {
     const editor = ace.edit(this.$el);
@@ -66,15 +74,6 @@ export default {
     editor.session.setTabSize(2);
     editor.selection.moveTo(Infinity, Infinity);
   },
-  watch: {
-    value(value) {
-      if (value !== this.editor.getValue()) {
-        this.editor.setValue(value);
-        this.editor.selection.moveTo(Infinity, Infinity);
-      }
-    },
-  },
-  template: '<div></div>',
 };
 </script>
 

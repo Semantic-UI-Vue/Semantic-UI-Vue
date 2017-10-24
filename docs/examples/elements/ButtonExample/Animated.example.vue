@@ -7,14 +7,14 @@
       </sui-button-content>
     </sui-button>
 
-    <sui-button animated='vertical'>
+    <sui-button animated="vertical">
       <sui-button-content hidden>Shop</sui-button-content>
       <sui-button-content visible>
-        <sui-icon name='shop' />
+        <sui-icon name="shop" />
       </sui-button-content>
     </sui-button>
 
-    <sui-button animated='fade'>
+    <sui-button animated="fade">
       <sui-button-content visible>
         Sign-up for a Pro account
       </sui-button-content>
