@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-progress :percent=percent label="Uploading Files"/>
+    <sui-progress :percent="percent" label="Uploading Files" />
     <sui-button @click.native="decrease">-</sui-button>
     <sui-button @click.native="increase">+</sui-button>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'StandartProgressExample',
+  name: 'StandardProgressExample',
   data() {
     return { percent: 10 };
   },

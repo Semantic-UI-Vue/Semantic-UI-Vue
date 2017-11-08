@@ -2,7 +2,11 @@
   <div>
     <sui-card>
       <sui-card-content>
-        <sui-image src="static/images/avatar/small/elliot.jpg" shape="circular" size="mini" />
+        <sui-image
+          src="static/images/avatar/small/elliot.jpg"
+          shape="circular"
+          size="mini"
+        />
         Elliot
         <sui-card-meta slot="right">14h</sui-card-meta>
       </sui-card-content>
@@ -14,7 +18,12 @@
         <sui-icon name="comment" /> 3 comments
       </sui-card-content>
       <sui-card-content extra>
-        <sui-input placeholder="Add Comment" icon="heart outline" icon-position="left" :transparent="true" />
+        <sui-input
+          placeholder="Add Comment"
+          icon="heart outline"
+          icon-position="left"
+          :transparent="true"
+        />
       </sui-card-content>
     </sui-card>
   </div>

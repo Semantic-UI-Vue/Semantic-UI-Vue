@@ -2,7 +2,7 @@
   <sui-feed>
     <sui-feed-event>
       <sui-feed-label>
-        <sui-image :src=imageSrc />
+        <sui-image :src="imageSrc" />
       </sui-feed-label>
       <sui-feed-content>
         <sui-feed-date>3 days ago</sui-feed-date>

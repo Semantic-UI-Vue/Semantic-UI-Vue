@@ -90,7 +90,10 @@
       <div is="sui-card">
         <div is="sui-card-content">
           <div class="header">
-            <img src="static/images/wireframes/square-image.png" class="ui avatar right spaced image">
+            <img
+              src="static/images/wireframes/square-image.png"
+              class="ui avatar right spaced image"
+            >
             Abbreviated Header
           </div>
           <div class="description">
@@ -210,7 +213,12 @@
           <img src="static/images/wireframes/image.png">
         </div>
         <div class="extra center aligned">
-          <div data-rating="4" class="ui star rating"><i class="icon active"></i><i class="icon active"></i><i class="icon active"></i><i class="icon active"></i></div>
+          <div data-rating="4" class="ui star rating">
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -218,7 +226,12 @@
           <img src="static/images/wireframes/image.png">
         </div>
         <div class="extra center aligned">
-          <div data-rating="2" class="ui star rating"><i class="icon active"></i><i class="icon active"></i><i class="icon"></i><i class="icon"></i></div>
+          <div data-rating="2" class="ui star rating">
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+            <i class="icon"></i>
+            <i class="icon"></i>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -226,7 +239,12 @@
           <img src="static/images/wireframes/image.png">
         </div>
         <div class="extra center aligned">
-          <div data-rating="3" class="ui star rating"><i class="icon active"></i><i class="icon active"></i><i class="icon active"></i><i class="icon"></i></div>
+          <div data-rating="3" class="ui star rating">
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+            <i class="icon"></i>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -234,7 +252,12 @@
           <img src="static/images/wireframes/image.png">
         </div>
         <div class="extra center aligned">
-          <div data-rating="4" class="ui star rating"><i class="icon active"></i><i class="icon active"></i><i class="icon active"></i><i class="icon active"></i></div>
+          <div data-rating="4" class="ui star rating">
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+            <i class="icon active"></i>
+          </div>
         </div>
       </div>
     </div>

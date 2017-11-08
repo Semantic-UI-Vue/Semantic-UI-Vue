@@ -2,7 +2,7 @@
   <div>
     <sui-progress
       state="success"
-      percent=100
+      :percent="100"
       progress
       label="Everything worked, your file is all ready."
     />

@@ -6,11 +6,21 @@
       <h3 is="sui-header">Heading 3</h3>
       <h4 is="sui-header">Heading 4</h4>
       <h5 is="sui-header">Heading 5</h5>
-      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+      <p>
+        Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis
+        natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Nullam id dolor id nibh ultricies vehicula.
+      </p>
     </div>
     <div is="sui-grid-column">
       <h2>Example body text</h2>
-      <p>Nullam quis risus eget <a href="javascript:void 0">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+      <p>
+        Nullam quis risus eget
+        <a href="javascript:void 0">urna mollis ornare</a>
+        vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies
+        vehicula.
+      </p>
       <p><small>This line of text is meant to be treated as fine print.</small></p>
       <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
       <p>The following snippet of text is <em>rendered as italicized text</em>.</p>

@@ -85,7 +85,9 @@ import * as modules from 'src/modules';
 import * as views from 'src/views';
 
 export default {
-  props: ['visible'],
+  props: {
+    visible: Boolean,
+  },
   data() {
     const shouldShow = ([, component]) => (
       !(component.meta && component.meta.parent)

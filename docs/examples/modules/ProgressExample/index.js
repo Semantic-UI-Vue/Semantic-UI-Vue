@@ -1,4 +1,4 @@
-import Standart from './Standart.example';
+import Standard from './Standard.example';
 import Indicating from './Indicating.example';
 import Progress from './Progress.example';
 import Bar from './Bar.example';
@@ -20,7 +20,7 @@ export default [
       {
         title: 'Standard',
         description: 'A standard progress bar',
-        component: Standart,
+        component: Standard,
       },
       {
         title: 'Indicating',

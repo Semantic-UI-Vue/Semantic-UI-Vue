@@ -67,7 +67,13 @@
 
     <form reply>
       <form-text-area />
-      <sui-button content="Add Reply" label-position="left" icon="edit" primary />
+      <sui-button
+        content="Add
+        Reply"
+        label-position="left"
+        icon="edit"
+        primary
+      />
     </form>
   </sui-comment-group>
 </template>

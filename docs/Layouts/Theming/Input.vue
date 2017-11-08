@@ -2,7 +2,13 @@
   <div>
     <div is="sui-grid" :columns="2" stackable>
       <div is="sui-grid-column">
-        <div type="text" is="sui-input" icon-position="left" icon="search" placeholder="Search..." />
+        <div
+          type="text"
+          is="sui-input"
+          icon-position="left"
+          icon="search"
+          placeholder="Search..."
+        />
         <div class="ui action left icon input">
           <i class="search icon"></i>
           <input type="text" placeholder="Search...">
@@ -30,13 +36,35 @@
 
         <div is="sui-divider" />
 
-        <sui-input type="text" placeholder="Search..." icon="search" transparent />
-        <sui-input type="text" placeholder="Search..." icon="search" icon-position="left" transparent />
+        <sui-input
+          type="text"
+          placeholder="Search..."
+          icon="search"
+          transparent
+        />
+        <sui-input
+          type="text"
+          placeholder="Search..."
+          icon="search"
+          icon-position="left"
+          transparent
+        />
 
         <div is="sui-divider" />
 
-        <sui-input type="text" placeholder="Loading..." icon="search" icon-position="left" loading />
-        <sui-input type="text" placeholder="Loading..." icon="search" loading />
+        <sui-input
+          type="text"
+          placeholder="Loading..."
+          icon="search"
+          icon-position="left"
+          loading
+        />
+        <sui-input
+          type="text"
+          placeholder="Loading..."
+          icon="search"
+          loading
+        />
       </div>
       <div is="sui-grid-column">
         <div class="ui right labeled left icon input">

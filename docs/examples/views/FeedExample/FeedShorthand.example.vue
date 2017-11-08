@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-feed :events=events />
+  <sui-feed :events="events" />
 </template>
 
 <script>

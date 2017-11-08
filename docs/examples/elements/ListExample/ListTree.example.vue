@@ -30,7 +30,9 @@
                   <sui-list-icon name="folder" />
                   <sui-list-content>
                     <sui-list-header>my_theme</sui-list-header>
-                    <sui-list-description>Packaged themes are also available in this folder</sui-list-description>
+                    <sui-list-description>
+                      Packaged themes are also available in this folder
+                    </sui-list-description>
                   </sui-list-content>
                 </sui-list-item>
               </sui-list-list>

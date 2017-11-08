@@ -9,7 +9,10 @@
           <span class="stay">1 Month</span>
         </sui-item-meta>
         <sui-item-description>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
         </sui-item-description>
       </sui-item-content>
     </sui-item>
@@ -22,7 +25,10 @@
           <span class="stay">2 Weeks</span>
         </sui-item-meta>
         <sui-item-description>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
         </sui-item-description>
       </sui-item-content>
     </sui-item>
@@ -35,7 +41,10 @@
           <span class="stay">6 Weeks</span>
         </sui-item-meta>
         <sui-item-description>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
         </sui-item-description>
       </sui-item-content>
     </sui-item>

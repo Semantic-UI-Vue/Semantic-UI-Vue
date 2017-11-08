@@ -12,14 +12,29 @@
 
         <div is="sui-divider" />
         <button is="sui-button" icon="heart" />
-        <button is="sui-button" icon="heart" content="Labeled" label-position="left" />
-        <button is="sui-button" icon="heart" content="Labeled" label-position="right" />
+        <button
+          is="sui-button"
+          icon="heart"
+          content="Labeled"
+          label-position="left"
+        />
+        <button
+          is="sui-button"
+          icon="heart"
+          content="Labeled"
+          label-position="right"
+        />
 
         <div is="sui-divider" />
 
         <div is="sui-button-group">
           <button is="sui-button">Combo</button>
-          <div is="sui-dropdown" button floating icon="dropdown">
+          <div
+            is="sui-dropdown"
+            button
+            floating
+            icon="dropdown"
+          >
             <div is="sui-dropdown-menu">
               <div is="sui-dropdown-item">Choice 1</div>
               <div is="sui-dropdown-item">Choice 2</div>
@@ -29,7 +44,8 @@
         </div>
 
         <div class="ui floating search dropdown button">
-          <input class="search" autocomplete="off" tabindex="0"><span class="text">Search Dropdown</span>
+          <input class="search" autocomplete="off" tabindex="0">
+          <span class="text">Search Dropdown</span>
           <div class="menu" tabindex="-1">
             <div class="item">Arabic</div>
             <div class="item">Chinese</div>
@@ -145,7 +161,14 @@
           <button is="sui-button" inverted>Inverted</button>
           <button is="sui-button" inverted color="basic">Basic</button>
           <button is="sui-button" inverted color="blue">Colored</button>
-          <button is="sui-button" inverted color="blue" basic>Basic Colored</button>
+          <button
+            is="sui-button"
+            inverted
+            color="blue"
+            basic
+          >
+            Basic Colored
+          </button>
         </div>
 
       </div>

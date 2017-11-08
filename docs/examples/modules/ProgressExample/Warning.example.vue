@@ -2,7 +2,7 @@
   <div>
     <sui-progress
       state="warning"
-      percent=100
+      :percent="100"
       progress
       label="Your file didn't meet the minimum resolution requirements."
     />

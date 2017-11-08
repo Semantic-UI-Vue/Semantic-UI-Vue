@@ -16,7 +16,13 @@
     <template v-if="sections.length">
       <sui-rail class="docs-rail" position="right">
         <h4 is="sui-header">{{ component }}</h4>
-        <sui-accordion is="sui-menu" vertical following fluid text>
+        <sui-accordion
+          is="sui-menu"
+          vertical
+          following
+          fluid
+          text
+        >
           <sui-menu-item
             :key="section.title"
             v-for="section in sections"
@@ -58,11 +64,12 @@
 
 <script>
 import kebabCase from 'lodash/kebabCase';
-import Example from './Example';
 import * as examples from 'docs/examples';
+import Example from './Example';
 
 export default {
   name: 'ExamplesList',
+  components: { Example },
   props: {
     type: String,
     component: String,
@@ -79,8 +86,6 @@ export default {
       return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/edit/master/docs/examples/${this.type}/${this.component}Example`;
     },
   },
-  components: { Example },
-  methods: { kebabCase },
   mounted() {
     // go to hash
     if (this.$route.hash) {
@@ -88,6 +93,7 @@ export default {
       if (el) el.scrollIntoView();
     }
   },
+  methods: { kebabCase },
 };
 </script>
 

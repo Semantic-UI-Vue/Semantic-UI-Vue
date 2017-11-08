@@ -1,22 +1,23 @@
 <template lang="html">
   <sui-feed>
-    <sui-feed-event :image=image
-      :date=date
-      :summary=summary
-      :extra-text=extraText
+    <sui-feed-event
+      :image="image"
+      :date="date"
+      :summary="summary"
+      :extra-text="extraText"
     />
 
     <sui-feed-event>
-      <sui-feed-label :image=image />
-      <sui-feed-content :date=date :summary=summary :extra-text=extraText />
+      <sui-feed-label :image="image" />
+      <sui-feed-content :date="date" :summary="summary" :extra-text="extraText" />
     </sui-feed-event>
 
     <sui-feed-event>
-      <sui-feed-label :image=image />
+      <sui-feed-label :image="image" />
       <sui-feed-content>
-        <sui-feed-date :content=date />
-        <sui-feed-summary :content=summary />
-        <sui-feed-extra :text=true :content=extraText />
+        <sui-feed-date :content="date" />
+        <sui-feed-summary :content="summary" />
+        <sui-feed-extra :text="true" :content="extraText" />
       </sui-feed-content>
     </sui-feed-event>
   </sui-feed>

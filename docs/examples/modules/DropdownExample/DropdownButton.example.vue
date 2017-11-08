@@ -1,6 +1,12 @@
 <template lang="html">
   <div id="app">
-  <sui-dropdown class="labeled icon" icon="file" :button="true" text="File">
+  <sui-dropdown
+    class="labeled
+    icon"
+    icon="file"
+    :button="true"
+    text="File"
+  >
     <sui-dropdown-menu>
       <sui-dropdown-item>New</sui-dropdown-item>
       <sui-dropdown-item>Open... <span class="description">ctrl + o</span></sui-dropdown-item>

@@ -2,7 +2,7 @@
   <div>
     <sui-progress
       state="error"
-      percent=100
+      :percent="100"
       progress
       label="There was an error."
     />

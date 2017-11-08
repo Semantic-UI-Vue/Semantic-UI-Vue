@@ -13,6 +13,9 @@ module.exports = {
     'airbnb-base',
     'plugin:vue/recommended',
   ],
+  globals: {
+    publicPath: true,
+  },
   // check if imports actually resolve
   'settings': {
     'import/resolver': {

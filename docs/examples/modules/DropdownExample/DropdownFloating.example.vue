@@ -1,6 +1,11 @@
 <template lang="html">
   <div id="app">
-    <sui-dropdown class="teal" text="Save" :button="true" :floating="true" >
+    <sui-dropdown
+      class="teal"
+      text="Save"
+      :button="true"
+      :floating="true"
+    >
       <sui-dropdown-menu>
         <sui-dropdown-item><sui-icon name="edit" />Edit Post</sui-dropdown-item>
         <sui-dropdown-item><sui-icon name="delete" />Remove Post</sui-dropdown-item>

@@ -156,7 +156,7 @@ export default {
         const { code } = Babel.transform(
           parsed.script.content, { presets: ['es2015', 'stage-2'] },
         );
-        const compiled = eval(`const exports = {};${code}`);
+        const compiled = eval(`const exports = {};${code}`); // eslint-disable-line
         compiled.template = parsed.template.content;
 
         return { ...base, ...compiled };
@@ -192,7 +192,7 @@ export default {
         this.$el.appendChild(style);
         style.textContent = content;
         Object.values(style.sheet.cssRules).forEach((rule) => {
-          rule.selectorText = `.${this.exampleClass} ${rule.selectorText}`;
+          rule.selectorText = `.${this.exampleClass} ${rule.selectorText}`; // eslint-disable-line
         });
       });
     },

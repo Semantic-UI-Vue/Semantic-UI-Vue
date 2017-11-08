@@ -1,18 +1,32 @@
 <template>
-  <sui-grid :columns="2" relaxed="very" stackable vertical-align="middle">
+  <sui-grid
+    :columns="2"
+    relaxed="very"
+    stackable
+    vertical-align="middle"
+  >
     <sui-grid-column>
       <div class="ui form">
         <div class="field">
           <label>Username</label>
           <div class="ui left icon input">
-            <input type="text" placeholder="Username" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+            <input
+              type="text"
+              placeholder="Username"
+              autocomplete="off"
+              :style="`background-image: url(${image});`"
+            >
             <i class="user icon"></i>
           </div>
         </div>
         <div class="field">
           <label>Password</label>
           <div class="ui left icon input">
-            <input type="password" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);">
+            <input
+              type="password"
+              autocomplete="off"
+              :style="`background-image: url(${image});`"
+            >
             <i class="lock icon"></i>
           </div>
         </div>
@@ -37,5 +51,10 @@
 <script>
 export default {
   name: 'VerticalDivider2',
+  data() {
+    return {
+      image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=',
+    };
+  },
 };
 </script>

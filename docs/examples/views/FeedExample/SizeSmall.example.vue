@@ -1,6 +1,6 @@
 <template lang="html">
-  <sui-feed size='small'>
-    <h4 is='sui-header'>Followers Activity</h4>
+  <sui-feed size="small">
+    <h4 is="sui-header">Followers Activity</h4>
 
     <sui-feed-event>
       <sui-feed-content>
