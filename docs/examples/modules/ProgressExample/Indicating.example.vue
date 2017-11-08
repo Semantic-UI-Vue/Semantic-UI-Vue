@@ -1,6 +1,11 @@
 <template lang="html">
   <div>
-    <sui-progress state="active" indicating :percent=percent :label="label"/>
+    <sui-progress
+      state="active"
+      indicating
+      :percent="percent"
+      :label="label"
+    />
     <sui-button @click.native="decrease">-</sui-button>
     <sui-button @click.native="increase">+</sui-button>
   </div>
@@ -14,8 +19,8 @@ export default {
   },
   computed: {
     label() {
-      return `${this.percent}% Funded`
-    }
+      return `${this.percent}% Funded`;
+    },
   },
   methods: {
     decrease() {

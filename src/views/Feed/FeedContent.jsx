@@ -6,28 +6,28 @@ export default {
   props: {
     content: {
       type: String,
-      description: 'Shorthand for primary content'
+      description: 'Shorthand for primary content',
     },
     date: {
       type: String,
-      description: 'Shorthand for SuiFeedDate'
+      description: 'Shorthand for SuiFeedDate',
     },
     summary: {
       type: String,
-      description: 'Shorthand for SuiFeedSummary'
+      description: 'Shorthand for SuiFeedSummary',
     },
     extraImages: {
       type: Array,
-      description: 'Shorthand for SuiFeedExtra with images'
+      description: 'Shorthand for SuiFeedExtra with images',
     },
     extraText: {
       type: String,
-      description: 'Shorthand for SuiFeedExtra with text'
+      description: 'Shorthand for SuiFeedExtra with text',
     },
     meta: {
       type: String,
-      description: 'Shorthand for SuiFeedMeta'
-    }
+      description: 'Shorthand for SuiFeedMeta',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -39,14 +39,13 @@ export default {
         )}
       >
         {
-          this.$slots.default ||
-          [
+          this.$slots.default || [
             this.date && <FeedDate content={this.date} />,
             this.content,
             this.summary && <FeedSummary content={this.summary} />,
             this.extraText && <FeedExtra text={true} content={this.extraText} />,
             this.extraImages && <FeedExtra images={this.extraImages} />,
-            this.meta && <FeedMeta content={this.meta} />
+            this.meta && <FeedMeta content={this.meta} />,
           ]
         }
       </ElementType>

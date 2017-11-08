@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     percentString() {
-      return `${this.percent}%`
+      return `${this.percent}%`;
     },
   },
   render() {
@@ -53,7 +53,7 @@ export default {
          class='bar'
          style={{
            width: this.percentString,
-           'transition-duration': '300ms'
+           'transition-duration': '300ms',
          }}>
          {this.progress && <div class='progress'> {this.percentString} </div>}
          </div>

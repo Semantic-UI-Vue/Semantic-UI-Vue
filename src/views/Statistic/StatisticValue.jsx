@@ -3,7 +3,7 @@ import { classes, getChildProps, getElementType } from '../../lib';
 export default {
   name: 'SuiStatisticValue',
   props: {
-    text: Boolean
+    text: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
@@ -12,7 +12,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           this.text && 'text',
-          'value'
+          'value',
         )}
       >
         {this.$slots.default}

@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-progress progress label="Uploading Files" percent=63 />
+    <sui-progress progress label="Uploading Files" percent="63" />
   </div>
 </template>
 

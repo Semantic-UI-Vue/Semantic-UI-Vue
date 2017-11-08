@@ -8,7 +8,9 @@
       </sui-card-content>
       <sui-card-content>
         <sui-header size="tiny">ACTIVITY</sui-header>
-        <!-- sui-feed is not available yet, therefore base semantic ui has been substituted for now -->
+        <!--
+          sui-feed is not available yet, therefore base semantic ui has been substituted for now
+        -->
         <div class="ui small feed">
           <div class="event">
             <div class="content">

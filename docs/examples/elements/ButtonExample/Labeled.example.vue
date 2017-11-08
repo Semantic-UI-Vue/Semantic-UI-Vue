@@ -5,7 +5,14 @@
     </sui-button>
 
     <sui-button content="Like" icon="heart" label-position="left">
-      <a is="sui-label" slot="label" basic pointing="right">2,048</a>
+      <a
+        is="sui-label"
+        slot="label"
+        basic
+        pointing="right"
+      >
+        2,048
+      </a>
     </sui-button>
 
     <sui-button icon="fork" label-position="left">

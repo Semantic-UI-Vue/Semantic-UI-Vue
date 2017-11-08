@@ -6,7 +6,7 @@
           <sui-icon class="right floated" size="small" name="like" />
           <sui-icon class="right floated" size="small" name="star" />
         </sui-card-header>
-        <sui-image src="static/images/wireframes/paragraph.png"></sui-image>
+        <sui-image src="static/images/wireframes/paragraph.png"/>
       </sui-card-content>
       <sui-card-content extra>
         <span>

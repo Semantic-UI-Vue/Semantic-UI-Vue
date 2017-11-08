@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-feed :events=events />
+  <sui-feed :events="events" />
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
         image: 'static/images/avatar/small/joe.jpg',
         meta: '8 Likes',
         summary: 'Joe Henderson posted on his page',
-        extraText: "Ours is a life of constant reruns." +
+        extraText: 'Ours is a life of constant reruns.' +
         " We're always circling back to where we'd we started.",
       }, {
         date: '4 days ago',
@@ -38,8 +38,8 @@ export default {
           'static/images/wireframes/image.png',
           'static/images/wireframes/image-text.png',
         ],
-      }]
-    }
-  }
+      }],
+    };
+  },
 };
 </script>

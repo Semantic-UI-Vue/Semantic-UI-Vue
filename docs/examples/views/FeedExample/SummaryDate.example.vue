@@ -2,7 +2,7 @@
   <sui-feed>
     <sui-feed-event>
       <sui-feed-label>
-        <sui-image src='static/images/avatar/small/jenny.jpg' />
+        <sui-image src="static/images/avatar/small/jenny.jpg" />
       </sui-feed-label>
       <sui-feed-content>
         <sui-feed-summary>

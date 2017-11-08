@@ -1,22 +1,23 @@
 <template lang="html">
-  <sui-embed :autoplay=false
-    :brandedUI=false
-    color='white'
-    :hd=false
-    id='gJscrxxl_Bg'
+  <sui-embed
+    :autoplay="false"
+    :branded-ui="false"
+    color="white"
+    :hd="false"
+    id="gJscrxxl_Bg"
     :iframe="{
       allowFullScreen: true,
       style: {
         padding: '10px',
       },
     }"
-    placeholder='static/images/extras/image-16by9.png'
-    source='youtube'
+    placeholder="static/images/extras/image-16by9.png"
+    source="youtube"
   />
 </template>
 
 <script>
 export default {
-  name: 'IframeExample'
+  name: 'IframeExample',
 };
 </script>

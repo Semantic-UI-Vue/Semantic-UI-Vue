@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'InputExample'
-}
+  name: 'InputExample',
+};
 </script>

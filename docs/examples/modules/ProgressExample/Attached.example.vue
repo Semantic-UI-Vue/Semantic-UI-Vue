@@ -1,8 +1,19 @@
 <template lang="html">
   <div>
     <sui-segment>
-      <sui-progress attached top :percent=percent :label="label"/>
-      <sui-progress attached bottom color="green" :percent=percent :label="label"/>
+      <sui-progress
+        attached
+        top
+        :percent="percent"
+        :label="label"
+      />
+      <sui-progress
+        attached
+        bottom
+        color="green"
+        :percent="percent"
+        :label="label"
+      />
     </sui-segment>
     <sui-button @click.native="decrease">-</sui-button>
     <sui-button @click.native="increase">+</sui-button>
@@ -17,8 +28,8 @@ export default {
   },
   computed: {
     label() {
-      return `${this.percent}% Funded`
-    }
+      return `${this.percent}% Funded`;
+    },
   },
   methods: {
     decrease() {

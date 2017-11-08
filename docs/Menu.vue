@@ -31,7 +31,9 @@
         </a>
         <a is="sui-menu-item" href="https://semantic-ui.com/">
           Semantic UI
-          <i class="icon semantic-ui"><img src="https://semantic-ui.com/favicon.ico" /></i>
+          <i class="icon semantic-ui">
+            <img src="https://semantic-ui.com/favicon.ico">
+          </i>
         </a>
       </sui-menu-menu>
     </sui-menu-item>
@@ -57,49 +59,37 @@
         <span class="press-enter" v-if="!index">Press Enter</span>
       </router-link>
     </sui-menu-menu>
-    <sui-menu-item :key="mod.name" v-if="!search" v-for="mod in modules">
-      <sui-menu-header>{{ mod.name }}</sui-menu-header>
-      <sui-menu-menu>
-        <router-link
-          is="sui-menu-item"
-          :key="comp"
-          :to="getUrl(mod.name, comp)"
-          v-for="comp in mod.components"
-        >
-          {{ comp }}
-        </router-link>
-      </sui-menu-menu>
-    </sui-menu-item>
+    <template v-if="!search">
+      <sui-menu-item :key="mod.name" v-for="mod in modules">
+        <sui-menu-header>{{ mod.name }}</sui-menu-header>
+        <sui-menu-menu>
+          <router-link
+            is="sui-menu-item"
+            :key="comp"
+            :to="getUrl(mod.name, comp)"
+            v-for="comp in mod.components"
+          >
+            {{ comp }}
+          </router-link>
+        </sui-menu-menu>
+      </sui-menu-item>
+    </template>
   </sui-menu>
 </template>
 
 <script>
 import 'semantic-ui-css/semantic.css';
-import * as components from 'src';
 import * as collections from 'src/collections';
 import * as elements from 'src/elements';
 import * as modules from 'src/modules';
 import * as views from 'src/views';
 
 export default {
-  props: ['visible'],
-  computed: {
-    matchingComponents() {
-      return this.modules
-        .map(({ name, components }) => (
-          components
-            .filter(compName => new RegExp(this.search, 'i').test(compName))
-            .map(component => ({
-              content: component,
-              href: this.getUrl(name, component),
-            }))
-        ))
-        .reduce((acc, arr) => acc.concat(arr), [])
-        .sort((a, b) => a.component > b.component)
-    }
+  props: {
+    visible: Boolean,
   },
   data() {
-    const shouldShow = ([,component]) => (
+    const shouldShow = ([, component]) => (
       !(component.meta && component.meta.parent)
     );
 
@@ -126,6 +116,21 @@ export default {
       publicPath,
       version: process.version,
     };
+  },
+  computed: {
+    matchingComponents() {
+      return this.modules
+        .map(({ name, components }) => (
+          components
+            .filter(compName => new RegExp(this.search, 'i').test(compName))
+            .map(component => ({
+              content: component,
+              href: this.getUrl(name, component),
+            }))
+        ))
+        .reduce((acc, arr) => acc.concat(arr), [])
+        .sort((a, b) => a.component > b.component);
+    },
   },
   methods: {
     getUrl(mod, comp) {

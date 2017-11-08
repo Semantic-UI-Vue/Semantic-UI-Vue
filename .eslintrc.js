@@ -13,10 +13,9 @@ module.exports = {
     'airbnb-base',
     'plugin:vue/recommended',
   ],
-  // required to lint *.vue files
-  plugins: [
-    'html'
-  ],
+  globals: {
+    publicPath: true,
+  },
   // check if imports actually resolve
   'settings': {
     'import/resolver': {
@@ -48,7 +47,8 @@ module.exports = {
     'vue/require-render-return': 'error',
     'vue/require-valid-default-prop': 'error',
     'vue/return-in-computed-property': 'error',
-    'vue/html-end-tags': 'error',
+    // TODO: enable when https://github.com/vuejs/eslint-plugin-vue/issues/217 is fixed
+    'vue/html-end-tags': 'off',
     'vue/no-async-in-computed-properties': 'error',
     'vue/no-duplicate-attributes': 'error',
     'vue/no-side-effects-in-computed-properties': 'error',

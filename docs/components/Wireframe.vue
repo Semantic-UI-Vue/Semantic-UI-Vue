@@ -2,13 +2,15 @@
   <img
     :src="`static/images/wireframes/${name}.png`"
     alt="paragraph"
-  />
+  >
 </template>
 
 <script>
 export default {
   name: 'DocsWireframe',
-  props: ['name'],
+  props: {
+    name: String,
+  },
 };
 </script>
 

@@ -9,7 +9,12 @@
           </sui-header-subheader>
         </h1>
 
-        <sui-list class="space" horizontal link size="small">
+        <sui-list
+          class="space"
+          horizontal
+          link
+          size="small"
+        >
           <sui-list-item>
             <sui-header color="grey" size="tiny"  />
           </sui-list-item>
@@ -117,6 +122,11 @@ const getComponentFromName = name => components[capitalize(name)];
 
 export default {
   name: 'Component',
+  components: { ExamplesList },
+  props: {
+    type: String,
+    componentName: String,
+  },
   data() {
     return {
       currentComponent: getComponentFromName(this.componentName),
@@ -130,7 +140,7 @@ export default {
       return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/blob/master/src/${this.type}/${this.title}/${this.title}.jsx`;
     },
     semanticLink() {
-      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`
+      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`;
     },
     component() {
       return getComponentFromName(this.componentName);
@@ -165,7 +175,12 @@ export default {
           }
 
           return { ...value, name, type: value.type.name };
-        })
+        });
+    },
+  },
+  watch: {
+    componentName(v) {
+      this.currentComponent = getComponentFromName(v);
     },
   },
   methods: {
@@ -177,16 +192,6 @@ export default {
       }
     },
   },
-  watch: {
-    componentName(v) {
-      this.currentComponent = getComponentFromName(v);
-    },
-  },
-  props: {
-    type: String,
-    componentName: String,
-  },
-  components: { ExamplesList },
 };
 </script>
 

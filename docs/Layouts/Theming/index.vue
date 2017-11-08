@@ -39,7 +39,7 @@ export default {
     DocsInput,
     DocsCard,
   },
-}
+};
 </script>
 
 <style lang="css">

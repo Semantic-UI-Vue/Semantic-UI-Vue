@@ -1,7 +1,7 @@
 <template lang="html">
   <sui-grid>
-    <template v-for="col in columns">
-      <sui-grid-column />
+    <template v-for="(col, index) in columns">
+      <sui-grid-column :key="index" />
     </template>
   </sui-grid>
 </template>

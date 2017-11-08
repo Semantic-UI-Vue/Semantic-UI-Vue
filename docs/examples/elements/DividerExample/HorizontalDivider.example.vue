@@ -18,5 +18,5 @@
 <script>
 export default {
   name: 'HorizontalDividerExample',
-}
+};
 </script>

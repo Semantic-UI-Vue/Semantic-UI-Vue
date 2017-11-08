@@ -6,8 +6,8 @@ export default {
   props: {
     content: {
       type: String,
-      description: 'Shorthand for primary content'
-    }
+      description: 'Shorthand for primary content',
+    },
   },
   render() {
     const ElementType = getElementType(this);

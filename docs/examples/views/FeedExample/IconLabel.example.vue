@@ -2,7 +2,7 @@
   <sui-feed>
     <sui-feed-event>
       <sui-feed-label>
-        <sui-icon name='pencil' />
+        <sui-icon name="pencil" />
       </sui-feed-label>
       <sui-feed-content>
         <sui-feed-date>Today</sui-feed-date>

@@ -1,6 +1,6 @@
 <template lang="html">
   <sui-statistics-group>
-    <sui-statistic inGroup>
+    <sui-statistic in-group>
       <sui-statistic-value>
         22
       </sui-statistic-value>
@@ -8,7 +8,7 @@
         Saves
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup>
+    <sui-statistic in-group>
       <sui-statistic-value text>
         Three<br>
         Thousand
@@ -17,7 +17,7 @@
         Signups
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup>
+    <sui-statistic in-group>
       <sui-statistic-value>
         <i class="plane icon"></i> 5
       </sui-statistic-value>
@@ -25,7 +25,7 @@
         Flights
       </sui-statistic-label>
     </sui-statistic>
-    <sui-statistic inGroup>
+    <sui-statistic in-group>
       <sui-statistic-value>
         <img src="static/images/avatar/small/joe.jpg" class="ui circular inline image">
         42

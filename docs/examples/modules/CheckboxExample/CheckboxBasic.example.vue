@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-checkbox label="checkbox"></sui-checkbox>
+    <sui-checkbox label="checkbox"/>
   </div>
 </template>
 

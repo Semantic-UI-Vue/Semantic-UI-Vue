@@ -2,7 +2,7 @@
   <sui-feed>
     <sui-feed-event>
       <sui-feed-label>
-        <sui-image :src=imageSrc />
+        <sui-image :src="imageSrc" />
       </sui-feed-label>
       <sui-feed-content>
         <sui-feed-date>3 days ago</sui-feed-date>
@@ -19,8 +19,8 @@ export default {
   name: 'ContentDateExample',
   data() {
     return {
-      imageSrc: 'static/images/avatar/small/jenny.jpg'
-    }
-  }
+      imageSrc: 'static/images/avatar/small/jenny.jpg',
+    };
+  },
 };
 </script>

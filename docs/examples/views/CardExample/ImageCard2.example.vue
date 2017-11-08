@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-card-group :itemsPerRow="3">
+    <sui-card-group :items-per-row="3">
       <sui-card>
         <sui-dimmer-dimmable
           @mouseenter.native="cardOneActive = true"
@@ -47,8 +47,8 @@ export default {
   data() {
     return {
       cardOneActive: false,
-      cardTwoActive: false
-     };
+      cardTwoActive: false,
+    };
   },
 };
 </script>
