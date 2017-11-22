@@ -1,9 +1,10 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixins } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiButton',
+  mixins: [ listenersMixins ],
   props: {
     active: {
       type: Boolean,
@@ -121,6 +122,7 @@ export default {
     const button = (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classList}
         role="button"
       >
