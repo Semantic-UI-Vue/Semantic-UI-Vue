@@ -40,6 +40,9 @@ export default {
               class={classes(active && 'active', selected && 'selected', 'icon')}
               tabindex="0"
               role="radio"
+              onClick={(evt) => {
+                this.$emit('click', evt, { ...this.$props, rating: i });
+              }}
               onMouseover={() => {
                 this.selected = elementValue;
               }}
