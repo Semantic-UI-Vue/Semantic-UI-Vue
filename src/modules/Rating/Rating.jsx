@@ -55,9 +55,9 @@ export default {
               class={classes(active && 'active', selected && 'selected', 'icon')}
               tabindex="0"
               role="radio"
+              onClick={this.onRate}
               onMouseover={this.onMouseover}
               onMouseleave={this.onMouseleave}
-              onRate={this.onRate}
             />
           );
         })}

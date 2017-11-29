@@ -12,7 +12,7 @@ describe('Rating', () => {
     expect(rating.findAll('i[aria-checked=false]').length).to.equal(2);
   });
 
-  it('should pass props new rating value in onClick arguments', () => {
+  it('should pass props new rating value in onRate arguments', () => {
     const rating = mount(Rating, { propsData: { rating: 1, maxRating: 5 } });
     rating.findAll('i').at(4).trigger('rate');
     const emittedEvent = rating.emitted().rate[0];
