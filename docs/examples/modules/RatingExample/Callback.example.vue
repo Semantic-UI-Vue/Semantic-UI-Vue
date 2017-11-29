@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-rating :rating="value" :max-rating="5" @click="handleClick" />
+    <sui-rating :rating="value" :max-rating="5" @rate="handleRate" />
     <pre>{{formattedPayload}}</pre>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     },
   },
   methods: {
-    handleClick(evt, props) {
+    handleRate(evt, props) {
       this.value = props.rating;
       this.payload = props;
     },

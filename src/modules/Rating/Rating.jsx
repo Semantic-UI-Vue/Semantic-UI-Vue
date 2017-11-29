@@ -20,9 +20,9 @@ export default {
     getCurrentValue(evt) {
       return Number(evt.target.getAttribute('aria-posinset'));
     },
-    onClick(evt) {
+    onRate(evt) {
       const rating = this.getCurrentValue(evt);
-      this.$emit('click', evt, { ...this.$props, rating });
+      this.$emit('rate', evt, { ...this.$props, rating });
     },
     onMouseleave() {
       this.selected = 0;
@@ -55,9 +55,9 @@ export default {
               class={classes(active && 'active', selected && 'selected', 'icon')}
               tabindex="0"
               role="radio"
-              onClick={this.onClick}
               onMouseover={this.onMouseover}
               onMouseleave={this.onMouseleave}
+              onRate={this.onRate}
             />
           );
         })}

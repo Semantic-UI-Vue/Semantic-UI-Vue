@@ -14,8 +14,8 @@ describe('Rating', () => {
 
   it('should pass props new rating value in onClick arguments', () => {
     const rating = mount(Rating, { propsData: { rating: 1, maxRating: 5 } });
-    rating.findAll('i').at(4).trigger('click');
-    const emittedEvent = rating.emitted().click[0];
+    rating.findAll('i').at(4).trigger('rate');
+    const emittedEvent = rating.emitted().rate[0];
     expect(emittedEvent[1].rating).to.be.equal(5);
     expect(emittedEvent[1].maxRating).to.be.equal(5);
   });
