@@ -16,6 +16,21 @@ export default {
       selected: 0,
     };
   },
+  methods: {
+    getCurrentValue(evt) {
+      return Number(evt.target.getAttribute('aria-posinset'));
+    },
+    onClick(evt) {
+      const rating = this.getCurrentValue(evt);
+      this.$emit('click', evt, { ...this.$props, rating });
+    },
+    onMouseleave() {
+      this.selected = 0;
+    },
+    onMouseover(evt) {
+      this.selected = this.getCurrentValue(evt);
+    },
+  },
   render() {
     const ElementType = getElementType(this);
     return (
@@ -40,15 +55,9 @@ export default {
               class={classes(active && 'active', selected && 'selected', 'icon')}
               tabindex="0"
               role="radio"
-              onClick={(evt) => {
-                this.$emit('click', evt, { ...this.$props, rating: i });
-              }}
-              onMouseover={() => {
-                this.selected = elementValue;
-              }}
-              onMouseleave={() => {
-                this.selected = 0;
-              }}
+              onClick={this.onClick}
+              onMouseover={this.onMouseover}
+              onMouseleave={this.onMouseleave}
             />
           );
         })}

@@ -16,7 +16,7 @@ describe('Rating', () => {
     const rating = mount(Rating, { propsData: { rating: 1, maxRating: 5 } });
     rating.findAll('i').at(4).trigger('click');
     const emittedEvent = rating.emitted().click[0];
-    expect(emittedEvent[1].rating).to.be.equal(4);
+    expect(emittedEvent[1].rating).to.be.equal(5);
     expect(emittedEvent[1].maxRating).to.be.equal(5);
   });
 });
