@@ -21,8 +21,10 @@
     "build:commonjs": "babel src -d dist/commonjs",
     "build:umd": "node build/build-umd.js",
     "build": "npm run build:docs && npm run build:commonjs && npm run build:umd",
-    "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
+    "test:watch": "npm run unit:watch",
+    "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
+    "unit:watch": "cross-env BABEL_ENV=test karma start test/karma.conf.js",
     "lint": "eslint --ext .js,.vue,.jsx docs src test/specs",
     "report-coverage": "codecov"
   },
