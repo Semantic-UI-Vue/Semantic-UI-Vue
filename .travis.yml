@@ -17,7 +17,7 @@ deploy:
     repo: Semantic-UI-Vue/semantic-ui-vue.github.io
     target_branch: master
     on:
-      tags: true
+      branch: master
   - provider: npm
     skip_cleanup: true
     api_key: $NPM_TOKEN
