@@ -47,8 +47,10 @@ const router = new Router({
 });
 
 router.afterEach((to) => {
-  ga('set', 'page', to.path);
-  ga('send', 'pageview');
+  if (typeof ga === 'function') {
+    ga('set', 'page', to.path);
+    ga('send', 'pageview');
+  }
 
   if (to.hash) {
     const el = document.getElementById(to.hash.substr(1));
