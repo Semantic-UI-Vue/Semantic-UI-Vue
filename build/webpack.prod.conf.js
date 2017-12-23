@@ -120,13 +120,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     ]),
     new PrerenderSpaPlugin(
       path.join(__dirname, '../dist/docs'),
-      ['/', '/layout', '/contributing', '/layouts/theming'],
+      ['/'],
       {
-        captureAfterTime: 10000,
+        captureAfterElementExists: '#docs',
         browser: 'chrome',
-        chromeOptions: {
-          headless: false
-        }
       }
     ),
 

@@ -32,6 +32,7 @@
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4",
+    "prerender-spa-plugin": "mariolamacchia/prerender-spa-plugin#chrome-headless",
     "vue-clickaway": "^2.1.0"
   },
   "devDependencies": {
@@ -92,7 +93,6 @@
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
     "phantomjs-prebuilt": "^2.1.14",
-    "prerender-spa-plugin": "^2.1.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.0",
     "semantic-ui-css": "^2.2.12",
