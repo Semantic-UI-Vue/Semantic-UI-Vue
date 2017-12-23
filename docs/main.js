@@ -10,10 +10,13 @@ Vue.config.productionTip = false;
 Vue.use(SemanticUI);
 Vue.use(docs);
 
-/* eslint-disable no-new */
-new Vue({
+const root = new Vue({
   components: { App },
-  el: '#app',
   router,
   template: '<App/>',
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  root.$mount('#app');
+  document.dispatchEvent(new Event('vue-post-render'));
 });
