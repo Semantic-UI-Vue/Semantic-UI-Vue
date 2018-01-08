@@ -4,7 +4,6 @@
 */
 import { directive as onClickaway } from 'vue-clickaway';
 import { classes } from '../../lib';
-import { eventAnimationEnd } from './animationHelper';
 
 const closed = 'closed';
 const opening = 'opening';
@@ -14,6 +13,10 @@ const changed = 'changed';
 
 function addClass(initial, name) {
   return name === '' ? initial : `${initial} ${name}`;
+}
+
+function eventAnimationEnd() {
+  return window.webkitAnimationEnd ? 'webkitAnimationEnd' : 'animationend';
 }
 
 function withDirections(animation) {
@@ -136,10 +139,10 @@ export default {
     this.modal = modal;
     this.updatePosition();
     this.loading = false;
-    this.$el.addEventListener(eventAnimationEnd, this.onAnimationEnded, false);
+    this.$el.addEventListener(eventAnimationEnd(), this.onAnimationEnded, false);
   },
   beforeDestroy() {
-    this.$el.removeEventListener(eventAnimationEnd, this.onAnimationEnded, false);
+    this.$el.removeEventListener(eventAnimationEnd(), this.onAnimationEnded, false);
   },
   methods: {
     toggle(value) {
