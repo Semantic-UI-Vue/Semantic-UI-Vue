@@ -4,7 +4,7 @@
 */
 import { directive as onClickaway } from 'vue-clickaway';
 import { classes } from '../../lib';
-import { eventAnimationEnd } from './animationHelper';
+import { getEventAnimationEnd } from './animationHelper';
 
 const closed = 'closed';
 const opening = 'opening';
@@ -136,10 +136,10 @@ export default {
     this.modal = modal;
     this.updatePosition();
     this.loading = false;
-    this.$el.addEventListener(eventAnimationEnd, this.onAnimationEnded, false);
+    this.$el.addEventListener(getEventAnimationEnd(), this.onAnimationEnded, false);
   },
   beforeDestroy() {
-    this.$el.removeEventListener(eventAnimationEnd, this.onAnimationEnded, false);
+    this.$el.removeEventListener(getEventAnimationEnd(), this.onAnimationEnded, false);
   },
   methods: {
     toggle(value) {
