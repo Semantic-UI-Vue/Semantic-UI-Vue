@@ -7,8 +7,9 @@ export default {
     event: 'change',
   },
   props: {
-    inputValue: [Array, Boolean],
+    inputValue: [Array, Boolean, Number, String],
     label: String,
+    radio: Boolean,
     toggle: Boolean,
     value: String,
   },
@@ -17,6 +18,10 @@ export default {
       return Array.isArray(this.inputValue);
     },
     isChecked() {
+      if (this.radio && this.value) {
+        return this.inputValue === this.value;
+      }
+
       if (this.isArray) {
         return this.inputValue.includes(this.value);
       }
@@ -28,7 +33,9 @@ export default {
     setValue(e) {
       const checked = e.target.checked;
 
-      if (this.isArray) {
+      if (this.radio && this.value) {
+        this.$emit('change', this.value);
+      } else if (this.isArray) {
         if (checked) {
           this.$emit('change', this.inputValue.concat([this.value]));
         } else {
@@ -44,7 +51,13 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
-        class={classes('ui', !this.label && 'fitted', this.toggle && 'toggle', 'checkbox')}
+        class={classes(
+          'ui',
+          !this.label && 'fitted',
+          this.radio && 'radio',
+          this.toggle && 'toggle',
+          'checkbox',
+        )}
       >
         <input
           ref="input"
