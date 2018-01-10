@@ -1,7 +1,7 @@
 import { classes, getChildProps, getElementType } from '../../lib';
 
 export default {
-  name: 'SuiFormGroup',
+  name: 'SuiFormFields',
   props: {
     inline: Boolean,
     grouped: Boolean,

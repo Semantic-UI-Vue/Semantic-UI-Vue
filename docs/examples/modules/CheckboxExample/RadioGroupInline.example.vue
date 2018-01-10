@@ -1,6 +1,6 @@
 <template lang="html">
   <sui-form>
-    <sui-form-group inline>
+    <sui-form-fields inline>
       <label>How often do you use checkboxes?</label>
       <sui-form-field>
         <sui-checkbox
@@ -34,7 +34,7 @@
           v-model="value"
         />
       </sui-form-field>
-    </sui-form-group>
+    </sui-form-fields>
     Value: {{value}}
   </sui-form>
 </template>
