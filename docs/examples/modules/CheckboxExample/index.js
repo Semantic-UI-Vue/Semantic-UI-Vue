@@ -2,6 +2,7 @@ import CheckboxBasic from './CheckboxBasic.example';
 import CheckboxModel from './CheckboxModel.example';
 import CheckboxToggle from './CheckboxToggle.example';
 import Radio from './Radio.example';
+import RadioGroup from './RadioGroup.example';
 import RadioGroupInline from './RadioGroupInline.example';
 
 export default [
@@ -20,6 +21,9 @@ export default [
       },
       {
         component: RadioGroupInline,
+      },
+      {
+        component: RadioGroup,
       },
       {
         title: 'Checkbox with two way binding',

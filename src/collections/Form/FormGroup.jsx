@@ -4,13 +4,14 @@ export default {
   name: 'SuiFormGroup',
   props: {
     inline: Boolean,
+    grouped: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
     return (
       <ElementType
         {...getChildProps(this)}
-        class={classes(this.inline && 'inline', 'fields')}
+        class={classes(this.inline && 'inline', this.grouped && 'grouped', 'fields')}
       >
         {this.$slots.default}
       </ElementType>
