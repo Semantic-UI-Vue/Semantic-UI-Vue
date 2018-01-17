@@ -1,7 +1,7 @@
 /**
-* Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
-* Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
-*/
+ * Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
+ * Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
+ */
 import { classes } from '../../lib';
 import { getEventAnimationEnd } from './animationHelper';
 
@@ -148,7 +148,7 @@ export default {
       this.$emit(changed, value);
     },
     dimmerClick(event) {
-      if (event.target === event.currentTarget && this.visualState === open) {
+      if (this.closable && event.target === event.currentTarget && this.visualState === open) {
         this.$emit('clickAwayModal');
         this.toggle(false);
       }
@@ -177,7 +177,7 @@ export default {
     return (
       <div
         class={classes('ui dimmer modals page modal-component', this.dimmerClass)}
-        style={containerStyle} onClick={this.closable && this.dimmerClick}
+        style={containerStyle} onClick={this.dimmerClick}
       >
         <div class={classes('ui modal', this.modalClass)} style={contentStyle}>
           {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)}/>}
