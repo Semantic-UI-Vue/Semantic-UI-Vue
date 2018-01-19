@@ -11,7 +11,8 @@
   "main": "dist/commonjs/index.js",
   "files": [
     "src",
-    "dist"
+    "dist",
+    "nuxt"
   ],
   "license": "MIT",
   "scripts": {
