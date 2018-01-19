@@ -1,15 +1,3 @@
-/*
-  Nuxt.js module for bootstrap-vue
-  Usage:
-    - Install semantic-ui-vue and semantic-ui-css packages
-    - Add this into your nuxt.config.js file:
-    {
-      modules: [
-        'semantic-ui-vue/nuxt'
-      ]
-    }
-*/
-
 const { resolve } = require('path');
 
 module.exports = function nuxtSemanticUIVue(moduleOptions) {

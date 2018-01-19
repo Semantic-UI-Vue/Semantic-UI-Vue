@@ -125,3 +125,20 @@ After building the project with Gulp, you'll need to include the minified CSS fi
 ```js
 import '../semantic/dist/semantic.min.css';
 ```
+
+#### Nuxt.js module
+
+You can use semantic-ui-vue as [nuxt.js](https://github.com/nuxt/nuxt.js) module
+
+Usage:
+    
+* Install semantic-ui-vue and semantic-ui-css packages
+* Add this into your nuxt.config.js file:
+```js
+{
+  modules: [
+    'semantic-ui-vue/nuxt', // includes styles from semantic-ui-css
+    ['sematic-ui-vue/nuxt', {css: false}] // if you have your own semantic-ui styles
+  ]
+}
+```
