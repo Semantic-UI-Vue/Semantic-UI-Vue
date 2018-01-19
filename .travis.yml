@@ -23,8 +23,8 @@ deploy:
     skip_cleanup: true
     api_key: $NPM_TOKEN
     email: "mariolamacchia@gmail.com"
-    on:
-      tags: true
+    # on:
+    #   tags: true
 notifications:
   webhooks:
     urls:
