@@ -7,12 +7,18 @@ var webpackConfig = require('../build/webpack.test.conf');
 
 module.exports = function (config) {
   config.set({
-    browsers: ['ChromeHeadless'],
+    browsers: ['ChromeNoSandbox'],
+    customLaunchers: {
+      ChromeNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox'],
+      },
+    },
     frameworks: ['mocha', 'sinon-chai'],
     reporters: ['spec', 'coverage'],
     files: ['./index.js'],
     preprocessors: {
-      './index.js': ['webpack', 'sourcemap']
+      './index.js': ['webpack', 'sourcemap'],
     },
     webpack: webpackConfig,
     webpackMiddleware: {
