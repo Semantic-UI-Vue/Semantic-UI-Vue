@@ -11,6 +11,7 @@ export default {
     warning: Boolean,
     singleLine: Boolean,
     collapsing: Boolean,
+    disabled: Boolean,
   },
   render() {
     const ElementType = getElementType(this, 'td');
@@ -25,6 +26,7 @@ export default {
           this.warning && 'warning',
           this.singleLine && 'single line',
           this.collapsing && 'collapsing',
+          this.disabled && 'disabled',
         )}>
         {this.$slots.default}
       </ElementType>
