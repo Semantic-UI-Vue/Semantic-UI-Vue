@@ -26,6 +26,26 @@
       </div>
 
     </div>
+
+    <div is="sui-segment" basic padded>
+      <h2 is="sui-header">
+        Pages
+        <p is="sui-header-subheader">Starter page templates</p>
+      </h2>
+
+      <div is="sui-card-group" :widths="3" stackable>
+        <router-link to="/layouts/login" is="sui-card">
+          <sui-image src="static/images/layouts/login.png" />
+          <sui-card-content>
+            <sui-card-header>Login Form</sui-card-header>
+            <sui-card-description>
+              A full-screen login form
+            </sui-card-description>
+          </sui-card-content>
+        </router-link>
+      </div>
+
+    </div>
   </div>
 </template>
 

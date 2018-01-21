@@ -6,6 +6,7 @@ import Docs from './Docs';
 import DocsPage from './DocsPage';
 import Layouts from './Layouts';
 import Theming from './Layouts/Theming';
+import Login from './Layouts/Login'
 import QuickStart from '../README.md';
 import Contributing from '../CONTRIBUTING.md';
 
@@ -16,6 +17,10 @@ const router = new Router({
     {
       path: '/layouts/theming',
       component: Theming,
+    },
+    {
+      path: '/layouts/login',
+      component: Login
     },
     {
       path: '/',
