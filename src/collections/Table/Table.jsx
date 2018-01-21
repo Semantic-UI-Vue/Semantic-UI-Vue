@@ -18,6 +18,11 @@ export default {
     definition: Boolean,
     striped: Boolean,
     textAlign: Enum(['left', 'right']),
+    fixed: Boolean,
+    unstackable: Boolean,
+    stackable: Boolean,
+    selectable: Boolean,
+    inverted: Boolean,
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -36,6 +41,11 @@ export default {
           this.definition && 'definition',
           this.compact && 'compact',
           this.striped && 'striped',
+          this.fixed && 'fixed',
+          this.unstackable && 'unstackable',
+          this.stackable && 'stackable',
+          this.selectable && 'selectable',
+          this.inverted && 'inverted',
           'table',
         )}
       >
