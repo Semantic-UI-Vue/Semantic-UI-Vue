@@ -7,7 +7,7 @@ export default {
     negative: Boolean,
     positive: Boolean,
     selected: Boolean,
-    textAlign: Enum(['left', 'right']),
+    textAlign: Enum(['left', 'right', 'center']),
     warning: Boolean,
   },
   render() {
