@@ -9,6 +9,8 @@ export default {
     selected: Boolean,
     textAlign: Enum(['left', 'right']),
     warning: Boolean,
+    singleLine: Boolean,
+    collapsing: Boolean,
   },
   render() {
     const ElementType = getElementType(this, 'td');
@@ -21,6 +23,8 @@ export default {
           this.negative && 'negative',
           this.positive && 'positive',
           this.warning && 'warning',
+          this.singleLine && 'single line',
+          this.collapsing && 'collapsing',
         )}>
         {this.$slots.default}
       </ElementType>
