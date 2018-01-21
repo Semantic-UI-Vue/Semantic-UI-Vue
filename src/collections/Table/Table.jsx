@@ -23,6 +23,7 @@ export default {
     stackable: Boolean,
     selectable: Boolean,
     inverted: Boolean,
+    color: Enum.Color,
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -46,6 +47,7 @@ export default {
           this.stackable && 'stackable',
           this.selectable && 'selectable',
           this.inverted && 'inverted',
+          this.color,
           'table',
         )}
       >
