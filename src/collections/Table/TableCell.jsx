@@ -12,6 +12,7 @@ export default {
     singleLine: Boolean,
     collapsing: Boolean,
     disabled: Boolean,
+    selectable: Boolean,
   },
   render() {
     const ElementType = getElementType(this, 'td');
@@ -27,6 +28,7 @@ export default {
           this.singleLine && 'single line',
           this.collapsing && 'collapsing',
           this.disabled && 'disabled',
+          this.selectable && 'selectable',
         )}>
         {this.$slots.default}
       </ElementType>
