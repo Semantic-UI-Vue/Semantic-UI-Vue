@@ -24,6 +24,7 @@ export default {
     selectable: Boolean,
     inverted: Boolean,
     color: Enum.Color,
+    size: Enum.Size,
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -48,6 +49,7 @@ export default {
           this.selectable && 'selectable',
           this.inverted && 'inverted',
           this.color,
+          this.size,
           'table',
         )}
       >
