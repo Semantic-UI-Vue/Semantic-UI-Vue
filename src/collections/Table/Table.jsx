@@ -25,7 +25,7 @@ export default {
     selectable: Boolean,
     inverted: Boolean,
     color: Enum.Color,
-    size: Enum.Size,
+    size: Enum(['small', 'large']),
   },
   render() {
     const ElementType = getElementType(this, 'table');
