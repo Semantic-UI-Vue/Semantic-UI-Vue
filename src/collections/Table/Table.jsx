@@ -17,7 +17,7 @@ export default {
     }),
     definition: Boolean,
     striped: Boolean,
-    textAlign: Enum(['left', 'right']),
+    textAlign: Enum(['left', 'right', 'center']),
     fixed: Boolean,
     unstackable: Boolean,
     stackable: Boolean,
