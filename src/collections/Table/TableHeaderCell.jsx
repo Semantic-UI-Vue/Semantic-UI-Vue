@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, num } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -13,6 +13,7 @@ export default {
     collapsing: Boolean,
     disabled: Boolean,
     selectable: Boolean,
+    width: Number,
   },
   render() {
     const ElementType = getElementType(this, 'th');
@@ -29,6 +30,8 @@ export default {
           this.collapsing && 'collapsing',
           this.disabled && 'disabled',
           this.selectable && 'selectable',
+          num(this.width),
+          this.width && 'wide',
         )}>
         {this.$slots.default}
       </ElementType>
