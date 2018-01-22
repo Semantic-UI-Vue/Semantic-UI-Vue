@@ -101,7 +101,15 @@
                   <code v-if="prop.default">{{prop.default}}</code>
                 </sui-table-cell>
                 <sui-table-cell>{{prop.type}}</sui-table-cell>
-                <sui-table-cell>{{prop.choices | parseChoices}}</sui-table-cell>
+                <sui-table-cell>
+                  <template
+                          v-for="(choice, index) in prop.choices">
+                    <code :key="component.name + 'Prop' + index">
+                      {{ choice !== '' ? choice : 'true' }}
+                    </code>
+                    <template v-if="index < prop.choices.length - 1">,</template>
+                  </template>
+                </sui-table-cell>
                 <sui-table-cell>{{prop.description}}</sui-table-cell>
               </sui-table-row>
             </sui-table-body>
