@@ -89,7 +89,6 @@
                 <sui-table-header-cell>Name</sui-table-header-cell>
                 <sui-table-header-cell>Default</sui-table-header-cell>
                 <sui-table-header-cell>Type</sui-table-header-cell>
-                <sui-table-header-cell>Values</sui-table-header-cell>
                 <sui-table-header-cell>Description</sui-table-header-cell>
               </sui-table-row>
             </sui-table-header>
@@ -102,15 +101,17 @@
                 </sui-table-cell>
                 <sui-table-cell>{{prop.type}}</sui-table-cell>
                 <sui-table-cell>
-                  <template
-                          v-for="(choice, index) in prop.choices">
-                    <code :key="component.name + 'Prop' + index">
+                  {{prop.description}}
+                  <div v-if="prop.choices">
+                    <strong>Enums: </strong>
+                    <code
+                      class="enum"
+                      v-for="(choice, index) in prop.choices"
+                      :key="component.name + 'Prop' + index">
                       {{ choice !== '' ? choice : 'true' }}
                     </code>
-                    <template v-if="index < prop.choices.length - 1">,</template>
-                  </template>
+                  </div>
                 </sui-table-cell>
-                <sui-table-cell>{{prop.description}}</sui-table-cell>
               </sui-table-row>
             </sui-table-body>
           </sui-table>
@@ -211,6 +212,10 @@ export default {
 </script>
 
 <style scoped>
+.enum {
+  margin-right: 0.2em;
+}
+
 .space {
   display: block!important;
 }
