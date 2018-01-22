@@ -89,6 +89,7 @@
                 <sui-table-header-cell>Name</sui-table-header-cell>
                 <sui-table-header-cell>Default</sui-table-header-cell>
                 <sui-table-header-cell>Type</sui-table-header-cell>
+                <sui-table-header-cell>Values</sui-table-header-cell>
                 <sui-table-header-cell>Description</sui-table-header-cell>
               </sui-table-row>
             </sui-table-header>
@@ -100,6 +101,7 @@
                   <code v-if="prop.default">{{prop.default}}</code>
                 </sui-table-cell>
                 <sui-table-cell>{{prop.type}}</sui-table-cell>
+                <sui-table-cell>{{prop.choices | parseChoices}}</sui-table-cell>
                 <sui-table-cell>{{prop.description}}</sui-table-cell>
               </sui-table-row>
             </sui-table-body>
@@ -123,6 +125,11 @@ const getComponentFromName = name => components[capitalize(name)];
 export default {
   name: 'Component',
   components: { ExamplesList },
+  filters: {
+    parseChoices(choices) {
+      return choices && choices.map(elem => (elem !== '' ? elem : 'true')).join(', ');
+    },
+  },
   props: {
     type: String,
     componentName: String,
