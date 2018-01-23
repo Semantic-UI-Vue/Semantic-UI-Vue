@@ -12,7 +12,6 @@ addons:
 deploy:
   - provider: pages
     skip-cleanup: true
-    keep-history: true
     github_token: $GITHUB_TOKEN
     local_dir: "${TRAVIS_BUILD_DIR}/dist/docs"
     repo: Semantic-UI-Vue/semantic-ui-vue.github.io
@@ -21,7 +20,6 @@ deploy:
       branch: master
   - provider: npm
     skip-cleanup: true
-    keep-history: true
     api_key: $NPM_TOKEN
     email: "mariolamacchia@gmail.com"
     on:
