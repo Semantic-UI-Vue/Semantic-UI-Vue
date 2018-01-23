@@ -10,6 +10,7 @@ export default {
       description: 'A table can reduce its complexity to increase readability.',
     }),
     celled: Boolean,
+    padded: Boolean,
     collapsing: Boolean,
     compact: Enum(['very'], {
       type: Boolean,
@@ -17,7 +18,14 @@ export default {
     }),
     definition: Boolean,
     striped: Boolean,
-    textAlign: Enum(['left', 'right']),
+    textAlign: Enum(['left', 'right', 'center']),
+    fixed: Boolean,
+    unstackable: Boolean,
+    stackable: Boolean,
+    selectable: Boolean,
+    inverted: Boolean,
+    color: Enum.Color,
+    size: Enum(['small', 'large']),
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -31,11 +39,19 @@ export default {
           this.basic !== true && this.basic,
           this.basic && 'basic',
           this.celled && 'celled',
+          this.padded && 'padded',
           this.collapsing && 'collapsing',
           this.compact !== true && this.compact,
           this.definition && 'definition',
           this.compact && 'compact',
           this.striped && 'striped',
+          this.fixed && 'fixed',
+          this.unstackable && 'unstackable',
+          this.stackable && 'stackable',
+          this.selectable && 'selectable',
+          this.inverted && 'inverted',
+          this.color,
+          this.size,
           'table',
         )}
       >

@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, num } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -7,8 +7,13 @@ export default {
     negative: Boolean,
     positive: Boolean,
     selected: Boolean,
-    textAlign: Enum(['left', 'right']),
+    textAlign: Enum(['left', 'right', 'center']),
     warning: Boolean,
+    singleLine: Boolean,
+    collapsing: Boolean,
+    disabled: Boolean,
+    selectable: Boolean,
+    width: Number,
   },
   render() {
     const ElementType = getElementType(this, 'th');
@@ -21,6 +26,12 @@ export default {
           this.negative && 'negative',
           this.positive && 'positive',
           this.warning && 'warning',
+          this.singleLine && 'single line',
+          this.collapsing && 'collapsing',
+          this.disabled && 'disabled',
+          this.selectable && 'selectable',
+          num(this.width),
+          this.width && 'wide',
         )}>
         {this.$slots.default}
       </ElementType>
