@@ -18,7 +18,6 @@ deploy:
     target_branch: master
     on:
       branch: master
-      tags: true
   - provider: npm
     skip_cleanup: true
     api_key: $NPM_TOKEN
