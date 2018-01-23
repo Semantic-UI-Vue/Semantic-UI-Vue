@@ -100,7 +100,17 @@
                   <code v-if="prop.default">{{prop.default}}</code>
                 </sui-table-cell>
                 <sui-table-cell>{{prop.type}}</sui-table-cell>
-                <sui-table-cell>{{prop.description}}</sui-table-cell>
+                <sui-table-cell>
+                  {{prop.description}}
+                  <div v-if="prop.choices">
+                    <strong>Enums: </strong>
+                    <code
+                      class="enum"
+                      v-for="(choice, index) in prop.choices"
+                      :key="component.name + 'Prop' + index"
+                    >{{ choice !== '' ? choice : 'true' }}</code>
+                  </div>
+                </sui-table-cell>
               </sui-table-row>
             </sui-table-body>
           </sui-table>
@@ -123,6 +133,11 @@ const getComponentFromName = name => components[capitalize(name)];
 export default {
   name: 'Component',
   components: { ExamplesList },
+  filters: {
+    parseChoices(choices) {
+      return choices && choices.map(elem => (elem !== '' ? elem : 'true')).join(', ');
+    },
+  },
   props: {
     type: String,
     componentName: String,
@@ -196,6 +211,10 @@ export default {
 </script>
 
 <style scoped>
+.enum {
+  margin-right: 0.2em;
+}
+
 .space {
   display: block!important;
 }
