@@ -1,8 +1,7 @@
 /**
-* Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
-* Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
-*/
-import { directive as onClickaway } from 'vue-clickaway';
+ * Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
+ * Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
+ */
 import { classes } from '../../lib';
 import { getEventAnimationEnd } from './animationHelper';
 
@@ -53,7 +52,6 @@ export default {
     prop: 'open',
     event: changed,
   },
-  directives: { onClickaway },
   props: {
     animation: {
       type: String,
@@ -91,6 +89,10 @@ export default {
       validator(value) {
         return modalVariations.indexOf(value) !== -1;
       },
+    },
+    closable: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
@@ -145,8 +147,8 @@ export default {
     toggle(value) {
       this.$emit(changed, value);
     },
-    clickAway() {
-      if (this.visualState === open) {
+    dimmerClick(event) {
+      if (this.closable && event.target === event.currentTarget && this.visualState === open) {
         this.$emit('clickAwayModal');
         this.toggle(false);
       }
@@ -172,19 +174,13 @@ export default {
       animationDuration: `${this.animationDuration}ms`,
     };
 
-    const clickAway = {
-      directives: [
-        { name: 'on-clickaway', value: this.clickAway },
-      ],
-    };
-
     return (
       <div
         class={classes('ui dimmer modals page modal-component', this.dimmerClass)}
-        style={containerStyle}
+        style={containerStyle} onClick={this.dimmerClick}
       >
-        <div class={classes('ui modal', this.modalClass)} style={contentStyle} {...clickAway}>
-          {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)} />}
+        <div class={classes('ui modal', this.modalClass)} style={contentStyle}>
+          {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)}/>}
 
           {this.$slots.default}
         </div>
