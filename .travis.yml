@@ -12,7 +12,7 @@ addons:
   chrome: stable
 deploy:
   - provider: script
-    script: 'ls ${TRAVIS_BUILD_DIR}/dist/docs'
+    script: 'ls /home/travis/build/Semantic-UI-Vue/Semantic-UI-Vue/home/travis/build/Semantic-UI-Vue/Semantic-UI-Vue/dist/docs'
     skip_cleanup: true
   - provider: pages
     skip_cleanup: true
@@ -23,7 +23,7 @@ deploy:
     on:
       branch: master
   - provider: script
-    script: 'ls ${TRAVIS_BUILD_DIR}/dist/docs'
+    script: 'ls /home/travis/build/Semantic-UI-Vue/Semantic-UI-Vue/home/travis/build/Semantic-UI-Vue/Semantic-UI-Vue/dist/docs'
     skip_cleanup: true
   - provider: npm
     skip_cleanup: true
