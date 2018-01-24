@@ -11,6 +11,8 @@ script:
 addons:
   chrome: stable
 deploy:
+  - provider: script
+    script: 'ls ${TRAVIS_BUILD_DIR}/dist/docs'
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
@@ -19,6 +21,8 @@ deploy:
     target_branch: master
     on:
       branch: master
+  - provider: script
+    script: 'ls ${TRAVIS_BUILD_DIR}/dist/docs'
   - provider: npm
     skip_cleanup: true
     api_key: $NPM_TOKEN
