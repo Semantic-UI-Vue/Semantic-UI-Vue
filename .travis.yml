@@ -13,6 +13,7 @@ addons:
 deploy:
   - provider: script
     script: 'ls ${TRAVIS_BUILD_DIR}/dist/docs'
+    skip_cleanup: true
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
@@ -23,6 +24,7 @@ deploy:
       branch: master
   - provider: script
     script: 'ls ${TRAVIS_BUILD_DIR}/dist/docs'
+    skip_cleanup: true
   - provider: npm
     skip_cleanup: true
     api_key: $NPM_TOKEN
