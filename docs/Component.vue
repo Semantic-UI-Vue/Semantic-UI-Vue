@@ -133,11 +133,6 @@ const getComponentFromName = name => components[capitalize(name)];
 export default {
   name: 'Component',
   components: { ExamplesList },
-  filters: {
-    parseChoices(choices) {
-      return choices && choices.map(elem => (elem !== '' ? elem : 'true')).join(', ');
-    },
-  },
   props: {
     type: String,
     componentName: String,
