@@ -7,12 +7,11 @@ script:
   - npm test
   - npm run report-coverage
   - npm run build
+  - ls dist
 addons:
   chrome: stable
 deploy:
   - provider: pages
-    skip-cleanup: true
-    skip_cleanup: true
     github_token: $GITHUB_TOKEN
     local_dir: "${TRAVIS_BUILD_DIR}/dist/docs"
     repo: Semantic-UI-Vue/semantic-ui-vue.github.io
@@ -20,8 +19,6 @@ deploy:
     on:
       branch: master
   - provider: npm
-    skip-cleanup: true
-    skip_cleanup: true
     api_key: $NPM_TOKEN
     email: "mariolamacchia@gmail.com"
     on:
