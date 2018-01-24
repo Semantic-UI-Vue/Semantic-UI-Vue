@@ -11,7 +11,7 @@ addons:
   chrome: stable
 deploy:
   - provider: pages
-    skip_cleanup: true
+    skip-cleanup: true
     github_token: $GITHUB_TOKEN
     local_dir: "${TRAVIS_BUILD_DIR}/dist/docs"
     repo: Semantic-UI-Vue/semantic-ui-vue.github.io
@@ -19,7 +19,7 @@ deploy:
     on:
       branch: master
   - provider: npm
-    skip_cleanup: true
+    skip-cleanup: true
     api_key: $NPM_TOKEN
     email: "mariolamacchia@gmail.com"
     on:
