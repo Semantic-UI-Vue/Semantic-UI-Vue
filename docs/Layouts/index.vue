@@ -3,7 +3,7 @@
     <div is="sui-segment" basic padded>
       <h1 is="sui-header">
         Layouts
-        <p is="sui-header-subheader">Examples of using Semantic UI React</p>
+        <p is="sui-header-subheader">Examples of using Semantic UI Vue</p>
       </h1>
     </div>
 
