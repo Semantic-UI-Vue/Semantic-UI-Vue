@@ -48,7 +48,7 @@ export default {
           this.striped && 'striped',
           this.fixed && 'fixed',
           this.unstackable && 'unstackable',
-          this.stackable && 'stackable',
+          this.stackable && 'tablet stackable',
           this.selectable && 'selectable',
           this.inverted && 'inverted',
           this.color,
