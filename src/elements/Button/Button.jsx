@@ -100,6 +100,8 @@ export default {
       'ui',
       this.active && 'active',
       this.attached && 'attached',
+      this.animated,
+      this.animated && 'animated',
       this.basic && 'basic',
       this.circular && 'circular',
       this.className,
