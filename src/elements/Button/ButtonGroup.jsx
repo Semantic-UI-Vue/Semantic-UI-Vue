@@ -9,6 +9,7 @@ export default {
     vertical: Boolean,
     labeled: Boolean,
     icons: Boolean,
+    color: Enum.Color,
   },
   render() {
     const ElementType = getElementType(this);
@@ -23,6 +24,7 @@ export default {
           this.vertical && 'vertical',
           this.labeled && 'labeled',
           this.icons && 'icon',
+          this.color,
           'buttons',
         )}
       >
