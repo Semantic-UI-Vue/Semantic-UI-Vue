@@ -85,7 +85,7 @@ export default {
       type: [Number, String],
       description: 'A button can receive focus.',
     },
-    toggle: {
+    toggle: { // TODO: Add props and functional for toggle buttons
       type: Boolean,
       description: 'A button can be formatted to toggle on and off.',
     },
