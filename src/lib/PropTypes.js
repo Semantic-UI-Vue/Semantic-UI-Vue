@@ -29,3 +29,4 @@ Enum.Color = Enum([
   'violet', 'purple', 'pink', 'brown', 'grey', 'black',
 ]);
 Enum.VerticalAlign = Enum(['top', 'middle', 'bottom']);
+Enum.Social = Enum(['facebook', 'twitter', 'google', 'vk', 'instagram', 'linkedin', 'youtube']);
