@@ -26,6 +26,7 @@ export default {
     inverted: Boolean,
     color: Enum.Color,
     size: Enum(['small', 'large']),
+    singleLine: Boolean,
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -52,6 +53,7 @@ export default {
           this.inverted && 'inverted',
           this.color,
           this.size,
+          this.singleLine && 'single line',
           'table',
         )}
       >
