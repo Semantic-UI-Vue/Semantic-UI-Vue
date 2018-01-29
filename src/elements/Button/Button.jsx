@@ -90,6 +90,7 @@ export default {
       type: Boolean,
       description: 'A button can be formatted to toggle on and off.',
     },
+    social: Enum.Social,
   },
   render() {
     const ElementType = getElementType(this, 'button');
@@ -120,6 +121,7 @@ export default {
       this.positive && 'positive',
       this.primary && 'primary',
       this.secondary && 'secondary',
+      this.social,
       this.size,
       'button',
     );
@@ -130,7 +132,7 @@ export default {
         class={classList}
         role="button"
       >
-        {this.icon && <Icon name={this.icon} />}
+        {this.icon && <Icon name={this.icon}/>}
         {this.content || this.$slots.default}
       </ElementType>
     );
