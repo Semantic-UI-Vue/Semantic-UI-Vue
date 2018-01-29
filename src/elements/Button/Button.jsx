@@ -99,7 +99,7 @@ export default {
     const classList = classes(
       'ui',
       this.active && 'active',
-      this.attached && 'attached',
+      this.attached && `${this.attached} attached`,
       this.animated,
       this.animated && 'animated',
       this.basic && 'basic',
