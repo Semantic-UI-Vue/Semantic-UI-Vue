@@ -14,6 +14,7 @@ export default {
     disabled: Boolean,
     selectable: Boolean,
     width: Number,
+    state: Enum.State,
   },
   render() {
     const ElementType = getElementType(this, 'td');
@@ -32,6 +33,7 @@ export default {
           this.selectable && 'selectable',
           num(this.width),
           this.width && 'wide',
+          this.state,
         )}>
         {this.$slots.default}
       </ElementType>
