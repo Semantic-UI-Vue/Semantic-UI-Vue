@@ -56,6 +56,3 @@ export default {
   name: 'TableRatingExample',
 };
 </script>
-
-<style lang="css">
-</style>

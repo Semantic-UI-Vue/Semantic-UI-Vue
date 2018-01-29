@@ -14,6 +14,7 @@ export default {
     disabled: Boolean,
     selectable: Boolean,
     width: Number,
+    verticalAlign: Enum.VerticalAlign,
   },
   render() {
     const ElementType = getElementType(this, 'th');
@@ -22,7 +23,8 @@ export default {
         {...getChildProps(this)}
         class={classes(
           this.textAlign,
-          this.textAlign && 'aligned',
+          this.verticalAlign,
+          (this.textAlign || this.verticalAlign) && 'aligned',
           this.negative && 'negative',
           this.positive && 'positive',
           this.warning && 'warning',

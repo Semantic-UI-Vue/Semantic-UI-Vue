@@ -9,6 +9,8 @@ export default {
     selected: Boolean,
     textAlign: Enum(['left', 'right', 'center']),
     warning: Boolean,
+    state: Enum.State,
+    verticalAlign: Enum.VerticalAlign,
   },
   render() {
     const ElementType = getElementType(this, 'tr');
@@ -17,11 +19,13 @@ export default {
         {...getChildProps(this)}
         class={classes(
           this.textAlign,
-          this.textAlign && 'aligned',
+          this.verticalAlign,
+          (this.textAlign || this.verticalAlign) && 'aligned',
           this.negative && 'negative',
           this.positive && 'positive',
           this.selected && 'selected',
           this.warning && 'warning',
+          this.state,
         )}>
         {this.$slots.default}
       </ElementType>

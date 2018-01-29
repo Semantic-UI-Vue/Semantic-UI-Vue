@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { num, classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -10,7 +10,9 @@ export default {
       description: 'A table can reduce its complexity to increase readability.',
     }),
     celled: Boolean,
-    padded: Boolean,
+    padded: Enum(['very'], {
+      type: Boolean,
+    }),
     collapsing: Boolean,
     compact: Enum(['very'], {
       type: Boolean,
@@ -26,6 +28,8 @@ export default {
     inverted: Boolean,
     color: Enum.Color,
     size: Enum(['small', 'large']),
+    singleLine: Boolean,
+    columns: Number,
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -39,6 +43,7 @@ export default {
           this.basic !== true && this.basic,
           this.basic && 'basic',
           this.celled && 'celled',
+          this.padded !== true && this.padded,
           this.padded && 'padded',
           this.collapsing && 'collapsing',
           this.compact !== true && this.compact,
@@ -47,11 +52,14 @@ export default {
           this.striped && 'striped',
           this.fixed && 'fixed',
           this.unstackable && 'unstackable',
-          this.stackable && 'stackable',
+          this.stackable && 'tablet stackable',
           this.selectable && 'selectable',
           this.inverted && 'inverted',
           this.color,
           this.size,
+          this.singleLine && 'single line',
+          num(this.columns),
+          this.columns && 'column',
           'table',
         )}
       >
