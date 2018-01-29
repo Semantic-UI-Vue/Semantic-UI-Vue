@@ -11,6 +11,7 @@ export default {
     icons: Boolean,
     color: Enum.Color,
     basic: Boolean,
+    size: Enum.Size,
   },
   render() {
     const ElementType = getElementType(this);
@@ -19,6 +20,8 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.size,
+          this.color,
           this.attached,
           this.attached && 'attached',
           num(this.widths),
@@ -26,7 +29,6 @@ export default {
           this.labeled && 'labeled',
           this.icons && 'icon',
           this.basic && 'basic',
-          this.color,
           'buttons',
         )}
       >
