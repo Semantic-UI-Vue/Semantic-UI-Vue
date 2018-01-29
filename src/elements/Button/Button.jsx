@@ -41,10 +41,9 @@ export default {
       type: Boolean,
       description: 'A button can show it is currently unable to be interacted with.',
     },
-    floated: {
-      type: String,
+    floated: Enum(['left', 'right'], {
       description: 'A button can be aligned to the left or right of its container.',
-    },
+    }),
     fluid: {
       type: Boolean,
       description: 'A button can take the width of its container.',
