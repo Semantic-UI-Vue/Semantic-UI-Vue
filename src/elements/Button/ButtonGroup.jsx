@@ -6,6 +6,7 @@ export default {
   props: {
     attached: Enum(['top', 'bottom']),
     widths: Number,
+    vertical: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
@@ -17,6 +18,7 @@ export default {
           this.attached,
           this.attached && 'attached',
           num(this.widths),
+          this.vertical && 'vertical',
           'buttons',
         )}
       >
