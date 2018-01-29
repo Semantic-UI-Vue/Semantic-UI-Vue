@@ -23,6 +23,6 @@
 
 <script>
 export default {
-  name: 'LabeledExample',
+  name: 'ButtonLabeledExample',
 };
 </script>

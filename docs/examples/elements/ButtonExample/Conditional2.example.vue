@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'Conditional2Example',
+  name: 'ButtonsConditionalCustomTextExample',
 };
 </script>
