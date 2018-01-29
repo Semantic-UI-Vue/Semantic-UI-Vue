@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { num, classes, getChildProps, getElementType } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -27,6 +27,7 @@ export default {
     color: Enum.Color,
     size: Enum(['small', 'large']),
     singleLine: Boolean,
+    columns: Number,
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -54,6 +55,8 @@ export default {
           this.color,
           this.size,
           this.singleLine && 'single line',
+          num(this.columns),
+          this.columns && 'column',
           'table',
         )}
       >
