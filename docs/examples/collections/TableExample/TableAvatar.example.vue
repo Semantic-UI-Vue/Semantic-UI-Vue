@@ -73,6 +73,3 @@ export default {
   name: 'TableAvatarExample',
 };
 </script>
-
-<style lang="css">
-</style>

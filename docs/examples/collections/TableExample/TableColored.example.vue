@@ -260,6 +260,3 @@ export default {
   name: 'TableColoredExample',
 };
 </script>
-
-<style lang="css">
-</style>

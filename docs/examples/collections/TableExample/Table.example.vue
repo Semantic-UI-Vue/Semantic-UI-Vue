@@ -54,6 +54,3 @@ export default {
   name: 'TableExample',
 };
 </script>
-
-<style lang="css">
-</style>

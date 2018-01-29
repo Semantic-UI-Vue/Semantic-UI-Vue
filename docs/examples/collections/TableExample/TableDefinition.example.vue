@@ -7,7 +7,6 @@
         <sui-table-header-cell>Description</sui-table-header-cell>
       </sui-table-row>
     </sui-table-header>
-
     <sui-table-body>
       <sui-table-row>
         <sui-table-cell>reset rating</sui-table-cell>
