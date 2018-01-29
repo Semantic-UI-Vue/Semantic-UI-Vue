@@ -7,6 +7,8 @@ export default {
     attached: Enum(['top', 'bottom']),
     widths: Number,
     vertical: Boolean,
+    labeled: Boolean,
+    icons: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
@@ -19,6 +21,8 @@ export default {
           this.attached && 'attached',
           num(this.widths),
           this.vertical && 'vertical',
+          this.labeled && 'labeled',
+          this.icons && 'icon',
           'buttons',
         )}
       >
