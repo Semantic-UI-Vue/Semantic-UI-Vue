@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-button :animated="true">
+    <sui-button animated>
       <sui-button-content visible>Next</sui-button-content>
       <sui-button-content hidden>
         <sui-icon name="right arrow" />
