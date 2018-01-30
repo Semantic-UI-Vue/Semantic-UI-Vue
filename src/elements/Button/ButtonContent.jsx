@@ -15,8 +15,6 @@ export default {
   render() {
     const ElementType = getElementType(this, 'div');
 
-    const label = this.$slots.label;
-
     const classList = classes(
       this.visible && 'visible',
       this.hidden && 'hidden',
