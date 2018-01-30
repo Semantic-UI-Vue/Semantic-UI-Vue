@@ -1,9 +1,9 @@
 <template lang="html">
   <div>
-    <sui-button animated>
+    <sui-button :animated="true">
       <sui-button-content visible>Next</sui-button-content>
       <sui-button-content hidden>
-        <sui-icon name="right-arrow" />
+        <sui-icon name="right arrow" />
       </sui-button-content>
     </sui-button>
 
@@ -27,6 +27,6 @@
 
 <script>
 export default {
-  name: 'AnimatedExample',
+  name: 'ButtonAnimatedExample',
 };
 </script>

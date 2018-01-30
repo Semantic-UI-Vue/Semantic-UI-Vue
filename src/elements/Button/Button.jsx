@@ -41,10 +41,9 @@ export default {
       type: Boolean,
       description: 'A button can show it is currently unable to be interacted with.',
     },
-    floated: {
-      type: String,
+    floated: Enum(['left', 'right'], {
       description: 'A button can be aligned to the left or right of its container.',
-    },
+    }),
     fluid: {
       type: Boolean,
       description: 'A button can take the width of its container.',
@@ -86,10 +85,11 @@ export default {
       type: [Number, String],
       description: 'A button can receive focus.',
     },
-    toggle: {
+    toggle: { // TODO: Add props and functional for toggle buttons
       type: Boolean,
       description: 'A button can be formatted to toggle on and off.',
     },
+    social: Enum.Social,
   },
   render() {
     const ElementType = getElementType(this, 'button');
@@ -99,7 +99,9 @@ export default {
     const classList = classes(
       'ui',
       this.active && 'active',
-      this.attached && 'attached',
+      this.attached && `${this.attached} attached`,
+      this.animated,
+      this.animated && 'animated',
       this.basic && 'basic',
       this.circular && 'circular',
       this.className,
@@ -118,6 +120,7 @@ export default {
       this.positive && 'positive',
       this.primary && 'primary',
       this.secondary && 'secondary',
+      this.social,
       this.size,
       'button',
     );
@@ -128,7 +131,7 @@ export default {
         class={classList}
         role="button"
       >
-        {this.icon && <Icon name={this.icon} />}
+        {this.icon && <Icon name={this.icon}/>}
         {this.content || this.$slots.default}
       </ElementType>
     );
