@@ -7,7 +7,7 @@ export default {
   components: { SuiIcon },
   props: {
     active: Boolean,
-    color: Enum.Color,
+    color: Enum.Color(),
     content: String,
     header: Boolean,
     icon: String,
@@ -27,7 +27,7 @@ export default {
           'item',
         )}
       >
-        {this.icon && <SuiIcon name={this.icon} />}
+        {this.icon && <SuiIcon name={this.icon}/>}
         {this.$slots.default || this.content}
       </ElementType>
     );

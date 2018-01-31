@@ -22,11 +22,15 @@ export function Enum(values = [], obj = {}) {
   };
 }
 
-Enum.State = Enum(['active', 'disabled', 'error', 'warning', 'success']);
-Enum.Size = Enum(['mini', 'tiny', 'small', 'standard', 'medium', 'large', 'big', 'huge', 'massive']);
-Enum.Color = Enum([
+Object.defineProperty(Enum, 'Extend', {
+  value: values => (obj = {}) => Enum(values, obj),
+});
+
+Enum.State = Enum.Extend(['active', 'disabled', 'error', 'warning', 'success']);
+Enum.Size = Enum.Extend(['mini', 'tiny', 'small', 'standard', 'medium', 'large', 'big', 'huge', 'massive']);
+Enum.Color = Enum.Extend([
   'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
   'violet', 'purple', 'pink', 'brown', 'grey', 'black',
 ]);
-Enum.VerticalAlign = Enum(['top', 'middle', 'bottom']);
-Enum.Social = Enum(['facebook', 'twitter', 'google', 'google plus', 'vk', 'instagram', 'linkedin', 'youtube']);
+Enum.VerticalAlign = Enum.Extend(['top', 'middle', 'bottom']);
+Enum.Social = Enum.Extend(['facebook', 'twitter', 'google', 'google plus', 'vk', 'instagram', 'linkedin', 'youtube']);

@@ -9,8 +9,8 @@ export default {
       type: Boolean,
       description: 'Present measurement horizontally',
     },
-    color: Enum.Color,
-    size: Enum.Size,
+    color: Enum.Color(),
+    size: Enum.Size(),
     floated: Enum(['left', 'right']),
     inverted: {
       type: Boolean,
