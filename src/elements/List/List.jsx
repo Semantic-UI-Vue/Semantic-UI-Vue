@@ -10,7 +10,7 @@ export default {
     items: Array,
     link: Boolean,
     relaxed: Boolean,
-    size: Enum.Size,
+    size: Enum.Size(),
   },
   render() {
     const ElementType = getElementType(this);

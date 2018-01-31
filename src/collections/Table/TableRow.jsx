@@ -9,8 +9,8 @@ export default {
     selected: Boolean,
     textAlign: Enum(['left', 'right', 'center']),
     warning: Boolean,
-    state: Enum.State,
-    verticalAlign: Enum.VerticalAlign,
+    state: Enum.State(),
+    verticalAlign: Enum.VerticalAlign(),
   },
   render() {
     const ElementType = getElementType(this, 'tr');

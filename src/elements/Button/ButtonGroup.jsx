@@ -9,9 +9,9 @@ export default {
     vertical: Boolean,
     labeled: Boolean,
     icons: Boolean,
-    color: Enum.Color,
+    color: Enum.Color(),
     basic: Boolean,
-    size: Enum.Size,
+    size: Enum.Size(),
   },
   render() {
     const ElementType = getElementType(this);

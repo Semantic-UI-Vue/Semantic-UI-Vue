@@ -8,7 +8,7 @@ export default {
       type: Boolean,
       description: 'A label can reduce its complexity.',
     },
-    color: Enum.Color,
+    color: Enum.Color(),
     image: Boolean,
     pointing: Enum(['left', 'right']),
     ribbon: Boolean,
