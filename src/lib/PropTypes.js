@@ -9,7 +9,7 @@ export function Enum(values = [], obj = {}) {
     type = uniq([...obj.type, String]);
   } else if (obj.type) {
     if (obj.type === Boolean) choices.push('');
-    type = [String, obj.type];
+    type = [obj.type, String];
   } else {
     type = String;
   }
