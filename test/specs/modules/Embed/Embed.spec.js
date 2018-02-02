@@ -5,12 +5,12 @@ describe('Embed', () => {
   it('should create a SUI Embed default without active, placeholder and iframe', () => {
     const embed = shallow(Embed);
     expect(embed.is('div')).to.equal(true);
-    expect(embed.hasClass('ui')).to.equal(true);
-    expect(embed.hasClass('active')).to.equal(false);
-    expect(embed.hasClass('embed')).to.equal(true);
+    expect(embed.classes()).to.include('ui');
+    expect(embed.classes()).to.not.include('active');
+    expect(embed.classes()).to.include('embed');
     expect(embed.contains('i')).to.equal(true);
-    expect(embed.find('i').hasClass('video')).to.equal(true);
-    expect(embed.find('i').hasClass('play')).to.equal(true);
+    expect(embed.find('i').classes()).to.include('video');
+    expect(embed.find('i').classes()).to.include('play');
     expect(embed.contains('img')).to.equal(false);
     expect(embed.contains('iframe')).to.equal(false);
     expect(embed.text()).to.equal('');
@@ -23,9 +23,9 @@ describe('Embed', () => {
       },
     });
     expect(embed.is('div')).to.equal(true);
-    expect(embed.hasClass('ui')).to.equal(true);
-    expect(embed.hasClass('21:9')).to.equal(true);
-    expect(embed.hasClass('embed')).to.equal(true);
+    expect(embed.classes()).to.include('ui');
+    expect(embed.classes()).to.include('21:9');
+    expect(embed.classes()).to.include('embed');
     expect(embed.text()).to.equal('');
   });
 
@@ -36,7 +36,7 @@ describe('Embed', () => {
       },
     });
     expect(embed.contains('i')).to.equal(true);
-    expect(embed.find('i').hasClass('pencil')).to.equal(true);
+    expect(embed.find('i').classes()).to.include('pencil');
     expect(embed.text()).to.equal('');
   });
 
@@ -53,13 +53,13 @@ describe('Embed', () => {
 
   it('should create a SUI Embed that active after click', () => {
     const embed = shallow(Embed);
-    expect(embed.hasClass('active')).to.equal(false);
+    expect(embed.classes()).to.not.include('active');
     expect(embed.findAll('div').length).to.equal(1);
     expect(embed.contains('iframe')).to.equal(false);
     embed.trigger('click');
-    expect(embed.hasClass('active')).to.equal(true);
+    expect(embed.classes()).to.include('active');
     expect(embed.findAll('div').length).to.equal(2);
-    expect(embed.findAll('div').at(1).hasClass('embed')).to.equal(true);
+    expect(embed.findAll('div').at(1).classes()).to.include('embed');
     expect(embed.contains('iframe')).to.equal(true);
     expect(embed.text()).to.equal('');
   });
@@ -73,7 +73,7 @@ describe('Embed', () => {
         default: '<span>This is default</span>',
       },
     });
-    expect(embed.hasClass('active')).to.equal(true);
+    expect(embed.classes()).to.include('active');
     expect(embed.contains('iframe')).to.equal(false);
     expect(embed.contains('span')).to.equal(true);
     expect(embed.text()).to.equal('This is default');
