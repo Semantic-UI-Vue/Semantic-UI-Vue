@@ -56,10 +56,12 @@ export default {
       ) {
         e.stopPropagation();
         this.menu.setOpen(true);
+        this.open = true;
       }
     },
     closeMenu() {
       this.menu.setOpen(false);
+      this.open = false;
     },
   },
   render() {
@@ -82,7 +84,7 @@ export default {
       if (!text) {
         return null;
       }
-      const className = `${this.placeholder && 'default '}text`;
+      const className = `${this.placeholder ? 'default ' : ''}text`;
       return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
     };
 
