@@ -1,5 +1,10 @@
 <template lang="html">
-  <sui-dropdown placeholder="Gender" selection :options="options" />
+  <sui-dropdown
+    fluid
+    placeholder="Select Friend"
+    selection
+    :options="options"
+  />
 </template>
 
 <script>

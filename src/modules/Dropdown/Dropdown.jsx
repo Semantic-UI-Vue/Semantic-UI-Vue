@@ -17,6 +17,10 @@ export default {
       type: Boolean,
       description: 'A dropdown menu can appear to be floating below an element.',
     },
+    fluid: {
+      type: Boolean,
+      description: 'A dropdown can take the full width of its parent.',
+    },
     options: {
       type: Array,
       description: "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
@@ -98,6 +102,7 @@ export default {
           'ui',
           this.button && 'button',
           this.floating && 'floating',
+          this.fluid && 'fluid',
           this.selection && 'selection',
           this.search && 'search',
           this.open && 'active visible',
