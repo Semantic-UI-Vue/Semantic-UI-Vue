@@ -4,9 +4,16 @@
 
 <script>
 export default {
+  name: 'SelectionElement',
   data() {
     return {
-      options: ['Male', 'Female'],
+      options: [{
+        text: 'Male',
+        value: 1,
+      }, {
+        text: 'Female',
+        value: 2,
+      }],
     };
   },
 };

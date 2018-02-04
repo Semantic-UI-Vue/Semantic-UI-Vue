@@ -64,7 +64,6 @@ export default {
   },
   render() {
     const ElementType = getElementType(this, this.button ? 'button' : 'div');
-    const text = this.text || this.placeholder;
 
     const renderMenu = () => {
       if (this.$slots.default) {
@@ -73,9 +72,18 @@ export default {
 
       return (
         <DropdownMenu>
-          {this.options.map(option => <DropdownItem {...option} />)}
+          {this.options.map(option => <DropdownItem {...{ props: option }} />)}
         </DropdownMenu>
       );
+    };
+
+    const renderText = () => {
+      const text = this.text || this.placeholder;
+      if (!text) {
+        return null;
+      }
+      const className = `${this.placeholder && 'default '}text`;
+      return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
     };
 
     return (
@@ -96,7 +104,7 @@ export default {
         onClick={this.openMenu}
         nativeOnClick={this.openMenu}
       >
-        {text && <div ref="text" class="text" role="alert" aria-live="polite">{text}</div>}
+        {renderText()}
         <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
         {renderMenu()}
       </ElementType>
