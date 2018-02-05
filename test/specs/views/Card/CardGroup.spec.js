@@ -5,8 +5,8 @@ describe('CardGroup', () => {
   it('should create a standalone SUI CardGroup', () => {
     const cardGroup = shallow(CardGroup);
     expect(cardGroup.is('div')).to.equal(true);
-    expect(cardGroup.hasClass('ui')).to.equal(true);
-    expect(cardGroup.hasClass('cards')).to.equal(true);
+    expect(cardGroup.classes()).to.include('ui');
+    expect(cardGroup.classes()).to.include('cards');
     expect(cardGroup.text()).to.equal('');
   });
 
@@ -18,10 +18,10 @@ describe('CardGroup', () => {
       },
     });
     expect(cardGroup.is('div')).to.equal(true);
-    expect(cardGroup.hasClass('ui')).to.equal(true);
-    expect(cardGroup.hasClass('three')).to.equal(true);
-    expect(cardGroup.hasClass('stackable')).to.equal(true);
-    expect(cardGroup.hasClass('cards')).to.equal(true);
+    expect(cardGroup.classes()).to.include('ui');
+    expect(cardGroup.classes()).to.include('three');
+    expect(cardGroup.classes()).to.include('stackable');
+    expect(cardGroup.classes()).to.include('cards');
     expect(cardGroup.text()).to.equal('');
   });
 });

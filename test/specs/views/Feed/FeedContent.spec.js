@@ -5,14 +5,14 @@ describe('FeedContent', () => {
   it('should create a SUI FeedContent', () => {
     const content = shallow(FeedContent);
     expect(content.is('div')).to.equal(true);
-    expect(content.hasClass('content')).to.equal(true);
+    expect(content.classes()).to.include('content');
     expect(content.text()).to.equal('');
   });
 
   it('should create a SUI FeedContent with content', () => {
     const content = shallow(FeedContent, { propsData: { content: 'Main content here' } });
     expect(content.is('div')).to.equal(true);
-    expect(content.hasClass('content')).to.equal(true);
+    expect(content.classes()).to.include('content');
     expect(content.text()).to.equal('Main content here');
   });
 
@@ -26,23 +26,23 @@ describe('FeedContent', () => {
       meta: '4 likes',
     } });
     expect(content.is('div')).to.equal(true);
-    expect(content.hasClass('content')).to.equal(true);
+    expect(content.classes()).to.include('content');
     const divs = content.findAll('div');
     expect(divs.length).is.equal(6);
-    expect(divs.at(1).hasClass('date')).to.equal(true);
+    expect(divs.at(1).classes()).to.include('date');
     expect(divs.at(1).text()).to.equal('1 hour ago');
-    expect(divs.at(2).hasClass('summary')).to.equal(true);
+    expect(divs.at(2).classes()).to.include('summary');
     expect(divs.at(2).text()).to.equal('Summary text');
-    expect(divs.at(3).hasClass('extra')).to.equal(true);
-    expect(divs.at(3).hasClass('text')).to.equal(true);
+    expect(divs.at(3).classes()).to.include('extra');
+    expect(divs.at(3).classes()).to.include('text');
     expect(divs.at(3).text()).to.equal('Extra text here');
-    expect(divs.at(4).hasClass('extra')).to.equal(true);
-    expect(divs.at(4).hasClass('images')).to.equal(true);
+    expect(divs.at(4).classes()).to.include('extra');
+    expect(divs.at(4).classes()).to.include('images');
     const extraDivImgs = divs.at(4).findAll('img');
     expect(extraDivImgs.length).to.equal(2);
     expect(extraDivImgs.at(0).hasAttribute('src', '/image0.png')).to.equal(true);
     expect(extraDivImgs.at(1).hasAttribute('src', '/image1.png')).to.equal(true);
-    expect(divs.at(5).hasClass('meta')).to.equal(true);
+    expect(divs.at(5).classes()).to.include('meta');
     expect(divs.at(5).text()).to.equal('4 likes');
   });
 
@@ -61,7 +61,7 @@ describe('FeedContent', () => {
       },
     });
     expect(content.is('div')).to.equal(true);
-    expect(content.hasClass('content')).to.equal(true);
+    expect(content.classes()).to.include('content');
     const divs = content.findAll('div');
     expect(divs.length).is.equal(2);
     expect(divs.at(1).text()).to.equal('Main content here');
@@ -70,7 +70,7 @@ describe('FeedContent', () => {
   it('should create a SUI FeedContent with default slot', () => {
     const content = shallow(FeedContent, { slots: { default: '<span>Main content here</span>' } });
     expect(content.is('div')).to.equal(true);
-    expect(content.hasClass('content')).to.equal(true);
+    expect(content.classes()).to.include('content');
     expect(content.text()).to.equal('Main content here');
   });
 });

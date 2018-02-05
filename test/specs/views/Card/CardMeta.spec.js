@@ -5,7 +5,7 @@ describe('CardMeta', () => {
   it('should create a standalone SUI CardMeta', () => {
     const cardMeta = shallow(CardMeta);
     expect(cardMeta.is('div')).to.equal(true);
-    expect(cardMeta.hasClass('meta')).to.equal(true);
+    expect(cardMeta.classes()).to.include('meta');
     expect(cardMeta.text()).to.equal('');
   });
 
@@ -16,7 +16,7 @@ describe('CardMeta', () => {
       },
     });
     expect(cardMeta.is('div')).to.equal(true);
-    expect(cardMeta.hasClass('meta')).to.equal(true);
+    expect(cardMeta.classes()).to.include('meta');
     expect(cardMeta.text()).to.equal('Default slot');
   });
 });
