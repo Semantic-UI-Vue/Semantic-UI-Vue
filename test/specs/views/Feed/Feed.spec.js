@@ -58,7 +58,7 @@ describe('Feed', () => {
     expect(divs.at(4).classes()).to.include('event');
     expect(divs.at(5).classes()).to.include('label');
     expect(divs.at(5).contains('img')).to.equal(true);
-    expect(divs.at(5).find('img').hasAttribute('src', '/avatar.png')).to.equal(true);
+    expect(divs.at(5).find('img').attributes().src).to.equal('/avatar.png');
     expect(divs.at(6).classes()).to.include('content');
     expect(divs.at(7).classes()).to.include('summary');
     expect(divs.at(7).text()).to.equal('This is a feed summary');

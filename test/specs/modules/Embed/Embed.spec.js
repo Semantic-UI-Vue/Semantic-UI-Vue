@@ -47,7 +47,7 @@ describe('Embed', () => {
       },
     });
     expect(embed.contains('img')).to.equal(true);
-    expect(embed.find('img').hasAttribute('src', '/placeholder')).to.equal(true);
+    expect(embed.find('img').attributes().src).to.equal('/placeholder');
     expect(embed.text()).to.equal('');
   });
 
@@ -98,12 +98,12 @@ describe('Embed', () => {
     ].join('');
     expect(embed.contains('iframe')).to.equal(true);
     const iframe = embed.find('iframe');
-    expect(iframe.hasAttribute('src', expectedIframeSrc)).to.equal(true);
-    expect(iframe.hasAttribute('width', '100%')).to.equal(true);
-    expect(iframe.hasAttribute('height', '100%')).to.equal(true);
-    expect(iframe.hasAttribute('frameborder', '0')).to.equal(true);
-    expect(iframe.hasAttribute('scrolling', 'no')).to.equal(true);
-    expect(iframe.hasAttribute('title', 'Embedded content from youtube')).to.equal(true);
+    expect(iframe.attributes().src).to.equal(expectedIframeSrc);
+    expect(iframe.attributes().width).to.equal('100%');
+    expect(iframe.attributes().height).to.equal('100%');
+    expect(iframe.attributes().frameborder).to.equal('0');
+    expect(iframe.attributes().scrolling).to.equal('no');
+    expect(iframe.attributes().title).to.equal('Embedded content from youtube');
   });
 
   it('should create a SUI Embed with vimeo iframe', () => {
@@ -127,12 +127,12 @@ describe('Embed', () => {
     ].join('');
     expect(embed.contains('iframe')).to.equal(true);
     const iframe = embed.find('iframe');
-    expect(iframe.hasAttribute('src', expectedIframeSrc)).to.equal(true);
-    expect(iframe.hasAttribute('width', '100%')).to.equal(true);
-    expect(iframe.hasAttribute('height', '100%')).to.equal(true);
-    expect(iframe.hasAttribute('frameborder', '0')).to.equal(true);
-    expect(iframe.hasAttribute('scrolling', 'no')).to.equal(true);
-    expect(iframe.hasAttribute('title', 'Embedded content from vimeo')).to.equal(true);
+    expect(iframe.attributes().src).to.equal(expectedIframeSrc);
+    expect(iframe.attributes().width).to.equal('100%');
+    expect(iframe.attributes().height).to.equal('100%');
+    expect(iframe.attributes().frameborder).to.equal('0');
+    expect(iframe.attributes().scrolling).to.equal('no');
+    expect(iframe.attributes().title).to.equal('Embedded content from vimeo');
   });
 
   it('should create a SUI Embed with custom host iframe', () => {
@@ -144,12 +144,12 @@ describe('Embed', () => {
     });
     expect(embed.contains('iframe')).to.equal(true);
     const iframe = embed.find('iframe');
-    expect(iframe.hasAttribute('src', 'https://www.example.com')).to.equal(true);
-    expect(iframe.hasAttribute('width', '100%')).to.equal(true);
-    expect(iframe.hasAttribute('height', '100%')).to.equal(true);
-    expect(iframe.hasAttribute('frameborder', '0')).to.equal(true);
-    expect(iframe.hasAttribute('scrolling', 'no')).to.equal(true);
-    expect(iframe.hasAttribute('title', 'Embedded content from custom host')).to.equal(true);
+    expect(iframe.attributes().src).to.equal('https://www.example.com');
+    expect(iframe.attributes().width).to.equal('100%');
+    expect(iframe.attributes().height).to.equal('100%');
+    expect(iframe.attributes().frameborder).to.equal('0');
+    expect(iframe.attributes().scrolling).to.equal('no');
+    expect(iframe.attributes().title).to.equal('Embedded content from custom host');
   });
 
   it('should create a SUI Embed with iframe shorthand', () => {
@@ -168,13 +168,13 @@ describe('Embed', () => {
     });
     expect(embed.contains('iframe')).to.equal(true);
     const iframe = embed.find('iframe');
-    expect(iframe.hasAttribute('src', 'https://www.example.com')).to.equal(true);
-    expect(iframe.hasAttribute('width', '75%')).to.equal(true);
-    expect(iframe.hasAttribute('height', '100%')).to.equal(true);
-    expect(iframe.hasAttribute('frameborder', '0')).to.equal(true);
-    expect(iframe.hasAttribute('scrolling', 'no')).to.equal(true);
-    expect(iframe.hasAttribute('allowfullscreen', 'true')).to.equal(true);
-    expect(iframe.hasAttribute('style', 'padding: 10px;')).to.equal(true);
-    expect(iframe.hasAttribute('title', 'Embedded content from custom host')).to.equal(true);
+    expect(iframe.attributes().src).to.equal('https://www.example.com');
+    expect(iframe.attributes().width).to.equal('75%');
+    expect(iframe.attributes().height).to.equal('100%');
+    expect(iframe.attributes().frameborder).to.equal('0');
+    expect(iframe.attributes().scrolling).to.equal('no');
+    expect(iframe.attributes().allowfullscreen).to.equal('true');
+    expect(iframe.attributes().style).to.equal('padding: 10px;');
+    expect(iframe.attributes().title).to.equal('Embedded content from custom host');
   });
 });

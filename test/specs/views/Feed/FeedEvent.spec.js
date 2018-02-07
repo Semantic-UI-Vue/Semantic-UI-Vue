@@ -62,8 +62,7 @@ describe('FeedEvent', () => {
     expect(divs.length).is.equal(9);
     expect(divs.at(1).classes()).to.include('label');
     expect(divs.at(1).contains('img')).to.equal(true);
-    expect(divs.at(1).find('img')
-            .hasAttribute('src', '/avatar.png')).to.equal(true);
+    expect(divs.at(1).find('img').attributes().src).to.equal('/avatar.png');
     expect(divs.at(2).classes()).to.include('content');
     expect(divs.at(3).classes()).to.include('date');
     expect(divs.at(3).text()).to.equal('2 hours ago');
@@ -76,8 +75,8 @@ describe('FeedEvent', () => {
     expect(divs.at(6).classes()).to.include('images');
     const extraImgs = divs.at(6).findAll('img');
     expect(extraImgs.length).to.equal(2);
-    expect(extraImgs.at(0).hasAttribute('src', '/image0.png')).to.equal(true);
-    expect(extraImgs.at(1).hasAttribute('src', '/image1.png')).to.equal(true);
+    expect(extraImgs.at(0).attributes().src).to.equal('/image0.png');
+    expect(extraImgs.at(1).attributes().src).to.equal('/image1.png');
     expect(divs.at(7).classes()).to.include('meta');
     expect(divs.at(7).text()).to.equal('4 likes');
     expect(divs.at(8).text()).to.equal('Event default slot');

@@ -40,8 +40,8 @@ describe('FeedContent', () => {
     expect(divs.at(4).classes()).to.include('images');
     const extraDivImgs = divs.at(4).findAll('img');
     expect(extraDivImgs.length).to.equal(2);
-    expect(extraDivImgs.at(0).hasAttribute('src', '/image0.png')).to.equal(true);
-    expect(extraDivImgs.at(1).hasAttribute('src', '/image1.png')).to.equal(true);
+    expect(extraDivImgs.at(0).attributes().src).to.equal('/image0.png');
+    expect(extraDivImgs.at(1).attributes().src).to.equal('/image1.png');
     expect(divs.at(5).classes()).to.include('meta');
     expect(divs.at(5).text()).to.equal('4 likes');
   });

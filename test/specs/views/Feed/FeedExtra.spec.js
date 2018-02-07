@@ -36,8 +36,8 @@ describe('FeedExtra', () => {
     expect(extra.contains('img')).to.equal(true);
     const divs = extra.findAll('img');
     expect(divs.length).to.equal(2);
-    expect(divs.at(0).hasAttribute('src', '/image0.png')).to.equal(true);
-    expect(divs.at(1).hasAttribute('src', '/image1.png')).to.equal(true);
+    expect(divs.at(0).attributes().src).to.equal('/image0.png');
+    expect(divs.at(1).attributes().src).to.equal('/image1.png');
   });
 
   it('should only render default slot if both props and default slot exist', () => {

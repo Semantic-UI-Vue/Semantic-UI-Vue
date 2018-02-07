@@ -29,7 +29,7 @@ describe('FeedLabel', () => {
     expect(label.is('div')).to.equal(true);
     expect(label.classes()).to.include('label');
     expect(label.contains('img')).to.equal(true);
-    expect(label.find('img').hasAttribute('src', '/test-image.jpg')).to.equal(true);
+    expect(label.find('img').attributes().src).to.equal('/test-image.jpg');
   });
 
   it('should only render default slot if both props and default slot exist', () => {
