@@ -1,3 +1,4 @@
+import escapeRegExp from 'lodash/escapeRegExp';
 import { classes, getChildProps, getElementType } from '../../lib';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
@@ -29,7 +30,10 @@ export default {
       type: String,
       description: 'Placeholder text.',
     },
-    search: Boolean,
+    search: {
+      type: Boolean,
+      description: 'A dropdown can have a search field to filter options.',
+    },
     selection: {
       type: Boolean,
       description: 'A dropdown can be used to select between choices in a form.',
@@ -41,9 +45,16 @@ export default {
   },
   data() {
     return {
-      open: false,
+      filter: '',
       menu: null,
+      open: false,
     };
+  },
+  computed: {
+    filteredOptions() {
+      const re = new RegExp(escapeRegExp(this.filter), 'i');
+      return this.options.filter(({ text }) => text.match(re));
+    },
   },
   mounted() {
     document.body.addEventListener('click', this.closeMenu);
@@ -55,8 +66,9 @@ export default {
     openMenu(e) {
       if (
         e.target === this.$el ||
-        e.target === this.$refs.text ||
-        e.target === this.$refs.icon
+        e.target === this.$refs.icon ||
+        e.target === this.$refs.search ||
+        e.target === this.$refs.text
       ) {
         e.stopPropagation();
         this.menu.setOpen(true);
@@ -78,7 +90,7 @@ export default {
 
       return (
         <DropdownMenu>
-          {this.options.map(option => <DropdownItem {...{ props: option }} />)}
+          {this.filteredOptions.map(option => <DropdownItem {...{ props: option }} />)}
         </DropdownMenu>
       );
     };
@@ -91,6 +103,20 @@ export default {
       const className = `${this.placeholder ? 'default ' : ''}text`;
       return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
     };
+
+    const renderSearch = () => this.search && (
+      <input
+        type="text"
+        aria-autocomplete="list"
+        autoComplete="off"
+        class="search"
+        onClick={this.openMenu}
+        onInput={(event) => { this.filter = event.target.value; }}
+        ref="search"
+        tabindex="0"
+        value={this.filter}
+      />
+    );
 
     return (
       <ElementType
@@ -108,9 +134,10 @@ export default {
           this.open && 'active visible',
           'dropdown',
         )}
-        onClick={this.openMenu}
         nativeOnClick={this.openMenu}
+        onClick={this.openMenu}
       >
+        {renderSearch()}
         {renderText()}
         <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
         {renderMenu()}
