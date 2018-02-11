@@ -134,7 +134,9 @@ export default {
   methods: {
     chooseItem(event) {
       const selectedValue = JSON.parse(event.currentTarget.dataset.value);
-      const newValue = this.multiple ? this.multipleValue.concat([selectedValue]) : selectedValue;
+      const newValue = this.multiple ? (
+        this.multipleValue.filter(value => value !== selectedValue).concat([selectedValue])
+      ) : selectedValue;
       this.filter = '';
       this.$emit('input', newValue);
     },
