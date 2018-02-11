@@ -63,7 +63,17 @@ export default {
   computed: {
     filteredOptions() {
       const re = new RegExp(escapeRegExp(this.filter), 'i');
-      return this.options.filter(({ text }) => text.match(re));
+      return this.options.filter((option) => {
+        if (!option.text.match(re)) {
+          return false;
+        }
+
+        if (this.multiple && this.multipleValue.indexOf(option.value) > -1) {
+          return false;
+        }
+
+        return true;
+      });
     },
     menuNode() {
       if (this.$slots.default) {
@@ -196,6 +206,7 @@ export default {
           this.button && 'button',
           this.floating && 'floating',
           this.fluid && 'fluid',
+          this.multiple && 'multiple',
           this.selection && 'selection',
           this.search && 'search',
           this.open && 'active visible',
