@@ -59,13 +59,64 @@ export default {
       const re = new RegExp(escapeRegExp(this.filter), 'i');
       return this.options.filter(({ text }) => text.match(re));
     },
+    menuNode() {
+      if (this.$slots.default) {
+        return this.$slots.default;
+      }
+
+      return (
+        <DropdownMenu>
+          {this.filteredOptions.map(option => (
+            <DropdownItem
+              {...{ props: option }}
+              data-value={JSON.stringify(option.value)}
+              nativeOnClick={this.chooseItem}
+            />
+          ))}
+        </DropdownMenu>
+      );
+    },
+    textNode() {
+      const defaultText = this.text || this.placeholder;
+
+      const text = this.value ?
+        this.options.find(option => option.value === this.value) :
+        defaultText;
+
+      if (!text) {
+        return null;
+      }
+
+      const className = classes(
+        this.placeholder && !this.value && 'default',
+        this.filter && 'filtered',
+        'text',
+      );
+
+      return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
+    },
+    searchNode() {
+      return this.search && (
+        <input
+          type="text"
+          aria-autocomplete="list"
+          autoComplete="off"
+          class="search"
+          onClick={this.openMenu}
+          onInput={this.updateFilter}
+          ref="search"
+          tabindex="0"
+          value={this.filter}
+        />
+      );
+    },
   },
   mounted() {
     document.body.addEventListener('click', this.closeMenu);
   },
   methods: {
     chooseItem(event) {
-      const value = event.currentTarget.dataset.value;
+      const value = JSON.parse(event.currentTarget.dataset.value);
       this.$emit('input', value);
     },
     register(menu) {
@@ -91,61 +142,12 @@ export default {
       this.menu.setOpen(false);
       this.open = false;
     },
+    updateFilter(event) {
+      this.filter = event.target.value;
+    },
   },
   render() {
     const ElementType = getElementType(this, this.button ? 'button' : 'div');
-
-    const renderMenu = () => {
-      if (this.$slots.default) {
-        return this.$slots.default;
-      }
-
-      return (
-        <DropdownMenu>
-          {this.filteredOptions.map(option => (
-            <DropdownItem
-              {...{ props: option }}
-              data-value={option.value}
-              nativeOnClick={this.chooseItem}
-            />
-          ))}
-        </DropdownMenu>
-      );
-    };
-
-    const renderText = () => {
-      const defaultText = this.text || this.placeholder;
-
-      const text = this.value ?
-        this.options.find(option => option.value === this.value) :
-        defaultText;
-
-      if (!text) {
-        return null;
-      }
-
-      const className = classes(
-        this.placeholder && !this.value && 'default',
-        this.filter && 'filtered',
-        'text',
-      );
-
-      return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
-    };
-
-    const renderSearch = () => this.search && (
-      <input
-        type="text"
-        aria-autocomplete="list"
-        autoComplete="off"
-        class="search"
-        onClick={this.openMenu}
-        onInput={(event) => { this.filter = event.target.value; }}
-        ref="search"
-        tabindex="0"
-        value={this.filter}
-      />
-    );
 
     return (
       <ElementType
@@ -166,10 +168,10 @@ export default {
         nativeOnClick={this.openMenu}
         onClick={this.openMenu}
       >
-        {renderSearch()}
-        {renderText()}
+        {this.searchNode}
+        {this.textNode}
         <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
-        {renderMenu()}
+        {this.menuNode}
       </ElementType>
     );
   },
