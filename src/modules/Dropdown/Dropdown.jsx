@@ -129,7 +129,11 @@ export default {
     textNode() {
       const defaultText = this.text || this.placeholder;
 
-      const text = this.value ?
+      const shouldHideText =
+        (this.multiple && this.value && this.value.length) ||
+        (!this.multiple && this.value);
+
+      const text = shouldHideText ?
         this.findOption(this.value) :
         defaultText;
 
@@ -138,7 +142,7 @@ export default {
       }
 
       const className = classes(
-        this.placeholder && !this.value && 'default',
+        this.placeholder && !shouldHideText && 'default',
         this.filter && 'filtered',
         'text',
       );
