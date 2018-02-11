@@ -2,6 +2,7 @@ import Dropdown from './Dropdown.example';
 import DropdownButton from './DropdownButton.example';
 import DropdownFloating from './DropdownFloating.example';
 import FriendSelection from './FriendSelection.example';
+import MultipleSelection from './MultipleSelection.example';
 import Selection from './Selection.example';
 import SearchSelection from './SearchSelection.example';
 import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
@@ -40,6 +41,11 @@ export default [
       },
       {
         component: SearchSelectionWithoutFlag,
+      },
+      {
+        title: 'Multiple Selection',
+        description: 'A selection dropdown can allow multiple selections.',
+        component: MultipleSelection,
       },
     ],
   },
