@@ -117,6 +117,7 @@ export default {
   methods: {
     chooseItem(event) {
       const value = JSON.parse(event.currentTarget.dataset.value);
+      this.filter = '';
       this.$emit('input', value);
     },
     register(menu) {
