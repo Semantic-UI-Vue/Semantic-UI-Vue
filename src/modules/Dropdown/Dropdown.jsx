@@ -35,6 +35,7 @@ export default {
     options: {
       type: Array,
       description: "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
+      required: true,
     },
     placeholder: {
       type: String,
