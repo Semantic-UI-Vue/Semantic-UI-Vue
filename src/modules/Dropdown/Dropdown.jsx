@@ -1,5 +1,6 @@
 import escapeRegExp from 'lodash/escapeRegExp';
 import { classes, getChildProps, getElementType } from '../../lib';
+import Icon from '../../elements/Icon/Icon';
 import Label from '../../elements/Label/Label';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
@@ -75,7 +76,7 @@ export default {
             <DropdownItem
               {...{ props: option }}
               data-value={JSON.stringify(option.value)}
-              nativeOnClick={this.chooseItem}
+              nativeOnClick={this.selectItem}
             />
           ))}
         </DropdownMenu>
@@ -105,7 +106,14 @@ export default {
       }
 
       return this.multipleValue.map(value => (
-        <Label>{this.findOption(value)}</Label>
+        <Label>
+          {this.findOption(value)}
+          <Icon
+            name="delete"
+            data-value={JSON.stringify(value)}
+            nativeOnClick={this.deselectItem}
+          />
+        </Label>
       ));
     },
     textNode() {
@@ -132,17 +140,13 @@ export default {
     document.body.addEventListener('click', this.closeMenu);
   },
   methods: {
-    chooseItem(event) {
-      const selectedValue = JSON.parse(event.currentTarget.dataset.value);
-      const newValue = this.multiple ? (
-        this.multipleValue.filter(value => value !== selectedValue).concat([selectedValue])
-      ) : selectedValue;
-      this.filter = '';
-      this.$emit('input', newValue);
-    },
     closeMenu() {
       this.menu.setOpen(false);
       this.open = false;
+    },
+    deselectItem(event) {
+      const selectedValue = JSON.parse(event.currentTarget.dataset.value);
+      this.$emit('input', this.multipleValue.filter(value => value !== selectedValue));
     },
     findOption(value) {
       return this.options.find(option => option.value === value);
@@ -165,6 +169,14 @@ export default {
     },
     register(menu) {
       this.menu = menu;
+    },
+    selectItem(event) {
+      const selectedValue = JSON.parse(event.currentTarget.dataset.value);
+      const newValue = this.multiple ? (
+        this.multipleValue.filter(value => value !== selectedValue).concat([selectedValue])
+      ) : selectedValue;
+      this.filter = '';
+      this.$emit('input', newValue);
     },
     updateFilter(event) {
       this.filter = event.target.value;
