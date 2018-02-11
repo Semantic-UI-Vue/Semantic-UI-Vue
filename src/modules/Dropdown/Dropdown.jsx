@@ -158,9 +158,14 @@ export default {
   mounted() {
     document.body.addEventListener('click', this.closeMenu);
   },
+  destroyed() {
+    document.body.removeEventListener('click', this.closeMenu);
+  },
   methods: {
     closeMenu() {
-      this.menu.setOpen(false);
+      if (this.menu) {
+        this.menu.setOpen(false);
+      }
       this.open = false;
     },
     deselectItem(event) {
