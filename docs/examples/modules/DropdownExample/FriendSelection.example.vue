@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'FriendSelectionElement',
+  name: 'FriendSelectionExample',
   data() {
     return {
       options: [{
