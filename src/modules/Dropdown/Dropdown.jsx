@@ -24,6 +24,10 @@ export default {
       type: Boolean,
       description: 'A dropdown can take the full width of its parent.',
     },
+    labeled: {
+      type: Boolean,
+      description: 'A dropdown can be labeled.',
+    },
     multiple: {
       type: Boolean,
       description: 'A selection dropdown can allow multiple selections.',
@@ -210,6 +214,7 @@ export default {
           this.button && 'button',
           this.floating && 'floating',
           this.fluid && 'fluid',
+          this.labeled && 'labeled',
           this.multiple && 'multiple',
           this.selection && 'selection',
           this.search && 'search',

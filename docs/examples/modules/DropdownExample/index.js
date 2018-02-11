@@ -5,6 +5,7 @@ import FriendSelection from './FriendSelection.example';
 import MultipleSelection from './MultipleSelection.example';
 import MultipleSearchSelection from './MultipleSearchSelection.example';
 import Selection from './Selection.example';
+import SearchDropdown from './SearchDropdown.example';
 import SearchSelection from './SearchSelection.example';
 import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
 
@@ -52,6 +53,11 @@ export default [
         title: 'Multiple Search Selection',
         description: 'A selection dropdown can allow multiple search selections.',
         component: MultipleSearchSelection,
+      },
+      {
+        title: 'Search Dropdown',
+        description: 'A dropdown can be searchable.',
+        component: SearchDropdown,
       },
     ],
   },
