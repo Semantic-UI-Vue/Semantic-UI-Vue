@@ -70,6 +70,10 @@ export default {
         e.target === this.$refs.search ||
         e.target === this.$refs.text
       ) {
+        if (this.search && e.target !== this.$refs.search) {
+          this.$refs.search.focus();
+        }
+
         e.stopPropagation();
         this.menu.setOpen(true);
         this.open = true;
@@ -100,7 +104,13 @@ export default {
       if (!text) {
         return null;
       }
-      const className = `${this.placeholder ? 'default ' : ''}text`;
+
+      const className = classes(
+        this.placeholder && 'default',
+        this.filter && 'filtered',
+        'text',
+      );
+
       return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
     };
 
