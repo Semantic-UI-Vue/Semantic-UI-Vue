@@ -3,6 +3,8 @@ import DropdownButton from './DropdownButton.example';
 import DropdownFloating from './DropdownFloating.example';
 import FriendSelection from './FriendSelection.example';
 import Selection from './Selection.example';
+import SearchSelection from './SearchSelection.example';
+import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
 
 export default [
   {
@@ -30,6 +32,14 @@ export default [
         title: 'Floating',
         description: 'A dropdown menu can appear to be floating below an element.',
         component: DropdownFloating,
+      },
+      {
+        title: 'Search Selection',
+        description: 'A selection dropdown can allow a user to search through a large list of choices.',
+        component: SearchSelection,
+      },
+      {
+        component: SearchSelectionWithoutFlag,
       },
     ],
   },
