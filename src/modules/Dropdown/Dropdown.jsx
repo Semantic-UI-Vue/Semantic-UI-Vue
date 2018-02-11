@@ -1,5 +1,6 @@
 import escapeRegExp from 'lodash/escapeRegExp';
 import { classes, getChildProps, getElementType } from '../../lib';
+import Label from '../../elements/Label/Label';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
 
@@ -22,6 +23,10 @@ export default {
       type: Boolean,
       description: 'A dropdown can take the full width of its parent.',
     },
+    multiple: {
+      type: Boolean,
+      description: 'A selection dropdown can allow multiple selections.',
+    },
     options: {
       type: Array,
       description: "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
@@ -43,7 +48,7 @@ export default {
       description: 'Text of dropdown',
     },
     value: {
-      type: [String, Number],
+      type: [Array, String, Number],
       description: 'Value of the dropdown.',
     },
   },
@@ -76,24 +81,8 @@ export default {
         </DropdownMenu>
       );
     },
-    textNode() {
-      const defaultText = this.text || this.placeholder;
-
-      const text = this.value ?
-        this.options.find(option => option.value === this.value) :
-        defaultText;
-
-      if (!text) {
-        return null;
-      }
-
-      const className = classes(
-        this.placeholder && !this.value && 'default',
-        this.filter && 'filtered',
-        'text',
-      );
-
-      return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
+    multipleValue() {
+      return Array.isArray(this.value) ? this.value : [];
     },
     searchNode() {
       return this.search && (
@@ -110,18 +99,51 @@ export default {
         />
       );
     },
+    selectedNodes() {
+      if (!this.multiple) {
+        return null;
+      }
+
+      return this.multipleValue.map(value => (
+        <Label>{this.findOption(value)}</Label>
+      ));
+    },
+    textNode() {
+      const defaultText = this.text || this.placeholder;
+
+      const text = this.value ?
+        this.findOption(this.value) :
+        defaultText;
+
+      if (!text) {
+        return null;
+      }
+
+      const className = classes(
+        this.placeholder && !this.value && 'default',
+        this.filter && 'filtered',
+        'text',
+      );
+
+      return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
+    },
   },
   mounted() {
     document.body.addEventListener('click', this.closeMenu);
   },
   methods: {
     chooseItem(event) {
-      const value = JSON.parse(event.currentTarget.dataset.value);
+      const selectedValue = JSON.parse(event.currentTarget.dataset.value);
+      const newValue = this.multiple ? this.multipleValue.concat([selectedValue]) : selectedValue;
       this.filter = '';
-      this.$emit('input', value);
+      this.$emit('input', newValue);
     },
-    register(menu) {
-      this.menu = menu;
+    closeMenu() {
+      this.menu.setOpen(false);
+      this.open = false;
+    },
+    findOption(value) {
+      return this.options.find(option => option.value === value);
     },
     openMenu(e) {
       if (
@@ -139,9 +161,8 @@ export default {
         this.open = true;
       }
     },
-    closeMenu() {
-      this.menu.setOpen(false);
-      this.open = false;
+    register(menu) {
+      this.menu = menu;
     },
     updateFilter(event) {
       this.filter = event.target.value;
@@ -169,6 +190,7 @@ export default {
         nativeOnClick={this.openMenu}
         onClick={this.openMenu}
       >
+        {this.selectedNodes}
         {this.searchNode}
         {this.textNode}
         <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
