@@ -4,6 +4,7 @@
     placeholder="Select Friend"
     selection
     :options="options"
+    v-model="current"
   />
 </template>
 
@@ -12,6 +13,7 @@ export default {
   name: 'FriendSelectionExample',
   data() {
     return {
+      current: null,
       options: [{
         key: 'Jenny Hess',
         text: 'Jenny Hess',

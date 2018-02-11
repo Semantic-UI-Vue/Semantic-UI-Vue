@@ -1,12 +1,18 @@
 <template lang="html">
-  <sui-dropdown placeholder="Gender" selection :options="options" />
+  <sui-dropdown
+    placeholder="Gender"
+    selection
+    :options="options"
+    v-model="current"
+  />
 </template>
 
 <script>
 export default {
-  name: 'SelectionElement',
+  name: 'SelectionExample',
   data() {
     return {
+      current: null,
       options: [{
         text: 'Male',
         value: 1,

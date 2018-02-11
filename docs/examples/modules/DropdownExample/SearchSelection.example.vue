@@ -5,6 +5,7 @@
     placeholder="Select Country"
     search
     selection
+    v-model="current"
   />
 </template>
 
@@ -13,6 +14,7 @@ export default {
   name: 'SearchSelectionExample',
   data() {
     return {
+      current: null,
       countries: [
         { key: 'af', value: 'af', flag: 'af', text: 'Afghanistan' },
         { key: 'ax', value: 'ax', flag: 'ax', text: 'Aland Islands' },

@@ -4,6 +4,7 @@
     placeholder="Select Country"
     search
     selection
+    v-model="current"
   />
 </template>
 
@@ -65,6 +66,7 @@ export default {
         { key: 'WI', value: 'WI', text: 'Wisconsin' },
         { key: 'WY', value: 'WY', text: 'Wyoming' },
       ],
+      current: null,
     };
   },
 };

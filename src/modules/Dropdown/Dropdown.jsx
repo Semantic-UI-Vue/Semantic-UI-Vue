@@ -42,6 +42,10 @@ export default {
       type: String,
       description: 'Text of dropdown',
     },
+    value: {
+      type: [String, Number],
+      description: 'Value of the dropdown.',
+    },
   },
   data() {
     return {
@@ -60,6 +64,10 @@ export default {
     document.body.addEventListener('click', this.closeMenu);
   },
   methods: {
+    chooseItem(event) {
+      const value = event.currentTarget.dataset.value;
+      this.$emit('input', value);
+    },
     register(menu) {
       this.menu = menu;
     },
@@ -94,19 +102,30 @@ export default {
 
       return (
         <DropdownMenu>
-          {this.filteredOptions.map(option => <DropdownItem {...{ props: option }} />)}
+          {this.filteredOptions.map(option => (
+            <DropdownItem
+              {...{ props: option }}
+              data-value={option.value}
+              nativeOnClick={this.chooseItem}
+            />
+          ))}
         </DropdownMenu>
       );
     };
 
     const renderText = () => {
-      const text = this.text || this.placeholder;
+      const defaultText = this.text || this.placeholder;
+
+      const text = this.value ?
+        this.options.find(option => option.value === this.value) :
+        defaultText;
+
       if (!text) {
         return null;
       }
 
       const className = classes(
-        this.placeholder && 'default',
+        this.placeholder && !this.value && 'default',
         this.filter && 'filtered',
         'text',
       );

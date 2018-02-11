@@ -5,6 +5,7 @@
     :options="skills"
     placeholder="Skills"
     selection
+    v-model="current"
   />
 </template>
 
@@ -13,6 +14,7 @@ export default {
   name: 'SearchSelectionExample',
   data() {
     return {
+      current: null,
       skills: [
         { key: 'angular', text: 'Angular', value: 'angular' },
         { key: 'css', text: 'CSS', value: 'css' },
