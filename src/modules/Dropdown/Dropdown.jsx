@@ -164,7 +164,7 @@ export default {
 
       const shouldHideText =
         (this.multiple && this.value && this.value.length) ||
-        (!this.multiple && this.value);
+        (!this.multiple && [null, undefined].indexOf(this.value) === -1);
 
       const text = shouldHideText ? this.findOption(this.value) : defaultText;
 
@@ -182,7 +182,7 @@ export default {
 
       return <div ref="text" class={className} role="alert" aria-live="polite">
         {value.image && <Image {...{ props: value.image }} />}
-        {value.flag && <Flag name={value.flag}/>}
+        {value.flag && <Flag name={value.flag} />}
         {value}
       </div>;
     },
@@ -282,7 +282,7 @@ export default {
         {this.selectedNodes}
         {this.searchNode}
         {this.textNode}
-        <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`}/>
+        <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
         {this.menuNode}
       </ElementType>
     );
