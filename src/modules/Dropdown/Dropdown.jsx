@@ -197,11 +197,8 @@ export default {
   methods: {
     closeMenu(e) {
       if (
-        e.target !== this.$el &&
-        e.target !== this.$refs.icon &&
-        e.target !== this.$refs.search &&
-        e.target !== this.$refs.text &&
-        e.target !== this.menu
+        e.path.indexOf(this.$el) === -1 ||
+        !(this.multiple || e.path.indexOf(this.menu.$el) === -1)
       ) {
         this.open = false;
       }
@@ -220,14 +217,13 @@ export default {
         e.target === this.$refs.search ||
         e.target === this.$refs.text
       ) {
-        e.stopPropagation();
-
         if (this.search) {
           if (!this.open && e.target !== this.$refs.search) {
             this.$refs.search.focus();
           }
           if (this.open && e.target === this.$refs.search) return;
         }
+        console.log('Toggle');
         this.open = !this.open;
       }
     },
@@ -241,7 +237,6 @@ export default {
       ) : selectedValue;
       this.filter = '';
       this.$emit('input', newValue);
-      if (!this.multiple) this.open = false;
     },
     updateFilter(event) {
       this.filter = event.target.value;
