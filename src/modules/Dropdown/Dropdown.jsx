@@ -90,6 +90,7 @@ export default {
           {this.filteredOptions.map(option => (
             <DropdownItem
               {...{ props: option }}
+              selected={this.value === option.value}
               data-value={JSON.stringify(option.value)}
               nativeOnClick={this.selectItem}
             />

@@ -21,13 +21,25 @@ export default {
       type: [String, Number],
       description: 'Stored value.',
     },
+    selected: {
+      type: Boolean,
+      default: false,
+      description: 'Is item selected',
+    },
   },
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} role="option" class={classes('item')}>
+      <ElementType
+        {...getChildProps(this)}
+        role="option"
+        class={classes(
+          this.selected && 'active selected',
+          'item',
+        )}
+      >
         {this.image && <Image {...{ props: this.image }} />}
-        {this.flag && <Flag name={this.flag} />}
+        {this.flag && <Flag name={this.flag}/>}
         {this.text || this.$slots.default}
       </ElementType>
     );
