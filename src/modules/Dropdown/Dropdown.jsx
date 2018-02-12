@@ -136,6 +136,7 @@ export default {
           autoComplete="off"
           class="search"
           onInput={this.updateFilter}
+          onKeydown={this.searchOnKeyDown}
           ref="search"
           tabindex="0"
           value={this.filter}
@@ -247,6 +248,11 @@ export default {
     },
     updateFilter(event) {
       this.filter = event.target.value;
+    },
+    searchOnKeyDown(e) {
+      if (!this.multiple || e.keyCode !== 8) return;
+      this.multipleValue.pop();
+      this.$emit('input', this.multipleValue);
     },
   },
   render() {
