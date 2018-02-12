@@ -10,8 +10,8 @@ describe('Input', () => {
   it('should create a SUI Input', () => {
     const input = shallow(Input);
     expect(input.is('div')).to.equal(true);
-    expect(input.hasClass('ui')).to.equal(true);
-    expect(input.hasClass('input')).to.equal(true);
+    expect(input.classes()).to.include('ui');
+    expect(input.classes()).to.include('input');
   });
 
   it('should create a SUI Input with placeholder', () => {
@@ -21,9 +21,9 @@ describe('Input', () => {
 
   it('should create a SUI Input with loading icon', () => {
     const input = shallow(Input, { propsData: { loading: true } });
-    expect(input.hasClass('loading')).to.equal(true);
-    expect(input.hasClass('icon')).to.equal(true);
-    expect(input.find('i').hasClass('loading')).to.equal(true);
-    expect(input.find('i').hasClass('icon')).to.equal(true);
+    expect(input.classes()).to.include('loading');
+    expect(input.classes()).to.include('icon');
+    expect(input.find('i').classes()).to.include('loading');
+    expect(input.find('i').classes()).to.include('icon');
   });
 });

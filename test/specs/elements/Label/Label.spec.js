@@ -8,22 +8,22 @@ describe('Label', () => {
   it('should create a SUI Label', () => {
     const label = shallow(Label);
     expect(label.is('div')).to.equal(true);
-    expect(label.hasClass('ui')).to.equal(true);
-    expect(label.hasClass('label')).to.equal(true);
+    expect(label.classes()).to.include('ui');
+    expect(label.classes()).to.include('label');
   });
 
   it('should create a SUI Label with image', () => {
     const label = shallow(Label, { propsData: { image: true } });
     expect(label.is('div')).to.equal(true);
-    expect(label.hasClass('ui')).to.equal(true);
-    expect(label.hasClass('label')).to.equal(true);
-    expect(label.hasClass('image')).to.equal(true);
+    expect(label.classes()).to.include('ui');
+    expect(label.classes()).to.include('label');
+    expect(label.classes()).to.include('image');
   });
   it('should create a SUI colored Label ', () => {
     const label = shallow(Label, { propsData: { color: 'red' } });
     expect(label.is('div')).to.equal(true);
-    expect(label.hasClass('ui')).to.equal(true);
-    expect(label.hasClass('label')).to.equal(true);
-    expect(label.hasClass('red')).to.equal(true);
+    expect(label.classes()).to.include('ui');
+    expect(label.classes()).to.include('label');
+    expect(label.classes()).to.include('red');
   });
 });

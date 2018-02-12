@@ -10,12 +10,12 @@ describe('Icon', () => {
   it('should create a SUI Icon', () => {
     const icon = shallow(Icon);
     expect(icon.is('i')).to.equal(true);
-    expect(icon.hasClass('icon')).to.equal(true);
+    expect(icon.classes()).to.include('icon');
   });
 
   it('should display user icon', () => {
     const icon = shallow(Icon, { propsData: { name: 'user' } });
-    expect(icon.hasClass('user')).to.equal(true);
+    expect(icon.classes()).to.include('user');
   });
 
   it('should have a value for name prop', () => {

@@ -5,7 +5,7 @@ describe('CardContent', () => {
   it('should create a standalone SUI CardContent', () => {
     const cardContent = shallow(CardContent);
     expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.hasClass('content')).to.equal(true);
+    expect(cardContent.classes()).to.include('content');
     expect(cardContent.text()).to.equal('');
   });
 
@@ -16,7 +16,7 @@ describe('CardContent', () => {
       },
     });
     expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.hasClass('content')).to.equal(true);
+    expect(cardContent.classes()).to.include('content');
     expect(cardContent.text()).to.equal('Default slot');
   });
 
@@ -27,7 +27,7 @@ describe('CardContent', () => {
       },
     });
     expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.hasClass('content')).to.equal(true);
+    expect(cardContent.classes()).to.include('content');
     const right = cardContent.find('div.right');
     expect(right.text()).to.equal('Right slot');
   });
@@ -39,8 +39,8 @@ describe('CardContent', () => {
       },
     });
     expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.hasClass('content')).to.equal(true);
-    expect(cardContent.hasClass('extra')).to.equal(true);
+    expect(cardContent.classes()).to.include('content');
+    expect(cardContent.classes()).to.include('extra');
     expect(cardContent.text()).to.equal('');
   });
 });

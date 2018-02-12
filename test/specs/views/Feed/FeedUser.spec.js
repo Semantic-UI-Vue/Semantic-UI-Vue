@@ -5,14 +5,14 @@ describe('FeedUser', () => {
   it('should create a SUI FeedUser', () => {
     const user = shallow(FeedUser);
     expect(user.is('a')).to.equal(true);
-    expect(user.hasClass('user')).to.equal(true);
+    expect(user.classes()).to.include('user');
     expect(user.text()).to.equal('');
   });
 
   it('should create a SUI FeedUser with content', () => {
     const user = shallow(FeedUser, { propsData: { content: 'Elliot' } });
     expect(user.is('a')).to.equal(true);
-    expect(user.hasClass('user')).to.equal(true);
+    expect(user.classes()).to.include('user');
     expect(user.text()).to.equal('Elliot');
   });
 
@@ -26,14 +26,14 @@ describe('FeedUser', () => {
       },
     });
     expect(user.is('a')).to.equal(true);
-    expect(user.hasClass('user')).to.equal(true);
+    expect(user.classes()).to.include('user');
     expect(user.text()).to.equal('Only render this');
   });
 
   it('should create a SUI FeedUser with default slot', () => {
     const user = shallow(FeedUser, { slots: { default: '<span>Hera</span>' } });
     expect(user.is('a')).to.equal(true);
-    expect(user.hasClass('user')).to.equal(true);
+    expect(user.classes()).to.include('user');
     expect(user.text()).to.equal('Hera');
   });
 });

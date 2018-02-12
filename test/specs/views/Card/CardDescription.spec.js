@@ -5,7 +5,7 @@ describe('CardDescription', () => {
   it('should create a standalone SUI CardDescription', () => {
     const cardDescription = shallow(CardDescription);
     expect(cardDescription.is('div')).to.equal(true);
-    expect(cardDescription.hasClass('description')).to.equal(true);
+    expect(cardDescription.classes()).to.include('description');
     expect(cardDescription.text()).to.equal('');
   });
 
@@ -16,7 +16,7 @@ describe('CardDescription', () => {
       },
     });
     expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.hasClass('description')).to.equal(true);
+    expect(cardContent.classes()).to.include('description');
     expect(cardContent.text()).to.equal('Default slot');
   });
 });
