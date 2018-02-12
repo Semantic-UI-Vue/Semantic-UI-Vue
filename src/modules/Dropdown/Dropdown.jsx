@@ -35,7 +35,7 @@ export default {
     options: {
       type: Array,
       description: 'Array of SuiDropdownItem props e.g. `{ text: \'\', value: \'\' }`',
-      //required: true,
+      // required: true,
     },
     placeholder: {
       type: String,
@@ -69,7 +69,7 @@ export default {
     filteredOptions() {
       const re = new RegExp(escapeRegExp(this.filter), 'i');
       return this.options.filter((option) => {
-        if (!option.text.match(re)) {
+        if (!re.test(option.text)) {
           return false;
         }
 
