@@ -163,14 +163,22 @@ export default {
     },
   },
   mounted() {
-    document.body.addEventListener('click', this.closeMenu);
+    document.body.addEventListener('click', this.closeMenu, true);
   },
   destroyed() {
     document.body.removeEventListener('click', this.closeMenu);
   },
   methods: {
-    closeMenu() {
-      this.open = false;
+    closeMenu(e) {
+      if (
+        e.target !== this.$el &&
+        e.target !== this.$refs.icon &&
+        e.target !== this.$refs.search &&
+        e.target !== this.$refs.text &&
+        e.target !== this.menu
+      ) {
+        this.open = false;
+      }
     },
     deselectItem(event) {
       const selectedValue = JSON.parse(event.currentTarget.dataset.value);
@@ -207,6 +215,7 @@ export default {
       ) : selectedValue;
       this.filter = '';
       this.$emit('input', newValue);
+      if (!this.multiple) this.open = false;
     },
     updateFilter(event) {
       this.filter = event.target.value;
