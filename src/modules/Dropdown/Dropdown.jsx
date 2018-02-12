@@ -76,7 +76,7 @@ export default {
     filteredOptions() {
       const re = new RegExp(escapeRegExp(this.filter), 'i');
       return this.options.filter((option) => {
-        if (!re.test(option.text)) {
+        if (this.filter && !re.test(option.text)) {
           return false;
         }
 
