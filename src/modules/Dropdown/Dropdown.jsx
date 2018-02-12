@@ -152,6 +152,7 @@ export default {
         const option = this.findOption(value);
         return (
           <Label>
+            {option.icon && <Icon name={option.icon} />}
             {option.image && <Image {...{ props: option.image }} />}
             {option.flag && <Flag name={option.flag} />}
             {option.text}
@@ -186,6 +187,7 @@ export default {
       const value = typeof text === 'object' ? text : { text };
 
       return <div ref="text" class={className} role="alert" aria-live="polite">
+        {value.icon && <Icon name={value.icon} />}
         {value.image && <Image {...{ props: value.image }} />}
         {value.flag && <Flag name={value.flag} />}
         {value}

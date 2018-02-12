@@ -1,6 +1,7 @@
 import { classes, getChildProps, getElementType } from '../../lib';
 import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
+import Icon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiDropdownItem',
@@ -12,6 +13,10 @@ export default {
     image: {
       type: Object,
       description: 'Shorthand for sui-image.',
+    },
+    icon: {
+      type: String,
+      description: 'Shorthand for sui-icon.',
     },
     text: {
       type: String,
@@ -38,8 +43,9 @@ export default {
           'item',
         )}
       >
+        {this.icon && <Icon name={this.icon} />}
         {this.image && <Image {...{ props: this.image }} />}
-        {this.flag && <Flag name={this.flag}/>}
+        {this.flag && <Flag name={this.flag} />}
         {this.text || this.$slots.default}
       </ElementType>
     );
