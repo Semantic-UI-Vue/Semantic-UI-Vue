@@ -14,7 +14,7 @@ export default {
     disabled: Boolean,
     selectable: Boolean,
     width: Number,
-    verticalAlign: Enum.VerticalAlign,
+    verticalAlign: Enum.VerticalAlign(),
   },
   render() {
     const ElementType = getElementType(this, 'th');

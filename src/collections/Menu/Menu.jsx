@@ -7,7 +7,7 @@ export default {
   components: { SuiMenuItem },
   props: {
     activeIndex: Number,
-    color: Enum.Color,
+    color: Enum.Color(),
     compact: Boolean,
     fixed: Boolean,
     icon: Boolean,

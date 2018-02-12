@@ -4,7 +4,7 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiIcon',
   props: {
-    color: Enum.Color,
+    color: Enum.Color(),
     disabled: Boolean,
     fitted: Boolean,
     name: {
@@ -12,7 +12,7 @@ export default {
       required: true,
     },
     loading: Boolean,
-    size: Enum.Size,
+    size: Enum.Size(),
   },
   render() {
     const ElementType = getElementType(this, 'i');

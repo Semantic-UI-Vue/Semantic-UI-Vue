@@ -26,7 +26,7 @@ export default {
     stackable: Boolean,
     selectable: Boolean,
     inverted: Boolean,
-    color: Enum.Color,
+    color: Enum.Color(),
     size: Enum(['small', 'large']),
     singleLine: Boolean,
     columns: Number,

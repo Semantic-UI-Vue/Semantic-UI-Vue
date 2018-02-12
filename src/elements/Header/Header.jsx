@@ -4,13 +4,13 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiHeader',
   props: {
-    color: Enum.Color,
+    color: Enum.Color(),
     content: String,
     dividing: Boolean,
     floated: Enum(['left', 'right']),
     icon: Boolean,
     image: Boolean,
-    size: Enum.Size,
+    size: Enum.Size(),
     sub: Boolean,
   },
   render() {

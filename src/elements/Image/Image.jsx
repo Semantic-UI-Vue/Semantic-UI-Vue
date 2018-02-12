@@ -4,6 +4,10 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiImage',
   props: {
+    avatar: {
+      type: Boolean,
+      description: 'An image may be formatted to appear inline with text as an avatar.',
+    },
     disabled: Boolean,
     hidden: Boolean,
     size: Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
@@ -19,6 +23,7 @@ export default {
     const ElementType = getElementType(this, 'div');
     const classNames = classes(
       'ui',
+      this.avatar && 'avatar',
       this.size,
       this.shape,
       this.spaced !== true && this.spaced,
