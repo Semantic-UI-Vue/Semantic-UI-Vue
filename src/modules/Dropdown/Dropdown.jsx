@@ -32,6 +32,11 @@ export default {
       type: Boolean,
       description: 'A selection dropdown can allow multiple selections.',
     },
+    maxSelections: {
+      type: Number,
+      default: Infinity,
+      description: 'Maximum possible selections when using multiple selection',
+    },
     options: {
       type: Array,
       description: 'Array of SuiDropdownItem props e.g. `{ text: \'\', value: \'\' }`',
@@ -73,7 +78,13 @@ export default {
           return false;
         }
 
-        if (this.multiple && this.multipleValue.indexOf(option.value) > -1) {
+        if (
+          this.multiple &&
+          (
+            this.multipleValue.length >= this.maxSelections ||
+            this.multipleValue.indexOf(option.value) > -1
+          )
+        ) {
           return false;
         }
 
@@ -82,6 +93,11 @@ export default {
     },
     message() {
       if (this.filteredOptions.length === 0) {
+        if (this.multiple) {
+          if (this.multipleValue.length >= this.maxSelections) {
+            return `Max ${this.maxSelections} selections`;
+          }
+        }
         if (this.filter) {
           return 'No results found';
         }
