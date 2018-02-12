@@ -34,8 +34,8 @@ export default {
     },
     options: {
       type: Array,
-      description: "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
-      required: true,
+      description: 'Array of SuiDropdownItem props e.g. `{ text: \'\', value: \'\' }`',
+      //required: true,
     },
     placeholder: {
       type: String,
@@ -107,7 +107,6 @@ export default {
           aria-autocomplete="list"
           autoComplete="off"
           class="search"
-          onClick={this.openMenu}
           onInput={this.updateFilter}
           ref="search"
           tabindex="0"
@@ -138,9 +137,7 @@ export default {
         (this.multiple && this.value && this.value.length) ||
         (!this.multiple && this.value);
 
-      const text = shouldHideText ?
-        this.findOption(this.value) :
-        defaultText;
+      const text = shouldHideText ? this.findOption(this.value) : defaultText;
 
       if (!text) {
         return null;
@@ -155,6 +152,16 @@ export default {
       return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
     },
   },
+  watch: {
+    open: {
+      handler(newVal) {
+        if (this.menu) {
+          this.menu.setOpen(newVal);
+        }
+      },
+      immediate: true,
+    },
+  },
   mounted() {
     document.body.addEventListener('click', this.closeMenu);
   },
@@ -163,9 +170,6 @@ export default {
   },
   methods: {
     closeMenu() {
-      if (this.menu) {
-        this.menu.setOpen(false);
-      }
       this.open = false;
     },
     deselectItem(event) {
@@ -175,20 +179,22 @@ export default {
     findOption(value) {
       return this.options.find(option => option.value === value);
     },
-    openMenu(e) {
+    toggleMenu(e) {
       if (
         e.target === this.$el ||
         e.target === this.$refs.icon ||
         e.target === this.$refs.search ||
         e.target === this.$refs.text
       ) {
-        if (this.search && e.target !== this.$refs.search) {
-          this.$refs.search.focus();
-        }
-
         e.stopPropagation();
-        this.menu.setOpen(true);
-        this.open = true;
+
+        if (this.search) {
+          if (!this.open && e.target !== this.$refs.search) {
+            this.$refs.search.focus();
+          }
+          if (this.open && e.target === this.$refs.search) return;
+        }
+        this.open = !this.open;
       }
     },
     register(menu) {
@@ -227,13 +233,13 @@ export default {
           this.open && 'active visible',
           'dropdown',
         )}
-        nativeOnClick={this.openMenu}
-        onClick={this.openMenu}
+        nativeOnClick={this.toggleMenu}
+        onClick={this.toggleMenu}
       >
         {this.selectedNodes}
         {this.searchNode}
         {this.textNode}
-        <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
+        <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`}/>
         {this.menuNode}
       </ElementType>
     );
