@@ -80,6 +80,14 @@ export default {
         return true;
       });
     },
+    message() {
+      if (this.filteredOptions.length === 0) {
+        if (this.filter) {
+          return 'No results found';
+        }
+      }
+      return '';
+    },
     menuNode() {
       if (this.$slots.default) {
         return this.$slots.default;
@@ -87,14 +95,15 @@ export default {
 
       return (
         <DropdownMenu>
-          {this.filteredOptions.map(option => (
-            <DropdownItem
-              {...{ props: option }}
-              selected={this.value === option.value}
-              data-value={JSON.stringify(option.value)}
-              nativeOnClick={this.selectItem}
-            />
-          ))}
+          {
+            this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map(option => (
+              <DropdownItem
+                {...{ props: option }}
+                selected={this.value === option.value}
+                data-value={JSON.stringify(option.value)}
+                nativeOnClick={this.selectItem}
+              />
+            ))}
         </DropdownMenu>
       );
     },
