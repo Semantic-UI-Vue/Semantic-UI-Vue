@@ -4,6 +4,8 @@ import Icon from '../../elements/Icon/Icon';
 import Label from '../../elements/Label/Label';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
+import Flag from '../../elements/Flag/Flag';
+import Image from '../../elements/Image/Image';
 
 export default {
   name: 'SuiDropdown',
@@ -175,7 +177,13 @@ export default {
         'text',
       );
 
-      return <div ref="text" class={className} role="alert" aria-live="polite">{text}</div>;
+      const value = typeof text === 'object' ? text : { text };
+
+      return <div ref="text" class={className} role="alert" aria-live="polite">
+        {value.image && <Image {...{ props: value.image }} />}
+        {value.flag && <Flag name={value.flag}/>}
+        {value}
+      </div>;
     },
   },
   watch: {
@@ -223,7 +231,6 @@ export default {
           }
           if (this.open && e.target === this.$refs.search) return;
         }
-        console.log('Toggle');
         this.open = !this.open;
       }
     },
