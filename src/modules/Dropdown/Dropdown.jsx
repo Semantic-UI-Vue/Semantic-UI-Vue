@@ -148,16 +148,21 @@ export default {
         return null;
       }
 
-      return this.multipleValue.map(value => (
-        <Label>
-          {this.findOption(value)}
-          <Icon
-            name="delete"
-            data-value={JSON.stringify(value)}
-            nativeOnClick={this.deselectItem}
-          />
-        </Label>
-      ));
+      return this.multipleValue.map((value) => {
+        const option = this.findOption(value);
+        return (
+          <Label>
+            {option.image && <Image {...{ props: option.image }} />}
+            {option.flag && <Flag name={option.flag} />}
+            {option.text}
+            <Icon
+              name="delete"
+              data-value={JSON.stringify(value)}
+              nativeOnClick={this.deselectItem}
+            />
+          </Label>
+        );
+      });
     },
     textNode() {
       const defaultText = this.text || this.placeholder;
