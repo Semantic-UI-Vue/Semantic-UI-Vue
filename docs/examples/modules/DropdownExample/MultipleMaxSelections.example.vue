@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'SearchSelectionExample',
+  name: 'MultipleMaxSelections',
   data() {
     return {
       current: null,

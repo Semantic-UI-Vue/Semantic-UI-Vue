@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'SelectionExample',
+  name: 'SelectionWithIcons',
   data() {
     return {
       current: null,
