@@ -163,8 +163,8 @@ export default {
               <DropdownItem
                 {...{ props: option }}
                 selected={this.value === option.value}
-                data-value={JSON.stringify(option.value)}
-                nativeOnClick={this.selectItem}
+                // data-value={JSON.stringify(option.value)}
+                nativeOnClick={() => this.selectItem(option.value)}
               />
             ))}
         </DropdownMenu>
@@ -203,8 +203,8 @@ export default {
             {option.text}
             <Icon
               name="delete"
-              data-value={JSON.stringify(value)}
-              nativeOnClick={this.deselectItem}
+              // data-value={JSON.stringify(value)}
+              nativeOnClick={() => this.deselectItem(value)}
             />
           </Label>
         );
@@ -260,8 +260,8 @@ export default {
         this.setOpen(false);
       }
     },
-    deselectItem(event) {
-      const selectedValue = JSON.parse(event.currentTarget.dataset.value);
+    deselectItem(selectedValue) {
+      // const selectedValue = JSON.parse(event.currentTarget.dataset.value);
       this.$emit('input', this.multipleValue.filter(value => value !== selectedValue));
     },
     findOption(value) {
@@ -286,8 +286,8 @@ export default {
     register(menu) {
       this.menu = menu;
     },
-    selectItem(event) {
-      const selectedValue = JSON.parse(event.currentTarget.dataset.value);
+    selectItem(selectedValue) {
+      // const selectedValue = JSON.parse(event.currentTarget.dataset.value);
       if (this.maximumValuesSelected) return;
       const newValue = this.multiple ? (
         this.multipleValue.filter(value => value !== selectedValue).concat([selectedValue])
