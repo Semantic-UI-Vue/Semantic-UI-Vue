@@ -3,6 +3,7 @@ import DropdownButton from './DropdownButton.example';
 import DropdownFloating from './DropdownFloating.example';
 import FriendSelection from './FriendSelection.example';
 import MultipleSelection from './MultipleSelection.example';
+import MultipleMaxSelections from './MultipleMaxSelections.example';
 import MultipleSearchSelection from './MultipleSearchSelection.example';
 import Selection from './Selection.example';
 import SearchDropdown from './SearchDropdown.example';
@@ -48,6 +49,11 @@ export default [
         title: 'Multiple Selection',
         description: 'A selection dropdown can allow multiple selections.',
         component: MultipleSelection,
+      },
+      {
+        title: 'Maximum Selections',
+        description: 'Using `maxSelections` prop lets you force a maximum number of selections.',
+        component: MultipleMaxSelections,
       },
       {
         title: 'Multiple Search Selection',
