@@ -6,6 +6,7 @@ import MultipleSelection from './MultipleSelection.example';
 import MultipleMaxSelections from './MultipleMaxSelections.example';
 import MultipleSearchSelection from './MultipleSearchSelection.example';
 import Selection from './Selection.example';
+import SelectionWithIcons from './SelectionWithIcons.example';
 import SearchDropdown from './SearchDropdown.example';
 import SearchSelection from './SearchSelection.example';
 import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
@@ -35,7 +36,12 @@ export default [
         component: Selection,
       },
       {
+        description: 'Items can contain images',
         component: FriendSelection,
+      },
+      {
+        description: 'Items can contain icons',
+        component: SelectionWithIcons,
       },
       {
         title: 'Search Selection',
