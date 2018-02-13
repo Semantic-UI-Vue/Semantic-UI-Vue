@@ -66,6 +66,19 @@ describe('Dropdown', () => {
     });
   });
 
+  it('should not close the menu when clicking on search input', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        search: true,
+        options: [{ text: 'foo', value: 1 }],
+      },
+    });
+
+    wrapper.vm.setOpen(true);
+    wrapper.find('input.search').trigger('click');
+    expect(wrapper.vm.open).to.equal(true);
+  });
+
   it('should not close the menu when clicking on option when multiple=true', () => {
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
