@@ -1,35 +1,28 @@
 import { getEventAnimationEnd, classes, getChildProps, getElementType } from '../../lib';
 
-const states = {
+const visualStates = {
   closed: 'closed',
   opening: 'opening',
   open: 'open',
   closing: 'closing',
 };
 
-const animation = 'slide down';
-
-function buildAnimation(name, direction) {
-  return `transition animating ${name} ${direction ? 'in' : 'out'} visible`;
-}
-
 export default {
   name: 'SuiDropdownMenu',
   data() {
     return {
       open: false,
-      visualState: states.closed,
+      visualState: visualStates.closed,
     };
   },
   computed: {
-    classes() {
+    animation() {
+      const { animation } = this.$parent;
       switch (this.visualState) {
-        case states.opening:
-          return `${buildAnimation(animation, true)} active`;
-        case states.open:
-          return 'visible active';
-        case states.closing:
-          return buildAnimation(animation, false);
+        case visualStates.opening:
+          return `animating ${animation} in visible`;
+        case visualStates.closing:
+          return `animating ${animation} out visible`;
         default:
           return '';
       }
@@ -37,7 +30,7 @@ export default {
   },
   watch: {
     open(newValue) {
-      this.visualState = newValue ? states.opening : states.closing;
+      this.visualState = newValue ? visualStates.opening : visualStates.closing;
     },
   },
   mounted() {
@@ -58,7 +51,7 @@ export default {
   },
   methods: {
     onAnimationEnded() {
-      this.visualState = this.open ? states.open : states.closed;
+      this.visualState = this.open ? visualStates.open : visualStates.closed;
     },
     setOpen(open) {
       this.open = open;
@@ -69,7 +62,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
-        class={classes('menu', this.open && 'visible', 'transition', this.classes)}
+        class={classes('menu', this.open && 'visible active', 'transition', this.animation)}
       >
         {this.$slots.default}
       </ElementType>
