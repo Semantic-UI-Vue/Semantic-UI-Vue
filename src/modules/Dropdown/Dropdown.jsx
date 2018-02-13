@@ -163,8 +163,7 @@ export default {
               <DropdownItem
                 {...{ props: option }}
                 selected={this.value === option.value}
-                // data-value={JSON.stringify(option.value)}
-                nativeOnClick={() => this.selectItem(option.value)}
+                onSelect={this.selectItem}
               />
             ))}
         </DropdownMenu>
@@ -203,7 +202,6 @@ export default {
             {option.text}
             <Icon
               name="delete"
-              // data-value={JSON.stringify(value)}
               nativeOnClick={() => this.deselectItem(value)}
             />
           </Label>

@@ -32,6 +32,11 @@ export default {
       description: 'Is item selected',
     },
   },
+  methods: {
+    select() {
+      this.$emit('select', this.value);
+    },
+  },
   render() {
     const ElementType = getElementType(this);
     return (
@@ -42,6 +47,7 @@ export default {
           this.selected && 'active selected',
           'item',
         )}
+        onClick={this.select}
       >
         {this.icon && <Icon name={this.icon} />}
         {this.image && <Image {...{ props: this.image }} />}
