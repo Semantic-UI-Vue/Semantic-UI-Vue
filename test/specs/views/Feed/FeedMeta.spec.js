@@ -5,23 +5,23 @@ describe('FeedMeta', () => {
   it('should create a SUI FeedMeta', () => {
     const meta = shallow(FeedMeta);
     expect(meta.is('div')).to.equal(true);
-    expect(meta.hasClass('meta')).to.equal(true);
+    expect(meta.classes()).to.include('meta');
     expect(meta.text()).to.equal('');
   });
 
   it('should create a SUI FeedMeta with content', () => {
     const meta = shallow(FeedMeta, { propsData: { content: 'Primary meta content' } });
     expect(meta.is('div')).to.equal(true);
-    expect(meta.hasClass('meta')).to.equal(true);
+    expect(meta.classes()).to.include('meta');
     expect(meta.text()).to.equal('Primary meta content');
   });
 
   it('should create a SUI FeedMeta with FeedLike', () => {
     const meta = shallow(FeedMeta, { propsData: { like: '4 likes' } });
     expect(meta.is('div')).to.equal(true);
-    expect(meta.hasClass('meta')).to.equal(true);
+    expect(meta.classes()).to.include('meta');
     expect(meta.contains('a')).to.equal(true);
-    expect(meta.find('a').hasClass('like')).to.equal(true);
+    expect(meta.find('a').classes()).to.include('like');
     expect(meta.find('a').text()).to.equal('4 likes');
   });
 
@@ -35,14 +35,14 @@ describe('FeedMeta', () => {
       },
     });
     expect(meta.is('div')).to.equal(true);
-    expect(meta.hasClass('meta')).to.equal(true);
+    expect(meta.classes()).to.include('meta');
     expect(meta.text()).to.equal('Only render this');
   });
 
   it('should create a SUI FeedMeta with default slot', () => {
     const meta = shallow(FeedMeta, { slots: { default: '<span>Meta text</span>' } });
     expect(meta.is('div')).to.equal(true);
-    expect(meta.hasClass('meta')).to.equal(true);
+    expect(meta.classes()).to.include('meta');
     expect(meta.text()).to.equal('Meta text');
   });
 });
