@@ -1,6 +1,7 @@
 <template lang="html">
   <sui-dropdown
     multiple
+    fluid
     :options="skills"
     placeholder="Skills"
     search
