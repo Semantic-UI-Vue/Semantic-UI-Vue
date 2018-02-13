@@ -37,6 +37,32 @@ describe('Dropdown', () => {
     expect(openSpy).to.have.been.calledWith(false);
   });
 
+  it('should close the menu when clicking on option', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        options: [{ text: 'foo', value: 1 }],
+      },
+    });
+    wrapper.vm.setOpen(true);
+    wrapper.find(DropdownItem).trigger('click');
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.vm.open).to.equal(false``);
+    });
+  });
+
+  it('should not close the menu when clicking on option when multiple=true', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        multiple: true,
+        options: [{ text: 'foo', value: 1 }],
+      },
+    });
+
+    wrapper.vm.setOpen(true);
+    wrapper.find(DropdownItem).trigger('click');
+    expect(wrapper.vm.open).to.equal(true);
+  });
+
   it('should remove handler', () => {
     const openSpy = sinon.spy();
     const wrapper = shallow(DropdownWithRequired);
@@ -62,7 +88,17 @@ describe('Dropdown', () => {
   it('should have icons, flags and images in option', () => {
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
-        options: [{ text: 'foo', value: 1, flag: 'cn', icon: 'question', image: { src: '/test' } }],
+        options: [
+          {
+            text: 'foo',
+            value: 1,
+            flag: 'cn',
+            icon: 'question',
+            image: {
+              src: '/test',
+            },
+          },
+        ],
       },
     });
     const item = wrapper.find(DropdownItem);
@@ -130,5 +166,83 @@ describe('Dropdown', () => {
 
     selectedOptions.at(0).find('i.icon.delete').trigger('click');
     expect(wrapper.emitted().input[2][0]).to.deep.equal([2]);
+  });
+
+  it('should have icons, flags and images in selected text', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        options: [
+          {
+            text: 'foo',
+            value: 1,
+            flag: 'cn',
+            icon: 'question',
+            image: {
+              src: '/test',
+            },
+          },
+        ],
+      },
+    });
+    wrapper.vm.$on('input', (value) => {
+      wrapper.setProps({ value });
+    });
+
+    wrapper.find(DropdownItem).trigger('click');
+
+    const text = wrapper.find('div.text');
+
+    const icon = text.find(Icon);
+    expect(icon.is(Icon)).to.equal(true);
+    const flag = text.find(Flag);
+    expect(flag.is(Flag)).to.equal(true);
+    const image = text.find(Image);
+    expect(image.is(Image)).to.equal(true);
+  });
+
+  it('should have icons, flags and images in selected options', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        multiple: true,
+        options: [
+          {
+            text: 'foo',
+            value: 1,
+            flag: 'cn',
+            icon: 'question',
+            image: {
+              src: '/test',
+            },
+          },
+        ],
+      },
+    });
+    wrapper.vm.$on('input', (value) => {
+      wrapper.setProps({ value });
+    });
+
+    wrapper.find(DropdownItem).trigger('click');
+
+    const label = wrapper.find(Label);
+
+    const icon = label.find(Icon);
+    expect(icon.is(Icon)).to.equal(true);
+    const flag = label.find(Flag);
+    expect(flag.is(Flag)).to.equal(true);
+    const image = label.find(Image);
+    expect(image.is(Image)).to.equal(true);
+  });
+
+  it('should filter options', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        options: [{ text: 'foo' }, { text: 'bar' }, { text: 'baz' }],
+      },
+    });
+    wrapper.setData({ filter: 'ba' });
+    expect(wrapper.vm.filteredOptions).to.deep.equal([{ text: 'bar' }, { text: 'baz' }]);
+    wrapper.setData({ filter: 'blah' });
+    expect(wrapper.vm.filteredOptions).to.deep.equal([]);
+    expect(wrapper.vm.message).to.equal('No results found');
   });
 });
