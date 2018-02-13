@@ -108,10 +108,9 @@ export default {
       } else if (this.menuDirection.above) {
         // Dropdown cannot fit below, opening upward
         return false;
-      } else {
-        // Dropdown cannot fit in either direction, favoring downward
-        return true;
       }
+      // Dropdown cannot fit in either direction, favoring downward
+      return true;
     },
     animation() {
       return `${animations.name} ${(this.downward ? animations.down : animations.up)}`;
@@ -237,29 +236,25 @@ export default {
       </div>;
     },
   },
-  watch: {
-    open: {
-      handler(newVal) {
-        if (this.menu) {
-          this.menu.setOpen(newVal);
-        }
-      },
-      immediate: true,
-    },
-  },
   mounted() {
     document.body.addEventListener('click', this.closeMenu, true);
   },
   destroyed() {
-    document.body.removeEventListener('click', this.closeMenu);
+    document.body.removeEventListener('click', this.closeMenu, true);
   },
   methods: {
+    setOpen(value = true) {
+      this.open = value;
+      if (this.menu) {
+        this.menu.setOpen(value);
+      }
+    },
     closeMenu(e) {
       if (
         e.path.indexOf(this.$el) === -1 ||
         !(this.multiple || e.path.indexOf(this.menu.$el) === -1)
       ) {
-        this.open = false;
+        this.setOpen(false);
       }
     },
     deselectItem(event) {
@@ -282,7 +277,7 @@ export default {
           }
           if (this.open && e.target === this.$refs.search) return;
         }
-        this.open = !this.open;
+        this.setOpen(!this.open);
       }
     },
     register(menu) {
@@ -305,7 +300,7 @@ export default {
       this.$emit('input', this.multipleValue);
     },
     calculateMenuDirection() {
-      if (process.server || !this.menu || !this.open) return;
+      if (process.server || !this.menu || !this.menu.$el || !this.open) return;
 
       this.menu.$el.classList.add('loading');
       this.$el.classList.remove('upward');
@@ -321,7 +316,6 @@ export default {
           height: this.menu.$el.offsetHeight,
         },
       };
-      console.log(c);
       this.menu.$el.classList.remove('loading');
       this.menuDirection = {
         above: c.menu.offset.top - c.menu.height >= 0,
