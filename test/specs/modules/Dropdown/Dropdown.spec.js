@@ -46,7 +46,7 @@ describe('Dropdown', () => {
     wrapper.vm.setOpen(true);
     wrapper.find(DropdownItem).trigger('click');
     wrapper.vm.$nextTick(() => {
-      expect(wrapper.vm.open).to.equal(false``);
+      expect(wrapper.vm.open).to.equal(false);
     });
   });
 
@@ -139,9 +139,9 @@ describe('Dropdown', () => {
     const options = wrapper.findAll(DropdownItem);
 
     options.at(0).trigger('click');
-    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
-    options.at(1).trigger('click');
-    expect(wrapper.emitted().input[1][0]).to.deep.equal([1, 2]);
+    expect(wrapper.emitted('input')[0][0]).to.deep.equal([1]);
+    options.at(0).trigger('click');
+    expect(wrapper.emitted('input')[1][0]).to.deep.equal([1, 2]);
   });
 
   it('should deselect option from selected', () => {
@@ -159,7 +159,7 @@ describe('Dropdown', () => {
     const options = wrapper.findAll(DropdownItem);
 
     options.at(0).trigger('click');
-    options.at(1).trigger('click');
+    options.at(0).trigger('click');
     expect(wrapper.emitted().input[1][0]).to.deep.equal([1, 2]);
 
     const selectedOptions = wrapper.findAll(Label);
