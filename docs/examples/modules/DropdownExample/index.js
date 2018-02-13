@@ -1,4 +1,5 @@
 import Dropdown from './Dropdown.example';
+import DropdownDirection from './DropdownDirection.example';
 import DropdownButton from './DropdownButton.example';
 import DropdownFloating from './DropdownFloating.example';
 import FriendSelection from './FriendSelection.example';
@@ -19,6 +20,12 @@ export default [
         title: 'Dropdown',
         description: 'A dropdown.',
         component: Dropdown,
+      },
+      {
+        title: 'Dropdown opening direction',
+        info: 'By default, the dropdown menu opens downward, if the menu does not fit in the screen - it will open upward, but you can force set direction by specifying `direction` prop',
+        description: 'You can set the direction of opening dropdown menu',
+        component: DropdownDirection,
       },
       {
         title: 'Button',
