@@ -50,6 +50,22 @@ describe('Dropdown', () => {
     });
   });
 
+  it('should close the menu when re-clicking on dropdown head', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        placeholder: 'foo',
+        options: [{ text: 'foo', value: 1 }],
+      },
+    });
+    wrapper.vm.setOpen();
+
+    wrapper.find('.text').trigger('click');
+
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.vm.open).to.equal(false);
+    });
+  });
+
   it('should not close the menu when clicking on option when multiple=true', () => {
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
@@ -160,12 +176,33 @@ describe('Dropdown', () => {
 
     options.at(0).trigger('click');
     options.at(0).trigger('click');
-    expect(wrapper.emitted().input[1][0]).to.deep.equal([1, 2]);
+    expect(wrapper.emitted('input')[1][0]).to.deep.equal([1, 2]);
 
     const selectedOptions = wrapper.findAll(Label);
 
     selectedOptions.at(0).find('i.icon.delete').trigger('click');
-    expect(wrapper.emitted().input[2][0]).to.deep.equal([2]);
+    expect(wrapper.emitted('input')[2][0]).to.deep.equal([2]);
+  });
+
+  it('should not select more than max-selections', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        multiple: true,
+        maxSelections: 1,
+        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
+      },
+    });
+
+    wrapper.vm.$on('input', (value) => {
+      wrapper.setProps({ value });
+    });
+
+    const options = wrapper.findAll(DropdownItem);
+
+    options.at(0).trigger('click');
+    expect(wrapper.emitted('input')[0][0]).to.deep.equal([1]);
+    options.at(0).trigger('click');
+    expect(wrapper.emitted('input').length).to.equal(1);
   });
 
   it('should have icons, flags and images in selected text', () => {
@@ -236,13 +273,44 @@ describe('Dropdown', () => {
   it('should filter options', () => {
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
+        search: true,
         options: [{ text: 'foo' }, { text: 'bar' }, { text: 'baz' }],
       },
     });
-    wrapper.setData({ filter: 'ba' });
+    const input = wrapper.find('input.search');
+    input.element.value = 'ba';
+    input.trigger('input');
     expect(wrapper.vm.filteredOptions).to.deep.equal([{ text: 'bar' }, { text: 'baz' }]);
-    wrapper.setData({ filter: 'blah' });
+    input.element.value = 'blah';
+    input.trigger('input');
     expect(wrapper.vm.filteredOptions).to.deep.equal([]);
     expect(wrapper.vm.message).to.equal('No results found');
+  });
+
+  it('should delete option from selected when pressing backspace in empty search input', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        search: true,
+        multiple: true,
+        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }, { text: 'baz', value: 3 }],
+      },
+    });
+
+    wrapper.vm.$on('input', (value) => {
+      wrapper.setProps({ value });
+    });
+
+    const options = wrapper.findAll(DropdownItem);
+
+    options.at(0).trigger('click');
+    options.at(0).trigger('click');
+
+    expect(wrapper.vm.value).to.deep.equal([1, 2]);
+
+    wrapper.find('input.search').trigger('keydown', {
+      keyCode: 8,
+    });
+
+    expect(wrapper.vm.value).to.deep.equal([1]);
   });
 });
