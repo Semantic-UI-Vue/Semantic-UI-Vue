@@ -20,14 +20,6 @@ export default [
         component: Dropdown,
       },
       {
-        title: 'Selection',
-        description: 'A dropdown can be used to select between choices in a form.',
-        component: Selection,
-      },
-      {
-        component: FriendSelection,
-      },
-      {
         title: 'Button',
         description: 'A dropdown button style and icon.',
         component: DropdownButton,
@@ -36,6 +28,14 @@ export default [
         title: 'Floating',
         description: 'A dropdown menu can appear to be floating below an element.',
         component: DropdownFloating,
+      },
+      {
+        title: 'Selection',
+        description: 'A dropdown can be used to select between choices in a form.',
+        component: Selection,
+      },
+      {
+        component: FriendSelection,
       },
       {
         title: 'Search Selection',
