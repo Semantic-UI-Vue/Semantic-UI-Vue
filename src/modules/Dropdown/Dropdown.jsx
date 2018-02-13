@@ -98,6 +98,9 @@ export default {
     };
   },
   computed: {
+    maximumValuesSelected() {
+      return this.multipleValue.length >= this.maxSelections;
+    },
     downward() {
       if (this.direction !== directions.auto) return this.direction === directions.downward;
       this.calculateMenuDirection();
@@ -125,7 +128,7 @@ export default {
         if (
           this.multiple &&
           (
-            this.multipleValue.length >= this.maxSelections ||
+            this.maximumValuesSelected ||
             this.multipleValue.indexOf(option.value) > -1
           )
         ) {
@@ -138,7 +141,7 @@ export default {
     message() {
       if (this.filteredOptions.length === 0) {
         if (this.multiple) {
-          if (this.multipleValue.length >= this.maxSelections) {
+          if (this.maximumValuesSelected) {
             return `Max ${this.maxSelections} selections`;
           }
         }
@@ -285,6 +288,7 @@ export default {
     },
     selectItem(event) {
       const selectedValue = JSON.parse(event.currentTarget.dataset.value);
+      if (this.maximumValuesSelected) return;
       const newValue = this.multiple ? (
         this.multipleValue.filter(value => value !== selectedValue).concat([selectedValue])
       ) : selectedValue;
