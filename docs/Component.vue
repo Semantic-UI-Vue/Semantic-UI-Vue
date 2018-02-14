@@ -101,7 +101,7 @@
                 </sui-table-cell>
                 <sui-table-cell>{{prop.type}}</sui-table-cell>
                 <sui-table-cell>
-                  {{prop.description}}
+                  <div v-markdown="prop.description"></div>
                   <div v-if="prop.choices">
                     <strong>Enums: </strong>
                     <code
@@ -241,11 +241,5 @@ export default {
 
 .component-container {
   max-width: 1200px;
-}
-
-code:after,
-code:before {
-  letter-spacing: -0.2em;
-  content: "\00a0";
 }
 </style>

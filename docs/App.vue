@@ -27,4 +27,10 @@ code {
   border-radius: 3px;
   overflow-x: auto;
 }
+
+code:after,
+code:before {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
 </style>
