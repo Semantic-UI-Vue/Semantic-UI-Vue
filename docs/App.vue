@@ -18,7 +18,7 @@ html {
 }
 
 code {
-  padding: 0;
+  padding: 0.3em;
   padding-top: 0.1em;
   padding-bottom: 0.2em;
   margin: 0;
@@ -26,11 +26,5 @@ code {
   background-color: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
   overflow-x: auto;
-}
-
-code:after,
-code:before {
-  letter-spacing: -0.2em;
-  content: "\00a0";
 }
 </style>
