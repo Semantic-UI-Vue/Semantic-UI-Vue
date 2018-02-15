@@ -68,7 +68,7 @@ export default {
           checked={this.isChecked}
           onChange={this.setValue}
         />
-        <label onClick={() => this.$refs.input.click()}>{this.label}</label>
+        <label onClick={() => this.$refs.input.click()}>{this.label || this.$slots.default}</label>
       </ElementType>
     );
   },
