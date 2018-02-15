@@ -61,7 +61,7 @@
     </sui-grid-column>
 
     <sui-grid-column v-if="info">
-      <sui-message :info="!!info" :content="info" />
+      <sui-message :info="!!info" v-markdown="info" />
     </sui-grid-column>
 
     <sui-grid-column :class="exampleClass">
