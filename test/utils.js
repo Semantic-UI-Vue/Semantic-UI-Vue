@@ -3,7 +3,7 @@ import { shallow } from 'vue-test-utils';
 export function testClass(Component, props) {
   props.forEach(prop => it(`should have class ${prop}`, () => {
     const wrapper = shallow(Component);
-    expect(wrapper.hasClass(prop)).to.equal(true);
+    expect(wrapper.classes()).to.include(prop);
   }));
 }
 
