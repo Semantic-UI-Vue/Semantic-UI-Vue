@@ -103,7 +103,9 @@ export default {
     downward() {
       if (this.direction !== directions.auto) return this.direction === directions.downward;
       this.calculateMenuDirection();
-      if (this.menuDirection === null) return true;
+      if (this.menuDirection === null) {
+        return true;
+      }
       if (this.menuDirection.below) {
         // Dropdown can fit in context downward'
         return true;
