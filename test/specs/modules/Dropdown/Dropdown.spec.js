@@ -69,9 +69,9 @@ describe('Dropdown', () => {
       },
     });
 
-    wrapper.vm.setOpen(true);
+    wrapper.trigger('click');
     wrapper.find('input.search').trigger('click');
-    expect(wrapper.vm.open).to.equal(true);
+    expect(wrapper.classes()).to.include('visible');
   });
 
   it('should not close the menu when clicking on option when multiple=true', () => {
@@ -82,9 +82,9 @@ describe('Dropdown', () => {
       },
     });
 
-    wrapper.vm.setOpen(true);
+    wrapper.trigger('click');
     wrapper.find(DropdownItem).trigger('click');
-    expect(wrapper.vm.open).to.equal(true);
+    expect(wrapper.classes()).to.include('visible');
   });
 
   it('should remove handler', () => {
@@ -297,11 +297,15 @@ describe('Dropdown', () => {
     const input = wrapper.find('input.search');
     input.element.value = 'ba';
     input.trigger('input');
-    expect(wrapper.vm.filteredOptions).to.deep.equal([{ text: 'bar' }, { text: 'baz' }]);
+    const options = wrapper.findAll(DropdownItem);
+    expect(options.at(0).props().text).to.equal('bar');
+    expect(options.at(1).props().text).to.equal('baz');
     input.element.value = 'blah';
     input.trigger('input');
-    expect(wrapper.vm.filteredOptions).to.deep.equal([]);
-    expect(wrapper.vm.message).to.equal('No results found');
+    const options2 = wrapper.findAll(DropdownItem);
+    expect(options2.exists()).to.equal(false);
+    const message = wrapper.find('.message');
+    expect(message.text()).to.equal('No results found');
   });
 
   it('should delete option from selected when pressing backspace in empty search input', () => {
