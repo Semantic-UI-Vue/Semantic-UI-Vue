@@ -62,7 +62,6 @@ export default {
     options: {
       type: Array,
       description: 'Array of SuiDropdownItem props e.g. `{ text: \'\', value: \'\' }`',
-      // required: true,
     },
     placeholder: {
       type: String,
@@ -255,7 +254,6 @@ export default {
       }
     },
     deselectItem(selectedValue) {
-      // const selectedValue = JSON.parse(event.currentTarget.dataset.value);
       this.$emit('input', this.multipleValue.filter(value => value !== selectedValue));
     },
     findOption(value) {
@@ -281,7 +279,6 @@ export default {
       this.menu = menu;
     },
     selectItem(selectedValue) {
-      // const selectedValue = JSON.parse(event.currentTarget.dataset.value);
       if (this.maximumValuesSelected) return;
       const newValue = this.multiple ? (
         this.multipleValue.filter(value => value !== selectedValue).concat([selectedValue])
