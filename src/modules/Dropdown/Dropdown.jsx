@@ -152,10 +152,6 @@ export default {
       return '';
     },
     menuNode() {
-      if (this.$slots.default) {
-        return this.$slots.default;
-      }
-
       return (
         <DropdownMenu>
           {
@@ -354,7 +350,7 @@ export default {
         {this.searchNode}
         {this.textNode}
         <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
-        {this.menuNode}
+        {this.$slots.default || this.menuNode}
       </ElementType>
     );
   },
