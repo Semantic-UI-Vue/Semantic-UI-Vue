@@ -1,7 +1,7 @@
 <template lang="html">
   <sui-dropdown
     :options="countries"
-    placeholder="Select Country"
+    placeholder="State"
     search
     selection
     v-model="current"
