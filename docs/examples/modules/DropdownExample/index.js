@@ -7,7 +7,6 @@ import MultipleSelection from './MultipleSelection.example';
 import MultipleMaxSelections from './MultipleMaxSelections.example';
 import MultipleSearchSelection from './MultipleSearchSelection.example';
 import Selection from './Selection.example';
-import SelectionWithIcons from './SelectionWithIcons.example';
 import SearchDropdown from './SearchDropdown.example';
 import SearchSelection from './SearchSelection.example';
 import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
@@ -22,33 +21,12 @@ export default [
         component: Dropdown,
       },
       {
-        title: 'Dropdown opening direction',
-        info: 'By default, the dropdown menu opens downward, if the menu does not fit in the screen - it will open upward, but you can force set direction by specifying `direction` prop',
-        description: 'You can set the direction of opening dropdown menu',
-        component: DropdownDirection,
-      },
-      {
-        title: 'Button',
-        description: 'A dropdown button style and icon.',
-        component: DropdownButton,
-      },
-      {
-        title: 'Floating',
-        description: 'A dropdown menu can appear to be floating below an element.',
-        component: DropdownFloating,
-      },
-      {
         title: 'Selection',
         description: 'A dropdown can be used to select between choices in a form.',
         component: Selection,
       },
       {
-        description: 'Items can contain images',
         component: FriendSelection,
-      },
-      {
-        description: 'Items can contain icons',
-        component: SelectionWithIcons,
       },
       {
         title: 'Search Selection',
@@ -77,6 +55,27 @@ export default [
         title: 'Search Dropdown',
         description: 'A dropdown can be searchable.',
         component: SearchDropdown,
+      },
+      {
+        title: 'Button',
+        description: 'A dropdown button style and icon.',
+        component: DropdownButton,
+      },
+      {
+        title: 'Floating',
+        description: 'A dropdown menu can appear to be floating below an element.',
+        component: DropdownFloating,
+      },
+    ],
+  },
+  {
+    title: 'Usage',
+    examples: [
+      {
+        title: 'Dropdown opening direction',
+        info: 'By default, the dropdown menu opens downward, if the menu does not fit in the screen - it will open upward, but you can force set direction by specifying `direction` prop',
+        description: 'You can set the direction of opening dropdown menu',
+        component: DropdownDirection,
       },
     ],
   },
