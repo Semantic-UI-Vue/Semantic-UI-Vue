@@ -53,7 +53,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          !this.label && 'fitted',
+          !(this.label || this.$slots.default) && 'fitted',
           this.radio && 'radio',
           this.toggle && 'toggle',
           'checkbox',
