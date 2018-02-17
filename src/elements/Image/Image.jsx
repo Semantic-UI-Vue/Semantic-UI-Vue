@@ -17,6 +17,8 @@ export default {
       type: String,
       required: true,
     },
+    floated: Enum(['left', 'right']),
+    centered: Boolean,
     wrapped: Boolean,
   },
   render() {
@@ -26,6 +28,8 @@ export default {
       this.avatar && 'avatar',
       this.size,
       this.shape,
+      this.floated && `${this.floated} floated`,
+      this.centered && 'centered',
       this.spaced !== true && this.spaced,
       this.spaced && 'spaced',
       this.hidden && 'hidden',
