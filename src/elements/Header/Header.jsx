@@ -12,6 +12,11 @@ export default {
     image: Boolean,
     size: Enum.Size(),
     sub: Boolean,
+    textAlign: Enum(['left', 'right', 'center', 'justify']),
+    block: Boolean,
+    attached: Enum(['top', 'bottom'], {
+      type: Boolean,
+    }),
   },
   render() {
     const ElementType = getElementType(this);
@@ -21,8 +26,12 @@ export default {
         class={classes(
           'ui',
           this.floated && `${this.floated} floated`,
+          this.textAlign && (this.textAlign === 'justify' ? 'justified' : `${this.textAlign} aligned`),
+          this.attached,
+          this.attached && 'attached',
           this.color,
           this.size,
+          this.block && 'block',
           this.dividing && 'dividing',
           this.icon && 'icon',
           this.image && 'image',
