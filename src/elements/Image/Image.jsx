@@ -10,7 +10,7 @@ export default {
     },
     disabled: Boolean,
     hidden: Boolean,
-    size: Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
+    size: Enum.Size(),
     spaced: Enum(['left', 'right'], { type: Boolean }),
     shape: Enum(['rounded', 'circular']),
     src: {

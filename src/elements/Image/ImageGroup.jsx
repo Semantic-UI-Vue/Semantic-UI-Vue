@@ -4,7 +4,7 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiImageGroup',
   props: {
-    size: Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
+    size: Enum.Size(),
   },
   render() {
     const ElementType = getElementType(this, 'div');
