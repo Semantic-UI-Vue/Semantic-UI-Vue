@@ -7,6 +7,7 @@ export default {
     color: Enum.Color(),
     content: String,
     dividing: Boolean,
+    disabled: Boolean,
     floated: Enum(['left', 'right']),
     icon: Boolean,
     image: Boolean,
@@ -36,6 +37,7 @@ export default {
           this.icon && 'icon',
           this.image && 'image',
           this.sub && 'sub',
+          this.disabled && 'disabled',
           'header',
         )}
       >
