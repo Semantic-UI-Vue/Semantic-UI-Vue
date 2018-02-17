@@ -1,5 +1,4 @@
 <template lang="html">
-  <div id="app">
   <sui-dropdown text="File">
     <sui-dropdown-menu>
       <sui-dropdown-item>New</sui-dropdown-item>
@@ -22,6 +21,3 @@ export default {
   name: 'DropdownExample',
 };
 </script>
-
-<style lang="css">
-</style>
