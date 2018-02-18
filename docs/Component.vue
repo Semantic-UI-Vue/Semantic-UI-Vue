@@ -131,7 +131,7 @@ import ExamplesList from './ExamplesList';
 const getComponentFromName = name => components[capitalize(name)];
 
 export default {
-  name: 'Component',
+  name: 'SuiComponent',
   components: { ExamplesList },
   props: {
     type: String,
