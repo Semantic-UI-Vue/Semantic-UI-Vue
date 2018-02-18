@@ -53,7 +53,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          !this.label && 'fitted',
+          !(this.label || this.$slots.default) && 'fitted',
           this.radio && 'radio',
           this.toggle && 'toggle',
           'checkbox',
@@ -68,7 +68,7 @@ export default {
           checked={this.isChecked}
           onChange={this.setValue}
         />
-        <label onClick={() => this.$refs.input.click()}>{this.label}</label>
+        <label onClick={() => this.$refs.input.click()}>{this.label || this.$slots.default}</label>
       </ElementType>
     );
   },
