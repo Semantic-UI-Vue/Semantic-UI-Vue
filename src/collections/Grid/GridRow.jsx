@@ -28,10 +28,10 @@ export default {
         {...getChildProps(this)}
         class={classes(
           this.divided && 'divided',
-          num(this.columns),
           this.only && `${this.only} only`,
           this.centered && 'centered',
           this.color,
+          num(this.columns),
           this.columns && 'column',
           'row',
         )}
