@@ -6,7 +6,7 @@ renderer.heading = (text, level) => (
 );
 
 const render = (el, binding) => {
-  const data = binding.value;
+  const data = binding.value || '';
   // eslint-disable-next-line no-param-reassign
   el.innerHTML = marked(data, { renderer });
 };
