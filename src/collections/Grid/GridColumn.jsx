@@ -16,6 +16,10 @@ export default {
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
       description: 'A column can appear only for a specific device, or screen sizes.',
     }),
+    stretched: {
+      type: Boolean,
+      description: 'A column can stretch its contents to take up the entire grid or row height.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -29,6 +33,7 @@ export default {
           this.width && 'wide',
           this.only && `${this.only} only`,
           this.centered && 'centered',
+          this.stretched && 'stretched',
           this.color,
           'column',
         )}
