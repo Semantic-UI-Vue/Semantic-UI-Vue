@@ -129,7 +129,7 @@ export default {
     const button = (
       <ElementType
         {...getChildProps(this)}
-        {...this.generateListener()}
+        {...this.generateListeners()}
         class={classList}
         role="button"
       >
