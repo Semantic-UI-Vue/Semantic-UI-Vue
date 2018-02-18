@@ -37,11 +37,11 @@ export default {
       type: Boolean,
       description: 'A grid can have its columns stack on-top of each other after reaching mobile breakpoints.',
     },
+    textAlign: Enum.TextAlign({
+      description: 'A grid can specify its text alignment.',
+    }),
     verticalAlign: Enum(['bottom', 'middle', 'top'], {
       description: 'A grid can specify its vertical alignment to have all its columns vertically centered.',
-    }),
-    textAlign: Enum(['left', 'right', 'center', 'justify'], {
-      description: 'A grid can specify its text alignment.',
     }),
     container: {
       type: Boolean,

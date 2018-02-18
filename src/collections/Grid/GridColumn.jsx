@@ -36,7 +36,7 @@ export default {
     floated: Enum(['left', 'right'], {
       description: 'A column can sit flush against the left or right edge of a row.',
     }),
-    textAlign: Enum(['left', 'right', 'center', 'justify'], {
+    textAlign: Enum.TextAlign({
       description: 'A column can specify its text alignment.',
     }),
     verticalAlign: Enum(['bottom', 'middle', 'top'], {

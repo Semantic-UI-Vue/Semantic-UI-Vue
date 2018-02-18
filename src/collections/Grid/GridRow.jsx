@@ -30,7 +30,7 @@ export default {
       type: Boolean,
       description: 'A row can stretch its contents to take up the entire column height.',
     },
-    textAlign: Enum(['left', 'right', 'center', 'justify'], {
+    textAlign: Enum.TextAlign({
       description: 'A row can specify its text alignment.',
     }),
     verticalAlign: Enum(['bottom', 'middle', 'top'], {
