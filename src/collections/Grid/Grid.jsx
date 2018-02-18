@@ -27,6 +27,9 @@ export default {
     reversed: Enum(['mobile', 'tablet', 'computer'], {
       description: 'A grid can specify that its columns should reverse order at different device types.',
     }),
+    verticallyReversed: Enum(['mobile', 'tablet', 'computer'], {
+      description: 'A grid can specify that its rows should reverse order at different device types.',
+    }),
   },
   render() {
     const ElementType = getElementType(this);
@@ -36,6 +39,7 @@ export default {
         class={classes(
           'ui',
           this.reversed && `${this.reversed} reversed`,
+          this.verticallyReversed && `${this.verticallyReversed} vertically reversed`,
           num(this.columns),
           this.columns && 'column',
           this.stackable && 'stackable',
