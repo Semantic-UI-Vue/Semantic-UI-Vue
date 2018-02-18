@@ -19,6 +19,7 @@ export default {
     },
     divided: Enum(['vertically'], {
       type: Boolean,
+      description: 'A grid can have dividers between its columns.',
     }),
     doubling: {
       type: Boolean,
