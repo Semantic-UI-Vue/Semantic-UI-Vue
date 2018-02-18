@@ -1,4 +1,5 @@
 import { classes, getChildProps, getElementType, num } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGridRow',
@@ -16,6 +17,9 @@ export default {
       type: Boolean,
       description: 'A row can have dividers between its columns.',
     },
+    color: Enum.Color({
+      description: 'A grid row can be colored.',
+    }),
   },
   render() {
     const ElementType = getElementType(this);
@@ -27,6 +31,7 @@ export default {
           num(this.columns),
           this.only && `${this.only} only`,
           this.centered && 'centered',
+          this.color,
           this.columns && 'column',
           'row',
         )}
