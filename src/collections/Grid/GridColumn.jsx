@@ -36,7 +36,9 @@ export default {
     floated: Enum(['left', 'right'], {
       description: 'A column can sit flush against the left or right edge of a row.',
     }),
-    textAlign: Enum(['left', 'right', 'center', 'justify']),
+    textAlign: Enum(['left', 'right', 'center', 'justify'], {
+      description: 'A column can specify its text alignment.',
+    }),
     verticalAlign: Enum(['bottom', 'middle', 'top']),
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
       description: 'A column can appear only for a specific device, or screen sizes.',
