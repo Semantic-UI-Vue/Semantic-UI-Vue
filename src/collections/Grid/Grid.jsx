@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, num } from '../../lib';
+import { classes, getChildProps, getElementType, num, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -22,6 +22,7 @@ export default {
     relaxed: [Boolean, String],
     stackable: Boolean,
     verticalAlign: Enum(['bottom', 'middle', 'top']),
+    textAlign: Enum(['left', 'right', 'center', 'justify']),
   },
   render() {
     const ElementType = getElementType(this);
@@ -37,6 +38,7 @@ export default {
           this.padded && 'padded',
           this.verticalAlign,
           this.verticalAlign && 'aligned',
+          textAlign(this.textAlign),
           this.centered && 'centered',
           this.divided,
           (this.divided || this.divided === '') && 'divided',
