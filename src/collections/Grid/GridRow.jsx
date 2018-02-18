@@ -27,7 +27,9 @@ export default {
       type: Boolean,
       description: 'A row can stretch its contents to take up the entire column height.',
     },
-    textAlign: Enum(['left', 'right', 'center', 'justify']),
+    textAlign: Enum(['left', 'right', 'center', 'justify'], {
+      description: 'A row can specify its text alignment.',
+    }),
     verticalAlign: Enum(['bottom', 'middle', 'top'], {
       description: 'A row can specify its vertical alignment to have all its columns vertically centered.',
     }),
