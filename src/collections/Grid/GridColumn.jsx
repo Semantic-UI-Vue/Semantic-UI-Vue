@@ -11,6 +11,7 @@ export default {
       type: Number,
       description: 'Represents width of column.',
     },
+    floated: Enum(['left', 'right']),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
   },
   render() {
@@ -19,6 +20,7 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
+          this.floated && `${this.floated} floated`,
           textAlign(this.textAlign),
           num(this.width),
           this.width && 'wide',
