@@ -25,10 +25,10 @@ export default {
       type: Boolean,
       description: 'A grid can double its column width on tablet and mobile sizes.',
     },
-    padded: {
+    padded: Enum(['horizontally', 'vertically'], {
       type: Boolean,
       description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
-    },
+    }),
     relaxed: Enum(['very'], {
       type: Boolean,
       description: 'A grid can increase its gutters to allow for more negative space.',
@@ -60,6 +60,7 @@ export default {
           this.columns && 'column',
           this.stackable && 'stackable',
           this.doubling && 'doubling',
+          this.padded,
           this.padded && 'padded',
           this.verticalAlign,
           this.verticalAlign && 'aligned',
