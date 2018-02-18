@@ -9,7 +9,10 @@ export default {
       type: Boolean,
       description: 'A grid can have rows divided into cells.',
     }),
-    centered: Boolean,
+    centered: {
+      type: Boolean,
+      description: 'A grid can have its columns centered.',
+    },
     columns: {
       type: Number,
       description: 'Represents column count per row in Grid.',
