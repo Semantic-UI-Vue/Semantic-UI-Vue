@@ -42,11 +42,6 @@ export default [
         component: MultipleSelection,
       },
       {
-        title: 'Maximum Selections',
-        description: 'Using `maxSelections` prop lets you force a maximum number of selections.',
-        component: MultipleMaxSelections,
-      },
-      {
         title: 'Multiple Search Selection',
         description: 'A selection dropdown can allow multiple search selections.',
         component: MultipleSearchSelection,
@@ -76,6 +71,11 @@ export default [
         info: 'By default, the dropdown menu opens downward, if the menu does not fit in the screen - it will open upward, but you can force set direction by specifying `direction` prop',
         description: 'You can set the direction of opening dropdown menu',
         component: DropdownDirection,
+      },
+      {
+        title: 'Maximum Selections',
+        description: 'Using `maxSelections` prop lets you force a maximum number of selections.',
+        component: MultipleMaxSelections,
       },
     ],
   },
