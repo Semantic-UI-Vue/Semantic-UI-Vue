@@ -33,7 +33,10 @@ export default {
       type: Boolean,
       description: 'A grid can increase its gutters to allow for more negative space.',
     }),
-    stackable: Boolean,
+    stackable: {
+      type: Boolean,
+      description: 'A grid can have its columns stack on-top of each other after reaching mobile breakpoints.',
+    },
     verticalAlign: Enum(['bottom', 'middle', 'top']),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
     container: Boolean,
