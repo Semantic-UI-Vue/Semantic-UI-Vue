@@ -23,6 +23,10 @@ export default {
     reversed: Enum(['mobile', 'tablet', 'computer'], {
       description: 'A row can specify that its columns should reverse order at different device types.',
     }),
+    stretched: {
+      type: Boolean,
+      description: 'A row can stretch its contents to take up the entire column height.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -34,6 +38,7 @@ export default {
           this.only && `${this.only} only`,
           this.divided && 'divided',
           this.centered && 'centered',
+          this.stretched && 'stretched',
           this.color,
           num(this.columns),
           this.columns && 'column',
