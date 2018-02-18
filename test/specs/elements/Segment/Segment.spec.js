@@ -10,8 +10,8 @@ describe('Segment', () => {
   it('should create a SUI Segment', () => {
     const segment = shallow(Segment);
     expect(segment.is('div')).to.equal(true);
-    expect(segment.hasClass('ui')).to.equal(true);
-    expect(segment.hasClass('segment')).to.equal(true);
+    expect(segment.classes()).to.include('ui');
+    expect(segment.classes()).to.include('segment');
   });
 
   it('should have content', () => {

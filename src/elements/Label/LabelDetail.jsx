@@ -11,6 +11,6 @@ export default {
     );
   },
   meta: {
-    parent: 'Label',
+    parent: 'SuiLabel',
   },
 };
