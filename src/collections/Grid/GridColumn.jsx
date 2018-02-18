@@ -13,6 +13,9 @@ export default {
     },
     floated: Enum(['left', 'right']),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
+    only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
+      description: 'A column can appear only for a specific device, or screen sizes.',
+    }),
   },
   render() {
     const ElementType = getElementType(this);
@@ -24,6 +27,7 @@ export default {
           textAlign(this.textAlign),
           num(this.width),
           this.width && 'wide',
+          this.only && `${this.only} only`,
           this.centered && 'centered',
           this.color,
           'column',
