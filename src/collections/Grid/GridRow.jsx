@@ -12,6 +12,10 @@ export default {
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
       description: 'A row can appear only for a specific device, or screen sizes.',
     }),
+    divided: {
+      type: Boolean,
+      description: 'A row can have dividers between its columns.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -19,6 +23,7 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
+          this.divided && 'divided',
           num(this.columns),
           this.only && `${this.only} only`,
           this.centered && 'centered',
