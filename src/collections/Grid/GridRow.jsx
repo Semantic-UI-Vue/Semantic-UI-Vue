@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, num } from '../../lib';
+import { classes, getChildProps, getElementType, num, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -27,6 +27,8 @@ export default {
       type: Boolean,
       description: 'A row can stretch its contents to take up the entire column height.',
     },
+    textAlign: Enum(['left', 'right', 'center', 'justify']),
+    verticalAlign: Enum(['bottom', 'middle', 'top']),
   },
   render() {
     const ElementType = getElementType(this);
@@ -37,6 +39,8 @@ export default {
           this.reversed && `${this.reversed} reversed`,
           this.only && `${this.only} only`,
           this.divided && 'divided',
+          textAlign(this.textAlign),
+          this.verticalAlign && `${this.verticalAlign} aligned`,
           this.centered && 'centered',
           this.stretched && 'stretched',
           this.color,
