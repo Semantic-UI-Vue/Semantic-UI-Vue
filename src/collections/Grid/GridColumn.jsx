@@ -33,6 +33,7 @@ export default {
     },
     floated: Enum(['left', 'right']),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
+    verticalAlign: Enum(['bottom', 'middle', 'top']),
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
       description: 'A column can appear only for a specific device, or screen sizes.',
     }),
@@ -49,6 +50,7 @@ export default {
         class={classes(
           this.floated && `${this.floated} floated`,
           textAlign(this.textAlign),
+          this.verticalAlign && `${this.verticalAlign} aligned`,
           num(this.width),
           this.width && 'wide',
           num(this.mobile),
