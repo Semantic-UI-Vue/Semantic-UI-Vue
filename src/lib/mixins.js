@@ -10,7 +10,7 @@ export const classMixin = {
   },
 };
 
-export const listenersMixins = {
+export const listenersMixin = {
   methods: {
     generateListeners(listeners) {
       return {
