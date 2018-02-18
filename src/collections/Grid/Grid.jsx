@@ -29,7 +29,10 @@ export default {
       type: Boolean,
       description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
     },
-    relaxed: [Boolean, String],
+    relaxed: Enum(['very'], {
+      type: Boolean,
+      description: 'A grid can increase its gutters to allow for more negative space.',
+    }),
     stackable: Boolean,
     verticalAlign: Enum(['bottom', 'middle', 'top']),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
