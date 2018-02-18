@@ -39,7 +39,9 @@ export default {
     textAlign: Enum(['left', 'right', 'center', 'justify'], {
       description: 'A column can specify its text alignment.',
     }),
-    verticalAlign: Enum(['bottom', 'middle', 'top']),
+    verticalAlign: Enum(['bottom', 'middle', 'top'], {
+      description: 'A column can specify its vertical alignment to have all its columns vertically centered.',
+    }),
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
       description: 'A column can appear only for a specific device, or screen sizes.',
     }),
