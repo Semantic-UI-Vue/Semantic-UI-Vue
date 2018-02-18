@@ -20,7 +20,10 @@ export default {
     divided: Enum(['vertically'], {
       type: Boolean,
     }),
-    doubling: Boolean,
+    doubling: {
+      type: Boolean,
+      description: 'A grid can double its column width on tablet and mobile sizes.',
+    },
     padded: {
       type: Boolean,
       description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
