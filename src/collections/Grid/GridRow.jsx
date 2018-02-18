@@ -20,6 +20,9 @@ export default {
     color: Enum.Color({
       description: 'A grid row can be colored.',
     }),
+    reversed: Enum(['mobile', 'tablet', 'computer'], {
+      description: 'A row can specify that its columns should reverse order at different device types.',
+    }),
   },
   render() {
     const ElementType = getElementType(this);
@@ -27,8 +30,9 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          this.divided && 'divided',
+          this.reversed && `${this.reversed} reversed`,
           this.only && `${this.only} only`,
+          this.divided && 'divided',
           this.centered && 'centered',
           this.color,
           num(this.columns),
