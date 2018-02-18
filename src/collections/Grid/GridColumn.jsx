@@ -11,6 +11,26 @@ export default {
       type: Number,
       description: 'Represents width of column.',
     },
+    mobile: {
+      type: Number,
+      description: 'A column can specify a width for a mobile device.',
+    },
+    tablet: {
+      type: Number,
+      description: 'A column can specify a width for a tablet device.',
+    },
+    computer: {
+      type: Number,
+      description: 'A column can specify a width for a computer.',
+    },
+    largeScreen: {
+      type: Number,
+      description: 'A column can specify a width for a large screen device.',
+    },
+    widescreen: {
+      type: Number,
+      description: 'A column can specify a width for a widescreen device.',
+    },
     floated: Enum(['left', 'right']),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
@@ -31,6 +51,16 @@ export default {
           textAlign(this.textAlign),
           num(this.width),
           this.width && 'wide',
+          num(this.mobile),
+          this.mobile && 'wide mobile',
+          num(this.tablet),
+          this.tablet && 'wide tablet',
+          num(this.computer),
+          this.computer && 'wide computer',
+          num(this.widescreen),
+          this.widescreen && 'wide widescreen',
+          num(this.largeScreen),
+          this.largeScreen && 'wide large screen',
           this.only && `${this.only} only`,
           this.centered && 'centered',
           this.stretched && 'stretched',
