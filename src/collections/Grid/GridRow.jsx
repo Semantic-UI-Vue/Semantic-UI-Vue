@@ -5,6 +5,10 @@ export default {
   description: 'A row sub-component for Grid',
   props: {
     columns: Number,
+    centered: {
+      type: Boolean,
+      description: 'A row can have its columns centered.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -13,6 +17,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           num(this.columns),
+          this.centered && 'centered',
           this.columns && 'column',
           'row',
         )}
