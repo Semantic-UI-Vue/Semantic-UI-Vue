@@ -33,7 +33,9 @@ export default {
       type: Number,
       description: 'A column can specify a width for a widescreen device.',
     },
-    floated: Enum(['left', 'right']),
+    floated: Enum(['left', 'right'], {
+      description: 'A column can sit flush against the left or right edge of a row.',
+    }),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
     verticalAlign: Enum(['bottom', 'middle', 'top']),
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
