@@ -12,8 +12,13 @@ export const classMixin = {
 
 export const listenersMixins = {
   methods: {
-    generateListeners() {
-      return { on: this.$listeners };
+    generateListeners(listeners) {
+      return {
+        on: {
+          ...this.$listeners,
+          ...listeners,
+        },
+      };
     },
   },
 };

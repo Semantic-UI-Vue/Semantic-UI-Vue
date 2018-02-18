@@ -4,7 +4,7 @@ import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiButton',
-  mixins: [ listenersMixins ],
+  mixins: [listenersMixins],
   props: {
     active: {
       type: Boolean,
