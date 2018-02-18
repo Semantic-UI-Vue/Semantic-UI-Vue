@@ -33,7 +33,7 @@ export default {
     textAlign: Enum.TextAlign({
       description: 'A row can specify its text alignment.',
     }),
-    verticalAlign: Enum(['bottom', 'middle', 'top'], {
+    verticalAlign: Enum.VerticalAlign({
       description: 'A row can specify its vertical alignment to have all its columns vertically centered.',
     }),
   },
