@@ -76,7 +76,7 @@
           </sui-menu-item>
         </sui-menu>
 
-        <div class="table-container">
+        <div class="table-container" v-if="currentComponent !== null">
           <div class="current-component-description">
             {{ currentComponent.description }}
           </div>
@@ -167,7 +167,7 @@ export default {
         .filter(c => get(c, 'meta.parent') === this.component.name);
     },
     componentProps() {
-      if (!this.currentComponent.props) return [];
+      if (this.currentComponent === null || !this.currentComponent.props) return [];
 
       return Object
         .entries(this.currentComponent.props)
