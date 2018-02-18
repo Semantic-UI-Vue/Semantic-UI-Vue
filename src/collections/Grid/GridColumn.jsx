@@ -5,7 +5,9 @@ export default {
   name: 'SuiGridColumn',
   description: 'A column sub-component for Grid.',
   props: {
-    color: Enum.Color(),
+    color: Enum.Color({
+      description: 'A grid column can be colored.',
+    }),
     centered: Boolean,
     width: {
       type: Number,
