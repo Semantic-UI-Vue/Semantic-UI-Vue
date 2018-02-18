@@ -6,6 +6,7 @@ export default {
   description: 'A column sub-component for Grid.',
   props: {
     color: Enum.Color(),
+    centered: Boolean,
     width: {
       type: Number,
       description: 'Represents width of column.',
@@ -19,6 +20,7 @@ export default {
         class={classes(
           num(this.width),
           this.width && 'wide',
+          this.centered && 'centered',
           this.color,
           'column',
         )}
