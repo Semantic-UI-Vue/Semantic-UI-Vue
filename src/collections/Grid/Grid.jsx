@@ -43,7 +43,10 @@ export default {
     textAlign: Enum(['left', 'right', 'center', 'justify'], {
       description: 'A grid can specify its text alignment.',
     }),
-    container: Boolean,
+    container: {
+      type: Boolean,
+      description: 'A grid can be combined with a container to use the available layout and alignment.',
+    },
     reversed: Enum(['mobile', 'tablet', 'computer'], {
       description: 'A grid can specify that its columns should reverse order at different device types.',
     }),
