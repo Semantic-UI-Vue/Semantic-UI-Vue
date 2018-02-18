@@ -23,6 +23,7 @@ export default {
     stackable: Boolean,
     verticalAlign: Enum(['bottom', 'middle', 'top']),
     textAlign: Enum(['left', 'right', 'center', 'justify']),
+    container: Boolean,
   },
   render() {
     const ElementType = getElementType(this);
@@ -46,6 +47,7 @@ export default {
           this.relaxed !== true && this.relaxed,
           this.relaxed && 'relaxed',
           'grid',
+          this.container && 'container',
         )}
       >
         {this.$slots.default}
