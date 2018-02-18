@@ -37,8 +37,12 @@ export default {
       type: Boolean,
       description: 'A grid can have its columns stack on-top of each other after reaching mobile breakpoints.',
     },
-    verticalAlign: Enum(['bottom', 'middle', 'top']),
-    textAlign: Enum(['left', 'right', 'center', 'justify']),
+    verticalAlign: Enum(['bottom', 'middle', 'top'], {
+      description: 'A grid can specify its vertical alignment to have all its columns vertically centered.',
+    }),
+    textAlign: Enum(['left', 'right', 'center', 'justify'], {
+      description: 'A grid can specify its text alignment.',
+    }),
     container: Boolean,
     reversed: Enum(['mobile', 'tablet', 'computer'], {
       description: 'A grid can specify that its columns should reverse order at different device types.',
