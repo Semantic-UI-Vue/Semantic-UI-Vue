@@ -5,7 +5,10 @@ export default {
   name: 'SuiGrid',
   description: 'A grid is used to harmonize negative space in a layout.',
   props: {
-    celled: Boolean,
+    celled: Enum(['internally'], {
+      type: Boolean,
+      description: 'A grid can have rows divided into cells.',
+    }),
     centered: Boolean,
     columns: {
       type: Number,
@@ -51,6 +54,7 @@ export default {
           this.centered && 'centered',
           this.divided,
           (this.divided || this.divided === '') && 'divided',
+          this.celled,
           this.celled && 'celled',
           this.relaxed !== true && this.relaxed,
           this.relaxed && 'relaxed',
