@@ -248,10 +248,7 @@ export default {
       }
     },
     closeMenu(e) {
-      if (
-        e.path.indexOf(this.$el) === -1 ||
-        !(this.multiple || e.path.indexOf(this.menu.$el) === -1)
-      ) {
+      if (e.path.indexOf(this.$el) === -1) {
         this.setOpen(false);
       }
     },
@@ -261,21 +258,17 @@ export default {
     findOption(value) {
       return this.options.find(option => option.value === value);
     },
-    toggleMenu(e) {
-      if (
-        e.target === this.$el ||
-        e.target === this.$refs.icon ||
-        e.target === this.$refs.search ||
-        e.target === this.$refs.text
-      ) {
-        if (this.search) {
-          if (!this.open && e.target !== this.$refs.search) {
-            this.$refs.search.focus();
-          }
-          if (this.open && e.target === this.$refs.search) return;
+    handleClick(e) {
+      if (this.search) {
+        if (!this.open && e.target !== this.$refs.search) {
+          this.$refs.search.focus();
         }
-        this.setOpen(!this.open);
+        if (this.open && e.target === this.$refs.search) return;
       }
+      if (this.multiple) {
+        if (this.open && e.path.indexOf(this.menu.$el) !== -1) return;
+      }
+      this.setOpen(!this.open);
     },
     register(menu) {
       this.menu = menu;
@@ -342,8 +335,8 @@ export default {
           !this.downward && directions.upward,
           'dropdown',
         )}
-        nativeOnClick={this.toggleMenu}
-        onClick={this.toggleMenu}
+        nativeOnClick={this.handleClick}
+        onClick={this.handleClick}
       >
         {this.selectedNodes}
         {this.searchNode}
