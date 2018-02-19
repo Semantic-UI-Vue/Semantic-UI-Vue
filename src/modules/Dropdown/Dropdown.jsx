@@ -87,6 +87,16 @@ export default {
       default: directions.auto,
       description: 'A dropdown can have a direction to open',
     }),
+    openOnFocus: {
+      type: Boolean,
+      default: true,
+      description: 'Whether or not the menu should open when the dropdown is focused.',
+    },
+    closeOnBlur: {
+      type: Boolean,
+      default: true,
+      description: 'Whether or not the menu should close when the dropdown is blurred.',
+    },
   },
   data() {
     return {
@@ -94,6 +104,8 @@ export default {
       menu: null,
       open: false,
       menuDirection: null,
+      focused: false,
+      isMouseDown: false,
     };
   },
   computed: {
@@ -192,7 +204,7 @@ export default {
       return this.multipleValue.map((value) => {
         const option = this.findOption(value);
         return (
-          <Label>
+          <Label nativeOnClick={this.handleClickOnSelectedNode}>
             {option.icon && <Icon name={option.icon} />}
             {option.image && <Image {...{ props: option.image }} />}
             {option.flag && <Flag name={option.flag} />}
@@ -235,10 +247,10 @@ export default {
     },
   },
   mounted() {
-    document.body.addEventListener('click', this.closeMenu, true);
+    document.body.addEventListener('click', this.closeMenu);
   },
   destroyed() {
-    document.body.removeEventListener('click', this.closeMenu, true);
+    document.body.removeEventListener('click', this.closeMenu);
   },
   methods: {
     setOpen(value = true) {
@@ -247,10 +259,8 @@ export default {
         this.menu.setOpen(value);
       }
     },
-    closeMenu(e) {
-      if (e.path.indexOf(this.$el) === -1) {
-        this.setOpen(false);
-      }
+    closeMenu() {
+      this.setOpen(false);
     },
     deselectItem(selectedValue) {
       this.$emit('input', this.multipleValue.filter(value => value !== selectedValue));
@@ -258,7 +268,15 @@ export default {
     findOption(value) {
       return this.options.find(option => option.value === value);
     },
+    handleMouseDown() {
+      this.isMouseDown = true;
+      document.body.addEventListener('mouseup', () => { this.isMouseDown = false; }, {
+        capture: true,
+        once: true,
+      });
+    },
     handleClick(e) {
+      e.stopPropagation();
       if (this.search) {
         if (!this.open && e.target !== this.$refs.search) {
           this.$refs.search.focus();
@@ -269,6 +287,21 @@ export default {
         if (this.open && e.path.indexOf(this.menu.$el) !== -1) return;
       }
       this.setOpen(!this.open);
+    },
+    handleFocus() {
+      if (this.focused) return;
+      this.focused = true;
+      if (!this.isMouseDown && this.openOnFocus) {
+        this.setOpen(true);
+      }
+    },
+    handleBlur() {
+      if (this.isMouseDown) return;
+      this.focused = false;
+      this.setOpen(false);
+    },
+    handleClickOnSelectedNode(e) {
+      e.stopPropagation();
     },
     register(menu) {
       this.menu = menu;
@@ -335,8 +368,14 @@ export default {
           !this.downward && directions.upward,
           'dropdown',
         )}
+        nativeOnMousedown={this.handleMouseDown}
+        onMousedown={this.handleMouseDown}
         nativeOnClick={this.handleClick}
         onClick={this.handleClick}
+        nativeOnFocus={this.handleFocus}
+        onFocus={this.handleFocus}
+        nativeOnBlur={this.handleBlur}
+        onBlur={this.handleBlur}
       >
         {this.selectedNodes}
         {this.searchNode}

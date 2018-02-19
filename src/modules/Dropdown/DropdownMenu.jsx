@@ -61,6 +61,7 @@ export default {
     const ElementType = getElementType(this);
     return (
       <ElementType
+        tabindex="-1"
         {...getChildProps(this)}
         class={classes('menu', this.open && 'visible active', 'transition', this.animation)}
       >
