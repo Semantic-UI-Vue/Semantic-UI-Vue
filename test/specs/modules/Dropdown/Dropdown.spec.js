@@ -37,16 +37,19 @@ describe('Dropdown', () => {
     expect(openSpy).to.have.been.calledWith(false);
   });
 
-  // it('should close the menu when clicking on option', () => {
-  //   const wrapper = shallow(DropdownWithRequired, {
-  //     propsData: {
-  //       options: [{ text: 'foo', value: 1 }],
-  //     },
-  //   });
-  //   wrapper.trigger('click');
-  //   wrapper.find(DropdownItem).trigger('click');
-  //   expect(wrapper.classes()).to.not.include('visible');
-  // });
+  it('should close the menu when clicking on option', (done) => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        options: [{ text: 'foo', value: 1 }],
+      },
+    });
+    wrapper.trigger('click');
+    wrapper.find(DropdownItem).trigger('click');
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.classes()).to.not.include('visible');
+      done();
+    });
+  });
 
   it('should close the menu when re-clicking on dropdown head', () => {
     const wrapper = shallow(DropdownWithRequired, {
