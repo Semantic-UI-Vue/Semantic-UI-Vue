@@ -26,6 +26,11 @@ export default {
       type: [String, Number],
       description: 'Stored value.',
     },
+    active: {
+      type: Boolean,
+      default: false,
+      description: 'Style as the currently chosen item.',
+    },
     selected: {
       type: Boolean,
       default: false,
@@ -44,7 +49,8 @@ export default {
         {...getChildProps(this)}
         role="option"
         class={classes(
-          this.selected && 'active selected',
+          this.active && 'active',
+          this.selected && 'selected',
           'item',
         )}
         onClick={this.select}

@@ -106,10 +106,12 @@ export default {
       menuDirection: null,
       focused: false,
       isMouseDown: false,
+      selectedIndex: -1,
     };
   },
   computed: {
     maximumValuesSelected() {
+
       return this.multipleValue.length >= this.maxSelections;
     },
     downward() {
@@ -168,13 +170,17 @@ export default {
       return (
         <DropdownMenu>
           {
-            this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map(option => (
+            this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map((option, index) => (
               <DropdownItem
                 {...{ props: option }}
-                selected={this.value === option.value}
+                active={this.multiple ? (
+                  this.multipleValue.indexOf(option.value) !== -1
+                ) : this.value === option.value}
+                selected={this.selectedIndex === index}
                 onSelect={this.selectItem}
               />
-            ))}
+            ))
+          }
         </DropdownMenu>
       );
     },
@@ -246,6 +252,13 @@ export default {
       </div>;
     },
   },
+  watch: {
+    selectedIndex(index) {
+      if (this.selection && !this.multiple) {
+        this.$emit('input', this.filteredOptions[index].value);
+      }
+    },
+  },
   mounted() {
     document.body.addEventListener('click', this.closeMenu);
   },
@@ -303,14 +316,47 @@ export default {
     handleClickOnSelectedNode(e) {
       e.stopPropagation();
     },
+    handleKeyDown(e) {
+      if (!this.open) {
+        if (e.keyCode === 40) {
+          this.setOpen(true);
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        return;
+      }
+      let direction = 1;
+      switch (e.keyCode) {
+        case 38:
+          direction = -1;
+          break;
+        case 40:
+          break;
+        case 13:
+          break;
+        default:
+          return;
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      const newValue = this.selectedIndex + direction;
+      if (this.filteredOptions.length <= newValue) {
+        this.selectedIndex = 0;
+      } else if (newValue < 0) {
+        this.selectedIndex = this.filteredOptions.length - 1;
+      } else {
+        this.selectedIndex = newValue;
+      }
+    },
     register(menu) {
       this.menu = menu;
     },
     selectItem(selectedValue) {
       if (this.maximumValuesSelected) return;
       const newValue = this.multiple ? (
-        this.multipleValue.filter(value => value !== selectedValue).concat([selectedValue])
+        this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
       ) : selectedValue;
+      this.selectedIndex = this.multiple ? -1 : this.filteredOptions.indexOf(newValue);
       this.filter = '';
       this.$emit('input', newValue);
     },
@@ -376,6 +422,8 @@ export default {
         onFocus={this.handleFocus}
         nativeOnBlur={this.handleBlur}
         onBlur={this.handleBlur}
+        nativeOnKeydown={this.handleKeyDown}
+        onKeydown={this.handleKeyDown}
       >
         {this.selectedNodes}
         {this.searchNode}
