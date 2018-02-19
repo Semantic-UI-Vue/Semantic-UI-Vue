@@ -7,6 +7,7 @@ export default {
     event: 'change',
   },
   props: {
+    disabled: Boolean,
     inputValue: [Array, Boolean, Number, String],
     label: String,
     radio: Boolean,
@@ -56,6 +57,7 @@ export default {
           !(this.label || this.$slots.default) && 'fitted',
           this.radio && 'radio',
           this.toggle && 'toggle',
+          this.disabled && 'disabled',
           'checkbox',
         )}
       >
@@ -64,7 +66,7 @@ export default {
           class="hidden"
           readonly=""
           tabiindex="0"
-          type="checkbox"
+          type={this.radio ? 'radio' : 'checkbox'}
           checked={this.isChecked}
           onChange={this.setValue}
         />

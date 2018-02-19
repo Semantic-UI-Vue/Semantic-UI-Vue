@@ -1,8 +1,10 @@
 import CheckboxBasic from './CheckboxBasic.example';
 import CheckboxModel from './CheckboxModel.example';
 import CheckboxToggle from './CheckboxToggle.example';
+import CheckboxDisabled from './CheckboxDisabled.example';
 import Radio from './Radio.example';
 import RadioGroup from './RadioGroup.example';
+import RadioDisabled from './RadioDisabled.example';
 import RadioGroupInline from './RadioGroupInline.example';
 
 export default [
@@ -26,6 +28,10 @@ export default [
         component: RadioGroup,
       },
       {
+        description: 'A radio button can be disabled.',
+        component: RadioDisabled,
+      },
+      {
         title: 'Checkbox with two way binding',
         description: 'Checkbox with two way binding',
         component: CheckboxModel,
@@ -34,6 +40,10 @@ export default [
         title: 'Toggle style input',
         description: 'Toggle style input',
         component: CheckboxToggle,
+      },
+      {
+        description: 'A checkbox can be disabled.',
+        component: CheckboxDisabled,
       },
     ],
   },
