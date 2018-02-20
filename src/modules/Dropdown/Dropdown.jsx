@@ -61,6 +61,7 @@ export default {
     },
     options: {
       type: Array,
+      default: () => [],
       description: 'Array of SuiDropdownItem props e.g. `{ text: \'\', value: \'\' }`',
     },
     placeholder: {
@@ -111,7 +112,6 @@ export default {
   },
   computed: {
     maximumValuesSelected() {
-
       return this.multipleValue.length >= this.maxSelections;
     },
     downward() {
@@ -134,6 +134,9 @@ export default {
       return `${animations.name} ${(this.downward ? animations.down : animations.up)}`;
     },
     filteredOptions() {
+      if (!this.search && !this.multiple) {
+        return this.options;
+      }
       const re = new RegExp(escapeRegExp(this.filter), 'i');
       return this.options.filter((option) => {
         if (this.filter && !re.test(option.text)) {
@@ -195,7 +198,7 @@ export default {
           autoComplete="off"
           class="search"
           onInput={this.updateFilter}
-          onKeydown={this.searchOnKeyDown}
+          onKeydown={this.handleSearchKeyDown}
           ref="search"
           tabindex="0"
           value={this.filter}
@@ -206,7 +209,6 @@ export default {
       if (!this.multiple) {
         return null;
       }
-
       return this.multipleValue.map((value) => {
         const option = this.findOption(value);
         return (
@@ -229,6 +231,9 @@ export default {
       const shouldHideText =
         (this.multiple && this.value && this.value.length) ||
         (!this.multiple && [null, undefined].indexOf(this.value) === -1);
+      const shouldShowSelectedItem = !this.multiple && this.open &&
+        typeof this.filteredOptions[this.selectedIndex] !== 'undefined' &&
+        this.filteredOptions[this.selectedIndex].value === this.value;
 
       const text = shouldHideText ? this.findOption(this.value) : defaultText;
 
@@ -238,7 +243,7 @@ export default {
 
       const className = classes(
         this.placeholder && !shouldHideText && 'default',
-        this.filter && 'filtered',
+        this.filter && !shouldShowSelectedItem && 'filtered',
         'text',
       );
 
@@ -253,10 +258,8 @@ export default {
     },
   },
   watch: {
-    selectedIndex(index) {
-      if (this.selection && !this.multiple) {
-        this.$emit('input', this.filteredOptions[index].value);
-      }
+    filteredOptions() {
+      this.updateSelectedIndex();
     },
   },
   mounted() {
@@ -290,15 +293,14 @@ export default {
     },
     handleClick(e) {
       e.stopPropagation();
-      if (this.search) {
-        if (!this.open && e.target !== this.$refs.search) {
-          this.$refs.search.focus();
+      if (this.open) {
+        if (this.search && e.target === this.$refs.search) return;
+        if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
+          this.focusSearch();
+          return;
         }
-        if (this.open && e.target === this.$refs.search) return;
       }
-      if (this.multiple) {
-        if (this.open && e.path.indexOf(this.menu.$el) !== -1) return;
-      }
+      this.focusSearch();
       this.setOpen(!this.open);
     },
     handleFocus() {
@@ -308,10 +310,14 @@ export default {
         this.setOpen(true);
       }
     },
-    handleBlur() {
-      if (this.isMouseDown) return;
+    handleBlur(e) {
+      if (this.isMouseDown || e.relatedTarget === this.$refs.search) {
+        return;
+      }
       this.focused = false;
-      this.setOpen(false);
+      if (this.open && this.closeOnBlur) {
+        this.setOpen(false);
+      }
     },
     handleClickOnSelectedNode(e) {
       e.stopPropagation();
@@ -321,24 +327,38 @@ export default {
         if (e.keyCode === 40) {
           this.setOpen(true);
           e.preventDefault();
-          e.stopPropagation();
         }
         return;
       }
       let direction = 1;
       switch (e.keyCode) {
+        // Handle Enter button
+        case 13:
+          if (this.selection) {
+            if (this.selectedIndex === -1) return;
+            e.preventDefault();
+            if (!this.multiple) {
+              this.filter = '';
+              this.setOpen(false);
+            } else {
+              this.selectItem(this.filteredOptions[this.selectedIndex].value);
+            }
+          }
+          return;
+        // Handle escape button
+        case 27:
+          if (this.open) this.setOpen(false);
+          return;
+        // handle up arrow button
         case 38:
           direction = -1;
           break;
         case 40:
           break;
-        case 13:
-          break;
         default:
           return;
       }
       e.preventDefault();
-      e.stopPropagation();
       const newValue = this.selectedIndex + direction;
       if (this.filteredOptions.length <= newValue) {
         this.selectedIndex = 0;
@@ -347,24 +367,41 @@ export default {
       } else {
         this.selectedIndex = newValue;
       }
+      if (this.selection && !this.multiple) {
+        this.$emit('input', this.filteredOptions[this.selectedIndex].value);
+      }
     },
     register(menu) {
       this.menu = menu;
     },
     selectItem(selectedValue) {
-      if (this.maximumValuesSelected) return;
+      if (this.multiple && this.maximumValuesSelected) return;
       const newValue = this.multiple ? (
         this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
       ) : selectedValue;
-      this.selectedIndex = this.multiple ? -1 : this.filteredOptions.indexOf(newValue);
-      this.filter = '';
       this.$emit('input', newValue);
+      if (!this.multiple) {
+        this.filter = '';
+        this.$nextTick(this.updateSelectedIndex);
+      }
+    },
+    updateSelectedIndex() {
+      if (this.multiple) {
+        this.selectedIndex = (
+          this.filteredOptions.length > this.selectedIndex
+        ) ? this.selectedIndex : this.selectedIndex - 1;
+      } else {
+        this.selectedIndex = this.filteredOptions.findIndex(item => item.value === this.value);
+      }
     },
     updateFilter(event) {
       this.filter = event.target.value;
     },
-    searchOnKeyDown(e) {
-      if (!this.multiple || e.keyCode !== 8) return;
+    focusSearch() {
+      if (this.search) this.$refs.search.focus();
+    },
+    handleSearchKeyDown(e) {
+      if (!this.multiple || e.keyCode !== 8 || this.filter !== '') return;
       this.multipleValue.pop();
       this.$emit('input', this.multipleValue);
     },
@@ -395,6 +432,13 @@ export default {
   render() {
     const ElementType = getElementType(this, this.button ? 'button' : 'div');
 
+    const eventHandlers = {
+      '!mousedown': this.handleMouseDown,
+      click: this.handleClick,
+      '!focus': this.handleFocus,
+      '!blur': this.handleBlur,
+      '!keydown': this.handleKeyDown,
+    };
     return (
       <ElementType
         role="listbox"
@@ -414,16 +458,12 @@ export default {
           !this.downward && directions.upward,
           'dropdown',
         )}
-        nativeOnMousedown={this.handleMouseDown}
-        onMousedown={this.handleMouseDown}
-        nativeOnClick={this.handleClick}
-        onClick={this.handleClick}
-        nativeOnFocus={this.handleFocus}
-        onFocus={this.handleFocus}
-        nativeOnBlur={this.handleBlur}
-        onBlur={this.handleBlur}
-        nativeOnKeydown={this.handleKeyDown}
-        onKeydown={this.handleKeyDown}
+        {
+          ...{
+            on: eventHandlers,
+            nativeOn: eventHandlers,
+          }
+        }
       >
         {this.selectedNodes}
         {this.searchNode}
