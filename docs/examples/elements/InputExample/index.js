@@ -2,6 +2,7 @@ import Input from './Input.example';
 import Focus from './Focus.example';
 import Loading from './Loading.example';
 import Loading2 from './Loading2.example';
+import Disabled from './Disabled.example';
 import Icon from './Icon.example';
 
 export default [
@@ -30,6 +31,11 @@ export default [
       },
       {
         component: Loading2,
+      },
+      {
+        title: 'Disabled',
+        description: 'An input field can show that it is disabled',
+        component: Disabled,
       },
     ],
   },

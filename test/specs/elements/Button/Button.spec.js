@@ -28,4 +28,9 @@ describe('Button', () => {
     expect(button.classes()).to.include('icon');
     expect(button.contains(Icon)).to.equal(true);
   });
+
+  it('should be disabled when the Disabled property is true ', () => {
+    const button = shallow(Button, { propsData: { content: 'foo', disabled: true } });
+    expect(button.classes()).to.include('disabled');
+  });
 });

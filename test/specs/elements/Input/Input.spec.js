@@ -26,4 +26,9 @@ describe('Input', () => {
     expect(input.find('i').classes()).to.include('loading');
     expect(input.find('i').classes()).to.include('icon');
   });
+
+  it('should create a SUI Input with disabled style true ', () => {
+    const input = shallow(Input, { propsData: { content: 'foo', disabled: true } });
+    expect(input.classes()).to.include('disabled');
+  });
 });
