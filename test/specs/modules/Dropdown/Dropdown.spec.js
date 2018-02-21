@@ -138,24 +138,20 @@ describe('Dropdown', () => {
   });
 
   it('should choose option', () => {
-    const inputSpy = sinon.spy();
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
       },
     });
 
-    wrapper.vm.$on('input', inputSpy);
-
     const options = wrapper.findAll(DropdownItem);
     options.at(0).trigger('click');
-    expect(inputSpy).to.have.been.calledWith(1);
     options.at(1).trigger('click');
-    expect(inputSpy).to.have.been.calledWith(2);
+    expect(wrapper.emitted().input[0][0]).to.equal(1);
+    expect(wrapper.emitted().input[1][0]).to.equal(2);
   });
 
   it('should choose few options', () => {
-    const inputSpy = sinon.spy();
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
         multiple: true,
@@ -163,21 +159,16 @@ describe('Dropdown', () => {
       },
     });
 
-    wrapper.vm.$on('input', (value) => {
-      wrapper.setProps({ value });
-    });
-    wrapper.vm.$on('input', inputSpy);
-
     const options = wrapper.findAll(DropdownItem);
 
     options.at(0).trigger('click');
-    expect(inputSpy).to.have.been.calledWith([1]);
+    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
+    wrapper.setProps({ value: [1] });
     options.at(0).trigger('click');
-    expect(inputSpy).to.have.been.calledWith([1, 2]);
+    expect(wrapper.emitted().input[1][0]).to.deep.equal([1, 2]);
   });
 
   it('should deselect option from selected', () => {
-    const inputSpy = sinon.spy();
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
         multiple: true,
@@ -185,25 +176,21 @@ describe('Dropdown', () => {
       },
     });
 
-    wrapper.vm.$on('input', (value) => {
-      wrapper.setProps({ value });
-    });
-    wrapper.vm.$on('input', inputSpy);
-
     const options = wrapper.findAll(DropdownItem);
 
     options.at(0).trigger('click');
+    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
+    wrapper.setProps({ value: [1] });
     options.at(0).trigger('click');
-    expect(inputSpy).to.have.been.calledWith([1, 2]);
+    expect(wrapper.emitted().input[1][0]).to.deep.equal([1, 2]);
+    wrapper.setProps({ value: [1, 2] });
 
     const selectedOptions = wrapper.findAll(Label);
     selectedOptions.at(0).find('i.icon.delete').trigger('click');
-
-    expect(inputSpy).to.have.been.calledWith([2]);
+    expect(wrapper.emitted().input[2][0]).to.deep.equal([2]);
   });
 
   it('should not select more than max-selections', () => {
-    const inputSpy = sinon.spy();
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
         multiple: true,
@@ -212,17 +199,13 @@ describe('Dropdown', () => {
       },
     });
 
-    wrapper.vm.$on('input', (value) => {
-      wrapper.setProps({ value });
-    });
-    wrapper.vm.$on('input', inputSpy);
-
     const options = wrapper.findAll(DropdownItem);
 
     options.at(0).trigger('click');
-    expect(inputSpy).to.have.been.calledWith([1]);
+    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
+    wrapper.setProps({ value: [1] });
     options.at(0).trigger('click');
-    expect(inputSpy).to.have.been.calledOnce;
+    expect(wrapper.emitted().input[1]).to.be.undefined;
   });
 
   it('should have icons, flags and images in selected text', () => {
@@ -241,12 +224,9 @@ describe('Dropdown', () => {
         ],
       },
     });
-    wrapper.vm.$on('input', (value) => {
-      wrapper.setProps({ value });
-    });
 
     wrapper.find(DropdownItem).trigger('click');
-
+    wrapper.setProps({ value: 1 });
     const text = wrapper.find('div.text');
 
     const icon = text.find(Icon);
@@ -274,11 +254,8 @@ describe('Dropdown', () => {
         ],
       },
     });
-    wrapper.vm.$on('input', (value) => {
-      wrapper.setProps({ value });
-    });
 
-    wrapper.find(DropdownItem).trigger('click');
+    wrapper.setProps({ value: [1] });
 
     const label = wrapper.find(Label);
 
@@ -311,8 +288,7 @@ describe('Dropdown', () => {
     expect(message.text()).to.equal('No results found');
   });
 
-  it('should delete option from selected when pressing backspace in empty search input', () => {
-    const inputSpy = sinon.spy();
+  it('should delete last option from selected when pressing backspace in empty search input', () => {
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
         search: true,
@@ -321,21 +297,12 @@ describe('Dropdown', () => {
       },
     });
 
-    wrapper.vm.$on('input', (value) => {
-      wrapper.setProps({ value });
-    });
-    wrapper.vm.$on('input', inputSpy);
-
-    const options = wrapper.findAll(DropdownItem);
-
-    options.at(0).trigger('click');
-    options.at(0).trigger('click');
-
-    expect(inputSpy).to.have.been.calledWith([1, 2]);
+    wrapper.setProps({ value: [1, 2] });
 
     wrapper.find('input.search').trigger('keydown', {
       keyCode: 8,
     });
-    expect(inputSpy).to.have.been.calledWith([1]);
+    
+    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
   });
 });
