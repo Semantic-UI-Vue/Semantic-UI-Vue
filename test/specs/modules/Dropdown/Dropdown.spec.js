@@ -288,7 +288,7 @@ describe('Dropdown', () => {
     expect(message.text()).to.equal('No results found');
   });
 
-  it('should delete last option from selected when pressing backspace in empty search input', () => {
+  it('should delete last option from selected when pressing backspace in search input when filter is empty', () => {
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
         search: true,
@@ -302,7 +302,26 @@ describe('Dropdown', () => {
     wrapper.find('input.search').trigger('keydown', {
       keyCode: 8,
     });
-    
+
     expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
+  });
+
+  it('should not delete last option from selected when pressing backspace in search input when filter is not empty', () => {
+    const wrapper = shallow(DropdownWithRequired, {
+      propsData: {
+        search: true,
+        multiple: true,
+        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }, { text: 'baz', value: 3 }],
+      },
+    });
+
+    wrapper.setProps({ value: [1, 2] });
+    wrapper.setData({ filter: 'a' });
+
+    wrapper.find('input.search').trigger('keydown', {
+      keyCode: 8,
+    });
+
+    expect(wrapper.emitted().input).to.be.undefined;
   });
 });
