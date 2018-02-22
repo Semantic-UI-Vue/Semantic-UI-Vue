@@ -7,6 +7,10 @@ export default {
     size: Enum.Size({
       description: 'A form can vary in size.',
     }),
+    loading: {
+      type: Boolean,
+      description: 'If a form is in loading state, it will automatically show a loading indicator.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -16,6 +20,7 @@ export default {
         class={classes(
           'ui',
           this.size,
+          this.loading && 'loading',
           'form',
         )}
       >
