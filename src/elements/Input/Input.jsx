@@ -8,6 +8,7 @@ export default {
   components: { SuiButton, SuiIcon },
   props: {
     action: String,
+    disabled: Boolean,
     error: Boolean,
     focus: Boolean,
     icon: String,
@@ -30,6 +31,7 @@ export default {
         class={classes(
           'ui',
           this.action && 'action',
+          this.disabled && 'disabled',
           this.error && 'error',
           this.focus && 'focus',
           this.transparent && 'transparent',

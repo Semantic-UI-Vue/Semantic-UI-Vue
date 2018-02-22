@@ -1,5 +1,6 @@
 <template lang="html">
-  <sui-dropdown text="File">
+  <div id="app">
+  <sui-dropdown text="File" direction="upward">
     <sui-dropdown-menu>
       <sui-dropdown-item>New</sui-dropdown-item>
       <sui-dropdown-item>Open... <span class="description">ctrl + o</span></sui-dropdown-item>
@@ -18,6 +19,6 @@
 
 <script>
 export default {
-  name: 'DropdownExample',
+  name: 'DropdownDirectionExample',
 };
 </script>
