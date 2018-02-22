@@ -9,14 +9,19 @@ const varTypes = {
 export function Enum(values = [], obj = {}) {
   let type;
   const choices = values;
+
+  if (Array.isArray(obj.choices)) {
+    choices.push(...obj.choices);
+  }
+
   const types = uniq(values.map(value => varTypes[typeof value]));
 
   if (obj.type) {
     if (Array.isArray(obj.type)) {
-      if (obj.type.includes(Boolean)) choices.unshift(''); // TODO: Change to true when https://github.com/vuejs/vue/pull/7583 will be merged
+      if (obj.type.includes(Boolean)) choices.push(''); // TODO: Change to true when https://github.com/vuejs/vue/pull/7583 will be merged
       type = uniq([...obj.type, ...types]);
     } else {
-      if (obj.type === Boolean) choices.unshift('');
+      if (obj.type === Boolean) choices.push('');
       type = uniq([obj.type, ...types]);
     }
   } else {
