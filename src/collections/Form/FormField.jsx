@@ -12,6 +12,10 @@ export default {
       type: Boolean,
       description: 'A field can have its label next to instead of above it.',
     },
+    required: {
+      type: Boolean,
+      description: 'A field can show that input is mandatory.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -21,6 +25,7 @@ export default {
         class={classes(
           num(this.width),
           this.inline && 'inline',
+          this.required && 'required',
           'field',
         )}
       >
