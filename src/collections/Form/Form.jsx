@@ -23,6 +23,9 @@ export default {
       type: Boolean,
       description: 'Automatically show any error Message children.',
     },
+    state: Enum(['success', 'warning', 'error'], {
+      description: 'You can set the state of form using one variable',
+    }),
     inverted: {
       type: Boolean,
       description: 'A form can have its color inverted for contrast.',
@@ -47,6 +50,7 @@ export default {
           this.success && 'success',
           this.warning && 'warning',
           this.error && 'error',
+          this.state,
         )}
       >
         {this.$slots.default}
