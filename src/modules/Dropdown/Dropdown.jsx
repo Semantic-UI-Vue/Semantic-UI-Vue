@@ -10,6 +10,7 @@ import Image from '../../elements/Image/Image';
 
 const directions = {
   auto: 'auto',
+  autoUpward: 'auto-upward',
   upward: 'upward',
   downward: 'downward',
 };
@@ -115,20 +116,26 @@ export default {
       return this.multipleValue.length >= this.maxSelections;
     },
     downward() {
-      if (this.direction !== directions.auto) return this.direction === directions.downward;
+      if (this.direction !== directions.auto && this.direction !== directions.autoUpward) {
+        return this.direction === directions.downward;
+      }
       this.calculateMenuDirection();
       if (this.menuDirection === null) {
         return true;
       }
-      if (this.menuDirection.below) {
-        // Dropdown can fit in context downward'
+
+      if (
+        (this.menuDirection.below && this.menuDirection.above) ||
+        (!this.menuDirection.below && !this.menuDirection.above)
+      ) {
+        // Dropdown can or cannot fit in either direction favoring specified
+        return this.direction === directions.auto;
+      } else if (this.menuDirection.below) {
+        // Dropdown can fit in context downward
         return true;
-      } else if (this.menuDirection.above) {
-        // Dropdown cannot fit below, opening upward
-        return false;
       }
-      // Dropdown cannot fit in either direction, favoring downward
-      return true;
+      // Dropdown cannot fit below, opening upward
+      return false;
     },
     animation() {
       return `${animations.name} ${(this.downward ? animations.down : animations.up)}`;
@@ -424,7 +431,7 @@ export default {
       };
       this.menu.$el.classList.remove('loading');
       this.menuDirection = {
-        above: c.menu.offset.top - c.menu.height >= 0,
+        above: c.menu.offset.top - c.menu.height - this.$el.clientHeight >= 0,
         below: c.menu.offset.top + c.menu.height < c.context.height,
       };
     },
