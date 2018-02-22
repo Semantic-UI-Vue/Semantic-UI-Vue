@@ -1,11 +1,5 @@
 import uniq from 'lodash/uniq';
 
-const varTypes = {
-  string: String,
-  number: Number,
-  boolean: Boolean,
-};
-
 export function Enum(values = [], obj = {}) {
   let type;
   const choices = [...values];
@@ -14,7 +8,7 @@ export function Enum(values = [], obj = {}) {
     choices.push(...obj.choices);
   }
 
-  const types = uniq(values.map(value => varTypes[typeof value]));
+  const types = uniq(values.map(value => value.constructor));
 
   if (obj.type) {
     if (Array.isArray(obj.type)) {
@@ -32,7 +26,7 @@ export function Enum(values = [], obj = {}) {
     ...obj,
     choices,
     type,
-    validator: value => !types.includes(varTypes[typeof value]) || choices.includes(value),
+    validator: value => !types.includes(value.constructor) || choices.includes(value),
   };
 }
 
