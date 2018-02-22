@@ -16,6 +16,10 @@ export default {
       type: Boolean,
       description: 'A field can show that input is mandatory.',
     },
+    disabled: {
+      type: Boolean,
+      description: 'Individual fields may be disabled.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -26,6 +30,7 @@ export default {
           num(this.width),
           this.inline && 'inline',
           this.required && 'required',
+          this.disabled && 'disabled',
           'field',
         )}
       >
