@@ -18,7 +18,7 @@ html {
 }
 
 code {
-  padding: 0;
+  padding: 0.3em;
   padding-top: 0.1em;
   padding-bottom: 0.2em;
   margin: 0;

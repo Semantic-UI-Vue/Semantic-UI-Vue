@@ -1,24 +1,12 @@
 <template>
-  <div v-html="content" class="markdown"></div>
+  <div v-markdown="markdown" class="markdown"></div>
 </template>
 
 <script>
-import marked, { Renderer } from 'marked';
-
-const renderer = new Renderer();
-renderer.heading = (text, level) => (
-  `<h${level} class="ui ${level < 3 ? 'dividing' : ''} header">${text}</h${level}>`
-);
-
 export default {
   name: 'DocsPage',
   props: {
     markdown: String,
-  },
-  computed: {
-    content() {
-      return marked(this.markdown, { renderer });
-    },
   },
 };
 </script>

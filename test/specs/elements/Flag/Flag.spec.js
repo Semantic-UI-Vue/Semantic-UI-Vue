@@ -8,12 +8,12 @@ describe('Flag', () => {
   it('should create a SUI Flag', () => {
     const flag = shallow(Flag);
     expect(flag.is('i')).to.equal(true);
-    expect(flag.hasClass('flag')).to.equal(true);
+    expect(flag.classes()).to.include('flag');
   });
 
   it('should be able to set country', () => {
     const flag = shallow(Flag, { propsData: { name: 'ae' } });
-    expect(flag.hasClass('flag')).to.equal(true);
-    expect(flag.hasClass('ae')).to.equal(true);
+    expect(flag.classes()).to.include('flag');
+    expect(flag.classes()).to.include('ae');
   });
 });

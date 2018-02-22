@@ -8,6 +8,7 @@ var webpackConfig = require('../build/webpack.test.conf');
 module.exports = function (config) {
   config.set({
     browsers: ['ChromeNoSandbox'],
+    browserNoActivityTimeout: 36e6,
     customLaunchers: {
       ChromeNoSandbox: {
         base: 'ChromeHeadless',

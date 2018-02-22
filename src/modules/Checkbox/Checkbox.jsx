@@ -7,6 +7,7 @@ export default {
     event: 'change',
   },
   props: {
+    disabled: Boolean,
     inputValue: [Array, Boolean, Number, String],
     label: String,
     radio: Boolean,
@@ -53,9 +54,10 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          !this.label && 'fitted',
+          !(this.label || this.$slots.default) && 'fitted',
           this.radio && 'radio',
           this.toggle && 'toggle',
+          this.disabled && 'disabled',
           'checkbox',
         )}
       >
@@ -64,11 +66,11 @@ export default {
           class="hidden"
           readonly=""
           tabiindex="0"
-          type="checkbox"
+          type={this.radio ? 'radio' : 'checkbox'}
           checked={this.isChecked}
           onChange={this.setValue}
         />
-        <label onClick={() => this.$refs.input.click()}>{this.label}</label>
+        <label onClick={() => this.$refs.input.click()}>{this.label || this.$slots.default}</label>
       </ElementType>
     );
   },

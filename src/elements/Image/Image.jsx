@@ -4,23 +4,32 @@ import { Enum } from '../../lib/PropTypes';
 export default {
   name: 'SuiImage',
   props: {
+    avatar: {
+      type: Boolean,
+      description: 'An image may be formatted to appear inline with text as an avatar.',
+    },
     disabled: Boolean,
     hidden: Boolean,
-    size: Enum(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
+    size: Enum.Size(),
     spaced: Enum(['left', 'right'], { type: Boolean }),
     shape: Enum(['rounded', 'circular']),
     src: {
       type: String,
       required: true,
     },
+    floated: Enum(['left', 'right']),
+    centered: Boolean,
     wrapped: Boolean,
   },
   render() {
     const ElementType = getElementType(this, 'div');
     const classNames = classes(
       'ui',
+      this.avatar && 'avatar',
       this.size,
       this.shape,
+      this.floated && `${this.floated} floated`,
+      this.centered && 'centered',
       this.spaced !== true && this.spaced,
       this.spaced && 'spaced',
       this.hidden && 'hidden',
