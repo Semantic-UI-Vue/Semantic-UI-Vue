@@ -32,7 +32,7 @@ export function Enum(values = [], obj = {}) {
     ...obj,
     choices,
     type,
-    validator: value => choices.includes(value),
+    validator: value => !types.includes(varTypes[typeof value]) || choices.includes(value),
   };
 }
 
