@@ -44,3 +44,9 @@ Enum.Color = Enum.Extend([
 Enum.TextAlign = Enum.Extend(['left', 'right', 'center', 'justify']);
 Enum.VerticalAlign = Enum.Extend(['top', 'middle', 'bottom']);
 Enum.Social = Enum.Extend(['facebook', 'twitter', 'google', 'google plus', 'vk', 'instagram', 'linkedin', 'youtube']);
+Enum.Number = Enum.Extend([
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+  'one', 'two', 'three', 'four', 'five', 'six', 'seven',
+  'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
+  'fourteen', 'fifteen', 'sixteen',
+]);
