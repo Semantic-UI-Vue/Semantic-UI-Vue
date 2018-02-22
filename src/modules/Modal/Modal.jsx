@@ -2,8 +2,7 @@
  * Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
  * Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
  */
-import { classes } from '../../lib';
-import { getEventAnimationEnd } from './animationHelper';
+import { getEventAnimationEnd, classes } from '../../lib';
 
 const closed = 'closed';
 const opening = 'opening';
