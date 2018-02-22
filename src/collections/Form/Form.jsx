@@ -23,6 +23,10 @@ export default {
       type: Boolean,
       description: 'Automatically show any error Message children.',
     },
+    inverted: {
+      type: Boolean,
+      description: 'A form can have its color inverted for contrast.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -31,6 +35,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.inverted && 'inverted',
           this.size,
           this.loading && 'loading',
           'form',
