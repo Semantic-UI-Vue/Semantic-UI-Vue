@@ -9,30 +9,24 @@ export default {
       description: 'A grid column can be colored.',
     }),
     centered: Boolean,
-    width: {
-      type: Number,
+    width: Enum.Number({
       description: 'Represents width of column.',
-    },
-    mobile: {
-      type: Number,
+    }),
+    mobile: Enum.Number({
       description: 'A column can specify a width for a mobile device.',
-    },
-    tablet: {
-      type: Number,
+    }),
+    tablet: Enum.Number({
       description: 'A column can specify a width for a tablet device.',
-    },
-    computer: {
-      type: Number,
+    }),
+    computer: Enum.Number({
       description: 'A column can specify a width for a computer.',
-    },
-    largeScreen: {
-      type: Number,
+    }),
+    largeScreen: Enum.Number({
       description: 'A column can specify a width for a large screen device.',
-    },
-    widescreen: {
-      type: Number,
+    }),
+    widescreen: Enum.Number({
       description: 'A column can specify a width for a widescreen device.',
-    },
+    }),
     floated: Enum(['left', 'right'], {
       description: 'A column can sit flush against the left or right edge of a row.',
     }),
@@ -59,18 +53,12 @@ export default {
           this.floated && `${this.floated} floated`,
           textAlign(this.textAlign),
           this.verticalAlign && `${this.verticalAlign} aligned`,
-          num(this.width),
-          this.width && 'wide',
-          num(this.mobile),
-          this.mobile && 'wide mobile',
-          num(this.tablet),
-          this.tablet && 'wide tablet',
-          num(this.computer),
-          this.computer && 'wide computer',
-          num(this.widescreen),
-          this.widescreen && 'wide widescreen',
-          num(this.largeScreen),
-          this.largeScreen && 'wide large screen',
+          this.width && `${num(this.width)} wide`,
+          this.mobile && `${num(this.mobile)} wide mobile`,
+          this.tablet && `${num(this.tablet)} wide tablet`,
+          this.computer && `${num(this.computer)} wide computer`,
+          this.widescreen && `${num(this.widescreen)} wide widescreen`,
+          this.largeScreen && `${num(this.largeScreen)} wide large screen`,
           this.only && `${this.only} only`,
           this.centered && 'centered',
           this.stretched && 'stretched',

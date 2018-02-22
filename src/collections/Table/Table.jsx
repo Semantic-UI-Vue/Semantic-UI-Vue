@@ -29,7 +29,7 @@ export default {
     color: Enum.Color(),
     size: Enum(['small', 'large']),
     singleLine: Boolean,
-    columns: Number,
+    columns: Enum.Number(),
   },
   render() {
     const ElementType = getElementType(this, 'table');
@@ -38,17 +38,13 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          this.textAlign,
-          this.textAlign && 'aligned',
-          this.basic !== true && this.basic,
-          this.basic && 'basic',
+          this.textAlign, this.textAlign && 'aligned',
+          this.basic, this.basic && 'basic',
           this.celled && 'celled',
-          this.padded !== true && this.padded,
-          this.padded && 'padded',
+          this.padded, this.padded && 'padded',
           this.collapsing && 'collapsing',
-          this.compact !== true && this.compact,
+          this.compact, this.compact && 'compact',
           this.definition && 'definition',
-          this.compact && 'compact',
           this.striped && 'striped',
           this.fixed && 'fixed',
           this.unstackable && 'unstackable',
@@ -58,8 +54,7 @@ export default {
           this.color,
           this.size,
           this.singleLine && 'single line',
-          num(this.columns),
-          this.columns && 'column',
+          this.columns && `${num(this.columns)} column`,
           'table',
         )}
       >

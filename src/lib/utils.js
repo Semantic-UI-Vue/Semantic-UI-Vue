@@ -1,4 +1,4 @@
-export const classes = (...classList) => classList.filter(c => !!c).join(' ');
+export const classes = (...classList) => classList.filter(c => c && c !== true).join(' ');
 
 const numbers = [
   'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
