@@ -8,7 +8,7 @@ const varTypes = {
 
 export function Enum(values = [], obj = {}) {
   let type;
-  const choices = values;
+  const choices = [...values];
 
   if (Array.isArray(obj.choices)) {
     choices.push(...obj.choices);
