@@ -11,6 +11,18 @@ export default {
       type: Boolean,
       description: 'If a form is in loading state, it will automatically show a loading indicator.',
     },
+    success: {
+      type: Boolean,
+      description: 'Automatically show any success Message children.',
+    },
+    warning: {
+      type: Boolean,
+      description: 'Automatically show any warning Message children.',
+    },
+    error: {
+      type: Boolean,
+      description: 'Automatically show any error Message children.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -22,6 +34,9 @@ export default {
           this.size,
           this.loading && 'loading',
           'form',
+          this.success && 'success',
+          this.warning && 'warning',
+          this.error && 'error',
         )}
       >
         {this.$slots.default}
