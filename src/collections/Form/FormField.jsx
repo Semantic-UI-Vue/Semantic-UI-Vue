@@ -8,6 +8,10 @@ export default {
       type: Number,
       description: 'A field can specify its width in grid columns',
     },
+    inline: {
+      type: Boolean,
+      description: 'A field can have its label next to instead of above it.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -16,6 +20,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           num(this.width),
+          this.inline && 'inline',
           'field',
         )}
       >
