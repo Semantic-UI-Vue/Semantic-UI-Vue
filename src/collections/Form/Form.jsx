@@ -34,6 +34,10 @@ export default {
       type: Boolean,
       description: 'Forms can automatically divide fields to be equal width.',
     },
+    unstackable: {
+      type: Boolean,
+      description: 'A form can prevent itself from stacking on mobile.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -42,6 +46,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.unstackable && 'unstackable',
           this.equalWidth && 'equal width',
           this.inverted && 'inverted',
           this.size,
