@@ -27,6 +27,10 @@ export default {
       type: Boolean,
       description: 'A form can have its color inverted for contrast.',
     },
+    equalWidth: {
+      type: Boolean,
+      description: 'Forms can automatically divide fields to be equal width.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -35,6 +39,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
+          this.equalWidth && 'equal width',
           this.inverted && 'inverted',
           this.size,
           this.loading && 'loading',
