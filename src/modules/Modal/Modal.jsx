@@ -47,11 +47,11 @@ function classBuilder(visualState, animation) {
 
 export default {
   name: 'SuiModal',
-  mixins: [listenersMixin],
   model: {
     prop: 'open',
     event: changed,
   },
+  mixins: [listenersMixin],
   props: {
     animation: {
       type: String,
