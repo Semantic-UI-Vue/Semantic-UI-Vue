@@ -13,7 +13,7 @@ export const classMixin = {
 export const listenersMixin = {
   methods: {
     generateListeners() {
-      const listeners = { ...this.listeners };
+      const listeners = { ...this.$listeners };
 
       Object
         .keys(this.$options.events || {})
