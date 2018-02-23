@@ -1,4 +1,4 @@
-import { getEventAnimationEnd, classes, getChildProps, getElementType } from '../../lib';
+import { getEventAnimationEnd, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 const visualStates = {
   closed: 'closed',

@@ -1,5 +1,5 @@
 import { Enum } from '../../lib/PropTypes';
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiProgress',

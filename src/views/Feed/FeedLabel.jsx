@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Icon, Image } from '../../elements';
 
 export default {

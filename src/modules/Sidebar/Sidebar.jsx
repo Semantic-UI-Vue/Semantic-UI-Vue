@@ -1,4 +1,4 @@
-import { getElementType, getChildProps } from '../../lib';
+import { getElementType, listenersMixin, getChildProps } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {

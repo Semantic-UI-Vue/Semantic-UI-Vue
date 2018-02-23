@@ -1,4 +1,4 @@
-import { getChildProps, getElementType } from '../../lib';
+import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiButtonOr',

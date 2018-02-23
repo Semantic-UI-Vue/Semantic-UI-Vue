@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, num } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
 
 export default {
   name: 'SuiStatisticsGroup',

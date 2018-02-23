@@ -4,11 +4,6 @@ import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiButton',
-  events: {
-    click: {
-      description: 'Click event passed to the button',
-    },
-  },
   mixins: [listenersMixin],
   props: {
     active: {
@@ -96,6 +91,11 @@ export default {
       description: 'A button can be formatted to toggle on and off.',
     },
     social: Enum.Social(),
+  },
+  events: {
+    click: {
+      description: 'Click event passed to the button',
+    },
   },
   render() {
     const ElementType = getElementType(this, 'button');

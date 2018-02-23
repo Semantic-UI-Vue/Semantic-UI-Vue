@@ -1,4 +1,4 @@
-import { getChildProps, getElementType } from '../../lib';
+import { getChildProps, getElementType, listenersMixin } from '../../lib';
 import SuiListIcon from './ListIcon';
 import SuiListContent from './ListContent';
 

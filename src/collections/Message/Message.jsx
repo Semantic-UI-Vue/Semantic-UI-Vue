@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import SuiIcon from '../../elements/Icon/Icon';
 import SuiMessageContent from './MessageContent';
 import SuiMessageHeader from './MessageHeader';
