@@ -13,8 +13,8 @@ export default {
       type: Boolean,
       description: 'A grid can have its columns centered.',
     },
-    columns: {
-      type: Number,
+    columns: Enum.Number({
+      choices: ['equal'],
       description: 'Represents column count per row in Grid.',
     },
     divided: Enum(['vertically'], {
