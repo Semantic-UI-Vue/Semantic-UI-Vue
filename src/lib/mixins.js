@@ -16,9 +16,11 @@ export const listenersMixin = {
       const listeners = { ...this.$listeners };
 
       Object
-        .keys(this.$options.events || {})
-        .forEach((name) => {
-          delete listeners[name];
+        .entries(this.$options.events || {})
+        .forEach(([name, { custom }]) => {
+          if (custom) {
+            delete listeners[name];
+          }
         });
 
       return {
