@@ -40,7 +40,7 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = getElementType(this, 'form');
     return (
       <ElementType
         {...getChildProps(this)}
