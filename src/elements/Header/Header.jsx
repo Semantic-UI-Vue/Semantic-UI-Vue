@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -27,7 +27,7 @@ export default {
         class={classes(
           'ui',
           this.floated && `${this.floated} floated`,
-          this.textAlign && (this.textAlign === 'justify' ? 'justified' : `${this.textAlign} aligned`),
+          textAlign(this.textAlign),
           this.attached,
           this.attached && 'attached',
           this.color,

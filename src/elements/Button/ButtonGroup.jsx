@@ -5,7 +5,7 @@ export default {
   name: 'SuiButtonGroup',
   props: {
     attached: Enum(['top', 'bottom']),
-    widths: Number,
+    widths: Enum.Number(),
     vertical: Boolean,
     labeled: Boolean,
     icons: Boolean,

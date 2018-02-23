@@ -2,8 +2,6 @@ import { classes, getChildProps, getElementType } from '../../lib';
 
 export default {
   name: 'SuiCardMeta',
-  props: {
-  },
   render() {
     const ElementType = getElementType(this);
     return (

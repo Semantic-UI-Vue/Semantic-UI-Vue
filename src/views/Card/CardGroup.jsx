@@ -1,9 +1,10 @@
 import { classes, getChildProps, getElementType, num } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiCardGroup',
   props: {
-    itemsPerRow: Number,
+    itemsPerRow: Enum.Number(),
     stackable: Boolean,
   },
   render() {

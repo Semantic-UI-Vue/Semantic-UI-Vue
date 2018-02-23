@@ -13,7 +13,7 @@ export default {
     collapsing: Boolean,
     disabled: Boolean,
     selectable: Boolean,
-    width: Number,
+    width: Enum.Number(),
     state: Enum.State(),
     verticalAlign: Enum.VerticalAlign(),
   },
@@ -23,9 +23,8 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          this.textAlign,
-          this.verticalAlign,
-          (this.textAlign || this.verticalAlign) && 'aligned',
+          this.textAlign && `${this.textAlign} aligned`,
+          this.verticalAlign && `${this.verticalAlign} aligned`,
           this.negative && 'negative',
           this.positive && 'positive',
           this.warning && 'warning',
@@ -33,8 +32,7 @@ export default {
           this.collapsing && 'collapsing',
           this.disabled && 'disabled',
           this.selectable && 'selectable',
-          num(this.width),
-          this.width && 'wide',
+          this.width && `${num(this.width)} wide`,
           this.state,
         )}>
         {this.$slots.default}

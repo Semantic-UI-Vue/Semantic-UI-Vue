@@ -1,10 +1,11 @@
 import { classes, getChildProps, getElementType, num } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiStatisticsGroup',
   props: {
     horizontal: Boolean,
-    columns: Number,
+    columns: Enum.Number(),
   },
   render() {
     const ElementType = getElementType(this);

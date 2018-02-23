@@ -25,7 +25,6 @@ export default {
     },
   },
   render() {
-    const hasIcon = this.icon || this.icon === '';
     const icon = typeof this.icon === 'string' && this.icon;
 
     const content = [
@@ -45,7 +44,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          hasIcon && 'icon',
+          this.icon && 'icon',
           this.info && 'info',
           'message',
         )}
