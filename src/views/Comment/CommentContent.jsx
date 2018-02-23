@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiCommentContent',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this);
     return (

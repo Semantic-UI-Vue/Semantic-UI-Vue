@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiBreadcrumbSection',
+  mixins: [listenersMixin],
   props: {
     active: Boolean,
     link: Boolean,

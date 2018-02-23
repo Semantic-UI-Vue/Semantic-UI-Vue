@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTable',
+  mixins: [listenersMixin],
   description: 'A table displays a collections of data grouped into rows.',
   props: {
     basic: Enum(['very'], {

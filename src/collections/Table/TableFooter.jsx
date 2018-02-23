@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiTableFooter',
+  mixins: [listenersMixin],
   props: {
     fullWidth: Boolean,
   },

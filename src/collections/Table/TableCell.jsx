@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTableCell',
+  mixins: [listenersMixin],
   props: {
     negative: Boolean,
     positive: Boolean,

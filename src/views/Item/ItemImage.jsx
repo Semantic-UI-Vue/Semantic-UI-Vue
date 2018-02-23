@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiItemImage',
+  mixins: [listenersMixin],
   description: 'An item can contain an image',
   props: {
     src: {

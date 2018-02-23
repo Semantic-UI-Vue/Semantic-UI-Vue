@@ -5,6 +5,7 @@ import Icon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiDropdownItem',
+  mixins: [listenersMixin],
   props: {
     flag: {
       type: String,

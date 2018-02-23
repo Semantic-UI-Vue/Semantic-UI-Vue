@@ -2,6 +2,7 @@ import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiMenuHeader',
+  mixins: [listenersMixin],
   props: {
     active: Boolean,
     content: String,

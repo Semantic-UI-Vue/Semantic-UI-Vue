@@ -2,6 +2,7 @@ import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiMessageItem',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this, 'li');
     return (

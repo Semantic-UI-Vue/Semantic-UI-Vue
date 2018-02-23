@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiButtonGroup',
+  mixins: [listenersMixin],
   props: {
     attached: Enum(['top', 'bottom']),
     widths: Number,

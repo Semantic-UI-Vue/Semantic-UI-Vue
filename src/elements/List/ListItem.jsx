@@ -4,6 +4,7 @@ import SuiListContent from './ListContent';
 
 export default {
   name: 'SuiListItem',
+  mixins: [listenersMixin],
   components: { SuiListContent, SuiListIcon },
   props: {
     content: String,

@@ -6,6 +6,7 @@ import SuiStepDescription from './StepDescription';
 
 export default {
   name: 'SuiStep',
+  mixins: [listenersMixin],
   components: { SuiIcon, SuiStepContent, SuiStepTitle, SuiStepDescription },
   props: {
     active: Boolean,

@@ -7,6 +7,7 @@ import SuiMessageList from './MessageList';
 
 export default {
   name: 'SuiMessage',
+  mixins: [listenersMixin],
   components: { SuiIcon, SuiMessageContent, SuiMessageHeader, SuiMessageItem, SuiMessageList },
   props: {
     content: String,

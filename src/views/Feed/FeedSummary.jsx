@@ -3,6 +3,7 @@ import { FeedDate, FeedUser } from './';
 
 export default {
   name: 'SuiFeedSummary',
+  mixins: [listenersMixin],
   description: 'A feed can contain a summary',
   props: {
     content: {

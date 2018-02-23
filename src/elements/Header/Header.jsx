@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiHeader',
+  mixins: [listenersMixin],
   props: {
     color: Enum.Color(),
     content: String,

@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiItemHeader',
+  mixins: [listenersMixin],
   description: 'An item can contain a header',
   props: {
     href: {

@@ -3,6 +3,7 @@ import { Icon } from '../../elements';
 
 export default {
   name: 'SuiFeedLike',
+  mixins: [listenersMixin],
   description: 'A feed can contain a like element',
   props: {
     content: {

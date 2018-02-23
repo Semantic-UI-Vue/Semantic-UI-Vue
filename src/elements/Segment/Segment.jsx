@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSegment',
+  mixins: [listenersMixin],
   props: {
     attached: Boolean,
     basic: Boolean,

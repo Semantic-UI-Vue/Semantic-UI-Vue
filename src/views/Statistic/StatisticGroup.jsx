@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin, num } from '../
 
 export default {
   name: 'SuiStatisticsGroup',
+  mixins: [listenersMixin],
   props: {
     horizontal: Boolean,
     columns: Number,

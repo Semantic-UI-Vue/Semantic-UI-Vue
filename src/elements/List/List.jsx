@@ -4,6 +4,7 @@ import SuiItemContent from './ListItem';
 
 export default {
   name: 'SuiList',
+  mixins: [listenersMixin],
   props: {
     divided: Boolean,
     horizontal: Boolean,

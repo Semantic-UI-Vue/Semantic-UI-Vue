@@ -2,6 +2,7 @@ import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiCommentAction',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this, 'a');
     return (

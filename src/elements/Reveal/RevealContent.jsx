@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiRevealContent',
+  mixins: [listenersMixin],
   props: {
     visible: Boolean,
     hidden: Boolean,

@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGrid',
+  mixins: [listenersMixin],
   description: 'A grid is used to harmonize negative space in a layout.',
   props: {
     celled: Enum(['internally'], {

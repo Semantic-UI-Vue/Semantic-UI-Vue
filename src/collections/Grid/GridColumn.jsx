@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGridColumn',
+  mixins: [listenersMixin],
   description: 'A column sub-component for Grid.',
   props: {
     color: Enum.Color({

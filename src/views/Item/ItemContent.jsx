@@ -7,6 +7,7 @@ function isValidAlignEnum(align) {
 
 export default {
   name: 'SuiItemContent',
+  mixins: [listenersMixin],
   description: 'An item can contain content',
   props: {
     verticalAlign: Enum(['top', 'middle', 'bottom'], {

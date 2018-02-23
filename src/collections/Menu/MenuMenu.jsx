@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiMenuMenu',
+  mixins: [listenersMixin],
   props: {
     position: Enum(['left', 'right']),
   },

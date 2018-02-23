@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiLabel',
+  mixins: [listenersMixin],
   props: {
     basic: {
       type: Boolean,

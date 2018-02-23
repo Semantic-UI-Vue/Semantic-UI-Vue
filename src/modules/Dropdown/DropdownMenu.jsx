@@ -9,6 +9,7 @@ const visualStates = {
 
 export default {
   name: 'SuiDropdownMenu',
+  mixins: [listenersMixin],
   data() {
     return {
       open: false,

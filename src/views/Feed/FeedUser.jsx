@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiFeedUser',
+  mixins: [listenersMixin],
   description: 'A feed can contain a user element',
   props: {
     content: {

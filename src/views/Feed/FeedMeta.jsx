@@ -3,6 +3,7 @@ import { FeedLike } from './';
 
 export default {
   name: 'SuiFeedMeta',
+  mixins: [listenersMixin],
   description: 'A feed can contain a meta',
   props: {
     content: {

@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiModalContent',
+  mixins: [listenersMixin],
   props: {
     image: Boolean,
   },

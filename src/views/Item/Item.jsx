@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiItem',
+  mixins: [listenersMixin],
   description: 'An item view presents large collections of site content for display',
   props: {
     href: {

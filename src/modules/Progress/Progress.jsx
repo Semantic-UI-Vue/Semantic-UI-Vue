@@ -3,6 +3,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiProgress',
+  mixins: [listenersMixin],
   props: {
     label: String,
     content: String,

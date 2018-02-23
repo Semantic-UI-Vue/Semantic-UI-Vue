@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiForm',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this);
     return (

@@ -4,6 +4,7 @@ import { Icon } from '../../elements';
 
 export default {
   name: 'SuiEmbed',
+  mixins: [listenersMixin],
   props: {
     active: {
       type: Boolean,

@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiDivider',
+  mixins: [listenersMixin],
   props: {
     clearing: Boolean,
     fitted: Boolean,

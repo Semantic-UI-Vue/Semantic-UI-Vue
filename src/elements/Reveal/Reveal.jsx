@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiReveal',
+  mixins: [listenersMixin],
   props: {
     animated: Enum([
       'fade',

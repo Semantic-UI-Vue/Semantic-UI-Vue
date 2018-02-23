@@ -2,6 +2,7 @@ import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiTableBody',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this, 'tbody');
     return (

@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin, num } from '../
 
 export default {
   name: 'SuiCardGroup',
+  mixins: [listenersMixin],
   props: {
     itemsPerRow: Number,
     stackable: Boolean,

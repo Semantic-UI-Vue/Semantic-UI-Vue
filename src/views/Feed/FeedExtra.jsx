@@ -3,6 +3,7 @@ import { Image } from '../../elements';
 
 export default {
   name: 'SuiFeedExtra',
+  mixins: [listenersMixin],
   description: 'A feed can contain an extra content',
   props: {
     content: {

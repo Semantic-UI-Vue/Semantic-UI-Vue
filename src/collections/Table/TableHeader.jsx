@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiTableHeader',
+  mixins: [listenersMixin],
   props: {
     fullWidth: Boolean,
   },

@@ -2,6 +2,7 @@ import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiStepDescription',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this);
     return (

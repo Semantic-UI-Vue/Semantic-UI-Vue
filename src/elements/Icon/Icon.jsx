@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiIcon',
+  mixins: [listenersMixin],
   props: {
     color: Enum.Color(),
     disabled: Boolean,

@@ -4,6 +4,7 @@ import FeedEvent from './FeedEvent';
 
 export default {
   name: 'SuiFeed',
+  mixins: [listenersMixin],
   description: 'A feed presents user activity chronologically',
   props: {
     size: Enum(['small', 'large'], {

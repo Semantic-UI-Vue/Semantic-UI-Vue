@@ -2,6 +2,7 @@ import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiListList',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this);
     return (

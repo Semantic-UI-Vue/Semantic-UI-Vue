@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGridRow',
+  mixins: [listenersMixin],
   description: 'A row sub-component for Grid',
   props: {
     columns: {

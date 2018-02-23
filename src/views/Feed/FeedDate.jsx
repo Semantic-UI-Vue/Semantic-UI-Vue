@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiFeedDate',
+  mixins: [listenersMixin],
   description: 'An event or an event summary can contain a date',
   props: {
     content: {

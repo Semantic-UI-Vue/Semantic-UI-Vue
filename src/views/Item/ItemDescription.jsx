@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiItemDescription',
+  mixins: [listenersMixin],
   description: 'An item can contain a description with a single or multiple paragraphs',
   props: {},
   render() {

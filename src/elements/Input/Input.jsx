@@ -5,6 +5,7 @@ import SuiIcon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiInput',
+  mixins: [listenersMixin],
   components: { SuiButton, SuiIcon },
   props: {
     action: String,

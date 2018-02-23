@@ -4,6 +4,7 @@ import SuiBreadcrumbDivider from './BreadcrumbDivider';
 
 export default {
   name: 'SuiBreadcrumb',
+  mixins: [listenersMixin],
   components: { SuiBreadcrumbDivider, SuiBreadcrumbSection },
   props: {
     icon: String,

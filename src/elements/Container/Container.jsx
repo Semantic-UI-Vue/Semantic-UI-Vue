@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiContainer',
+  mixins: [listenersMixin],
   props: {
     fluid: {
       type: Boolean,

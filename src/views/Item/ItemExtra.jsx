@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiItemExtra',
+  mixins: [listenersMixin],
   description: 'An item can contain extra content meant to be formatted separately from the main content',
   props: {},
   render() {

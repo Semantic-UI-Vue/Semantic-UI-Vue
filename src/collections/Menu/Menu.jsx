@@ -4,6 +4,7 @@ import SuiMenuItem from './MenuItem';
 
 export default {
   name: 'SuiMenu',
+  mixins: [listenersMixin],
   components: { SuiMenuItem },
   props: {
     activeIndex: Number,

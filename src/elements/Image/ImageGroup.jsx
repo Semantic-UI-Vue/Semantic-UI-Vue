@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiImageGroup',
+  mixins: [listenersMixin],
   props: {
     size: Enum.Size(),
   },

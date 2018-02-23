@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiItemGroup',
+  mixins: [listenersMixin],
   description: 'A group of items',
   props: {
     unstackable: {

@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSidebar',
+  mixins: [listenersMixin],
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),

@@ -4,6 +4,7 @@ import SuiIcon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiMenuItem',
+  mixins: [listenersMixin],
   components: { SuiIcon },
   props: {
     active: Boolean,

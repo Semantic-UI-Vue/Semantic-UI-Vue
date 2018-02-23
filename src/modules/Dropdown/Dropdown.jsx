@@ -30,6 +30,7 @@ function getOffset(el) {
 
 export default {
   name: 'SuiDropdown',
+  mixins: [listenersMixin],
   props: {
     button: {
       type: Boolean,

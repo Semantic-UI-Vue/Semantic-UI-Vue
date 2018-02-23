@@ -3,6 +3,7 @@ import { FeedDate, FeedSummary, FeedExtra, FeedMeta } from './';
 
 export default {
   name: 'SuiFeedContent',
+  mixins: [listenersMixin],
   props: {
     content: {
       type: String,

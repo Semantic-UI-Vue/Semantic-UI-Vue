@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiRail',
+  mixins: [listenersMixin],
   props: {
     attached: Boolean,
     dividing: Boolean,

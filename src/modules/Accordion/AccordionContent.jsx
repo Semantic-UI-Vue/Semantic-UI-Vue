@@ -3,6 +3,7 @@ import mixin from './mixin';
 
 export default {
   name: 'SuiAccordionContent',
+  mixins: [listenersMixin],
   ...mixin,
   render() {
     const ElementType = getElementType(this);

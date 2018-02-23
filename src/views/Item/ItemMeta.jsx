@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiItemMeta',
+  mixins: [listenersMixin],
   description: 'An item can contain content metadata',
   props: {},
   render() {

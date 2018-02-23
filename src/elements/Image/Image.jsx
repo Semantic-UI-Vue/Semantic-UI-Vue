@@ -3,6 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiImage',
+  mixins: [listenersMixin],
   props: {
     avatar: {
       type: Boolean,

@@ -2,6 +2,7 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiLoader',
+  mixins: [listenersMixin],
   props: {
     active: Boolean,
     content: String,

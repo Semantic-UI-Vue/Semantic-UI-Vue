@@ -2,6 +2,7 @@ import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiButtonOr',
+  mixins: [listenersMixin],
   props: {
     text: String,
   },
