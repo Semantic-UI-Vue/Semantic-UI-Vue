@@ -1,4 +1,5 @@
 import { num, classes, getChildProps, getElementType } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiFormFields',
