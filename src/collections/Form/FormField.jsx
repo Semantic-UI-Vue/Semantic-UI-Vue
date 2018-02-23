@@ -19,6 +19,10 @@ export default {
       type: Boolean,
       description: 'Individual fields may be disabled.',
     },
+    error: {
+      type: Boolean,
+      description: 'Individual fields may display an error state.',
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -31,6 +35,7 @@ export default {
           this.required && 'required',
           this.disabled && 'disabled',
           'field',
+          this.error && 'error',
         )}
       >
         {this.$slots.default}
