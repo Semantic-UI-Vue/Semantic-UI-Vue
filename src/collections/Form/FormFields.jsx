@@ -11,10 +11,10 @@ export default {
       type: Boolean,
       description: 'Fields can show related choices.',
     },
-    fields: {
-      type: Number,
+    fields: Enum.Number({
+      choices: ['equal'],
       description: 'Represents number of fields in group',
-    },
+    }),
     unstackable: {
       type: Boolean,
       description: 'A form group can prevent itself from stacking on mobile.',
@@ -27,9 +27,9 @@ export default {
         {...getChildProps(this)}
         class={classes(
           this.unstackable && 'unstackable',
-          num(this.fields),
           this.inline && 'inline',
           this.grouped && 'grouped',
+          num(this.fields),
           'fields',
         )}
       >
