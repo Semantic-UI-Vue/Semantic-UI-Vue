@@ -2,6 +2,7 @@
   <sui-dropdown
     fluid
     multiple
+    :max-selections="3"
     :options="skills"
     placeholder="Skills"
     selection
@@ -11,7 +12,7 @@
 
 <script>
 export default {
-  name: 'SearchSelectionExample',
+  name: 'MultipleMaxSelections',
   data() {
     return {
       current: null,
