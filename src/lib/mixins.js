@@ -12,12 +12,17 @@ export const classMixin = {
 
 export const listenersMixin = {
   methods: {
-    generateListeners(listeners = {}) {
+    generateListeners() {
+      const listeners = { ...this.listeners };
+
+      Object
+        .keys(this.$options.events || {})
+        .forEach((name) => {
+          delete listeners[name];
+        });
+
       return {
-        on: {
-          ...this.$listeners,
-          ...listeners,
-        },
+        on: listeners,
       };
     },
   },
