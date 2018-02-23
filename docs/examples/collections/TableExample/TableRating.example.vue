@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-table celled padded>
+  <sui-table :celled="true" :padded="true">
     <sui-table-header>
       <sui-table-row>
         <sui-table-header-cell single-line>Evidence Rating</sui-table-header-cell>
