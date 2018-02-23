@@ -4,8 +4,8 @@ import SuiMenuItem from './MenuItem';
 
 export default {
   name: 'SuiMenu',
-  mixins: [listenersMixin],
   components: { SuiMenuItem },
+  mixins: [listenersMixin],
   props: {
     activeIndex: Number,
     color: Enum.Color(),

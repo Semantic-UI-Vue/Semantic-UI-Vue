@@ -3,8 +3,7 @@ import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiStatistic',
-  mixins: [listenersMixin],
-  mixins: [classMixin],
+  mixins: [classMixin, listenersMixin],
   props: {
     horizontal: {
       type: Boolean,

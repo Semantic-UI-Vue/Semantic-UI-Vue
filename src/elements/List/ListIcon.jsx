@@ -1,3 +1,4 @@
+import { listenersMixin } from '../../lib';
 import SuiIcon from '../Icon/Icon';
 
 export default {

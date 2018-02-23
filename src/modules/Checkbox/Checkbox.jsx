@@ -2,11 +2,11 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 
 export default {
   name: 'SuiCheckbox',
-  mixins: [listenersMixin],
   model: {
     prop: 'inputValue',
     event: 'change',
   },
+  mixins: [listenersMixin],
   props: {
     disabled: Boolean,
     inputValue: [Array, Boolean, Number, String],

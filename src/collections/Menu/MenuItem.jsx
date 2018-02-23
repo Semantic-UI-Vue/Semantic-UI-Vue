@@ -4,8 +4,8 @@ import SuiIcon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiMenuItem',
-  mixins: [listenersMixin],
   components: { SuiIcon },
+  mixins: [listenersMixin],
   props: {
     active: Boolean,
     color: Enum.Color(),

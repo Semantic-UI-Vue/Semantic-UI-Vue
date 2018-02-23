@@ -3,8 +3,8 @@ import SuiStep from './Step';
 
 export default {
   name: 'SuiStepGroup',
-  mixins: [listenersMixin],
   components: { SuiStep },
+  mixins: [listenersMixin],
   props: {
     ordered: Boolean,
     steps: Array,

@@ -4,8 +4,8 @@ import SuiStepTitle from './StepTitle';
 
 export default {
   name: 'SuiStepContent',
-  mixins: [listenersMixin],
   components: { SuiStepDescription, SuiStepTitle },
+  mixins: [listenersMixin],
   props: {
     description: String,
     title: String,
