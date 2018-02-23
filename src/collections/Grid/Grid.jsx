@@ -16,7 +16,7 @@ export default {
     columns: Enum.Number({
       choices: ['equal'],
       description: 'Represents column count per row in Grid.',
-    },
+    }),
     divided: Enum(['vertically'], {
       type: Boolean,
       description: 'A grid can have dividers between its columns.',
