@@ -3,8 +3,6 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 export default {
   name: 'SuiCardHeader',
   mixins: [listenersMixin],
-  props: {
-  },
   render() {
     const ElementType = getElementType(this);
     return (

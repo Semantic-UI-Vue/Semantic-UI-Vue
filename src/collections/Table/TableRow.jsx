@@ -19,9 +19,8 @@ export default {
       <ElementType
         {...getChildProps(this)}
         class={classes(
-          this.textAlign,
-          this.verticalAlign,
-          (this.textAlign || this.verticalAlign) && 'aligned',
+          this.textAlign && `${this.textAlign} aligned`,
+          this.verticalAlign && `${this.verticalAlign} aligned`,
           this.negative && 'negative',
           this.positive && 'positive',
           this.selected && 'selected',

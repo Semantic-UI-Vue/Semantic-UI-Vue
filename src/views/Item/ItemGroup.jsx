@@ -1,4 +1,5 @@
 import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiItemGroup',
@@ -13,14 +14,10 @@ export default {
       type: Boolean,
       description: 'Items can be divided to better distinguish between grouped content',
     },
-    relaxed: {
+    relaxed: Enum(['very'], {
       type: Boolean,
       description: 'A group of items can relax its padding to provide more negative space',
-    },
-    veryRelaxed: {
-      type: Boolean,
-      description: 'A group of items can very relax its padding to provide even more negative space',
-    },
+    }),
     link: {
       type: Boolean,
       description: 'An item can be formatted so that the entire contents link to another page',
@@ -35,8 +32,7 @@ export default {
           'ui',
           this.unstackable && 'unstackable',
           this.divided && 'divided',
-          this.relaxed && !this.veryRelaxed && 'relaxed',
-          this.veryRelaxed && 'very relaxed',
+          this.relaxed, this.relaxed && 'relaxed',
           this.link && 'link',
           'items',
         )}

@@ -6,10 +6,9 @@ export default {
   mixins: [listenersMixin],
   description: 'A row sub-component for Grid',
   props: {
-    columns: {
-      type: Number,
+    columns: Enum.Number({
       description: 'Represents column count per line in Row.',
-    },
+    }),
     centered: {
       type: Boolean,
       description: 'A row can have its columns centered.',
@@ -52,8 +51,7 @@ export default {
           this.centered && 'centered',
           this.stretched && 'stretched',
           this.color,
-          num(this.columns),
-          this.columns && 'column',
+          this.columns && `${num(this.columns)} column`,
           'row',
         )}
       >

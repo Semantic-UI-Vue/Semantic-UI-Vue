@@ -3,8 +3,6 @@ import { classes, getChildProps, getElementType, listenersMixin } from '../../li
 export default {
   name: 'SuiCardMeta',
   mixins: [listenersMixin],
-  props: {
-  },
   render() {
     const ElementType = getElementType(this);
     return (

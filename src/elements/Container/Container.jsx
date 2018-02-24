@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -13,7 +13,7 @@ export default {
       type: Boolean,
       description: 'Reduce maximum width to more naturally accommodate text.',
     },
-    textAlign: Enum(['left', 'right', 'center', 'justified'], {
+    textAlign: Enum.TextAlign({
       description: 'Align container text.',
     }),
   },
@@ -24,8 +24,7 @@ export default {
         {...getChildProps(this)}
         class={classes(
           'ui',
-          this.textAlign,
-          this.textAlign && this.textAlign !== 'justified' && 'aligned',
+          textAlign(this.textAlign),
           this.text && 'text',
           this.fluid && 'fluid',
           'container',

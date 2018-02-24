@@ -1,10 +1,11 @@
 import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiCardGroup',
   mixins: [listenersMixin],
   props: {
-    itemsPerRow: Number,
+    itemsPerRow: Enum.Number(),
     stackable: Boolean,
   },
   render() {
