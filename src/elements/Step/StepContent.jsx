@@ -13,7 +13,7 @@ export default {
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} class="content">
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="content">
         {this.title && <SuiStepTitle>{this.title}</SuiStepTitle>}
         {this.description && <SuiStepDescription>{this.description}</SuiStepDescription>}
         {this.$slots.default}

@@ -6,7 +6,7 @@ export default {
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} class="detail">
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="detail">
         {this.$slots.default}
       </ElementType>
     );

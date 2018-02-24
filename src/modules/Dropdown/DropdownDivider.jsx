@@ -6,7 +6,7 @@ export default {
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} role="option" class={classes('divider')} />
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} role="option" class={classes('divider')} />
     );
   },
   meta: {

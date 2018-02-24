@@ -11,7 +11,7 @@ export default {
     const attrs = {};
     if (this.text) attrs['data-text'] = this.text;
     return (
-      <ElementType {...getChildProps(this)} class="or" {...{ attrs }}/>
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="or" {...{ attrs }}/>
     );
   },
   meta: {

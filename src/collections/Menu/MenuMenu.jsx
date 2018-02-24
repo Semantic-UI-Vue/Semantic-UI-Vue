@@ -10,7 +10,7 @@ export default {
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} class={classes(this.position, 'menu')}>
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class={classes(this.position, 'menu')}>
         {this.$slots.default}
       </ElementType>
     );

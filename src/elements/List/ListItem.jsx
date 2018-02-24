@@ -13,7 +13,7 @@ export default {
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} class="item" role="listitem">
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="item" role="listitem">
         {this.icon && <SuiListIcon name={this.icon} />}
         {this.content ? (
           <SuiListContent>{this.content}</SuiListContent>
