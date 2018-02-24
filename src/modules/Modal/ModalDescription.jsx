@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiModalDescription',
+  mixins: [listenersMixin],
   props: {
   },
   render() {
@@ -9,6 +10,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('description')}
       >
         {this.$slots.default}

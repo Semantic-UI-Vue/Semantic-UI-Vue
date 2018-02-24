@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiRevealContent',
+  mixins: [listenersMixin],
   props: {
     visible: Boolean,
     hidden: Boolean,
@@ -11,6 +12,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.hidden && 'hidden',

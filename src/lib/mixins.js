@@ -9,3 +9,23 @@ export const classMixin = {
     },
   },
 };
+
+export const listenersMixin = {
+  methods: {
+    generateListeners() {
+      const listeners = { ...this.$listeners };
+
+      Object
+        .entries(this.$options.events || {})
+        .forEach(([name, { custom }]) => {
+          if (custom) {
+            delete listeners[name];
+          }
+        });
+
+      return {
+        on: listeners,
+      };
+    },
+  },
+};

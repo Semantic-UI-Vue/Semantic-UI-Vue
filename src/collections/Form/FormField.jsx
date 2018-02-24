@@ -1,8 +1,9 @@
-import { num, classes, getChildProps, getElementType } from '../../lib';
+import { num, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiFormField',
+  mixins: [listenersMixin],
   props: {
     width: Enum.Number({
       description: 'A field can specify its width in grid columns',
@@ -29,6 +30,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           num(this.width),
           this.inline && 'inline',

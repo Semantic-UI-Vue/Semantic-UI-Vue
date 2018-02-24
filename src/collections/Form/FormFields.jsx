@@ -1,8 +1,9 @@
-import { num, classes, getChildProps, getElementType } from '../../lib';
+import { num, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiFormFields',
+  mixins: [listenersMixin],
   props: {
     inline: {
       type: Boolean,
@@ -26,6 +27,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.unstackable && 'unstackable',
           this.inline && 'inline',

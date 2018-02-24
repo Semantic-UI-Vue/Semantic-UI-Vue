@@ -1,8 +1,9 @@
-import { classes, getElementType } from '../../lib';
+import { classes, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiImageGroup',
+  mixins: [listenersMixin],
   props: {
     size: Enum.Size(),
   },

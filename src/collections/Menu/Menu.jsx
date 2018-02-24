@@ -1,10 +1,11 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import SuiMenuItem from './MenuItem';
 
 export default {
   name: 'SuiMenu',
   components: { SuiMenuItem },
+  mixins: [listenersMixin],
   props: {
     activeIndex: Number,
     color: Enum.Color(),
@@ -25,6 +26,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.vertical && 'vertical',

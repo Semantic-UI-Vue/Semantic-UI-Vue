@@ -1,5 +1,5 @@
 import escapeRegExp from 'lodash/escapeRegExp';
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../../elements/Icon/Icon';
 import Label from '../../elements/Label/Label';
@@ -30,6 +30,7 @@ function getOffset(el) {
 
 export default {
   name: 'SuiDropdown',
+  mixins: [listenersMixin],
   props: {
     button: {
       type: Boolean,
@@ -452,6 +453,7 @@ export default {
         aria-expanded={this.open}
         tabindex="0"
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.button && 'button',

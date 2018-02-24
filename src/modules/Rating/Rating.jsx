@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiRating',
+  mixins: [listenersMixin],
   binding: {
     prop: 'rating',
     event: 'changed',
@@ -36,6 +37,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.icon,

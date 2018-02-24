@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiCheckbox',
@@ -6,6 +6,7 @@ export default {
     prop: 'inputValue',
     event: 'change',
   },
+  mixins: [listenersMixin],
   props: {
     disabled: Boolean,
     inputValue: [Array, Boolean, Number, String],
@@ -52,6 +53,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           !(this.label || this.$slots.default) && 'fitted',

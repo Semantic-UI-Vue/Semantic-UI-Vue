@@ -1,10 +1,11 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
 import Icon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiDropdownItem',
+  mixins: [listenersMixin],
   props: {
     flag: {
       type: String,
@@ -47,6 +48,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         role="option"
         class={classes(
           this.active && 'active',

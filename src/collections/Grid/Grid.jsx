@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType, num, textAlign } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, num, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGrid',
+  mixins: [listenersMixin],
   description: 'A grid is used to harmonize negative space in a layout.',
   props: {
     celled: Enum(['internally'], {
@@ -59,6 +60,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.reversed && `${this.reversed} reversed`,

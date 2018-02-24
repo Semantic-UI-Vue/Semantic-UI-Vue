@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiItemGroup',
+  mixins: [listenersMixin],
   description: 'A group of items',
   props: {
     unstackable: {

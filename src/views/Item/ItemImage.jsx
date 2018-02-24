@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiItemImage',
+  mixins: [listenersMixin],
   description: 'An item can contain an image',
   props: {
     src: {

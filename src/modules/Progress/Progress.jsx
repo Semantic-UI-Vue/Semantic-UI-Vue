@@ -1,8 +1,9 @@
 import { Enum } from '../../lib/PropTypes';
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiProgress',
+  mixins: [listenersMixin],
   props: {
     label: String,
     content: String,
@@ -34,6 +35,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           'progress',

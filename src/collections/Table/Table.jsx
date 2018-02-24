@@ -1,8 +1,9 @@
-import { num, classes, getChildProps, getElementType } from '../../lib';
+import { num, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTable',
+  mixins: [listenersMixin],
   description: 'A table displays a collections of data grouped into rows.',
   props: {
     basic: Enum(['very'], {
@@ -36,6 +37,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.textAlign, this.textAlign && 'aligned',

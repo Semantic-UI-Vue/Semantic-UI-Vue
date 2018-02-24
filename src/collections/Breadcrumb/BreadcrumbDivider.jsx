@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiBreadcrumbDivider',
+  mixins: [listenersMixin],
   props: {
     icon: String,
   },
@@ -10,6 +11,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.icon,
           this.icon && 'icon',

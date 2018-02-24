@@ -1,4 +1,4 @@
-import { getEventAnimationEnd, classes, getChildProps, getElementType } from '../../lib';
+import { getEventAnimationEnd, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 const visualStates = {
   closed: 'closed',
@@ -9,6 +9,7 @@ const visualStates = {
 
 export default {
   name: 'SuiDropdownMenu',
+  mixins: [listenersMixin],
   data() {
     return {
       open: false,
@@ -63,6 +64,7 @@ export default {
       <ElementType
         tabindex="-1"
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('menu', this.open && 'visible active', 'transition', this.animation)}
       >
         {this.$slots.default}

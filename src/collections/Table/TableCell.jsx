@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType, num } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTableCell',
+  mixins: [listenersMixin],
   props: {
     negative: Boolean,
     positive: Boolean,
@@ -22,6 +23,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.textAlign && `${this.textAlign} aligned`,
           this.verticalAlign && `${this.verticalAlign} aligned`,

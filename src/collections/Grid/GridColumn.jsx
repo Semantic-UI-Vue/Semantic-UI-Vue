@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType, num, textAlign } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, num, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGridColumn',
+  mixins: [listenersMixin],
   description: 'A column sub-component for Grid.',
   props: {
     color: Enum.Color({
@@ -49,6 +50,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.floated && `${this.floated} floated`,
           textAlign(this.textAlign),

@@ -2,7 +2,7 @@
  * Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
  * Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
  */
-import { getEventAnimationEnd, classes } from '../../lib';
+import { classes, getEventAnimationEnd, listenersMixin } from '../../lib';
 
 const closed = 'closed';
 const opening = 'opening';
@@ -51,6 +51,7 @@ export default {
     prop: 'open',
     event: changed,
   },
+  mixins: [listenersMixin],
   props: {
     animation: {
       type: String,

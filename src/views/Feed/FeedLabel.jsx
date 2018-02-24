@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Icon, Image } from '../../elements';
 
 export default {
   name: 'SuiFeedLabel',
+  mixins: [listenersMixin],
   description: 'An event can contain an image or icon label',
   props: {
     content: {
@@ -23,6 +24,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'label',
         )}

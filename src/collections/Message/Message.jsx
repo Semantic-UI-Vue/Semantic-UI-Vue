@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import SuiIcon from '../../elements/Icon/Icon';
 import SuiMessageContent from './MessageContent';
 import SuiMessageHeader from './MessageHeader';
@@ -8,6 +8,7 @@ import SuiMessageList from './MessageList';
 export default {
   name: 'SuiMessage',
   components: { SuiIcon, SuiMessageContent, SuiMessageHeader, SuiMessageItem, SuiMessageList },
+  mixins: [listenersMixin],
   props: {
     content: String,
     dismissable: Boolean,
@@ -42,6 +43,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.icon && 'icon',

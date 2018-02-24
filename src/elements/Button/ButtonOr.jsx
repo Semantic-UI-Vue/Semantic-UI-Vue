@@ -1,7 +1,8 @@
-import { getChildProps, getElementType } from '../../lib';
+import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiButtonOr',
+  mixins: [listenersMixin],
   props: {
     text: String,
   },
@@ -10,7 +11,7 @@ export default {
     const attrs = {};
     if (this.text) attrs['data-text'] = this.text;
     return (
-      <ElementType {...getChildProps(this)} class="or" {...{ attrs }}/>
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="or" {...{ attrs }}/>
     );
   },
   meta: {

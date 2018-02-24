@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiRail',
+  mixins: [listenersMixin],
   props: {
     attached: Boolean,
     dividing: Boolean,
@@ -14,6 +15,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.dividing && 'dividing',
