@@ -22,6 +22,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.textAlign && `${this.textAlign} aligned`,
           this.verticalAlign && `${this.verticalAlign} aligned`,

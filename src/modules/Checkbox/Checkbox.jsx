@@ -53,6 +53,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           !(this.label || this.$slots.default) && 'fitted',

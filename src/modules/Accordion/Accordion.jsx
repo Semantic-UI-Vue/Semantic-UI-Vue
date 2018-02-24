@@ -101,6 +101,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('ui', this.inverted && 'inverted', this.styled && 'styled', 'accordion')}
       >
         {this.panels ? this.panels.map(({ title, content }, index) => (

@@ -453,6 +453,7 @@ export default {
         aria-expanded={this.open}
         tabindex="0"
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.button && 'button',

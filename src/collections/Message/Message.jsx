@@ -43,6 +43,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.icon && 'icon',

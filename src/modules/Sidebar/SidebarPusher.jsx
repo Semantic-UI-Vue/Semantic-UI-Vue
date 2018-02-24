@@ -10,6 +10,7 @@ export default {
     const ElementType = getElementType(this);
     return <ElementType
       {...getChildProps(this)}
+      {...this.generateListeners()}
       class={classes('pusher', this.dimmed && 'dimmed')}
     >
       {this.$slots.default}

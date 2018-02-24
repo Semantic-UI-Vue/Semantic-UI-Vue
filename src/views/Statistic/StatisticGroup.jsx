@@ -14,6 +14,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           num(this.columns),
           'ui',

@@ -50,6 +50,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.floated && `${this.floated} floated`,
           textAlign(this.textAlign),

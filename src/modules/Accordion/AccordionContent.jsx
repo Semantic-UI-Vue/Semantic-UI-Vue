@@ -10,6 +10,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('content', this.dataActive && 'active')}
       >
         {this.$slots.default}

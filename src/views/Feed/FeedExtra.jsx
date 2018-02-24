@@ -34,6 +34,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.images && 'images',
           (this.text || this.content) && 'text',

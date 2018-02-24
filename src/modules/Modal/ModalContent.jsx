@@ -11,6 +11,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('content', this.image && 'image')}
       >
         {this.$slots.default}

@@ -48,6 +48,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         role="option"
         class={classes(
           this.active && 'active',

@@ -64,6 +64,7 @@ export default {
       <ElementType
         tabindex="-1"
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('menu', this.open && 'visible active', 'transition', this.animation)}
       >
         {this.$slots.default}

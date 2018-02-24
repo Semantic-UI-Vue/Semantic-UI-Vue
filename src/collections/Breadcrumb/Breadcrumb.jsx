@@ -15,6 +15,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('ui', 'breadcrumb')}
       >
         {this.$slots.default || this.sections.map(({ active, content, key, link }, index) => {

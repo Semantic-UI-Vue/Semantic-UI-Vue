@@ -29,6 +29,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={`ui sidebar vertical menu ${this.direction} ${this.animation || ''}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`}
       >
         {this.$slots.default}

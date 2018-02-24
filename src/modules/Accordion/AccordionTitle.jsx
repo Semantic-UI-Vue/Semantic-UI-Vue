@@ -10,6 +10,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('title', this.dataActive && 'active')}
         onClick={this.toggle}
       >

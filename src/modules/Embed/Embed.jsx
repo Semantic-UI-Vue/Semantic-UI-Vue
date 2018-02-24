@@ -142,6 +142,7 @@ export default {
       <ElementType
         onClick={this.setActive}
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.aspectRatio,

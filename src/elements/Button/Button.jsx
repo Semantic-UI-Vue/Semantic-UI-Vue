@@ -134,6 +134,7 @@ export default {
       <ElementType
         {...getChildProps(this)}
         {...this.generateListeners()}
+        {...this.generateListeners()}
         class={classList}
         role="button"
       >

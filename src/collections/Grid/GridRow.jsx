@@ -42,6 +42,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.reversed && `${this.reversed} reversed`,
           this.only && `${this.only} only`,

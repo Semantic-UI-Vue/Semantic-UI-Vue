@@ -25,6 +25,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classList}
       >
         {this.content || this.$slots.default}

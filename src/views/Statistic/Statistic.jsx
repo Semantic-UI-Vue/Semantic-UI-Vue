@@ -22,6 +22,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.getUIClass(),
           'statistic',
