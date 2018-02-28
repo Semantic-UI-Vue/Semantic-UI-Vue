@@ -28,11 +28,6 @@ describe('Image', () => {
     expect(wrappedImage.find('img').element.getAttribute('src')).to.equal(src);
   });
 
-  it('should have a value for name prop', () => {
-    const image = shallow(Image, { propsData: { name: 'home' } });
-    expect(image.hasProp('name', 'home')).to.equal(true);
-  });
-
   it('should work with spaced prop', () => {
     const image = shallow(Image, { propsData: { spaced: true } });
     expect(image.classes()).to.include('spaced');

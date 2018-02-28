@@ -17,10 +17,5 @@ describe('Icon', () => {
     const icon = shallow(Icon, { propsData: { name: 'user' } });
     expect(icon.classes()).to.include('user');
   });
-
-  it('should have a value for name prop', () => {
-    const icon = shallow(Icon, { propsData: { name: 'home' } });
-    expect(icon.hasProp('name', 'home')).to.equal(true);
-  });
 });
 
