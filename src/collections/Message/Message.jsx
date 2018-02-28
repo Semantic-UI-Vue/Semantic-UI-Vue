@@ -20,6 +20,11 @@ export default {
     },
     list: Array,
   },
+  events: {
+    dismiss: {
+      custom: true,
+    },
+  },
   methods: {
     handleDismiss() {
       this.$emit('dismiss');

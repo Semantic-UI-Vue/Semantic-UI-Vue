@@ -101,6 +101,11 @@ export default {
       description: 'Whether or not the menu should close when the dropdown is blurred.',
     },
   },
+  events: {
+    input: {
+      custom: true,
+    },
+  },
   data() {
     return {
       filter: '',

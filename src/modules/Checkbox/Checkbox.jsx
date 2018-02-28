@@ -15,6 +15,11 @@ export default {
     toggle: Boolean,
     value: String,
   },
+  events: {
+    change: {
+      custom: true,
+    },
+  },
   computed: {
     isArray() {
       return Array.isArray(this.inputValue);
