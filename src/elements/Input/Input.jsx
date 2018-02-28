@@ -19,6 +19,11 @@ export default {
     transparent: Boolean,
     value: String,
   },
+  events: {
+    input: {
+      custom: true,
+    },
+  },
   render() {
     const ElementType = getElementType(this);
     let icon;

@@ -95,6 +95,17 @@ export default {
       default: true,
     },
   },
+  events: {
+    displayChanged: {
+      custom: true,
+    },
+    [changed]: {
+      custom: true,
+    },
+    clickAwayModal: {
+      custom: true,
+    },
+  },
   data() {
     return {
       offsetY: 0,

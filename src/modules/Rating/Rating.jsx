@@ -12,6 +12,11 @@ export default {
     maxRating: Number,
     rating: Number,
   },
+  events: {
+    rate: {
+      custom: true,
+    },
+  },
   data() {
     return {
       selected: 0,

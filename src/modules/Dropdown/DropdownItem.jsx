@@ -38,6 +38,11 @@ export default {
       description: 'Is item selected',
     },
   },
+  events: {
+    select: {
+      custom: true,
+    },
+  },
   methods: {
     select() {
       this.$emit('select', this.value);
