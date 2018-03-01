@@ -3,78 +3,54 @@
  * Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
  */
 import { classes, getEventAnimationEnd, listenersMixin } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
-const closed = 'closed';
-const opening = 'opening';
-const open = 'open';
-const closing = 'closing';
-const changed = 'changed';
+const visualStates = {
+  closed: 'closed',
+  opening: 'opening',
+  open: 'open',
+  closing: 'closing',
+};
 
-function addClass(initial, name) {
-  return name === '' ? initial : `${initial} ${name}`;
-}
+const changedEvent = 'changed';
 
-function withDirections(animation) {
+function animationWithDirections(animation) {
   return [`${animation} up`, `${animation} down`, `${animation} left`, `${animation} right`];
 }
 
-const dimmerVariations = ['', 'inverted'];
-const modalVariations = ['', 'fullscreen', 'basic', 'small', 'large', 'mini', 'tiny'];
 const animations = [
   'scale', 'drop', 'horizontal flip', 'vertical flip', 'fade',
-  ...withDirections('fade'), ...withDirections('fly'), ...withDirections('swing'),
+  ...animationWithDirections('fade'), ...animationWithDirections('fly'), ...animationWithDirections('swing'),
 ];
 
 function buildAnimation(name, direction) {
-  return `transition animating ${name} ${direction ? 'in' : 'out'} visible`;
-}
-
-function classBuilder(visualState, animation) {
-  switch (visualState) {
-    case opening:
-      return `${buildAnimation(animation, true)} active`;
-
-    case open:
-      return 'visible active';
-
-    case closing:
-      return buildAnimation(animation, false);
-
-    default:
-      return '';
-  }
+  return `animating ${name} ${direction ? 'in' : 'out'}`;
 }
 
 export default {
   name: 'SuiModal',
   model: {
     prop: 'open',
-    event: changed,
+    event: changedEvent,
   },
   mixins: [listenersMixin],
   props: {
-    animation: {
-      type: String,
-      default: 'scale',
-      validator(value) {
-        return animations.indexOf(value) !== -1;
-      },
-    },
+    animation: Enum(animations, {
+      default: animations[0],
+    }),
     animationDuration: {
       type: Number,
       default: 500,
     },
+    aligned: Enum(['top']),
     closeIcon: {
       type: Boolean,
       default: false,
     },
-    dimmer: {
-      type: String,
-      default: '',
-      validator(value) {
-        return dimmerVariations.indexOf(value) !== -1;
-      },
-    },
+    dimmer: Enum(['inverted'], {
+      type: Boolean,
+      default: true,
+    }),
     image: {
       type: Boolean,
       default: false,
@@ -83,12 +59,11 @@ export default {
       type: Boolean,
       default: false,
     },
-    size: {
-      type: String,
-      default: '',
-      validator(value) {
-        return modalVariations.indexOf(value) !== -1;
-      },
+    size: Enum(['standart', 'fullscreen', 'small', 'large', 'mini', 'tiny'], {
+      default: 'standart',
+    }),
+    basic: {
+      type: Boolean,
     },
     closable: {
       type: Boolean,
@@ -99,7 +74,7 @@ export default {
     displayChanged: {
       custom: true,
     },
-    [changed]: {
+    [changedEvent]: {
       custom: true,
     },
     clickAwayModal: {
@@ -108,91 +83,105 @@ export default {
   },
   data() {
     return {
-      offsetY: 0,
-      visualState: this.open ? open : closed,
-      hidden: true,
-      loading: true,
+      visualState: this.open ? visualStates.open : visualStates.closed,
     };
   },
   computed: {
     dimmerClass() {
-      return addClass(classBuilder(this.visualState, 'fade'), this.dimmer);
+      switch (this.visualState) {
+        case visualStates.opening:
+          return buildAnimation('fade', true);
+        case visualStates.open:
+          return 'visible active';
+        case visualStates.closing:
+          return `visible active ${buildAnimation('fade', false)}`;
+        case visualStates.close:
+          return 'hidden';
+        default:
+          return '';
+      }
     },
-
     modalClass() {
-      return addClass(classBuilder(this.visualState, this.animation), this.size);
+      switch (this.visualState) {
+        case visualStates.opening:
+          return buildAnimation(this.animation, true);
+        case visualStates.open:
+          return 'visible active';
+        case visualStates.closing:
+          return `visible ${buildAnimation(this.animation, false)}`;
+        case visualStates.close:
+          return 'hidden';
+        default:
+          return '';
+      }
     },
-
-    visibility() {
-      return this.loading ? 'hidden' : 'visible';
+    visible() {
+      return this.visualState !== visualStates.closed;
     },
-
-    display() {
-      return (this.loading || this.open) ? 'block' : 'none';
+    dimmerStyle() {
+      return {
+        display: this.visible ? 'flex !important' : 'none',
+        animationDuration: `${this.animationDuration}ms`,
+      };
+    },
+    modalStyle() {
+      return {
+        display: this.visible ? 'block !important' : 'none',
+        animationDuration: `${this.animationDuration}ms`,
+      };
     },
   },
   watch: {
     open(newValue) {
-      if (newValue) {
-        requestAnimationFrame(() => {
-          this.updatePosition();
-        });
-      }
-      this.visualState = newValue ? opening : closing;
+      this.visualState = newValue ? visualStates.opening : visualStates.closing;
     },
     visualState(newValue) {
       this.$emit('displayChanged', newValue);
     },
   },
   mounted() {
-    const modal = this.$el.querySelector('.ui.modal');
-    this.modal = modal;
-    this.updatePosition();
-    this.loading = false;
-    this.$el.addEventListener(getEventAnimationEnd(), this.onAnimationEnded, false);
+    this.$el.addEventListener(getEventAnimationEnd(), this.onAnimationEnd, true);
   },
   beforeDestroy() {
-    this.$el.removeEventListener(getEventAnimationEnd(), this.onAnimationEnded, false);
+    this.$el.removeEventListener(getEventAnimationEnd(), this.onAnimationEnd, true);
   },
   methods: {
-    toggle(value) {
-      this.$emit(changed, value);
+    close() {
+      this.$emit(changedEvent, false);
     },
     dimmerClick(event) {
-      if (this.closable && event.target === event.currentTarget && this.visualState === open) {
+      if (
+        this.closable &&
+        event.target === event.currentTarget &&
+        this.visualState === visualStates.open
+      ) {
         this.$emit('clickAwayModal');
-        this.toggle(false);
+        this.close();
       }
     },
-    onAnimationEnded() {
-      this.visualState = this.open ? open : closed;
-    },
-    updatePosition() {
-      this.offsetY = -this.modal.clientHeight / 2;
+    onAnimationEnd() {
+      this.visualState = this.open ? visualStates.open : visualStates.closed;
     },
   },
   render() {
-    const containerStyle = {
-      visibility: this.visibility,
-      display: this.display,
-      animationDuration: `${this.animationDuration}ms`,
-    };
-
-    const contentStyle = {
-      marginTop: `${this.offsetY}px`,
-      visibility: this.visibility,
-      display: this.display,
-      animationDuration: `${this.animationDuration}ms`,
-    };
-
     return (
       <div
-        class={classes('ui dimmer modals page modal-component', this.dimmerClass)}
-        style={containerStyle} onClick={this.dimmerClick}
+        class={classes('ui dimmer modals page transition', this.dimmerClass)}
+        style={this.dimmerStyle} onClick={this.dimmerClick}
       >
-        <div class={classes('ui modal', this.modalClass)} style={contentStyle}>
-          {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)}/>}
-
+        <div style={this.modalStyle}
+             class={
+               classes(
+                 'ui',
+                 this.size,
+                 this.aligned && `${this.aligned} aligned`,
+                 'modal',
+                 'transition',
+                 this.modalClass,
+               )
+             }
+        >
+          {this.closeIcon && <i class="close icon" onClick={() => this.close()} />}
           {this.$slots.default}
         </div>
       </div>
