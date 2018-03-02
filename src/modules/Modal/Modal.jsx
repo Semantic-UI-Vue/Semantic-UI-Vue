@@ -62,10 +62,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    dimmer: Enum(['inverted'], {
-      type: Boolean,
-      default: true,
-    }),
+    dimmer: Enum(['inverted']),
     image: {
       type: Boolean,
       default: false,
@@ -157,37 +154,36 @@ export default {
     },
   },
   render() {
-    const modal = (
-      <div
-        ref="modal"
-        style={this.modalStyle}
-        class={
-          classes(
-            'ui',
-            this.size,
-            this.aligned && `${this.aligned} aligned`,
-            'modal',
-            'transition',
-            this.modalClass,
-          )
-        }
-      >
-        {this.closeIcon && <i class="close icon" onClick={() => this.close()} />}
-        {this.$slots.default}
-      </div>
-    );
-
-    if (!this.dimmer) {
-      return modal;
-    }
-
     return (
       <div
         ref="dimmer"
-        class={classes('ui dimmer modals page transition', this.dimmerClass)}
+        class={
+          classes(
+            'ui',
+            this.dimmer,
+            'dimmer modals page transition',
+            this.dimmerClass,
+          )
+        }
         style={this.dimmerStyle} onClick={this.dimmerClick}
       >
-        {modal}
+        <div
+          ref="modal"
+          style={this.modalStyle}
+          class={
+            classes(
+              'ui',
+              this.size,
+              this.aligned && `${this.aligned} aligned`,
+              'modal',
+              'transition',
+              this.modalClass,
+            )
+          }
+        >
+          {this.closeIcon && <i class="close icon" onClick={() => this.close()} />}
+          {this.$slots.default}
+        </div>
       </div>
     );
   },
