@@ -27,6 +27,21 @@ function buildAnimation(name, direction) {
   return `animating ${name} ${direction ? 'in' : 'out'}`;
 }
 
+function buildClass(visualState, animation) {
+  switch (visualState) {
+    case visualStates.opening:
+      return buildAnimation(animation, true);
+    case visualStates.open:
+      return 'visible active';
+    case visualStates.closing:
+      return `visible active ${buildAnimation(animation, false)}`;
+    case visualStates.close:
+      return 'hidden';
+    default:
+      return '';
+  }
+}
+
 export default {
   name: 'SuiModal',
   model: {
@@ -88,32 +103,10 @@ export default {
   },
   computed: {
     dimmerClass() {
-      switch (this.visualState) {
-        case visualStates.opening:
-          return buildAnimation('fade', true);
-        case visualStates.open:
-          return 'visible active';
-        case visualStates.closing:
-          return `visible active ${buildAnimation('fade', false)}`;
-        case visualStates.close:
-          return 'hidden';
-        default:
-          return '';
-      }
+      return buildClass(this.visualState, 'fade');
     },
     modalClass() {
-      switch (this.visualState) {
-        case visualStates.opening:
-          return buildAnimation(this.animation, true);
-        case visualStates.open:
-          return 'visible active';
-        case visualStates.closing:
-          return `visible ${buildAnimation(this.animation, false)}`;
-        case visualStates.close:
-          return 'hidden';
-        default:
-          return '';
-      }
+      return buildClass(this.visualState, this.animation);
     },
     visible() {
       return this.visualState !== visualStates.closed;
