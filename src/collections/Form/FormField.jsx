@@ -32,7 +32,7 @@ export default {
         {...getChildProps(this)}
         {...this.generateListeners()}
         class={classes(
-          num(this.width),
+          this.width && `${num(this.width)} wide`,
           this.inline && 'inline',
           this.required && 'required',
           this.disabled && 'disabled',
