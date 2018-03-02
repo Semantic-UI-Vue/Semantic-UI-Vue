@@ -175,6 +175,7 @@ export default {
             classes(
               'ui',
               this.size,
+              this.basic && 'basic',
               this.aligned && `${this.aligned} aligned`,
               'modal',
               'transition',
