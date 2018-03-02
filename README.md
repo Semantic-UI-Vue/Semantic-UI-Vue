@@ -77,7 +77,7 @@ If you are not using Webpack, you can add the script in your html:
 Or, in alternative, you can import it using a CDN:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
 <script src="https://unpkg.com/semantic-ui-vue/dist/umd/semantic-ui-vue.min.js"></script>
 ```
 
@@ -90,8 +90,9 @@ Now you are ready to go! Check out the components' examples to see how to use th
 You can use the default Semantic UI stylesheet by including a Semantic UI CDN link in yourindex.html file.
 This is the quickest way to get started with Semantic UI Vue. You won't be able to use custom themes with this method.
 
+##### **To avoid unexpected behavior please use only the last version of Semantic-UI**
 ```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css"></link>
 ```
 
 #### Semantic UI CSS package
@@ -99,7 +100,7 @@ This is the quickest way to get started with Semantic UI Vue. You won't be able 
 The Semantic UI CSS package is automatically synced with the main Semantic UI repository to provide a lightweight CSS only version of Semantic UI.
 Semantic UI CSS can be installed as a package in your project using NPM. You won't be able to use custom themes with this method.
 
-```js
+```bash
 $ npm install semantic-ui-css --save
 ```
 
@@ -116,7 +117,7 @@ Semantic UI includes Gulp build tools so your project can preserve its own theme
 
 Detailed documentation on theming in Semantic UI is provided here.
 
-```js
+```bash
 $ npm install semantic-ui --save-dev
 ```
 
@@ -126,7 +127,7 @@ After building the project with Gulp, you'll need to include the minified CSS fi
 import '../semantic/dist/semantic.min.css';
 ```
 
-#### Nuxt.js module
+### Nuxt.js module
 
 You can use semantic-ui-vue as [nuxt.js](https://github.com/nuxt/nuxt.js) module
 
