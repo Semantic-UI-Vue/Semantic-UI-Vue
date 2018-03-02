@@ -25,6 +25,6 @@ export default {
     );
   },
   meta: {
-    parent: 'Reveal',
+    parent: 'SuiReveal',
   },
 };

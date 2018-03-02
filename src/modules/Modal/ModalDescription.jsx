@@ -18,6 +18,6 @@ export default {
     );
   },
   meta: {
-    parent: 'Modal',
+    parent: 'SuiModal',
   },
 };
