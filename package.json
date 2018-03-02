@@ -93,7 +93,7 @@
     "prerender-spa-plugin": "mariolamacchia/prerender-spa-plugin#chrome-headless",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.0",
-    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-css": "^2.3.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "sinon": "^2.1.0",
