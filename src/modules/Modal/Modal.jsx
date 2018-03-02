@@ -4,6 +4,7 @@
  */
 import { classes, getEventAnimationEnd, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
+import Icon from '../../elements/Icon/Icon';
 
 const visualStates = {
   closed: 'closed',
@@ -181,7 +182,7 @@ export default {
             )
           }
         >
-          {this.closeIcon && <i class="close icon" onClick={() => this.close()} />}
+          {this.closeIcon && <Icon name="close" onNativeClick={() => this.close()} />}
           {this.$slots.default}
         </div>
       </div>
