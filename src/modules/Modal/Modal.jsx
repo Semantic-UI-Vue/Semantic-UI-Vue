@@ -164,26 +164,37 @@ export default {
     },
   },
   render() {
+    const modal = (
+      <div
+        ref="modal"
+        style={this.modalStyle}
+        class={
+          classes(
+            'ui',
+            this.size,
+            this.aligned && `${this.aligned} aligned`,
+            'modal',
+            'transition',
+            this.modalClass,
+          )
+        }
+      >
+        {this.closeIcon && <i class="close icon" onClick={() => this.close()} />}
+        {this.$slots.default}
+      </div>
+    );
+
+    if (!this.dimmer) {
+      return modal;
+    }
+
     return (
       <div
+        ref="dimmer"
         class={classes('ui dimmer modals page transition', this.dimmerClass)}
         style={this.dimmerStyle} onClick={this.dimmerClick}
       >
-        <div style={this.modalStyle}
-             class={
-               classes(
-                 'ui',
-                 this.size,
-                 this.aligned && `${this.aligned} aligned`,
-                 'modal',
-                 'transition',
-                 this.modalClass,
-               )
-             }
-        >
-          {this.closeIcon && <i class="close icon" onClick={() => this.close()} />}
-          {this.$slots.default}
-        </div>
+        {modal}
       </div>
     );
   },
