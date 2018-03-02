@@ -183,7 +183,7 @@ export default {
             )
           }
         >
-          {this.closeIcon && <Icon name="close" onNativeClick={() => this.close()} />}
+          {this.closeIcon && <Icon name="close" nativeOnClick={() => this.close()} />}
           {this.$slots.default}
         </div>
       </div>
