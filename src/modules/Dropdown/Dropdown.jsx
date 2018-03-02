@@ -419,7 +419,7 @@ export default {
       this.$emit('input', this.multipleValue);
     },
     calculateMenuDirection() {
-      if (process.server || !this.menu || !this.menu.$el || !this.open) return;
+      if (!window || !this.menu || !this.menu.$el || !this.open) return;
 
       this.menu.$el.classList.add('loading');
       this.$el.classList.remove('upward');
