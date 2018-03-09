@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import ButtonGroup from 'src/elements/Button/ButtonGroup';
 
 describe('Button', () => {

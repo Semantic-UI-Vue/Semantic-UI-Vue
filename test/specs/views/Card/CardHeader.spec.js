@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import CardHeader from 'src/views/Card/CardHeader';
 
 describe('CardHeader', () => {

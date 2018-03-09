@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import CardGroup from 'src/views/Card/CardGroup';
 
 describe('CardGroup', () => {

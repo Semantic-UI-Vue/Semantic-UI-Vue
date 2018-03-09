@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import { Statistic, StatisticGroup } from 'src/views/Statistic';
 import Container from 'src/elements/Container/Container';
 

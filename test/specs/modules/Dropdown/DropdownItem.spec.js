@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import * as common from 'test/utils';
 import DropdownItem from 'src/modules/Dropdown/DropdownItem';
 import Image from 'src/elements/Image/Image';

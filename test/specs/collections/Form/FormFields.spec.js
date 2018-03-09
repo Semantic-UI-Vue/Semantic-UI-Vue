@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import * as common from 'test/utils';
 import FormFields from 'src/collections/Form/FormFields';
 

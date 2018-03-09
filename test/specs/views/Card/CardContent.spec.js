@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import CardContent from 'src/views/Card/CardContent';
 
 describe('CardContent', () => {

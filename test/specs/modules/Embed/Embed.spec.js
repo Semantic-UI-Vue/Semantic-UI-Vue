@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import Embed from 'src/modules/Embed/Embed';
 
 describe('Embed', () => {

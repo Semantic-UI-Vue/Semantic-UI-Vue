@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import FeedSummary from 'src/views/Feed/FeedSummary';
 
 describe('FeedSummary', () => {

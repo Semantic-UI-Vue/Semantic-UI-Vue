@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import FeedDate from 'src/views/Feed/FeedDate';
 
 describe('FeedDate', () => {

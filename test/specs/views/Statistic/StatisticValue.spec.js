@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import StatisticValue from 'src/views/Statistic/StatisticValue';
 
 describe('StatisticValue', () => {
