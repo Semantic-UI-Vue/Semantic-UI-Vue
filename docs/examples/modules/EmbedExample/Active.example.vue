@@ -8,7 +8,7 @@
       source="youtube"
     />
 
-    <sui-divider :hidden="true" />
+    <sui-divider hidden />
 
     <sui-button
       content="Activate"

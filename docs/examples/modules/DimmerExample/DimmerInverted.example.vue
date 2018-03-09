@@ -1,7 +1,7 @@
 <template lang="html">
     <div>
         <img src="/static/images/logo.png" >
-        <sui-dimmer :active="enable" :inverted="true"/>
+        <sui-dimmer :active="enable" inverted/>
     </div>
 </template>
 <script>

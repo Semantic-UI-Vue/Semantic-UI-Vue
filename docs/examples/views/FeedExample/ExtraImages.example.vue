@@ -7,7 +7,7 @@
         <sui-feed-summary>
           <a>Helen Troy</a> added 2 photos
         </sui-feed-summary>
-        <sui-feed-extra :images="true">
+        <sui-feed-extra images>
           <a><img src="static/images/wireframes/image.png" ></a>
           <a><img src="static/images/wireframes/image.png" ></a>
         </sui-feed-extra>

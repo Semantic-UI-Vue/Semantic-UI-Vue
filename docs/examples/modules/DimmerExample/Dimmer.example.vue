@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="dimmer-wrapper">
       <img src="/static/images/logo.png" >
-    <sui-dimmer :active="true" :inverted="false"/>
+    <sui-dimmer active :inverted="false"/>
   </div>
 </template>
 

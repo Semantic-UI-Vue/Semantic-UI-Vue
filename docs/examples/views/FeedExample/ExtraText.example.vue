@@ -7,7 +7,7 @@
         <sui-feed-summary>
           <a>Laura Faucet</a> created a post
         </sui-feed-summary>
-        <sui-feed-extra :text="true">
+        <sui-feed-extra text>
           Have you seen what's going on in Israel? Can you believe it.
         </sui-feed-extra>
       </sui-feed-content>

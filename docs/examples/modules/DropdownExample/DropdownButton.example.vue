@@ -4,7 +4,7 @@
     class="labeled
     icon"
     icon="file"
-    :button="true"
+    button
     text="File"
   >
     <sui-dropdown-menu>

@@ -1,6 +1,6 @@
 <template>
   <div class="component-container">
-    <sui-grid :columns="1" :padded="true">
+    <sui-grid :columns="1" padded>
       <sui-grid-column>
         <h1 is="sui-header">
           {{ title }}
