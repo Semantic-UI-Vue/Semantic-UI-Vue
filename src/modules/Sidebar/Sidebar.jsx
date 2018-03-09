@@ -1,8 +1,9 @@
-import { getElementType, getChildProps } from '../../lib';
+import { getElementType, listenersMixin, getChildProps } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSidebar',
+  mixins: [listenersMixin],
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),
@@ -28,6 +29,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={`ui sidebar vertical menu ${this.direction} ${this.animation || ''}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`}
       >
         {this.$slots.default}

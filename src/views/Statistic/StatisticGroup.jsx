@@ -1,10 +1,12 @@
-import { classes, getChildProps, getElementType, num } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiStatisticsGroup',
+  mixins: [listenersMixin],
   props: {
     horizontal: Boolean,
-    columns: Number,
+    columns: Enum.Number(),
   },
   render() {
     const ElementType = getElementType(this);
@@ -12,6 +14,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           num(this.columns),
           'ui',

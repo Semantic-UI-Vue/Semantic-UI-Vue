@@ -10,8 +10,8 @@ describe('Divider', () => {
   it('should create a SUI Divider', () => {
     const divider = shallow(Divider);
     expect(divider.is('div')).to.equal(true);
-    expect(divider.hasClass('ui')).to.equal(true);
-    expect(divider.hasClass('divider')).to.equal(true);
+    expect(divider.classes()).to.include('ui');
+    expect(divider.classes()).to.include('divider');
   });
 
   it('should have content', () => {

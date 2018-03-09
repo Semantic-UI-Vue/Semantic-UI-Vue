@@ -1,11 +1,12 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiMessageList',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this, 'ul');
     return (
-      <ElementType {...getChildProps(this)} class={classes('list')}>
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class={classes('list')}>
         {this.$slots.default}
       </ElementType>
     );

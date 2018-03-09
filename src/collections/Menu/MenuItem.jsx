@@ -1,13 +1,14 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import SuiIcon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiMenuItem',
   components: { SuiIcon },
+  mixins: [listenersMixin],
   props: {
     active: Boolean,
-    color: Enum.Color,
+    color: Enum.Color(),
     content: String,
     header: Boolean,
     icon: String,
@@ -19,6 +20,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.active && 'active',
           this.header && 'header',
@@ -27,7 +29,7 @@ export default {
           'item',
         )}
       >
-        {this.icon && <SuiIcon name={this.icon} />}
+        {this.icon && <SuiIcon name={this.icon}/>}
         {this.$slots.default || this.content}
       </ElementType>
     );

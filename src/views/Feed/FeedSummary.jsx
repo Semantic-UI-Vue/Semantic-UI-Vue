@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { FeedDate, FeedUser } from './';
 
 export default {
   name: 'SuiFeedSummary',
+  mixins: [listenersMixin],
   description: 'A feed can contain a summary',
   props: {
     content: {
@@ -23,6 +24,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'summary',
         )}

@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiFeedDate',
+  mixins: [listenersMixin],
   description: 'An event or an event summary can contain a date',
   props: {
     content: {
@@ -14,6 +15,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'date',
         )}

@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType, num } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTableHeaderCell',
+  mixins: [listenersMixin],
   props: {
     negative: Boolean,
     positive: Boolean,
@@ -13,18 +14,18 @@ export default {
     collapsing: Boolean,
     disabled: Boolean,
     selectable: Boolean,
-    width: Number,
-    verticalAlign: Enum.VerticalAlign,
+    width: Enum.Number(),
+    verticalAlign: Enum.VerticalAlign(),
   },
   render() {
     const ElementType = getElementType(this, 'th');
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
-          this.textAlign,
-          this.verticalAlign,
-          (this.textAlign || this.verticalAlign) && 'aligned',
+          this.textAlign && `${this.textAlign} aligned`,
+          this.verticalAlign && `${this.verticalAlign} aligned`,
           this.negative && 'negative',
           this.positive && 'positive',
           this.warning && 'warning',
@@ -32,8 +33,7 @@ export default {
           this.collapsing && 'collapsing',
           this.disabled && 'disabled',
           this.selectable && 'selectable',
-          num(this.width),
-          this.width && 'wide',
+          this.width && `${num(this.width)} wide`,
         )}>
         {this.$slots.default}
       </ElementType>

@@ -4,9 +4,11 @@ import Vue from 'vue';
 import SemanticUI from 'src';
 import App from './App';
 import router from './router';
+import markdownSupport from './markdownSupport';
 import docs from './components';
 
 Vue.config.productionTip = false;
+Vue.use(markdownSupport);
 Vue.use(SemanticUI);
 Vue.use(docs);
 

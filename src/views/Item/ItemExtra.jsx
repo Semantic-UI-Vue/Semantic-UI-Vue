@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiItemExtra',
+  mixins: [listenersMixin],
   description: 'An item can contain extra content meant to be formatted separately from the main content',
   props: {},
   render() {

@@ -1,8 +1,9 @@
 import { Enum } from '../../lib/PropTypes';
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiProgress',
+  mixins: [listenersMixin],
   props: {
     label: String,
     content: String,
@@ -13,9 +14,9 @@ export default {
     progress: Boolean,
     indicating: Boolean,
     indeterminate: Boolean,
-    size: Enum.Size,
-    color: Enum.Color,
-    state: Enum.State,
+    size: Enum.Size(),
+    color: Enum.Color(),
+    state: Enum.State(),
     percent: {
       type: [Number, String],
       default: 50,
@@ -34,6 +35,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           'progress',
@@ -49,14 +51,14 @@ export default {
         )}
         data-percent={this.percent}
       >
-       <div
-         class='bar'
-         style={{
-           width: this.percentString,
-           'transition-duration': '300ms',
-         }}>
-         {this.progress && <div class='progress'> {this.percentString} </div>}
-         </div>
+        <div
+          class='bar'
+          style={{
+            width: this.percentString,
+            'transition-duration': '300ms',
+          }}>
+          {this.progress && <div class='progress'> {this.percentString} </div>}
+        </div>
         {this.label && <div class='label'>{this.label}</div>}
       </ElementType>
     );

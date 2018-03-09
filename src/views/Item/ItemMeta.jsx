@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiItemMeta',
+  mixins: [listenersMixin],
   description: 'An item can contain content metadata',
   props: {},
   render() {

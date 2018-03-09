@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSegment',
+  mixins: [listenersMixin],
   props: {
     attached: Boolean,
     basic: Boolean,
@@ -20,14 +21,14 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.attached && 'attached',
           this.basic && 'basic',
           this.padded && 'padded',
           this.inverted && 'inverted',
-          this.stacked,
-          (this.stacked || this.stacked === '') && 'stacked',
+          this.stacked, this.stacked && 'stacked',
           this.piled && 'piled',
           this.raised && 'raised',
           this.vertical && 'vertical',

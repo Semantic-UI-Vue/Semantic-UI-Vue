@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { FeedLike } from './';
 
 export default {
   name: 'SuiFeedMeta',
+  mixins: [listenersMixin],
   description: 'A feed can contain a meta',
   props: {
     content: {
@@ -19,6 +20,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'meta',
         )}

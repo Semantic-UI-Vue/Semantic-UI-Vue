@@ -1,10 +1,11 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import SuiBreadcrumbSection from './BreadcrumbSection';
 import SuiBreadcrumbDivider from './BreadcrumbDivider';
 
 export default {
   name: 'SuiBreadcrumb',
   components: { SuiBreadcrumbDivider, SuiBreadcrumbSection },
+  mixins: [listenersMixin],
   props: {
     icon: String,
     sections: Array,
@@ -14,6 +15,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('ui', 'breadcrumb')}
       >
         {this.$slots.default || this.sections.map(({ active, content, key, link }, index) => {

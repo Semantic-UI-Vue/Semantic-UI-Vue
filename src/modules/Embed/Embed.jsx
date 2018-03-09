@@ -1,9 +1,10 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import { Icon } from '../../elements';
 
 export default {
   name: 'SuiEmbed',
+  mixins: [listenersMixin],
   props: {
     active: {
       type: Boolean,
@@ -141,6 +142,7 @@ export default {
       <ElementType
         onClick={this.setActive}
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.aspectRatio,

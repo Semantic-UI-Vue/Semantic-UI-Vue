@@ -2,31 +2,50 @@ import uniq from 'lodash/uniq';
 
 export function Enum(values = [], obj = {}) {
   let type;
-  const choices = values;
+  const choices = [...values];
 
-  if (obj.type && Array.isArray(obj.type)) {
-    if (obj.type.includes(Boolean)) choices.push('');
-    type = uniq([...obj.type, String]);
-  } else if (obj.type) {
-    if (obj.type === Boolean) choices.push('');
-    type = [obj.type, String];
+  if (Array.isArray(obj.choices)) {
+    choices.push(...obj.choices);
+  }
+
+  const types = uniq(values.map(value => value.constructor));
+
+  if (obj.type) {
+    if (Array.isArray(obj.type)) {
+      if (obj.type.includes(Boolean)) choices.push(''); // TODO: Change to true when https://github.com/vuejs/vue/pull/7583 will be merged
+      type = uniq([...obj.type, ...types]);
+    } else {
+      if (obj.type === Boolean) choices.push('');
+      type = uniq([obj.type, ...types]);
+    }
   } else {
-    type = String;
+    type = types.length === 1 ? types[0] : types;
   }
 
   return {
     ...obj,
     choices,
     type,
-    validator: value => typeof value !== 'string' || choices.includes(value),
+    validator: value => !types.includes(value.constructor) || choices.includes(value),
   };
 }
 
-Enum.State = Enum(['active', 'disabled', 'error', 'warning', 'success']);
-Enum.Size = Enum(['mini', 'tiny', 'small', 'standard', 'medium', 'large', 'big', 'huge', 'massive']);
-Enum.Color = Enum([
+Object.defineProperty(Enum, 'Extend', {
+  value: values => (obj = {}) => Enum(values, obj),
+});
+
+Enum.State = Enum.Extend(['active', 'disabled', 'error', 'warning', 'success']);
+Enum.Size = Enum.Extend(['mini', 'tiny', 'small', 'standard', 'medium', 'large', 'big', 'huge', 'massive']);
+Enum.Color = Enum.Extend([
   'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
   'violet', 'purple', 'pink', 'brown', 'grey', 'black',
 ]);
-Enum.VerticalAlign = Enum(['top', 'middle', 'bottom']);
-Enum.Social = Enum(['facebook', 'twitter', 'google', 'google plus', 'vk', 'instagram', 'linkedin', 'youtube']);
+Enum.TextAlign = Enum.Extend(['left', 'right', 'center', 'justify']);
+Enum.VerticalAlign = Enum.Extend(['top', 'middle', 'bottom']);
+Enum.Social = Enum.Extend(['facebook', 'twitter', 'google', 'google plus', 'vk', 'instagram', 'linkedin', 'youtube']);
+Enum.Number = Enum.Extend([
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+  'one', 'two', 'three', 'four', 'five', 'six', 'seven',
+  'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
+  'fourteen', 'fifteen', 'sixteen',
+]);

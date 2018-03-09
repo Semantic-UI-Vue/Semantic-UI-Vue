@@ -1,11 +1,12 @@
-import { getChildProps, getElementType } from '../../lib';
+import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiMessageItem',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this, 'li');
     return (
-      <ElementType {...getChildProps(this)}>
+      <ElementType {...getChildProps(this)} {...this.generateListeners()}>
         {this.$slots.default}
       </ElementType>
     );

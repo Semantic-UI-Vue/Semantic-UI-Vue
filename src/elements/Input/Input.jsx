@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import SuiButton from '../../elements/Button/Button';
 import SuiIcon from '../../elements/Icon/Icon';
@@ -6,8 +6,10 @@ import SuiIcon from '../../elements/Icon/Icon';
 export default {
   name: 'SuiInput',
   components: { SuiButton, SuiIcon },
+  mixins: [listenersMixin],
   props: {
     action: String,
+    disabled: Boolean,
     error: Boolean,
     focus: Boolean,
     icon: String,
@@ -16,6 +18,11 @@ export default {
     loading: Boolean,
     transparent: Boolean,
     value: String,
+  },
+  events: {
+    input: {
+      custom: true,
+    },
   },
   render() {
     const ElementType = getElementType(this);
@@ -27,9 +34,11 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.action && 'action',
+          this.disabled && 'disabled',
           this.error && 'error',
           this.focus && 'focus',
           this.transparent && 'transparent',

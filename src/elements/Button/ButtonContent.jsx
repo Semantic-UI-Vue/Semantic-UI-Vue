@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiButtonContent',
+  mixins: [listenersMixin],
   props: {
     visible: {
       type: Boolean,
@@ -24,10 +25,14 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classList}
       >
         {this.content || this.$slots.default}
       </ElementType>
     );
+  },
+  meta: {
+    parent: 'SuiButton',
   },
 };

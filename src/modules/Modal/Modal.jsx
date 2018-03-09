@@ -2,45 +2,42 @@
  * Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
  * Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
  */
-import { classes } from '../../lib';
-import { getEventAnimationEnd } from './animationHelper';
+import { classes, getEventAnimationEnd, listenersMixin } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
+import Icon from '../../elements/Icon/Icon';
 
-const closed = 'closed';
-const opening = 'opening';
-const open = 'open';
-const closing = 'closing';
-const changed = 'changed';
+const visualStates = {
+  closed: 'closed',
+  opening: 'opening',
+  open: 'open',
+  closing: 'closing',
+};
 
-function addClass(initial, name) {
-  return name === '' ? initial : `${initial} ${name}`;
-}
+const changedEvent = 'changed';
 
-function withDirections(animation) {
+function animationWithDirections(animation) {
   return [`${animation} up`, `${animation} down`, `${animation} left`, `${animation} right`];
 }
 
-const dimmerVariations = ['', 'inverted'];
-const modalVariations = ['', 'fullscreen', 'basic', 'small', 'large', 'mini', 'tiny'];
 const animations = [
   'scale', 'drop', 'horizontal flip', 'vertical flip', 'fade',
-  ...withDirections('fade'), ...withDirections('fly'), ...withDirections('swing'),
+  ...animationWithDirections('fade'), ...animationWithDirections('fly'), ...animationWithDirections('swing'),
 ];
 
 function buildAnimation(name, direction) {
-  return `transition animating ${name} ${direction ? 'in' : 'out'} visible`;
+  return `animating ${name} ${direction ? 'in' : 'out'}`;
 }
 
-function classBuilder(visualState, animation) {
+function buildClass(visualState, animation) {
   switch (visualState) {
-    case opening:
-      return `${buildAnimation(animation, true)} active`;
-
-    case open:
+    case visualStates.opening:
+      return buildAnimation(animation, true);
+    case visualStates.open:
       return 'visible active';
-
-    case closing:
-      return buildAnimation(animation, false);
-
+    case visualStates.closing:
+      return `visible active ${buildAnimation(animation, false)}`;
+    case visualStates.close:
+      return 'hidden';
     default:
       return '';
   }
@@ -50,31 +47,23 @@ export default {
   name: 'SuiModal',
   model: {
     prop: 'open',
-    event: changed,
+    event: changedEvent,
   },
+  mixins: [listenersMixin],
   props: {
-    animation: {
-      type: String,
-      default: 'scale',
-      validator(value) {
-        return animations.indexOf(value) !== -1;
-      },
-    },
+    animation: Enum(animations, {
+      default: animations[0],
+    }),
     animationDuration: {
       type: Number,
       default: 500,
     },
+    aligned: Enum(['top']),
     closeIcon: {
       type: Boolean,
       default: false,
     },
-    dimmer: {
-      type: String,
-      default: '',
-      validator(value) {
-        return dimmerVariations.indexOf(value) !== -1;
-      },
-    },
+    dimmer: Enum(['inverted']),
     image: {
       type: Boolean,
       default: false,
@@ -83,105 +72,118 @@ export default {
       type: Boolean,
       default: false,
     },
-    size: {
-      type: String,
-      default: '',
-      validator(value) {
-        return modalVariations.indexOf(value) !== -1;
-      },
+    size: Enum(['standart', 'fullscreen', 'small', 'large', 'mini', 'tiny'], {
+      default: 'standart',
+    }),
+    basic: {
+      type: Boolean,
     },
     closable: {
       type: Boolean,
       default: true,
     },
   },
+  events: {
+    displayChanged: {
+      custom: true,
+    },
+    [changedEvent]: {
+      custom: true,
+    },
+    clickAwayModal: {
+      custom: true,
+    },
+  },
   data() {
     return {
-      offsetY: 0,
-      visualState: this.open ? open : closed,
-      hidden: true,
-      loading: true,
+      visualState: this.open ? visualStates.open : visualStates.closed,
     };
   },
   computed: {
     dimmerClass() {
-      return addClass(classBuilder(this.visualState, 'fade'), this.dimmer);
+      return buildClass(this.visualState, 'fade');
     },
-
     modalClass() {
-      return addClass(classBuilder(this.visualState, this.animation), this.size);
+      return buildClass(this.visualState, this.animation);
     },
-
-    visibility() {
-      return this.loading ? 'hidden' : 'visible';
+    visible() {
+      return this.visualState !== visualStates.closed;
     },
-
-    display() {
-      return (this.loading || this.open) ? 'block' : 'none';
+    dimmerStyle() {
+      return {
+        display: this.visible ? 'flex !important' : 'none',
+        animationDuration: `${this.animationDuration}ms`,
+      };
+    },
+    modalStyle() {
+      return {
+        display: this.visible ? 'block !important' : 'none',
+        animationDuration: `${this.animationDuration}ms`,
+      };
     },
   },
   watch: {
     open(newValue) {
-      if (newValue) {
-        requestAnimationFrame(() => {
-          this.updatePosition();
-        });
-      }
-      this.visualState = newValue ? opening : closing;
+      this.visualState = newValue ? visualStates.opening : visualStates.closing;
     },
     visualState(newValue) {
       this.$emit('displayChanged', newValue);
     },
   },
   mounted() {
-    const modal = this.$el.querySelector('.ui.modal');
-    this.modal = modal;
-    this.updatePosition();
-    this.loading = false;
-    this.$el.addEventListener(getEventAnimationEnd(), this.onAnimationEnded, false);
+    this.$el.addEventListener(getEventAnimationEnd(), this.onAnimationEnd, true);
   },
   beforeDestroy() {
-    this.$el.removeEventListener(getEventAnimationEnd(), this.onAnimationEnded, false);
+    this.$el.removeEventListener(getEventAnimationEnd(), this.onAnimationEnd, true);
   },
   methods: {
-    toggle(value) {
-      this.$emit(changed, value);
+    close() {
+      this.$emit(changedEvent, false);
     },
     dimmerClick(event) {
-      if (this.closable && event.target === event.currentTarget && this.visualState === open) {
+      if (
+        this.closable &&
+        event.target === event.currentTarget &&
+        this.visualState === visualStates.open
+      ) {
         this.$emit('clickAwayModal');
-        this.toggle(false);
+        this.close();
       }
     },
-    onAnimationEnded() {
-      this.visualState = this.open ? open : closed;
-    },
-    updatePosition() {
-      this.offsetY = -this.modal.clientHeight / 2;
+    onAnimationEnd() {
+      this.visualState = this.open ? visualStates.open : visualStates.closed;
     },
   },
   render() {
-    const containerStyle = {
-      visibility: this.visibility,
-      display: this.display,
-      animationDuration: `${this.animationDuration}ms`,
-    };
-
-    const contentStyle = {
-      marginTop: `${this.offsetY}px`,
-      visibility: this.visibility,
-      display: this.display,
-      animationDuration: `${this.animationDuration}ms`,
-    };
-
     return (
       <div
-        class={classes('ui dimmer modals page modal-component', this.dimmerClass)}
-        style={containerStyle} onClick={this.dimmerClick}
+        ref="dimmer"
+        class={
+          classes(
+            'ui',
+            this.dimmer,
+            'dimmer modals page transition',
+            this.dimmerClass,
+          )
+        }
+        style={this.dimmerStyle} onClick={this.dimmerClick}
       >
-        <div class={classes('ui modal', this.modalClass)} style={contentStyle}>
-          {this.closeIcon && <i class="close icon" onClick={() => this.toggle(false)}/>}
-
+        <div
+          ref="modal"
+          style={this.modalStyle}
+          class={
+            classes(
+              'ui',
+              this.size,
+              this.basic && 'basic',
+              this.aligned && `${this.aligned} aligned`,
+              'modal',
+              'transition',
+              this.modalClass,
+            )
+          }
+        >
+          {this.closeIcon && <Icon name="close" nativeOnClick={() => this.close()} />}
           {this.$slots.default}
         </div>
       </div>

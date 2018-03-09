@@ -1,10 +1,11 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiIcon',
+  mixins: [listenersMixin],
   props: {
-    color: Enum.Color,
+    color: Enum.Color(),
     disabled: Boolean,
     fitted: Boolean,
     name: {
@@ -12,13 +13,14 @@ export default {
       required: true,
     },
     loading: Boolean,
-    size: Enum.Size,
+    size: Enum.Size(),
   },
   render() {
     const ElementType = getElementType(this, 'i');
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.color,
           this.name,

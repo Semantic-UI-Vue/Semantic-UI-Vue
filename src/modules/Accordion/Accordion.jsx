@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiAccordion',
+  mixins: [listenersMixin],
   props: {
     activeIndex: [Number, Array],
     exclusive: Boolean,
@@ -100,6 +101,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('ui', this.inverted && 'inverted', this.styled && 'styled', 'accordion')}
       >
         {this.panels ? this.panels.map(({ title, content }, index) => (

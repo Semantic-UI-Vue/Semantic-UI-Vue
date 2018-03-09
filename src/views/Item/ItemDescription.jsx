@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiItemDescription',
+  mixins: [listenersMixin],
   description: 'An item can contain a description with a single or multiple paragraphs',
-  props: {},
   render() {
     const ElementType = getElementType(this);
     return (

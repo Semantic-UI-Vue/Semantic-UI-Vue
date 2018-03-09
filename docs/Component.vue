@@ -1,6 +1,6 @@
 <template>
   <div class="component-container">
-    <sui-grid :columns="1" padded>
+    <sui-grid :columns="1" :padded="true">
       <sui-grid-column>
         <h1 is="sui-header">
           {{ title }}
@@ -76,7 +76,7 @@
           </sui-menu-item>
         </sui-menu>
 
-        <div class="table-container">
+        <div class="table-container" v-if="currentComponent !== null">
           <div class="current-component-description">
             {{ currentComponent.description }}
           </div>
@@ -101,7 +101,7 @@
                 </sui-table-cell>
                 <sui-table-cell>{{prop.type}}</sui-table-cell>
                 <sui-table-cell>
-                  {{prop.description}}
+                  <div v-markdown="prop.description"></div>
                   <div v-if="prop.choices">
                     <strong>Enums: </strong>
                     <code
@@ -131,7 +131,7 @@ import ExamplesList from './ExamplesList';
 const getComponentFromName = name => components[capitalize(name)];
 
 export default {
-  name: 'Component',
+  name: 'SuiComponent',
   components: { ExamplesList },
   props: {
     type: String,
@@ -167,7 +167,7 @@ export default {
         .filter(c => get(c, 'meta.parent') === this.component.name);
     },
     componentProps() {
-      if (!this.currentComponent.props) return [];
+      if (this.currentComponent === null || !this.currentComponent.props) return [];
 
       return Object
         .entries(this.currentComponent.props)
@@ -241,11 +241,5 @@ export default {
 
 .component-container {
   max-width: 1200px;
-}
-
-code:after,
-code:before {
-  letter-spacing: -0.2em;
-  content: "\00a0";
 }
 </style>

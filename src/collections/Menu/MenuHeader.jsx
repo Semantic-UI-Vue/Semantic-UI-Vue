@@ -1,7 +1,8 @@
-import { getChildProps, getElementType } from '../../lib';
+import { getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiMenuHeader',
+  mixins: [listenersMixin],
   props: {
     active: Boolean,
     content: String,
@@ -9,7 +10,7 @@ export default {
   render() {
     const ElementType = getElementType(this);
     return (
-      <ElementType {...getChildProps(this)} class="header">
+      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="header">
         {this.$slots.default || this.content}
       </ElementType>
     );

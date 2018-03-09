@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiModalContent',
+  mixins: [listenersMixin],
   props: {
     image: Boolean,
   },
@@ -10,6 +11,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes('content', this.image && 'image')}
       >
         {this.$slots.default}
@@ -17,6 +19,6 @@ export default {
     );
   },
   meta: {
-    parent: 'Modal',
+    parent: 'SuiModal',
   },
 };

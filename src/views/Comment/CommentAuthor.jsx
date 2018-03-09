@@ -1,12 +1,14 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiCommentAuthor',
+  mixins: [listenersMixin],
   render() {
     const ElementType = getElementType(this);
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'author',
         )}

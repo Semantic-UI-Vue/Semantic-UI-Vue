@@ -1,7 +1,8 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 
 export default {
   name: 'SuiBreadcrumbSection',
+  mixins: [listenersMixin],
   props: {
     active: Boolean,
     link: Boolean,
@@ -11,6 +12,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.active && 'active',
           this.link && 'link',

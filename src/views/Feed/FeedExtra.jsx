@@ -1,8 +1,9 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Image } from '../../elements';
 
 export default {
   name: 'SuiFeedExtra',
+  mixins: [listenersMixin],
   description: 'A feed can contain an extra content',
   props: {
     content: {
@@ -33,6 +34,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.images && 'images',
           (this.text || this.content) && 'text',

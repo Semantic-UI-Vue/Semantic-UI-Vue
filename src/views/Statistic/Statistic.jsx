@@ -1,16 +1,16 @@
-import { classes, getChildProps, getElementType, classMixin } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin, classMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiStatistic',
-  mixins: [classMixin],
+  mixins: [classMixin, listenersMixin],
   props: {
     horizontal: {
       type: Boolean,
       description: 'Present measurement horizontally',
     },
-    color: Enum.Color,
-    size: Enum.Size,
+    color: Enum.Color(),
+    size: Enum.Size(),
     floated: Enum(['left', 'right']),
     inverted: {
       type: Boolean,
@@ -22,6 +22,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           this.getUIClass(),
           'statistic',

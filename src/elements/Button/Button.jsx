@@ -1,9 +1,10 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiButton',
+  mixins: [listenersMixin],
   props: {
     active: {
       type: Boolean,
@@ -28,7 +29,7 @@ export default {
       type: String,
       description: 'Additional classes.',
     },
-    color: Enum.Color,
+    color: Enum.Color(),
     compact: {
       type: Boolean,
       description: 'A button can reduce its padding to fit into tighter spaces.',
@@ -80,7 +81,7 @@ export default {
       type: Boolean,
       description: 'A button can be formatted to show different levels of emphasis.',
     },
-    size: Enum.Size,
+    size: Enum.Size(),
     tabIndex: {
       type: [Number, String],
       description: 'A button can receive focus.',
@@ -89,7 +90,12 @@ export default {
       type: Boolean,
       description: 'A button can be formatted to toggle on and off.',
     },
-    social: Enum.Social,
+    social: Enum.Social(),
+  },
+  events: {
+    click: {
+      description: 'Click event passed to the button',
+    },
   },
   render() {
     const ElementType = getElementType(this, 'button');
@@ -100,7 +106,7 @@ export default {
       'ui',
       this.active && 'active',
       this.attached && `${this.attached} attached`,
-      this.animated && `${this.animated} animated`,
+      this.animated, this.animated && 'animated',
       this.basic && 'basic',
       this.circular && 'circular',
       this.className,
@@ -127,6 +133,7 @@ export default {
     const button = (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classList}
         role="button"
       >

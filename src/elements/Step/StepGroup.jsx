@@ -1,9 +1,10 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import SuiStep from './Step';
 
 export default {
   name: 'SuiStepGroup',
   components: { SuiStep },
+  mixins: [listenersMixin],
   props: {
     ordered: Boolean,
     steps: Array,
@@ -14,6 +15,7 @@ export default {
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
           'ui',
           this.ordered && 'ordered',

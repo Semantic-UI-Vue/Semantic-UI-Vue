@@ -11,8 +11,8 @@ describe('Button', () => {
   it('should create a SUI Button', () => {
     const button = shallow(Button);
     expect(button.is('button')).to.equal(true);
-    expect(button.hasClass('ui')).to.equal(true);
-    expect(button.hasClass('button')).to.equal(true);
+    expect(button.classes()).to.include('ui');
+    expect(button.classes()).to.include('button');
   });
 
   it('should have a content', () => {
@@ -25,7 +25,12 @@ describe('Button', () => {
 
   it('should have an icon', () => {
     const button = shallow(Button, { propsData: { icon: 'foo' } });
-    expect(button.hasClass('icon')).to.equal(true);
+    expect(button.classes()).to.include('icon');
     expect(button.contains(Icon)).to.equal(true);
+  });
+
+  it('should be disabled when the Disabled property is true ', () => {
+    const button = shallow(Button, { propsData: { content: 'foo', disabled: true } });
+    expect(button.classes()).to.include('disabled');
   });
 });

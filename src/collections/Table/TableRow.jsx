@@ -1,26 +1,27 @@
-import { classes, getChildProps, getElementType } from '../../lib';
+import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTableRow',
+  mixins: [listenersMixin],
   props: {
     negative: Boolean,
     positive: Boolean,
     selected: Boolean,
     textAlign: Enum(['left', 'right', 'center']),
     warning: Boolean,
-    state: Enum.State,
-    verticalAlign: Enum.VerticalAlign,
+    state: Enum.State(),
+    verticalAlign: Enum.VerticalAlign(),
   },
   render() {
     const ElementType = getElementType(this, 'tr');
     return (
       <ElementType
         {...getChildProps(this)}
+        {...this.generateListeners()}
         class={classes(
-          this.textAlign,
-          this.verticalAlign,
-          (this.textAlign || this.verticalAlign) && 'aligned',
+          this.textAlign && `${this.textAlign} aligned`,
+          this.verticalAlign && `${this.verticalAlign} aligned`,
           this.negative && 'negative',
           this.positive && 'positive',
           this.selected && 'selected',
