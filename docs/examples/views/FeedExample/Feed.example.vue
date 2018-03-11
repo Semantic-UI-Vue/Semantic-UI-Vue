@@ -25,7 +25,7 @@
           <a>Helen Troy</a> added <a>2 new illustrations</a>
           <sui-feed-date>4 days ago</sui-feed-date>
         </sui-feed-summary>
-        <sui-feed-extra :images="true">
+        <sui-feed-extra images>
           <a><img src="static/images/wireframes/image.png" ></a>
           <a><img src="static/images/wireframes/image.png" ></a>
         </sui-feed-extra>
@@ -58,7 +58,7 @@
           <a>Joe Henderson</a> posted on his page
           <sui-feed-date>3 days ago</sui-feed-date>
         </sui-feed-summary>
-        <sui-feed-extra :text="true">
+        <sui-feed-extra text>
           Ours is a life of constant reruns. We're always circling back to where we'd we started,
           then starting all over again. Even if we don't run extra laps that day, we surely will
           come back for more of the same another day soon.
@@ -79,7 +79,7 @@
           <a>Justen Kitsune</a> added <a>2 new photos</a> of you
           <sui-feed-date>4 days ago</sui-feed-date>
         </sui-feed-summary>
-        <sui-feed-extra :images="true">
+        <sui-feed-extra images>
           <a><img src="static/images/wireframes/image.png" ></a>
           <a><img src="static/images/wireframes/image.png" ></a>
         </sui-feed-extra>

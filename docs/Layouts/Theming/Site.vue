@@ -33,7 +33,7 @@
         centered
         :columns="3"
         stackable
-        :padded="true"
+        padded
         vertical-align="middle"
       >
         <div is="sui-grid-column" color="red">Red</div>

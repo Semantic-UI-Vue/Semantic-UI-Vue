@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-table :padded="true">
+  <sui-table padded>
     <sui-table-header>
       <sui-table-row>
         <sui-table-header-cell>Name</sui-table-header-cell>

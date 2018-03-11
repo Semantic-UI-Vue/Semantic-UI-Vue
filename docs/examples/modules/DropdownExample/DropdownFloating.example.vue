@@ -3,8 +3,8 @@
     <sui-dropdown
       class="teal"
       text="Save"
-      :button="true"
-      :floating="true"
+      button
+      floating
     >
       <sui-dropdown-menu>
         <sui-dropdown-item><sui-icon name="edit" />Edit Post</sui-dropdown-item>

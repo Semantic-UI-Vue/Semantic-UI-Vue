@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-table :basic="true">
+  <sui-table basic>
     <sui-table-header>
       <sui-table-row>
         <sui-table-header-cell>Name</sui-table-header-cell>

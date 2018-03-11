@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-table :compact="true">
+  <sui-table compact>
     <sui-table-header>
       <sui-table-row>
         <sui-table-header-cell>Name</sui-table-header-cell>

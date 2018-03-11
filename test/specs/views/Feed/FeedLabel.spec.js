@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import FeedLabel from 'src/views/Feed/FeedLabel';
 
 describe('FeedLabel', () => {

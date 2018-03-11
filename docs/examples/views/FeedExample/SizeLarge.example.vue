@@ -22,7 +22,7 @@
           You submitted a new post to the page
           <sui-feed-date>3 days ago</sui-feed-date>
         </sui-feed-summary>
-        <sui-feed-extra :text="true">
+        <sui-feed-extra text>
           I'm having a BBQ this weekend. Come by around 4pm if you can.
         </sui-feed-extra>
         <sui-feed-meta>
@@ -39,7 +39,7 @@
           <a>Helen Troy</a> added <a>2 new illustrations</a>
         </sui-feed-summary>
 
-        <sui-feed-extra :images="true">
+        <sui-feed-extra images>
           <a><img src="static/images/wireframes/image.png" ></a>
           <a><img src="static/images/wireframes/image.png" ></a>
         </sui-feed-extra>

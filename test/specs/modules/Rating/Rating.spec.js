@@ -1,4 +1,4 @@
-import { mount, shallow } from 'vue-test-utils';
+import { mount, shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Rating from 'src/modules/Rating/Rating';
 

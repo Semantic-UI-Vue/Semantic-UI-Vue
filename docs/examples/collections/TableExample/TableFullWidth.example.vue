@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-table :compact="true" celled definition>
+  <sui-table compact celled definition>
     <sui-table-header full-width>
       <sui-table-row>
         <sui-table-header-cell/>

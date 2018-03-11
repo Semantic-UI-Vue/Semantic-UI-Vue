@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-card-group :items-per-row="3" :stackable="true">
+    <sui-card-group :items-per-row="3" stackable>
       <sui-card>
         <sui-image src="static/images/avatar/large/elliot.jpg"/>
       </sui-card>

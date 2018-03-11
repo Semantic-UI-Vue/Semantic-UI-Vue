@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Form from 'src/collections/Form/Form';
 

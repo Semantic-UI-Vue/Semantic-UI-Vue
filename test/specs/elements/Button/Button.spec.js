@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Button from 'src/elements/Button/Button';
 import Icon from 'src/elements/Icon/Icon';

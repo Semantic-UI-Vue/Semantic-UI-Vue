@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import { testClass } from 'test/utils';
 import Modal from 'src/modules/Modal/Modal';
 import Icon from 'src/elements/Icon/Icon';

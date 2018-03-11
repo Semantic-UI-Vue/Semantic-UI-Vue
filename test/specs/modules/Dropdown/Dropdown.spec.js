@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import * as common from 'test/utils';
 import Label from 'src/elements/Label/Label';
 import Icon from 'src/elements/Icon/Icon';

@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import ButtonOr from 'src/elements/Button/ButtonOr';
 
 describe('Button', () => {

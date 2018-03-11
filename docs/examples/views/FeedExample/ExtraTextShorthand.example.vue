@@ -17,7 +17,7 @@
       <sui-feed-content>
         <sui-feed-date :content="date" />
         <sui-feed-summary :content="summary" />
-        <sui-feed-extra :text="true" :content="extraText" />
+        <sui-feed-extra text :content="extraText" />
       </sui-feed-content>
     </sui-feed-event>
   </sui-feed>

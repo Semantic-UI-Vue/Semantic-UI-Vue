@@ -22,7 +22,7 @@
           placeholder="Add Comment"
           icon="heart outline"
           icon-position="left"
-          :transparent="true"
+          transparent
         />
       </sui-card-content>
     </sui-card>

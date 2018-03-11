@@ -1,7 +1,7 @@
 <template>
   <div id="docs">
     <div class="docs-desktop" is="sui-sidebar-pushable">
-      <docs-menu class="docs-sidebar" :visible="true" />
+      <docs-menu class="docs-sidebar" visible />
       <div class="docs-container">
         <router-view />
       </div>

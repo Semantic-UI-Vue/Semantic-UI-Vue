@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import CardMeta from 'src/views/Card/CardMeta';
 
 describe('CardMeta', () => {

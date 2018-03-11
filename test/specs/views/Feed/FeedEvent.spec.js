@@ -1,4 +1,4 @@
-import { shallow } from 'vue-test-utils';
+import { shallow } from '@vue/test-utils';
 import FeedEvent from 'src/views/Feed/FeedEvent';
 
 describe('FeedEvent', () => {
