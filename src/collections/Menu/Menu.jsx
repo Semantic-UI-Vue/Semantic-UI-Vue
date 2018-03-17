@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { num, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import SuiMenuItem from './MenuItem';
 
@@ -20,6 +20,9 @@ export default {
     tabular: Boolean,
     text: Boolean,
     vertical: Boolean,
+    widths: Enum.Number({
+      description: 'A menu can have its items divided evenly.',
+    }),
   },
   render() {
     const ElementType = getElementType(this);
@@ -36,6 +39,7 @@ export default {
           this.icon && 'icon',
           this.inverted && 'inverted',
           this.right && 'right',
+          this.widths && `${num(this.widths)} item`,
           this.secondary && 'secondary',
           this.pointing && 'pointing',
           this.tabular && 'tabular',
