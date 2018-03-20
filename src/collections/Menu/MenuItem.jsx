@@ -4,16 +4,34 @@ import SuiIcon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiMenuItem',
-  components: { SuiIcon },
   mixins: [SemanticUIVueMixin],
   props: {
-    active: Boolean,
-    color: Enum.Color(),
-    content: String,
-    header: Boolean,
-    icon: String,
-    link: Boolean,
-    position: Enum(['left', 'right']),
+    active: {
+      type: Boolean,
+      description: 'A menu item can be active.',
+    },
+    color: Enum.Color({
+      description: 'Additional colors can be specified.',
+    }),
+    content: {
+      type: String,
+      description: 'Shorthand for primary content.',
+    },
+    header: {
+      type: Boolean,
+      description: 'A menu item may include a header or may itself be a header.',
+    },
+    icon: {
+      type: [Boolean, String],
+      description: 'MenuItem can be only icon.',
+    },
+    link: {
+      type: Boolean,
+      description: 'A menu item can be link.',
+    },
+    position: Enum(['left', 'right'], {
+      description: 'A menu item can take left or right position.',
+    }),
   },
   render() {
     const ElementType = this.getElementType();

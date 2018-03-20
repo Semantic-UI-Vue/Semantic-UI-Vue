@@ -5,7 +5,9 @@ export default {
   name: 'SuiMenuMenu',
   mixins: [SemanticUIVueMixin],
   props: {
-    position: Enum(['left', 'right']),
+    position: Enum(['left', 'right'], {
+      description: 'A sub menu can take left or right position',
+    }),
   },
   render() {
     const ElementType = this.getElementType();

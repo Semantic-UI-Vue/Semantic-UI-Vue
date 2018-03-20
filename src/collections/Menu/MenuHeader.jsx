@@ -4,8 +4,10 @@ export default {
   name: 'SuiMenuHeader',
   mixins: [SemanticUIVueMixin],
   props: {
-    active: Boolean,
-    content: String,
+    content: {
+      type: String,
+      description: 'Shorthand for primary content.',
+    },
   },
   render() {
     const ElementType = this.getElementType();
