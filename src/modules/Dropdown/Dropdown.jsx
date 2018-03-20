@@ -309,7 +309,7 @@ export default {
       if (this.open) {
         if (this.search && e.target === this.$refs.search) return;
         if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
-          this.focusSearch();
+          this.$nextTick(() => this.focusSearch());
           return;
         }
       }
