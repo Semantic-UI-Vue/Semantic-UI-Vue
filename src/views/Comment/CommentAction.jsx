@@ -1,12 +1,12 @@
-import { getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiCommentAction',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   render() {
-    const ElementType = getElementType(this, 'a');
+    const ElementType = this.getElementType('a');
     return (
-      <ElementType {...getChildProps(this)} {...this.generateListeners()}>
+      <ElementType {...this.getChildPropsAndListeners()}>
         {this.$slots.default}
       </ElementType>
     );

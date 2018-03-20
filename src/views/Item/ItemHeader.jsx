@@ -1,8 +1,8 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiItemHeader',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An item can contain a header',
   props: {
     href: {
@@ -11,12 +11,11 @@ export default {
     },
   },
   render() {
-    const ElementType = (this.href ? 'a' : getElementType(this));
+    const ElementType = (this.href ? 'a' : this.getElementType());
     return (
       <ElementType
-        {...getChildProps(this) }
         href={this.href}
-        class={classes('header')}
+        class={this.classes('header')}
       >
         {this.$slots.default}
       </ElementType>

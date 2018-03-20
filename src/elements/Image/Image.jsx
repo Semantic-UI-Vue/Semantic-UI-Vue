@@ -1,9 +1,9 @@
-import { classes, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiImage',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     avatar: {
       type: Boolean,
@@ -23,8 +23,8 @@ export default {
     wrapped: Boolean,
   },
   render() {
-    const ElementType = getElementType(this, 'div');
-    const classNames = classes(
+    const ElementType = this.getElementType('div');
+    const classNames = this.classes(
       'ui',
       this.avatar && 'avatar',
       this.size,

@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, classMixin } from '../../lib';
+import { SemanticUIVueMixin, classMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiStatistic',
-  mixins: [classMixin, listenersMixin],
+  mixins: [classMixin, SemanticUIVueMixin],
   props: {
     horizontal: {
       type: Boolean,
@@ -18,12 +18,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.getUIClass(),
           'statistic',
           this.color,

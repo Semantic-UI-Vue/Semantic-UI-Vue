@@ -1,10 +1,10 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiButton',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     active: {
       type: Boolean,
@@ -98,11 +98,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this, 'button');
+    const ElementType = this.getElementType('button');
 
     const label = this.$slots.label;
 
-    const classList = classes(
+    const classList = this.classes(
       'ui',
       this.active && 'active',
       this.attached && `${this.attached} attached`,
@@ -132,8 +132,7 @@ export default {
 
     const button = (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
+        {...this.getChildPropsAndListeners()}
         class={classList}
         role="button"
       >
@@ -144,14 +143,13 @@ export default {
 
     if (label) {
       return (
-        <div class={classes('ui', this.labelPosition, 'labeled', 'button')}>
+        <div class={this.classes('ui', this.labelPosition, 'labeled', 'button')}>
           {this.labelPosition === 'left' && label}
           {button}
           {this.labelPosition !== 'left' && label}
         </div>
       );
     }
-
     return button;
   },
 };

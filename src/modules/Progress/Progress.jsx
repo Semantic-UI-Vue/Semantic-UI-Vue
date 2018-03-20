@@ -1,9 +1,9 @@
 import { Enum } from '../../lib/PropTypes';
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiProgress',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     label: String,
     content: String,
@@ -31,12 +31,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           'progress',
           this.state,

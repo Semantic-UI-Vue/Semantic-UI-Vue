@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiIcon',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     color: Enum.Color(),
     disabled: Boolean,
@@ -16,12 +16,11 @@ export default {
     size: Enum.Size(),
   },
   render() {
-    const ElementType = getElementType(this, 'i');
+    const ElementType = this.getElementType('i');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.color,
           this.name,
           this.size,

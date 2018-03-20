@@ -1,15 +1,14 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiItemDescription',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An item can contain a description with a single or multiple paragraphs',
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this) }
-        class={classes('description')}
+        class={this.classes('description')}
       >
         {this.$slots.default}
       </ElementType>

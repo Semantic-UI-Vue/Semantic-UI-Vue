@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import SuiIcon from '../Icon/Icon';
 import SuiStepContent from './StepContent';
 import SuiStepTitle from './StepTitle';
@@ -7,7 +7,7 @@ import SuiStepDescription from './StepDescription';
 export default {
   name: 'SuiStep',
   components: { SuiIcon, SuiStepContent, SuiStepTitle, SuiStepDescription },
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     active: Boolean,
     completed: Boolean,
@@ -17,12 +17,11 @@ export default {
     title: String,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.active && 'active',
           this.completed && 'completed',

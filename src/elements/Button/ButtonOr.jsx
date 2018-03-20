@@ -1,17 +1,17 @@
-import { getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiButtonOr',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     text: String,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     const attrs = {};
     if (this.text) attrs['data-text'] = this.text;
     return (
-      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="or" {...{ attrs }}/>
+      <ElementType {...this.getChildPropsAndListeners()} class="or" {...{ attrs }}/>
     );
   },
   meta: {

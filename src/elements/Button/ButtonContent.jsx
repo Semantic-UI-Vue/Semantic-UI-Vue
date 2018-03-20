@@ -1,8 +1,8 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiButtonContent',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     visible: {
       type: Boolean,
@@ -14,9 +14,9 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this, 'div');
+    const ElementType = this.getElementType('div');
 
-    const classList = classes(
+    const classList = this.classes(
       this.visible && 'visible',
       this.hidden && 'hidden',
       'content',
@@ -24,8 +24,7 @@ export default {
 
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
+        {...this.getChildPropsAndListeners()}
         class={classList}
       >
         {this.content || this.$slots.default}

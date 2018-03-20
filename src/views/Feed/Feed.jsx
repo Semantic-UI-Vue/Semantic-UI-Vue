@@ -1,10 +1,10 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import FeedEvent from './FeedEvent';
 
 export default {
   name: 'SuiFeed',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A feed presents user activity chronologically',
   props: {
     size: Enum(['small', 'large'], {
@@ -16,12 +16,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.size,
           'feed',

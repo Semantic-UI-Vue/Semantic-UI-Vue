@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Icon } from '../../elements';
 
 export default {
   name: 'SuiFeedLike',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A feed can contain a like element',
   props: {
     content: {
@@ -16,12 +16,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this, 'a');
+    const ElementType = this.getElementType('a');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'like',
         )}
       >

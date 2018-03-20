@@ -1,11 +1,10 @@
 import Vue from 'vue';
 import camelCase from 'lodash/camelCase';
-import getElementType from './getElementType';
 
-export default function getChildProps(instance) {
-  if (!(instance.$vnode && instance.$vnode.data.attrs)) return {};
+export default function getChildProps() {
+  if (!(this.$vnode && this.$vnode.data.attrs)) return {};
 
-  const el = getElementType(instance);
+  const el = this.getElementType();
   let childProps;
 
   if (typeof el === 'string') {
@@ -21,7 +20,7 @@ export default function getChildProps(instance) {
     return {};
   }
 
-  const obj = Object.entries(instance.$vnode.data.attrs)
+  const obj = Object.entries(this.$vnode.data.attrs)
     .filter(([name]) => camelCase(name) in childProps)
     .map(([name, value]) => {
       const ccName = camelCase(name);
@@ -34,5 +33,5 @@ export default function getChildProps(instance) {
     })
     .reduce((acc, [name, value]) => ({ ...acc, [name]: value }), {});
 
-  return { props: obj, attrs: obj };
+  return obj;
 }

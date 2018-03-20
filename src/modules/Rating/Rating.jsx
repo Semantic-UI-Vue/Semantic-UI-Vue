@@ -1,8 +1,8 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiRating',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   binding: {
     prop: 'rating',
     event: 'changed',
@@ -38,12 +38,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.icon,
           'rating',
@@ -59,7 +58,7 @@ export default {
               aria-checked={active.toString()}
               aria-posinset={elementValue}
               aria-setsize={this.maxRating}
-              class={classes(active && 'active', selected && 'selected', 'icon')}
+              class={this.classes(active && 'active', selected && 'selected', 'icon')}
               tabindex="0"
               role="radio"
               onClick={this.onRate}

@@ -1,17 +1,16 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiSidebarPusher',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     dimmed: Boolean,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return <ElementType
-      {...getChildProps(this)}
-      {...this.generateListeners()}
-      class={classes('pusher', this.dimmed && 'dimmed')}
+      {...this.getChildPropsAndListeners()}
+      class={this.classes('pusher', this.dimmed && 'dimmed')}
     >
       {this.$slots.default}
     </ElementType>;

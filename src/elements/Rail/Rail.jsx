@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiRail',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     attached: Boolean,
     dividing: Boolean,
@@ -11,12 +11,11 @@ export default {
     position: Enum(['left', 'right']),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.dividing && 'dividing',
           this.attached && 'attached',

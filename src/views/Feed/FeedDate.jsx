@@ -1,8 +1,8 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiFeedDate',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An event or an event summary can contain a date',
   props: {
     content: {
@@ -11,12 +11,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'date',
         )}
       >

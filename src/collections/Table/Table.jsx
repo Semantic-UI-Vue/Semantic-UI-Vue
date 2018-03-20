@@ -1,9 +1,9 @@
-import { num, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTable',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A table displays a collections of data grouped into rows.',
   props: {
     basic: Enum(['very'], {
@@ -33,12 +33,11 @@ export default {
     columns: Enum.Number(),
   },
   render() {
-    const ElementType = getElementType(this, 'table');
+    const ElementType = this.getElementType('table');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.textAlign, this.textAlign && 'aligned',
           this.basic, this.basic && 'basic',
@@ -56,7 +55,7 @@ export default {
           this.color,
           this.size,
           this.singleLine && 'single line',
-          this.columns && `${num(this.columns)} column`,
+          this.columns && `${this.num(this.columns)} column`,
           'table',
         )}
       >

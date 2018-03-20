@@ -1,5 +1,5 @@
 import escapeRegExp from 'lodash/escapeRegExp';
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../../elements/Icon/Icon';
 import Label from '../../elements/Label/Label';
@@ -30,7 +30,7 @@ function getOffset(el) {
 
 export default {
   name: 'SuiDropdown',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     button: {
       type: Boolean,
@@ -254,7 +254,7 @@ export default {
         return null;
       }
 
-      const className = classes(
+      const className = this.classes(
         this.placeholder && !shouldHideText && 'default',
         this.filter && !shouldShowSelectedItem && 'filtered',
         'text',
@@ -443,7 +443,7 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this, this.button ? 'button' : 'div');
+    const ElementType = this.getElementType(this.button ? 'button' : 'div');
 
     const eventHandlers = {
       '!mousedown': this.handleMouseDown,
@@ -457,9 +457,8 @@ export default {
         role="listbox"
         aria-expanded={this.open}
         tabindex="0"
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.button && 'button',
           this.floating && 'floating',

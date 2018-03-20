@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import SuiButton from '../../elements/Button/Button';
 import SuiIcon from '../../elements/Icon/Icon';
@@ -6,7 +6,7 @@ import SuiIcon from '../../elements/Icon/Icon';
 export default {
   name: 'SuiInput',
   components: { SuiButton, SuiIcon },
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     action: String,
     disabled: Boolean,
@@ -25,7 +25,7 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     let icon;
     if (this.loading || this.icon) {
       icon = <SuiIcon name={this.loading ? 'loading' : this.icon} />;
@@ -33,9 +33,8 @@ export default {
 
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.action && 'action',
           this.disabled && 'disabled',

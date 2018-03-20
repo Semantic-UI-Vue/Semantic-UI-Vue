@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiItemGroup',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A group of items',
   props: {
     unstackable: {
@@ -24,11 +24,10 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this) }
-        class={classes(
+        class={this.classes(
           'ui',
           this.unstackable && 'unstackable',
           this.divided && 'divided',

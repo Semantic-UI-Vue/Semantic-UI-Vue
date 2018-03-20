@@ -1,18 +1,17 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiBreadcrumbDivider',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     icon: String,
   },
   render() {
-    const ElementType = getElementType(this, this.icon ? 'i' : 'div');
+    const ElementType = this.getElementType(this.icon ? 'i' : 'div');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.icon,
           this.icon && 'icon',
           'divider',

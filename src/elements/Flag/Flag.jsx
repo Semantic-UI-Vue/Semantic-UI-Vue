@@ -1,13 +1,13 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiFlag',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     name: String,
   },
   render() {
-    const ElementType = getElementType(this, 'i');
-    return <ElementType {...getChildProps(this)} {...this.generateListeners()} class={classes('flag', this.name)} />;
+    const ElementType = this.getElementType('i');
+    return <ElementType {...this.getChildPropsAndListeners()} class={this.classes('flag', this.name)}/>;
   },
 };

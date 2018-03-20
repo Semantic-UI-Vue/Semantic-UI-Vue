@@ -1,4 +1,4 @@
-import { getEventAnimationEnd, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { getEventAnimationEnd, SemanticUIVueMixin } from '../../lib';
 
 const visualStates = {
   closed: 'closed',
@@ -9,7 +9,7 @@ const visualStates = {
 
 export default {
   name: 'SuiDropdownMenu',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   data() {
     return {
       open: false,
@@ -59,13 +59,12 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
         tabindex="-1"
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes('menu', this.open && 'visible active', 'transition', this.animation)}
+        {...this.getChildPropsAndListeners()}
+        class={this.classes('menu', this.open && 'visible active', 'transition', this.animation)}
       >
         {this.$slots.default}
       </ElementType>

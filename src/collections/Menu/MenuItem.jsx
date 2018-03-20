@@ -1,11 +1,11 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import SuiIcon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiMenuItem',
   components: { SuiIcon },
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     active: Boolean,
     color: Enum.Color(),
@@ -16,12 +16,11 @@ export default {
     position: Enum(['left', 'right']),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.active && 'active',
           this.header && 'header',
           this.link && 'link',

@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSegment',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     attached: Boolean,
     basic: Boolean,
@@ -17,12 +17,11 @@ export default {
     vertical: Boolean,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.attached && 'attached',
           this.basic && 'basic',

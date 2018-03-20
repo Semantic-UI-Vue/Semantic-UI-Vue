@@ -1,22 +1,21 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import SuiStep from './Step';
 
 export default {
   name: 'SuiStepGroup',
   components: { SuiStep },
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     ordered: Boolean,
     steps: Array,
     vertical: Boolean,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.ordered && 'ordered',
           this.vertical && 'vertical',

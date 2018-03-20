@@ -1,22 +1,21 @@
-import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiStatisticsGroup',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     horizontal: Boolean,
     columns: Enum.Number(),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
 
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
-          num(this.columns),
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
+          this.num(this.columns),
           'ui',
           'statistics',
           this.horizontal && 'horizontal',
