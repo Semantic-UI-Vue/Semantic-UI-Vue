@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiForm',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     size: Enum.Size({
       description: 'A form can vary in size.',
@@ -41,12 +41,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this, 'form');
+    const ElementType = this.getElementType('form');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.unstackable && 'unstackable',
           this.equalWidth && 'equal width',

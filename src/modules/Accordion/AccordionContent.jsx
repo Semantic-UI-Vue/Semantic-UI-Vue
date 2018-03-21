@@ -1,17 +1,16 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import mixin from './mixin';
 
 export default {
   name: 'SuiAccordionContent',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   ...mixin,
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes('content', this.dataActive && 'active')}
+        {...this.getChildPropsAndListeners()}
+        class={this.classes('content', this.dataActive && 'active')}
       >
         {this.$slots.default}
       </ElementType>

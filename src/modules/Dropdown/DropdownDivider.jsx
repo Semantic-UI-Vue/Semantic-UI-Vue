@@ -1,12 +1,12 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiDropdownDivider',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
-      <ElementType {...getChildProps(this)} {...this.generateListeners()} role="option" class={classes('divider')} />
+      <ElementType {...this.getChildPropsAndListeners()} role="option" class={this.classes('divider')}/>
     );
   },
   meta: {

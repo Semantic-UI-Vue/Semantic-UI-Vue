@@ -1,19 +1,18 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiBreadcrumbSection',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     active: Boolean,
     link: Boolean,
   },
   render() {
-    const ElementType = getElementType(this, this.link ? 'a' : 'div');
+    const ElementType = this.getElementType(this.link ? 'a' : 'div');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.active && 'active',
           this.link && 'link',
           'section',

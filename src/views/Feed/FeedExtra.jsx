@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Image } from '../../elements';
 
 export default {
   name: 'SuiFeedExtra',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A feed can contain an extra content',
   props: {
     content: {
@@ -20,7 +20,7 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
 
     const defaultContentImage = (
       Array.isArray(this.images) && this.images.map(image => <Image src={image} />)
@@ -33,9 +33,8 @@ export default {
 
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.images && 'images',
           (this.text || this.content) && 'text',
           'extra',

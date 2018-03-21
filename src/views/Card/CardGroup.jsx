@@ -1,22 +1,21 @@
-import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiCardGroup',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     itemsPerRow: Enum.Number(),
     stackable: Boolean,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
-          num(this.itemsPerRow),
+          this.num(this.itemsPerRow),
           this.stackable && 'stackable',
           'cards',
         )}

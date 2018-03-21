@@ -1,11 +1,11 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
 import Icon from '../../elements/Icon/Icon';
 
 export default {
   name: 'SuiDropdownItem',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     flag: {
       type: String,
@@ -49,13 +49,12 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
+        {...this.getChildPropsAndListeners()}
         role="option"
-        class={classes(
+        class={this.classes(
           this.active && 'active',
           this.selected && 'selected',
           'item',

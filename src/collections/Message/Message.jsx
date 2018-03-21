@@ -1,4 +1,4 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import SuiIcon from '../../elements/Icon/Icon';
 import SuiMessageContent from './MessageContent';
 import SuiMessageHeader from './MessageHeader';
@@ -8,7 +8,7 @@ import SuiMessageList from './MessageList';
 export default {
   name: 'SuiMessage',
   components: { SuiIcon, SuiMessageContent, SuiMessageHeader, SuiMessageItem, SuiMessageList },
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     content: String,
     dismissable: Boolean,
@@ -44,12 +44,11 @@ export default {
       ),
     ];
 
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.icon && 'icon',
           this.info && 'info',

@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { FeedLabel, FeedContent } from './';
 
 export default {
   name: 'SuiFeedEvent',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A feed contains an event',
   props: {
     content: {
@@ -40,14 +40,13 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     const hasContent = this.content || this.date || this.summary ||
       this.extraImages || this.extraText || this.meta;
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'event',
         )}
       >

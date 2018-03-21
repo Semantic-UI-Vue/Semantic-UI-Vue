@@ -1,10 +1,10 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import { Icon } from '../../elements';
 
 export default {
   name: 'SuiEmbed',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     active: {
       type: Boolean,
@@ -137,13 +137,12 @@ export default {
       );
     }
 
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
         onClick={this.setActive}
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.aspectRatio,
           this.isActiveState && 'active',

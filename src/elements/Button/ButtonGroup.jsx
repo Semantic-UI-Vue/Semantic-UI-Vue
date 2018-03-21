@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiButtonGroup',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     attached: Enum(['top', 'bottom']),
     widths: Enum.Number(),
@@ -15,18 +15,17 @@ export default {
     size: Enum.Size(),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.size,
           this.color,
           this.attached,
           this.attached && 'attached',
-          num(this.widths),
+          this.num(this.widths),
           this.vertical && 'vertical',
           this.labeled && 'labeled',
           this.icons && 'icon',

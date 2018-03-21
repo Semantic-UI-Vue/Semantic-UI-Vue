@@ -1,12 +1,12 @@
-import { getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiLabelDetail',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
-      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="detail">
+      <ElementType {...this.getChildPropsAndListeners()} class="detail">
         {this.$slots.default}
       </ElementType>
     );

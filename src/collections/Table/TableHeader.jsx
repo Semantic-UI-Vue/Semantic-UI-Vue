@@ -1,18 +1,17 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiTableHeader',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     fullWidth: Boolean,
   },
   render() {
-    const ElementType = getElementType(this, 'thead');
+    const ElementType = this.getElementType('thead');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(this.fullWidth && 'full-width')}
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(this.fullWidth && 'full-width')}
       >
         {this.$slots.default}
       </ElementType>

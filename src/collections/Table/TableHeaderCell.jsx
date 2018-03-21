@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, num } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTableHeaderCell',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     negative: Boolean,
     positive: Boolean,
@@ -18,12 +18,11 @@ export default {
     verticalAlign: Enum.VerticalAlign(),
   },
   render() {
-    const ElementType = getElementType(this, 'th');
+    const ElementType = this.getElementType('th');
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.textAlign && `${this.textAlign} aligned`,
           this.verticalAlign && `${this.verticalAlign} aligned`,
           this.negative && 'negative',
@@ -33,7 +32,7 @@ export default {
           this.collapsing && 'collapsing',
           this.disabled && 'disabled',
           this.selectable && 'selectable',
-          this.width && `${num(this.width)} wide`,
+          this.width && `${this.num(this.width)} wide`,
         )}>
         {this.$slots.default}
       </ElementType>

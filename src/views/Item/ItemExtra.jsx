@@ -1,16 +1,15 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiItemExtra',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An item can contain extra content meant to be formatted separately from the main content',
   props: {},
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this) }
-        class={classes('extra')}
+        class={this.classes('extra')}
       >
         {this.$slots.default}
       </ElementType>

@@ -1,18 +1,18 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiMenuMenu',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     position: Enum(['left', 'right'], {
       description: 'A sub menu can take left or right position',
     }),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
-      <ElementType {...getChildProps(this)} {...this.generateListeners()} class={classes(this.position, 'menu')}>
+      <ElementType {...this.getChildPropsAndListeners()} class={this.classes(this.position, 'menu')}>
         {this.$slots.default}
       </ElementType>
     );

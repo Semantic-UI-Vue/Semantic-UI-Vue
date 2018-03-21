@@ -1,16 +1,15 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiItemMeta',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An item can contain content metadata',
   props: {},
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this) }
-        class={classes('meta')}
+        class={this.classes('meta')}
       >
         {this.$slots.default}
       </ElementType>

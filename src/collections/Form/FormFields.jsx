@@ -1,9 +1,9 @@
-import { num, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiFormFields',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     inline: {
       type: Boolean,
@@ -23,16 +23,15 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.unstackable && 'unstackable',
           this.inline && 'inline',
           this.grouped && 'grouped',
-          num(this.fields),
+          this.num(this.fields),
           'fields',
         )}
       >

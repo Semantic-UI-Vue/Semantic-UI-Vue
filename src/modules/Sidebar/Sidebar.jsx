@@ -1,9 +1,9 @@
-import { getElementType, listenersMixin, getChildProps } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSidebar',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),
@@ -24,12 +24,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
 
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
+        {...this.getChildPropsAndListeners()}
         class={`ui sidebar vertical menu ${this.direction} ${this.animation || ''}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`}
       >
         {this.$slots.default}

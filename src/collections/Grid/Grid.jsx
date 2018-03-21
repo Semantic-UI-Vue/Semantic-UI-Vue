@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, num, textAlign } from '../../lib';
+import { SemanticUIVueMixin, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGrid',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A grid is used to harmonize negative space in a layout.',
   props: {
     celled: Enum(['internally'], {
@@ -56,16 +56,15 @@ export default {
     }),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.reversed && `${this.reversed} reversed`,
           this.verticallyReversed && `${this.verticallyReversed} vertically reversed`,
-          this.columns && `${num(this.columns)} column`,
+          this.columns && `${this.num(this.columns)} column`,
           this.stackable && 'stackable',
           this.doubling && 'doubling',
           this.padded, this.padded && 'padded',

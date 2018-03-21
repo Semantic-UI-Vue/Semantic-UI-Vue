@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, num, textAlign } from '../../lib';
+import { SemanticUIVueMixin, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGridRow',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A row sub-component for Grid',
   props: {
     columns: Enum.Number({
@@ -38,12 +38,11 @@ export default {
     }),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.reversed && `${this.reversed} reversed`,
           this.only && `${this.only} only`,
           this.divided && 'divided',
@@ -52,7 +51,7 @@ export default {
           this.centered && 'centered',
           this.stretched && 'stretched',
           this.color,
-          this.columns && `${num(this.columns)} column`,
+          this.columns && `${this.num(this.columns)} column`,
           'row',
         )}
       >

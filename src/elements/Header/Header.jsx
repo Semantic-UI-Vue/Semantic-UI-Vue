@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, textAlign } from '../../lib';
+import { SemanticUIVueMixin, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiHeader',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     color: Enum.Color(),
     content: String,
@@ -21,12 +21,11 @@ export default {
     }),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.floated && `${this.floated} floated`,
           textAlign(this.textAlign),

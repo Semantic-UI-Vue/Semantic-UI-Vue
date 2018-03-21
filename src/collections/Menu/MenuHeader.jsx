@@ -1,8 +1,8 @@
-import { getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiMenuHeader',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     content: {
       type: String,
@@ -10,9 +10,9 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
-      <ElementType {...getChildProps(this)} {...this.generateListeners()} class="header">
+      <ElementType {...this.getChildPropsAndListeners()} class="header">
         {this.$slots.default || this.content}
       </ElementType>
     );

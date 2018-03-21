@@ -2,7 +2,7 @@
  * Code taken form https://github.com/David-Desmaisons/Vue-Semantic-Modal
  * Thanks to [David Desmaisons](https://github.com/David-Desmaisons)
  */
-import { classes, getEventAnimationEnd, listenersMixin } from '../../lib';
+import { getEventAnimationEnd, SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../../elements/Icon/Icon';
 
@@ -49,7 +49,7 @@ export default {
     prop: 'open',
     event: changedEvent,
   },
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     animation: Enum(animations, {
       default: animations[0],
@@ -159,7 +159,7 @@ export default {
       <div
         ref="dimmer"
         class={
-          classes(
+          this.classes(
             'ui',
             this.dimmer,
             'dimmer modals page transition',
@@ -172,7 +172,7 @@ export default {
           ref="modal"
           style={this.modalStyle}
           class={
-            classes(
+            this.classes(
               'ui',
               this.size,
               this.basic && 'basic',

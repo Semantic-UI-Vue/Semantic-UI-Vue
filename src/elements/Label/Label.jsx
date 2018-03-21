@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiLabel',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     basic: {
       type: Boolean,
@@ -15,12 +15,11 @@ export default {
     ribbon: Boolean,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.color,
           this.pointing && `${this.pointing} pointing`,

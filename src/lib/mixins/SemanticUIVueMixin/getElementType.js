@@ -1,10 +1,10 @@
 import kebabCase from 'lodash/kebabCase';
 
-export default function getElementType(instance, defaultEl = 'div') {
-  const tag = instance.$vnode && instance.$vnode.data.tag;
+export default function getElementType(defaultEl = 'div') {
+  const tag = this.$vnode && this.$vnode.data.tag;
   if (!tag) return defaultEl;
 
-  const context = instance.$vnode.context;
+  const context = this.$vnode.context;
   const entry = Object
     .entries(context.$options.components || {})
     .find(([name]) => kebabCase(name) === tag);

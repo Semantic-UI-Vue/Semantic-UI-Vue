@@ -1,19 +1,18 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiDimmer',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     active: Boolean,
     inverted: Boolean,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.active && 'active',
           this.inverted && 'inverted',

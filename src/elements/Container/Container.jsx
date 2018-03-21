@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, textAlign } from '../../lib';
+import { SemanticUIVueMixin, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiContainer',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     fluid: {
       type: Boolean,
@@ -18,12 +18,11 @@ export default {
     }),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           textAlign(this.textAlign),
           this.text && 'text',

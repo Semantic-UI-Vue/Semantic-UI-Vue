@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiItemImage',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An item can contain an image',
   props: {
     src: {
@@ -21,12 +21,11 @@ export default {
     },
   },
   render() {
-    const ElementType = (this.href ? 'a' : getElementType(this));
+    const ElementType = (this.href ? 'a' : this.getElementType());
     return (
       <ElementType
-        {...getChildProps(this) }
         href={this.href}
-        class={classes(
+        class={this.classes(
             this.size && `ui ${this.size}`,
             'image',
         )}

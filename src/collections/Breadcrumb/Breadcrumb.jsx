@@ -1,22 +1,21 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import SuiBreadcrumbSection from './BreadcrumbSection';
 import SuiBreadcrumbDivider from './BreadcrumbDivider';
 
 export default {
   name: 'SuiBreadcrumb',
   components: { SuiBreadcrumbDivider, SuiBreadcrumbSection },
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     icon: String,
     sections: Array,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes('ui', 'breadcrumb')}
+        {...this.getChildPropsAndListeners()}
+        class={this.classes('ui', 'breadcrumb')}
       >
         {this.$slots.default || this.sections.map(({ active, content, key, link }, index) => {
           const sectionEl = (

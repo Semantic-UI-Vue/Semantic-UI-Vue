@@ -1,8 +1,8 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiAccordion',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     activeIndex: [Number, Array],
     exclusive: Boolean,
@@ -97,22 +97,21 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes('ui', this.inverted && 'inverted', this.styled && 'styled', 'accordion')}
+        {...this.getChildPropsAndListeners()}
+        class={this.classes('ui', this.inverted && 'inverted', this.styled && 'styled', 'accordion')}
       >
         {this.panels ? this.panels.map(({ title, content }, index) => (
           <template>
             <div
-              class={classes('title', this.isPanelActive(index) && 'active')}
+              class={this.classes('title', this.isPanelActive(index) && 'active')}
               onClick={() => this.toggle(index)}
             >
               {title}
             </div>
-            <div class={classes('content', this.isPanelActive(index) && 'active')}>
+            <div class={this.classes('content', this.isPanelActive(index) && 'active')}>
               {content}
             </div>
           </template>

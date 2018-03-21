@@ -1,9 +1,9 @@
-import { num, classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiFormField',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     width: Enum.Number({
       description: 'A field can specify its width in grid columns',
@@ -26,13 +26,12 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
-          this.width && `${num(this.width)} wide`,
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
+          this.width && `${this.num(this.width)} wide`,
           this.inline && 'inline',
           this.required && 'required',
           this.disabled && 'disabled',

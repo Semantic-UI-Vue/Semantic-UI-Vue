@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiItemContent',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An item can contain content',
   props: {
     verticalAlign: Enum.VerticalAlign({
@@ -11,11 +11,10 @@ export default {
     }),
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this) }
-        class={classes(
+        class={this.classes(
           this.verticalAlign && `${this.verticalAlign} aligned`,
           'content')}
       >

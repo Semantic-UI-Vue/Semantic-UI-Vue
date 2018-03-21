@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin, num, textAlign } from '../../lib';
+import { SemanticUIVueMixin, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiGridColumn',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'A column sub-component for Grid.',
   props: {
     color: Enum.Color({
@@ -46,21 +46,20 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           this.floated && `${this.floated} floated`,
           textAlign(this.textAlign),
           this.verticalAlign && `${this.verticalAlign} aligned`,
-          this.width && `${num(this.width)} wide`,
-          this.mobile && `${num(this.mobile)} wide mobile`,
-          this.tablet && `${num(this.tablet)} wide tablet`,
-          this.computer && `${num(this.computer)} wide computer`,
-          this.widescreen && `${num(this.widescreen)} wide widescreen`,
-          this.largeScreen && `${num(this.largeScreen)} wide large screen`,
+          this.width && `${this.num(this.width)} wide`,
+          this.mobile && `${this.num(this.mobile)} wide mobile`,
+          this.tablet && `${this.num(this.tablet)} wide tablet`,
+          this.computer && `${this.num(this.computer)} wide computer`,
+          this.widescreen && `${this.num(this.widescreen)} wide widescreen`,
+          this.largeScreen && `${this.num(this.largeScreen)} wide large screen`,
           this.only && `${this.only} only`,
           this.centered && 'centered',
           this.stretched && 'stretched',

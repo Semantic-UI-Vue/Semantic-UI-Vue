@@ -1,8 +1,8 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 
 export default {
   name: 'SuiDivider',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   props: {
     clearing: Boolean,
     fitted: Boolean,
@@ -12,12 +12,11 @@ export default {
     vertical: Boolean,
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'ui',
           this.clearing && 'clearing',
           this.fitted && 'fitted',

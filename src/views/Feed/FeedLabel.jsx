@@ -1,9 +1,9 @@
-import { classes, getChildProps, getElementType, listenersMixin } from '../../lib';
+import { SemanticUIVueMixin } from '../../lib';
 import { Icon, Image } from '../../elements';
 
 export default {
   name: 'SuiFeedLabel',
-  mixins: [listenersMixin],
+  mixins: [SemanticUIVueMixin],
   description: 'An event can contain an image or icon label',
   props: {
     content: {
@@ -20,12 +20,11 @@ export default {
     },
   },
   render() {
-    const ElementType = getElementType(this);
+    const ElementType = this.getElementType();
     return (
       <ElementType
-        {...getChildProps(this)}
-        {...this.generateListeners()}
-        class={classes(
+        {...this.getChildPropsAndListeners()}
+        class={this.classes(
           'label',
         )}
       >
