@@ -108,13 +108,12 @@
                       class="enum"
                       v-for="(choice, index) in prop.choices"
                       :key="component.name + 'Prop' + index"
-                    >{{ choice !== '' ? choice : 'true' }}</code>
+                    >{{ choice }}</code>
                   </div>
                 </sui-table-cell>
               </sui-table-row>
             </sui-table-body>
           </sui-table>
-
         </div>
       </sui-grid-column>
     </sui-grid>
