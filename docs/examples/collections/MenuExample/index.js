@@ -1,4 +1,5 @@
 import Menu from './Menu.example';
+import SecondaryMenu from './SecondaryMenu.example';
 
 export default [
   {
@@ -8,6 +9,11 @@ export default [
         title: 'Menu',
         description: 'A menu',
         component: Menu,
+      },
+      {
+        title: 'Secondary Menu',
+        description: 'A menu can adjust its appearance to de-emphasize its contents',
+        component: SecondaryMenu,
       },
     ],
   },
