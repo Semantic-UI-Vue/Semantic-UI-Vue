@@ -75,7 +75,7 @@ export default {
           this.icon, this.icon && 'icon',
           this.inverted && 'inverted',
           this.floated, this.floated && 'floated',
-          this.widths && `${num(this.widths)} item`,
+          this.widths && `${this.num(this.widths)} item`,
           this.secondary && 'secondary',
           this.pointing && 'pointing',
           this.tabular, this.tabular && 'tabular',
