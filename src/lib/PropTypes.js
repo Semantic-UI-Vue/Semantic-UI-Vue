@@ -12,10 +12,10 @@ export function Enum(values = [], obj = {}) {
 
   if (obj.type) {
     if (Array.isArray(obj.type)) {
-      if (obj.type.includes(Boolean)) choices.push(''); // TODO: Change to true when https://github.com/vuejs/vue/pull/7583 will be merged
+      if (obj.type.includes(Boolean)) choices.unshift(true);
       type = uniq([...obj.type, ...types]);
     } else {
-      if (obj.type === Boolean) choices.push('');
+      if (obj.type === Boolean) choices.unshift(true);
       type = uniq([obj.type, ...types]);
     }
   } else {
