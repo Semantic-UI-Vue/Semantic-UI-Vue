@@ -17,7 +17,7 @@ export default {
     inverted: Boolean,
     loading: Boolean,
     transparent: Boolean,
-    value: String,
+    value: [String, Number],
   },
   events: {
     input: {
