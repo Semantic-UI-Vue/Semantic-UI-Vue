@@ -15,7 +15,7 @@ If you have used it already, you will find Semantic UI Vue's API to be almost th
 
 Semantic UI Vue is still under heavy development. Please, feel free to contribute.
 
-Here is a JSFiddle for a quick look: https://jsfiddle.net/pvjvekce/
+[![Edit Simple semantic-ui-vue example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n08n0krolj)
 
 ## Contact us!
 
