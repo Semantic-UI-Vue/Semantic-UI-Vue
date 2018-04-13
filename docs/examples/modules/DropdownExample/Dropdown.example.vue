@@ -1,80 +1,21 @@
-<script>
-/* eslint-disable */
-</script>
-<template>
-	<div>
-		<h1>Dropdown bug</h1>
-
-		<sui-dropdown
-		  selection
-			v-model="value1"
-			:options="getData2()"
-		/>
-    value1: {{value1}}
-    <br>
-
-		<sui-dropdown
-		  selection
-			v-model="value2"
-			:options="getData2()"
-		/>
-    value2: {{value2}}
-    <br>
-		<sui-dropdown
-		  selection
-			v-model="value3"
-			:options="getData2()"
-		/>
-    value3: {{value3}}
-	</div>
+<template lang="html">
+  <sui-dropdown text="File">
+    <sui-dropdown-menu>
+      <sui-dropdown-item>New</sui-dropdown-item>
+      <sui-dropdown-item>Open... <span class="description">ctrl + o</span></sui-dropdown-item>
+      <sui-dropdown-item>Save as... <span class="description">ctrl + s</span></sui-dropdown-item>
+      <sui-dropdown-item>Rename <span class="description">ctrl + r</span></sui-dropdown-item>
+      <sui-dropdown-item>Make a copy</sui-dropdown-item>
+      <sui-dropdown-item><sui-icon name="folder" />Move to folder</sui-dropdown-item>
+      <sui-dropdown-item><sui-icon name="trash" />Move to trash</sui-dropdown-item>
+      <sui-dropdown-divider/>
+      <sui-dropdown-item>Download as...</sui-dropdown-item>
+    </sui-dropdown-menu>
+  </sui-dropdown>
 </template>
 
 <script>
-const a = [
-        {
-          value: 0,
-          text: "item1"
-        },
-        {
-          value: 1,
-          text: "item2"
-        }
-      ];
-
 export default {
-  methods: {
-    getData() {
-      return [
-        {
-          value: 0,
-          text: "item1"
-        },
-        {
-          value: 1,
-          text: "item2"
-        }
-      ];
-    },
-    getData2() {
-      return [...a];
-    }
-  },
-  data() {
-    return {
-      value1: 0,
-      value2: 1,
-      value3: 0,
-      dataCollection: [
-        {
-          value: 0,
-          text: "item1"
-        },
-        {
-          value: 1,
-          text: "item2"
-        }
-      ]
-    };
-  }
+  name: 'DropdownExample',
 };
 </script>
