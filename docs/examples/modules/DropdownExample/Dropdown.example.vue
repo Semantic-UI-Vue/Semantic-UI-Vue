@@ -12,8 +12,6 @@
       <sui-dropdown-item>Download as...</sui-dropdown-item>
     </sui-dropdown-menu>
   </sui-dropdown>
-</div>
-
 </template>
 
 <script>
