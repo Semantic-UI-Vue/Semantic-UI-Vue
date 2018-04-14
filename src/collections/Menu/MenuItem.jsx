@@ -34,7 +34,7 @@ export default {
     }),
   },
   render() {
-    const ElementType = this.getElementType();
+    const ElementType = this.getElementType(this.link ? 'a' : 'div');
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
