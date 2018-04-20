@@ -37,6 +37,11 @@ export default {
       default: false,
       description: 'Is item selected',
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+      description: 'A dropdown item can be disabled.',
+    },
   },
   events: {
     select: {
@@ -55,6 +60,7 @@ export default {
         {...this.getChildPropsAndListeners()}
         role="option"
         class={this.classes(
+          this.disabled && 'disabled', 
           this.active && 'active',
           this.selected && 'selected',
           'item',
