@@ -32,6 +32,14 @@ export default {
     position: Enum(['left', 'right'], {
       description: 'A menu item can take left or right position.',
     }),
+    disabled: {
+      type: Boolean,
+      description: 'A menu item can be disabled.',
+    },
+    fitted: Enum(['horizontally', 'vertically'], {
+      type: Boolean,
+      description: 'A menu item or menu can remove element padding, vertically or horizontally..',
+    }),
   },
   render() {
     const ElementType = this.getElementType(this.link ? 'a' : 'div');
@@ -39,14 +47,16 @@ export default {
       <ElementType
         {...this.getChildPropsAndListeners()}
         class={this.classes(
+          this.disabled && 'disabled',
           this.active && 'active',
+          this.fitted, this.fitted && 'fitted',
           this.header && 'header',
           this.link && 'link',
           this.position,
           'item',
         )}
       >
-        {this.icon && <SuiIcon name={this.icon}/>}
+        {this.icon && <SuiIcon name={this.icon} />}
         {this.$slots.default || this.content}
       </ElementType>
     );
