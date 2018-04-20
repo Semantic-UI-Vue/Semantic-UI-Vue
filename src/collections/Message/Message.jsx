@@ -85,8 +85,6 @@ export default {
     },
   },
   render() {
-    const icon = typeof this.icon === 'string' && this.icon;
-
     const content = [
       this.header && <SuiMessageHeader>{this.header}</SuiMessageHeader>,
       this.content,
@@ -121,9 +119,9 @@ export default {
       >
         {this.dismissable && <SuiIcon name="close"
                                       nativeOnClick={this.handleDismiss} />}
-        {icon && <SuiIcon name={icon} />}
-        {icon && <SuiMessageContent>{content}</SuiMessageContent>}
-        {!icon && content}
+        {this.icon && <SuiIcon name={this.icon} />}
+        {this.icon && <SuiMessageContent>{content}</SuiMessageContent>}
+        {!this.icon && content}
       </ElementType>
     );
   },
