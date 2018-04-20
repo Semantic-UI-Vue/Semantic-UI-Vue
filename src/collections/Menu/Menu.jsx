@@ -37,6 +37,11 @@ export default {
       type: Boolean,
       description: 'A menu can be floated.',
     }),
+    fluid: {
+      type: Boolean,
+      default: false,
+      description: 'A vertical menu may take the size of its container.',
+    },
     secondary: {
       type: Boolean,
       description: 'A menu can adjust its appearance to de-emphasize its contents.',
@@ -60,6 +65,15 @@ export default {
     widths: Enum.Number({
       description: 'A menu can have its items divided evenly.',
     }),
+    borderless: {
+      type: Boolean,
+      default: false,
+      description: 'A menu item or menu can have no borders.',
+    },
+    pagination: {
+      type: Boolean,
+      description: 'A pagination menu is specially formatted to present links to pages of content.',
+    },
   },
   render() {
     const ElementType = this.getElementType();
@@ -69,11 +83,14 @@ export default {
         class={this.classes(
           'ui',
           this.vertical && 'vertical',
+          this.fluid && 'fluid',
           this.compact && 'compact',
           this.fixed && `${this.fixed} fixed`,
           this.text && 'text',
           this.icon, this.icon && 'icon',
           this.inverted && 'inverted',
+          this.pagination && 'pagination',
+          this.borderless && 'borderless',
           this.floated, this.floated && 'floated',
           this.widths && `${this.num(this.widths)} item`,
           this.secondary && 'secondary',
@@ -84,7 +101,7 @@ export default {
         )}
       >
         {this.$slots.default || (this.items && this.items.map((item, index) => (
-          <SuiMenuItem {...{ props: item }} active={item.active || this.activeIndex === index}/>
+          <SuiMenuItem {...{ props: item }} active={item.active || this.activeIndex === index} />
         )))}
       </ElementType>
     );
