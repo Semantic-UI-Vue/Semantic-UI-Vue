@@ -60,7 +60,7 @@ export default {
         {...this.getChildPropsAndListeners()}
         role="option"
         class={this.classes(
-          this.disabled && 'disabled', 
+          this.disabled && 'disabled',
           this.active && 'active',
           this.selected && 'selected',
           'item',
