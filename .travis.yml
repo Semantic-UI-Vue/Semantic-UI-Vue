@@ -18,14 +18,6 @@ deploy:
     repo: Semantic-UI-Vue/semantic-ui-vue.github.io
     target_branch: master
     on:
-      branch: master
-  - provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    local_dir: "dist/docs"
-    repo: Semantic-UI-Vue/semantic-ui-vue.github.io
-    target_branch: master
-    on:
       tags: true
   - provider: npm
     skip_cleanup: true
