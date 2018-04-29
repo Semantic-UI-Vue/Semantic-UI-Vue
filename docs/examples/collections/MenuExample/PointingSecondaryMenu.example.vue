@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sui-menu pointing>
+    <sui-menu pointing secondary>
       <a
         is="sui-menu-item"
         v-for="item in items"
@@ -10,21 +10,24 @@
         @click="select(item)"
       />
       <sui-menu-menu position="right">
-        <sui-menu-item>
-          <sui-input transparent icon="search" placeholder="Search..." />
-        </sui-menu-item>
+        <a
+          is="sui-menu-item"
+          :active="isActive('Logout')"
+          content="Logout"
+          @click="select('Logout')"
+        />
       </sui-menu-menu>
     </sui-menu>
 
     <sui-segment>
-      <docs-wireframe name="paragraph" />
+      <docs-wireframe name="media-paragraph" />
     </sui-segment>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PointingMenuExample',
+  name: 'PointingMenuSecondaryExample',
   data() {
     return {
       active: 'Home',
@@ -41,4 +44,3 @@ export default {
   },
 };
 </script>
-
