@@ -11,6 +11,10 @@ export default {
       type: Number,
       description: 'Index of the currently active item.',
     },
+    attached: Enum.Attached({
+      type: Boolean,
+      description: 'A menu may be attached to other content segments.',
+    }),
     color: Enum.Color({
       description: 'Additional colors can be specified.',
     }),
@@ -82,6 +86,7 @@ export default {
         {...this.getChildPropsAndListeners()}
         class={this.classes(
           'ui',
+          this.attached && `${this.attached} attached`,
           this.vertical && 'vertical',
           this.fluid && 'fluid',
           this.compact && 'compact',

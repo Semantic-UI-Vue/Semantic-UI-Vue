@@ -1,4 +1,5 @@
 import Menu from './Menu.example';
+import TopAttachedMenu from './TopAttachedMenu.example';
 import SecondaryMenu from './SecondaryMenu.example';
 
 export default [
@@ -9,6 +10,9 @@ export default [
         title: 'Menu',
         description: 'A menu',
         component: Menu,
+      },
+      {
+        component: TopAttachedMenu,
       },
       {
         title: 'Secondary Menu',
