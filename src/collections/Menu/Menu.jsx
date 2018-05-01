@@ -24,6 +24,7 @@ export default {
     },
     fixed: Enum(['right', 'left', 'bottom', 'top'], {
       description: 'A menu can be fixed to a side of its context.',
+      type: Boolean,
     }),
     icon: Enum(['labeled'], {
       type: Boolean,

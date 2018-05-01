@@ -10,6 +10,7 @@
     <div
       class="docs-mobile docs-top-bar"
       is="sui-menu"
+      fixed
       inverted
     >
       <sui-container>
