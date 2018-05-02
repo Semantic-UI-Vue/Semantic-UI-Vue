@@ -30,13 +30,6 @@ As soon as you get started, submit a pull request. Don't worry if it's still WIP
 
 There are still a lot of components or components' functionalities missing. Please have a look to the [*Semantic UI*'s site](https://semantic-ui.com) and help yourself!
 
-### Code coverage
-
-Any help to bring the code coverage up is very welcome. To see the current state file by file:
-
-* Run `npm test`
-* Open *test/coverage/lcov-report/index.html*
-
 ### Documentation
 
 All the components need to get a proper documentation. I am trying to stick to the [official one](https://semantic-ui.com) as much as possible.
@@ -105,3 +98,17 @@ export default [
 ```
 
 It is important that every example's extension is *.example.vue*. This will allow webpack to load the example as a text file.
+
+It's very important to run tests after adding/deleting/updating an example. Read the following sections for details.
+
+### Test
+
+We test the basic rendering of the templates just by taking snapshots of the existing examples. Once you verified that the component's examples work correctly, just run:
+
+```sh
+npm run test:update
+```
+
+Have a look at the diff and make sure there were no regressions.
+
+*Note*: this will only test that the output of the components didn't change. You still need to manually test any interaction.
