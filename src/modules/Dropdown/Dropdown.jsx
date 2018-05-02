@@ -40,6 +40,10 @@ export default {
       type: String,
       description: 'Change default button to other button.',
     },
+    item: {
+      type: Boolean,
+      description: 'A dropdown can be formatted as a Menu item.',
+    },
     floating: {
       type: Boolean,
       description: 'A dropdown menu can appear to be floating below an element.',
@@ -461,6 +465,7 @@ export default {
         class={this.classes(
           'ui',
           this.button && 'button',
+          this.item && 'item',
           this.floating && 'floating',
           this.fluid && 'fluid',
           this.labeled && 'labeled',
