@@ -112,6 +112,8 @@ import copyToClipboard from 'copy-to-clipboard';
 import Editor from './Editor';
 import getComponentFromString from './getComponentFromString';
 
+const parser = require('vue-loader/lib/parser');
+
 export default {
   name: 'Example',
   components: { Editor },
