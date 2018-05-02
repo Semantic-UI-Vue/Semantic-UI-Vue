@@ -5,7 +5,10 @@ export default {
   name: 'SuiSegment',
   mixins: [SemanticUIVueMixin],
   props: {
-    attached: Boolean,
+    attached: Enum.Attached({
+      type: Boolean,
+      description: 'Attach segment to other content, like a header.',
+    }),
     basic: Boolean,
     inverted: Boolean,
     padded: Boolean,
