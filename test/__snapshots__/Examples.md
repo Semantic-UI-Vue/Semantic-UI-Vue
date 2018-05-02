@@ -108,6 +108,30 @@
 "<div class=\"ui secondary menu\"><a class=\"active link item\" name=\"Home\">Home</a> <div class=\"item\" name=\"Messages\">Messages</div> <div class=\"item\" name=\"Friends\">Friends</div></div>"
 ```
 
+##     `Pointing`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui pointing menu\"><a class=\"active item\">Home</a><a class=\"item\">Messages</a><a class=\"item\">Friends</a> <div class=\"right menu\"><div class=\"item\"><div class=\"ui transparent icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"search icon\"></i></div></div></div></div> <div class=\"ui segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div></div>"
+```
+
+##     `Tabular`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui tabular menu\"><a class=\"active item\">Bio</a><a class=\"item\">Photos</a></div>"
+```
+
+##     `Text`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui text menu\"><div class=\"header item\">Sort By</div> <a class=\"active item\">Closest</a><a class=\"item\">Most Comments</a><a class=\"item\">Most Popular</a></div>"
+```
+
 ## `MessageExample`
 
 ##   `Types`
