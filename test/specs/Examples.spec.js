@@ -1,10 +1,14 @@
-import { mount } from '@vue/test-utils';
+import { createLocalVue, mount } from '@vue/test-utils';
 import chai from 'chai';
 import { matchSnapshot } from 'chai-karma-snapshot';
+import SuiVue from 'src';
 import * as Examples from '../../docs/examples';
 import getComponentFromString from '../../docs/getComponentFromString';
 
 chai.use(matchSnapshot);
+
+const localVue = createLocalVue();
+localVue.use(SuiVue);
 
 describe('Examples', () => {
   Object.keys(Examples).forEach((componentName) => {
@@ -17,7 +21,7 @@ describe('Examples', () => {
               describe(example.title, () => {
                 it('should match snapshot', () => {
                   const Component = getComponentFromString(example.component);
-                  chai.expect(mount(Component).html()).to.matchSnapshot();
+                  chai.expect(mount(Component, { localVue }).html()).to.matchSnapshot();
                 });
               });
             }

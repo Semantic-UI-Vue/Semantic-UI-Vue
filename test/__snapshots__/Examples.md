@@ -9,7 +9,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div><sui-breadcrumb><sui-breadcrumb-section link=\"\">Home</sui-breadcrumb-section> <sui-breadcrumb-divider></sui-breadcrumb-divider> <sui-breadcrumb-section link=\"\">Store</sui-breadcrumb-section> <sui-breadcrumb-divider></sui-breadcrumb-divider> <sui-breadcrumb-section active=\"\">T-Shirt</sui-breadcrumb-section></sui-breadcrumb></div> <sui-breadcrumb sections=\"[object Object],[object Object],[object Object]\"></sui-breadcrumb></div>"
+"<div><div><div class=\"ui breadcrumb\"><a class=\"link section\">Home</a> <div class=\"divider\">/</div> <a class=\"link section\">Store</a> <div class=\"divider\">/</div> <div class=\"active section\">T-Shirt</div></div></div> <div class=\"ui breadcrumb\"><a class=\"link section\">Home</a> <div class=\"divider\">/</div> <a class=\"link section\">Store</a> <div class=\"divider\">/</div> <div class=\"active section\">T-Shirt</div></div></div>"
 ```
 
 ##   `Content`
@@ -19,7 +19,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-breadcrumb><sui-breadcrumb-section link=\"\">Home</sui-breadcrumb-section> <sui-breadcrumb-divider>/</sui-breadcrumb-divider> <sui-breadcrumb-section link=\"\">Registration</sui-breadcrumb-section> <sui-breadcrumb-divider>/</sui-breadcrumb-divider> <sui-breadcrumb-section active=\"\">Personal Information</sui-breadcrumb-section></sui-breadcrumb></div>"
+"<div><div class=\"ui breadcrumb\"><a class=\"link section\">Home</a> <div class=\"divider\">/</div> <a class=\"link section\">Registration</a> <div class=\"divider\">/</div> <div class=\"active section\">Personal Information</div></div></div>"
 ```
 
 ##     `Section`
@@ -27,7 +27,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-breadcrumb><sui-breadcrumb-section link=\"\">Home</sui-breadcrumb-section> <sui-breadcrumb-divider>/</sui-breadcrumb-divider> <sui-breadcrumb-section active=\"\">Search</sui-breadcrumb-section></sui-breadcrumb></div>"
+"<div><div class=\"ui breadcrumb\"><a class=\"link section\">Home</a> <div class=\"divider\">/</div> <div class=\"active section\">Search</div></div></div>"
 ```
 
 ##     `Link`
@@ -35,9 +35,9 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-breadcrumb><sui-breadcrumb-section link=\"\">Home</sui-breadcrumb-section> <sui-breadcrumb-divider></sui-breadcrumb-divider> <sui-breadcrumb-section link=\"\">Store</sui-breadcrumb-section> <sui-breadcrumb-divider icon=\"right chevron\"></sui-breadcrumb-divider> <sui-breadcrumb-section active=\"\">
+"<div><div class=\"ui breadcrumb\"><a class=\"link section\">Home</a> <div class=\"divider\">/</div> <a class=\"link section\">Store</a> <i class=\"right chevron icon divider\"></i> <div class=\"active section\">
       Search for:
-      <a href=\"javascript:void 0\">paper towels</a></sui-breadcrumb-section></sui-breadcrumb></div>"
+      <a href=\"javascript:void 0\">paper towels</a></div></div></div>"
 ```
 
 ## `FormExample`
@@ -49,7 +49,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-form><sui-form-field><label>First Name</label> <input placeholder=\"First Name\"></sui-form-field> <sui-form-field><label>Last Name</label> <input placeholder=\"Last Name\"></sui-form-field> <sui-form-field><sui-checkbox label=\"I agree to the Terms and Conditions\"></sui-checkbox></sui-form-field> <sui-button type=\"submit\">Submit</sui-button></sui-form>"
+"<form class=\"ui form\"><div class=\"field\"><label>First Name</label> <input placeholder=\"First Name\"></div> <div class=\"field\"><label>Last Name</label> <input placeholder=\"Last Name\"></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>I agree to the Terms and Conditions</label></div></div> <button role=\"button\" class=\"ui button\" type=\"submit\">Submit</button></form>"
 ```
 
 ## `GridExample`
@@ -61,7 +61,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column><sui-grid-column></sui-grid-column></sui-grid>"
+"<div class=\"ui grid\"><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div><div class=\"column\"></div></div>"
 ```
 
 ##     `Divided`
@@ -69,7 +69,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid columns=\"3\" divided=\"\"><sui-grid-row><sui-grid-column><docs-wireframe name=\"media-paragraph\"></docs-wireframe></sui-grid-column><sui-grid-column><docs-wireframe name=\"media-paragraph\"></docs-wireframe></sui-grid-column><sui-grid-column><docs-wireframe name=\"media-paragraph\"></docs-wireframe></sui-grid-column></sui-grid-row><sui-grid-row><sui-grid-column><docs-wireframe name=\"media-paragraph\"></docs-wireframe></sui-grid-column><sui-grid-column><docs-wireframe name=\"media-paragraph\"></docs-wireframe></sui-grid-column><sui-grid-column><docs-wireframe name=\"media-paragraph\"></docs-wireframe></sui-grid-column></sui-grid-row></sui-grid>"
+"<div class=\"ui three column divided grid\"><div class=\"row\"><div class=\"column\"><docs-wireframe name=\"media-paragraph\"></docs-wireframe></div><div class=\"column\"><docs-wireframe name=\"media-paragraph\"></docs-wireframe></div><div class=\"column\"><docs-wireframe name=\"media-paragraph\"></docs-wireframe></div></div><div class=\"row\"><div class=\"column\"><docs-wireframe name=\"media-paragraph\"></docs-wireframe></div><div class=\"column\"><docs-wireframe name=\"media-paragraph\"></docs-wireframe></div><div class=\"column\"><docs-wireframe name=\"media-paragraph\"></docs-wireframe></div></div></div>"
 ```
 
 ##     `Vertically Divided`
@@ -77,7 +77,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid divided=\"vertically\"><sui-grid-row columns=\"2\"><sui-grid-column><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-grid-column> <sui-grid-column><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-grid-column></sui-grid-row> <sui-grid-row columns=\"3\"><sui-grid-column><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-grid-column> <sui-grid-column><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-grid-column> <sui-grid-column><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-grid-column></sui-grid-row></sui-grid>"
+"<div class=\"ui vertically divided grid\"><div class=\"two column row\"><div class=\"column\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div> <div class=\"column\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div></div> <div class=\"three column row\"><div class=\"column\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div> <div class=\"column\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div> <div class=\"column\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div></div></div>"
 ```
 
 ##     `Celled`
@@ -85,7 +85,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid celled=\"\"><sui-grid-row><sui-grid-column width=\"3\"><docs-wireframe name=\"image\"></docs-wireframe></sui-grid-column> <sui-grid-column width=\"13\"><docs-wireframe name=\"centered-paragraph\"></docs-wireframe></sui-grid-column></sui-grid-row> <sui-grid-row><sui-grid-column width=\"3\"><docs-wireframe name=\"image\"></docs-wireframe></sui-grid-column> <sui-grid-column width=\"10\"><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-grid-column> <sui-grid-column width=\"3\"><docs-wireframe name=\"image\"></docs-wireframe></sui-grid-column></sui-grid-row></sui-grid>"
+"<div class=\"ui celled grid\"><div class=\"row\"><div class=\"three wide column\"><docs-wireframe name=\"image\"></docs-wireframe></div> <div class=\"thirteen wide column\"><docs-wireframe name=\"centered-paragraph\"></docs-wireframe></div></div> <div class=\"row\"><div class=\"three wide column\"><docs-wireframe name=\"image\"></docs-wireframe></div> <div class=\"ten wide column\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div> <div class=\"three wide column\"><docs-wireframe name=\"image\"></docs-wireframe></div></div></div>"
 ```
 
 ## `MenuExample`
@@ -97,7 +97,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-menu widths=\"3\"><sui-menu-item>Editorials</sui-menu-item> <sui-menu-item>Reviews</sui-menu-item> <sui-menu-item active=\"\">Upcoming Events</sui-menu-item></sui-menu>"
+"<div class=\"ui three item menu\"><div class=\"item\">Editorials</div> <div class=\"item\">Reviews</div> <div class=\"active item\">Upcoming Events</div></div>"
 ```
 
 ##     `Secondary Menu`
@@ -105,7 +105,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-menu secondary=\"\"><sui-menu-item active=\"\" link=\"\" name=\"Home\">Home</sui-menu-item> <sui-menu-item name=\"Messages\">Messages</sui-menu-item> <sui-menu-item name=\"Friends\">Friends</sui-menu-item></sui-menu>"
+"<div class=\"ui secondary menu\"><a class=\"active link item\" name=\"Home\">Home</a> <div class=\"item\" name=\"Messages\">Messages</div> <div class=\"item\" name=\"Friends\">Friends</div></div>"
 ```
 
 ## `MessageExample`
@@ -117,13 +117,13 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-message><sui-message-header>Changes in Service</sui-message-header> <p>
+"<div><div class=\"ui message\"><div class=\"header\">Changes in Service</div> <p>
       We updated our privacy policy here to better service our customers.
       We recommend reviewing the changes.
-    </p></sui-message> <sui-message header=\"Changes in Service\" content=\"
+    </p></div> <div class=\"ui message\"><div class=\"header\">Changes in Service</div>
       We updated our privacy policy here to better service our customers.
       We recommend reviewing the changes.
-    \"></sui-message></div>"
+    </div></div>"
 ```
 
 ##     `List Message`
@@ -131,11 +131,11 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-message><sui-message-header>New Site Features</sui-message-header> <sui-message-list><sui-message-item>
+"<div><div class=\"ui message\"><div class=\"header\">New Site Features</div> <ul class=\"list\"><li>
         You can now have cover images on blog pages
-      </sui-message-item> <sui-message-item>
+      </li> <li>
         Drafts will now auto-save while writing
-      </sui-message-item></sui-message-list></sui-message> <sui-message header=\"New Site Features\" list=\"You can now have cover images on blog pages,Drafts will now auto-save while writing\"></sui-message></div>"
+      </li></ul></div> <div class=\"ui message\"><div class=\"header\">New Site Features</div><ul class=\"list\"><li>You can now have cover images on blog pages</li><li>Drafts will now auto-save while writing</li></ul></div></div>"
 ```
 
 ##     `Icon Message`
@@ -143,9 +143,9 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-message icon=\"inbox\" header=\"Have you heard about our mailing list?\" content=\"Get the best news in your e-mail every day.\"></sui-message> <sui-message icon=\"\"><sui-icon name=\"circle notched\" loading=\"\"></sui-icon> <sui-message-content><sui-message-header>Just one second</sui-message-header>
+"<div><div class=\"ui icon message\"><i class=\"inbox icon\"></i><div class=\"content\"><div class=\"header\">Have you heard about our mailing list?</div>Get the best news in your e-mail every day.</div></div> <div class=\"ui icon message\"><i class=\"icon\"></i><div class=\"content\"><i class=\"circle notched loading icon\"></i> <div class=\"content\"><div class=\"header\">Just one second</div>
       We are fetching that content for you.
-    </sui-message-content></sui-message></div>"
+    </div></div></div></div>"
 ```
 
 ##     `Dismissable Block`
@@ -153,7 +153,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-message header=\"Welcome back!\" content=\"This is a special notification which you can dismiss.\" dismissable=\"\" name=\"fade\"></sui-message> <!----></div>"
+"<div><div class=\"ui message\" name=\"fade\"><i class=\"close icon\"></i><div class=\"header\">Welcome back!</div>This is a special notification which you can dismiss.</div> <!----></div>"
 ```
 
 ## `TableExample`
@@ -165,7 +165,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Header</sui-table-header-cell> <sui-table-header-cell>Header</sui-table-header-cell> <sui-table-header-cell>Header</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell><sui-label ribbon=\"\">First</sui-label></sui-table-cell> <sui-table-cell>Cell</sui-table-cell> <sui-table-cell>Cell</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Cell</sui-table-cell> <sui-table-cell>Cell</sui-table-cell> <sui-table-cell>Cell</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Cell</sui-table-cell> <sui-table-cell>Cell</sui-table-cell> <sui-table-cell>Cell</sui-table-cell></sui-table-row></sui-table-body> <sui-table-footer><sui-table-row><sui-table-header-cell colspan=\"3\"><sui-menu pagination=\"\"><sui-menu-item icon=\"\"><sui-icon name=\"left chevron\"></sui-icon></sui-menu-item> <sui-menu-item>1</sui-menu-item> <sui-menu-item>2</sui-menu-item> <sui-menu-item>3</sui-menu-item> <sui-menu-item>4</sui-menu-item> <sui-menu-item icon=\"\"><sui-icon name=\"right chevron\"></sui-icon></sui-menu-item></sui-menu></sui-table-header-cell></sui-table-row></sui-table-footer></sui-table>"
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Header</th> <th class=\"\">Header</th> <th class=\"\">Header</th></tr></thead> <tbody><tr class=\"\"><td class=\"\"><div class=\"ui ribbon label\">First</div></td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr> <tr class=\"\"><td class=\"\">Cell</td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr> <tr class=\"\"><td class=\"\">Cell</td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr></tbody> <tfoot class=\"\"><tr class=\"\"><th class=\"\" colspan=\"3\"><div class=\"ui pagination menu\"><a class=\"item\"><i class=\"icon\"></i><i class=\"left chevron icon\"></i></a> <a class=\"item\">1</a> <a class=\"item\">2</a> <a class=\"item\">3</a> <a class=\"item\">4</a> <a class=\"item\"><i class=\"icon\"></i><i class=\"right chevron icon\"></i></a></div></th></tr></tfoot></table>"
 ```
 
 ##     `Definition`
@@ -173,7 +173,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table definition=\"\"><sui-table-header><sui-table-row><sui-table-header-cell></sui-table-header-cell> <sui-table-header-cell>Arguments</sui-table-header-cell> <sui-table-header-cell>Description</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>reset rating</sui-table-cell> <sui-table-cell>None</sui-table-cell> <sui-table-cell>Resets rating to default value</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>set rating</sui-table-cell> <sui-table-cell>rating (integer)</sui-table-cell> <sui-table-cell>Sets the current star rating to specified value</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui definition table\"><thead class=\"\"><tr class=\"\"><th class=\"\"></th> <th class=\"\">Arguments</th> <th class=\"\">Description</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">reset rating</td> <td class=\"\">None</td> <td class=\"\">Resets rating to default value</td></tr> <tr class=\"\"><td class=\"\">set rating</td> <td class=\"\">rating (integer)</td> <td class=\"\">Sets the current star rating to specified value</td></tr></tbody></table>"
 ```
 
 ##   `States`
@@ -183,11 +183,11 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>No Name Specified</sui-table-cell> <sui-table-cell>Unknown</sui-table-cell> <sui-table-cell negative=\"\">None</sui-table-cell></sui-table-row> <sui-table-row positive=\"\"><sui-table-cell>Jimmy</sui-table-cell> <sui-table-cell><sui-icon name=\"check\"></sui-icon>
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">No Name Specified</td> <td class=\"\">Unknown</td> <td class=\"negative\">None</td></tr> <tr class=\"positive\"><td class=\"\">Jimmy</td> <td class=\"\"><i class=\"check icon\"></i>
         Approved
-      </sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Unknown</sui-table-cell> <sui-table-cell positive=\"\"><sui-icon name=\"close\"></sui-icon>
+      </td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Unknown</td> <td class=\"positive\"><i class=\"close icon\"></i>
         Requires call
-      </sui-table-cell></sui-table-row> <sui-table-row negative=\"\"><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Unknown</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+      </td></tr> <tr class=\"negative\"><td class=\"\">Jill</td> <td class=\"\">Unknown</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##     `Cells`
@@ -203,9 +203,9 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>No Name Specified</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row state=\"error\"><sui-table-cell>Jimmy</sui-table-cell> <sui-table-cell>Cannot pull data</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell state=\"error\"><sui-icon name=\"attention\"></sui-icon>
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">No Name Specified</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"error\"><td class=\"\">Jimmy</td> <td class=\"\">Cannot pull data</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"error\"><i class=\"attention icon\"></i>
         Classified
-      </sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+      </td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##     `Warning`
@@ -213,11 +213,11 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>No Name Specified</sui-table-cell> <sui-table-cell>Unknown</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row state=\"warning\"><sui-table-cell>Jimmy</sui-table-cell> <sui-table-cell><sui-icon name=\"attention\"></sui-icon>
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">No Name Specified</td> <td class=\"\">Unknown</td> <td class=\"\">None</td></tr> <tr class=\"warning\"><td class=\"\">Jimmy</td> <td class=\"\"><i class=\"attention icon\"></i>
         Requires Action
-      </sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Unknown</sui-table-cell> <sui-table-cell state=\"warning\"><sui-icon name=\"attention\"></sui-icon>
+      </td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Unknown</td> <td class=\"warning\"><i class=\"attention icon\"></i>
         Hostile
-      </sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Unknown</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+      </td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Unknown</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##     `Active`
@@ -225,7 +225,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row state=\"active\"><sui-table-cell>John</sui-table-cell> <sui-table-cell>Selected</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell state=\"active\">Jill</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"active\"><td class=\"\">John</td> <td class=\"\">Selected</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"active\">Jill</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##     `Disabled`
@@ -233,7 +233,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row state=\"disabled\"><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Selected</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell state=\"disabled\">Jill</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"disabled\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">John</td> <td class=\"\">Selected</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"disabled\">Jill</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##   `Variations`
@@ -243,7 +243,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table single-line=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Registration Date</sui-table-header-cell> <sui-table-header-cell>E-mail address</sui-table-header-cell> <sui-table-header-cell>Premium Plan</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John Lilki</sui-table-cell> <sui-table-cell>September 14, 2013</sui-table-cell> <sui-table-cell>jhlilk22@yahoo.com</sui-table-cell> <sui-table-cell>No</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie Harington</sui-table-cell> <sui-table-cell>January 11, 2014</sui-table-cell> <sui-table-cell>jamieharingonton@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill Lewis</sui-table-cell> <sui-table-cell>May 11, 2014</sui-table-cell> <sui-table-cell>jilsewris22@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui single line table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Registration Date</th> <th class=\"\">E-mail address</th> <th class=\"\">Premium Plan</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr> <tr class=\"\"><td class=\"\">Jamie Harington</td> <td class=\"\">January 11, 2014</td> <td class=\"\">jamieharingonton@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"\">Jill Lewis</td> <td class=\"\">May 11, 2014</td> <td class=\"\">jilsewris22@yahoo.com</td> <td class=\"\">Yes</td></tr></tbody></table>"
 ```
 
 ##     `Fixed`
@@ -251,16 +251,16 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table fixed=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Description</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>
+"<table class=\"ui fixed table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Description</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">
         John is an interesting boy but sometimes you don't really
         have enough room to describe everything you'd like
-      </sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>
+      </td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">
         Jamie is a kind girl but sometimes you don't really
         have enough room to describe everything you'd like
-      </sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell>
+      </td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"\">
         Jill is an alright girl but sometimes you don't really
         have enough room to describe everything you'd like
-      </sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+      </td></tr></tbody></table>"
 ```
 
 ##     `Stacking`
@@ -268,7 +268,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-table unstackable=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell text-align=\"right\">Description</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell text-align=\"right\">None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell text-align=\"right\">Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell text-align=\"right\">None</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table stackable=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell text-align=\"right\">Description</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell text-align=\"right\">None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell text-align=\"right\">Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell text-align=\"right\">None</sui-table-cell></sui-table-row></sui-table-body></sui-table></div>"
+"<div><table class=\"ui unstackable table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"right aligned\">Description</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"right aligned\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"right aligned\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"right aligned\">None</td></tr></tbody></table> <table class=\"ui tablet stackable table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"right aligned\">Description</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"right aligned\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"right aligned\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"right aligned\">None</td></tr></tbody></table></div>"
 ```
 
 ##     `Selectable Row`
@@ -276,7 +276,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table selectable=\"\" celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>No Action</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row state=\"warning\"><sui-table-cell>John</sui-table-cell> <sui-table-cell>No Action</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell positive=\"\">Approved</sui-table-cell> <sui-table-cell state=\"warning\">Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell negative=\"\">Denied</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui celled selectable table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">No Action</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"\">None</td></tr> <tr class=\"warning\"><td class=\"\">John</td> <td class=\"\">No Action</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"positive\">Approved</td> <td class=\"warning\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"negative\">Denied</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##     `Selectable Cell`
@@ -284,7 +284,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Edit</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>No Action</sui-table-cell> <sui-table-cell selectable=\"\"><a href=\"#\">Edit</a></sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell selectable=\"\"><a href=\"#\">Edit</a></sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell selectable=\"\"><a href=\"#\">Edit</a></sui-table-cell></sui-table-row> <sui-table-row state=\"warning\"><sui-table-cell>John</sui-table-cell> <sui-table-cell>No Action</sui-table-cell> <sui-table-cell selectable=\"\"><a href=\"#\">Requires change</a></sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell positive=\"\">Approved</sui-table-cell> <sui-table-cell positive=\"\" selectable=\"\"><a href=\"#\">Approve</a></sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell negative=\"\">Denied</sui-table-cell> <sui-table-cell selectable=\"\" negative=\"\"><a href=\"#\">Remove</a></sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Edit</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">No Action</td> <td class=\"selectable\"><a href=\"#\">Edit</a></td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"selectable\"><a href=\"#\">Edit</a></td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"selectable\"><a href=\"#\">Edit</a></td></tr> <tr class=\"warning\"><td class=\"\">John</td> <td class=\"\">No Action</td> <td class=\"selectable\"><a href=\"#\">Requires change</a></td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"positive\">Approved</td> <td class=\"positive selectable\"><a href=\"#\">Approve</a></td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"negative\">Denied</td> <td class=\"negative selectable\"><a href=\"#\">Remove</a></td></tr></tbody></table>"
 ```
 
 ##     `Vertical Alignment`
@@ -292,13 +292,13 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table striped=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row vertical-align=\"top\"><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell vertical-align=\"top\">
+"<table class=\"ui striped table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"top aligned\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"top aligned\">
         Notes<br>
         1<br>
-        2<br></sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell vertical-align=\"bottom\">Approved</sui-table-cell> <sui-table-cell>
+        2<br></td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"bottom aligned\">Approved</td> <td class=\"\">
         Notes<br>
         1<br>
-        2<br></sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+        2<br></td></tr></tbody></table>"
 ```
 
 ##     `Text Alignment`
@@ -306,7 +306,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table striped=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell text-align=\"right\">Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row text-align=\"center\"><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell text-align=\"right\">None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell text-align=\"right\">Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell text-align=\"right\">None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui striped table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"right aligned\">Notes</th></tr></thead> <tbody><tr class=\"center aligned\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"right aligned\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"right aligned\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"right aligned\">None</td></tr></tbody></table>"
 ```
 
 ##     `Striped`
@@ -314,7 +314,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table striped=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Date Joined</sui-table-header-cell> <sui-table-header-cell>E-mail</sui-table-header-cell> <sui-table-header-cell>Called</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John Lilki</sui-table-cell> <sui-table-cell>September 14, 2013</sui-table-cell> <sui-table-cell>jhlilk22@yahoo.com</sui-table-cell> <sui-table-cell>No</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie Harington</sui-table-cell> <sui-table-cell>January 11, 2014</sui-table-cell> <sui-table-cell>jamieharingonton@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill Lewis</sui-table-cell> <sui-table-cell>May 11, 2014</sui-table-cell> <sui-table-cell>jilsewris22@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John Lilki</sui-table-cell> <sui-table-cell>September 14, 2013</sui-table-cell> <sui-table-cell>jhlilk22@yahoo.com</sui-table-cell> <sui-table-cell>No</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John Lilki</sui-table-cell> <sui-table-cell>September 14, 2013</sui-table-cell> <sui-table-cell>jhlilk22@yahoo.com</sui-table-cell> <sui-table-cell>No</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie Harington</sui-table-cell> <sui-table-cell>January 11, 2014</sui-table-cell> <sui-table-cell>jamieharingonton@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill Lewis</sui-table-cell> <sui-table-cell>May 11, 2014</sui-table-cell> <sui-table-cell>jilsewris22@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John Lilki</sui-table-cell> <sui-table-cell>September 14, 2013</sui-table-cell> <sui-table-cell>jhlilk22@yahoo.com</sui-table-cell> <sui-table-cell>No</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui striped table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Date Joined</th> <th class=\"\">E-mail</th> <th class=\"\">Called</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr> <tr class=\"\"><td class=\"\">Jamie Harington</td> <td class=\"\">January 11, 2014</td> <td class=\"\">jamieharingonton@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"\">Jill Lewis</td> <td class=\"\">May 11, 2014</td> <td class=\"\">jilsewris22@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr> <tr class=\"\"><td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr> <tr class=\"\"><td class=\"\">Jamie Harington</td> <td class=\"\">January 11, 2014</td> <td class=\"\">jamieharingonton@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"\">Jill Lewis</td> <td class=\"\">May 11, 2014</td> <td class=\"\">jilsewris22@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr></tbody></table>"
 ```
 
 ##     `Celled`
@@ -322,7 +322,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table celled=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body> <sui-table-footer><sui-table-header-cell>3 People</sui-table-header-cell> <sui-table-header-cell>2 Approved</sui-table-header-cell> <sui-table-header-cell></sui-table-header-cell></sui-table-footer></sui-table>"
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"\">None</td></tr></tbody> <tfoot class=\"\"><th class=\"\">3 People</th> <th class=\"\">2 Approved</th> <th class=\"\"></th></tfoot></table>"
 ```
 
 ##     `Basic`
@@ -330,7 +330,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table basic=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui basic table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##     `Collapsing Cell`
@@ -338,13 +338,13 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table><sui-table-body><sui-table-row><sui-table-cell collapsing=\"\"><sui-icon name=\"folder\"></sui-icon>
+"<table class=\"ui table\"><tbody><tr class=\"\"><td class=\"collapsing\"><i class=\"folder icon\"></i>
         node_modules
-      </sui-table-cell> <sui-table-cell>Initial commit</sui-table-cell> <sui-table-cell>10 hours ago</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell><sui-icon name=\"folder\"></sui-icon>
+      </td> <td class=\"\">Initial commit</td> <td class=\"\">10 hours ago</td></tr> <tr class=\"\"><td class=\"\"><i class=\"folder icon\"></i>
         test
-      </sui-table-cell> <sui-table-cell>Initial commit</sui-table-cell> <sui-table-cell>10 hours ago</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell><sui-icon name=\"folder\"></sui-icon>
+      </td> <td class=\"\">Initial commit</td> <td class=\"\">10 hours ago</td></tr> <tr class=\"\"><td class=\"\"><i class=\"folder icon\"></i>
         test
-      </sui-table-cell> <sui-table-cell>Initial commit</sui-table-cell> <sui-table-cell>10 hours ago</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+      </td> <td class=\"\">Initial commit</td> <td class=\"\">10 hours ago</td></tr></tbody></table>"
 ```
 
 ##     `Column Width`
@@ -352,7 +352,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table><sui-table-header><sui-table-row><sui-table-header-cell width=\"10\">Name</sui-table-header-cell> <sui-table-header-cell width=\"6\">Status</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell></sui-table-row></sui-table-body> <sui-table-footer><sui-table-header-cell>3 People</sui-table-header-cell> <sui-table-header-cell>2 Approved</sui-table-header-cell></sui-table-footer></sui-table>"
+"<table class=\"ui table\"><thead class=\"\"><tr class=\"\"><th class=\"ten wide\">Name</th> <th class=\"six wide\">Status</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td></tr></tbody> <tfoot class=\"\"><th class=\"\">3 People</th> <th class=\"\">2 Approved</th></tfoot></table>"
 ```
 
 ##     `Column Count`
@@ -360,7 +360,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table columns=\"5\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Age</sui-table-header-cell> <sui-table-header-cell>Gender</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>22</sui-table-cell> <sui-table-cell>Male</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>32</sui-table-cell> <sui-table-cell>Male</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Denied</sui-table-cell> <sui-table-cell>22</sui-table-cell> <sui-table-cell>Female</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body> <sui-table-footer><sui-table-header-cell>3 People</sui-table-header-cell> <sui-table-header-cell>2 Approved</sui-table-header-cell> <sui-table-header-cell></sui-table-header-cell> <sui-table-header-cell></sui-table-header-cell> <sui-table-header-cell></sui-table-header-cell></sui-table-footer></sui-table>"
+"<table class=\"ui five column table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Age</th> <th class=\"\">Gender</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">22</td> <td class=\"\">Male</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">32</td> <td class=\"\">Male</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Denied</td> <td class=\"\">22</td> <td class=\"\">Female</td> <td class=\"\">None</td></tr></tbody> <tfoot class=\"\"><th class=\"\">3 People</th> <th class=\"\">2 Approved</th> <th class=\"\"></th> <th class=\"\"></th> <th class=\"\"></th></tfoot></table>"
 ```
 
 ##     `Collapsing`
@@ -368,7 +368,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table collapsing=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Selected</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jill</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body> <sui-table-footer><sui-table-header-cell>3 People</sui-table-header-cell> <sui-table-header-cell>2 Approved</sui-table-header-cell> <sui-table-header-cell></sui-table-header-cell></sui-table-footer></sui-table>"
+"<table class=\"ui collapsing table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Selected</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody> <tfoot class=\"\"><th class=\"\">3 People</th> <th class=\"\">2 Approved</th> <th class=\"\"></th></tfoot></table>"
 ```
 
 ##     `Colored`
@@ -376,7 +376,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-container><sui-table color=\"red\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"orange\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"yellow\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"olive\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"green\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"teal\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"blue\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"violet\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"purple\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"pink\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"grey\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"black\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table></sui-container>"
+"<div class=\"ui container\"><table class=\"ui red table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui orange table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui yellow table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui olive table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui green table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui teal table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui blue table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui violet table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui purple table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui pink table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui grey table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui black table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table></div>"
 ```
 
 ##     `Inverted`
@@ -384,7 +384,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-container><sui-table inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"red\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"orange\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"yellow\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"olive\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"green\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"teal\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"blue\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"violet\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"purple\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"pink\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"grey\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table> <sui-table color=\"black\" inverted=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Food</sui-table-header-cell> <sui-table-header-cell>Calories</sui-table-header-cell> <sui-table-header-cell>Protein</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>Apples</sui-table-cell> <sui-table-cell>200</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Orange</sui-table-cell> <sui-table-cell>310</sui-table-cell> <sui-table-cell>0g</sui-table-cell></sui-table-row></sui-table-body></sui-table></sui-container>"
+"<div class=\"ui container\"><table class=\"ui inverted table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted red table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted orange table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted yellow table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted olive table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted green table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted teal table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted blue table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted violet table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted purple table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted pink table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted grey table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table> <table class=\"ui inverted black table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Food</th> <th class=\"\">Calories</th> <th class=\"\">Protein</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Apples</td> <td class=\"\">200</td> <td class=\"\">0g</td></tr> <tr class=\"\"><td class=\"\">Orange</td> <td class=\"\">310</td> <td class=\"\">0g</td></tr></tbody></table></div>"
 ```
 
 ##     `Full-Width Header / Footer`
@@ -392,12 +392,12 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table compact=\"\" celled=\"\" definition=\"\"><sui-table-header full-width=\"\"><sui-table-row><sui-table-header-cell></sui-table-header-cell> <sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Registration Date</sui-table-header-cell> <sui-table-header-cell>E-mail address</sui-table-header-cell> <sui-table-header-cell>Premium Plan</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell collapsing=\"\"><sui-checkbox toggle=\"\"></sui-checkbox></sui-table-cell> <sui-table-cell>John Lilki</sui-table-cell> <sui-table-cell>September 14, 2013</sui-table-cell> <sui-table-cell>jhlilk22@yahoo.com</sui-table-cell> <sui-table-cell>No</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell class=\"collapsing\"><sui-checkbox toggle=\"\"></sui-checkbox></sui-table-cell> <sui-table-cell>Jamie Harington</sui-table-cell> <sui-table-cell>January 11, 2014</sui-table-cell> <sui-table-cell>jamieharingonton@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell collapsing=\"\"><sui-checkbox toggle=\"\"></sui-checkbox></sui-table-cell> <sui-table-cell>Jill Lewis</sui-table-cell> <sui-table-cell>May 11, 2014</sui-table-cell> <sui-table-cell>jilsewris22@yahoo.com</sui-table-cell> <sui-table-cell>Yes</sui-table-cell></sui-table-row></sui-table-body> <sui-table-footer full-width=\"\"><sui-table-row><sui-table-header-cell></sui-table-header-cell> <sui-table-header-cell colspan=\"4\"><sui-button floated=\"right\" size=\"small\" primary=\"\" labeled=\"\"><sui-icon name=\"user\"></sui-icon> Add User
-        </sui-button> <sui-button size=\"small\">
+"<table class=\"ui celled compact definition table\"><thead class=\"full-width\"><tr class=\"\"><th class=\"\"></th> <th class=\"\">Name</th> <th class=\"\">Registration Date</th> <th class=\"\">E-mail address</th> <th class=\"\">Premium Plan</th></tr></thead> <tbody><tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr> <tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">Jamie Harington</td> <td class=\"\">January 11, 2014</td> <td class=\"\">jamieharingonton@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">Jill Lewis</td> <td class=\"\">May 11, 2014</td> <td class=\"\">jilsewris22@yahoo.com</td> <td class=\"\">Yes</td></tr></tbody> <tfoot class=\"full-width\"><tr class=\"\"><th class=\"\"></th> <th class=\"\" colspan=\"4\"><button role=\"button\" class=\"ui right floated primary small button\" labeled=\"\"><i class=\"user icon\"></i> Add User
+        </button> <button role=\"button\" class=\"ui small button\">
           Approve
-        </sui-button> <sui-button size=\"small\" disabled=\"\">
+        </button> <button role=\"button\" class=\"ui disabled small button\">
           Approve All
-        </sui-button></sui-table-header-cell></sui-table-row></sui-table-footer></sui-table>"
+        </button></th></tr></tfoot></table>"
 ```
 
 ##     `Padded`
@@ -405,12 +405,12 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table padded=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>
+"<table class=\"ui padded table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">
         He is a very nice guy and I enjoyed talking to
         him on the telephone. I hope we get to talk again.
-      </sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>
+      </td></tr> <tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">
         Jamie was not interested in purchasing our product.
-      </sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+      </td></tr></tbody></table>"
 ```
 
 ##     `Compact`
@@ -418,7 +418,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table compact=\"\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row></sui-table-body></sui-table>"
+"<table class=\"ui compact table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr></tbody></table>"
 ```
 
 ##     `Size`
@@ -426,7 +426,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-table size=\"small\"><sui-table-header><sui-table-row><sui-table-header-cell>Name</sui-table-header-cell> <sui-table-header-cell>Status</sui-table-header-cell> <sui-table-header-cell>Notes</sui-table-header-cell></sui-table-row></sui-table-header> <sui-table-body><sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>Jamie</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>Requires call</sui-table-cell></sui-table-row> <sui-table-row><sui-table-cell>John</sui-table-cell> <sui-table-cell>Approved</sui-table-cell> <sui-table-cell>None</sui-table-cell></sui-table-row></sui-table-body> <sui-table-footer><sui-table-header-cell>3 People</sui-table-header-cell> <sui-table-header-cell>2 Approved</sui-table-header-cell> <sui-table-header-cell></sui-table-header-cell></sui-table-footer></sui-table>"
+"<table class=\"ui small table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\">John</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody> <tfoot class=\"\"><th class=\"\">3 People</th> <th class=\"\">2 Approved</th> <th class=\"\"></th></tfoot></table>"
 ```
 
 ## `ButtonExample`
@@ -438,7 +438,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button>Click Here</sui-button> <sui-button content=\"Content as a prop\"></sui-button> <sui-button>This is a div</sui-button></div>"
+"<div><button role=\"button\" class=\"ui button\">Click Here</button> <button role=\"button\" class=\"ui button\">Content as a prop</button> <div role=\"button\" class=\"ui button\">This is a div</div></div>"
 ```
 
 ##     `Emphasis`
@@ -446,7 +446,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button primary=\"\">Primary</sui-button> <sui-button secondary=\"\">Secondary</sui-button></div>"
+"<div><button role=\"button\" class=\"ui primary button\">Primary</button> <button role=\"button\" class=\"ui secondary button\">Secondary</button></div>"
 ```
 
 ##     `Animated`
@@ -454,11 +454,11 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button animated=\"\"><sui-button-content visible=\"\">Next</sui-button-content> <sui-button-content hidden=\"\"><sui-icon name=\"right arrow\"></sui-icon></sui-button-content></sui-button> <sui-button animated=\"vertical\"><sui-button-content hidden=\"\">Shop</sui-button-content> <sui-button-content visible=\"\"><sui-icon name=\"shop\"></sui-icon></sui-button-content></sui-button> <sui-button animated=\"fade\"><sui-button-content visible=\"\">
+"<div><button role=\"button\" class=\"ui animated button\"><div class=\"visible content\">Next</div> <div class=\"hidden content\"><i class=\"right arrow icon\"></i></div></button> <button role=\"button\" class=\"ui vertical animated button\"><div class=\"hidden content\">Shop</div> <div class=\"visible content\"><i class=\"shop icon\"></i></div></button> <button role=\"button\" class=\"ui fade animated button\"><div class=\"visible content\">
       Sign-up for a Pro account
-    </sui-button-content> <sui-button-content hidden=\"\">
+    </div> <div class=\"hidden content\">
       $12.99 a month
-    </sui-button-content></sui-button></div>"
+    </div></button></div>"
 ```
 
 ##     `Labeled`
@@ -466,9 +466,9 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button content=\"Like\" icon=\"heart\"><sui-label slot=\"label\" basic=\"\">2,048</sui-label></sui-button> <sui-button content=\"Like\" icon=\"heart\" label-position=\"left\"><sui-label slot=\"label\" basic=\"\" pointing=\"right\">
+"<div><div class=\"ui labeled button\"><button role=\"button\" class=\"ui button\"><i class=\"heart icon\"></i>Like</button><a class=\"ui basic label\">2,048</a></div> <div class=\"ui left labeled button\"><a class=\"ui right pointing basic label\">
       2,048
-    </sui-label></sui-button> <sui-button icon=\"fork\" label-position=\"left\"><sui-label slot=\"label\" basic=\"\">1,048</sui-label></sui-button></div>"
+    </a><button role=\"button\" class=\"ui button\"><i class=\"heart icon\"></i>Like</button></div> <div class=\"ui left labeled button\"><a class=\"ui basic label\">1,048</a><button role=\"button\" class=\"ui icon button\"><i class=\"fork icon\"></i></button></div></div>"
 ```
 
 ##     `Icon`
@@ -476,7 +476,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button icon=\"cloud\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui icon button\"><i class=\"cloud icon\"></i></button></div>"
 ```
 
 ##     `LabeledIcon`
@@ -484,7 +484,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button content=\"Pause\" icon=\"pause\" label-position=\"left\"></sui-button> <sui-button content=\"Next\" icon=\"right arrow\" label-position=\"right\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui icon left labeled button\"><i class=\"pause icon\"></i>Pause</button> <button role=\"button\" class=\"ui icon right labeled button\"><i class=\"right arrow icon\"></i>Next</button></div>"
 ```
 
 ##     `Basic`
@@ -492,7 +492,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button basic=\"\" content=\"Add Friend\" icon=\"user\"></sui-button>"
+"<button role=\"button\" class=\"ui basic button\"><i class=\"user icon\"></i>Add Friend</button>"
 ```
 
 ##     `Inverted`
@@ -500,7 +500,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment inverted=\"\"><sui-button color=\"red\" inverted=\"\">Red</sui-button> <sui-button color=\"orange\" inverted=\"\">Orange</sui-button> <sui-button color=\"yellow\" inverted=\"\">Yellow</sui-button> <sui-button color=\"olive\" inverted=\"\">Olive</sui-button> <sui-button color=\"green\" inverted=\"\">Green</sui-button> <sui-button color=\"teal\" inverted=\"\">Teal</sui-button> <sui-button color=\"blue\" inverted=\"\">Blue</sui-button> <sui-button color=\"violet\" inverted=\"\">Violet</sui-button> <sui-button color=\"purple\" inverted=\"\">Purple</sui-button> <sui-button color=\"pink\" inverted=\"\">Pink</sui-button> <sui-button color=\"brown\" inverted=\"\">Brown</sui-button> <sui-button color=\"grey\" inverted=\"\">Grey</sui-button> <sui-button color=\"black\" inverted=\"\">Black</sui-button></sui-segment>"
+"<div class=\"ui inverted segment\"><button role=\"button\" class=\"ui red inverted button\">Red</button> <button role=\"button\" class=\"ui orange inverted button\">Orange</button> <button role=\"button\" class=\"ui yellow inverted button\">Yellow</button> <button role=\"button\" class=\"ui olive inverted button\">Olive</button> <button role=\"button\" class=\"ui green inverted button\">Green</button> <button role=\"button\" class=\"ui teal inverted button\">Teal</button> <button role=\"button\" class=\"ui blue inverted button\">Blue</button> <button role=\"button\" class=\"ui violet inverted button\">Violet</button> <button role=\"button\" class=\"ui purple inverted button\">Purple</button> <button role=\"button\" class=\"ui pink inverted button\">Pink</button> <button role=\"button\" class=\"ui brown inverted button\">Brown</button> <button role=\"button\" class=\"ui grey inverted button\">Grey</button> <button role=\"button\" class=\"ui black inverted button\">Black</button></div>"
 ```
 
 ##   `Groups`
@@ -510,7 +510,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button-group><sui-button>One</sui-button> <sui-button>Two</sui-button> <sui-button>Three</sui-button></sui-button-group>"
+"<div class=\"ui buttons\"><button role=\"button\" class=\"ui button\">One</button> <button role=\"button\" class=\"ui button\">Two</button> <button role=\"button\" class=\"ui button\">Three</button></div>"
 ```
 
 ##     `IconButtons`
@@ -518,7 +518,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button-group><sui-button icon=\"align left\"></sui-button> <sui-button icon=\"align center\"></sui-button> <sui-button icon=\"align right\"></sui-button> <sui-button icon=\"align justify\"></sui-button></sui-button-group> <sui-button-group><sui-button icon=\"bold\"></sui-button> <sui-button icon=\"underline\"></sui-button> <sui-button icon=\"text width\"></sui-button></sui-button-group></div>"
+"<div><div class=\"ui buttons\"><button role=\"button\" class=\"ui icon button\"><i class=\"align left icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"align center icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"align right icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"align justify icon\"></i></button></div> <div class=\"ui buttons\"><button role=\"button\" class=\"ui icon button\"><i class=\"bold icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"underline icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"text width icon\"></i></button></div></div>"
 ```
 
 ##   `Content`
@@ -528,7 +528,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button-group><sui-button>Cancel</sui-button> <sui-button-or></sui-button-or> <sui-button positive=\"\">Save</sui-button></sui-button-group>"
+"<div class=\"ui buttons\"><button role=\"button\" class=\"ui button\">Cancel</button> <div class=\"or\"></div> <button role=\"button\" class=\"ui positive button\">Save</button></div>"
 ```
 
 ##   `States`
@@ -538,7 +538,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button active=\"\" content=\"Follow\" icon=\"user\"></sui-button>"
+"<button role=\"button\" class=\"ui active button\"><i class=\"user icon\"></i>Follow</button>"
 ```
 
 ##     `Disabled`
@@ -546,7 +546,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button disabled=\"\" content=\"Followed\" icon=\"user\"></sui-button>"
+"<button role=\"button\" class=\"ui disabled button\"><i class=\"user icon\"></i>Followed</button>"
 ```
 
 ##     `Loading`
@@ -554,7 +554,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button loading=\"\" content=\"Loading\"></sui-button> <sui-button loading=\"\" basic=\"\" content=\"Loading\"></sui-button> <sui-button loading=\"\" primary=\"\" content=\"Loading\"></sui-button> <sui-button loading=\"\" secondary=\"\" content=\"Loading\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui loading button\">Loading</button> <button role=\"button\" class=\"ui basic loading button\">Loading</button> <button role=\"button\" class=\"ui loading primary button\">Loading</button> <button role=\"button\" class=\"ui loading secondary button\">Loading</button></div>"
 ```
 
 ##   `Variations`
@@ -564,7 +564,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button social=\"facebook\" content=\"Facebook\" icon=\"facebook\"></sui-button> <sui-button social=\"twitter\" content=\"Twitter\" icon=\"twitter\"></sui-button> <sui-button social=\"google\" content=\"Google\" icon=\"google\"></sui-button> <sui-button social=\"vk\" content=\"VK\" icon=\"vk\"></sui-button> <sui-button social=\"linkedin\" content=\"LinkedIn\" icon=\"linkedin\"></sui-button> <sui-button social=\"instagram\" content=\"Instagram\" icon=\"instagram\"></sui-button> <sui-button social=\"youtube\" content=\"Youtube\" icon=\"youtube\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui facebook button\"><i class=\"facebook icon\"></i>Facebook</button> <button role=\"button\" class=\"ui twitter button\"><i class=\"twitter icon\"></i>Twitter</button> <button role=\"button\" class=\"ui google button\"><i class=\"google icon\"></i>Google</button> <button role=\"button\" class=\"ui vk button\"><i class=\"vk icon\"></i>VK</button> <button role=\"button\" class=\"ui linkedin button\"><i class=\"linkedin icon\"></i>LinkedIn</button> <button role=\"button\" class=\"ui instagram button\"><i class=\"instagram icon\"></i>Instagram</button> <button role=\"button\" class=\"ui youtube button\"><i class=\"youtube icon\"></i>Youtube</button></div>"
 ```
 
 ##     `Size`
@@ -572,7 +572,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button size=\"mini\" content=\"Mini\"></sui-button> <sui-button size=\"tiny\" content=\"Tiny\"></sui-button> <sui-button size=\"small\" content=\"Small\"></sui-button> <sui-button size=\"medium\" content=\"Medium\"></sui-button> <sui-button size=\"large\" content=\"Large\"></sui-button> <sui-button size=\"big\" content=\"Big\"></sui-button> <sui-button size=\"huge\" content=\"Huge\"></sui-button> <sui-button size=\"massive\" content=\"Massive\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui mini button\">Mini</button> <button role=\"button\" class=\"ui tiny button\">Tiny</button> <button role=\"button\" class=\"ui small button\">Small</button> <button role=\"button\" class=\"ui medium button\">Medium</button> <button role=\"button\" class=\"ui large button\">Large</button> <button role=\"button\" class=\"ui big button\">Big</button> <button role=\"button\" class=\"ui huge button\">Huge</button> <button role=\"button\" class=\"ui massive button\">Massive</button></div>"
 ```
 
 ##     `Floated`
@@ -580,7 +580,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button floated=\"left\" content=\"Left floated\"></sui-button> <sui-button floated=\"right\" content=\"Right floated\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui left floated button\">Left floated</button> <button role=\"button\" class=\"ui right floated button\">Right floated</button></div>"
 ```
 
 ##     `Colored`
@@ -588,7 +588,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button color=\"red\" content=\"Red\"></sui-button> <sui-button color=\"orange\" content=\"Orange\"></sui-button> <sui-button color=\"yellow\" content=\"Yellow\"></sui-button> <sui-button color=\"olive\" content=\"Olive\"></sui-button> <sui-button color=\"green\" content=\"Green\"></sui-button> <sui-button color=\"teal\" content=\"Teal\"></sui-button> <sui-button color=\"blue\" content=\"Blue\"></sui-button> <sui-button color=\"violet\" content=\"Violet\"></sui-button> <sui-button color=\"purple\" content=\"Purple\"></sui-button> <sui-button color=\"pink\" content=\"Pink\"></sui-button> <sui-button color=\"brown\" content=\"Brown\"></sui-button> <sui-button color=\"grey\" content=\"Grey\"></sui-button> <sui-button color=\"black\" content=\"Black\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui red button\">Red</button> <button role=\"button\" class=\"ui orange button\">Orange</button> <button role=\"button\" class=\"ui yellow button\">Yellow</button> <button role=\"button\" class=\"ui olive button\">Olive</button> <button role=\"button\" class=\"ui green button\">Green</button> <button role=\"button\" class=\"ui teal button\">Teal</button> <button role=\"button\" class=\"ui blue button\">Blue</button> <button role=\"button\" class=\"ui violet button\">Violet</button> <button role=\"button\" class=\"ui purple button\">Purple</button> <button role=\"button\" class=\"ui pink button\">Pink</button> <button role=\"button\" class=\"ui brown button\">Brown</button> <button role=\"button\" class=\"ui grey button\">Grey</button> <button role=\"button\" class=\"ui black button\">Black</button></div>"
 ```
 
 ##     `Compact`
@@ -596,7 +596,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button compact=\"\" content=\"Hold\"></sui-button> <sui-button compact=\"\" icon=\"pause\"></sui-button> <sui-button compact=\"\" icon=\"pause\" label-position=\"left\" content=\"Pause\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui compact button\">Hold</button> <button role=\"button\" class=\"ui compact icon button\"><i class=\"pause icon\"></i></button> <button role=\"button\" class=\"ui compact icon left labeled button\"><i class=\"pause icon\"></i>Pause</button></div>"
 ```
 
 ##     `Positive`
@@ -604,7 +604,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button positive=\"\" content=\"Positive Button\"></sui-button>"
+"<button role=\"button\" class=\"ui positive button\">Positive Button</button>"
 ```
 
 ##     `Negative`
@@ -612,7 +612,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button negative=\"\" content=\"Negative Button\"></sui-button>"
+"<button role=\"button\" class=\"ui negative button\">Negative Button</button>"
 ```
 
 ##     `Fluid`
@@ -620,7 +620,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button fluid=\"\" content=\"Fits container\"></sui-button>"
+"<button role=\"button\" class=\"ui fluid button\">Fits container</button>"
 ```
 
 ##     `Circular`
@@ -628,7 +628,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button circular=\"\" icon=\"settings\"></sui-button>"
+"<button role=\"button\" class=\"ui circular icon button\"><i class=\"settings icon\"></i></button>"
 ```
 
 ##     `CircularSocial`
@@ -636,7 +636,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button circular=\"\" social=\"facebook\" icon=\"facebook\"></sui-button> <sui-button circular=\"\" social=\"twitter\" icon=\"twitter\"></sui-button> <sui-button circular=\"\" social=\"linkedin\" icon=\"linkedin\"></sui-button> <sui-button circular=\"\" social=\"google plus\" icon=\"google plus\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui circular icon facebook button\"><i class=\"facebook icon\"></i></button> <button role=\"button\" class=\"ui circular icon twitter button\"><i class=\"twitter icon\"></i></button> <button role=\"button\" class=\"ui circular icon linkedin button\"><i class=\"linkedin icon\"></i></button> <button role=\"button\" class=\"ui circular icon google plus button\"><i class=\"google plus icon\"></i></button></div>"
 ```
 
 ##     `Vertically Attached`
@@ -644,7 +644,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button attached=\"top\" content=\"Top\"></sui-button> <sui-segment attached=\"\"><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-segment> <sui-button attached=\"bottom\" content=\"Bottom\"></sui-button></div>"
+"<div><div role=\"button\" class=\"ui top attached button\">Top</div> <div class=\"ui attached segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div> <div role=\"button\" class=\"ui bottom attached button\">Bottom</div></div>"
 ```
 
 ##     `Horizontally Attached`
@@ -652,7 +652,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button attached=\"left\" content=\"Left\"></sui-button> <sui-button attached=\"right\" content=\"Right\"></sui-button></div>"
+"<div><button role=\"button\" class=\"ui left attached button\">Left</button> <button role=\"button\" class=\"ui right attached button\">Right</button></div>"
 ```
 
 ##   `Group Variations`
@@ -662,7 +662,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button-group vertical=\"\"><sui-button>Feed</sui-button> <sui-button>Messages</sui-button> <sui-button>Events</sui-button> <sui-button>Photos</sui-button></sui-button-group>"
+"<div class=\"ui vertical buttons\"><button role=\"button\" class=\"ui button\">Feed</button> <button role=\"button\" class=\"ui button\">Messages</button> <button role=\"button\" class=\"ui button\">Events</button> <button role=\"button\" class=\"ui button\">Photos</button></div>"
 ```
 
 ##     `Icon Buttons`
@@ -670,7 +670,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button-group icons=\"\"><sui-button icon=\"play\"></sui-button> <sui-button icon=\"pause\"></sui-button> <sui-button icon=\"stop\"></sui-button></sui-button-group>"
+"<div class=\"ui icon buttons\"><button role=\"button\" class=\"ui icon button\"><i class=\"play icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"pause icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"stop icon\"></i></button></div>"
 ```
 
 ##     `Labeled Icon Buttons`
@@ -678,7 +678,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button-group vertical=\"\" labeled=\"\" icons=\"\"><sui-button icon=\"pause\" label-position=\"left\" content=\"Pause\"></sui-button> <sui-button icon=\"play\" label-position=\"left\" content=\"Play\"></sui-button> <sui-button icon=\"shuffle\" label-position=\"left\" content=\"Shuffle\"></sui-button></sui-button-group>"
+"<div class=\"ui vertical labeled icon buttons\"><button role=\"button\" class=\"ui icon left labeled button\"><i class=\"pause icon\"></i>Pause</button> <button role=\"button\" class=\"ui icon left labeled button\"><i class=\"play icon\"></i>Play</button> <button role=\"button\" class=\"ui icon left labeled button\"><i class=\"shuffle icon\"></i>Shuffle</button></div>"
 ```
 
 ##     `Mixed Group`
@@ -686,7 +686,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button-group><sui-button icon=\"left chevron\" label-position=\"left\" content=\"Back\"></sui-button> <sui-button icon=\"stop\" content=\"Stop\"></sui-button> <sui-button icon=\"right chevron\" label-position=\"right\" content=\"Foward\"></sui-button></sui-button-group>"
+"<div class=\"ui buttons\"><button role=\"button\" class=\"ui icon left labeled button\"><i class=\"left chevron icon\"></i>Back</button> <button role=\"button\" class=\"ui button\"><i class=\"stop icon\"></i>Stop</button> <button role=\"button\" class=\"ui icon right labeled button\"><i class=\"right chevron icon\"></i>Foward</button></div>"
 ```
 
 ##     `Equal Width`
@@ -694,7 +694,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button-group widths=\"5\"><sui-button content=\"Overview\"></sui-button> <sui-button content=\"Specs\"></sui-button> <sui-button content=\"Warranty\"></sui-button> <sui-button content=\"Reviews\"></sui-button> <sui-button content=\"Support\"></sui-button></sui-button-group> <sui-button-group widths=\"3\"><sui-button content=\"Overview\"></sui-button> <sui-button content=\"Specs\"></sui-button> <sui-button content=\"Support\"></sui-button></sui-button-group></div>"
+"<div><div class=\"ui five buttons\"><button role=\"button\" class=\"ui button\">Overview</button> <button role=\"button\" class=\"ui button\">Specs</button> <button role=\"button\" class=\"ui button\">Warranty</button> <button role=\"button\" class=\"ui button\">Reviews</button> <button role=\"button\" class=\"ui button\">Support</button></div> <div class=\"ui three buttons\"><button role=\"button\" class=\"ui button\">Overview</button> <button role=\"button\" class=\"ui button\">Specs</button> <button role=\"button\" class=\"ui button\">Support</button></div></div>"
 ```
 
 ##     `Colored Buttons`
@@ -702,7 +702,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-button-group color=\"blue\"><sui-button content=\"One\"></sui-button> <sui-button content=\"Two\"></sui-button> <sui-button content=\"Three\"></sui-button></sui-button-group>"
+"<div class=\"ui blue buttons\"><button role=\"button\" class=\"ui button\">One</button> <button role=\"button\" class=\"ui button\">Two</button> <button role=\"button\" class=\"ui button\">Three</button></div>"
 ```
 
 ##     `Basic Buttons`
@@ -710,7 +710,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button-group basic=\"\"><sui-button content=\"One\"></sui-button> <sui-button content=\"Two\"></sui-button> <sui-button content=\"Three\"></sui-button></sui-button-group> <sui-divider></sui-divider> <sui-button-group vertical=\"\" basic=\"\"><sui-button content=\"One\"></sui-button> <sui-button content=\"Two\"></sui-button> <sui-button content=\"Three\"></sui-button></sui-button-group></div>"
+"<div><div class=\"ui basic buttons\"><button role=\"button\" class=\"ui button\">One</button> <button role=\"button\" class=\"ui button\">Two</button> <button role=\"button\" class=\"ui button\">Three</button></div> <div class=\"ui divider\"></div> <div class=\"ui vertical basic buttons\"><button role=\"button\" class=\"ui button\">One</button> <button role=\"button\" class=\"ui button\">Two</button> <button role=\"button\" class=\"ui button\">Three</button></div></div>"
 ```
 
 ##     `Group Sizes`
@@ -718,7 +718,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button-group size=\"large\"><sui-button content=\"One\"></sui-button> <sui-button content=\"Two\"></sui-button> <sui-button content=\"Three\"></sui-button></sui-button-group> <sui-divider></sui-divider> <sui-button-group icons=\"\" size=\"small\"><sui-button icon=\"file\"></sui-button> <sui-button icon=\"save\"></sui-button> <sui-button icon=\"upload\"></sui-button> <sui-button icon=\"download\"></sui-button></sui-button-group> <sui-divider></sui-divider> <sui-button-group size=\"large\"><sui-button content=\"One\"></sui-button> <sui-button-or></sui-button-or> <sui-button content=\"Two\"></sui-button></sui-button-group></div>"
+"<div><div class=\"ui large buttons\"><button role=\"button\" class=\"ui button\">One</button> <button role=\"button\" class=\"ui button\">Two</button> <button role=\"button\" class=\"ui button\">Three</button></div> <div class=\"ui divider\"></div> <div class=\"ui small icon buttons\"><button role=\"button\" class=\"ui icon button\"><i class=\"file icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"save icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"upload icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"download icon\"></i></button></div> <div class=\"ui divider\"></div> <div class=\"ui large buttons\"><button role=\"button\" class=\"ui button\">One</button> <div class=\"or\"></div> <button role=\"button\" class=\"ui button\">Two</button></div></div>"
 ```
 
 ## `ContainerExample`
@@ -730,7 +730,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-container>
+"<div class=\"ui container\">
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
   ligula eget dolor. Aenean massa <b>strong</b>. Cum sociis natoque penatibus
   et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
@@ -744,7 +744,7 @@
   feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
   Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
   ullamcorper ultricies nisi.
-</sui-container>"
+</div>"
 ```
 
 ##     `Text Container`
@@ -752,7 +752,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-container text=\"\"><sui-header>Header</sui-header> <p>
+"<div class=\"ui text container\"><h2 class=\"ui header\">Header</h2> <p>
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
     ligula eget dolor. Aenean massa <b>strong</b>. Cum sociis natoque penatibus
     et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
@@ -780,7 +780,7 @@
     tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
     Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
     ultricies nisi.
-  </p></sui-container>"
+  </p></div>"
 ```
 
 ##   `Variations`
@@ -790,13 +790,13 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-container text-align=\"left\">
+"<div><div class=\"ui left aligned container\">
     Left Aligned
-  </sui-container> <sui-container text-align=\"center\">
+  </div> <div class=\"ui center aligned container\">
     Center Aligned
-  </sui-container> <sui-container text-align=\"right\">
+  </div> <div class=\"ui right aligned container\">
     Right Aligned
-  </sui-container> <b>Justified</b> <sui-divider></sui-divider> <sui-container text-align=\"justified\"><p>
+  </div> <b>Justified</b> <div class=\"ui divider\"></div> <div class=\"ui justified aligned container\"><p>
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
       ligula eget dolor. Aenean massa <b>strong</b>. Cum sociis natoque penatibus
       et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
@@ -824,7 +824,7 @@
       tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
       Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
       ultricies nisi.
-    </p></sui-container></div>"
+    </p></div></div>"
 ```
 
 ##     `Fluid`
@@ -832,7 +832,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-container fluid=\"\"><sui-header>Dogs Roles with Humans</sui-header> <p>
+"<div class=\"ui fluid container\"><h2 class=\"ui header\">Dogs Roles with Humans</h2> <p>
     Domestic dogs inherited complex behaviors, such as bite inhibition, from
     their wolf ancestors, which would have been pack hunters with complex body
     language. These sophisticated forms of social cognition and communication
@@ -848,7 +848,7 @@
     individuals. This impact on human society has given them the nickname
     \"man's best friend\" in the Western world. In some cultures, however,
     dogs are also a source of meat.
-  </p></sui-container>"
+  </p></div>"
 ```
 
 ## `DividerExample`
@@ -860,7 +860,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-divider></sui-divider> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+"<div><docs-wireframe name=\"short-paragraph\"></docs-wireframe> <div class=\"ui divider\"></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
 ```
 
 ##     `Vertical Divider`
@@ -868,7 +868,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid columns=\"3\" relaxed=\"very\"><sui-grid-column><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></sui-grid-column> <sui-divider vertical=\"\">and</sui-divider> <sui-grid-column><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></sui-grid-column> <sui-divider vertical=\"\">or</sui-divider> <sui-grid-column><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></sui-grid-column></sui-grid>"
+"<div class=\"ui three column very relaxed grid\"><div class=\"column\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div> <div class=\"ui vertical divider\">and</div> <div class=\"column\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div> <div class=\"ui vertical divider\">or</div> <div class=\"column\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div>"
 ```
 
 ##     `Horizontal Divider`
@@ -876,7 +876,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui center aligned basic segment\"><div class=\"ui left icon action input\"><i class=\"search icon\"></i> <input type=\"text\" placeholder=\"Order #\"> <div class=\"ui blue submit button\">Search</div></div> <sui-divider horizontal=\"\">Or</sui-divider> <div class=\"ui teal labeled icon button\">
+"<div class=\"ui center aligned basic segment\"><div class=\"ui left icon action input\"><i class=\"search icon\"></i> <input type=\"text\" placeholder=\"Order #\"> <div class=\"ui blue submit button\">Search</div></div> <div class=\"ui horizontal divider\">Or</div> <div class=\"ui teal labeled icon button\">
     Create New Order
     <i class=\"add icon\"></i></div></div>"
 ```
@@ -888,9 +888,9 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui inverted segment\"><p></p> <sui-divider inverted=\"\"></sui-divider> <p></p> <sui-divider horizontal=\"\" inverted=\"\">
+"<div class=\"ui inverted segment\"><p></p> <div class=\"ui inverted divider\"></div> <p></p> <h4 class=\"ui horizontal inverted divider\">
     Horizontal
-  </sui-divider></div>"
+  </h4></div>"
 ```
 
 ##     `Fitted`
@@ -902,7 +902,7 @@
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
   eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit,
   posuere a, pede.
-  <sui-divider fitted=\"\"></sui-divider>
+  <div class=\"ui fitted divider\"></div>
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
   eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit,
   posuere a, pede.
@@ -914,7 +914,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-header>Section One</sui-header> <sui-divider hidden=\"\"></sui-divider> <sui-header>Section Two</sui-header></div>"
+"<div><h3 class=\"ui header\">Section One</h3> <div class=\"ui hidden divider\"></div> <h3 class=\"ui header\">Section Two</h3></div>"
 ```
 
 ##     `Section`
@@ -922,7 +922,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-header>Section One</sui-header> <sui-divider section=\"\"></sui-divider> <sui-header>Section Two</sui-header></div>"
+"<div><h3 class=\"ui header\">Section One</h3> <div class=\"ui divider\" section=\"\"></div> <h3 class=\"ui header\">Section Two</h3></div>"
 ```
 
 ##     `Clearing`
@@ -930,7 +930,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui segment\"><sui-header floated=\"right\">Floated Content</sui-header> <sui-divider clearing=\"\"></sui-divider> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+"<div class=\"ui segment\"><h2 class=\"ui right floated header\">Floated Content</h2> <div class=\"ui clearing divider\"></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
 ```
 
 ## `FlagExample`
@@ -942,7 +942,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-flag name=\"ae\"></sui-flag> <sui-flag name=\"france\"></sui-flag> <sui-flag name=\"myanmar\"></sui-flag></div>"
+"<div><i class=\"flag ae\"></i> <i class=\"flag france\"></i> <i class=\"flag myanmar\"></i></div>"
 ```
 
 ## `HeaderExample`
@@ -954,11 +954,11 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-message info=\"\">
+"<div><div class=\"ui info message\">
     Page headings are sized using
     <a href=\"https://j.eremy.net/confused-about-rem-and-em/\"><code>rem</code></a>
     and are not affected by surrounding content size.
-  </sui-message> <sui-header>First header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header>Second header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header>Third header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header>Fourth header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header>Fifth header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+  </div> <h1 class=\"ui header\">First header</h1> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <h2 class=\"ui header\">Second header</h2> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <h3 class=\"ui header\">Third header</h3> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <h4 class=\"ui header\">Fourth header</h4> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <h5 class=\"ui header\">Fifth header</h5> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
 ```
 
 ##     `Content Headers`
@@ -966,11 +966,11 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment vertical=\"\"><sui-message info=\"\">
+"<div class=\"ui vertical segment\"><div class=\"ui info message\">
     Content headings are sized using
     <a href=\"https://j.eremy.net/confused-about-rem-and-em/\"><code>em</code></a>
     and are based on the font-size of their container.
-  </sui-message> <sui-button-group><sui-button icon=\"plus\"></sui-button> <sui-button icon=\"minus\"></sui-button></sui-button-group> <div style=\"font-size: 14px;\"><sui-header size=\"huge\">Huge header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header size=\"large\">Large header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header size=\"medium\">Medium header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header size=\"small\">Small header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <sui-header size=\"tiny\">Tiny header</sui-header> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></sui-segment>"
+  </div> <div class=\"ui buttons\"><button role=\"button\" class=\"ui icon button\"><i class=\"plus icon\"></i></button> <button role=\"button\" class=\"ui icon button\"><i class=\"minus icon\"></i></button></div> <div style=\"font-size: 14px;\"><div class=\"ui huge header\">Huge header</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <div class=\"ui large header\">Large header</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <div class=\"ui medium header\">Medium header</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <div class=\"ui small header\">Small header</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe> <div class=\"ui tiny header\">Tiny header</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div>"
 ```
 
 ##     `Icon Headers`
@@ -978,11 +978,11 @@
 ####       `should match snapshot`
 
 ```
-"<sui-header icon=\"\"><sui-icon name=\"settings\"></sui-icon>
+"<h2 class=\"ui icon header\"><i class=\"settings icon\"></i>
   Account Settings
-  <sui-header-subheader>
+  <div class=\"sub header\">
     Manage your account settings and set e-mail preferences.
-  </sui-header-subheader></sui-header>"
+  </div></h2>"
 ```
 
 ## `IconExample`
@@ -994,7 +994,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-icon name=\"users\" disabled=\"\"></sui-icon>"
+"<i class=\"users disabled icon\"></i>"
 ```
 
 ##     `Loading`
@@ -1002,7 +1002,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-icon name=\"spinner\" loading=\"\"></sui-icon> <sui-icon name=\"notched circle\" loading=\"\"></sui-icon> <sui-icon name=\"asterisk\" loading=\"\"></sui-icon></div>"
+"<div><i class=\"spinner loading icon\"></i> <i class=\"notched circle loading icon\"></i> <i class=\"asterisk loading icon\"></i></div>"
 ```
 
 ##   `Variations`
@@ -1014,7 +1014,7 @@
 ```
 "<div>
   Tight spacing
-  <sui-icon name=\"help\" fitted=\"\"></sui-icon>
+  <i class=\"help fitted icon\"></i>
   Tight spacing
 </div>"
 ```
@@ -1024,7 +1024,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-icon size=\"mini\" name=\"home\"></sui-icon> <sui-icon size=\"tiny\" name=\"home\"></sui-icon> <sui-icon size=\"small\" name=\"home\"></sui-icon> <sui-icon size=\"small\" name=\"home\"></sui-icon> <sui-icon name=\"home\"></sui-icon> <sui-icon size=\"large\" name=\"home\"></sui-icon> <sui-icon size=\"big\" name=\"home\"></sui-icon> <sui-icon size=\"huge\" name=\"home\"></sui-icon> <sui-icon size=\"massive\" name=\"home\"></sui-icon></div>"
+"<div><i class=\"home mini icon\"></i> <i class=\"home tiny icon\"></i> <i class=\"home small icon\"></i> <i class=\"home small icon\"></i> <i class=\"home icon\"></i> <i class=\"home large icon\"></i> <i class=\"home big icon\"></i> <i class=\"home huge icon\"></i> <i class=\"home massive icon\"></i></div>"
 ```
 
 ## `ImageExample`
@@ -1036,7 +1036,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-image src=\"static/images/wireframes/image.png\" size=\"small\"></sui-image>"
+"<img src=\"static/images/wireframes/image.png\" class=\"ui small image\">"
 ```
 
 ##     `Image Link`
@@ -1044,7 +1044,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-image href=\"https://procatinator.com/\" target=\"_blank\" src=\"static/images/wireframes/image-text.png\" size=\"small\"></sui-image>"
+"<img src=\"static/images/wireframes/image-text.png\" class=\"ui small image\" href=\"https://procatinator.com/\" target=\"_blank\">"
 ```
 
 ##   `States`
@@ -1054,7 +1054,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-image src=\"static/images/wireframes/image.png\" hidden=\"\"></sui-image>"
+"<img src=\"static/images/wireframes/image.png\" class=\"ui hidden image\">"
 ```
 
 ##     `Disabled`
@@ -1062,7 +1062,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-image src=\"static/images/wireframes/image.png\" disabled=\"\"></sui-image>"
+"<img src=\"static/images/wireframes/image.png\" class=\"ui disabled image\">"
 ```
 
 ## `InputExample`
@@ -1074,7 +1074,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-input placeholder=\"Search...\"></sui-input>"
+"<div class=\"ui input\" placeholder=\"Search...\"><input placeholder=\"Search...\"></div>"
 ```
 
 ##   `States`
@@ -1084,7 +1084,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-input placeholder=\"Search...\" focus=\"\"></sui-input>"
+"<div class=\"ui focus input\" placeholder=\"Search...\"><input placeholder=\"Search...\"></div>"
 ```
 
 ##     `Loading`
@@ -1092,7 +1092,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-input placeholder=\"Search...\" icon=\"user\" loading=\"\"></sui-input>"
+"<div class=\"ui loading icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"loading icon\"></i></div>"
 ```
 
 ##     `Disabled`
@@ -1100,7 +1100,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-input placeholder=\"Search...\" icon=\"user\" disabled=\"\"></sui-input>"
+"<div class=\"ui disabled icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"user icon\"></i></div>"
 ```
 
 ##   `Variations`
@@ -1110,7 +1110,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-input placeholder=\"Search...\" icon=\"search\"></sui-input>"
+"<div class=\"ui icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"search icon\"></i></div>"
 ```
 
 ## `LabelExample`
@@ -1122,8 +1122,8 @@
 ####       `should match snapshot`
 
 ```
-"<sui-label><sui-icon name=\"mail\"></sui-icon> 23
-</sui-label>"
+"<div class=\"ui label\"><i class=\"mail icon\"></i> 23
+</div>"
 ```
 
 ##     `Image`
@@ -1131,13 +1131,13 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-label image=\"\"><img src=\"static/images/avatar/small/joe.jpg\">
+"<div><a class=\"ui image label\"><img src=\"static/images/avatar/small/joe.jpg\">
     Joe
-  </sui-label> <sui-label image=\"\"><img src=\"static/images/avatar/small/elliot.jpg\">
+  </a> <a class=\"ui image label\"><img src=\"static/images/avatar/small/elliot.jpg\">
     Elliot
-  </sui-label> <sui-label image=\"\"><img src=\"static/images/avatar/small/stevie.jpg\">
+  </a> <a class=\"ui image label\"><img src=\"static/images/avatar/small/stevie.jpg\">
     Stevie
-  </sui-label></div>"
+  </a></div>"
 ```
 
 ## `ListExample`
@@ -1149,7 +1149,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-list><sui-list-item>Apples</sui-list-item> <sui-list-item>Pears</sui-list-item> <sui-list-item>Oranges</sui-list-item></sui-list>"
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\">Apples</div> <div role=\"listitem\" class=\"item\">Pears</div> <div role=\"listitem\" class=\"item\">Oranges</div></div>"
 ```
 
 ## `LoaderExample`
@@ -1161,10 +1161,10 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-message info=\"\">
+"<div><div class=\"ui info message\">
     Loaders are hidden unless has prop<code>active</code>
     or inside an <code>Dimmer active</code>.
-  </sui-message> <sui-segment><sui-dimmer active=\"\"><sui-loader></sui-loader></sui-dimmer> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></sui-segment></div>"
+  </div> <div class=\"ui segment\"><div class=\"ui active dimmer\"><div class=\"content\"><div class=\"center\"><div class=\"ui loader\"></div></div></div></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div>"
 ```
 
 ##     `Text Loader`
@@ -1172,7 +1172,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment><sui-dimmer active=\"\"><sui-loader>Loading...</sui-loader></sui-dimmer> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></sui-segment>"
+"<div class=\"ui segment\"><div class=\"ui active dimmer\"><div class=\"content\"><div class=\"center\"><div class=\"ui text loader\">Loading...</div></div></div></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
 ```
 
 ##   `States`
@@ -1182,7 +1182,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment><sui-dimmer active=\"\"><sui-loader indeterminate=\"\">Preparing Files</sui-loader></sui-dimmer> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></sui-segment>"
+"<div class=\"ui segment\"><div class=\"ui active dimmer\"><div class=\"content\"><div class=\"center\"><div class=\"ui indeterminate text loader\">Preparing Files</div></div></div></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
 ```
 
 ## `RailExample`
@@ -1194,7 +1194,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid centered=\"\" columns=\"3\"><sui-grid-column><sui-segment><docs-wireframe name=\"paragraph\"></docs-wireframe> <docs-wireframe name=\"paragraph\"></docs-wireframe> <sui-rail position=\"left\"><sui-segment>Left Rail Content</sui-segment></sui-rail> <sui-rail position=\"right\"><sui-segment>Right Rail Content</sui-segment></sui-rail></sui-segment></sui-grid-column></sui-grid>"
+"<div class=\"ui three column centered grid\"><div class=\"column\"><div class=\"ui segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe> <docs-wireframe name=\"paragraph\"></docs-wireframe> <div class=\"ui left rail\"><div class=\"ui segment\">Left Rail Content</div></div> <div class=\"ui right rail\"><div class=\"ui segment\">Right Rail Content</div></div></div></div></div>"
 ```
 
 ##     `Internal`
@@ -1202,7 +1202,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment class=\"container\"><sui-rail internal=\"\" position=\"left\"><sui-segment>Left Rail Content</sui-segment></sui-rail> <sui-rail internal=\"\" position=\"right\"><sui-segment>Right Rail Content</sui-segment></sui-rail></sui-segment>"
+"<div class=\"container ui segment\"><div class=\"ui internal left rail\"><div class=\"ui segment\">Left Rail Content</div></div> <div class=\"ui internal right rail\"><div class=\"ui segment\">Right Rail Content</div></div></div>"
 ```
 
 ##     `Dividing`
@@ -1210,7 +1210,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid centered=\"\" columns=\"3\"><sui-grid-column><sui-segment><docs-wireframe name=\"paragraph\"></docs-wireframe> <docs-wireframe name=\"paragraph\"></docs-wireframe> <sui-rail dividing=\"\" position=\"left\"><sui-segment>Left Rail Content</sui-segment></sui-rail> <sui-rail dividing=\"\" position=\"right\"><sui-segment>Right Rail Content</sui-segment></sui-rail></sui-segment></sui-grid-column></sui-grid>"
+"<div class=\"ui three column centered grid\"><div class=\"column\"><div class=\"ui segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe> <docs-wireframe name=\"paragraph\"></docs-wireframe> <div class=\"ui dividing left rail\"><div class=\"ui segment\">Left Rail Content</div></div> <div class=\"ui dividing right rail\"><div class=\"ui segment\">Right Rail Content</div></div></div></div></div>"
 ```
 
 ##   `Variations`
@@ -1220,7 +1220,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-grid centered=\"\" columns=\"3\"><sui-grid-column><sui-segment><docs-wireframe name=\"paragraph\"></docs-wireframe> <docs-wireframe name=\"paragraph\"></docs-wireframe> <sui-rail attached=\"\" position=\"left\"><sui-segment>Left Rail Content</sui-segment></sui-rail> <sui-rail attached=\"\" position=\"right\"><sui-segment>Right Rail Content</sui-segment></sui-rail></sui-segment></sui-grid-column></sui-grid>"
+"<div class=\"ui three column centered grid\"><div class=\"column\"><div class=\"ui segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe> <docs-wireframe name=\"paragraph\"></docs-wireframe> <div class=\"ui attached left rail\"><div class=\"ui segment\">Left Rail Content</div></div> <div class=\"ui attached right rail\"><div class=\"ui segment\">Right Rail Content</div></div></div></div></div>"
 ```
 
 ## `RevealExample`
@@ -1232,7 +1232,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-reveal animated=\"fade\"><sui-reveal-content visible=\"\"><sui-image src=\"static/images/wireframes/square-image.png\" size=\"small\"></sui-image></sui-reveal-content> <sui-reveal-content hidden=\"\"><sui-image src=\"static/images/avatar/large/ade.jpg\" size=\"small\"></sui-image></sui-reveal-content></sui-reveal>"
+"<div class=\"ui fade reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/ade.jpg\" class=\"ui small image\"></div></div>"
 ```
 
 ## `SegmentExample`
@@ -1244,7 +1244,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-segment>"
+"<div class=\"ui segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div>"
 ```
 
 ##     `Raised`
@@ -1252,7 +1252,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment raised=\"\"><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-segment>"
+"<div class=\"ui raised segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div>"
 ```
 
 ##     `Stacked`
@@ -1260,7 +1260,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment stacked=\"\"><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-segment>"
+"<div class=\"ui stacked segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div>"
 ```
 
 ##     `Piled`
@@ -1268,7 +1268,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment piled=\"\"><docs-wireframe name=\"paragraph\"></docs-wireframe></sui-segment>"
+"<div class=\"ui piled segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div>"
 ```
 
 ## `StepExample`
@@ -1280,7 +1280,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-step-group><sui-step>Shipping</sui-step></sui-step-group>"
+"<div class=\"ui steps\"><div class=\"ui step\">Shipping</div></div>"
 ```
 
 ##   `Groups`
@@ -1290,7 +1290,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-step-group><sui-step><sui-icon name=\"truck\"></sui-icon> <sui-step-content><sui-step-title>Shipping</sui-step-title> <sui-step-description>Choose your shipping options</sui-step-description></sui-step-content></sui-step> <sui-step active=\"\"><sui-icon name=\"payment\"></sui-icon> <sui-step-content title=\"Billing\" description=\"Enter billing information\"></sui-step-content></sui-step> <sui-step disabled=\"\"><sui-icon name=\"info\"></sui-icon> <sui-step-content disabled=\"\" title=\"Confirm Order\"></sui-step-content></sui-step></sui-step-group> <sui-step-group steps=\"[object Object],[object Object],[object Object]\"></sui-step-group></div>"
+"<div><div class=\"ui steps\"><div class=\"ui step\"><i class=\"truck icon\"></i> <div class=\"content\"><div class=\"title\">Shipping</div> <div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui active step\"><i class=\"payment icon\"></i> <div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui disabled step\"><i class=\"info icon\"></i> <div class=\"content\" disabled=\"disabled\"><div class=\"title\">Confirm Order</div></div></div></div> <div class=\"ui steps\"><div class=\"ui step\"><i class=\"truck icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div><div class=\"ui active step\"><i class=\"payment icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div><div class=\"ui disabled step\"><i class=\"info icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div></div></div></div></div>"
 ```
 
 ##     `Ordered`
@@ -1298,7 +1298,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-step-group ordered=\"\"><sui-step completed=\"\"><sui-step-content><sui-step-title>Shipping</sui-step-title> <sui-step-description>Choose your shipping options</sui-step-description></sui-step-content></sui-step> <sui-step completed=\"\" title=\"Billing\" description=\"Enter billing information\"></sui-step> <sui-step active=\"\" title=\"Confirm Order\" description=\"Verify order details\"></sui-step></sui-step-group></div>"
+"<div><div class=\"ui ordered steps\"><div class=\"ui completed step\"><div class=\"content\"><div class=\"title\">Shipping</div> <div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui completed step\"><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui active step\"><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div></div>"
 ```
 
 ##     `Vertical`
@@ -1306,7 +1306,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-step-group vertical=\"\"><sui-step completed=\"\"><sui-icon name=\"truck\"></sui-icon> <sui-step-content><sui-step-title>Shipping</sui-step-title> <sui-step-description>Choose your shipping options</sui-step-description></sui-step-content></sui-step> <sui-step completed=\"\" icon=\"credit card\" title=\"Billing\" description=\"Enter billing information\"></sui-step> <sui-step active=\"\" icon=\"info\" title=\"Confirm Order\" description=\"Verify order details\"></sui-step></sui-step-group></div>"
+"<div><div class=\"ui vertical steps\"><div class=\"ui completed step\"><i class=\"truck icon\"></i> <div class=\"content\"><div class=\"title\">Shipping</div> <div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui completed step\"><i class=\"credit card icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui active step\"><i class=\"info icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div></div>"
 ```
 
 ## `AccordionExample`
@@ -1318,20 +1318,20 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-accordion exclusive=\"\"><sui-accordion-title active=\"\"><sui-icon name=\"dropdown\"></sui-icon>
+"<div><div class=\"ui accordion\"><div class=\"title active\"><i class=\"dropdown icon\"></i>
       What is a dog?
-    </sui-accordion-title> <sui-accordion-content active=\"\"><p>
+    </div> <div class=\"content active\"><p>
         A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can
         be found as a welcome guest in many households across the world.
-      </p></sui-accordion-content> <sui-accordion-title><sui-icon name=\"dropdown\"></sui-icon>
+      </p></div> <div class=\"title\"><i class=\"dropdown icon\"></i>
       What kinds of dogs are there?
-    </sui-accordion-title> <sui-accordion-content><p>
+    </div> <div class=\"content\"><p>
         There are many breeds of dogs. Each breed varies in size and temperament. Owners often
         select a breed of dog that they find to be compatible with their own lifestyle and
         desires from a companion.
-      </p></sui-accordion-content> <sui-accordion-title><sui-icon name=\"dropdown\"></sui-icon>
+      </p></div> <div class=\"title\"><i class=\"dropdown icon\"></i>
       How do you acquire a dog?
-    </sui-accordion-title> <sui-accordion-content><p>
+    </div> <div class=\"content\"><p>
         Three common ways for a prospective owner to acquire a dog is from pet shops, private
         owners, or shelters.
       </p> <p>
@@ -1339,7 +1339,7 @@
         owner allows you to assess the pedigree and upbringing of your dog before choosing to
         take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog
         who may not find one so readily.
-      </p></sui-accordion-content></sui-accordion></div>"
+      </p></div></div></div>"
 ```
 
 ##     `Styled`
@@ -1347,20 +1347,20 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-accordion exclusive=\"\" styled=\"\"><sui-accordion-title active=\"\"><sui-icon name=\"dropdown\"></sui-icon>
+"<div><div class=\"ui styled accordion\"><div class=\"title active\"><i class=\"dropdown icon\"></i>
       What is a dog?
-    </sui-accordion-title> <sui-accordion-content active=\"\"><p>
+    </div> <div class=\"content active\"><p>
         A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be
         found as a welcome guest in many households across the world.
-      </p></sui-accordion-content> <sui-accordion-title><sui-icon name=\"dropdown\"></sui-icon>
+      </p></div> <div class=\"title\"><i class=\"dropdown icon\"></i>
       What kinds of dogs are there?
-    </sui-accordion-title> <sui-accordion-content><p>
+    </div> <div class=\"content\"><p>
         There are many breeds of dogs. Each breed varies in size and temperament. Owners often
         select a breed of dog that they find to be compatible with their own lifestyle and desires
         from a companion.
-      </p></sui-accordion-content> <sui-accordion-title><sui-icon name=\"dropdown\"></sui-icon>
+      </p></div> <div class=\"title\"><i class=\"dropdown icon\"></i>
       How do you acquire a dog?
-    </sui-accordion-title> <sui-accordion-content><p>
+    </div> <div class=\"content\"><p>
         Three common ways for a prospective owner to acquire a dog is from pet shops, private
         owners, or shelters.
       </p> <p>
@@ -1368,7 +1368,7 @@
         owner allows you to assess the pedigree and upbringing of your dog before choosing to take
         it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may
         not find one so readily.
-      </p></sui-accordion-content></sui-accordion></div>"
+      </p></div></div></div>"
 ```
 
 ##   `Variations`
@@ -1378,20 +1378,20 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment inverted=\"\"><sui-accordion exclusive=\"\" inverted=\"\"><sui-accordion-title active=\"\"><sui-icon name=\"dropdown\"></sui-icon>
+"<div class=\"ui inverted segment\"><div class=\"ui inverted accordion\"><div class=\"title active\"><i class=\"dropdown icon\"></i>
       What is a dog?
-    </sui-accordion-title> <sui-accordion-content active=\"\"><p>
+    </div> <div class=\"content active\"><p>
         A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be
         found as a welcome guest in many households across the world.
-      </p></sui-accordion-content> <sui-accordion-title><sui-icon name=\"dropdown\"></sui-icon>
+      </p></div> <div class=\"title\"><i class=\"dropdown icon\"></i>
       What kinds of dogs are there?
-    </sui-accordion-title> <sui-accordion-content><p>
+    </div> <div class=\"content\"><p>
         There are many breeds of dogs. Each breed varies in size and temperament. Owners often
         select a breed of dog that they find to be compatible with their own lifestyle and desires
         from a companion.
-      </p></sui-accordion-content> <sui-accordion-title><sui-icon name=\"dropdown\"></sui-icon>
+      </p></div> <div class=\"title\"><i class=\"dropdown icon\"></i>
       How do you acquire a dog?
-    </sui-accordion-title> <sui-accordion-content><p>
+    </div> <div class=\"content\"><p>
         Three common ways for a prospective owner to acquire a dog is from pet shops, private
         owners, or shelters.
       </p> <p>
@@ -1399,7 +1399,7 @@
         owner allows you to assess the pedigree and upbringing of your dog before choosing to
         take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog
         who may not find one so readily.
-      </p></sui-accordion-content></sui-accordion></sui-segment>"
+      </p></div></div></div>"
 ```
 
 ##   `Examples`
@@ -1409,15 +1409,15 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-accordion exclusive=\"\" styled=\"\"><sui-accordion-title>Level 1</sui-accordion-title> <sui-accordion-content active=\"\">
+"<div><div class=\"ui styled accordion\"><div class=\"title\">Level 1</div> <div class=\"content active\">
       Welcome to level 1
-      <sui-accordion exclusive=\"\" styled=\"\"><sui-accordion-title>Level 1A</sui-accordion-title> <sui-accordion-content active=\"\">
+      <div class=\"ui styled accordion\"><div class=\"title\">Level 1A</div> <div class=\"content active\">
           Level 1A Contents
-          <sui-accordion exclusive=\"\" styled=\"\"><sui-accordion-title>Level 1A-A</sui-accordion-title> <sui-accordion-content>Level 1A-A Contents</sui-accordion-content> <sui-accordion-title>Level 1A-B</sui-accordion-title> <sui-accordion-content>Level 1A-B Contents</sui-accordion-content></sui-accordion></sui-accordion-content> <sui-accordion-title>Level 1B</sui-accordion-title> <sui-accordion-content>Level 1B Contents</sui-accordion-content> <sui-accordion-title>Level 1C</sui-accordion-title> <sui-accordion-content>Level 1C Contents</sui-accordion-content></sui-accordion></sui-accordion-content> <sui-accordion-title>Level 2</sui-accordion-title> <sui-accordion-content>
+          <div class=\"ui styled accordion\"><div class=\"title\">Level 1A-A</div> <div class=\"content\">Level 1A-A Contents</div> <div class=\"title\">Level 1A-B</div> <div class=\"content\">Level 1A-B Contents</div></div></div> <div class=\"title\">Level 1B</div> <div class=\"content\">Level 1B Contents</div> <div class=\"title\">Level 1C</div> <div class=\"content\">Level 1C Contents</div></div></div> <div class=\"title\">Level 2</div> <div class=\"content\">
       Welcome to level 2
-      <sui-accordion exclusive=\"\" styled=\"\"><sui-accordion-title>Level 2A</sui-accordion-title> <sui-accordion-content active=\"\">
+      <div class=\"ui styled accordion\"><div class=\"title\">Level 2A</div> <div class=\"content active\">
           Level 2A Contents
-          <sui-accordion exclusive=\"\" styled=\"\"><sui-accordion-title>Level 2A-A</sui-accordion-title> <sui-accordion-content>Level 2A-A Contents</sui-accordion-content> <sui-accordion-title>Level 2A-B</sui-accordion-title> <sui-accordion-content>Level 2A-B Contents</sui-accordion-content></sui-accordion></sui-accordion-content> <sui-accordion-title>Level 2B</sui-accordion-title> <sui-accordion-content>Level 2B Contents</sui-accordion-content> <sui-accordion-title>Level 2C</sui-accordion-title> <sui-accordion-content>Level 2C Contents</sui-accordion-content></sui-accordion></sui-accordion-content></sui-accordion></div>"
+          <div class=\"ui styled accordion\"><div class=\"title\">Level 2A-A</div> <div class=\"content\">Level 2A-A Contents</div> <div class=\"title\">Level 2A-B</div> <div class=\"content\">Level 2A-B Contents</div></div></div> <div class=\"title\">Level 2B</div> <div class=\"content\">Level 2B Contents</div> <div class=\"title\">Level 2C</div> <div class=\"content\">Level 2C Contents</div></div></div></div></div>"
 ```
 
 ##     `Form Fields`
@@ -1425,9 +1425,9 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-segment><sui-form><sui-form-field><label>First Name</label> <input placeholder=\"First Name\"></sui-form-field> <sui-form-field><label>Last Name</label> <input placeholder=\"Last Name\"></sui-form-field> <sui-form-field><sui-accordion><sui-accordion-title><sui-icon name=\"dropdown\"></sui-icon>
+"<div><div class=\"ui segment\"><form class=\"ui form\"><div class=\"field\"><label>First Name</label> <input placeholder=\"First Name\"></div> <div class=\"field\"><label>Last Name</label> <input placeholder=\"Last Name\"></div> <div class=\"field\"><div class=\"ui accordion\"><a class=\"title\"><i class=\"dropdown icon\"></i>
             Optional Details
-          </sui-accordion-title> <sui-accordion-content><label>Maiden Name</label> <input placeholder=\"Maiden Name\"></sui-accordion-content></sui-accordion></sui-form-field> <sui-button type=\"submit\">Submit</sui-button></sui-form></sui-segment></div>"
+          </a> <div class=\"content\"><label>Maiden Name</label> <input placeholder=\"Maiden Name\"></div></div></div> <button role=\"button\" class=\"ui button\" type=\"submit\">Submit</button></form></div></div>"
 ```
 
 ##     `Accordion Menus`
@@ -1435,11 +1435,11 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-menu active-index=\"1\" vertical=\"\" exclusive=\"\" styled=\"\"><sui-menu-header active=\"\"><sui-icon name=\"dropdown\"></sui-icon>
+"<div><div class=\"ui accordion ui vertical menu\" exclusive=\"\" styled=\"\"><div class=\"title header\" active=\"\"><i class=\"dropdown icon\"></i>
       Size
-    </sui-menu-header> <sui-accordion-content active=\"\"><sui-form><sui-form-field><sui-checkbox label=\"Small\"></sui-checkbox></sui-form-field> <sui-form-field><sui-checkbox label=\"Medium\"></sui-checkbox></sui-form-field> <sui-form-field><sui-checkbox label=\"Large\"></sui-checkbox></sui-form-field> <sui-form-field><sui-checkbox label=\"X-Large\"></sui-checkbox></sui-form-field></sui-form></sui-accordion-content> <sui-menu-header><sui-icon name=\"dropdown\"></sui-icon>
+    </div> <div class=\"content active\"><form class=\"ui form\"><div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Small</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Medium</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Large</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>X-Large</label></div></div></form></div> <div class=\"title header\"><i class=\"dropdown icon\"></i>
       Colors
-    </sui-menu-header> <sui-accordion-content><sui-form><sui-form-field><sui-checkbox label=\"Red\"></sui-checkbox></sui-form-field> <sui-form-field><sui-checkbox label=\"Orange\"></sui-checkbox></sui-form-field> <sui-form-field><sui-checkbox label=\"Green\"></sui-checkbox></sui-form-field> <sui-form-field><sui-checkbox label=\"Blue\"></sui-checkbox></sui-form-field></sui-form></sui-accordion-content></sui-menu></div>"
+    </div> <div class=\"content\"><form class=\"ui form\"><div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Red</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Orange</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Green</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Blue</label></div></div></form></div></div></div>"
 ```
 
 ## `CheckboxExample`
@@ -1451,7 +1451,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-checkbox label=\"checkbox\"></sui-checkbox></div>"
+"<div><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>checkbox</label></div></div>"
 ```
 
 ##     `Radio`
@@ -1459,7 +1459,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-checkbox label=\"Radio choice\" radio=\"\"></sui-checkbox></div>"
+"<div><div class=\"ui radio checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"radio\" class=\"hidden\"><label>Radio choice</label></div></div>"
 ```
 
 ##     `Checkbox with two way binding`
@@ -1467,7 +1467,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-checkbox label=\"checkbox\"></sui-checkbox> <div><strong>value: </strong> true</div></div>"
+"<div><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>checkbox</label></div> <div><strong>value: </strong> true</div></div>"
 ```
 
 ##     `Toggle style input`
@@ -1475,7 +1475,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-checkbox label=\"toggle\" toggle=\"\"></sui-checkbox></div>"
+"<div><div class=\"ui toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>toggle</label></div></div>"
 ```
 
 ## `DimmerExample`
@@ -1487,7 +1487,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"dimmer-wrapper\"><img src=\"/static/images/logo.png\"> <sui-dimmer active=\"\"></sui-dimmer></div>"
+"<div class=\"dimmer-wrapper\"><img src=\"/static/images/logo.png\"> <div class=\"ui active dimmer\"><div class=\"content\"><div class=\"center\"></div></div></div></div>"
 ```
 
 ##     `Dimmer Inverted`
@@ -1495,7 +1495,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><img src=\"/static/images/logo.png\"> <sui-dimmer active=\"true\" inverted=\"\"></sui-dimmer></div>"
+"<div><img src=\"/static/images/logo.png\"> <div class=\"ui active inverted dimmer\"><div class=\"content\"><div class=\"center\"></div></div></div></div>"
 ```
 
 ## `DropdownExample`
@@ -1507,7 +1507,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-dropdown text=\"File\"><sui-dropdown-menu><sui-dropdown-item>New</sui-dropdown-item> <sui-dropdown-item>Open... <span class=\"description\">ctrl + o</span></sui-dropdown-item> <sui-dropdown-item>Save as... <span class=\"description\">ctrl + s</span></sui-dropdown-item> <sui-dropdown-item>Rename <span class=\"description\">ctrl + r</span></sui-dropdown-item> <sui-dropdown-item>Make a copy</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"folder\"></sui-icon>Move to folder</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"trash\"></sui-icon>Move to trash</sui-dropdown-item> <sui-dropdown-divider></sui-dropdown-divider> <sui-dropdown-item>Download as...</sui-dropdown-item></sui-dropdown-menu></sui-dropdown>"
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></div>"
 ```
 
 ##     `Selection`
@@ -1515,7 +1515,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-dropdown placeholder=\"Gender\" selection=\"\" options=\"[object Object],[object Object]\"></sui-dropdown>"
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui selection dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"default text\">Gender</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Male</div><div role=\"option\" class=\"item\">Female</div></div></div>"
 ```
 
 ##     `Search Selection`
@@ -1523,7 +1523,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-dropdown fluid=\"\" options=\"[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]\" placeholder=\"Select Country\" search=\"\" selection=\"\"></sui-dropdown>"
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui fluid selection search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"default text\">Select Country</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\"><i class=\"flag af\"></i>Afghanistan</div><div role=\"option\" class=\"item\"><i class=\"flag ax\"></i>Aland Islands</div><div role=\"option\" class=\"item\"><i class=\"flag al\"></i>Albania</div><div role=\"option\" class=\"item\"><i class=\"flag dz\"></i>Algeria</div><div role=\"option\" class=\"item\"><i class=\"flag as\"></i>American Samoa</div><div role=\"option\" class=\"item\"><i class=\"flag ad\"></i>Andorra</div><div role=\"option\" class=\"item\"><i class=\"flag ao\"></i>Angola</div><div role=\"option\" class=\"item\"><i class=\"flag ai\"></i>Anguilla</div><div role=\"option\" class=\"item\"><i class=\"flag ag\"></i>Antigua</div><div role=\"option\" class=\"item\"><i class=\"flag ar\"></i>Argentina</div><div role=\"option\" class=\"item\"><i class=\"flag am\"></i>Armenia</div><div role=\"option\" class=\"item\"><i class=\"flag aw\"></i>Aruba</div><div role=\"option\" class=\"item\"><i class=\"flag au\"></i>Australia</div><div role=\"option\" class=\"item\"><i class=\"flag at\"></i>Austria</div><div role=\"option\" class=\"item\"><i class=\"flag az\"></i>Azerbaijan</div><div role=\"option\" class=\"item\"><i class=\"flag bs\"></i>Bahamas</div><div role=\"option\" class=\"item\"><i class=\"flag bh\"></i>Bahrain</div><div role=\"option\" class=\"item\"><i class=\"flag bd\"></i>Bangladesh</div><div role=\"option\" class=\"item\"><i class=\"flag bb\"></i>Barbados</div><div role=\"option\" class=\"item\"><i class=\"flag by\"></i>Belarus</div><div role=\"option\" class=\"item\"><i class=\"flag be\"></i>Belgium</div><div role=\"option\" class=\"item\"><i class=\"flag bz\"></i>Belize</div><div role=\"option\" class=\"item\"><i class=\"flag bj\"></i>Benin</div><div role=\"option\" class=\"item\"><i class=\"flag bm\"></i>Bermuda</div><div role=\"option\" class=\"item\"><i class=\"flag bt\"></i>Bhutan</div><div role=\"option\" class=\"item\"><i class=\"flag bo\"></i>Bolivia</div><div role=\"option\" class=\"item\"><i class=\"flag ba\"></i>Bosnia</div><div role=\"option\" class=\"item\"><i class=\"flag bw\"></i>Botswana</div><div role=\"option\" class=\"item\"><i class=\"flag bv\"></i>Bouvet Island</div><div role=\"option\" class=\"item\"><i class=\"flag br\"></i>Brazil</div><div role=\"option\" class=\"item\"><i class=\"flag vg\"></i>British Virgin Islands</div><div role=\"option\" class=\"item\"><i class=\"flag bn\"></i>Brunei</div><div role=\"option\" class=\"item\"><i class=\"flag bg\"></i>Bulgaria</div><div role=\"option\" class=\"item\"><i class=\"flag bf\"></i>Burkina Faso</div><div role=\"option\" class=\"item\"><i class=\"flag bi\"></i>Burundi</div><div role=\"option\" class=\"item\"><i class=\"flag tc\"></i>Caicos Islands</div><div role=\"option\" class=\"item\"><i class=\"flag kh\"></i>Cambodia</div><div role=\"option\" class=\"item\"><i class=\"flag cm\"></i>Cameroon</div><div role=\"option\" class=\"item\"><i class=\"flag ca\"></i>Canada</div><div role=\"option\" class=\"item\"><i class=\"flag cv\"></i>Cape Verde</div><div role=\"option\" class=\"item\"><i class=\"flag ky\"></i>Cayman Islands</div><div role=\"option\" class=\"item\"><i class=\"flag cf\"></i>Central African Republic</div><div role=\"option\" class=\"item\"><i class=\"flag td\"></i>Chad</div><div role=\"option\" class=\"item\"><i class=\"flag cl\"></i>Chile</div><div role=\"option\" class=\"item\"><i class=\"flag cn\"></i>China</div><div role=\"option\" class=\"item\"><i class=\"flag cx\"></i>Christmas Island</div><div role=\"option\" class=\"item\"><i class=\"flag cc\"></i>Cocos Islands</div><div role=\"option\" class=\"item\"><i class=\"flag co\"></i>Colombia</div><div role=\"option\" class=\"item\"><i class=\"flag km\"></i>Comoros</div><div role=\"option\" class=\"item\"><i class=\"flag cg\"></i>Congo Brazzaville</div><div role=\"option\" class=\"item\"><i class=\"flag cd\"></i>Congo</div><div role=\"option\" class=\"item\"><i class=\"flag ck\"></i>Cook Islands</div><div role=\"option\" class=\"item\"><i class=\"flag cr\"></i>Costa Rica</div><div role=\"option\" class=\"item\"><i class=\"flag ci\"></i>Cote Divoire</div><div role=\"option\" class=\"item\"><i class=\"flag hr\"></i>Croatia</div><div role=\"option\" class=\"item\"><i class=\"flag cu\"></i>Cuba</div><div role=\"option\" class=\"item\"><i class=\"flag cy\"></i>Cyprus</div><div role=\"option\" class=\"item\"><i class=\"flag cz\"></i>Czech Republic</div><div role=\"option\" class=\"item\"><i class=\"flag dk\"></i>Denmark</div><div role=\"option\" class=\"item\"><i class=\"flag dj\"></i>Djibouti</div><div role=\"option\" class=\"item\"><i class=\"flag dm\"></i>Dominica</div><div role=\"option\" class=\"item\"><i class=\"flag do\"></i>Dominican Republic</div><div role=\"option\" class=\"item\"><i class=\"flag ec\"></i>Ecuador</div><div role=\"option\" class=\"item\"><i class=\"flag eg\"></i>Egypt</div><div role=\"option\" class=\"item\"><i class=\"flag sv\"></i>El Salvador</div><div role=\"option\" class=\"item\"><i class=\"flag gb\"></i>England</div><div role=\"option\" class=\"item\"><i class=\"flag gq\"></i>Equatorial Guinea</div><div role=\"option\" class=\"item\"><i class=\"flag er\"></i>Eritrea</div><div role=\"option\" class=\"item\"><i class=\"flag ee\"></i>Estonia</div><div role=\"option\" class=\"item\"><i class=\"flag et\"></i>Ethiopia</div><div role=\"option\" class=\"item\"><i class=\"flag eu\"></i>European Union</div><div role=\"option\" class=\"item\"><i class=\"flag fk\"></i>Falkland Islands</div><div role=\"option\" class=\"item\"><i class=\"flag fo\"></i>Faroe Islands</div><div role=\"option\" class=\"item\"><i class=\"flag fj\"></i>Fiji</div><div role=\"option\" class=\"item\"><i class=\"flag fi\"></i>Finland</div><div role=\"option\" class=\"item\"><i class=\"flag fr\"></i>France</div><div role=\"option\" class=\"item\"><i class=\"flag gf\"></i>French Guiana</div><div role=\"option\" class=\"item\"><i class=\"flag pf\"></i>French Polynesia</div><div role=\"option\" class=\"item\"><i class=\"flag tf\"></i>French Territories</div><div role=\"option\" class=\"item\"><i class=\"flag ga\"></i>Gabon</div><div role=\"option\" class=\"item\"><i class=\"flag gm\"></i>Gambia</div><div role=\"option\" class=\"item\"><i class=\"flag ge\"></i>Georgia</div><div role=\"option\" class=\"item\"><i class=\"flag de\"></i>Germany</div><div role=\"option\" class=\"item\"><i class=\"flag gh\"></i>Ghana</div><div role=\"option\" class=\"item\"><i class=\"flag gi\"></i>Gibraltar</div><div role=\"option\" class=\"item\"><i class=\"flag gr\"></i>Greece</div><div role=\"option\" class=\"item\"><i class=\"flag gl\"></i>Greenland</div><div role=\"option\" class=\"item\"><i class=\"flag gd\"></i>Grenada</div><div role=\"option\" class=\"item\"><i class=\"flag gp\"></i>Guadeloupe</div><div role=\"option\" class=\"item\"><i class=\"flag gu\"></i>Guam</div><div role=\"option\" class=\"item\"><i class=\"flag gt\"></i>Guatemala</div><div role=\"option\" class=\"item\"><i class=\"flag gw\"></i>Guinea-Bissau</div><div role=\"option\" class=\"item\"><i class=\"flag gn\"></i>Guinea</div><div role=\"option\" class=\"item\"><i class=\"flag gy\"></i>Guyana</div><div role=\"option\" class=\"item\"><i class=\"flag ht\"></i>Haiti</div><div role=\"option\" class=\"item\"><i class=\"flag hm\"></i>Heard Island</div><div role=\"option\" class=\"item\"><i class=\"flag hn\"></i>Honduras</div><div role=\"option\" class=\"item\"><i class=\"flag hk\"></i>Hong Kong</div><div role=\"option\" class=\"item\"><i class=\"flag hu\"></i>Hungary</div><div role=\"option\" class=\"item\"><i class=\"flag is\"></i>Iceland</div><div role=\"option\" class=\"item\"><i class=\"flag in\"></i>India</div><div role=\"option\" class=\"item\"><i class=\"flag io\"></i>Indian Ocean Territory</div><div role=\"option\" class=\"item\"><i class=\"flag id\"></i>Indonesia</div><div role=\"option\" class=\"item\"><i class=\"flag ir\"></i>Iran</div><div role=\"option\" class=\"item\"><i class=\"flag iq\"></i>Iraq</div><div role=\"option\" class=\"item\"><i class=\"flag ie\"></i>Ireland</div><div role=\"option\" class=\"item\"><i class=\"flag il\"></i>Israel</div><div role=\"option\" class=\"item\"><i class=\"flag it\"></i>Italy</div><div role=\"option\" class=\"item\"><i class=\"flag jm\"></i>Jamaica</div><div role=\"option\" class=\"item\"><i class=\"flag jp\"></i>Japan</div><div role=\"option\" class=\"item\"><i class=\"flag jo\"></i>Jordan</div><div role=\"option\" class=\"item\"><i class=\"flag kz\"></i>Kazakhstan</div><div role=\"option\" class=\"item\"><i class=\"flag ke\"></i>Kenya</div><div role=\"option\" class=\"item\"><i class=\"flag ki\"></i>Kiribati</div><div role=\"option\" class=\"item\"><i class=\"flag kw\"></i>Kuwait</div><div role=\"option\" class=\"item\"><i class=\"flag kg\"></i>Kyrgyzstan</div><div role=\"option\" class=\"item\"><i class=\"flag la\"></i>Laos</div><div role=\"option\" class=\"item\"><i class=\"flag lv\"></i>Latvia</div><div role=\"option\" class=\"item\"><i class=\"flag lb\"></i>Lebanon</div><div role=\"option\" class=\"item\"><i class=\"flag ls\"></i>Lesotho</div><div role=\"option\" class=\"item\"><i class=\"flag lr\"></i>Liberia</div><div role=\"option\" class=\"item\"><i class=\"flag ly\"></i>Libya</div><div role=\"option\" class=\"item\"><i class=\"flag li\"></i>Liechtenstein</div><div role=\"option\" class=\"item\"><i class=\"flag lt\"></i>Lithuania</div><div role=\"option\" class=\"item\"><i class=\"flag lu\"></i>Luxembourg</div><div role=\"option\" class=\"item\"><i class=\"flag mo\"></i>Macau</div><div role=\"option\" class=\"item\"><i class=\"flag mk\"></i>Macedonia</div><div role=\"option\" class=\"item\"><i class=\"flag mg\"></i>Madagascar</div><div role=\"option\" class=\"item\"><i class=\"flag mw\"></i>Malawi</div><div role=\"option\" class=\"item\"><i class=\"flag my\"></i>Malaysia</div><div role=\"option\" class=\"item\"><i class=\"flag mv\"></i>Maldives</div><div role=\"option\" class=\"item\"><i class=\"flag ml\"></i>Mali</div><div role=\"option\" class=\"item\"><i class=\"flag mt\"></i>Malta</div><div role=\"option\" class=\"item\"><i class=\"flag mh\"></i>Marshall Islands</div><div role=\"option\" class=\"item\"><i class=\"flag mq\"></i>Martinique</div><div role=\"option\" class=\"item\"><i class=\"flag mr\"></i>Mauritania</div><div role=\"option\" class=\"item\"><i class=\"flag mu\"></i>Mauritius</div><div role=\"option\" class=\"item\"><i class=\"flag yt\"></i>Mayotte</div><div role=\"option\" class=\"item\"><i class=\"flag mx\"></i>Mexico</div><div role=\"option\" class=\"item\"><i class=\"flag fm\"></i>Micronesia</div><div role=\"option\" class=\"item\"><i class=\"flag md\"></i>Moldova</div><div role=\"option\" class=\"item\"><i class=\"flag mc\"></i>Monaco</div><div role=\"option\" class=\"item\"><i class=\"flag mn\"></i>Mongolia</div><div role=\"option\" class=\"item\"><i class=\"flag me\"></i>Montenegro</div><div role=\"option\" class=\"item\"><i class=\"flag ms\"></i>Montserrat</div><div role=\"option\" class=\"item\"><i class=\"flag ma\"></i>Morocco</div><div role=\"option\" class=\"item\"><i class=\"flag mz\"></i>Mozambique</div><div role=\"option\" class=\"item\"><i class=\"flag na\"></i>Namibia</div><div role=\"option\" class=\"item\"><i class=\"flag nr\"></i>Nauru</div><div role=\"option\" class=\"item\"><i class=\"flag np\"></i>Nepal</div><div role=\"option\" class=\"item\"><i class=\"flag an\"></i>Netherlands Antilles</div><div role=\"option\" class=\"item\"><i class=\"flag nl\"></i>Netherlands</div><div role=\"option\" class=\"item\"><i class=\"flag nc\"></i>New Caledonia</div><div role=\"option\" class=\"item\"><i class=\"flag pg\"></i>New Guinea</div><div role=\"option\" class=\"item\"><i class=\"flag nz\"></i>New Zealand</div><div role=\"option\" class=\"item\"><i class=\"flag ni\"></i>Nicaragua</div><div role=\"option\" class=\"item\"><i class=\"flag ne\"></i>Niger</div><div role=\"option\" class=\"item\"><i class=\"flag ng\"></i>Nigeria</div><div role=\"option\" class=\"item\"><i class=\"flag nu\"></i>Niue</div><div role=\"option\" class=\"item\"><i class=\"flag nf\"></i>Norfolk Island</div><div role=\"option\" class=\"item\"><i class=\"flag kp\"></i>North Korea</div><div role=\"option\" class=\"item\"><i class=\"flag mp\"></i>Northern Mariana Islands</div><div role=\"option\" class=\"item\"><i class=\"flag no\"></i>Norway</div><div role=\"option\" class=\"item\"><i class=\"flag om\"></i>Oman</div><div role=\"option\" class=\"item\"><i class=\"flag pk\"></i>Pakistan</div><div role=\"option\" class=\"item\"><i class=\"flag pw\"></i>Palau</div><div role=\"option\" class=\"item\"><i class=\"flag ps\"></i>Palestine</div><div role=\"option\" class=\"item\"><i class=\"flag pa\"></i>Panama</div><div role=\"option\" class=\"item\"><i class=\"flag py\"></i>Paraguay</div><div role=\"option\" class=\"item\"><i class=\"flag pe\"></i>Peru</div><div role=\"option\" class=\"item\"><i class=\"flag ph\"></i>Philippines</div><div role=\"option\" class=\"item\"><i class=\"flag pn\"></i>Pitcairn Islands</div><div role=\"option\" class=\"item\"><i class=\"flag pl\"></i>Poland</div><div role=\"option\" class=\"item\"><i class=\"flag pt\"></i>Portugal</div><div role=\"option\" class=\"item\"><i class=\"flag pr\"></i>Puerto Rico</div><div role=\"option\" class=\"item\"><i class=\"flag qa\"></i>Qatar</div><div role=\"option\" class=\"item\"><i class=\"flag re\"></i>Reunion</div><div role=\"option\" class=\"item\"><i class=\"flag ro\"></i>Romania</div><div role=\"option\" class=\"item\"><i class=\"flag ru\"></i>Russia</div><div role=\"option\" class=\"item\"><i class=\"flag rw\"></i>Rwanda</div><div role=\"option\" class=\"item\"><i class=\"flag sh\"></i>Saint Helena</div><div role=\"option\" class=\"item\"><i class=\"flag kn\"></i>Saint Kitts and Nevis</div><div role=\"option\" class=\"item\"><i class=\"flag lc\"></i>Saint Lucia</div><div role=\"option\" class=\"item\"><i class=\"flag pm\"></i>Saint Pierre</div><div role=\"option\" class=\"item\"><i class=\"flag vc\"></i>Saint Vincent</div><div role=\"option\" class=\"item\"><i class=\"flag ws\"></i>Samoa</div><div role=\"option\" class=\"item\"><i class=\"flag sm\"></i>San Marino</div><div role=\"option\" class=\"item\"><i class=\"flag gs\"></i>Sandwich Islands</div><div role=\"option\" class=\"item\"><i class=\"flag st\"></i>Sao Tome</div><div role=\"option\" class=\"item\"><i class=\"flag sa\"></i>Saudi Arabia</div><div role=\"option\" class=\"item\"><i class=\"flag sn\"></i>Senegal</div><div role=\"option\" class=\"item\"><i class=\"flag cs\"></i>Serbia</div><div role=\"option\" class=\"item\"><i class=\"flag rs\"></i>Serbia</div><div role=\"option\" class=\"item\"><i class=\"flag sc\"></i>Seychelles</div><div role=\"option\" class=\"item\"><i class=\"flag sl\"></i>Sierra Leone</div><div role=\"option\" class=\"item\"><i class=\"flag sg\"></i>Singapore</div><div role=\"option\" class=\"item\"><i class=\"flag sk\"></i>Slovakia</div><div role=\"option\" class=\"item\"><i class=\"flag si\"></i>Slovenia</div><div role=\"option\" class=\"item\"><i class=\"flag sb\"></i>Solomon Islands</div><div role=\"option\" class=\"item\"><i class=\"flag so\"></i>Somalia</div><div role=\"option\" class=\"item\"><i class=\"flag za\"></i>South Africa</div><div role=\"option\" class=\"item\"><i class=\"flag kr\"></i>South Korea</div><div role=\"option\" class=\"item\"><i class=\"flag es\"></i>Spain</div><div role=\"option\" class=\"item\"><i class=\"flag lk\"></i>Sri Lanka</div><div role=\"option\" class=\"item\"><i class=\"flag sd\"></i>Sudan</div><div role=\"option\" class=\"item\"><i class=\"flag sr\"></i>Suriname</div><div role=\"option\" class=\"item\"><i class=\"flag sj\"></i>Svalbard</div><div role=\"option\" class=\"item\"><i class=\"flag sz\"></i>Swaziland</div><div role=\"option\" class=\"item\"><i class=\"flag se\"></i>Sweden</div><div role=\"option\" class=\"item\"><i class=\"flag ch\"></i>Switzerland</div><div role=\"option\" class=\"item\"><i class=\"flag sy\"></i>Syria</div><div role=\"option\" class=\"item\"><i class=\"flag tw\"></i>Taiwan</div><div role=\"option\" class=\"item\"><i class=\"flag tj\"></i>Tajikistan</div><div role=\"option\" class=\"item\"><i class=\"flag tz\"></i>Tanzania</div><div role=\"option\" class=\"item\"><i class=\"flag th\"></i>Thailand</div><div role=\"option\" class=\"item\"><i class=\"flag tl\"></i>Timorleste</div><div role=\"option\" class=\"item\"><i class=\"flag tg\"></i>Togo</div><div role=\"option\" class=\"item\"><i class=\"flag tk\"></i>Tokelau</div><div role=\"option\" class=\"item\"><i class=\"flag to\"></i>Tonga</div><div role=\"option\" class=\"item\"><i class=\"flag tt\"></i>Trinidad</div><div role=\"option\" class=\"item\"><i class=\"flag tn\"></i>Tunisia</div><div role=\"option\" class=\"item\"><i class=\"flag tr\"></i>Turkey</div><div role=\"option\" class=\"item\"><i class=\"flag tm\"></i>Turkmenistan</div><div role=\"option\" class=\"item\"><i class=\"flag tv\"></i>Tuvalu</div><div role=\"option\" class=\"item\"><i class=\"flag ug\"></i>Uganda</div><div role=\"option\" class=\"item\"><i class=\"flag ua\"></i>Ukraine</div><div role=\"option\" class=\"item\"><i class=\"flag ae\"></i>United Arab Emirates</div><div role=\"option\" class=\"item\"><i class=\"flag us\"></i>United States</div><div role=\"option\" class=\"item\"><i class=\"flag uy\"></i>Uruguay</div><div role=\"option\" class=\"item\"><i class=\"flag um\"></i>Us Minor Islands</div><div role=\"option\" class=\"item\"><i class=\"flag vi\"></i>Us Virgin Islands</div><div role=\"option\" class=\"item\"><i class=\"flag uz\"></i>Uzbekistan</div><div role=\"option\" class=\"item\"><i class=\"flag vu\"></i>Vanuatu</div><div role=\"option\" class=\"item\"><i class=\"flag va\"></i>Vatican City</div><div role=\"option\" class=\"item\"><i class=\"flag ve\"></i>Venezuela</div><div role=\"option\" class=\"item\"><i class=\"flag vn\"></i>Vietnam</div><div role=\"option\" class=\"item\"><i class=\"flag wf\"></i>Wallis and Futuna</div><div role=\"option\" class=\"item\"><i class=\"flag eh\"></i>Western Sahara</div><div role=\"option\" class=\"item\"><i class=\"flag ye\"></i>Yemen</div><div role=\"option\" class=\"item\"><i class=\"flag zm\"></i>Zambia</div><div role=\"option\" class=\"item\"><i class=\"flag zw\"></i>Zimbabwe</div></div></div>"
 ```
 
 ##     `Multiple Selection`
@@ -1531,7 +1531,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-dropdown fluid=\"\" multiple=\"\" options=\"[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]\" placeholder=\"Skills\" selection=\"\"></sui-dropdown>"
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui fluid multiple selection dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"default text\">Skills</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Angular</div><div role=\"option\" class=\"item\">CSS</div><div role=\"option\" class=\"item\">Graphic Design</div><div role=\"option\" class=\"item\">Ember</div><div role=\"option\" class=\"item\">HTML</div><div role=\"option\" class=\"item\">Information Architecture</div><div role=\"option\" class=\"item\">Javascript</div><div role=\"option\" class=\"item\">Mechanical Engineering</div><div role=\"option\" class=\"item\">Meteor</div><div role=\"option\" class=\"item\">NodeJS</div><div role=\"option\" class=\"item\">Plumbing</div><div role=\"option\" class=\"item\">Python</div><div role=\"option\" class=\"item\">Rails</div><div role=\"option\" class=\"item\">React</div><div role=\"option\" class=\"item\">Kitchen Repair</div><div role=\"option\" class=\"item\">Ruby</div><div role=\"option\" class=\"item\">UI Design</div><div role=\"option\" class=\"item\">User Experience</div></div></div>"
 ```
 
 ##     `Multiple Search Selection`
@@ -1539,7 +1539,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-dropdown multiple=\"\" fluid=\"\" options=\"[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]\" placeholder=\"Skills\" search=\"\" selection=\"\"></sui-dropdown>"
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui fluid multiple selection search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"default text\">Skills</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Alabama</div><div role=\"option\" class=\"item\">Alaska</div><div role=\"option\" class=\"item\">Arizona</div><div role=\"option\" class=\"item\">Arkansas</div><div role=\"option\" class=\"item\">California</div><div role=\"option\" class=\"item\">Colorado</div><div role=\"option\" class=\"item\">Connecticut</div><div role=\"option\" class=\"item\">Delaware</div><div role=\"option\" class=\"item\">District Of Columbia</div><div role=\"option\" class=\"item\">Florida</div><div role=\"option\" class=\"item\">Georgia</div><div role=\"option\" class=\"item\">Hawaii</div><div role=\"option\" class=\"item\">Idaho</div><div role=\"option\" class=\"item\">Illinois</div><div role=\"option\" class=\"item\">Indiana</div><div role=\"option\" class=\"item\">Iowa</div><div role=\"option\" class=\"item\">Kansas</div><div role=\"option\" class=\"item\">Kentucky</div><div role=\"option\" class=\"item\">Louisiana</div><div role=\"option\" class=\"item\">Maine</div><div role=\"option\" class=\"item\">Maryland</div><div role=\"option\" class=\"item\">Massachusetts</div><div role=\"option\" class=\"item\">Michigan</div><div role=\"option\" class=\"item\">Minnesota</div><div role=\"option\" class=\"item\">Mississippi</div><div role=\"option\" class=\"item\">Missouri</div><div role=\"option\" class=\"item\">Montana</div><div role=\"option\" class=\"item\">Nebraska</div><div role=\"option\" class=\"item\">Nevada</div><div role=\"option\" class=\"item\">New Hampshire</div><div role=\"option\" class=\"item\">New Jersey</div><div role=\"option\" class=\"item\">New Mexico</div><div role=\"option\" class=\"item\">New York</div><div role=\"option\" class=\"item\">North Carolina</div><div role=\"option\" class=\"item\">North Dakota</div><div role=\"option\" class=\"item\">Ohio</div><div role=\"option\" class=\"item\">Oklahoma</div><div role=\"option\" class=\"item\">Oregon</div><div role=\"option\" class=\"item\">Pennsylvania</div><div role=\"option\" class=\"item\">Rhode Island</div><div role=\"option\" class=\"item\">South Carolina</div><div role=\"option\" class=\"item\">South Dakota</div><div role=\"option\" class=\"item\">Tennessee</div><div role=\"option\" class=\"item\">Texas</div><div role=\"option\" class=\"item\">Utah</div><div role=\"option\" class=\"item\">Vermont</div><div role=\"option\" class=\"item\">Virginia</div><div role=\"option\" class=\"item\">Washington</div><div role=\"option\" class=\"item\">West Virginia</div><div role=\"option\" class=\"item\">Wisconsin</div><div role=\"option\" class=\"item\">Wyoming</div></div></div>"
 ```
 
 ##     `Search Dropdown`
@@ -1547,7 +1547,7 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><sui-dropdown button=\"\" floating=\"\" icon=\"world\" labeled=\"\" options=\"[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]\" search=\"\" text=\"Select Language\" class=\"icon\"></sui-dropdown></div>"
+"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Select Language</div><i aria-hidden=\"true\" class=\"world icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Arabic</div><div role=\"option\" class=\"item\">Chinese</div><div role=\"option\" class=\"item\">Danish</div><div role=\"option\" class=\"item\">Dutch</div><div role=\"option\" class=\"item\">English</div><div role=\"option\" class=\"item\">French</div><div role=\"option\" class=\"item\">German</div><div role=\"option\" class=\"item\">Greek</div><div role=\"option\" class=\"item\">Hungarian</div><div role=\"option\" class=\"item\">Italian</div><div role=\"option\" class=\"item\">Japanese</div><div role=\"option\" class=\"item\">Korean</div><div role=\"option\" class=\"item\">Lithuanian</div><div role=\"option\" class=\"item\">Persian</div><div role=\"option\" class=\"item\">Polish</div><div role=\"option\" class=\"item\">Portuguese</div><div role=\"option\" class=\"item\">Russian</div><div role=\"option\" class=\"item\">Spanish</div><div role=\"option\" class=\"item\">Swedish</div><div role=\"option\" class=\"item\">Turkish</div><div role=\"option\" class=\"item\">Vietnamese</div></div></button></div>"
 ```
 
 ##     `Button`
@@ -1555,8 +1555,8 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><sui-dropdown icon=\"file\" button=\"\" text=\"File\" class=\"labeled
-    icon\"><sui-dropdown-menu><sui-dropdown-item>New</sui-dropdown-item> <sui-dropdown-item>Open... <span class=\"description\">ctrl + o</span></sui-dropdown-item> <sui-dropdown-item>Save as... <span class=\"description\">ctrl + s</span></sui-dropdown-item> <sui-dropdown-item>Rename <span class=\"description\">ctrl + r</span></sui-dropdown-item> <sui-dropdown-item>Make a copy</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"folder\"></sui-icon>Move to folder</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"trash\"></sui-icon>Move to trash</sui-dropdown-item> <sui-dropdown-divider></sui-dropdown-divider> <sui-dropdown-item>Download as...</sui-dropdown-item></sui-dropdown-menu></sui-dropdown></div>"
+"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"labeled
+    icon ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"file icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></button></div>"
 ```
 
 ##     `Floating`
@@ -1564,7 +1564,7 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><sui-dropdown text=\"Save\" button=\"\" floating=\"\" class=\"teal\"><sui-dropdown-menu><sui-dropdown-item><sui-icon name=\"edit\"></sui-icon>Edit Post</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"delete\"></sui-icon>Remove Post</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"hide\"></sui-icon>Hide Post</sui-dropdown-item></sui-dropdown-menu></sui-dropdown></div>"
+"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"teal ui button floating dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Save</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\"><i class=\"edit icon\"></i>Edit Post</div> <div role=\"option\" class=\"item\"><i class=\"delete icon\"></i>Remove Post</div> <div role=\"option\" class=\"item\"><i class=\"hide icon\"></i>Hide Post</div></div></button></div>"
 ```
 
 ##   `Usage`
@@ -1574,7 +1574,7 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><sui-dropdown text=\"File\" direction=\"upward\"><sui-dropdown-menu><sui-dropdown-item>New</sui-dropdown-item> <sui-dropdown-item>Open... <span class=\"description\">ctrl + o</span></sui-dropdown-item> <sui-dropdown-item>Save as... <span class=\"description\">ctrl + s</span></sui-dropdown-item> <sui-dropdown-item>Rename <span class=\"description\">ctrl + r</span></sui-dropdown-item> <sui-dropdown-item>Make a copy</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"folder\"></sui-icon>Move to folder</sui-dropdown-item> <sui-dropdown-item><sui-icon name=\"trash\"></sui-icon>Move to trash</sui-dropdown-item> <sui-dropdown-divider></sui-dropdown-divider> <sui-dropdown-item>Download as...</sui-dropdown-item></sui-dropdown-menu></sui-dropdown></div>"
+"<div id=\"app\"><div role=\"listbox\" tabindex=\"0\" class=\"ui upward dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></div></div>"
 ```
 
 ##     `Maximum Selections`
@@ -1582,7 +1582,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-dropdown fluid=\"\" multiple=\"\" max-selections=\"3\" options=\"[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]\" placeholder=\"Skills\" selection=\"\"></sui-dropdown>"
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui fluid multiple selection dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"default text\">Skills</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Angular</div><div role=\"option\" class=\"item\">CSS</div><div role=\"option\" class=\"item\">Graphic Design</div><div role=\"option\" class=\"item\">Ember</div><div role=\"option\" class=\"item\">HTML</div><div role=\"option\" class=\"item\">Information Architecture</div><div role=\"option\" class=\"item\">Javascript</div><div role=\"option\" class=\"item\">Mechanical Engineering</div><div role=\"option\" class=\"item\">Meteor</div><div role=\"option\" class=\"item\">NodeJS</div><div role=\"option\" class=\"item\">Plumbing</div><div role=\"option\" class=\"item\">Python</div><div role=\"option\" class=\"item\">Rails</div><div role=\"option\" class=\"item\">React</div><div role=\"option\" class=\"item\">Kitchen Repair</div><div role=\"option\" class=\"item\">Ruby</div><div role=\"option\" class=\"item\">UI Design</div><div role=\"option\" class=\"item\">User Experience</div></div></div>"
 ```
 
 ## `EmbedExample`
@@ -1594,7 +1594,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-embed id=\"O6Xo21L0ybE\" placeholder=\"static/images/extras/image-16by9.png\" source=\"youtube\"></sui-embed>"
+"<div class=\"ui embed\"><i class=\"video play icon\"></i><img src=\"static/images/extras/image-16by9.png\" class=\"placeholder\"></div>"
 ```
 
 ##     `Vimeo`
@@ -1602,7 +1602,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-embed id=\"125292332\" placeholder=\"static/images/extras/vimeo-example.jpg\" source=\"vimeo\"></sui-embed>"
+"<div class=\"ui embed\"><i class=\"video play icon\"></i><img src=\"static/images/extras/vimeo-example.jpg\" class=\"placeholder\"></div>"
 ```
 
 ##     `Custom Content`
@@ -1610,7 +1610,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-embed icon=\"right circle arrow\" placeholder=\"static/images/extras/image-16by9.png\" url=\"http://www.myfav.es/jack\"></sui-embed>"
+"<div class=\"ui embed\"><i class=\"right circle arrow icon\"></i><img src=\"static/images/extras/image-16by9.png\" class=\"placeholder\"></div>"
 ```
 
 ##   `States`
@@ -1620,7 +1620,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-embed icon=\"arrow circle down\" id=\"90Omh7_I8vI\" placeholder=\"static/images/extras/image-16by9.png\" source=\"youtube\"></sui-embed> <sui-divider hidden=\"\"></sui-divider> <sui-button content=\"Activate\" icon=\"bomb\" label-position=\"left\"></sui-button></div>"
+"<div><div class=\"ui embed\"><i class=\"arrow circle down icon\"></i><img src=\"static/images/extras/image-16by9.png\" class=\"placeholder\"></div> <div class=\"ui hidden divider\"></div> <button role=\"button\" class=\"ui icon left labeled button\"><i class=\"bomb icon\"></i>Activate</button></div>"
 ```
 
 ##   `Variations`
@@ -1630,7 +1630,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-embed aspect-ratio=\"4:3\" id=\"HTZudKi36bo\" placeholder=\"static/images/extras/image-4by3.jpg\" source=\"youtube\"></sui-embed>"
+"<div class=\"ui 4:3 embed\"><i class=\"video play icon\"></i><img src=\"static/images/extras/image-4by3.jpg\" class=\"placeholder\"></div>"
 ```
 
 ##   `Usage`
@@ -1640,7 +1640,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-embed color=\"white\" id=\"D0WnZyxp_Wo\" placeholder=\"static/images/extras/image-16by9.png\" source=\"youtube\"></sui-embed>"
+"<div class=\"ui embed\"><i class=\"video play icon\"></i><img src=\"static/images/extras/image-16by9.png\" class=\"placeholder\"></div>"
 ```
 
 ##     `Iframe`
@@ -1648,7 +1648,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-embed color=\"white\" id=\"gJscrxxl_Bg\" iframe=\"[object Object]\" placeholder=\"static/images/extras/image-16by9.png\" source=\"youtube\"></sui-embed>"
+"<div class=\"ui embed\"><i class=\"video play icon\"></i><img src=\"static/images/extras/image-16by9.png\" class=\"placeholder\"></div>"
 ```
 
 ## `ModalExample`
@@ -1660,9 +1660,9 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-button>Show Modal</sui-button> <sui-modal><sui-modal-header>Select a Photo</sui-modal-header> <sui-modal-content image=\"\"><sui-image wrapped=\"\" size=\"medium\" src=\"static/images/avatar/large/rachel.png\"></sui-image> <sui-modal-description><sui-header>Default Profile Image</sui-header> <p>We've found the following gravatar image associated with your e-mail address.</p> <p>Is it okay to use this photo?</p></sui-modal-description></sui-modal-content> <sui-modal-actions><sui-button floated=\"right\" positive=\"\">
+"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none; animation-duration: 500ms;\"><div class=\"ui standart modal transition\" style=\"display: none; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <p>We've found the following gravatar image associated with your e-mail address.</p> <p>Is it okay to use this photo?</p></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui right floated positive button\">
         OK
-      </sui-button></sui-modal-actions></sui-modal></div>"
+      </button></div></div></div></div>"
 ```
 
 ## `ProgressExample`
@@ -1674,7 +1674,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress percent=\"10\" label=\"Uploading Files\"></sui-progress> <sui-button>-</sui-button> <sui-button>+</sui-button></div>"
+"<div><div data-percent=\"10\" class=\"ui progress\"><div class=\"bar\" style=\"width: 10%; transition-duration: 300ms;\"></div><div class=\"label\">Uploading Files</div></div> <button role=\"button\" class=\"ui button\">-</button> <button role=\"button\" class=\"ui button\">+</button></div>"
 ```
 
 ##     `Indicating`
@@ -1682,7 +1682,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress state=\"active\" indicating=\"\" percent=\"43\" label=\"43% Funded\"></sui-progress> <sui-button>-</sui-button> <sui-button>+</sui-button></div>"
+"<div><div data-percent=\"43\" class=\"ui progress active indicating\"><div class=\"bar\" style=\"width: 43%; transition-duration: 300ms;\"></div><div class=\"label\">43% Funded</div></div> <button role=\"button\" class=\"ui button\">-</button> <button role=\"button\" class=\"ui button\">+</button></div>"
 ```
 
 ##   `Content`
@@ -1692,7 +1692,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress percent=\"89\"></sui-progress></div>"
+"<div><div data-percent=\"89\" class=\"ui progress\"><div class=\"bar\" style=\"width: 89%; transition-duration: 300ms;\"></div></div></div>"
 ```
 
 ##     `Progress`
@@ -1700,7 +1700,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress progress=\"\" percent=\"17\"></sui-progress> <sui-button>-</sui-button> <sui-button>+</sui-button></div>"
+"<div><div data-percent=\"17\" class=\"ui progress\"><div class=\"bar\" style=\"width: 17%; transition-duration: 300ms;\"><div class=\"progress\"> 17% </div></div></div> <button role=\"button\" class=\"ui button\">-</button> <button role=\"button\" class=\"ui button\">+</button></div>"
 ```
 
 ##     `Label`
@@ -1708,7 +1708,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress progress=\"\" label=\"Uploading Files\" percent=\"63\"></sui-progress></div>"
+"<div><div data-percent=\"63\" class=\"ui progress\"><div class=\"bar\" style=\"width: 63%; transition-duration: 300ms;\"><div class=\"progress\"> 63% </div></div><div class=\"label\">Uploading Files</div></div></div>"
 ```
 
 ##   `States`
@@ -1718,7 +1718,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress state=\"active\"></sui-progress></div>"
+"<div><div data-percent=\"50\" class=\"ui progress active\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div></div>"
 ```
 
 ##     `Success`
@@ -1726,7 +1726,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress state=\"success\" percent=\"100\" progress=\"\" label=\"Everything worked, your file is all ready.\"></sui-progress></div>"
+"<div><div data-percent=\"100\" class=\"ui progress success\"><div class=\"bar\" style=\"width: 100%; transition-duration: 300ms;\"><div class=\"progress\"> 100% </div></div><div class=\"label\">Everything worked, your file is all ready.</div></div></div>"
 ```
 
 ##     `Warning`
@@ -1734,7 +1734,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress state=\"warning\" percent=\"100\" progress=\"\" label=\"Your file didn't meet the minimum resolution requirements.\"></sui-progress></div>"
+"<div><div data-percent=\"100\" class=\"ui progress warning\"><div class=\"bar\" style=\"width: 100%; transition-duration: 300ms;\"><div class=\"progress\"> 100% </div></div><div class=\"label\">Your file didn't meet the minimum resolution requirements.</div></div></div>"
 ```
 
 ##     `Error`
@@ -1742,7 +1742,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress state=\"error\" percent=\"100\" progress=\"\" label=\"There was an error.\"></sui-progress></div>"
+"<div><div data-percent=\"100\" class=\"ui progress error\"><div class=\"bar\" style=\"width: 100%; transition-duration: 300ms;\"><div class=\"progress\"> 100% </div></div><div class=\"label\">There was an error.</div></div></div>"
 ```
 
 ##     `Disabled`
@@ -1750,7 +1750,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-progress state=\"disabled\"></sui-progress></div>"
+"<div><div data-percent=\"50\" class=\"ui progress disabled\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div></div>"
 ```
 
 ##   `Variations`
@@ -1760,7 +1760,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-segment inverted=\"\"><sui-progress inverted=\"\" color=\"red\"></sui-progress> <sui-progress inverted=\"\" color=\"orange\"></sui-progress> <sui-progress inverted=\"\" color=\"yellow\"></sui-progress> <sui-progress inverted=\"\" color=\"olive\"></sui-progress> <sui-progress inverted=\"\" color=\"green\"></sui-progress> <sui-progress inverted=\"\" color=\"teal\"></sui-progress> <sui-progress inverted=\"\" color=\"blue\"></sui-progress> <sui-progress inverted=\"\" color=\"violet\"></sui-progress> <sui-progress inverted=\"\" color=\"purple\"></sui-progress> <sui-progress inverted=\"\" color=\"pink\"></sui-progress> <sui-progress inverted=\"\" color=\"brown\"></sui-progress> <sui-progress inverted=\"\" color=\"grey\"></sui-progress> <sui-progress inverted=\"\" color=\"black\"></sui-progress></sui-segment></div>"
+"<div><div class=\"ui inverted segment\"><div data-percent=\"50\" class=\"ui progress red inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress orange inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress yellow inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress olive inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress green inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress teal inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress blue inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress violet inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress purple inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress pink inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress brown inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress grey inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div> <div data-percent=\"50\" class=\"ui progress black inverted\"><div class=\"bar\" style=\"width: 50%; transition-duration: 300ms;\"></div></div></div></div>"
 ```
 
 ##     `Attached`
@@ -1768,7 +1768,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-segment><sui-progress attached=\"\" top=\"\" percent=\"43\" label=\"43% Funded\"></sui-progress> <sui-progress attached=\"\" bottom=\"\" color=\"green\" percent=\"43\" label=\"43% Funded\"></sui-progress></sui-segment> <sui-button>-</sui-button> <sui-button>+</sui-button></div>"
+"<div><div class=\"ui segment\"><div data-percent=\"43\" class=\"ui progress top attached\"><div class=\"bar\" style=\"width: 43%; transition-duration: 300ms;\"></div><div class=\"label\">43% Funded</div></div> <div data-percent=\"43\" class=\"ui progress green bottom attached\"><div class=\"bar\" style=\"width: 43%; transition-duration: 300ms;\"></div><div class=\"label\">43% Funded</div></div></div> <button role=\"button\" class=\"ui button\">-</button> <button role=\"button\" class=\"ui button\">+</button></div>"
 ```
 
 ## `RatingExample`
@@ -1780,7 +1780,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-rating rating=\"1\" max-rating=\"5\"></sui-rating></div>"
+"<div><div role=\"radiogroup\" class=\"ui rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"false\" aria-posinset=\"2\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"3\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"4\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"5\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i></div></div>"
 ```
 
 ##     `onRate Callback`
@@ -1788,7 +1788,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-rating rating=\"1\" max-rating=\"5\"></sui-rating> <pre>{}</pre></div>"
+"<div><div role=\"radiogroup\" class=\"ui rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"false\" aria-posinset=\"2\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"3\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"4\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"5\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i></div> <pre>{}</pre></div>"
 ```
 
 ## `CardExample`
@@ -1800,8 +1800,8 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><sui-image src=\"static/images/avatar/large/kristy.png\"></sui-image> <sui-card-content><sui-card-header>Kristy</sui-card-header> <sui-card-meta>Joined in 2013</sui-card-meta> <sui-card-description>Kristy is an art director living in New York.</sui-card-description></sui-card-content> <sui-card-content extra=\"\"><sui-icon name=\"user\"></sui-icon>
-      22 Friends</sui-card-content></sui-card></div>"
+"<div><div class=\"ui card\"><img src=\"static/images/avatar/large/kristy.png\" class=\"ui image\"> <div class=\"content\"><div class=\"header\">Kristy</div> <div class=\"meta\">Joined in 2013</div> <div class=\"description\">Kristy is an art director living in New York.</div></div> <div class=\"extra content\"><i class=\"user icon\"></i>
+      22 Friends</div></div></div>"
 ```
 
 ##     `Cards`
@@ -1809,10 +1809,10 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card-group items-per-row=\"3\"><sui-card><sui-card-content><sui-image src=\"static/images/avatar/small/elliot.jpg\" class=\"right floated\"></sui-image> <sui-card-header>Elliot Fu</sui-card-header> <sui-card-meta>Friends of Veronika</sui-card-meta> <sui-card-description>
+"<div><div class=\"ui three cards\"><div class=\"ui card\"><div class=\"content\"><img src=\"static/images/avatar/small/elliot.jpg\" class=\"right floated ui image\"> <div class=\"header\">Elliot Fu</div> <div class=\"meta\">Friends of Veronika</div> <div class=\"description\">
           Elliot requested permission to view your contact details
-        </sui-card-description></sui-card-content> <sui-card-content extra=\"\"><sui-container text-align=\"center\"><sui-button-group><sui-button basic=\"\" positive=\"\">Approve</sui-button> <sui-button basic=\"\" negative=\"\">Decline</sui-button></sui-button-group></sui-container></sui-card-content></sui-card> <sui-card><sui-card-content><sui-image src=\"static/images/avatar/small/jenny.jpg\" class=\"right floated\"></sui-image> <sui-card-header>Jenny Hess</sui-card-header> <sui-card-meta>New Member</sui-card-meta> <sui-card-description>
-          Jenny wants to add you to the group <b>best friends</b></sui-card-description></sui-card-content> <sui-card-content extra=\"\"><sui-container text-align=\"center\"><sui-button-group><sui-button basic=\"\" positive=\"\">Approve</sui-button> <sui-button basic=\"\" negative=\"\">Decline</sui-button></sui-button-group></sui-container></sui-card-content></sui-card></sui-card-group></div>"
+        </div></div> <div class=\"extra content\"><div class=\"ui center aligned container\"><div class=\"ui buttons\"><button role=\"button\" class=\"ui basic positive button\">Approve</button> <button role=\"button\" class=\"ui basic negative button\">Decline</button></div></div></div></div> <div class=\"ui card\"><div class=\"content\"><img src=\"static/images/avatar/small/jenny.jpg\" class=\"right floated ui image\"> <div class=\"header\">Jenny Hess</div> <div class=\"meta\">New Member</div> <div class=\"description\">
+          Jenny wants to add you to the group <b>best friends</b></div></div> <div class=\"extra content\"><div class=\"ui center aligned container\"><div class=\"ui buttons\"><button role=\"button\" class=\"ui basic positive button\">Approve</button> <button role=\"button\" class=\"ui basic negative button\">Decline</button></div></div></div></div></div></div>"
 ```
 
 ##   `Content`
@@ -1822,11 +1822,11 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><sui-card-content><sui-card-header>
+"<div><div class=\"ui card\"><div class=\"content\"><div class=\"header\">
         Project Timeline
-      </sui-card-header></sui-card-content> <sui-card-content><sui-header size=\"tiny\">ACTIVITY</sui-header> <div class=\"ui small feed\"><div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+      </div></div> <div class=\"content\"><div class=\"ui tiny header\">ACTIVITY</div> <div class=\"ui small feed\"><div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
             </div></div></div> <div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Stevie Feliciano</a> was added as an <a>Administrator</a></div></div></div> <div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Helen Troy</a> added two pictures
-            </div></div></div></div></sui-card-content> <sui-card-content extra=\"\"><sui-button>Join Project</sui-button></sui-card-content></sui-card></div>"
+            </div></div></div></div></div> <div class=\"extra content\"><button role=\"button\" class=\"ui button\">Join Project</button></div></div></div>"
 ```
 
 ##     `Image`
@@ -1834,8 +1834,8 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><sui-reveal animated=\"move\"><sui-reveal-content visible=\"\"><sui-image src=\"static/images/avatar/large/jenny.jpg\"></sui-image></sui-reveal-content> <sui-reveal-content hidden=\"\"><sui-image src=\"static/images/avatar/large/elliot.jpg\"></sui-image></sui-reveal-content></sui-reveal> <sui-card-content><sui-card-header>Team Fu &amp; Hess</sui-card-header> <sui-card-meta>Create in Sep 2014</sui-card-meta></sui-card-content> <sui-card-content extra=\"\"><sui-icon name=\"users\"></sui-icon>
-      2 Members</sui-card-content></sui-card></div>"
+"<div><div class=\"ui card\"><div class=\"ui move reveal\"><div class=\"ui visible content\"><img src=\"static/images/avatar/large/jenny.jpg\" class=\"ui image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/elliot.jpg\" class=\"ui image\"></div></div> <div class=\"content\"><div class=\"header\">Team Fu &amp; Hess</div> <div class=\"meta\">Create in Sep 2014</div></div> <div class=\"extra content\"><i class=\"users icon\"></i>
+      2 Members</div></div></div>"
 ```
 
 ##     `Header`
@@ -1843,12 +1843,12 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card-group items-per-row=\"3\"><sui-card><sui-card-content><sui-card-header>Elliot Fu</sui-card-header> <sui-card-meta>Friend</sui-card-meta> <sui-card-description>Elliot Fu is a film-maker from New York.</sui-card-description></sui-card-content></sui-card> <sui-card><sui-card-content><sui-card-header>Veronika Ossi</sui-card-header> <sui-card-meta>Friend</sui-card-meta> <sui-card-description>
+"<div><div class=\"ui three cards\"><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Elliot Fu</div> <div class=\"meta\">Friend</div> <div class=\"description\">Elliot Fu is a film-maker from New York.</div></div></div> <div class=\"ui card\"><div class=\"content\"><div class=\"header\">Veronika Ossi</div> <div class=\"meta\">Friend</div> <div class=\"description\">
           Veronika Ossi is a set designer living in New York
           who enjoys kittens, music, and partying.
-        </sui-card-description></sui-card-content></sui-card> <sui-card><sui-card-content><sui-card-header>Jenny Hess</sui-card-header> <sui-card-meta>Friend</sui-card-meta> <sui-card-description>
+        </div></div></div> <div class=\"ui card\"><div class=\"content\"><div class=\"header\">Jenny Hess</div> <div class=\"meta\">Friend</div> <div class=\"description\">
           Jenny is a student studying Media Management at the New School
-        </sui-card-description></sui-card-content></sui-card></sui-card-group></div>"
+        </div></div></div></div></div>"
 ```
 
 ##     `Metadata`
@@ -1856,7 +1856,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><sui-card-content><sui-card-header>Cute Dog</sui-card-header> <sui-card-meta><span>2 days ago</span> <a>Animals</a></sui-card-meta> <sui-image src=\"static/images/wireframes/paragraph.png\"></sui-image></sui-card-content></sui-card></div>"
+"<div><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\"><span>2 days ago</span> <a>Animals</a></div> <img src=\"static/images/wireframes/paragraph.png\" class=\"ui image\"></div></div></div>"
 ```
 
 ##     `Link`
@@ -1864,7 +1864,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><a href=\"#\"><sui-image src=\"static/images/avatar/large/steve.jpg\"></sui-image></a> <sui-card-content><sui-card-header><a>Steve Jobes</a></sui-card-header> <sui-card-meta><a>Last Seen 2 days ago</a></sui-card-meta></sui-card-content></sui-card></div>"
+"<div><div class=\"ui card\"><a href=\"#\"><img src=\"static/images/avatar/large/steve.jpg\" class=\"ui image\"></a> <div class=\"content\"><div class=\"header\"><a>Steve Jobes</a></div> <div class=\"meta\"><a>Last Seen 2 days ago</a></div></div></div></div>"
 ```
 
 ##     `Buttons`
@@ -1872,17 +1872,17 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card-group items-per-row=\"3\"><sui-card><sui-card-content><sui-card-header>Elliot Fu</sui-card-header> <sui-card-meta>Friend</sui-card-meta> <sui-card-description>
+"<div><div class=\"ui three cards\"><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Elliot Fu</div> <div class=\"meta\">Friend</div> <div class=\"description\">
           Elliot Fu is a film-maker from New York.
-        </sui-card-description></sui-card-content> <sui-button attached=\"bottom\"><sui-icon name=\"add\"></sui-icon> Add Friend
-      </sui-button></sui-card> <sui-card><sui-card-content><sui-card-header>Veronika Ossi</sui-card-header> <sui-card-meta>Friend</sui-card-meta> <sui-card-description>
+        </div></div> <button role=\"button\" class=\"ui bottom attached button\"><i class=\"add icon\"></i> Add Friend
+      </button></div> <div class=\"ui card\"><div class=\"content\"><div class=\"header\">Veronika Ossi</div> <div class=\"meta\">Friend</div> <div class=\"description\">
           Veronika Ossi is a set designer living in New York
           who enjoys kittens, music, and partying.
-        </sui-card-description></sui-card-content> <sui-button attached=\"bottom\"><sui-icon name=\"add\"></sui-icon> Add Friend
-      </sui-button></sui-card> <sui-card><sui-card-content><sui-card-header>Jenny Hess</sui-card-header> <sui-card-meta>Friend</sui-card-meta> <sui-card-description>
+        </div></div> <button role=\"button\" class=\"ui bottom attached button\"><i class=\"add icon\"></i> Add Friend
+      </button></div> <div class=\"ui card\"><div class=\"content\"><div class=\"header\">Jenny Hess</div> <div class=\"meta\">Friend</div> <div class=\"description\">
           Jenny is a student studying Media Management at the New School
-        </sui-card-description></sui-card-content> <sui-button attached=\"bottom\"><sui-icon name=\"add\"></sui-icon> Add Friend
-      </sui-button></sui-card></sui-card-group></div>"
+        </div></div> <button role=\"button\" class=\"ui bottom attached button\"><i class=\"add icon\"></i> Add Friend
+      </button></div></div></div>"
 ```
 
 ##     `Approval`
@@ -1890,10 +1890,10 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><sui-card-content><sui-card-header>Cute Dog
-        <sui-icon size=\"small\" name=\"like\" class=\"right floated\"></sui-icon> <sui-icon size=\"small\" name=\"star\" class=\"right floated\"></sui-icon></sui-card-header> <sui-image src=\"static/images/wireframes/paragraph.png\"></sui-image></sui-card-content> <sui-card-content extra=\"\"><span><sui-icon name=\"heart\"></sui-icon> Like
-      </span> <span slot=\"right\"><sui-icon name=\"star\"></sui-icon> Favorite
-      </span></sui-card-content></sui-card></div>"
+"<div><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Cute Dog
+        <i class=\"right floated like small icon\"></i> <i class=\"right floated star small icon\"></i></div> <img src=\"static/images/wireframes/paragraph.png\" class=\"ui image\"></div> <div class=\"extra content\"><span><i class=\"heart icon\"></i> Like
+      </span> <div class=\"right floated\"><span><i class=\"star icon\"></i> Favorite
+      </span></div></div></div></div>"
 ```
 
 ##     `Description`
@@ -1901,10 +1901,10 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><sui-card-content><sui-card-header>Cute Dog</sui-card-header> <sui-card-meta>2 days ago</sui-card-meta> <sui-card-description><p>
+"<div><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">2 days ago</div> <div class=\"description\"><p>
           Cute dogs come in a variety of shapes and sizes. Some cute dogs are cute for their
           adorable faces, others for their tiny stature, and even others for their massive size.
-        </p> <p>Many people also have their own barometers for what makes a cute dog.</p></sui-card-description></sui-card-content></sui-card></div>"
+        </p> <p>Many people also have their own barometers for what makes a cute dog.</p></div></div></div></div>"
 ```
 
 ##     `Extra Content`
@@ -1912,11 +1912,11 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card><sui-card-content><sui-card-header>Cute Dog</sui-card-header> <sui-card-meta>2 days ago</sui-card-meta> <sui-card-description><p>
+"<div><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">2 days ago</div> <div class=\"description\"><p>
           Cute dogs come in a variety of shapes and sizes. Some cute dogs are cute for their
           adorable faces, others for their tiny stature, and even others for their massive size.
-        </p> <p>Many people also have their own barometers for what makes a cute dog.</p></sui-card-description></sui-card-content> <sui-card-content extra=\"\"><sui-icon name=\"check\"></sui-icon> 121 Votes
-    </sui-card-content></sui-card></div>"
+        </p> <p>Many people also have their own barometers for what makes a cute dog.</p></div></div> <div class=\"extra content\"><i class=\"check icon\"></i> 121 Votes
+    </div></div></div>"
 ```
 
 ##   `Variations`
@@ -1926,7 +1926,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-grid columns=\"3\"><sui-grid-column><sui-card class=\"fluid\"><sui-image src=\"static/images/avatar/large/daniel.jpg\"></sui-image> <sui-card-content><sui-card-header>Daniel Louise</sui-card-header></sui-card-content></sui-card></sui-grid-column> <sui-grid-column><sui-card class=\"fluid\"><sui-image src=\"static/images/avatar/large/helen.jpg\"></sui-image> <sui-card-content><sui-card-header>Helen Troy</sui-card-header></sui-card-content></sui-card></sui-grid-column> <sui-grid-column><sui-card class=\"fluid\"><sui-image src=\"static/images/avatar/large/elliot.jpg\"></sui-image> <sui-card-content><sui-card-header>Elliot Fu</sui-card-header></sui-card-content></sui-card></sui-grid-column></sui-grid></div>"
+"<div><div class=\"ui three column grid\"><div class=\"column\"><div class=\"fluid ui card\"><img src=\"static/images/avatar/large/daniel.jpg\" class=\"ui image\"> <div class=\"content\"><div class=\"header\">Daniel Louise</div></div></div></div> <div class=\"column\"><div class=\"fluid ui card\"><img src=\"static/images/avatar/large/helen.jpg\" class=\"ui image\"> <div class=\"content\"><div class=\"header\">Helen Troy</div></div></div></div> <div class=\"column\"><div class=\"fluid ui card\"><img src=\"static/images/avatar/large/elliot.jpg\" class=\"ui image\"> <div class=\"content\"><div class=\"header\">Elliot Fu</div></div></div></div></div></div>"
 ```
 
 ##     `Centered Card`
@@ -1934,7 +1934,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card class=\"centered\"><sui-image src=\"static/images/avatar/large/elyse.png\"></sui-image> <sui-card-content><sui-card-header>Elyse</sui-card-header></sui-card-content></sui-card></div>"
+"<div><div class=\"centered ui card\"><img src=\"static/images/avatar/large/elyse.png\" class=\"ui image\"> <div class=\"content\"><div class=\"header\">Elyse</div></div></div></div>"
 ```
 
 ##     `Raised Card`
@@ -1942,8 +1942,8 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card class=\"raised\"><sui-card-content><sui-card-header>Cute Dog</sui-card-header> <sui-card-meta>Animals</sui-card-meta> <sui-image src=\"/static/images/wireframes/paragraph.png\"></sui-image></sui-card-content> <sui-card-content extra=\"\"><span slot=\"right\"><sui-image src=\"/static/images/avatar/small/matt.jpg\" shape=\"circular\" size=\"mini\"></sui-image> Matt
-      </span></sui-card-content></sui-card></div>"
+"<div><div class=\"raised ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">Animals</div> <img src=\"/static/images/wireframes/paragraph.png\" class=\"ui image\"></div> <div class=\"extra content\"><div class=\"right floated\"><span><img src=\"/static/images/avatar/small/matt.jpg\" class=\"ui mini circular image\"> Matt
+      </span></div></div></div></div>"
 ```
 
 ##     `Link Card`
@@ -1951,8 +1951,8 @@
 ####       `should match snapshot`
 
 ```
-"<div><a><sui-card><sui-card-content><sui-card-header>Cute Dog</sui-card-header> <sui-card-meta>Animals</sui-card-meta> <sui-image src=\"/static/images/wireframes/paragraph.png\"></sui-image></sui-card-content> <sui-card-content extra=\"\"><span slot=\"right\"><sui-image src=\"/static/images/avatar/small/matt.jpg\" shape=\"circular\" size=\"mini\"></sui-image> Matt
-      </span></sui-card-content></sui-card></a></div>"
+"<div><a><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">Animals</div> <img src=\"/static/images/wireframes/paragraph.png\" class=\"ui image\"></div> <div class=\"extra content\"><div class=\"right floated\"><span><img src=\"/static/images/avatar/small/matt.jpg\" class=\"ui mini circular image\"> Matt
+      </span></div></div></div></a></div>"
 ```
 
 ##     `Floated Content`
@@ -1960,9 +1960,9 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card class=\"raised\"><sui-card-content><sui-card-header>Cute Dog</sui-card-header> <sui-card-meta>Animals
-        <span class=\"right floated\">2 days ago</span></sui-card-meta> <sui-image src=\"/static/images/wireframes/paragraph.png\"></sui-image></sui-card-content> <sui-card-content extra=\"\"><span slot=\"right\"><sui-image src=\"/static/images/avatar/small/matt.jpg\" shape=\"circular\" size=\"mini\"></sui-image> Matt
-      </span></sui-card-content></sui-card></div>"
+"<div><div class=\"raised ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">Animals
+        <span class=\"right floated\">2 days ago</span></div> <img src=\"/static/images/wireframes/paragraph.png\" class=\"ui image\"></div> <div class=\"extra content\"><div class=\"right floated\"><span><img src=\"/static/images/avatar/small/matt.jpg\" class=\"ui mini circular image\"> Matt
+      </span></div></div></div></div>"
 ```
 
 ##     `Text Alignment`
@@ -1970,9 +1970,9 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card class=\"raised\"><sui-card-content><sui-card-header>Cute Dog</sui-card-header> <sui-card-meta>Animals
-        <span class=\"right floated\">2 days ago</span></sui-card-meta> <sui-image src=\"/static/images/wireframes/paragraph.png\"></sui-image></sui-card-content> <sui-card-content extra=\"\"><span slot=\"right\"><sui-image src=\"/static/images/avatar/small/matt.jpg\" shape=\"circular\" size=\"mini\"></sui-image> Matt
-      </span></sui-card-content></sui-card></div>"
+"<div><div class=\"raised ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">Animals
+        <span class=\"right floated\">2 days ago</span></div> <img src=\"/static/images/wireframes/paragraph.png\" class=\"ui image\"></div> <div class=\"extra content\"><div class=\"right floated\"><span><img src=\"/static/images/avatar/small/matt.jpg\" class=\"ui mini circular image\"> Matt
+      </span></div></div></div></div>"
 ```
 
 ##     `Colored`
@@ -1980,7 +1980,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card-group items-per-row=\"4\"><sui-card class=\"red\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"orange\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"yellow\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"olive\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"green\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"teal\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"blue\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"violet\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"purple\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"pink\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"brown\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"grey\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card> <sui-card class=\"black\"><sui-image src=\"static/images/wireframes/image.png\"></sui-image></sui-card></sui-card-group></div>"
+"<div><div class=\"ui four cards\"><div class=\"red ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"orange ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"yellow ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"olive ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"green ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"teal ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"blue ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"violet ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"purple ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"pink ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"brown ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"grey ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"black ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div></div></div>"
 ```
 
 ##     `Column Count`
@@ -1988,15 +1988,15 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card-group items-per-row=\"4\"><sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"4\"></sui-rating></sui-card-content></sui-card> <sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"2\"></sui-rating></sui-card-content></sui-card> <sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"3\"></sui-rating></sui-card-content></sui-card> <sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"4\"></sui-rating></sui-card-content></sui-card> <sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"3\"></sui-rating></sui-card-content></sui-card> <sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"3\"></sui-rating></sui-card-content></sui-card> <sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"4\"></sui-rating></sui-card-content></sui-card> <sui-card><sui-image src=\"static/images/wireframes/image.png\"></sui-image> <sui-card-content extra=\"\">
-        Rating: <sui-rating icon=\"star\" max-rating=\"4\" rating=\"4\"></sui-rating></sui-card-content></sui-card></sui-card-group></div>"
+"<div><div class=\"ui four cards\"><div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i></div></div></div> <div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"false\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i></div></div></div> <div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"false\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i></div></div></div> <div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i></div></div></div> <div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"false\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i></div></div></div> <div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"false\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i></div></div></div> <div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i></div></div></div> <div class=\"ui card\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <div class=\"extra content\">
+        Rating: <div role=\"radiogroup\" class=\"ui star rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"2\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"3\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"true\" aria-posinset=\"4\" aria-setsize=\"4\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i></div></div></div></div></div>"
 ```
 
 ##     `Stackable`
@@ -2004,7 +2004,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card-group items-per-row=\"3\" stackable=\"\"><sui-card><sui-image src=\"static/images/avatar/large/elliot.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/helen.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/jenny.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/veronika.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/stevie.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/steve.jpg\"></sui-image></sui-card></sui-card-group></div>"
+"<div><div class=\"ui three stackable cards\"><div class=\"ui card\"><img src=\"static/images/avatar/large/elliot.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/helen.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/jenny.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/veronika.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/stevie.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/steve.jpg\" class=\"ui image\"></div></div></div>"
 ```
 
 ##     `Doubling`
@@ -2012,7 +2012,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-card-group items-per-row=\"6\" class=\"doubling\"><sui-card><sui-image src=\"static/images/avatar/large/elliot.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/helen.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/jenny.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/veronika.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/stevie.jpg\"></sui-image></sui-card> <sui-card><sui-image src=\"static/images/avatar/large/steve.jpg\"></sui-image></sui-card></sui-card-group></div>"
+"<div><div class=\"doubling ui six cards\"><div class=\"ui card\"><img src=\"static/images/avatar/large/elliot.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/helen.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/jenny.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/veronika.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/stevie.jpg\" class=\"ui image\"></div> <div class=\"ui card\"><img src=\"static/images/avatar/large/steve.jpg\" class=\"ui image\"></div></div></div>"
 ```
 
 ## `CommentExample`
@@ -2024,12 +2024,12 @@
 ####       `should match snapshot`
 
 ```
-"<sui-comment-group><sui-header dividing=\"\">Comments</sui-header> <sui-comment><sui-comment-avatar src=\"static/images/avatar/small/matt.jpg\"></sui-comment-avatar> <sui-comment-content><sui-comment-author>Matt</sui-comment-author> <sui-comment-metadata><div>Today at 5:42PM</div></sui-comment-metadata> <sui-comment-text>How artistic!</sui-comment-text> <sui-comment-actions><sui-comment-action>Reply</sui-comment-action></sui-comment-actions></sui-comment-content></sui-comment> <sui-comment><sui-comment-avatar src=\"static/images/avatar/small/elliot.jpg\"></sui-comment-avatar> <sui-comment-content><sui-comment-author>Elliot Fu</sui-comment-author> <sui-comment-metadata><div>Yesterday at 12:30AM</div></sui-comment-metadata> <sui-comment-text><p>This has been very useful for my research. Thanks as well!</p></sui-comment-text> <sui-comment-actions><sui-comment-action>Reply</sui-comment-action></sui-comment-actions></sui-comment-content> <sui-comment-group><sui-comment><sui-comment-avatar src=\"static/images/avatar/small/jenny.jpg\"></sui-comment-avatar> <sui-comment-content><sui-comment-author>Jenny Hess</sui-comment-author> <sui-comment-metadata><div>Just now</div></sui-comment-metadata> <sui-comment-text>
+"<div class=\"ui comments\"><h3 class=\"ui dividing header\">Comments</h3> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/matt.jpg\"></div> <div class=\"content\"><a class=\"author\">Matt</a> <div class=\"metadata\"><div>Today at 5:42PM</div></div> <div class=\"text\">How artistic!</div> <div class=\"actions\"><a>Reply</a></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/elliot.jpg\"></div> <div class=\"content\"><a class=\"author\">Elliot Fu</a> <div class=\"metadata\"><div>Yesterday at 12:30AM</div></div> <div class=\"text\"><p>This has been very useful for my research. Thanks as well!</p></div> <div class=\"actions\"><a>Reply</a></div></div> <div class=\"ui comments\"><div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/jenny.jpg\"></div> <div class=\"content\"><a class=\"author\">Jenny Hess</a> <div class=\"metadata\"><div>Just now</div></div> <div class=\"text\">
             Elliot you are always so right :)
-          </sui-comment-text> <sui-comment-actions><sui-comment-action>Reply</sui-comment-action></sui-comment-actions></sui-comment-content></sui-comment></sui-comment-group></sui-comment> <sui-comment><sui-comment-avatar src=\"static/images/avatar/small/joe.jpg\"></sui-comment-avatar> <sui-comment-content><sui-comment-author>Joe Henderson</sui-comment-author> <sui-comment-metadata><div>5 days ago</div></sui-comment-metadata> <sui-comment-text>
+          </div> <div class=\"actions\"><a>Reply</a></div></div></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/joe.jpg\"></div> <div class=\"content\"><a class=\"author\">Joe Henderson</a> <div class=\"metadata\"><div>5 days ago</div></div> <div class=\"text\">
         Dude, this is awesome. Thanks so much
-      </sui-comment-text> <sui-comment-actions><sui-comment-action>Reply</sui-comment-action></sui-comment-actions></sui-comment-content></sui-comment> <form reply=\"\"><form-text-area></form-text-area> <sui-button content=\"Add
-      Reply\" label-position=\"left\" icon=\"edit\" primary=\"\"></sui-button></form></sui-comment-group>"
+      </div> <div class=\"actions\"><a>Reply</a></div></div></div> <form reply=\"\"><form-text-area></form-text-area> <button role=\"button\" class=\"ui icon left labeled primary button\"><i class=\"edit icon\"></i>Add
+      Reply</button></form></div>"
 ```
 
 ## `FeedExample`
@@ -2041,24 +2041,24 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed><sui-feed-event><sui-feed-label><img src=\"static/images/avatar/small/elliot.jpg\"></sui-feed-label> <sui-feed-content><sui-feed-summary><sui-feed-user>Elliot Fu</sui-feed-user> added you as a friend
-        <sui-feed-date>1 Hour Ago</sui-feed-date></sui-feed-summary> <sui-feed-meta><sui-feed-like><sui-icon name=\"like\"></sui-icon>
+"<div class=\"ui feed\"><div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/elliot.jpg\"></div> <div class=\"content\"><div class=\"summary\"><a class=\"user\">Elliot Fu</a> added you as a friend
+        <div class=\"date\">1 Hour Ago</div></div> <div class=\"meta\"><a class=\"like\"><i class=\"like icon\"></i>
           4 Likes
-        </sui-feed-like></sui-feed-meta></sui-feed-content></sui-feed-event> <sui-feed-event><sui-feed-label image=\"static/images/avatar/small/helen.jpg\"></sui-feed-label> <sui-feed-content><sui-feed-summary><a>Helen Troy</a> added <a>2 new illustrations</a> <sui-feed-date>4 days ago</sui-feed-date></sui-feed-summary> <sui-feed-extra images=\"\"><a><img src=\"static/images/wireframes/image.png\"></a> <a><img src=\"static/images/wireframes/image.png\"></a></sui-feed-extra> <sui-feed-meta><sui-feed-like><sui-icon name=\"like\"></sui-icon>
+        </a></div></div></div> <div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/helen.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"summary\"><a>Helen Troy</a> added <a>2 new illustrations</a> <div class=\"date\">4 days ago</div></div> <div class=\"images extra\"><a><img src=\"static/images/wireframes/image.png\"></a> <a><img src=\"static/images/wireframes/image.png\"></a></div> <div class=\"meta\"><a class=\"like\"><i class=\"like icon\"></i>
           1 Like
-        </sui-feed-like></sui-feed-meta></sui-feed-content></sui-feed-event> <sui-feed-event><sui-feed-label image=\"static/images/avatar/small/jenny.jpg\"></sui-feed-label> <sui-feed-content><sui-feed-summary date=\"2 Days Ago\" user=\"Jenny Hess\" content=\" add you as a friend\"></sui-feed-summary> <sui-feed-meta><sui-feed-like><sui-icon name=\"like\"></sui-icon>
+        </a></div></div></div> <div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/jenny.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"summary\"><a class=\"user\">Jenny Hess</a> add you as a friend<div class=\"date\">2 Days Ago</div></div> <div class=\"meta\"><a class=\"like\"><i class=\"like icon\"></i>
           8 Likes
-        </sui-feed-like></sui-feed-meta></sui-feed-content></sui-feed-event> <sui-feed-event><sui-feed-label image=\"static/images/avatar/small/joe.jpg\"></sui-feed-label> <sui-feed-content><sui-feed-summary><a>Joe Henderson</a> posted on his page
-        <sui-feed-date>3 days ago</sui-feed-date></sui-feed-summary> <sui-feed-extra text=\"\">
+        </a></div></div></div> <div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/joe.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"summary\"><a>Joe Henderson</a> posted on his page
+        <div class=\"date\">3 days ago</div></div> <div class=\"text extra\">
         Ours is a life of constant reruns. We're always circling back to where we'd we started,
         then starting all over again. Even if we don't run extra laps that day, we surely will
         come back for more of the same another day soon.
-      </sui-feed-extra> <sui-feed-meta><sui-feed-like><sui-icon name=\"like\"></sui-icon>
+      </div> <div class=\"meta\"><a class=\"like\"><i class=\"like icon\"></i>
           5 Likes
-        </sui-feed-like></sui-feed-meta></sui-feed-content></sui-feed-event> <sui-feed-event><sui-feed-label image=\"static/images/avatar/small/justen.jpg\"></sui-feed-label> <sui-feed-content><sui-feed-summary><a>Justen Kitsune</a> added <a>2 new photos</a> of you
-        <sui-feed-date>4 days ago</sui-feed-date></sui-feed-summary> <sui-feed-extra images=\"\"><a><img src=\"static/images/wireframes/image.png\"></a> <a><img src=\"static/images/wireframes/image.png\"></a></sui-feed-extra> <sui-feed-meta><sui-feed-like><sui-icon name=\"like\"></sui-icon>
+        </a></div></div></div> <div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/justen.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"summary\"><a>Justen Kitsune</a> added <a>2 new photos</a> of you
+        <div class=\"date\">4 days ago</div></div> <div class=\"images extra\"><a><img src=\"static/images/wireframes/image.png\"></a> <a><img src=\"static/images/wireframes/image.png\"></a></div> <div class=\"meta\"><a class=\"like\"><i class=\"like icon\"></i>
           41 Likes
-        </sui-feed-like></sui-feed-meta></sui-feed-content></sui-feed-event></sui-feed>"
+        </a></div></div></div></div>"
 ```
 
 ##   `Content`
@@ -2068,8 +2068,8 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed><sui-feed-event><sui-feed-label><sui-image src=\"static/images/avatar/small/elliot.jpg\"></sui-image></sui-feed-label> <sui-feed-content>
-      You added Elliot Fu to the group <a>Coworkers</a></sui-feed-content></sui-feed-event></sui-feed>"
+"<div class=\"ui feed\"><div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/elliot.jpg\" class=\"ui image\"></div> <div class=\"content\">
+      You added Elliot Fu to the group <a>Coworkers</a></div></div></div>"
 ```
 
 ##     `Icon Label`
@@ -2077,9 +2077,9 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed><sui-feed-event><sui-feed-label><sui-icon name=\"pencil\"></sui-icon></sui-feed-label> <sui-feed-content><sui-feed-date>Today</sui-feed-date> <sui-feed-summary>
+"<div class=\"ui feed\"><div class=\"event\"><div class=\"label\"><i class=\"pencil icon\"></i></div> <div class=\"content\"><div class=\"date\">Today</div> <div class=\"summary\">
         You posted on your friend <a>Stevie Feliciano's</a> wall.
-      </sui-feed-summary></sui-feed-content></sui-feed-event></sui-feed>"
+      </div></div></div></div>"
 ```
 
 ##     `Content Date`
@@ -2087,9 +2087,9 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed><sui-feed-event><sui-feed-label><sui-image src=\"static/images/avatar/small/jenny.jpg\"></sui-image></sui-feed-label> <sui-feed-content><sui-feed-date>3 days ago</sui-feed-date> <sui-feed-summary>
+"<div class=\"ui feed\"><div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/jenny.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"date\">3 days ago</div> <div class=\"summary\">
         You added <a>Jenny Hess</a> to your <a>coworker</a> group.
-      </sui-feed-summary></sui-feed-content></sui-feed-event></sui-feed>"
+      </div></div></div></div>"
 ```
 
 ##     `Summary Date`
@@ -2097,9 +2097,9 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed><sui-feed-event><sui-feed-label><sui-image src=\"static/images/avatar/small/jenny.jpg\"></sui-image></sui-feed-label> <sui-feed-content><sui-feed-summary>
+"<div class=\"ui feed\"><div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/jenny.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"summary\">
         You added <a>Jenny Hess</a> to your <a>coworker</a> group.
-        <sui-feed-date>3 days ago</sui-feed-date></sui-feed-summary></sui-feed-content></sui-feed-event></sui-feed>"
+        <div class=\"date\">3 days ago</div></div></div></div></div>"
 ```
 
 ##     `Extra Images`
@@ -2107,8 +2107,8 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed><sui-feed-event><sui-feed-label image=\"static/images/avatar/small/helen.jpg\"></sui-feed-label> <sui-feed-content><sui-feed-date>3 days ago</sui-feed-date> <sui-feed-summary><a>Helen Troy</a> added 2 photos
-      </sui-feed-summary> <sui-feed-extra images=\"\"><a><img src=\"static/images/wireframes/image.png\"></a> <a><img src=\"static/images/wireframes/image.png\"></a></sui-feed-extra></sui-feed-content></sui-feed-event></sui-feed>"
+"<div class=\"ui feed\"><div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/helen.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"date\">3 days ago</div> <div class=\"summary\"><a>Helen Troy</a> added 2 photos
+      </div> <div class=\"images extra\"><a><img src=\"static/images/wireframes/image.png\"></a> <a><img src=\"static/images/wireframes/image.png\"></a></div></div></div></div>"
 ```
 
 ##     `Extra Text`
@@ -2116,10 +2116,10 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed><sui-feed-event><sui-feed-label image=\"static/images/avatar/small/laura.jpg\"></sui-feed-label> <sui-feed-content><sui-feed-date>3 days ago</sui-feed-date> <sui-feed-summary><a>Laura Faucet</a> created a post
-      </sui-feed-summary> <sui-feed-extra text=\"\">
+"<div class=\"ui feed\"><div class=\"event\"><div class=\"label\"><img src=\"static/images/avatar/small/laura.jpg\" class=\"ui image\"></div> <div class=\"content\"><div class=\"date\">3 days ago</div> <div class=\"summary\"><a>Laura Faucet</a> created a post
+      </div> <div class=\"text extra\">
         Have you seen what's going on in Israel? Can you believe it.
-      </sui-feed-extra></sui-feed-content></sui-feed-event></sui-feed>"
+      </div></div></div></div>"
 ```
 
 ##   `Variations`
@@ -2129,11 +2129,11 @@
 ####       `should match snapshot`
 
 ```
-"<sui-feed size=\"small\"><sui-header>Followers Activity</sui-header> <sui-feed-event><sui-feed-content><sui-feed-summary><a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
-      </sui-feed-summary></sui-feed-content></sui-feed-event> <sui-feed-event><sui-feed-content><sui-feed-summary><a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
-      </sui-feed-summary></sui-feed-content></sui-feed-event> <sui-feed-event><sui-feed-content><sui-feed-summary><a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
-      </sui-feed-summary></sui-feed-content></sui-feed-event> <sui-feed-event><sui-feed-content><sui-feed-summary><a>Christian Rocha</a> signed up for the site.
-      </sui-feed-summary></sui-feed-content></sui-feed-event></sui-feed>"
+"<div class=\"ui small feed\"><h4 class=\"ui header\">Followers Activity</h4> <div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
+      </div></div></div> <div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
+      </div></div></div> <div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
+      </div></div></div> <div class=\"event\"><div class=\"content\"><div class=\"summary\"><a>Christian Rocha</a> signed up for the site.
+      </div></div></div></div>"
 ```
 
 ## `ItemExample`
@@ -2145,17 +2145,17 @@
 ####       `should match snapshot`
 
 ```
-"<sui-item-group><sui-item><sui-item-image src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content><sui-item-header>Header</sui-item-header> <sui-item-meta><span>Description</span></sui-item-meta> <sui-item-description><p>
+"<div class=\"ui items\"><div class=\"item\"><div class=\"image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"content\"><div class=\"header\">Header</div> <div class=\"meta\"><span>Description</span></div> <div class=\"description\"><p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
           invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        </p></sui-item-description> <sui-item-extra>
+        </p></div> <div class=\"extra\">
         Additional Details
-      </sui-item-extra></sui-item-content></sui-item> <sui-item><sui-item-image src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content><sui-item-header>Header</sui-item-header> <sui-item-meta><span>Description</span></sui-item-meta> <sui-item-description><p>
+      </div></div></div> <div class=\"item\"><div class=\"image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"content\"><div class=\"header\">Header</div> <div class=\"meta\"><span>Description</span></div> <div class=\"description\"><p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
           invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        </p></sui-item-description> <sui-item-extra>
+        </p></div> <div class=\"extra\">
         Additional Details
-      </sui-item-extra></sui-item-content></sui-item></sui-item-group>"
+      </div></div></div></div>"
 ```
 
 ##   `Content`
@@ -2165,7 +2165,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-item-group divided=\"\"><sui-item><sui-item-image src=\"static/images/wireframes/image.png\"></sui-item-image></sui-item> <sui-item><sui-item-image src=\"static/images/wireframes/image.png\"></sui-item-image></sui-item> <sui-item><sui-item-image src=\"static/images/wireframes/image.png\"></sui-item-image></sui-item></sui-item-group>"
+"<div class=\"ui divided items\"><div class=\"item\"><div class=\"image\"><img src=\"static/images/wireframes/image.png\"></div></div> <div class=\"item\"><div class=\"image\"><img src=\"static/images/wireframes/image.png\"></div></div> <div class=\"item\"><div class=\"image\"><img src=\"static/images/wireframes/image.png\"></div></div></div>"
 ```
 
 ##     `Content`
@@ -2173,7 +2173,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-item-group divided=\"\"><sui-item><sui-item-image size=\"tiny\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content vertical-align=\"middle\">Content A</sui-item-content></sui-item> <sui-item><sui-item-image size=\"tiny\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content vertical-align=\"middle\">Content B</sui-item-content></sui-item> <sui-item><sui-item-image size=\"tiny\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content vertical-align=\"middle\">Content C</sui-item-content></sui-item></sui-item-group>"
+"<div class=\"ui divided items\"><div class=\"item\"><div class=\"ui tiny image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"middle aligned content\">Content A</div></div> <div class=\"item\"><div class=\"ui tiny image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"middle aligned content\">Content B</div></div> <div class=\"item\"><div class=\"ui tiny image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"middle aligned content\">Content C</div></div></div>"
 ```
 
 ##     `Header`
@@ -2181,7 +2181,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-item-group divided=\"\"><sui-item><sui-item-image size=\"tiny\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content vertical-align=\"middle\"><sui-item-header href=\"javascript:void(0)\">12 Years a Slave</sui-item-header></sui-item-content></sui-item> <sui-item><sui-item-image size=\"tiny\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content vertical-align=\"middle\"><sui-item-header href=\"javascript:void(0)\">My Neighbor Totoro</sui-item-header></sui-item-content></sui-item> <sui-item><sui-item-image size=\"tiny\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content vertical-align=\"middle\"><sui-item-header href=\"javascript:void(0)\">Watchmen</sui-item-header></sui-item-content></sui-item></sui-item-group>"
+"<div class=\"ui divided items\"><div class=\"item\"><div class=\"ui tiny image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"middle aligned content\"><a href=\"javascript:void(0)\" class=\"header\">12 Years a Slave</a></div></div> <div class=\"item\"><div class=\"ui tiny image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"middle aligned content\"><a href=\"javascript:void(0)\" class=\"header\">My Neighbor Totoro</a></div></div> <div class=\"item\"><div class=\"ui tiny image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"middle aligned content\"><a href=\"javascript:void(0)\" class=\"header\">Watchmen</a></div></div></div>"
 ```
 
 ##     `Metadata`
@@ -2189,16 +2189,16 @@
 ####       `should match snapshot`
 
 ```
-"<sui-item-group divided=\"\"><sui-item><sui-item-image size=\"small\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content><sui-item-header>Arrowhead Valley Camp</sui-item-header> <sui-item-meta><span class=\"price\">$1200</span> <span class=\"stay\">1 Month</span></sui-item-meta> <sui-item-description><p>
+"<div class=\"ui divided items\"><div class=\"item\"><div class=\"ui small image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"content\"><div class=\"header\">Arrowhead Valley Camp</div> <div class=\"meta\"><span class=\"price\">$1200</span> <span class=\"stay\">1 Month</span></div> <div class=\"description\"><p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
           invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        </p></sui-item-description></sui-item-content></sui-item> <sui-item><sui-item-image size=\"small\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content><sui-item-header>Buck's Homebrew Stayaway</sui-item-header> <sui-item-meta><span class=\"price\">$1000</span> <span class=\"stay\">2 Weeks</span></sui-item-meta> <sui-item-description><p>
+        </p></div></div></div> <div class=\"item\"><div class=\"ui small image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"content\"><div class=\"header\">Buck's Homebrew Stayaway</div> <div class=\"meta\"><span class=\"price\">$1000</span> <span class=\"stay\">2 Weeks</span></div> <div class=\"description\"><p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
           invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        </p></sui-item-description></sui-item-content></sui-item> <sui-item><sui-item-image size=\"small\" src=\"static/images/wireframes/image.png\"></sui-item-image> <sui-item-content><sui-item-header>Astrology Camp</sui-item-header> <sui-item-meta><span class=\"price\">$1600</span> <span class=\"stay\">6 Weeks</span></sui-item-meta> <sui-item-description><p>
+        </p></div></div></div> <div class=\"item\"><div class=\"ui small image\"><img src=\"static/images/wireframes/image.png\"></div> <div class=\"content\"><div class=\"header\">Astrology Camp</div> <div class=\"meta\"><span class=\"price\">$1600</span> <span class=\"stay\">6 Weeks</span></div> <div class=\"description\"><p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
           invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        </p></sui-item-description></sui-item-content></sui-item></sui-item-group>"
+        </p></div></div></div></div>"
 ```
 
 ## `StatisticExample`
@@ -2210,7 +2210,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"single-example\"><sui-statistic><sui-statistic-value>5,550</sui-statistic-value> <sui-statistic-label>Downloads</sui-statistic-label></sui-statistic></div> <div class=\"single-example\"><sui-statistic><sui-statistic-label>Downloads</sui-statistic-label> <sui-statistic-value>5,550</sui-statistic-value></sui-statistic></div></div>"
+"<div><div class=\"single-example\"><div class=\"ui statistic\"><div class=\"value\">5,550</div> <div class=\"label\">Downloads</div></div></div> <div class=\"single-example\"><div class=\"ui statistic\"><div class=\"label\">Downloads</div> <div class=\"value\">5,550</div></div></div></div>"
 ```
 
 ##     `Statistic Group`
@@ -2218,7 +2218,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-statistics-group><sui-statistic in-group=\"\"><sui-statistic-value>22</sui-statistic-value> <sui-statistic-label>Faves</sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value>31,200</sui-statistic-value> <sui-statistic-label>Views</sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value>22</sui-statistic-value> <sui-statistic-label>Members</sui-statistic-label></sui-statistic></sui-statistics-group>"
+"<div class=\"ui statistics\"><div class=\"statistic\" in-group=\"\"><div class=\"value\">22</div> <div class=\"label\">Faves</div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\">31,200</div> <div class=\"label\">Views</div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\">22</div> <div class=\"label\">Members</div></div></div>"
 ```
 
 ##   `Content`
@@ -2228,23 +2228,23 @@
 ####       `should match snapshot`
 
 ```
-"<sui-statistics-group><sui-statistic in-group=\"\"><sui-statistic-value>
+"<div class=\"ui statistics\"><div class=\"statistic\" in-group=\"\"><div class=\"value\">
       22
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Saves
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value text=\"\">
+    </div></div> <div class=\"statistic\" in-group=\"\"><div class=\"text value\">
       Three<br>
       Thousand
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Signups
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value><i class=\"plane icon\"></i> 5
-    </sui-statistic-value> <sui-statistic-label>
+    </div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\"><i class=\"plane icon\"></i> 5
+    </div> <div class=\"label\">
       Flights
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value><img src=\"static/images/avatar/small/joe.jpg\" class=\"ui circular inline image\">
+    </div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\"><img src=\"static/images/avatar/small/joe.jpg\" class=\"ui circular inline image\">
       42
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Team Members
-    </sui-statistic-label></sui-statistic></sui-statistics-group>"
+    </div></div></div>"
 ```
 
 ##     `Label`
@@ -2252,7 +2252,7 @@
 ####       `should match snapshot`
 
 ```
-"<sui-statistic><sui-statistic-value>2,204</sui-statistic-value> <sui-statistic-label>Views</sui-statistic-label></sui-statistic>"
+"<div class=\"ui statistic\"><div class=\"value\">2,204</div> <div class=\"label\">Views</div></div>"
 ```
 
 ##   `Variations`
@@ -2262,7 +2262,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"single-example\"><sui-statistic horizontal=\"\"><sui-statistic-value>2,204</sui-statistic-value> <sui-statistic-label>Views</sui-statistic-label></sui-statistic></div> <div class=\"single-example\"><sui-statistics-group horizontal=\"\"><sui-statistic in-group=\"\"><sui-statistic-value>22</sui-statistic-value> <sui-statistic-label>Faves</sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value>31,200</sui-statistic-value> <sui-statistic-label>Views</sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value>22</sui-statistic-value> <sui-statistic-label>Members</sui-statistic-label></sui-statistic></sui-statistics-group></div></div>"
+"<div><div class=\"single-example\"><div class=\"ui statistic horizontal\"><div class=\"value\">2,204</div> <div class=\"label\">Views</div></div></div> <div class=\"single-example\"><div class=\"ui statistics horizontal\"><div class=\"statistic\" in-group=\"\"><div class=\"value\">22</div> <div class=\"label\">Faves</div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\">31,200</div> <div class=\"label\">Views</div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\">22</div> <div class=\"label\">Members</div></div></div></div></div>"
 ```
 
 ##     `Colored`
@@ -2270,55 +2270,55 @@
 ####       `should match snapshot`
 
 ```
-"<sui-statistics-group><sui-statistic in-group=\"\" color=\"red\"><sui-statistic-value>
+"<div class=\"ui statistics\"><div class=\"statistic red\" in-group=\"\"><div class=\"value\">
       27
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Red
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"orange\"><sui-statistic-value>
+    </div></div> <div class=\"statistic orange\" in-group=\"\"><div class=\"value\">
       8
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Orange
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"yellow\"><sui-statistic-value>
+    </div></div> <div class=\"statistic yellow\" in-group=\"\"><div class=\"value\">
       28
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Yellow
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"olive\"><sui-statistic-value>
+    </div></div> <div class=\"statistic olive\" in-group=\"\"><div class=\"value\">
       7
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Olive
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"green\"><sui-statistic-value>
+    </div></div> <div class=\"statistic green\" in-group=\"\"><div class=\"value\">
       14
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Green
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"teal\"><sui-statistic-value>
+    </div></div> <div class=\"statistic teal\" in-group=\"\"><div class=\"value\">
       82
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Teal
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"blue\"><sui-statistic-value>
+    </div></div> <div class=\"statistic blue\" in-group=\"\"><div class=\"value\">
       1
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Blue
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"violet\"><sui-statistic-value>
+    </div></div> <div class=\"statistic violet\" in-group=\"\"><div class=\"value\">
       22
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Violet
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"purple\"><sui-statistic-value>
+    </div></div> <div class=\"statistic purple\" in-group=\"\"><div class=\"value\">
       23
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Purple
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"pink\"><sui-statistic-value>
+    </div></div> <div class=\"statistic pink\" in-group=\"\"><div class=\"value\">
       15
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Pink
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"brown\"><sui-statistic-value>
+    </div></div> <div class=\"statistic brown\" in-group=\"\"><div class=\"value\">
       36
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Brown
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\" color=\"grey\"><sui-statistic-value>
+    </div></div> <div class=\"statistic grey\" in-group=\"\"><div class=\"value\">
       49
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Grey
-    </sui-statistic-label></sui-statistic></sui-statistics-group>"
+    </div></div></div>"
 ```
 
 ##     `Inverted`
@@ -2326,59 +2326,59 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment inverted=\"\"><sui-statistics-group><sui-statistic inverted=\"\"><sui-statistic-value>
+"<div class=\"ui inverted segment\"><div class=\"ui statistics\"><div class=\"statistic inverted\"><div class=\"value\">
         54
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Inverted
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"red\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic red inverted\"><div class=\"value\">
         27
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Red
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"orange\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic orange inverted\"><div class=\"value\">
         8
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Orange
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"yellow\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic yellow inverted\"><div class=\"value\">
         28
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Yellow
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"olive\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic olive inverted\"><div class=\"value\">
         7
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Olive
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"green\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic green inverted\"><div class=\"value\">
         14
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Green
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"teal\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic teal inverted\"><div class=\"value\">
         82
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Teal
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"blue\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic blue inverted\"><div class=\"value\">
         1
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Blue
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"violet\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic violet inverted\"><div class=\"value\">
         22
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Violet
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"purple\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic purple inverted\"><div class=\"value\">
         23
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Purple
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"pink\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic pink inverted\"><div class=\"value\">
         15
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Pink
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"brown\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic brown inverted\"><div class=\"value\">
         36
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Brown
-      </sui-statistic-label></sui-statistic> <sui-statistic color=\"grey\" inverted=\"\"><sui-statistic-value>
+      </div></div> <div class=\"statistic grey inverted\"><div class=\"value\">
         49
-      </sui-statistic-value> <sui-statistic-label>
+      </div> <div class=\"label\">
         Grey
-      </sui-statistic-label></sui-statistic></sui-statistics-group></sui-segment>"
+      </div></div></div></div>"
 ```
 
 ##     `Evenly Divided`
@@ -2386,23 +2386,23 @@
 ####       `should match snapshot`
 
 ```
-"<sui-statistics-group columns=\"4\"><sui-statistic in-group=\"\"><sui-statistic-value>
+"<div class=\"four ui statistics\"><div class=\"statistic\" in-group=\"\"><div class=\"value\">
       22
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Saves
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value text=\"\">
+    </div></div> <div class=\"statistic\" in-group=\"\"><div class=\"text value\">
       Three<br>
       Thousand
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Signups
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value><i class=\"plane icon\"></i> 5
-    </sui-statistic-value> <sui-statistic-label>
+    </div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\"><i class=\"plane icon\"></i> 5
+    </div> <div class=\"label\">
       Flights
-    </sui-statistic-label></sui-statistic> <sui-statistic in-group=\"\"><sui-statistic-value><img src=\"static/images/avatar/small/joe.jpg\" class=\"ui circular inline image\">
+    </div></div> <div class=\"statistic\" in-group=\"\"><div class=\"value\"><img src=\"static/images/avatar/small/joe.jpg\" class=\"ui circular inline image\">
       42
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Team Members
-    </sui-statistic-label></sui-statistic></sui-statistics-group>"
+    </div></div></div>"
 ```
 
 ##     `Floated`
@@ -2410,11 +2410,11 @@
 ####       `should match snapshot`
 
 ```
-"<sui-segment><sui-statistic floated=\"right\"><sui-statistic-value>
+"<div class=\"ui segment\"><div class=\"ui statistic right floated\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <p>
+    </div></div> <p>
     Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
     est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum
     ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
@@ -2423,11 +2423,11 @@
     Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
     nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
     fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
-  </p> <sui-statistic floated=\"left\"><sui-statistic-value>
+  </p> <div class=\"ui statistic left floated\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label class=\"label\">
+    </div> <div class=\"label label\">
       Views
-    </sui-statistic-label></sui-statistic> <p>
+    </div></div> <p>
     Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
     adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
     utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
@@ -2436,7 +2436,7 @@
     Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
     nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
     fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
-  </p></sui-segment>"
+  </p></div>"
 ```
 
 ##     `Size`
@@ -2444,54 +2444,54 @@
 ####       `should match snapshot`
 
 ```
-"<div><sui-statistic horizontal=\"\" size=\"mini\"><sui-statistic-value>
+"<div><div class=\"ui statistic mini horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-statistic horizontal=\"\" size=\"tiny\"><sui-statistic-value>
+    </div></div> <div class=\"ui statistic tiny horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-statistic horizontal=\"\" size=\"small\"><sui-statistic-value>
+    </div></div> <div class=\"ui statistic small horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-statistic horizontal=\"\"><sui-statistic-value>
+    </div></div> <div class=\"ui statistic horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-statistic horizontal=\"\" size=\"large\"><sui-statistic-value>
+    </div></div> <div class=\"ui statistic large horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-statistic horizontal=\"\" size=\"huge\"><sui-statistic-value>
+    </div></div> <div class=\"ui statistic huge horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-divider></sui-divider> <sui-statistic horizontal=\"\" size=\"mini\"><sui-statistic-value>
+    </div></div> <div class=\"ui divider\"></div> <div class=\"ui statistic mini horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-divider></sui-divider> <sui-statistic horizontal=\"\" size=\"tiny\"><sui-statistic-value>
+    </div></div> <div class=\"ui divider\"></div> <div class=\"ui statistic tiny horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-divider></sui-divider> <sui-statistic horizontal=\"\" size=\"small\"><sui-statistic-value>
+    </div></div> <div class=\"ui divider\"></div> <div class=\"ui statistic small horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-divider></sui-divider> <sui-statistic horizontal=\"\"><sui-statistic-value>
+    </div></div> <div class=\"ui divider\"></div> <div class=\"ui statistic horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-divider></sui-divider> <sui-statistic horizontal=\"\" size=\"large\"><sui-statistic-value>
+    </div></div> <div class=\"ui divider\"></div> <div class=\"ui statistic large horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic> <sui-divider></sui-divider> <sui-statistic horizontal=\"\" size=\"huge\"><sui-statistic-value>
+    </div></div> <div class=\"ui divider\"></div> <div class=\"ui statistic huge horizontal\"><div class=\"value\">
       2,204
-    </sui-statistic-value> <sui-statistic-label>
+    </div> <div class=\"label\">
       Views
-    </sui-statistic-label></sui-statistic></div>"
+    </div></div></div>"
 ```
 
