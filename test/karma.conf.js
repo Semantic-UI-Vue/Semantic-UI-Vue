@@ -15,10 +15,14 @@ module.exports = function (config) {
         flags: ['--no-sandbox'],
       },
     },
-    frameworks: ['mocha', 'sinon-chai'],
+    frameworks: ['mocha', 'sinon-chai', 'snapshot', 'mocha-snapshot'],
     reporters: ['spec', 'coverage'],
-    files: ['./index.js'],
+    files: [
+      '**/__snapshots__/**/*.md',
+      './index.js',
+    ],
     preprocessors: {
+      '**/__snapshots__/**/*.md': ['snapshot'],
       './index.js': ['webpack', 'sourcemap'],
     },
     webpack: webpackConfig,
@@ -33,6 +37,10 @@ module.exports = function (config) {
         { type: 'lcovonly', subdir: '.' },
         { type: 'json', subdir: '.' },
       ],
+    },
+    snapshot: {
+      update: !!process.env.UPDATE,
+      prune: !!process.env.PRUNE,
     },
   });
 };
