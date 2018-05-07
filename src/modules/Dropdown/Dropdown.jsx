@@ -32,7 +32,7 @@ export default {
   name: 'SuiDropdown',
   mixins: [SemanticUIVueMixin],
   props: {
-    addition: {
+    allowAdditions: {
       type: Boolean,
       description: 'A dropdown can allow user additions.'
     },
@@ -184,7 +184,7 @@ export default {
             return `Max ${this.maxSelections} selections`;
           }
         }
-        if (this.filter && !this.addition) {
+        if (this.filter && !this.allowAdditions) {
           return 'No results found';
         }
       }
@@ -232,7 +232,7 @@ export default {
       }
       return this.multipleValue.map((value) => {
         const existingOption = this.findOption(value)
-        const option = this.addition && !existingOption ? {text: value} : existingOption;
+        const option = this.allowAdditions && !existingOption ? {text: value} : existingOption;
         return (
           <Label nativeOnClick={this.handleClickOnSelectedNode}>
             {option.icon && <Icon name={option.icon} />}
@@ -359,7 +359,7 @@ export default {
       switch (e.keyCode) {
         // Handle Enter button
         case 13:
-          if (this.addition && this.selectedIndex === -1 && this.filter.trim() != '') {
+          if (this.allowAdditions && this.selectedIndex === -1 && this.filter.trim() != '') {
             e.preventDefault();
             this.selectItem(this.filter)
           } else if (this.selection) {
