@@ -301,7 +301,6 @@ export default {
       }
     },
     closeMenu() {
-      debugger;
       this.setOpen(false);
     },
     deselectItem(selectedValue) {
