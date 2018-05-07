@@ -6,14 +6,14 @@
     placeholder="Skills"
     search
     selection
-    addition
+    allowAdditions
     v-model="current"
   />
 </template>
 
 <script>
 export default {
-  name: 'SearchSelectionExample',
+  name: 'MultipleSearchSelectionWithAdditionExample',
   data() {
     return {
       current: null,
