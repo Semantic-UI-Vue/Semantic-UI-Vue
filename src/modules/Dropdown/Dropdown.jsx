@@ -34,7 +34,7 @@ export default {
   props: {
     allowAdditions: {
       type: Boolean,
-      description: 'A dropdown can allow user additions.'
+      description: 'A dropdown can allow user additions.',
     },
     button: {
       type: Boolean,
@@ -231,8 +231,8 @@ export default {
         return null;
       }
       return this.multipleValue.map((value) => {
-        const existingOption = this.findOption(value)
-        const option = this.allowAdditions && !existingOption ? {text: value} : existingOption;
+        const existingOption = this.findOption(value);
+        const option = this.allowAdditions && !existingOption ? { text: value } : existingOption;
         return (
           <Label nativeOnClick={this.handleClickOnSelectedNode}>
             {option.icon && <Icon name={option.icon} />}
@@ -359,9 +359,9 @@ export default {
       switch (e.keyCode) {
         // Handle Enter button
         case 13:
-          if (this.allowAdditions && this.selectedIndex === -1 && this.filter.trim() != '') {
+          if (this.allowAdditions && this.selectedIndex === -1 && this.filter.trim() !== '') {
             e.preventDefault();
-            this.selectItem(this.filter)
+            this.selectItem(this.filter);
           } else if (this.selection) {
             if (this.selectedIndex === -1) return;
             e.preventDefault();
