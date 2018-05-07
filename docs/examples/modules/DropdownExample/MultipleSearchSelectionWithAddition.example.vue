@@ -6,7 +6,7 @@
     placeholder="Skills"
     search
     selection
-    allowAdditions
+    allow-additions
     v-model="current"
   />
 </template>
