@@ -1,17 +1,19 @@
 <template lang="html">
   <sui-dropdown
-    fluid
     multiple
+    fluid
     :options="skills"
     placeholder="Skills"
+    search
     selection
+    allow-additions
     v-model="current"
   />
 </template>
 
 <script>
 export default {
-  name: 'MultipleSelectionExample',
+  name: 'MultipleSearchSelectionWithAdditionExample',
   data() {
     return {
       current: null,

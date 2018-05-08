@@ -32,6 +32,10 @@ export default {
   name: 'SuiDropdown',
   mixins: [SemanticUIVueMixin],
   props: {
+    allowAdditions: {
+      type: Boolean,
+      description: 'A dropdown can allow user additions.',
+    },
     button: {
       type: Boolean,
       description: 'A dropdown button style.',
@@ -180,7 +184,7 @@ export default {
             return `Max ${this.maxSelections} selections`;
           }
         }
-        if (this.filter) {
+        if (this.filter && !this.allowAdditions) {
           return 'No results found';
         }
       }
@@ -227,7 +231,8 @@ export default {
         return null;
       }
       return this.multipleValue.map((value) => {
-        const option = this.findOption(value);
+        const existingOption = this.findOption(value);
+        const option = this.allowAdditions && !existingOption ? { text: value } : existingOption;
         return (
           <Label nativeOnClick={this.handleClickOnSelectedNode}>
             {option.icon && <Icon name={option.icon} />}
@@ -288,6 +293,9 @@ export default {
   methods: {
     setOpen(value = true) {
       this.open = value;
+      if (this.search && this.filteredOptions.length >= 0) {
+        this.selectedIndex = 0;
+      }
       if (this.menu) {
         this.menu.setOpen(value);
       }
@@ -351,11 +359,13 @@ export default {
       switch (e.keyCode) {
         // Handle Enter button
         case 13:
-          if (this.selection) {
+          if (this.allowAdditions && this.selectedIndex === -1 && this.filter.trim() !== '') {
+            e.preventDefault();
+            this.selectItem(this.filter);
+          } else if (this.selection) {
             if (this.selectedIndex === -1) return;
             e.preventDefault();
             if (!this.multiple) {
-              this.filter = '';
               this.setOpen(false);
             } else {
               this.selectItem(this.filteredOptions[this.selectedIndex].value);
@@ -397,8 +407,8 @@ export default {
         this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
       ) : selectedValue;
       this.$emit('input', newValue);
+      this.filter = '';
       if (!this.multiple) {
-        this.filter = '';
         this.$nextTick(this.updateSelectedIndex);
       }
     },

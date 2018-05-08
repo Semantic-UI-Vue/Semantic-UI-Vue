@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'SearchSelectionExample',
+  name: 'MultipleSearchSelectionExample',
   data() {
     return {
       current: null,

@@ -6,6 +6,7 @@ import FriendSelection from './FriendSelection.example';
 import MultipleSelection from './MultipleSelection.example';
 import MultipleMaxSelections from './MultipleMaxSelections.example';
 import MultipleSearchSelection from './MultipleSearchSelection.example';
+import MultipleSearchSelectionWithAddition from './MultipleSearchSelectionWithAddition.example';
 import Selection from './Selection.example';
 import SearchDropdown from './SearchDropdown.example';
 import SearchSelection from './SearchSelection.example';
@@ -45,6 +46,11 @@ export default [
         title: 'Multiple Search Selection',
         description: 'A selection dropdown can allow multiple search selections.',
         component: MultipleSearchSelection,
+      },
+      {
+        title: 'Multiple Search Selection With Additions',
+        description: 'A selection dropdown can allow multiple search selections and user additions.',
+        component: MultipleSearchSelectionWithAddition,
       },
       {
         title: 'Search Dropdown',
