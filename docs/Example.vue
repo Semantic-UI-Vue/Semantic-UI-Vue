@@ -104,13 +104,13 @@
 </template>
 
 <script>
-import * as Babel from 'babel-standalone';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
 import kebabCase from 'lodash/kebabCase';
 import { html } from 'js-beautify';
 import copyToClipboard from 'copy-to-clipboard';
 import Editor from './Editor';
+import getComponentFromString from './getComponentFromString';
 
 const parser = require('vue-loader/lib/parser');
 
@@ -147,22 +147,7 @@ export default {
         'example-container';
     },
     compiled() {
-      const base = {
-        name: `${upperFirst(camelCase(this.title))}Example`,
-        template: '<div></div>',
-      };
-      try {
-        const parsed = parser(this.source);
-        const { code } = Babel.transform(
-          parsed.script.content, { presets: ['es2015', 'stage-2'] },
-        );
-        const compiled = eval(`const exports = {};${code}`); // eslint-disable-line
-        compiled.template = parsed.template.content;
-
-        return { ...base, ...compiled };
-      } catch (e) {
-        return base;
-      }
+      return getComponentFromString(this.source, `${upperFirst(camelCase(this.title))}Example`);
     },
     link() {
       const name = this.compiled.name;

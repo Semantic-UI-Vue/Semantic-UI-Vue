@@ -2,10 +2,10 @@ import Comment from './Comment.example';
 
 export default [
   {
-    name: 'Types',
+    title: 'Types',
     examples: [
       {
-        name: 'Comments',
+        title: 'Comments',
         description: 'A basic list of comments',
         component: Comment,
       },
