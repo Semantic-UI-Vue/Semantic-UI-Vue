@@ -40,6 +40,12 @@ Enum.Color = Enum.Extend([
   'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
   'violet', 'purple', 'pink', 'brown', 'grey', 'black',
 ]);
+Enum.ButtonColor = Enum.Extend([
+  'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+  'violet', 'purple', 'pink', 'brown', 'grey', 'black',
+  'primary', 'secondary',
+  'positive', 'negative',
+]);
 Enum.Attached = Enum.Extend(['top', 'bottom']);
 Enum.TextAlign = Enum.Extend(['left', 'right', 'center', 'justify']);
 Enum.VerticalAlign = Enum.Extend(['top', 'middle', 'bottom']);
