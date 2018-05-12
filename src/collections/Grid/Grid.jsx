@@ -70,6 +70,7 @@ export default {
           this.verticallyReversed && `${this.verticallyReversed} vertically reversed`,
           this.columns && `${this.num(this.columns)} column`,
           this.stackable && 'stackable',
+          this.stretched && 'stretched',
           this.doubling && 'doubling',
           this.padded, this.padded && 'padded',
           this.verticalAlign, this.verticalAlign && 'aligned',
