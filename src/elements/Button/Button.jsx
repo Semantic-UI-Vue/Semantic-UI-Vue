@@ -29,7 +29,7 @@ export default {
       type: String,
       description: 'Additional classes.',
     },
-    color: Enum.Color(),
+    color: Enum.ButtonColor(),
     compact: {
       type: Boolean,
       description: 'A button can reduce its padding to fit into tighter spaces.',
