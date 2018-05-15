@@ -496,7 +496,9 @@ export default {
         {this.selectedNodes}
         {this.searchNode}
         {this.textNode}
-        <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
+        {this.icon !== null && (
+          <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
+        )}
         {this.$slots.default || this.menuNode}
       </ElementType>
     );
