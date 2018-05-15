@@ -1495,7 +1495,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui accordion ui vertical menu\" exclusive=\"\" styled=\"\"><div class=\"title header\" active=\"\"><i class=\"dropdown icon\"></i>
+"<div><div class=\"ui styled accordion ui vertical menu\" exclusive=\"\" styled=\"\"><div class=\"title active header\" active=\"\"><i class=\"dropdown icon\"></i>
       Size
     </div> <div class=\"content active\"><form class=\"ui form\"><div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Small</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Medium</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Large</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>X-Large</label></div></div></form></div> <div class=\"title header\"><i class=\"dropdown icon\"></i>
       Colors
