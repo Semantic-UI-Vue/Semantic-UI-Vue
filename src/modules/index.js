@@ -7,3 +7,4 @@ export * from './Modal';
 export * from './Rating';
 export * from './Sidebar';
 export * from './Progress';
+export * from './Tab';
