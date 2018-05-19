@@ -17,7 +17,7 @@ export default {
       return this.active ? 'active' : '';
     },
   },
-  mounted () {
+  mounted() {
     this.$parent.addTab(this);
   },
   render() {
