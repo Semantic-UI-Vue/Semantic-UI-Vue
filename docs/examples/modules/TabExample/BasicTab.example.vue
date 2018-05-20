@@ -16,6 +16,6 @@
 
 <script>
   export default {
-    name: 'TabExample',
+    name: 'BasicExample',
   };
 </script>
