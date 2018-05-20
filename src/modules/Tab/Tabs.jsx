@@ -1,28 +1,24 @@
 import { SemanticUIVueMixin } from '../../lib';
+import Menu from '../../collections/Menu/Menu';
 
 export default {
   name: 'SuiTabs',
+  components: {
+    Menu,
+  },
   mixins: [SemanticUIVueMixin],
   props: {
-    tabular: {
-      type: Boolean,
-      default: false,
+    menu: {
+      type: Object,
+      default: () => ({
+        attached: true,
+        tabular: true,
+      }),
     },
   },
   data: () => ({
     tabs: [],
   }),
-  computed: {
-    elClassList() {
-      return [
-        'ui',
-        'top',
-        'menu',
-        'attached',
-        { tabular: this.tabular },
-      ];
-    },
-  },
   mounted() {
     this.tabs[0].active = true;
   },
@@ -51,7 +47,7 @@ export default {
 
     return (
       <ElementType>
-        <div class={this.elClassList}>
+        <Menu {...{ props: this.menu }}>
           {this.tabs.map(tab =>
               <a
                 class={this.itemClassList(tab)}
@@ -60,7 +56,7 @@ export default {
                 {tab.label}
               </a>,
           )},
-        </div>
+        </Menu>
         {this.$slots.default}
       </ElementType>
     );
