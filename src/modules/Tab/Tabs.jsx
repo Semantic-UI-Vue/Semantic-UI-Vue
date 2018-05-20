@@ -10,18 +10,23 @@ export default {
     this.tabs[0].active = true;
   },
   methods: {
-    addTab(item) {
-      const index = this.$slots.default.indexOf(item.$vnode);
-      this.tabs.splice(index, 0, item);
+    classList(tab) {
+      return [
+        'item',
+        { active: tab.active },
+      ];
+    },
+    addTab(tab) {
+      this.tabs.push(tab);
     },
     hideAllTabs() {
       this.tabs.forEach((tab) => {
-        tab.active = false;
+        tab.setInactive();
       });
     },
-    tabClick(slot) {
+    tabClick(tab) {
       this.hideAllTabs();
-      slot.active = true;
+      tab.setActive();
     },
   },
   render() {
@@ -32,7 +37,7 @@ export default {
         <div class="ui top attached tabular menu">
           {this.tabs.map(tab =>
               <a
-                class={`item ${tab.activeClass}`}
+                class={this.classList(tab)}
                 onClick={() => this.tabClick(tab)}
               >
                 {tab.label}
