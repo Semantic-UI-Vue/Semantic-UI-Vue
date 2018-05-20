@@ -13,19 +13,34 @@ export default {
     active: false,
   }),
   computed: {
-    activeClass() {
-      return this.active ? 'active' : '';
+    classList() {
+      return [
+        'ui',
+        'bottom',
+        'attached',
+        'tab',
+        'segment',
+        { active: this.active },
+      ];
     },
   },
   mounted() {
     this.$parent.addTab(this);
+  },
+  methods: {
+    setActive() {
+      this.active = true;
+    },
+    setInactive() {
+      this.active = false;
+    },
   },
   render() {
     const ElementType = this.getElementType();
 
     return (
       <ElementType
-        class={`ui bottom attached tab segment ${this.activeClass}`}
+        class={this.classList}
       >
         {this.$slots.default}
       </ElementType>
