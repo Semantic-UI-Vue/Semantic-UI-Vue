@@ -8,6 +8,10 @@ export default {
       type: String,
       required: true,
     },
+    attached: {
+      type: Boolean,
+      default: true,
+    },
   },
   data: () => ({
     active: false,
@@ -17,8 +21,8 @@ export default {
       return [
         'ui',
         'tab',
-        'attached',
         'segment',
+        { attached: this.attached },
         { active: this.active },
       ];
     },
