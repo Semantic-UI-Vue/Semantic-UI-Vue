@@ -16,9 +16,8 @@ export default {
     classList() {
       return [
         'ui',
-        'bottom',
-        'attached',
         'tab',
+        'attached',
         'segment',
         { active: this.active },
       ];
