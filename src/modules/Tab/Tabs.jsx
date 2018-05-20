@@ -3,14 +3,31 @@ import { SemanticUIVueMixin } from '../../lib';
 export default {
   name: 'SuiTabs',
   mixins: [SemanticUIVueMixin],
+  props: {
+    tabular: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data: () => ({
     tabs: [],
   }),
+  computed: {
+    elClassList() {
+      return [
+        'ui',
+        'top',
+        'menu',
+        'attached',
+        { tabular: this.tabular },
+      ];
+    },
+  },
   mounted() {
     this.tabs[0].active = true;
   },
   methods: {
-    classList(tab) {
+    itemClassList(tab) {
       return [
         'item',
         { active: tab.active },
@@ -34,10 +51,10 @@ export default {
 
     return (
       <ElementType>
-        <div class="ui top attached tabular menu">
+        <div class={this.elClassList}>
           {this.tabs.map(tab =>
               <a
-                class={this.classList(tab)}
+                class={this.itemClassList(tab)}
                 onClick={() => this.tabClick(tab)}
               >
                 {tab.label}
