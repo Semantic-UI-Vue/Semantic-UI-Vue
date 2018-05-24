@@ -6,6 +6,7 @@ import Text from './Types/Text.example';
 import Loading from './States/Loading.example';
 
 import Attached from './MenuVariations/Attached.example';
+import NotAttached from './MenuVariations/NotAttached.example';
 
 export default [
   {
@@ -50,6 +51,10 @@ export default [
         title: 'Attached',
         description: 'A tab menu can be attached on bottom',
         component: Attached,
+      },
+      {
+        description: 'A tab menu can remove its attached appearance',
+        component: NotAttached,
       },
     ],
   },
