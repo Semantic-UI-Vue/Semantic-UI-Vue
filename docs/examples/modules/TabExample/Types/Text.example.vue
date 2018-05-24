@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sui-tabs :menu="{ pointing: true }">
+    <sui-tabs :menu="{ text: true }">
       <sui-tab label="Circle" :attached="false">
         Circle
       </sui-tab>
@@ -16,6 +16,6 @@
 
 <script>
   export default {
-    name: 'PointingExample',
+    name: 'TextExample',
   };
 </script>
