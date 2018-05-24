@@ -9,6 +9,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     active: false,
@@ -19,6 +23,7 @@ export default {
         'ui',
         'tab',
         'segment',
+        { loading: this.active && this.loading },
         { attached: this.attached },
         { active: this.active },
       ];
