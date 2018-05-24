@@ -7,6 +7,7 @@ import Loading from './States/Loading.example';
 
 import Attached from './MenuVariations/Attached.example';
 import NotAttached from './MenuVariations/NotAttached.example';
+import NotTabular from './MenuVariations/NotTabular.example';
 
 export default [
   {
@@ -55,6 +56,11 @@ export default [
       {
         description: 'A tab menu can remove its attached appearance',
         component: NotAttached,
+      },
+      {
+        title: 'Not Tabular',
+        description: 'A tab menu can disable its tabular appearance',
+        component: NotTabular,
       },
     ],
   },
