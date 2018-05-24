@@ -6,7 +6,7 @@ export default {
       required: true,
     },
     attached: {
-      type: Boolean,
+      type: [Boolean, String],
       default: true,
     },
     loading: {
@@ -19,7 +19,7 @@ export default {
   }),
   computed: {
     classList() {
-      return [
+      const list = [
         'ui',
         'tab',
         'segment',
@@ -27,16 +27,22 @@ export default {
         { attached: this.attached },
         { active: this.active },
       ];
+
+      if (typeof this.attached === 'string') {
+        list.push(this.attached)
+      }
+
+      return list;
     },
   },
   mounted() {
     this.$parent.addTab(this);
   },
   methods: {
-    setActive() {
+    open() {
       this.active = true;
     },
-    setInactive() {
+    close() {
       this.active = false;
     },
   },
