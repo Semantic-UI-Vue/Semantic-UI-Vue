@@ -8,6 +8,7 @@ import Loading from './States/Loading.example';
 import Attached from './MenuVariations/Attached.example';
 import NotAttached from './MenuVariations/NotAttached.example';
 import NotTabular from './MenuVariations/NotTabular.example';
+import Borderless from './MenuVariations/Borderless.example';
 
 export default [
   {
@@ -61,6 +62,11 @@ export default [
         title: 'Not Tabular',
         description: 'A tab menu can disable its tabular appearance',
         component: NotTabular,
+      },
+      {
+        title: 'Borderless',
+        description: 'A tab menu can remove its borders',
+        component: Borderless,
       },
     ],
   },
