@@ -1,4 +1,3 @@
-import { SemanticUIVueMixin } from '../../lib';
 import Menu from '../../collections/Menu/Menu';
 
 export default {
@@ -6,7 +5,6 @@ export default {
   components: {
     Menu,
   },
-  mixins: [SemanticUIVueMixin],
   props: {
     menu: {
       type: Object,
@@ -20,45 +18,51 @@ export default {
     tabs: [],
   }),
   mounted() {
-    this.tabs[0].active = true;
+    if (this.tabs.length) {
+      this.tabs[0].open();
+    }
   },
   methods: {
-    itemClassList(tab) {
-      return [
-        'item',
-        { active: tab.active },
-      ];
-    },
     addTab(tab) {
       this.tabs.push(tab);
     },
-    hideAllTabs() {
+    closeAllTabs() {
       this.tabs.forEach((tab) => {
-        tab.setInactive();
+        tab.close();
       });
     },
     tabClick(tab) {
-      this.hideAllTabs();
-      tab.setActive();
+      this.closeAllTabs();
+      tab.open();
     },
   },
   render() {
-    const ElementType = this.getElementType();
+    const menuItems = this.tabs.map(tab =>
+      <a
+        class={['item', { active: tab.active }]}
+        onClick={() => this.tabClick(tab)}
+      >
+        {tab.label}
+      </a>,
+    );
+    const controls = (
+      <Menu {...{ props: this.menu }}>
+        {menuItems}
+      </Menu>
+    );
+    const renderOrder = [
+      controls,
+      this.$slots.default,
+    ];
+
+    if (this.menu.attached === 'bottom') {
+      renderOrder.reverse();
+    }
 
     return (
-      <ElementType>
-        <Menu {...{ props: this.menu }}>
-          {this.tabs.map(tab =>
-              <a
-                class={this.itemClassList(tab)}
-                onClick={() => this.tabClick(tab)}
-              >
-                {tab.label}
-              </a>,
-          )},
-        </Menu>
-        {this.$slots.default}
-      </ElementType>
+      <div>
+        {[...renderOrder]}
+      </div>
     );
   },
 };
