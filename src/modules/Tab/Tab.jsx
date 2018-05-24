@@ -1,8 +1,5 @@
-import { SemanticUIVueMixin } from '../../lib';
-
 export default {
   name: 'SuiTab',
-  mixins: [SemanticUIVueMixin],
   props: {
     label: {
       type: String,
@@ -39,14 +36,10 @@ export default {
     },
   },
   render() {
-    const ElementType = this.getElementType();
-
     return (
-      <ElementType
-        class={this.classList}
-      >
+      <div class={this.classList}>
         {this.$slots.default}
-      </ElementType>
+      </div>
     );
   },
 };
