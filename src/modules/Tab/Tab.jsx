@@ -1,55 +1,67 @@
+import Menu from '../../collections/Menu/Menu';
+
 export default {
   name: 'SuiTab',
+  components: {
+    Menu,
+  },
   props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    attached: {
-      type: [Boolean, String],
-      default: true,
-    },
-    loading: {
-      type: Boolean,
-      default: false,
+    menu: {
+      type: Object,
+      default: () => ({
+        attached: true,
+        tabular: true,
+      }),
     },
   },
   data: () => ({
-    active: false,
+    tabs: [],
   }),
-  computed: {
-    classList() {
-      const list = [
-        'ui',
-        'tab',
-        'segment',
-        { loading: this.active && this.loading },
-        { attached: this.attached },
-        { active: this.active },
-      ];
-
-      if (typeof this.attached === 'string') {
-        list.push(this.attached)
-      }
-
-      return list;
-    },
-  },
   mounted() {
-    this.$parent.addTab(this);
+    if (this.tabs.length) {
+      this.tabs[0].open();
+    }
   },
   methods: {
-    open() {
-      this.active = true;
+    addTab(tab) {
+      this.tabs.push(tab);
     },
-    close() {
-      this.active = false;
+    closeAllTabs() {
+      this.tabs.forEach((tab) => {
+        tab.close();
+      });
+    },
+    tabClick(tab) {
+      this.closeAllTabs();
+      tab.open();
     },
   },
   render() {
+    const menuItems = this.tabs.map(tab =>
+      <a
+        class={['item', { active: tab.active }]}
+        onClick={() => this.tabClick(tab)}
+      >
+        {tab.label}
+      </a>,
+    );
+    const controls = (
+      <Menu {...{ props: this.menu }}>
+        {menuItems}
+      </Menu>
+    );
+    const renderOrder = [
+      controls,
+      this.$slots.default,
+    ];
+
+    if (this.menu.attached === 'bottom') {
+      renderOrder.reverse();
+    }
+
     return (
-      <div class={this.classList}>
-        {this.$slots.default}
+      <div>
+        {[...renderOrder]}
       </div>
     );
   },
