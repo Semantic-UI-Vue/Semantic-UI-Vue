@@ -9,6 +9,8 @@ import Attached from './MenuVariations/Attached.example';
 import NotAttached from './MenuVariations/NotAttached.example';
 import NotTabular from './MenuVariations/NotTabular.example';
 import Borderless from './MenuVariations/Borderless.example';
+import Colored from './MenuVariations/Colored.example';
+import ColoredInverted from './MenuVariations/ColoredInverted.example';
 
 export default [
   {
@@ -67,6 +69,16 @@ export default [
         title: 'Borderless',
         description: 'A tab menu can remove its borders',
         component: Borderless,
+      },
+      {
+        title: 'Colored',
+        description: 'A tab menu can be colored',
+        info: 'Color only applies to the menu, not the pane, so they look best not attached',
+        component: Colored,
+      },
+      {
+        description: 'A tab menu can invert its colors',
+        component: ColoredInverted,
       },
     ],
   },
