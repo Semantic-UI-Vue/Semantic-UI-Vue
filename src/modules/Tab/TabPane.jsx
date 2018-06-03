@@ -1,5 +1,8 @@
 export default {
   name: 'SuiTabPane',
+  meta: {
+    parent: 'SuiTab',
+  },
   props: {
     label: {
       type: String,
