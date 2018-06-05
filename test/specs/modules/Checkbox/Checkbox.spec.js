@@ -11,6 +11,12 @@ describe('Checkbox', () => {
     expect(checkbox.find('label').element.textContent).to.equal('check');
   });
 
+  it('should create a SUI Checkbox with label with attrs name and for', () => {
+    const checkbox = shallow(Checkbox, { propsData: { label: 'check', name: 'sui' } });
+    expect(checkbox.find('input').element.getAttribute('name')).to.equal('sui');
+    expect(checkbox.find('label').element.getAttribute('for')).to.equal('sui');
+  });
+
   it('should create a SUI Radio button with label', () => {
     const checkbox = shallow(Checkbox, { propsData: { label: 'check', radio: true } });
     expect(checkbox.find('input').element.getAttribute('type')).to.equal('radio');
