@@ -13,6 +13,7 @@ export default {
     label: String,
     radio: Boolean,
     toggle: Boolean,
+    name: String,
     value: String,
   },
   events: {
@@ -72,11 +73,16 @@ export default {
           class="hidden"
           readonly=""
           tabiindex="0"
+          name={this.name}
           type={this.radio ? 'radio' : 'checkbox'}
           checked={this.isChecked}
           onChange={this.setValue}
         />
-        <label onClick={() => this.$refs.input.click()}>{this.label || this.$slots.default}</label>
+        <label
+          onClick={() => this.$refs.input.click()}
+          for={this.name}>
+            {this.label || this.$slots.default}
+          </label>
       </ElementType>
     );
   },
