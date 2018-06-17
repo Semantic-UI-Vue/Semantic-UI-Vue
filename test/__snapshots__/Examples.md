@@ -1733,6 +1733,18 @@
       </button></div></div></div></div>"
 ```
 
+##   `Variations`
+
+##     `Scrolling Content`
+
+####       `should match snapshot`
+
+```
+"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none; animation-duration: 500ms;\"><div class=\"ui standart modal transition\" style=\"display: none; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image scrolling\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui positive button\">
+        OK
+      </button></div></div></div></div>"
+```
+
 ## `ProgressExample`
 
 ##   `Types`
