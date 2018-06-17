@@ -283,6 +283,9 @@ export default {
     filteredOptions() {
       this.updateSelectedIndex();
     },
+    filter() {
+      this.resizeInput();
+    },
   },
   mounted() {
     document.body.addEventListener('click', this.closeMenu);
@@ -421,6 +424,16 @@ export default {
         this.selectedIndex = this.filteredOptions.findIndex(item => item.value === this.value);
       }
     },
+    resizeInput() {
+      const sizer = this.$refs.sizer;
+      sizer.innerText = this.filter;
+      sizer.style.display = 'inline';
+      sizer.style.padding = '0';
+      const width = sizer.offsetWidth || sizer.offsetWidth;
+      sizer.style.display = '';
+      sizer.style.padding = '';
+      this.$refs.search.style.width = `${Math.ceil(width) + 1}px`;
+    },
     updateFilter(event) {
       this.filter = event.target.value;
     },
@@ -499,6 +512,7 @@ export default {
         {this.icon !== null && (
           <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
         )}
+        <span class="sizer" ref="sizer" />
         {this.$slots.default || this.menuNode}
       </ElementType>
     );
