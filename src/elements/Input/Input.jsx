@@ -23,6 +23,9 @@ export default {
     input: {
       custom: true,
     },
+    blur: {
+      custom: true,
+    },
   },
   render() {
     const ElementType = this.getElementType();
