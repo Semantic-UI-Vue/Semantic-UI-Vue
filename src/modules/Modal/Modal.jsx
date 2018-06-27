@@ -111,13 +111,13 @@ export default {
     },
     dimmerStyle() {
       return {
-        display: this.visible ? 'flex' : 'none',
+        display: this.visible ? 'flex !important' : 'none !important',
         animationDuration: `${this.animationDuration}ms`,
       };
     },
     modalStyle() {
       return {
-        display: this.visible ? 'block' : 'none',
+        display: this.visible ? 'block !important' : 'none !important',
         animationDuration: `${this.animationDuration}ms`,
       };
     },
