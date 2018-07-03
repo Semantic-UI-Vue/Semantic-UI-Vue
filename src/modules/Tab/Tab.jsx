@@ -66,7 +66,7 @@ export default {
             <sui-grid-column width={4}>
               {controls}
             </sui-grid-column>
-            <sui-grid-column width={12}>
+            <sui-grid-column width={12} class="stretched">
               {this.$slots.default}
             </sui-grid-column>
           </sui-grid-row>
