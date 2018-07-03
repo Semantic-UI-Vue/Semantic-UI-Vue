@@ -60,6 +60,20 @@ export default {
     }
 
     if (this.menu.vertical) {
+      if (this.menu.tabular === 'right') {
+        return (
+          <sui-grid>
+            <sui-grid-row>
+              <sui-grid-column width={12} class="stretched">
+                {this.$slots.default}
+              </sui-grid-column>
+              <sui-grid-column width={4}>
+                {controls}
+              </sui-grid-column>
+            </sui-grid-row>
+          </sui-grid>
+        );
+      }
       return (
         <sui-grid>
           <sui-grid-row>

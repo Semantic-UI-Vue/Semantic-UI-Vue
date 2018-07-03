@@ -12,6 +12,7 @@ import Borderless from './MenuVariations/Borderless.example';
 import Colored from './MenuVariations/Colored.example';
 import ColoredInverted from './MenuVariations/ColoredInverted.example';
 import VerticalTabular from './MenuVariations/VerticalTabular.example';
+import VerticalTabularRight from './MenuVariations/VerticalTabularRight.example';
 
 export default [
   {
@@ -85,6 +86,9 @@ export default [
         title: 'Vertical Tabular',
         description: 'A vertical tab menu can be positioned on either side',
         component: VerticalTabular,
+      },
+      {
+        component: VerticalTabularRight,
       },
     ],
   },
