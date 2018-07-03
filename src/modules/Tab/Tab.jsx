@@ -49,6 +49,7 @@ export default {
         )}
       </Menu>
     );
+
     const renderOrder = [
       controls,
       this.$slots.default,

@@ -12,7 +12,7 @@ export default {
     },
     attached: {
       type: [Boolean, String],
-      default: false,
+      default: true,
     },
     loading: {
       type: Boolean,
