@@ -11,6 +11,7 @@ import NotTabular from './MenuVariations/NotTabular.example';
 import Borderless from './MenuVariations/Borderless.example';
 import Colored from './MenuVariations/Colored.example';
 import ColoredInverted from './MenuVariations/ColoredInverted.example';
+import VerticalTabular from './MenuVariations/VerticalTabular.example';
 
 export default [
   {
@@ -79,6 +80,11 @@ export default [
       {
         description: 'A tab menu can invert its colors',
         component: ColoredInverted,
+      },
+      {
+        title: 'Vertical Tabular',
+        description: 'A vertical tab menu can be positioned on either side',
+        component: VerticalTabular,
       },
     ],
   },

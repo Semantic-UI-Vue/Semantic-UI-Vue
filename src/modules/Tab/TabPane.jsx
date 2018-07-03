@@ -1,3 +1,5 @@
+import Tab from './Tab';
+
 export default {
   name: 'SuiTabPane',
   meta: {
@@ -10,7 +12,7 @@ export default {
     },
     attached: {
       type: [Boolean, String],
-      default: true,
+      default: false,
     },
     loading: {
       type: Boolean,
@@ -32,16 +34,26 @@ export default {
       ];
 
       if (typeof this.attached === 'string') {
-        list.push(this.attached)
+        list.push(this.attached);
       }
 
       return list;
     },
   },
   mounted() {
-    this.$parent.addTab(this);
+    this.findParent().addTab(this);
   },
   methods: {
+    findParent() {
+      let parent = this.$parent;
+      const name = Tab.name;
+
+      while (parent.$options.name !== name) {
+        parent = parent.$parent;
+      }
+
+      return parent;
+    },
     open() {
       this.active = true;
     },

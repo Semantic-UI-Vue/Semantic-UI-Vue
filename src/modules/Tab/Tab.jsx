@@ -37,17 +37,16 @@ export default {
     },
   },
   render() {
-    const menuItems = this.tabs.map(tab =>
-      <a
-        class={['item', { active: tab.active }]}
-        onClick={() => this.tabClick(tab)}
-      >
-        {tab.label}
-      </a>,
-    );
     const controls = (
       <Menu {...{ props: this.menu }}>
-        {menuItems}
+        {this.tabs.map(tab =>
+          <a
+            class={['item', { active: tab.active }]}
+            onClick={() => this.tabClick(tab)}
+          >
+            {tab.label}
+          </a>,
+        )}
       </Menu>
     );
     const renderOrder = [
@@ -57,6 +56,21 @@ export default {
 
     if (this.menu.attached === 'bottom') {
       renderOrder.reverse();
+    }
+
+    if (this.menu.vertical) {
+      return (
+        <sui-grid>
+          <sui-grid-row>
+            <sui-grid-column width={4}>
+              {controls}
+            </sui-grid-column>
+            <sui-grid-column width={12}>
+              {this.$slots.default}
+            </sui-grid-column>
+          </sui-grid-row>
+        </sui-grid>
+      );
     }
 
     return (
