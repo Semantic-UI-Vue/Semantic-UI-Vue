@@ -6,6 +6,10 @@
 
 # Semantic UI Vue
 
+## Looking for maintainers!
+
+There is a lot to do and few maintainers with little time :). If you'd like to help with this project, please let us know.
+
 ## Introduction
 
 Semantic UI Vue is the Vue integration for [Semantic UI](https://semantic-ui.com/).
