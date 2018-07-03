@@ -23,6 +23,9 @@ export default {
     input: {
       custom: true,
     },
+    blur: {
+      custom: true,
+    },
   },
   render() {
     const ElementType = this.getElementType();
@@ -51,6 +54,7 @@ export default {
         <input
           value={this.value}
           onInput={e => this.$emit('input', e.target.value)}
+          onBlur={e => this.$emit('blur', e)}
           {...{ attrs: this.$attrs }}
         />
         {icon}
