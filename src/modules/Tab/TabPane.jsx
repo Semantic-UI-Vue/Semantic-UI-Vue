@@ -62,7 +62,7 @@ export default {
     },
   },
   render() {
-    return (
+    return this.active && (
       <div class={this.classList}>
         {this.$slots.default}
       </div>
