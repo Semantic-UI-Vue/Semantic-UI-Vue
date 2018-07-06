@@ -17,6 +17,25 @@ export default {
   data: () => ({
     tabs: [],
   }),
+  computed: {
+    tabMenu() {
+      return (
+        <Menu {...{ props: this.menu }}>
+          {this.tabs.map(tab =>
+            <a
+              class={['item', { active: tab.active }]}
+              onClick={() => this.tabClick(tab)}
+            >
+              {tab.label}
+            </a>,
+          )}
+        </Menu>
+      );
+    },
+    slot() {
+      return this.$slots.default;
+    },
+  },
   mounted() {
     if (this.tabs.length) {
       this.tabs[0].open();
@@ -37,52 +56,33 @@ export default {
     },
   },
   render() {
-    const controls = (
-      <Menu {...{ props: this.menu }}>
-        {this.tabs.map(tab =>
-          <a
-            class={['item', { active: tab.active }]}
-            onClick={() => this.tabClick(tab)}
-          >
-            {tab.label}
-          </a>,
-        )}
-      </Menu>
-    );
-
-    const renderOrder = [
-      controls,
-      this.$slots.default,
+    let renderable = [
+      this.tabMenu,
+      this.slot,
     ];
 
     if (this.menu.attached === 'bottom') {
-      renderOrder.reverse();
+      renderable.reverse();
     }
 
     if (this.menu.vertical) {
+      renderable = [
+        <sui-grid-column width={4}>
+          {this.tabMenu}
+        </sui-grid-column>,
+        <sui-grid-column width={12} class="stretched">
+          {this.slot}
+        </sui-grid-column>,
+      ];
+
       if (this.menu.tabular === 'right') {
-        return (
-          <sui-grid>
-            <sui-grid-row>
-              <sui-grid-column width={12} class="stretched">
-                {this.$slots.default}
-              </sui-grid-column>
-              <sui-grid-column width={4}>
-                {controls}
-              </sui-grid-column>
-            </sui-grid-row>
-          </sui-grid>
-        );
+        renderable.reverse();
       }
-      return (
+
+      renderable = (
         <sui-grid>
           <sui-grid-row>
-            <sui-grid-column width={4}>
-              {controls}
-            </sui-grid-column>
-            <sui-grid-column width={12} class="stretched">
-              {this.$slots.default}
-            </sui-grid-column>
+            {renderable}
           </sui-grid-row>
         </sui-grid>
       );
@@ -90,7 +90,7 @@ export default {
 
     return (
       <div>
-        {[...renderOrder]}
+        {Array.isArray(renderable) ? [...renderable] : renderable}
       </div>
     );
   },
