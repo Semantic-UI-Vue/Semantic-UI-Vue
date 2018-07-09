@@ -12,7 +12,7 @@
         </sui-modal-description>
       </sui-modal-content>
       <sui-modal-actions>
-        <sui-button floated="right" positive @click.native="toggle">
+        <sui-button positive @click.native="toggle">
           OK
         </sui-button>
       </sui-modal-actions>
