@@ -1728,7 +1728,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"ui standart modal transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <p>We've found the following gravatar image associated with your e-mail address.</p> <p>Is it okay to use this photo?</p></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui right floated positive button\">
+"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"ui standart modal transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <p>We've found the following gravatar image associated with your e-mail address.</p> <p>Is it okay to use this photo?</p></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui positive button\">
         OK
       </button></div></div></div></div>"
 ```
