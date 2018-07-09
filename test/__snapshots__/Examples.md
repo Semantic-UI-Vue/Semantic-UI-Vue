@@ -1514,6 +1514,14 @@
 "<div><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>checkbox</label></div></div>"
 ```
 
+##     `Checkbox Disabled`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui disabled checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" disabled=\"disabled\" class=\"hidden\"><label>checkbox</label></div></div>"
+```
+
 ##     `Radio`
 
 ####       `should match snapshot`
@@ -1536,6 +1544,14 @@
 
 ```
 "<div><div class=\"ui toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>toggle</label></div></div>"
+```
+
+##     `Toggle style input disabled`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui toggle disabled checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" disabled=\"disabled\" class=\"hidden\"><label>toggle</label></div></div>"
 ```
 
 ## `DimmerExample`

@@ -18,6 +18,7 @@ export default [
         component: CheckboxBasic,
       },
       {
+        title: 'Checkbox Disabled',
         description: 'A checkbox can be disabled.',
         component: CheckboxDisabled,
       },
@@ -47,7 +48,8 @@ export default [
         component: CheckboxToggle,
       },
       {
-        description: 'A toggle can be disabled.',
+        title: 'Toggle style input disabled',
+        description: 'A toggle can be disabled, too.',
         component: CheckboxToggleDisabled,
       },
     ],
