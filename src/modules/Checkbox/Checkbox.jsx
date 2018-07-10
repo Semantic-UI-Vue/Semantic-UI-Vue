@@ -72,7 +72,7 @@ export default {
           ref="input"
           class="hidden"
           readonly=""
-          tabiindex="0"
+          tabindex="0"
           name={this.name}
           type={this.radio ? 'radio' : 'checkbox'}
           checked={this.isChecked}

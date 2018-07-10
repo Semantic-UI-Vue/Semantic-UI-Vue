@@ -49,7 +49,7 @@
 ####       `should match snapshot`
 
 ```
-"<form class=\"ui form\"><div class=\"field\"><label>First Name</label> <input placeholder=\"First Name\"></div> <div class=\"field\"><label>Last Name</label> <input placeholder=\"Last Name\"></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>I agree to the Terms and Conditions</label></div></div> <button role=\"button\" class=\"ui button\" type=\"submit\">Submit</button></form>"
+"<form class=\"ui form\"><div class=\"field\"><label>First Name</label> <input placeholder=\"First Name\"></div> <div class=\"field\"><label>Last Name</label> <input placeholder=\"Last Name\"></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>I agree to the Terms and Conditions</label></div></div> <button role=\"button\" class=\"ui button\" type=\"submit\">Submit</button></form>"
 ```
 
 ## `GridExample`
@@ -452,7 +452,7 @@
 ####       `should match snapshot`
 
 ```
-"<table class=\"ui celled compact definition table\"><thead class=\"full-width\"><tr class=\"\"><th class=\"\"></th> <th class=\"\">Name</th> <th class=\"\">Registration Date</th> <th class=\"\">E-mail address</th> <th class=\"\">Premium Plan</th></tr></thead> <tbody><tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr> <tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">Jamie Harington</td> <td class=\"\">January 11, 2014</td> <td class=\"\">jamieharingonton@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">Jill Lewis</td> <td class=\"\">May 11, 2014</td> <td class=\"\">jilsewris22@yahoo.com</td> <td class=\"\">Yes</td></tr></tbody> <tfoot class=\"full-width\"><tr class=\"\"><th class=\"\"></th> <th class=\"\" colspan=\"4\"><button role=\"button\" class=\"ui right floated primary small button\" labeled=\"\"><i class=\"user icon\"></i> Add User
+"<table class=\"ui celled compact definition table\"><thead class=\"full-width\"><tr class=\"\"><th class=\"\"></th> <th class=\"\">Name</th> <th class=\"\">Registration Date</th> <th class=\"\">E-mail address</th> <th class=\"\">Premium Plan</th></tr></thead> <tbody><tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">John Lilki</td> <td class=\"\">September 14, 2013</td> <td class=\"\">jhlilk22@yahoo.com</td> <td class=\"\">No</td></tr> <tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">Jamie Harington</td> <td class=\"\">January 11, 2014</td> <td class=\"\">jamieharingonton@yahoo.com</td> <td class=\"\">Yes</td></tr> <tr class=\"\"><td class=\"collapsing\"><div class=\"ui fitted toggle checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label></label></div></td> <td class=\"\">Jill Lewis</td> <td class=\"\">May 11, 2014</td> <td class=\"\">jilsewris22@yahoo.com</td> <td class=\"\">Yes</td></tr></tbody> <tfoot class=\"full-width\"><tr class=\"\"><th class=\"\"></th> <th class=\"\" colspan=\"4\"><button role=\"button\" class=\"ui right floated primary small button\" labeled=\"\"><i class=\"user icon\"></i> Add User
         </button> <button role=\"button\" class=\"ui small button\">
           Approve
         </button> <button role=\"button\" class=\"ui disabled small button\">
@@ -1497,9 +1497,9 @@
 ```
 "<div><div class=\"ui styled accordion ui vertical menu\" exclusive=\"\" styled=\"\"><div class=\"title active header\" active=\"\"><i class=\"dropdown icon\"></i>
       Size
-    </div> <div class=\"content active\"><form class=\"ui form\"><div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Small</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Medium</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Large</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>X-Large</label></div></div></form></div> <div class=\"title header\"><i class=\"dropdown icon\"></i>
+    </div> <div class=\"content active\"><form class=\"ui form\"><div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Small</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Medium</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Large</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>X-Large</label></div></div></form></div> <div class=\"title header\"><i class=\"dropdown icon\"></i>
       Colors
-    </div> <div class=\"content\"><form class=\"ui form\"><div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Red</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Orange</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Green</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Blue</label></div></div></form></div></div></div>"
+    </div> <div class=\"content\"><form class=\"ui form\"><div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Red</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Orange</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Green</label></div></div> <div class=\"field\"><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>Blue</label></div></div></form></div></div></div>"
 ```
 
 ## `CheckboxExample`
@@ -1511,7 +1511,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>checkbox</label></div></div>"
+"<div><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>checkbox</label></div></div>"
 ```
 
 ##     `Checkbox Disabled`
@@ -1519,7 +1519,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui disabled checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" disabled=\"disabled\" class=\"hidden\"><label>checkbox</label></div></div>"
+"<div><div class=\"ui disabled checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" disabled=\"disabled\" class=\"hidden\"><label>checkbox</label></div></div>"
 ```
 
 ##     `Radio`
@@ -1527,7 +1527,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui radio checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"radio\" class=\"hidden\"><label>Radio choice</label></div></div>"
+"<div><div class=\"ui radio checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"radio\" class=\"hidden\"><label>Radio choice</label></div></div>"
 ```
 
 ##     `Checkbox with two way binding`
@@ -1535,7 +1535,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>checkbox</label></div> <div><strong>value: </strong> true</div></div>"
+"<div><div class=\"ui checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>checkbox</label></div> <div><strong>value: </strong> true</div></div>"
 ```
 
 ##     `Toggle style input`
@@ -1543,7 +1543,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui toggle checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>toggle</label></div></div>"
+"<div><div class=\"ui toggle checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" class=\"hidden\"><label>toggle</label></div></div>"
 ```
 
 ##     `Toggle style input disabled`
@@ -1551,7 +1551,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui toggle disabled checkbox\"><input readonly=\"readonly\" tabiindex=\"0\" type=\"checkbox\" disabled=\"disabled\" class=\"hidden\"><label>toggle</label></div></div>"
+"<div><div class=\"ui toggle disabled checkbox\"><input readonly=\"readonly\" tabindex=\"0\" type=\"checkbox\" disabled=\"disabled\" class=\"hidden\"><label>toggle</label></div></div>"
 ```
 
 ## `DimmerExample`
