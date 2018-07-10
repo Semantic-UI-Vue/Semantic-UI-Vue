@@ -76,6 +76,7 @@ export default {
           name={this.name}
           type={this.radio ? 'radio' : 'checkbox'}
           checked={this.isChecked}
+          disabled={this.disabled}
           onChange={this.setValue}
         />
         <label

@@ -1,12 +1,16 @@
 <template lang="html">
   <div>
-    <sui-checkbox label="checkbox" disabled v-model="value"/>
+    <sui-checkbox
+      toggle
+      label="toggle"
+      disabled
+      v-model="value" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CheckboxDisabledExample',
+  name: 'CheckboxToggleDisabledExample',
   data() {
     return { value: true };
   },
