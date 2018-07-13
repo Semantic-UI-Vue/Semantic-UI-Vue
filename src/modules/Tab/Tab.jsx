@@ -32,9 +32,6 @@ export default {
         </sui-menu>
       );
     },
-    slot() {
-      return this.$slots.default;
-    },
   },
   mounted() {
     if (!this.tabs.length) {
@@ -58,9 +55,11 @@ export default {
     },
   },
   render() {
+    const slot = this.$slots.default;
+
     let renderable = [
       this.tabMenu,
-      this.slot,
+      slot,
     ];
 
     if (this.menu.attached === 'bottom') {
@@ -73,7 +72,7 @@ export default {
           {this.tabMenu}
         </sui-grid-column>,
         <sui-grid-column width={12} class="stretched">
-          {this.slot}
+          {slot}
         </sui-grid-column>,
       ];
 
