@@ -15,6 +15,8 @@ import VerticalTabular from './MenuVariations/VerticalTabular.example';
 import VerticalTabularRight from './MenuVariations/VerticalTabularRight.example';
 import MenuPositionRight from './MenuVariations/MenuPositionRight.example';
 
+import ActiveIndex from './Usage/ActiveIndex.example';
+
 export default [
   {
     title: 'Types',
@@ -95,6 +97,16 @@ export default [
         title: 'Menu Position',
         description: 'A vertical non tabular menu can be positioned on either side',
         component: MenuPositionRight,
+      },
+    ],
+  },
+  {
+    title: 'Usage',
+    examples: [
+      {
+        title: 'Active Index',
+        description: 'A tab can be controlled component',
+        component: ActiveIndex,
       },
     ],
   },

@@ -13,6 +13,10 @@ export default {
     menuPosition: Enum(['left', 'right'], {
       description: 'Menu Position',
     }),
+    activeIndex: {
+      type: [String, Number],
+      default: 0,
+    },
   },
   data: () => ({
     tabs: [],
@@ -21,10 +25,10 @@ export default {
     tabMenu() {
       return (
         <sui-menu {...{ props: this.menu }}>
-          {this.tabs.map(tab =>
+          {this.tabs.map((tab, index) =>
             <a
               class={['item', { active: tab.active }]}
-              onClick={() => this.tabClick(tab)}
+              onClick={e => this.tabClick(e, tab, index)}
             >
               {tab.label}
             </a>,
@@ -33,12 +37,19 @@ export default {
       );
     },
   },
+  watch: {
+    activeIndex(i) {
+      const index = +i;
+      this.tabClick(null, this.tabs[index], index);
+    },
+  },
   mounted() {
     if (!this.tabs.length) {
       throw new Error('tab used without tab-pane');
     }
 
-    this.tabs[0].open();
+    const pane = (this.tabs[this.activeIndex] || this.tabs[0]);
+    pane.open();
   },
   methods: {
     addTab(tab) {
@@ -49,7 +60,9 @@ export default {
         tab.close();
       });
     },
-    tabClick(tab) {
+    tabClick(e, tab, index) {
+      this.$emit('update:activeIndex', index);
+
       this.closeAllTabs();
       tab.open();
     },
