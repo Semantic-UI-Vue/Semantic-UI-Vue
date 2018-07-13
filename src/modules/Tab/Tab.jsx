@@ -1,11 +1,7 @@
-import Menu from '../../collections/Menu/Menu';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTab',
-  components: {
-    Menu,
-  },
   props: {
     menu: {
       type: Object,
@@ -24,7 +20,7 @@ export default {
   computed: {
     tabMenu() {
       return (
-        <Menu {...{ props: this.menu }}>
+        <sui-menu {...{ props: this.menu }}>
           {this.tabs.map(tab =>
             <a
               class={['item', { active: tab.active }]}
@@ -33,7 +29,7 @@ export default {
               {tab.label}
             </a>,
           )}
-        </Menu>
+        </sui-menu>
       );
     },
     slot() {
