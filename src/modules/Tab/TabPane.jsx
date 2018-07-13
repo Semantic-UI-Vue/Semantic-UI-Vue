@@ -41,7 +41,11 @@ export default {
     },
   },
   mounted() {
-    this.findParent().addTab(this);
+    try {
+      this.findParent().addTab(this);
+    } catch (e) {
+      throw new Error('tab-pane was placed outside of tab component');
+    }
   },
   methods: {
     findParent() {
