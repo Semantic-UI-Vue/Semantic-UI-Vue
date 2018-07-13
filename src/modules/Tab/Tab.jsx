@@ -1,4 +1,5 @@
 import Menu from '../../collections/Menu/Menu';
+import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiTab',
@@ -13,6 +14,9 @@ export default {
         tabular: true,
       }),
     },
+    menuPosition: Enum(['left', 'right'], {
+      description: 'Menu Position',
+    }),
   },
   data: () => ({
     tabs: [],
@@ -76,6 +80,10 @@ export default {
       ];
 
       if (this.menu.tabular === 'right') {
+        renderable.reverse();
+      }
+
+      if (this.menuPosition === 'right') {
         renderable.reverse();
       }
 

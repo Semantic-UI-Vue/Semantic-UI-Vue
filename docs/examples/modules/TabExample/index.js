@@ -13,6 +13,7 @@ import Colored from './MenuVariations/Colored.example';
 import ColoredInverted from './MenuVariations/ColoredInverted.example';
 import VerticalTabular from './MenuVariations/VerticalTabular.example';
 import VerticalTabularRight from './MenuVariations/VerticalTabularRight.example';
+import MenuPositionRight from './MenuVariations/MenuPositionRight.example';
 
 export default [
   {
@@ -89,6 +90,11 @@ export default [
       },
       {
         component: VerticalTabularRight,
+      },
+      {
+        title: 'Menu Position',
+        description: 'A vertical non tabular menu can be positioned on either side',
+        component: MenuPositionRight,
       },
     ],
   },
