@@ -37,9 +37,11 @@ export default {
     },
   },
   mounted() {
-    if (this.tabs.length) {
-      this.tabs[0].open();
+    if (!this.tabs.length) {
+      throw new Error('tab used without tab-pane');
     }
+
+    this.tabs[0].open();
   },
   methods: {
     addTab(tab) {
