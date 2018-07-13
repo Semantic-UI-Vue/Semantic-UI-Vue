@@ -76,11 +76,7 @@ export default {
         </sui-grid-column>,
       ];
 
-      if (this.menu.tabular === 'right') {
-        renderable.reverse();
-      }
-
-      if (this.menuPosition === 'right') {
+      if (this.menu.tabular === 'right' || this.menuPosition === 'right') {
         renderable.reverse();
       }
 
