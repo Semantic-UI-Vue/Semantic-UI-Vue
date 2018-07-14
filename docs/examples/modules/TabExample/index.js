@@ -17,6 +17,7 @@ import MenuPositionRight from './MenuVariations/MenuPositionRight.example';
 
 import ActiveIndex from './Usage/ActiveIndex.example';
 import DefaultActiveIndex from './Usage/DefaultActiveIndex.example';
+import OnTabChange from './Usage/OnTabChange.example';
 
 export default [
   {
@@ -113,6 +114,11 @@ export default [
         title: 'Default Active Index',
         description: 'A tab can define which pane is active by default',
         component: DefaultActiveIndex,
+      },
+      {
+        title: 'On Tab Change',
+        description: 'You can capture the tab change event',
+        component: OnTabChange,
       },
     ],
   },

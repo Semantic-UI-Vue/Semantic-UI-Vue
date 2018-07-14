@@ -25,10 +25,10 @@ export default {
     tabMenu() {
       return (
         <sui-menu {...{ props: this.menu }}>
-          {this.tabs.map((tab, index) =>
+          {this.tabs.map(tab =>
             <a
               class={['item', { active: tab.active }]}
-              onClick={e => this.tabClick(e, tab, index)}
+              onClick={e => this.openTab({ e, tab })}
             >
               {tab.label}
             </a>,
@@ -39,8 +39,11 @@ export default {
   },
   watch: {
     activeIndex(i) {
-      const index = +i;
-      this.tabClick(null, this.tabs[index], index);
+      this.openTab({
+        tab: this.tabs[+i],
+        emitChange: true,
+        updateActiveIndex: false,
+      });
     },
   },
   mounted() {
@@ -60,11 +63,19 @@ export default {
         tab.close();
       });
     },
-    tabClick(e, tab, index) {
-      this.$emit('update:activeIndex', index);
-
+    openTab({ e = null, tab, emitChange = true, updateActiveIndex = true }) {
       this.closeAllTabs();
       tab.open();
+
+      const index = this.tabs.indexOf(tab);
+
+      if (emitChange) {
+        this.$emit('change', e, tab, index);
+      }
+
+      if (updateActiveIndex) {
+        this.$emit('update:activeIndex', index);
+      }
     },
   },
   render() {
