@@ -16,6 +16,7 @@ import VerticalTabularRight from './MenuVariations/VerticalTabularRight.example'
 import MenuPositionRight from './MenuVariations/MenuPositionRight.example';
 
 import ActiveIndex from './Usage/ActiveIndex.example';
+import DefaultActiveIndex from './Usage/DefaultActiveIndex.example';
 
 export default [
   {
@@ -107,6 +108,11 @@ export default [
         title: 'Active Index',
         description: 'A tab can be controlled component',
         component: ActiveIndex,
+      },
+      {
+        title: 'Default Active Index',
+        description: 'A tab can define which pane is active by default',
+        component: DefaultActiveIndex,
       },
     ],
   },
