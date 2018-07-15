@@ -30,7 +30,9 @@ export default {
               class={['item', { active: tab.active }]}
               onClick={e => this.openTab({ e, tab })}
             >
-              {tab.title}
+              {tab.icon && <sui-icon name={tab.icon} />}
+              <span>{tab.title}</span>
+              {tab.label && <sui-label>{tab.label}</sui-label>}
             </a>,
           )}
         </sui-menu>

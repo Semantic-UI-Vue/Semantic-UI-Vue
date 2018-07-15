@@ -10,6 +10,12 @@ export default {
       type: String,
       required: true,
     },
+    icon: {
+      type: String,
+    },
+    label: {
+      type: String,
+    },
     attached: {
       type: [Boolean, String],
       default: true,

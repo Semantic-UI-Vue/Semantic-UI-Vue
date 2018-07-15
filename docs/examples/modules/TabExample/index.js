@@ -18,6 +18,7 @@ import MenuPositionRight from './MenuVariations/MenuPositionRight.example';
 import ActiveIndex from './Usage/ActiveIndex.example';
 import DefaultActiveIndex from './Usage/DefaultActiveIndex.example';
 import OnTabChange from './Usage/OnTabChange.example';
+import CustomMenuItems from './Usage/CustomMenuItems.example';
 
 export default [
   {
@@ -119,6 +120,11 @@ export default [
         title: 'On Tab Change',
         description: 'You can capture the tab change event',
         component: OnTabChange,
+      },
+      {
+        title: 'Adding Icons and Labels',
+        description: 'You can use icon and label props on sui-tab-pane to add label and icon',
+        component: CustomMenuItems,
       },
     ],
   },
