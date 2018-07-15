@@ -28,7 +28,7 @@ export default {
         <sui-menu {...{ props: this.menu }}>
           {this.tabs.map(tab =>
             <a
-              class={['item', { active: tab.active }]}
+              class={['item', { active: tab.active, disabled: tab.disabled }]}
               onClick={e => this.openTab(e, tab)}
             >
               {tab.icon && <sui-icon name={tab.icon} />}
@@ -60,6 +60,10 @@ export default {
       this.tabs.push(tab);
     },
     openTab(e, tab) {
+      if (tab.disabled) {
+        return;
+      }
+
       this.activeTab.close();
       tab.open();
 

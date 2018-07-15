@@ -4,6 +4,7 @@ import Secondary from './Types/Secondary.example';
 import Text from './Types/Text.example';
 
 import Loading from './States/Loading.example';
+import Disabled from './States/Disabled.example';
 
 import Attached from './MenuVariations/Attached.example';
 import NotAttached from './MenuVariations/NotAttached.example';
@@ -53,6 +54,11 @@ export default [
         title: 'Loading',
         description: 'A tab can display a loading indicator.',
         component: Loading,
+      },
+      {
+        title: 'Disabled',
+        description: 'A tab can be disabled',
+        component: Disabled,
       },
     ],
   },
