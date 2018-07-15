@@ -20,6 +20,7 @@ export default {
   },
   data: () => ({
     tabs: [],
+    activeTab: null,
   }),
   computed: {
     tabMenu() {
@@ -40,9 +41,9 @@ export default {
     },
   },
   watch: {
-    activeIndex(i) {
+    activeIndex(newIndex) {
       this.openTab({
-        tab: this.tabs[+i],
+        tab: this.tabs[+newIndex],
         emitChange: true,
         updateActiveIndex: false,
       });
@@ -55,18 +56,16 @@ export default {
 
     const pane = (this.tabs[this.activeIndex] || this.tabs[0]);
     pane.open();
+
+    this.activeTab = pane;
   },
   methods: {
     addTab(tab) {
       this.tabs.push(tab);
     },
-    closeAllTabs() {
-      for (let n = 0, len = this.tabs.length; n < len; n += 1) {
-        this.tabs[n].close();
-      }
-    },
     openTab({ e = null, tab, emitChange = true, updateActiveIndex = true }) {
-      this.closeAllTabs();
+      this.activeTab.close();
+      this.activeTab = tab;
       tab.open();
 
       const index = this.tabs.indexOf(tab);
