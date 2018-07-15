@@ -38,7 +38,7 @@
         </sui-table-row>
         <sui-table-row>
           <sui-table-cell>Label</sui-table-cell>
-          <sui-table-cell>{{ table.label }}</sui-table-cell>
+          <sui-table-cell>{{ table.title }}</sui-table-cell>
         </sui-table-row>
         <sui-table-row>
           <sui-table-cell>Clicked on the Tab Pane</sui-table-cell>
@@ -53,13 +53,13 @@
       @change="handleChange"
       :active-index="activeIndex"
     >
-      <sui-tab-pane label="Circle">
+      <sui-tab-pane title="Circle">
         Circle
       </sui-tab-pane>
-      <sui-tab-pane label="Box">
+      <sui-tab-pane title="Box">
         Box
       </sui-tab-pane>
-      <sui-tab-pane label="Triangle">
+      <sui-tab-pane title="Triangle">
         Triangle
       </sui-tab-pane>
     </sui-tab>
@@ -73,7 +73,7 @@
       table: {
         inside: null,
         index: null,
-        label: null,
+        title: null,
       },
       activeIndex: null,
     }),
@@ -88,7 +88,7 @@
       handleChange(e, activePane, index) {
         this.table.inside = !!e;
         this.table.index = +index;
-        this.table.label = activePane.label;
+        this.table.title = activePane.title;
       },
     },
   };

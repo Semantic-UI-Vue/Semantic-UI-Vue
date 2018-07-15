@@ -12,14 +12,16 @@
 
     <sui-divider hidden />
 
-    <sui-tab :menu="{ color: selectedColor, inverted: true, attached: false, tabular: false }">
-      <sui-tab-pane label="Circle" :attached="false">
+    <sui-tab
+      :menu="{ color: selectedColor, inverted: true, attached: false, tabular: false }"
+    >
+      <sui-tab-pane title="Circle" :attached="false">
         Circle
       </sui-tab-pane>
-      <sui-tab-pane label="Box" :attached="false">
+      <sui-tab-pane title="Box" :attached="false">
         Box
       </sui-tab-pane>
-      <sui-tab-pane label="Triangle" :attached="false">
+      <sui-tab-pane title="Triangle" :attached="false">
         Triangle
       </sui-tab-pane>
     </sui-tab>

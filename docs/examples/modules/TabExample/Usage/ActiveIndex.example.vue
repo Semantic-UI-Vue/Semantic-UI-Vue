@@ -13,13 +13,13 @@
     <sui-tab
       :active-index.sync="activeIndex"
     >
-      <sui-tab-pane label="Circle">
+      <sui-tab-pane title="Circle">
         Circle
       </sui-tab-pane>
-      <sui-tab-pane label="Box">
+      <sui-tab-pane title="Box">
         Box
       </sui-tab-pane>
-      <sui-tab-pane label="Triangle">
+      <sui-tab-pane title="Triangle">
         Triangle
       </sui-tab-pane>
     </sui-tab>

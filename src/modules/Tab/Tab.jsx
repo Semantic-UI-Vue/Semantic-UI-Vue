@@ -30,7 +30,7 @@ export default {
               class={['item', { active: tab.active }]}
               onClick={e => this.openTab({ e, tab })}
             >
-              {tab.label}
+              {tab.title}
             </a>,
           )}
         </sui-menu>

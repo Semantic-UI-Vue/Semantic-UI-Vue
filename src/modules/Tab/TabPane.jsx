@@ -6,7 +6,7 @@ export default {
     parent: 'SuiTab',
   },
   props: {
-    label: {
+    title: {
       type: String,
       required: true,
     },

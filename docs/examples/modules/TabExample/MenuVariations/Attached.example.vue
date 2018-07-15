@@ -1,13 +1,15 @@
 <template>
   <div>
-    <sui-tab :menu="{ attached: 'bottom' }">
-      <sui-tab-pane label="Circle" attached="top">
+    <sui-tab
+      :menu="{ attached: 'bottom' }"
+    >
+      <sui-tab-pane title="Circle" attached="top">
         Circle
       </sui-tab-pane>
-      <sui-tab-pane label="Box" attached="top">
+      <sui-tab-pane title="Box" attached="top">
         Box
       </sui-tab-pane>
-      <sui-tab-pane label="Triangle" attached="top">
+      <sui-tab-pane title="Triangle" attached="top">
         Triangle
       </sui-tab-pane>
     </sui-tab>
