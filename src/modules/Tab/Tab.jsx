@@ -59,9 +59,9 @@ export default {
       this.tabs.push(tab);
     },
     closeAllTabs() {
-      this.tabs.forEach((tab) => {
-        tab.close();
-      });
+      for (let n = 0, len = this.tabs.length; n < len; n += 1) {
+        this.tabs[n].close();
+      }
     },
     openTab({ e = null, tab, emitChange = true, updateActiveIndex = true }) {
       this.closeAllTabs();
