@@ -29,7 +29,7 @@ export default {
           {this.tabs.map(tab =>
             <a
               class={['item', { active: tab.active }]}
-              onClick={e => this.openTab({ e, tab })}
+              onClick={e => this.openTab(e, tab)}
             >
               {tab.icon && <sui-icon name={tab.icon} />}
               <span>{tab.title}</span>
@@ -42,11 +42,7 @@ export default {
   },
   watch: {
     activeIndex(newIndex) {
-      this.openTab({
-        tab: this.tabs[+newIndex],
-        emitChange: true,
-        updateActiveIndex: false,
-      });
+      this.openTab(null, this.tabs[+newIndex]);
     },
   },
   mounted() {
@@ -63,20 +59,16 @@ export default {
     addTab(tab) {
       this.tabs.push(tab);
     },
-    openTab({ e = null, tab, emitChange = true, updateActiveIndex = true }) {
+    openTab(e, tab) {
       this.activeTab.close();
-      this.activeTab = tab;
       tab.open();
 
       const index = this.tabs.indexOf(tab);
 
-      if (emitChange) {
-        this.$emit('change', e, tab, index);
-      }
+      this.$emit('change', e, tab, index);
+      this.$emit('update:activeIndex', index);
 
-      if (updateActiveIndex) {
-        this.$emit('update:activeIndex', index);
-      }
+      this.activeTab = tab;
     },
   },
   render() {
