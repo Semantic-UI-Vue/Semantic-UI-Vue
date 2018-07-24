@@ -6,7 +6,8 @@ import Docs from './Docs';
 import DocsPage from './DocsPage';
 import Layouts from './Layouts';
 import Theming from './Layouts/Theming';
-import Login from './Layouts/Login'
+import Login from './Layouts/Login';
+import FixedMenu from './Layouts/FixedMenu';
 import QuickStart from '../README.md';
 import Contributing from '../CONTRIBUTING.md';
 
@@ -20,7 +21,11 @@ const router = new Router({
     },
     {
       path: '/layouts/login',
-      component: Login
+      component: Login,
+    },
+    {
+      path: '/layouts/fixed_menu',
+      component: FixedMenu,
     },
     {
       path: '/',
@@ -51,7 +56,7 @@ const router = new Router({
   linkExactActiveClass: 'active',
 });
 
-router.afterEach((to) => {
+router.afterEach(to => {
   if (typeof ga === 'function') {
     ga('set', 'page', to.path);
     ga('send', 'pageview');

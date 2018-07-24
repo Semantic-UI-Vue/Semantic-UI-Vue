@@ -45,11 +45,22 @@
         </router-link>
       </div>
 
+      <div is="sui-card-group" :widths="3" stackable>
+        <router-link to="/layouts/fixed_menu" is="sui-card">
+          <sui-image src="static/images/layouts/fixed_menu.png" />
+          <sui-card-content>
+            <sui-card-header>Fixed Menu</sui-card-header>
+            <sui-card-description>
+              An example layout with a fixed menu at the top
+            </sui-card-description>
+          </sui-card-content>
+        </router-link>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
