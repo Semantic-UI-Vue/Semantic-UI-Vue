@@ -11,6 +11,10 @@ export default {
     items: Array,
     link: Boolean,
     relaxed: Boolean,
+    inverted: {
+      type: Boolean,
+      description: 'A list can be inverted to appear on a dark background.',
+    },
     size: Enum.Size(),
   },
   render() {
@@ -34,6 +38,7 @@ export default {
           this.horizontal && 'horizontal',
           this.link && 'link',
           this.relaxed && 'relaxed',
+          this.inverted && 'inverted',
           'list',
         )}
         role="list"
