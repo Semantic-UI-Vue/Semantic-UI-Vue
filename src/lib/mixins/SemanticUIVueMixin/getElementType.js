@@ -2,7 +2,7 @@ import kebabCase from 'lodash/kebabCase';
 
 export default function getElementType(defaultEl = 'div') {
   const tag = this.$vnode && this.$vnode.data.tag;
-  if (!tag) return defaultEl;
+  if (!tag || tag === 'component') return defaultEl;
 
   const context = this.$vnode.context;
   const entry = Object
