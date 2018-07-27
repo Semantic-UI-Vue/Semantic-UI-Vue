@@ -13,6 +13,9 @@ export default {
     image: Boolean,
     pointing: Enum(['left', 'right']),
     ribbon: Boolean,
+    corner: Enum(['left', 'right'], {
+      description: 'A label can position itself in the corner of an element.',
+    }),
   },
   render() {
     const ElementType = this.getElementType();
@@ -26,6 +29,7 @@ export default {
           this.basic && 'basic',
           this.image && 'image',
           this.ribbon && 'ribbon',
+          this.corner && `${this.corner} corner`,
           'label',
         )}
       >

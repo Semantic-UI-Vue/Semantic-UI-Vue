@@ -40,6 +40,7 @@ export default {
     if (this.wrapped) {
       return (
         <ElementType class={classNames}>
+          {this.$slots.corner}
           <img src={this.src} />
         </ElementType>
       );
