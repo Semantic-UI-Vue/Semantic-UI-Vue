@@ -37,7 +37,7 @@ export default {
       'image',
     );
 
-    if (this.wrapped) {
+    if (this.wrapped || this.$slots.corner) {
       return (
         <ElementType class={classNames}>
           {this.$slots.corner}
