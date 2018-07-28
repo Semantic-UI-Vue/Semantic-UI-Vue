@@ -350,9 +350,24 @@ export default {
     handleClickOnSelectedNode(e) {
       e.stopPropagation();
     },
+    toggleFilteredText(filteredText, filter) {
+      if (!this.multiple && !filteredText.classList.contains('filtered') && filter.trim() !== '') {
+        filteredText.classList.add('filtered');
+      }
+
+      if (!this.multiple && filter.trim() === '') filteredText.classList.remove('filtered');
+    },
     handleKeyDown(e) {
+      this.toggleFilteredText(this.$refs.text, this.filter);
+      const KEYS = {
+        ENTER: 13,
+        ESCAPE: 27,
+        UP_ARROW: 38,
+        DOWN_ARROW: 40,
+      };
+
       if (!this.open) {
-        if (e.keyCode === 40) {
+        if (e.keyCode !== KEYS.ENTER) {
           this.setOpen(true);
           e.preventDefault();
         }
@@ -360,30 +375,31 @@ export default {
       }
       let direction = 1;
       switch (e.keyCode) {
-        // Handle Enter button
-        case 13:
-          if (this.allowAdditions && this.selectedIndex === -1 && this.filter.trim() !== '') {
+        case KEYS.ENTER: {
+          const filter = this.filter;
+          if (!this.multiple && this.selectedIndex !== -1) this.filter = '';
+          if (this.allowAdditions && this.selectedIndex === -1 && filter.trim() !== '') {
             e.preventDefault();
-            this.selectItem(this.filter);
+            this.selectItem(filter);
           } else if (this.selection) {
             if (this.selectedIndex === -1) return;
             e.preventDefault();
             if (!this.multiple) {
               this.setOpen(false);
+              this.$refs.text.classList.remove('filtered');
             } else {
               this.selectItem(this.filteredOptions[this.selectedIndex].value);
             }
           }
           return;
-        // Handle escape button
-        case 27:
+        }
+        case KEYS.ESCAPE:
           if (this.open) this.setOpen(false);
           return;
-        // handle up arrow button
-        case 38:
+        case KEYS.UP_ARROW:
           direction = -1;
           break;
-        case 40:
+        case KEYS.DOWN_ARROW:
           break;
         default:
           return;
@@ -427,12 +443,10 @@ export default {
     resizeInput() {
       const sizer = this.$refs.sizer;
       sizer.innerText = this.filter;
-      sizer.style.display = 'inline';
-      sizer.style.padding = '0';
-      const width = sizer.offsetWidth || sizer.offsetWidth;
+      const width = sizer.offsetWidth;
       sizer.style.display = '';
       sizer.style.padding = '';
-      this.$refs.search.style.width = `${Math.ceil(width) + 1}px`;
+      this.$refs.search.style.minWidth = `${Math.ceil(width + 1)}px`;
     },
     updateFilter(event) {
       this.filter = event.target.value;
@@ -499,11 +513,10 @@ export default {
           !this.downward && directions.upward,
           'dropdown',
         )}
-        {
-          ...{
-            on: eventHandlers,
-            nativeOn: eventHandlers,
-          }
+        {...{
+          on: eventHandlers,
+          nativeOn: eventHandlers,
+        }
         }
       >
         {this.selectedNodes}
