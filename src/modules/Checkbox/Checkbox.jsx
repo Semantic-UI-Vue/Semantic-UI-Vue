@@ -15,6 +15,7 @@ export default {
     toggle: Boolean,
     name: String,
     value: String,
+    required: Boolean,
   },
   events: {
     change: {
@@ -78,6 +79,7 @@ export default {
           checked={this.isChecked}
           disabled={this.disabled}
           onChange={this.setValue}
+          required={this.required}
         />
         <label
           onClick={() => this.$refs.input.click()}
