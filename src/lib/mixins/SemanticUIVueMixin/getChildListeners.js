@@ -1,4 +1,4 @@
-export default function getChildProps() {
+export default function getChildListeners() {
   const listeners = { ...this.$listeners };
 
   Object
