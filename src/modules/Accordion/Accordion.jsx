@@ -101,7 +101,7 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes('ui', this.inverted && 'inverted', this.styled && 'styled', 'accordion')}
+        class={this.classes('ui', this.inverted && 'inverted', this.fluid && 'fluid', this.styled && 'styled', 'accordion')}
       >
         {this.panels ? this.panels.map(({ title, content }, index) => (
           <template>
