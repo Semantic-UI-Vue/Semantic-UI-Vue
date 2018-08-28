@@ -96,7 +96,7 @@ This is the quickest way to get started with Semantic UI Vue. You won't be able 
 
 ##### **To avoid unexpected behavior please use only the last version of Semantic-UI**
 ```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css"></link>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
 ```
 
 #### Semantic UI CSS package
