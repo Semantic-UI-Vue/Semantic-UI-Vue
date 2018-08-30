@@ -28,7 +28,7 @@ As soon as you get started, submit a pull request. Don't worry if it's still WIP
 
 ### Missing components
 
-There are still a lot of components or components' functionalities missing. Please have a look to the [*Semantic UI*'s site](https://semantic-ui.com) and help yourself!
+There are still a lot of components or components' functionalities missing. You can see Semantic UI Vue's feature status [here](https://semantic-ui-vue.github.io/#/features).
 
 ### Documentation
 
