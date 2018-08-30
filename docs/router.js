@@ -12,8 +12,6 @@ import FixedMenu from './Layouts/FixedMenu';
 import QuickStart from '../README.md';
 import Contributing from '../CONTRIBUTING.md';
 
-const f = Features;
-
 Vue.use(Router);
 
 const router = new Router({
