@@ -10,26 +10,48 @@ export default {
       description: 'A label can reduce its complexity.',
     },
     color: Enum.Color(),
-    image: Boolean,
-    pointing: Enum(['left', 'right']),
-    ribbon: Boolean,
     corner: Enum(['left', 'right'], {
       description: 'A label can position itself in the corner of an element.',
     }),
+    image: Boolean,
+    pointing: Enum(['left', 'right', 'above', 'below'], {
+      description: 'A label can point to content next to it.',
+      type: Boolean,
+    }),
+    ribbon: Boolean,
+    tag: Enum.Color({
+      description: 'A label can appear as a tag.',
+      type: Boolean,
+    }),
+  },
+  computed: {
+    pointingClass() {
+      if (!this.pointing) {
+        return '';
+      }
+
+      let className = '';
+      if (['left', 'right'].includes(this.pointing)) className += `${this.pointing} `;
+      className += 'pointing';
+      if (['above', 'below'].includes(this.pointing)) className += ` ${this.pointing}`;
+      return className;
+    },
   },
   render() {
     const ElementType = this.getElementType();
+
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
         class={this.classes(
           'ui',
           this.color,
-          this.pointing && `${this.pointing} pointing`,
+          this.pointingClass,
           this.basic && 'basic',
           this.image && 'image',
           this.ribbon && 'ribbon',
           this.corner && `${this.corner} corner`,
+          this.tag && `${this.tag} tag`,
           'label',
         )}
       >
