@@ -10,6 +10,10 @@ export default {
       description: 'Attach segment to other content, like a header.',
     }),
     basic: Boolean,
+    clearing: {
+      type: Boolean,
+      description: 'A segment can clear floated content.',
+    },
     inverted: Boolean,
     padded: Boolean,
     piled: Boolean,
@@ -28,6 +32,7 @@ export default {
           'ui',
           this.attached && 'attached',
           this.basic && 'basic',
+          this.clearing && 'clearing',
           this.padded && 'padded',
           this.inverted && 'inverted',
           this.stacked, this.stacked && 'stacked',
