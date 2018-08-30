@@ -509,7 +509,7 @@ export default {
           this.item && 'item',
           this.floating && 'floating',
           this.fluid && 'fluid',
-          Object.prototype.hasOwnProperty.call(this.$options.propsData, 'pointing') && `pointing ${this.pointing}`,
+          typeof this.$options.propsData === 'object' && this.$options.propsData !== null && Object.prototype.hasOwnProperty.call(this.$options.propsData, 'pointing') && `pointing ${this.pointing}`,
           this.labeled && 'labeled',
           this.multiple && 'multiple',
           this.selection && 'selection',
