@@ -208,49 +208,49 @@
             "implemented": true
           }, {
             "name": "sub headers",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "content",
           "examples": [{
             "name": "image",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "icon",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "subheader",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "states",
           "examples": [{
             "name": "disabled",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "variations",
           "examples": [{
             "name": "dividing",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "block",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "attached",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "floating",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "text alignment",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "colored",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "inverted",
-            "implemented": false
+            "implemented": true
           }]
         }]
       },

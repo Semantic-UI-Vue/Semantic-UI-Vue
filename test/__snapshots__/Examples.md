@@ -1045,6 +1045,185 @@
   </div></h2>"
 ```
 
+##     `Sub Headers`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui sub header\">Price</div> <span>$10.99</span></div>"
+```
+
+##   `Content`
+
+##     `Image`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\"><img src=\"static/images/avatar/large/patrick.png\" class=\"ui circular image\"> Patrick
+</h2>"
+```
+
+##     `Icon`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\"><i class=\"plug icon\"></i> <div class=\"content\">Uptime Guarantee</div></h2>"
+```
+
+##     `Subheader`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\">
+  Account Settings
+  <div class=\"sub header\">
+    Manage your account settings and set email preferences
+  </div></h2>"
+```
+
+##   `States`
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui disabled header\">
+  Disabled Header
+</h2>"
+```
+
+##   `Variations`
+
+##     `Dividing`
+
+####       `should match snapshot`
+
+```
+"<h3 class=\"ui dividing header\">
+  Dividing Header
+</h3>"
+```
+
+##     `Block`
+
+####       `should match snapshot`
+
+```
+"<h3 class=\"ui block header\">
+  Block Header
+</h3>"
+```
+
+##     `Attached`
+
+####       `should match snapshot`
+
+```
+"<div><h2 class=\"ui top attached header\">
+    Attached Header
+  </h2> <div class=\"ui attached segment\">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat.
+  </div></div>"
+```
+
+##     `Floating`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui clearing segment\"><h2 class=\"ui right floated header\">
+    Float Right
+  </h2> <h2 class=\"ui left floated header\">
+    Float Left
+  </h2></div>"
+```
+
+##     `Text Alignment`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><h3 class=\"ui right aligned header\">
+    Float Right
+  </h3> <h3 class=\"ui left aligned header\">
+    Float Left
+  </h3> <h3 class=\"ui justified aligned header\">
+    This text takes up the full width of the container
+  </h3> <h3 class=\"ui center aligned header\">
+    Centered
+  </h3></div>"
+```
+
+##     `Colored`
+
+####       `should match snapshot`
+
+```
+"<div><h4 class=\"ui red header\">
+    Red
+  </h4> <h4 class=\"ui orange header\">
+    Orange
+  </h4> <h4 class=\"ui yellow header\">
+    Yellow
+  </h4> <h4 class=\"ui olive header\">
+    Olive
+  </h4> <h4 class=\"ui green header\">
+    Green
+  </h4> <h4 class=\"ui teal header\">
+    Teal
+  </h4> <h4 class=\"ui blue header\">
+    Blue
+  </h4> <h4 class=\"ui purple header\">
+    Purple
+  </h4> <h4 class=\"ui violet header\">
+    Violet
+  </h4> <h4 class=\"ui pink header\">
+    Pink
+  </h4> <h4 class=\"ui brown header\">
+    Brown
+  </h4> <h4 class=\"ui grey header\">
+    Grey
+  </h4></div>"
+```
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui inverted segment\"><h4 class=\"ui red header\">
+    Red
+  </h4> <h4 class=\"ui orange header\">
+    Orange
+  </h4> <h4 class=\"ui yellow header\">
+    Yellow
+  </h4> <h4 class=\"ui olive header\">
+    Olive
+  </h4> <h4 class=\"ui green header\">
+    Green
+  </h4> <h4 class=\"ui teal header\">
+    Teal
+  </h4> <h4 class=\"ui blue header\">
+    Blue
+  </h4> <h4 class=\"ui purple header\">
+    Purple
+  </h4> <h4 class=\"ui violet header\">
+    Violet
+  </h4> <h4 class=\"ui pink header\">
+    Pink
+  </h4> <h4 class=\"ui brown header\">
+    Brown
+  </h4> <h4 class=\"ui grey header\">
+    Grey
+  </h4></div>"
+```
+
 ## `IconExample`
 
 ##   `States`
