@@ -4,6 +4,11 @@ import ListIcon from './ListIcon.example';
 import ListDivided from './ListDivided.example';
 import ListTree from './ListTree.example';
 import ListInverted from './ListInverted.example';
+import Bulleted from './Bulleted.example';
+import BulletedHorizontal from './BulletedHorizontal.example';
+import Ordered from './Ordered.example';
+import OrderedNumber from './OrderedNumber.example';
+import Link from './Link.example';
 
 export default [
   {
@@ -31,6 +36,28 @@ export default [
       },
       {
         component: ListTree,
+      },
+      {
+        title: 'Bulleted',
+        description: 'A list can mark items with a bullet.',
+        component: Bulleted,
+      },
+      {
+        component: BulletedHorizontal,
+      },
+      {
+        title: 'Ordered',
+        description: 'A list can be ordered numerically.',
+        component: Ordered,
+      },
+      {
+        description: 'You can also use an `ol` and `li` to render an ordered list.',
+        component: OrderedNumber,
+      },
+      {
+        title: 'Link',
+        description: 'A list can be specially formatted for navigation links.',
+        component: Link,
       },
     ],
   },
