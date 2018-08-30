@@ -428,19 +428,19 @@
             "implemented": true
           }, {
             "name": "pointing",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "corner",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "tag",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "ribbon",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "attached",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "horizontal",
             "implemented": false
