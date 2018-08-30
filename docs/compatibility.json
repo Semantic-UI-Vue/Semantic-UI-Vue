@@ -443,40 +443,40 @@
             "implemented": true
           }, {
             "name": "horizontal",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "floating",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "content",
           "examples": [{
             "name": "detail",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "icon",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "image",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "link",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "variations",
           "examples": [{
             "name": "circular",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "basic",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "colored",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "size",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "groups",
