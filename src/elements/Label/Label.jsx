@@ -5,6 +5,9 @@ export default {
   name: 'SuiLabel',
   mixins: [SemanticUIVueMixin],
   props: {
+    attached: Enum(['top', 'bottom', 'top right', 'top left', 'bottom left', 'bottom right'], {
+      description: 'A label can attach to a content segment.',
+    }),
     basic: {
       type: Boolean,
       description: 'A label can reduce its complexity.',
@@ -52,6 +55,7 @@ export default {
           this.pointingClass,
           this.basic && 'basic',
           this.image && 'image',
+          this.attached && `${this.attached} attached`,
           this.ribbon && `${this.ribbon} ribbon`,
           this.corner && `${this.corner} corner`,
           this.tag && `${this.tag} tag`,

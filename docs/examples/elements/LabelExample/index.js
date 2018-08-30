@@ -7,6 +7,7 @@ import Pointing from './Pointing.example';
 import Tag from './Tag.example';
 import Ribbon from './Ribbon.example';
 import RibbonImage from './RibbonImage.example';
+import Attached from './Attached.example';
 
 export default [
   {
@@ -50,6 +51,11 @@ export default [
       },
       {
         component: RibbonImage,
+      },
+      {
+        title: 'Attached',
+        description: 'A label can attach to a content segment.',
+        component: Attached,
       },
     ],
   },
