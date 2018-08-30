@@ -4,12 +4,15 @@ import Router from 'vue-router';
 import Component from './Component';
 import Docs from './Docs';
 import DocsPage from './DocsPage';
+import Features from './Features';
 import Layouts from './Layouts';
 import Theming from './Layouts/Theming';
 import Login from './Layouts/Login';
 import FixedMenu from './Layouts/FixedMenu';
 import QuickStart from '../README.md';
 import Contributing from '../CONTRIBUTING.md';
+
+const f = Features;
 
 Vue.use(Router);
 
@@ -44,6 +47,10 @@ const router = new Router({
         {
           path: '/layouts',
           component: Layouts,
+        },
+        {
+          path: '/features',
+          component: Features,
         },
         {
           path: '/:type/:componentName',
