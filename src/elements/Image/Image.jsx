@@ -37,11 +37,12 @@ export default {
       'image',
     );
 
-    if (this.wrapped || this.$slots.corner) {
+    if (this.wrapped || this.$slots.corner || this.$slots.label) {
       return (
         <ElementType class={classNames}>
           {this.$slots.corner}
           <img src={this.src} />
+          {this.$slots.label}
         </ElementType>
       );
     }

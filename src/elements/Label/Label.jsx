@@ -18,7 +18,10 @@ export default {
       description: 'A label can point to content next to it.',
       type: Boolean,
     }),
-    ribbon: Boolean,
+    ribbon: Enum(['left', 'right'], {
+      description: 'A label can appear as a ribbon attaching itself to an element.',
+      type: Boolean,
+    }),
     tag: Enum.Color({
       description: 'A label can appear as a tag.',
       type: Boolean,
@@ -49,7 +52,7 @@ export default {
           this.pointingClass,
           this.basic && 'basic',
           this.image && 'image',
-          this.ribbon && 'ribbon',
+          this.ribbon && `${this.ribbon} ribbon`,
           this.corner && `${this.corner} corner`,
           this.tag && `${this.tag} tag`,
           'label',

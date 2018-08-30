@@ -5,6 +5,8 @@ import Image3 from './Image3.example';
 import Corner from './Corner.example';
 import Pointing from './Pointing.example';
 import Tag from './Tag.example';
+import Ribbon from './Ribbon.example';
+import RibbonImage from './RibbonImage.example';
 
 export default [
   {
@@ -40,6 +42,14 @@ export default [
         title: 'Tag',
         description: 'A label can appear as a tag.',
         component: Tag,
+      },
+      {
+        title: 'Ribbon',
+        description: 'A label can appear as a ribbon attaching itself to an element.',
+        component: Ribbon,
+      },
+      {
+        component: RibbonImage,
       },
     ],
   },
