@@ -504,13 +504,13 @@
             "implemented": true
           }, {
             "name": "bulleted",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "ordered",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "link",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "content",

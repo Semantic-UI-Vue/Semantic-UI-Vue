@@ -1646,6 +1646,32 @@
 "<div class=\"ui inverted segment\"><div role=\"list\" class=\"ui divided relaxed inverted list\"><div role=\"listitem\" class=\"item\">Apples</div> <div role=\"listitem\" class=\"item\">Pears</div> <div role=\"listitem\" class=\"item\">Oranges</div></div></div>"
 ```
 
+##     `Bulleted`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\" bulleted=\"\"><div role=\"listitem\" class=\"item\">Gaining Access</div> <div role=\"listitem\" class=\"item\">Inviting Friends</div> <div role=\"listitem\" class=\"item\">
+    Benefits
+    <div class=\"list\"><div role=\"listitem\" class=\"item\" href=\"#\">Link to somewhere</div> <div role=\"listitem\" class=\"item\">Rebates</div> <div role=\"listitem\" class=\"item\">Discounts</div></div></div> <div role=\"listitem\" class=\"item\">Warranty</div></div>"
+```
+
+##     `Ordered`
+
+####       `should match snapshot`
+
+```
+"<list ordered=\"\"><list.item as=\"a\">Getting Started</list.item> <list.item as=\"a\">Introduction</list.item> <list.item><a>Languages</a> <list.list><list.item as=\"a\">HTML</list.item> <list.item as=\"a\">Javascript</list.item> <list.item as=\"a\">CSS</list.item></list.list></list.item> <list.item as=\"a\">Review</list.item></list>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui link list\"><div role=\"listitem\" class=\"item\" active=\"\">Home</div> <a role=\"listitem\" class=\"item\">About</a> <a role=\"listitem\" class=\"item\">Jobs</a> <a role=\"listitem\" class=\"item\">Team</a></div>"
+```
+
 ## `LoaderExample`
 
 ##   `Types`
