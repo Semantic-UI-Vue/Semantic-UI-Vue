@@ -9,6 +9,13 @@ import BulletedHorizontal from './BulletedHorizontal.example';
 import Ordered from './Ordered.example';
 import OrderedNumber from './OrderedNumber.example';
 import Link from './Link.example';
+import Description from './Description.example';
+import Header from './Header.example';
+import Icon from './Icon.example';
+import Image from './Image.example';
+import Item from './Item.example';
+import LinkContent from './LinkContent.example';
+import LinkDescription from './LinkDescription.example';
 
 export default [
   {
@@ -18,11 +25,6 @@ export default [
         title: 'List',
         description: 'A list groups related content',
         component: List,
-      },
-      {
-        title: 'Inverted',
-        description: 'A list can be inverted to appear on a dark background',
-        component: ListInverted,
       },
       {
         description: 'You can also pass an array of items as props',
@@ -58,6 +60,54 @@ export default [
         title: 'Link',
         description: 'A list can be specially formatted for navigation links.',
         component: Link,
+      },
+    ],
+  },
+  {
+    title: 'Content',
+    examples: [
+      {
+        title: 'Item',
+        description: 'A list item can contain a set of items.',
+        component: Item,
+      },
+      {
+        title: 'Icon',
+        description: 'A list item can contain an icon.',
+        component: Icon,
+      },
+      {
+        title: 'Image',
+        description: 'A list item can contain an image.',
+        component: Image,
+      },
+      {
+        title: 'Link',
+        description: 'A list can contain links.',
+        component: LinkContent,
+      },
+      {
+        component: LinkDescription,
+      },
+      {
+        title: 'Header',
+        description: 'A list item can contain a header.',
+        component: Header,
+      },
+      {
+        title: 'Description',
+        description: 'A list item can contain a description.',
+        component: Description,
+      },
+    ],
+  },
+  {
+    title: 'Variations',
+    examples: [
+      {
+        title: 'Inverted',
+        description: 'A list can be inverted to appear on a dark background.',
+        component: ListInverted,
       },
     ],
   },

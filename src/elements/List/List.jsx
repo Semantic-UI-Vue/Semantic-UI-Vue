@@ -6,6 +6,10 @@ export default {
   name: 'SuiList',
   mixins: [SemanticUIVueMixin],
   props: {
+    bulleted: {
+      type: Boolean,
+      description: 'A list can mark items with a bullet.',
+    },
     divided: Boolean,
     horizontal: Boolean,
     items: Array,
@@ -14,6 +18,10 @@ export default {
     inverted: {
       type: Boolean,
       description: 'A list can be inverted to appear on a dark background.',
+    },
+    ordered: {
+      type: Boolean,
+      description: 'A list can be ordered numerically.',
     },
     size: Enum.Size(),
   },
@@ -34,7 +42,9 @@ export default {
         class={this.classes(
           'ui',
           this.size,
+          this.bulleted && 'bulleted',
           this.divided && 'divided',
+          this.ordered && 'ordered',
           this.horizontal && 'horizontal',
           this.link && 'link',
           this.relaxed && 'relaxed',

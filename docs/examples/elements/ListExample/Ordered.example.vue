@@ -1,17 +1,17 @@
 <template>
-  <List ordered>
-    <List.Item as='a'>Getting Started</List.Item>
-    <List.Item as='a'>Introduction</List.Item>
-    <List.Item>
+  <sui-list ordered>
+    <a is="sui-list-item">Getting Started</a>
+    <a is="sui-list-item">Introduction</a>
+    <a>
       <a>Languages</a>
-      <List.List>
-        <List.Item as='a'>HTML</List.Item>
-        <List.Item as='a'>Javascript</List.Item>
-        <List.Item as='a'>CSS</List.Item>
-      </List.List>
-    </List.Item>
-    <List.Item as='a'>Review</List.Item>
-  </List>
+      <sui-list-list>
+        <a is="sui-list-item">HTML</a>
+        <a is="sui-list-item">Javascript</a>
+        <a is="sui-list-item">CSS</a>
+      </sui-list-list>
+    </a>
+    <a is="sui-list-item">Review</a>
+  </sui-list>
 </template>
 
 <script>
