@@ -405,6 +405,7 @@ export default {
           return;
       }
       e.preventDefault();
+      if (this.filteredOptions.length === 0) return;
       const newValue = this.selectedIndex + direction;
       if (this.filteredOptions.length <= newValue) {
         this.selectedIndex = 0;
