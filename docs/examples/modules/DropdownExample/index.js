@@ -11,6 +11,7 @@ import Selection from './Selection.example';
 import SearchDropdown from './SearchDropdown.example';
 import SearchSelection from './SearchSelection.example';
 import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
+import LoadingExample from './Loading.example';
 
 export default [
   {
@@ -56,6 +57,11 @@ export default [
         title: 'Search Dropdown',
         description: 'A dropdown can be searchable.',
         component: SearchDropdown,
+      },
+      {
+        title: 'Loading',
+        description: 'A dropdown can show that it is currently loading data',
+        component: LoadingExample,
       },
       {
         title: 'Button',
