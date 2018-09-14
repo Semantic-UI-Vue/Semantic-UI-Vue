@@ -1045,6 +1045,185 @@
   </div></h2>"
 ```
 
+##     `Sub Headers`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui sub header\">Price</div> <span>$10.99</span></div>"
+```
+
+##   `Content`
+
+##     `Image`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\"><img src=\"static/images/avatar/large/patrick.png\" class=\"ui circular image\"> Patrick
+</h2>"
+```
+
+##     `Icon`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\"><i class=\"plug icon\"></i> <div class=\"content\">Uptime Guarantee</div></h2>"
+```
+
+##     `Subheader`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\">
+  Account Settings
+  <div class=\"sub header\">
+    Manage your account settings and set email preferences
+  </div></h2>"
+```
+
+##   `States`
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui disabled header\">
+  Disabled Header
+</h2>"
+```
+
+##   `Variations`
+
+##     `Dividing`
+
+####       `should match snapshot`
+
+```
+"<h3 class=\"ui dividing header\">
+  Dividing Header
+</h3>"
+```
+
+##     `Block`
+
+####       `should match snapshot`
+
+```
+"<h3 class=\"ui block header\">
+  Block Header
+</h3>"
+```
+
+##     `Attached`
+
+####       `should match snapshot`
+
+```
+"<div><h2 class=\"ui top attached header\">
+    Attached Header
+  </h2> <div class=\"ui attached segment\">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat.
+  </div></div>"
+```
+
+##     `Floating`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui clearing segment\"><h2 class=\"ui right floated header\">
+    Float Right
+  </h2> <h2 class=\"ui left floated header\">
+    Float Left
+  </h2></div>"
+```
+
+##     `Text Alignment`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><h3 class=\"ui right aligned header\">
+    Float Right
+  </h3> <h3 class=\"ui left aligned header\">
+    Float Left
+  </h3> <h3 class=\"ui justified aligned header\">
+    This text takes up the full width of the container
+  </h3> <h3 class=\"ui center aligned header\">
+    Centered
+  </h3></div>"
+```
+
+##     `Colored`
+
+####       `should match snapshot`
+
+```
+"<div><h4 class=\"ui red header\">
+    Red
+  </h4> <h4 class=\"ui orange header\">
+    Orange
+  </h4> <h4 class=\"ui yellow header\">
+    Yellow
+  </h4> <h4 class=\"ui olive header\">
+    Olive
+  </h4> <h4 class=\"ui green header\">
+    Green
+  </h4> <h4 class=\"ui teal header\">
+    Teal
+  </h4> <h4 class=\"ui blue header\">
+    Blue
+  </h4> <h4 class=\"ui purple header\">
+    Purple
+  </h4> <h4 class=\"ui violet header\">
+    Violet
+  </h4> <h4 class=\"ui pink header\">
+    Pink
+  </h4> <h4 class=\"ui brown header\">
+    Brown
+  </h4> <h4 class=\"ui grey header\">
+    Grey
+  </h4></div>"
+```
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui inverted segment\"><h4 class=\"ui red header\">
+    Red
+  </h4> <h4 class=\"ui orange header\">
+    Orange
+  </h4> <h4 class=\"ui yellow header\">
+    Yellow
+  </h4> <h4 class=\"ui olive header\">
+    Olive
+  </h4> <h4 class=\"ui green header\">
+    Green
+  </h4> <h4 class=\"ui teal header\">
+    Teal
+  </h4> <h4 class=\"ui blue header\">
+    Blue
+  </h4> <h4 class=\"ui purple header\">
+    Purple
+  </h4> <h4 class=\"ui violet header\">
+    Violet
+  </h4> <h4 class=\"ui pink header\">
+    Pink
+  </h4> <h4 class=\"ui brown header\">
+    Brown
+  </h4> <h4 class=\"ui grey header\">
+    Grey
+  </h4></div>"
+```
+
 ## `IconExample`
 
 ##   `States`
@@ -1459,12 +1638,135 @@
 "<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\">Apples</div> <div role=\"listitem\" class=\"item\">Pears</div> <div role=\"listitem\" class=\"item\">Oranges</div></div>"
 ```
 
+##     `Bulleted`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui bulleted list\"><div role=\"listitem\" class=\"item\">Gaining Access</div> <div role=\"listitem\" class=\"item\">Inviting Friends</div> <div role=\"listitem\" class=\"item\">
+    Benefits
+    <div class=\"list\"><div role=\"listitem\" class=\"item\" href=\"#\">Link to somewhere</div> <div role=\"listitem\" class=\"item\">Rebates</div> <div role=\"listitem\" class=\"item\">Discounts</div></div></div> <div role=\"listitem\" class=\"item\">Warranty</div></div>"
+```
+
+##     `Ordered`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui ordered list\"><a role=\"listitem\" class=\"item\">Getting Started</a> <a role=\"listitem\" class=\"item\">Introduction</a> <a><a>Languages</a> <div class=\"list\"><a role=\"listitem\" class=\"item\">HTML</a> <a role=\"listitem\" class=\"item\">Javascript</a> <a role=\"listitem\" class=\"item\">CSS</a></div></a> <a role=\"listitem\" class=\"item\">Review</a></div>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui link list\"><div role=\"listitem\" class=\"item active\">Home</div> <a role=\"listitem\" class=\"item\">About</a> <a role=\"listitem\" class=\"item\">Jobs</a> <a role=\"listitem\" class=\"item\">Team</a></div>"
+```
+
+##   `Content`
+
+##     `Item`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\">1</div> <div role=\"listitem\" class=\"item\">2</div> <div role=\"listitem\" class=\"item\">3</div></div>"
+```
+
+##     `Icon`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><a role=\"listitem\" class=\"item\"><i class=\"help icon\"></i> <div class=\"content\"><div class=\"header\">Floated Icon</div> <div class=\"description\">
+        This text will always have a left margin to make sure it sits alongside your icon
+      </div></div></a> <a role=\"listitem\" class=\"item\"><i class=\"right triangle icon\"></i> <div class=\"content\"><div class=\"header\">Icon Alignment</div> <div class=\"description\">
+        Floated icons are by default top aligned. To have an icon top aligned try this example.
+      </div></div></a> <div role=\"listitem\" class=\"item\"><i class=\"help icon\"></i>
+    Inline Text
+  </div></div>"
+```
+
+##     `Image`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/rachel.png\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Rachel</a> <div class=\"description\">
+        Last seen watching
+        <a><b>Arrested Development</b></a>
+        just now.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/lindsay.png\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Lindsay</a> <div class=\"description\">
+        Last seen watching
+        <a><b>Bob's Burgers</b></a>
+        10 hours ago.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/matthew.png\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Matthew</a> <div class=\"description\">
+        Last seen watching
+        <a><b>The Godfather Part 2</b></a>
+        yesterday.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/jenny.jpg\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Jenny Hess</a> <div class=\"description\">
+        Last seen watching
+        <a><b>Twin Peaks</b></a>
+        3 days ago.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/veronika.jpg\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Veronika Ossi</a> <div class=\"description\">Has not watched anything recently</div></div></div></div>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><a role=\"listitem\" class=\"item\">What is a FAQ?</a> <a role=\"listitem\" class=\"item\">Who is our user?</a> <a role=\"listitem\" class=\"item\">Where is our office located?</a></div>"
+```
+
+##     `Header`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\"><div class=\"header\">New York City</div>
+    A lovely city
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"header\">Chicago</div>
+    Also quite a lovely city
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"header\">Los Angeles</div>
+    Sometimes can be a lovely city
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"header\">San Francisco</div>
+    What a lovely city
+  </div></div>"
+```
+
+##     `Description`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Krowlewskie Jadlo</a> <div class=\"description\">
+        An excellent polish restaurant, quick delivery and hearty, filling meals.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Xian Famous Foods</a> <div class=\"description\">
+        A taste of Shaanxi\"s delicious culinary traditions, with delights like spicy cold noodles
+        and lamb burgers.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Sapporo Haru</a> <div class=\"description\">
+        Greenpoint\"s best choice for quick and delicious sushi.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Enid\"s</a> <div class=\"description\">
+        At night a bar, during the day a delicious brunch spot.
+      </div></div></div></div>"
+```
+
+##   `Variations`
+
 ##     `Inverted`
 
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui inverted segment\"><div role=\"list\" class=\"ui divided relaxed inverted list\"><div role=\"listitem\" class=\"item\">Apples</div> <div role=\"listitem\" class=\"item\">Pears</div> <div role=\"listitem\" class=\"item\">Oranges</div></div></div>"
+"<div class=\"ui inverted segment\"><div role=\"list\" class=\"ui divided relaxed inverted list\"><div role=\"listitem\" class=\"item\"><div class=\"content\"><div class=\"header\">Snickerdoodle</div>
+        An excellent companion
+      </div></div> <div role=\"listitem\" class=\"item\"><div class=\"content\"><div class=\"header\">Poodle</div>
+        A poodle, its pretty basic
+      </div></div> <div role=\"listitem\" class=\"item\"><div class=\"content\"><div class=\"header\">Paulo</div>
+        He's also a dog
+      </div></div></div></div>"
 ```
 
 ## `LoaderExample`

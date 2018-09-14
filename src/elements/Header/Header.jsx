@@ -11,7 +11,10 @@ export default {
     disabled: Boolean,
     floated: Enum(['left', 'right']),
     icon: Boolean,
-    image: Boolean,
+    image: {
+      type: String,
+      description: 'Add an image by img src or pass an Image.',
+    },
     size: Enum.Size(),
     sub: Boolean,
     textAlign: Enum(['left', 'right', 'center', 'justify']),
@@ -42,6 +45,7 @@ export default {
           'header',
         )}
       >
+        {this.image && <img src={this.image} class='ui image' />}
         {this.$slots.default || this.content}
       </ElementType>
     );
