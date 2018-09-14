@@ -225,7 +225,7 @@
 ####       `should match snapshot`
 
 ```
-"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Header</th> <th class=\"\">Header</th> <th class=\"\">Header</th></tr></thead> <tbody><tr class=\"\"><td class=\"\"><div class=\"ui ribbon label\">First</div></td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr> <tr class=\"\"><td class=\"\">Cell</td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr> <tr class=\"\"><td class=\"\">Cell</td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr></tbody> <tfoot class=\"\"><tr class=\"\"><th class=\"\" colspan=\"3\"><div class=\"ui pagination menu right floated\"><a class=\"item\"><i class=\"icon\"></i><i class=\"left chevron icon\"></i></a> <a class=\"item\">1</a> <a class=\"item\">2</a> <a class=\"item\">3</a> <a class=\"item\">4</a> <a class=\"item\"><i class=\"icon\"></i><i class=\"right chevron icon\"></i></a></div></th></tr></tfoot></table>"
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Header</th> <th class=\"\">Header</th> <th class=\"\">Header</th></tr></thead> <tbody><tr class=\"\"><td class=\"\"><div class=\"ui true ribbon label\">First</div></td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr> <tr class=\"\"><td class=\"\">Cell</td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr> <tr class=\"\"><td class=\"\">Cell</td> <td class=\"\">Cell</td> <td class=\"\">Cell</td></tr></tbody> <tfoot class=\"\"><tr class=\"\"><th class=\"\" colspan=\"3\"><div class=\"ui pagination menu right floated\"><a class=\"item\"><i class=\"icon\"></i><i class=\"left chevron icon\"></i></a> <a class=\"item\">1</a> <a class=\"item\">2</a> <a class=\"item\">3</a> <a class=\"item\">4</a> <a class=\"item\"><i class=\"icon\"></i><i class=\"right chevron icon\"></i></a></div></th></tr></tfoot></table>"
 ```
 
 ##     `Definition`
@@ -1045,6 +1045,185 @@
   </div></h2>"
 ```
 
+##     `Sub Headers`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui sub header\">Price</div> <span>$10.99</span></div>"
+```
+
+##   `Content`
+
+##     `Image`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\"><img src=\"static/images/avatar/large/patrick.png\" class=\"ui circular image\"> Patrick
+</h2>"
+```
+
+##     `Icon`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\"><i class=\"plug icon\"></i> <div class=\"content\">Uptime Guarantee</div></h2>"
+```
+
+##     `Subheader`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui header\">
+  Account Settings
+  <div class=\"sub header\">
+    Manage your account settings and set email preferences
+  </div></h2>"
+```
+
+##   `States`
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<h2 class=\"ui disabled header\">
+  Disabled Header
+</h2>"
+```
+
+##   `Variations`
+
+##     `Dividing`
+
+####       `should match snapshot`
+
+```
+"<h3 class=\"ui dividing header\">
+  Dividing Header
+</h3>"
+```
+
+##     `Block`
+
+####       `should match snapshot`
+
+```
+"<h3 class=\"ui block header\">
+  Block Header
+</h3>"
+```
+
+##     `Attached`
+
+####       `should match snapshot`
+
+```
+"<div><h2 class=\"ui top attached header\">
+    Attached Header
+  </h2> <div class=\"ui attached segment\">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat.
+  </div></div>"
+```
+
+##     `Floating`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui clearing segment\"><h2 class=\"ui right floated header\">
+    Float Right
+  </h2> <h2 class=\"ui left floated header\">
+    Float Left
+  </h2></div>"
+```
+
+##     `Text Alignment`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><h3 class=\"ui right aligned header\">
+    Float Right
+  </h3> <h3 class=\"ui left aligned header\">
+    Float Left
+  </h3> <h3 class=\"ui justified aligned header\">
+    This text takes up the full width of the container
+  </h3> <h3 class=\"ui center aligned header\">
+    Centered
+  </h3></div>"
+```
+
+##     `Colored`
+
+####       `should match snapshot`
+
+```
+"<div><h4 class=\"ui red header\">
+    Red
+  </h4> <h4 class=\"ui orange header\">
+    Orange
+  </h4> <h4 class=\"ui yellow header\">
+    Yellow
+  </h4> <h4 class=\"ui olive header\">
+    Olive
+  </h4> <h4 class=\"ui green header\">
+    Green
+  </h4> <h4 class=\"ui teal header\">
+    Teal
+  </h4> <h4 class=\"ui blue header\">
+    Blue
+  </h4> <h4 class=\"ui purple header\">
+    Purple
+  </h4> <h4 class=\"ui violet header\">
+    Violet
+  </h4> <h4 class=\"ui pink header\">
+    Pink
+  </h4> <h4 class=\"ui brown header\">
+    Brown
+  </h4> <h4 class=\"ui grey header\">
+    Grey
+  </h4></div>"
+```
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui inverted segment\"><h4 class=\"ui red header\">
+    Red
+  </h4> <h4 class=\"ui orange header\">
+    Orange
+  </h4> <h4 class=\"ui yellow header\">
+    Yellow
+  </h4> <h4 class=\"ui olive header\">
+    Olive
+  </h4> <h4 class=\"ui green header\">
+    Green
+  </h4> <h4 class=\"ui teal header\">
+    Teal
+  </h4> <h4 class=\"ui blue header\">
+    Blue
+  </h4> <h4 class=\"ui purple header\">
+    Purple
+  </h4> <h4 class=\"ui violet header\">
+    Violet
+  </h4> <h4 class=\"ui pink header\">
+    Pink
+  </h4> <h4 class=\"ui brown header\">
+    Brown
+  </h4> <h4 class=\"ui grey header\">
+    Grey
+  </h4></div>"
+```
+
 ## `IconExample`
 
 ##   `States`
@@ -1200,6 +1379,253 @@
   </a></div>"
 ```
 
+##     `Pointing`
+
+####       `should match snapshot`
+
+```
+"<form class=\"ui form\"><div class=\"field\"><input type=\"text\" placeholder=\"First name\"> <div class=\"ui pointing label\">Please enter a value</div></div> <div class=\"ui divider\"></div> <div class=\"field\"><div class=\"ui pointing below label\">Please enter a value</div> <input type=\"text\" placeholder=\"Last Name\"></div> <div class=\"ui divider\"></div> <div class=\"inline field\"><input type=\"text\" placeholder=\"Username\"> <div class=\"ui left pointing label\">That name is taken!</div></div> <div class=\"ui divider\"></div> <div class=\"inline field\"><div class=\"ui right pointing label\">Your password must be 6 characters or more</div> <input type=\"password\" placeholder=\"Password\"></div></form>"
+```
+
+##     `Corner`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui grid\"><div class=\"six wide column\"><div class=\"ui image\"><div class=\"ui left corner label\"><i class=\"save icon\"></i></div><img src=\"static/images/wireframes/image.png\"></div></div> <div class=\"six wide column\"><div class=\"ui image\"><div class=\"ui right corner label\"><i class=\"cancel icon\"></i></div><img src=\"static/images/wireframes/image.png\"></div></div></div>"
+```
+
+##     `Tag`
+
+####       `should match snapshot`
+
+```
+"<div><a class=\"ui true tag label\">
+    New
+  </a> <a class=\"ui red true tag label\">
+    Upcoming
+  </a> <a class=\"ui teal true tag label\">
+    Featured
+  </a></div>"
+```
+
+##     `Ribbon`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui two column grid\"><div class=\"column\"><div class=\"ui raised segment\"><a class=\"ui red true ribbon label\">
+        Overview
+      </a> <span>Account Details</span> <docs-wireframe name=\"paragraph\"></docs-wireframe> <a class=\"ui blue true ribbon label\">
+        Community
+      </a> <span>User Reviews</span> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div> <div class=\"column\"><div class=\"ui segment\"><a class=\"ui orange right ribbon label\">
+        Specs
+      </a> <docs-wireframe name=\"paragraph\"></docs-wireframe> <a class=\"ui teal right ribbon label\">
+        Reviews
+      </a> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div></div>"
+```
+
+##     `Attached`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui three column grid\"><div class=\"row\"><div class=\"column\"><div class=\"ui padded segment\"><div class=\"ui top attached label\">HTML</div> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div> <div class=\"column\"><div class=\"ui padded segment\"><div class=\"ui bottom attached label\">CSS</div> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div> <div class=\"column\"><div class=\"ui padded segment\"><div class=\"ui top right attached label\">Code</div> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div></div> <div class=\"row\"><div class=\"column\"><div class=\"ui padded segment\"><div class=\"ui top left attached label\">View</div> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div> <div class=\"column\"><div class=\"ui padded segment\"><div class=\"ui bottom left attached label\">User View</div> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div> <div class=\"column\"><div class=\"ui padded segment\"><div class=\"ui bottom right attached label\">Admin View</div> <docs-wireframe name=\"paragraph\"></docs-wireframe></div></div></div></div>"
+```
+
+##     `Horizontal`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui divided list\" selection=\"\"><div role=\"listitem\" class=\"item\"><div class=\"ui red label\" horizontal=\"\">
+      Fruit
+    </div>
+    Kumquats
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"ui purple label\" horizontal=\"\">
+      Candy
+    </div>
+    Ice Cream
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"ui red label\" horizontal=\"\">
+      Fruit
+    </div>
+    Orange
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"ui label\" horizontal=\"\">Dog</div>
+    Poodle
+  </div></div>"
+```
+
+##     `Floating`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui compact menu\"><a class=\"item\"><i class=\"mail icon\"></i> Messages
+    <div class=\"ui red floating label\">
+      22
+    </div></a> <a class=\"item\"><i class=\"users icon\"></i> Friends
+    <div class=\"ui teal floating label\">
+      22
+    </div></a></div>"
+```
+
+##   `Content`
+
+##     `Detail`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui label\">
+  Dogs
+  <div class=\"detail\">214</div></div>"
+```
+
+##     `Icon`
+
+####       `should match snapshot`
+
+```
+"<div><a class=\"ui label\"><i class=\"mail icon\"></i>
+    Mail
+  </a> <a class=\"ui label\">
+    Tag
+    <i class=\"delete icon\"></i></a></div>"
+```
+
+##     `Image`
+
+####       `should match snapshot`
+
+```
+"<div><a class=\"ui label\"><img src=\"static/images/avatar/small/elliot.jpg\" class=\"ui avatar right spaced image\">
+    Elliot
+  </a> <a class=\"ui label\"><img src=\"static/images/avatar/small/stevie.jpg\">
+    Stevie
+  </a></div>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<a class=\"ui label\"><i class=\"mail icon\"></i> 23
+</a>"
+```
+
+##   `Variations`
+
+##     `Circular`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui red circular label\">
+    2
+  </div><div class=\"ui orange circular label\">
+    2
+  </div><div class=\"ui yellow circular label\">
+    2
+  </div><div class=\"ui olive circular label\">
+    2
+  </div><div class=\"ui green circular label\">
+    2
+  </div><div class=\"ui teal circular label\">
+    2
+  </div><div class=\"ui blue circular label\">
+    2
+  </div><div class=\"ui violet circular label\">
+    2
+  </div><div class=\"ui purple circular label\">
+    2
+  </div><div class=\"ui pink circular label\">
+    2
+  </div><div class=\"ui brown circular label\">
+    2
+  </div><div class=\"ui grey circular label\">
+    2
+  </div><div class=\"ui black circular label\">
+    2
+  </div></div>"
+```
+
+##     `Basic`
+
+####       `should match snapshot`
+
+```
+"<div><a class=\"ui basic label\">
+    Basic
+  </a> <a class=\"ui pointing basic label\">
+    Pointing
+  </a> <a class=\"ui basic image label\"><img src=\"static/images/avatar/small/elliot.jpg\">
+    Elliot
+  </a> <a class=\"ui pointing red basic label\">
+    Red Pointing
+  </a> <a class=\"ui blue basic label\">
+    Blue
+  </a></div>"
+```
+
+##     `Colored`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui red label\">
+    red
+  </div><div class=\"ui orange label\">
+    orange
+  </div><div class=\"ui yellow label\">
+    yellow
+  </div><div class=\"ui olive label\">
+    olive
+  </div><div class=\"ui green label\">
+    green
+  </div><div class=\"ui teal label\">
+    teal
+  </div><div class=\"ui blue label\">
+    blue
+  </div><div class=\"ui violet label\">
+    violet
+  </div><div class=\"ui purple label\">
+    purple
+  </div><div class=\"ui pink label\">
+    pink
+  </div><div class=\"ui brown label\">
+    brown
+  </div><div class=\"ui grey label\">
+    grey
+  </div><div class=\"ui black label\">
+    black
+  </div></div>"
+```
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui mini label\">
+    mini
+  </div><div class=\"ui tiny label\">
+    tiny
+  </div><div class=\"ui small label\">
+    small
+  </div><div class=\"ui medium label\">
+    medium
+  </div><div class=\"ui large label\">
+    large
+  </div><div class=\"ui big label\">
+    big
+  </div><div class=\"ui huge label\">
+    huge
+  </div><div class=\"ui massive label\">
+    massive
+  </div></div>"
+```
+
 ## `ListExample`
 
 ##   `Types`
@@ -1210,6 +1636,137 @@
 
 ```
 "<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\">Apples</div> <div role=\"listitem\" class=\"item\">Pears</div> <div role=\"listitem\" class=\"item\">Oranges</div></div>"
+```
+
+##     `Bulleted`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui bulleted list\"><div role=\"listitem\" class=\"item\">Gaining Access</div> <div role=\"listitem\" class=\"item\">Inviting Friends</div> <div role=\"listitem\" class=\"item\">
+    Benefits
+    <div class=\"list\"><div role=\"listitem\" class=\"item\" href=\"#\">Link to somewhere</div> <div role=\"listitem\" class=\"item\">Rebates</div> <div role=\"listitem\" class=\"item\">Discounts</div></div></div> <div role=\"listitem\" class=\"item\">Warranty</div></div>"
+```
+
+##     `Ordered`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui ordered list\"><a role=\"listitem\" class=\"item\">Getting Started</a> <a role=\"listitem\" class=\"item\">Introduction</a> <a><a>Languages</a> <div class=\"list\"><a role=\"listitem\" class=\"item\">HTML</a> <a role=\"listitem\" class=\"item\">Javascript</a> <a role=\"listitem\" class=\"item\">CSS</a></div></a> <a role=\"listitem\" class=\"item\">Review</a></div>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui link list\"><div role=\"listitem\" class=\"item active\">Home</div> <a role=\"listitem\" class=\"item\">About</a> <a role=\"listitem\" class=\"item\">Jobs</a> <a role=\"listitem\" class=\"item\">Team</a></div>"
+```
+
+##   `Content`
+
+##     `Item`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\">1</div> <div role=\"listitem\" class=\"item\">2</div> <div role=\"listitem\" class=\"item\">3</div></div>"
+```
+
+##     `Icon`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><a role=\"listitem\" class=\"item\"><i class=\"help icon\"></i> <div class=\"content\"><div class=\"header\">Floated Icon</div> <div class=\"description\">
+        This text will always have a left margin to make sure it sits alongside your icon
+      </div></div></a> <a role=\"listitem\" class=\"item\"><i class=\"right triangle icon\"></i> <div class=\"content\"><div class=\"header\">Icon Alignment</div> <div class=\"description\">
+        Floated icons are by default top aligned. To have an icon top aligned try this example.
+      </div></div></a> <div role=\"listitem\" class=\"item\"><i class=\"help icon\"></i>
+    Inline Text
+  </div></div>"
+```
+
+##     `Image`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/rachel.png\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Rachel</a> <div class=\"description\">
+        Last seen watching
+        <a><b>Arrested Development</b></a>
+        just now.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/lindsay.png\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Lindsay</a> <div class=\"description\">
+        Last seen watching
+        <a><b>Bob's Burgers</b></a>
+        10 hours ago.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/matthew.png\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Matthew</a> <div class=\"description\">
+        Last seen watching
+        <a><b>The Godfather Part 2</b></a>
+        yesterday.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/jenny.jpg\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Jenny Hess</a> <div class=\"description\">
+        Last seen watching
+        <a><b>Twin Peaks</b></a>
+        3 days ago.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><img src=\"static/images/avatar/small/veronika.jpg\" class=\"ui avatar image\"> <div class=\"content\"><a class=\"header\">Veronika Ossi</a> <div class=\"description\">Has not watched anything recently</div></div></div></div>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><a role=\"listitem\" class=\"item\">What is a FAQ?</a> <a role=\"listitem\" class=\"item\">Who is our user?</a> <a role=\"listitem\" class=\"item\">Where is our office located?</a></div>"
+```
+
+##     `Header`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\"><div class=\"header\">New York City</div>
+    A lovely city
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"header\">Chicago</div>
+    Also quite a lovely city
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"header\">Los Angeles</div>
+    Sometimes can be a lovely city
+  </div> <div role=\"listitem\" class=\"item\"><div class=\"header\">San Francisco</div>
+    What a lovely city
+  </div></div>"
+```
+
+##     `Description`
+
+####       `should match snapshot`
+
+```
+"<div role=\"list\" class=\"ui list\"><div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Krowlewskie Jadlo</a> <div class=\"description\">
+        An excellent polish restaurant, quick delivery and hearty, filling meals.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Xian Famous Foods</a> <div class=\"description\">
+        A taste of Shaanxi\"s delicious culinary traditions, with delights like spicy cold noodles
+        and lamb burgers.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Sapporo Haru</a> <div class=\"description\">
+        Greenpoint\"s best choice for quick and delicious sushi.
+      </div></div></div> <div role=\"listitem\" class=\"item\"><i class=\"marker icon\"></i> <div class=\"content\"><a class=\"header\">Enid\"s</a> <div class=\"description\">
+        At night a bar, during the day a delicious brunch spot.
+      </div></div></div></div>"
+```
+
+##   `Variations`
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui inverted segment\"><div role=\"list\" class=\"ui divided relaxed inverted list\"><div role=\"listitem\" class=\"item\"><div class=\"content\"><div class=\"header\">Snickerdoodle</div>
+        An excellent companion
+      </div></div> <div role=\"listitem\" class=\"item\"><div class=\"content\"><div class=\"header\">Poodle</div>
+        A poodle, its pretty basic
+      </div></div> <div role=\"listitem\" class=\"item\"><div class=\"content\"><div class=\"header\">Paulo</div>
+        He's also a dog
+      </div></div></div></div>"
 ```
 
 ## `LoaderExample`
@@ -1885,6 +2442,161 @@
 
 ```
 "<div><div role=\"radiogroup\" class=\"ui rating\"><i aria-checked=\"true\" aria-posinset=\"1\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"active icon\"></i><i aria-checked=\"false\" aria-posinset=\"2\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"3\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"4\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i><i aria-checked=\"false\" aria-posinset=\"5\" aria-setsize=\"5\" tabindex=\"0\" role=\"radio\" class=\"icon\"></i></div> <pre>{}</pre></div>"
+```
+
+## `TabExample`
+
+##   `Types`
+
+##     `Basic`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Pointing Menu`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui pointing menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Secondary Menu`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui secondary menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Text Menu`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui text menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##   `States`
+
+##     `Loading`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<div><button role=\"button\" class=\"ui button\">Toggle Disabled Tab</button> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##   `Menu Variations`
+
+##     `Attached`
+
+####       `should match snapshot`
+
+```
+"<div><div><!----> <!----> <!----><div class=\"ui bottom attached menu\"></div></div></div>"
+```
+
+##     `Not Tabular`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Borderless`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui borderless menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Colored`
+
+####       `should match snapshot`
+
+```
+"<div><select><option value=\"red\">
+      red
+    </option><option value=\"orange\">
+      orange
+    </option><option value=\"yellow\">
+      yellow
+    </option><option value=\"green\">
+      green
+    </option><option value=\"blue\">
+      blue
+    </option><option value=\"purple\">
+      purple
+    </option></select> <div class=\"ui hidden divider\"></div> <div><div class=\"ui blue menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Vertical Tabular`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"four wide column\"><div class=\"ui vertical fluid tabular menu\"></div></div><div class=\"twelve wide column stretched\"><!----> <!----> <!----></div></div></div></div></div>"
+```
+
+##     `Menu Position`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"twelve wide column stretched\"><!----> <!----> <!----></div><div class=\"four wide column\"><div class=\"ui vertical fluid menu\"></div></div></div></div></div></div>"
+```
+
+##   `Usage`
+
+##     `Active Index`
+
+####       `should match snapshot`
+
+```
+"<div><p>Active Index 1</p> <input type=\"range\" max=\"2\"> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Default Active Index`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `On Tab Change`
+
+####       `should match snapshot`
+
+```
+"<div><p>
+    Control active pane from outside,
+    <a href=\"#\">Circle</a>,
+    <a href=\"#\">Box</a>,
+    <a href=\"#\">Triangle</a>,
+  </p> <div class=\"ui hidden divider\"></div> <table class=\"ui very compact fixed table\"><tbody><tr class=\"\"><td class=\"\">Index</td> <td class=\"\"></td></tr> <tr class=\"\"><td class=\"\">Label</td> <td class=\"\"></td></tr> <tr class=\"\"><td class=\"\">Clicked on the Tab Pane</td> <td class=\"\"><code></code></td></tr></tbody></table> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+```
+
+##     `Adding Icons and Labels`
+
+####       `should match snapshot`
+
+```
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ## `CardExample`

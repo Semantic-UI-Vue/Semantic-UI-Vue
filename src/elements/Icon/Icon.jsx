@@ -5,6 +5,7 @@ export default {
   name: 'SuiIcon',
   mixins: [SemanticUIVueMixin],
   props: {
+    circular: Boolean,
     color: Enum.Color(),
     disabled: Boolean,
     fitted: Boolean,
@@ -25,6 +26,7 @@ export default {
           this.name,
           this.size,
           this.disabled && 'disabled',
+          this.circular && 'circular',
           this.fitted && 'fitted',
           this.loading && 'loading',
           'icon',
