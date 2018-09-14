@@ -64,6 +64,10 @@ export default {
       type: Boolean,
       description: 'A selection dropdown can allow multiple selections.',
     },
+    loading: {
+      type: Boolean,
+      description: "A dropdown can show that it is currently loading data."
+    },
     maxSelections: {
       type: Number,
       default: Infinity,
@@ -405,6 +409,7 @@ export default {
           return;
       }
       e.preventDefault();
+      if (this.filteredOptions.length === 0) return;
       const newValue = this.selectedIndex + direction;
       if (this.filteredOptions.length <= newValue) {
         this.selectedIndex = 0;
@@ -505,6 +510,7 @@ export default {
           this.item && 'item',
           this.floating && 'floating',
           this.fluid && 'fluid',
+          this.loading && 'loading',
           this.labeled && 'labeled',
           this.multiple && 'multiple',
           this.selection && 'selection',
