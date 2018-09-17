@@ -66,7 +66,7 @@ export default {
     },
     loading: {
       type: Boolean,
-      description: "A dropdown can show that it is currently loading data."
+      description: 'A dropdown can show that it is currently loading data.',
     },
     maxSelections: {
       type: Number,
