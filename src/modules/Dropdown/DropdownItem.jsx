@@ -24,7 +24,7 @@ export default {
       description: 'Display text.',
     },
     value: {
-      type: [String, Number],
+      type: null,
       description: 'Stored value.',
     },
     active: {
