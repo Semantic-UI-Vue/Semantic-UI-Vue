@@ -362,7 +362,9 @@ export default {
       if (!this.multiple && filter.trim() === '') filteredText.classList.remove('filtered');
     },
     handleKeyDown(e) {
-      this.toggleFilteredText(this.$refs.text, this.filter);
+      if(this.$refs.text){
+        this.toggleFilteredText(this.$refs.text, this.filter);
+      }
       const KEYS = {
         ENTER: 13,
         ESCAPE: 27,
