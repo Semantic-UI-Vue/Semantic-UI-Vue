@@ -362,7 +362,7 @@ export default {
       if (!this.multiple && filter.trim() === '') filteredText.classList.remove('filtered');
     },
     handleKeyDown(e) {
-      if(this.$refs.text){
+      if (this.$refs.text) {
         this.toggleFilteredText(this.$refs.text, this.filter);
       }
       const KEYS = {
