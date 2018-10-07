@@ -1301,7 +1301,141 @@
 ####       `should match snapshot`
 
 ```
-"<img src=\"static/images/wireframes/image.png\" class=\"ui disabled image\">"
+"<img src=\"static/images/wireframes/image.png\" class=\"ui medium image\" medium=\"\">"
+```
+
+##   `Variations`
+
+##     `Avatar`
+
+####       `should match snapshot`
+
+```
+"<div><img src=\"static/images/wireframes/square-image.png\" class=\"ui avatar image\"> <span>Username</span></div>"
+```
+
+##     `Bordered`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/white-image.png\" class=\"ui medium bordered image\">"
+```
+
+##     `Fluid`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/image.png\" class=\"ui image\" fluid=\"\">"
+```
+
+##     `Rounded`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/square-image.png\" class=\"ui medium rounded image\">"
+```
+
+##     `Circular`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/square-image.png\" class=\"ui medium circular image\">"
+```
+
+##     `Vertically Aligned`
+
+####       `should match snapshot`
+
+```
+"<div><img src=\"static/images/wireframes/image.png\" class=\"ui tiny top aligned image\"> <span>Top Aligned</span> <div class=\"ui divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui tiny middle aligned image\"> <span>Middle Aligned</span> <div class=\"ui divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui tiny bottom aligned image\"> <span>Bottom Aligned</span></div>"
+```
+
+##     `Centered`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><img src=\"static/images/wireframes/image.png\" class=\"ui medium centered image\"> <p>
+    Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
+    est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum
+    ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
+    ex natum rebum iisque.
+  </p> <p>
+    Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
+    nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+    fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+  </p> <img src=\"static/images/wireframes/image-text.png\" class=\"ui small centered image\"> <p>
+    Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+    adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+    utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+    convenire mnesarchum eu per, quas minimum postulant per id.
+  </p></div>"
+```
+
+##     `Spaced`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui segment\"><p>
+      Te eum doming eirmod, nominati pertinacia <img src=\"static/images/wireframes/image.png\" class=\"ui mini spaced image\">
+      argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu
+      ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram,
+      eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.
+    </p></div> <p><img src=\"static/images/wireframes/image.png\" class=\"ui mini right spaced image\">Audiam quaerendum eu sea, pro omittam
+    definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda
+    ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum,
+    vim vivendum maiestatis in.
+  </p> <p>
+    Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+    adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+    utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+    convenire mnesarchum eu per, quas minimum postulant per id.
+    <img src=\"static/images/wireframes/image.png\" class=\"ui mini left spaced image\"></p></div>"
+```
+
+##     `Floated`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><img src=\"static/images/wireframes/image-text.png\" class=\"ui small left floated image\"> <p>
+    Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
+    est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum
+    ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
+    ex natum rebum iisque.
+  </p> <img src=\"static/images/wireframes/image-text.png\" class=\"ui small right floated image\"> <p>
+    Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
+    nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+    fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+  </p> <p>
+    Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+    adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+    utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+    convenire mnesarchum eu per, quas minimum postulant per id.
+  </p></div>"
+```
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div><img src=\"static/images/wireframes/image.png\" class=\"ui mini image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui tiny image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui small image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui medium image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui large image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui big image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui huge image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui massive image\"></div>"
+```
+
+##   `Groups`
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui tiny images\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"ui hidden divider\"></div> <div class=\"ui small images\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div></div>"
 ```
 
 ## `InputExample`
@@ -2189,6 +2323,14 @@
 
 ```
 "<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Select Language</div><i aria-hidden=\"true\" class=\"world icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Arabic</div><div role=\"option\" class=\"item\">Chinese</div><div role=\"option\" class=\"item\">Danish</div><div role=\"option\" class=\"item\">Dutch</div><div role=\"option\" class=\"item\">English</div><div role=\"option\" class=\"item\">French</div><div role=\"option\" class=\"item\">German</div><div role=\"option\" class=\"item\">Greek</div><div role=\"option\" class=\"item\">Hungarian</div><div role=\"option\" class=\"item\">Italian</div><div role=\"option\" class=\"item\">Japanese</div><div role=\"option\" class=\"item\">Korean</div><div role=\"option\" class=\"item\">Lithuanian</div><div role=\"option\" class=\"item\">Persian</div><div role=\"option\" class=\"item\">Polish</div><div role=\"option\" class=\"item\">Portuguese</div><div role=\"option\" class=\"item\">Russian</div><div role=\"option\" class=\"item\">Spanish</div><div role=\"option\" class=\"item\">Swedish</div><div role=\"option\" class=\"item\">Turkish</div><div role=\"option\" class=\"item\">Vietnamese</div></div></button></div>"
+```
+
+##     `Loading`
+
+####       `should match snapshot`
+
+```
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui loading selection search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"default text\">State</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Alabama</div><div role=\"option\" class=\"item\">Alaska</div><div role=\"option\" class=\"item\">Arizona</div><div role=\"option\" class=\"item\">Arkansas</div><div role=\"option\" class=\"item\">California</div><div role=\"option\" class=\"item\">Colorado</div><div role=\"option\" class=\"item\">Connecticut</div><div role=\"option\" class=\"item\">Delaware</div><div role=\"option\" class=\"item\">District Of Columbia</div><div role=\"option\" class=\"item\">Florida</div><div role=\"option\" class=\"item\">Georgia</div><div role=\"option\" class=\"item\">Hawaii</div><div role=\"option\" class=\"item\">Idaho</div><div role=\"option\" class=\"item\">Illinois</div><div role=\"option\" class=\"item\">Indiana</div><div role=\"option\" class=\"item\">Iowa</div><div role=\"option\" class=\"item\">Kansas</div><div role=\"option\" class=\"item\">Kentucky</div><div role=\"option\" class=\"item\">Louisiana</div><div role=\"option\" class=\"item\">Maine</div><div role=\"option\" class=\"item\">Maryland</div><div role=\"option\" class=\"item\">Massachusetts</div><div role=\"option\" class=\"item\">Michigan</div><div role=\"option\" class=\"item\">Minnesota</div><div role=\"option\" class=\"item\">Mississippi</div><div role=\"option\" class=\"item\">Missouri</div><div role=\"option\" class=\"item\">Montana</div><div role=\"option\" class=\"item\">Nebraska</div><div role=\"option\" class=\"item\">Nevada</div><div role=\"option\" class=\"item\">New Hampshire</div><div role=\"option\" class=\"item\">New Jersey</div><div role=\"option\" class=\"item\">New Mexico</div><div role=\"option\" class=\"item\">New York</div><div role=\"option\" class=\"item\">North Carolina</div><div role=\"option\" class=\"item\">North Dakota</div><div role=\"option\" class=\"item\">Ohio</div><div role=\"option\" class=\"item\">Oklahoma</div><div role=\"option\" class=\"item\">Oregon</div><div role=\"option\" class=\"item\">Pennsylvania</div><div role=\"option\" class=\"item\">Rhode Island</div><div role=\"option\" class=\"item\">South Carolina</div><div role=\"option\" class=\"item\">South Dakota</div><div role=\"option\" class=\"item\">Tennessee</div><div role=\"option\" class=\"item\">Texas</div><div role=\"option\" class=\"item\">Utah</div><div role=\"option\" class=\"item\">Vermont</div><div role=\"option\" class=\"item\">Virginia</div><div role=\"option\" class=\"item\">Washington</div><div role=\"option\" class=\"item\">West Virginia</div><div role=\"option\" class=\"item\">Wisconsin</div><div role=\"option\" class=\"item\">Wyoming</div></div></div>"
 ```
 
 ##     `Button`
