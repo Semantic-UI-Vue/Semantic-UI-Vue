@@ -654,37 +654,34 @@
             "implemented": true
           }, {
             "name": "move",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "rotate",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "content",
           "examples": [{
             "name": "visible content",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "hidden content",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "states",
           "examples": [{
             "name": "active",
-            "implemented": false
+            "implemented": true
+          }, {
+            "name": "disabled",
+            "implemented": true
           }]
         }, {
           "name": "variations",
           "examples": [{
             "name": "instant",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "disabled",
-            "implemented": false
+            "implemented": true
           }]
         }]
       },

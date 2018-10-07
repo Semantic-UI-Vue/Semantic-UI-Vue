@@ -1852,6 +1852,68 @@
 "<div class=\"ui fade reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/ade.jpg\" class=\"ui small image\"></div></div>"
 ```
 
+##     `Move`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui move reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/chris.jpg\" class=\"ui small image\"></div></div>"
+```
+
+##     `Rotate`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui rotate reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small circular image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/stevie.jpg\" class=\"ui small circular image\"></div></div>"
+```
+
+##   `Content`
+
+##     `Visible content`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui small fade reveal\"><div class=\"ui visible content\"><img src=\"static/images/avatar/large/ade.jpg\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div></div>"
+```
+
+##     `Hidden content`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui small fade reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/ade.jpg\" class=\"ui small image\"></div></div>"
+```
+
+##   `Variations`
+
+##     `Instant`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui move instant reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/chris.jpg\" class=\"ui small image\"></div></div>"
+```
+
+##   `States`
+
+##     `Active`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui move active reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/nan.jpg\" class=\"ui small image\"></div></div>"
+```
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui move disabled reveal\"><div class=\"ui visible content\"><img src=\"static/images/wireframes/square-image.png\" class=\"ui small image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/chris.jpg\" class=\"ui small image\"></div></div>"
+```
+
 ## `SegmentExample`
 
 ##   `Types`
@@ -2189,6 +2251,14 @@
 
 ```
 "<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Select Language</div><i aria-hidden=\"true\" class=\"world icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Arabic</div><div role=\"option\" class=\"item\">Chinese</div><div role=\"option\" class=\"item\">Danish</div><div role=\"option\" class=\"item\">Dutch</div><div role=\"option\" class=\"item\">English</div><div role=\"option\" class=\"item\">French</div><div role=\"option\" class=\"item\">German</div><div role=\"option\" class=\"item\">Greek</div><div role=\"option\" class=\"item\">Hungarian</div><div role=\"option\" class=\"item\">Italian</div><div role=\"option\" class=\"item\">Japanese</div><div role=\"option\" class=\"item\">Korean</div><div role=\"option\" class=\"item\">Lithuanian</div><div role=\"option\" class=\"item\">Persian</div><div role=\"option\" class=\"item\">Polish</div><div role=\"option\" class=\"item\">Portuguese</div><div role=\"option\" class=\"item\">Russian</div><div role=\"option\" class=\"item\">Spanish</div><div role=\"option\" class=\"item\">Swedish</div><div role=\"option\" class=\"item\">Turkish</div><div role=\"option\" class=\"item\">Vietnamese</div></div></button></div>"
+```
+
+##     `Loading`
+
+####       `should match snapshot`
+
+```
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui loading selection search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"default text\">State</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Alabama</div><div role=\"option\" class=\"item\">Alaska</div><div role=\"option\" class=\"item\">Arizona</div><div role=\"option\" class=\"item\">Arkansas</div><div role=\"option\" class=\"item\">California</div><div role=\"option\" class=\"item\">Colorado</div><div role=\"option\" class=\"item\">Connecticut</div><div role=\"option\" class=\"item\">Delaware</div><div role=\"option\" class=\"item\">District Of Columbia</div><div role=\"option\" class=\"item\">Florida</div><div role=\"option\" class=\"item\">Georgia</div><div role=\"option\" class=\"item\">Hawaii</div><div role=\"option\" class=\"item\">Idaho</div><div role=\"option\" class=\"item\">Illinois</div><div role=\"option\" class=\"item\">Indiana</div><div role=\"option\" class=\"item\">Iowa</div><div role=\"option\" class=\"item\">Kansas</div><div role=\"option\" class=\"item\">Kentucky</div><div role=\"option\" class=\"item\">Louisiana</div><div role=\"option\" class=\"item\">Maine</div><div role=\"option\" class=\"item\">Maryland</div><div role=\"option\" class=\"item\">Massachusetts</div><div role=\"option\" class=\"item\">Michigan</div><div role=\"option\" class=\"item\">Minnesota</div><div role=\"option\" class=\"item\">Mississippi</div><div role=\"option\" class=\"item\">Missouri</div><div role=\"option\" class=\"item\">Montana</div><div role=\"option\" class=\"item\">Nebraska</div><div role=\"option\" class=\"item\">Nevada</div><div role=\"option\" class=\"item\">New Hampshire</div><div role=\"option\" class=\"item\">New Jersey</div><div role=\"option\" class=\"item\">New Mexico</div><div role=\"option\" class=\"item\">New York</div><div role=\"option\" class=\"item\">North Carolina</div><div role=\"option\" class=\"item\">North Dakota</div><div role=\"option\" class=\"item\">Ohio</div><div role=\"option\" class=\"item\">Oklahoma</div><div role=\"option\" class=\"item\">Oregon</div><div role=\"option\" class=\"item\">Pennsylvania</div><div role=\"option\" class=\"item\">Rhode Island</div><div role=\"option\" class=\"item\">South Carolina</div><div role=\"option\" class=\"item\">South Dakota</div><div role=\"option\" class=\"item\">Tennessee</div><div role=\"option\" class=\"item\">Texas</div><div role=\"option\" class=\"item\">Utah</div><div role=\"option\" class=\"item\">Vermont</div><div role=\"option\" class=\"item\">Virginia</div><div role=\"option\" class=\"item\">Washington</div><div role=\"option\" class=\"item\">West Virginia</div><div role=\"option\" class=\"item\">Wisconsin</div><div role=\"option\" class=\"item\">Wyoming</div></div></div>"
 ```
 
 ##     `Button`
