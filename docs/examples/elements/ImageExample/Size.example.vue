@@ -1,26 +1,29 @@
-import React from 'react'
-import { Divider, Image } from 'semantic-ui-react'
-
-const src = '/images/wireframe/image.png'
-
-const ImageExampleSize = () => (
+<template>
   <div>
-    <Image src={src} size='mini' />
-    <Divider hidden />
-    <Image src={src} size='tiny' />
-    <Divider hidden />
-    <Image src={src} size='small' />
-    <Divider hidden />
-    <Image src={src} size='medium' />
-    <Divider hidden />
-    <Image src={src} size='large' />
-    <Divider hidden />
-    <Image src={src} size='big' />
-    <Divider hidden />
-    <Image src={src} size='huge' />
-    <Divider hidden />
-    <Image src={src} size='massive' />
+    <sui-image :src="src" size="mini" />
+    <sui-divider hidden />
+    <sui-image :src="src" size="tiny" />
+    <sui-divider hidden />
+    <sui-image :src="src" size="small" />
+    <sui-divider hidden />
+    <sui-image :src="src" size="medium" />
+    <sui-divider hidden />
+    <sui-image :src="src" size="large" />
+    <sui-divider hidden />
+    <sui-image :src="src" size="big" />
+    <sui-divider hidden />
+    <sui-image :src="src" size="huge" />
+    <sui-divider hidden />
+    <sui-image :src="src" size="massive" />
   </div>
-)
+</template>
 
 export default ImageExampleSize
+
+<script>
+export default {
+  data() {
+    return { src: 'static/images/wireframes/image.png' };
+  },
+};
+</script>

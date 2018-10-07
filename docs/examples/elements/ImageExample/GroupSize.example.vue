@@ -1,24 +1,25 @@
-import React from 'react'
-import { Divider, Image } from 'semantic-ui-react'
-
-const src = '/images/wireframe/image.png'
-
-const ImageExampleGroupSize = () => (
+<template>
   <div>
-    <Image.Group size='tiny'>
-      <Image src={src} />
-      <Image src={src} />
-      <Image src={src} />
-      <Image src={src} />
-    </Image.Group>
+    <sui-image-group size="tiny">
+      <sui-image :src="src" />
+      <sui-image :src="src" />
+      <sui-image :src="src" />
+      <sui-image :src="src" />
+    </sui-image-group>
     <Divider hidden />
-    <Image.Group size='small'>
-      <Image src={src} />
-      <Image src={src} />
-      <Image src={src} />
-      <Image src={src} />
-    </Image.Group>
+    <sui-image-group size="small">
+      <sui-image :src="src" />
+      <sui-image :src="src" />
+      <sui-image :src="src" />
+      <sui-image :src="src" />
+    </sui-image-group>
   </div>
-)
+</template>
 
-export default ImageExampleGroupSize
+<script>
+export default {
+  data() {
+    return { src: 'static/images/wireframes/image.png' };
+  },
+};
+</script>

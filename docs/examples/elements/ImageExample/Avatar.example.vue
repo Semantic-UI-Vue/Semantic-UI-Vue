@@ -1,11 +1,10 @@
-import React from 'react'
-import { Image } from 'semantic-ui-react'
-
-const ImageExampleAvatar = () => (
+<template>
   <div>
-    <Image src='/images/wireframe/square-image.png' avatar />
+    <sui-image src="static/images/wireframes/square-image.png" avatar />
     <span>Username</span>
   </div>
-)
+</template>
 
-export default ImageExampleAvatar
+<script>
+export default {};
+</script>

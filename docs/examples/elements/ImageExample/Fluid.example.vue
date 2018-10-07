@@ -1,6 +1,7 @@
-import React from 'react'
-import { Image } from 'semantic-ui-react'
+<template>
+  <sui-image src="static/images/wireframes/image.png" fluid />
+</template>
 
-const ImageExampleFluid = () => <Image src='/images/wireframe/image.png' fluid />
-
-export default ImageExampleFluid
+<script>
+export default {};
+</script>

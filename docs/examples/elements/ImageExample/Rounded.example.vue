@@ -1,8 +1,7 @@
-import React from 'react'
-import { Image } from 'semantic-ui-react'
+<template>
+  <sui-image src="static/images/wireframes/square-image.png" size="medium" rounded />
+</template>
 
-const ImageExampleRounded = () => (
-  <Image src='/images/wireframe/square-image.png' size='medium' rounded />
-)
-
-export default ImageExampleRounded
+<script>
+export default {};
+</script>
