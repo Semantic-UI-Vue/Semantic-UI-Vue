@@ -1301,7 +1301,141 @@
 ####       `should match snapshot`
 
 ```
-"<img src=\"static/images/wireframes/image.png\" class=\"ui disabled image\">"
+"<img src=\"static/images/wireframes/image.png\" class=\"ui medium image\" medium=\"\">"
+```
+
+##   `Variations`
+
+##     `Avatar`
+
+####       `should match snapshot`
+
+```
+"<div><img src=\"static/images/wireframes/square-image.png\" class=\"ui avatar image\"> <span>Username</span></div>"
+```
+
+##     `Bordered`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/white-image.png\" class=\"ui medium bordered image\">"
+```
+
+##     `Fluid`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/image.png\" class=\"ui image\" fluid=\"\">"
+```
+
+##     `Rounded`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/square-image.png\" class=\"ui medium rounded image\">"
+```
+
+##     `Circular`
+
+####       `should match snapshot`
+
+```
+"<img src=\"static/images/wireframes/square-image.png\" class=\"ui medium circular image\">"
+```
+
+##     `Vertically Aligned`
+
+####       `should match snapshot`
+
+```
+"<div><img src=\"static/images/wireframes/image.png\" class=\"ui tiny top aligned image\"> <span>Top Aligned</span> <div class=\"ui divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui tiny middle aligned image\"> <span>Middle Aligned</span> <div class=\"ui divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui tiny bottom aligned image\"> <span>Bottom Aligned</span></div>"
+```
+
+##     `Centered`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><img src=\"static/images/wireframes/image.png\" class=\"ui medium centered image\"> <p>
+    Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
+    est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum
+    ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
+    ex natum rebum iisque.
+  </p> <p>
+    Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
+    nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+    fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+  </p> <img src=\"static/images/wireframes/image-text.png\" class=\"ui small centered image\"> <p>
+    Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+    adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+    utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+    convenire mnesarchum eu per, quas minimum postulant per id.
+  </p></div>"
+```
+
+##     `Spaced`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui segment\"><p>
+      Te eum doming eirmod, nominati pertinacia <img src=\"static/images/wireframes/image.png\" class=\"ui mini spaced image\">
+      argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu
+      ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram,
+      eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.
+    </p></div> <p><img src=\"static/images/wireframes/image.png\" class=\"ui mini right spaced image\">Audiam quaerendum eu sea, pro omittam
+    definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda
+    ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum,
+    vim vivendum maiestatis in.
+  </p> <p>
+    Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+    adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+    utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+    convenire mnesarchum eu per, quas minimum postulant per id.
+    <img src=\"static/images/wireframes/image.png\" class=\"ui mini left spaced image\"></p></div>"
+```
+
+##     `Floated`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><img src=\"static/images/wireframes/image-text.png\" class=\"ui small left floated image\"> <p>
+    Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
+    est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum
+    ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
+    ex natum rebum iisque.
+  </p> <img src=\"static/images/wireframes/image-text.png\" class=\"ui small right floated image\"> <p>
+    Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi
+    nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix
+    fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.
+  </p> <p>
+    Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores
+    adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete
+    utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
+    convenire mnesarchum eu per, quas minimum postulant per id.
+  </p></div>"
+```
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div><img src=\"static/images/wireframes/image.png\" class=\"ui mini image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui tiny image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui small image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui medium image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui large image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui big image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui huge image\"> <div class=\"ui hidden divider\"></div> <img src=\"static/images/wireframes/image.png\" class=\"ui massive image\"></div>"
+```
+
+##   `Groups`
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui tiny images\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div> <div class=\"ui hidden divider\"></div> <div class=\"ui small images\"><img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"> <img src=\"static/images/wireframes/image.png\" class=\"ui image\"></div></div>"
 ```
 
 ## `InputExample`
