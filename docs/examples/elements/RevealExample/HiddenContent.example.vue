@@ -1,5 +1,5 @@
-<template lang="html">
-  <sui-reveal animated="fade">
+<template>
+  <sui-reveal animated="small fade">
     <sui-reveal-content visible>
       <sui-image src="static/images/wireframes/square-image.png" size="small" />
     </sui-reveal-content>
