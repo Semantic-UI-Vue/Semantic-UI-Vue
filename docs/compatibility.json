@@ -330,40 +330,40 @@
           "name": "variations",
           "examples": [{
             "name": "avatar",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "bordered",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "fluid",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "rounded",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "circular",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "vertically aligned",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "centered",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "spaced",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "floated",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "size",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "groups",
           "examples": [{
             "name": "size",
-            "implemented": false
+            "implemented": true
           }]
         }]
       },
