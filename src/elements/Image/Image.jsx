@@ -9,9 +9,17 @@ export default {
       type: Boolean,
       description: 'An image may be formatted to appear inline with text as an avatar.',
     },
+    bordered: {
+      type: Boolean,
+      description: 'An image may include a border to emphasize the edges of white or transparent content.',
+    },
     circular: {
       type: Boolean,
       description: 'An image may appear circular.',
+    },
+    rounded: {
+      type: Boolean,
+      description: 'An image may appear rounded.',
     },
     disabled: Boolean,
     hidden: Boolean,
@@ -24,6 +32,9 @@ export default {
     },
     floated: Enum(['left', 'right']),
     centered: Boolean,
+    verticalAlign: Enum.VerticalAlign({
+      description: 'An image can specify its vertical alignment.',
+    }),
     wrapped: Boolean,
   },
   render() {
@@ -33,8 +44,11 @@ export default {
       this.avatar && 'avatar',
       this.size,
       this.shape,
+      this.verticalAlign && `${this.verticalAlign} aligned`,
       this.floated && `${this.floated} floated`,
       this.centered && 'centered',
+      this.bordered && 'bordered',
+      this.rounded && 'rounded',
       this.circular && 'circular',
       this.spaced, this.spaced && 'spaced',
       this.hidden && 'hidden',

@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-image src="static/images/wireframes/image.png" disabled />
+  <sui-image src="static/images/wireframes/image.png" medium size="medium" />
 </template>
 
 <script>
