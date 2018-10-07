@@ -1,5 +1,5 @@
 <template>
-  <sui-secgment>
+  <sui-segment>
     <sui-image src="static/images/wireframes/image.png" size="medium" centered />
     <p>
       Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
@@ -19,7 +19,7 @@
       utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi
       convenire mnesarchum eu per, quas minimum postulant per id.
     </p>
-  </sui-secgment>
+  </sui-segment>
 </template>
 
 <script>

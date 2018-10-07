@@ -6,7 +6,7 @@
       <sui-image :src="src" />
       <sui-image :src="src" />
     </sui-image-group>
-    <Divider hidden />
+    <sui-divider hidden />
     <sui-image-group size="small">
       <sui-image :src="src" />
       <sui-image :src="src" />
