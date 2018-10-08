@@ -2153,9 +2153,6 @@
             "name": "html",
             "implemented": false
           }, {
-            "name": "pre-existing",
-            "implemented": false
-          }, {
             "name": "tooltip",
             "implemented": false
           }]
