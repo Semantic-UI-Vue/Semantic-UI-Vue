@@ -7,6 +7,6 @@ export default {
   props: {
   },
   render() {
-    return this.$slots.trigger;
+    return <div>{this.$slots.trigger}</div>;
   },
 };

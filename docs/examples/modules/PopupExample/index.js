@@ -9,44 +9,44 @@ import Flowing from './Flowing.example';
 import Inverted from './Inverted.example';
 
 export default [{
-  name: 'Types',
+  title: 'Types',
   examples: [{
-    name: 'Popup',
+    title: 'Popup',
     description: 'An element can specify popup content to appear.',
     component: Popup,
   }, {
-    name: 'Titled',
+    title: 'Titled',
     description: 'An element can specify popup content with a title.',
     component: Titled,
   }, {
-    name: 'Html',
+    title: 'Html',
     description: 'An element can specify HTML for a popup.',
     component: Html,
   }],
 }, {
-  name: 'Variations',
+  title: 'Variations',
   examples: [{
-    name: 'Basic',
+    title: 'Basic',
     description: 'An element can specify a simple tooltip that can appear without javascript',
     component: Basic,
   }, {
-    name: 'Width',
+    title: 'Width',
     description: 'A popup can be extra wide to allow for longer content.',
     component: Width,
   }, {
-    name: 'Fluid',
+    title: 'Fluid',
     description: 'A fluid popup will take up the entire width of its offset container.',
     component: Fluid,
   }, {
-    name: 'Size',
+    title: 'Size',
     description: 'A popup can vary in size.',
     component: Size,
   }, {
-    name: 'Flowing',
+    title: 'Flowing',
     description: 'A popup can have no maximum width and continue to flow to fit its content.',
     component: Flowing,
   }, {
-    name: 'Inverted',
+    title: 'Inverted',
     description: 'A popup can have its colors inverted.',
     component: Inverted,
   }],
