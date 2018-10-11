@@ -117,6 +117,11 @@ export default {
       default: 'No results found',
       description: 'Message to display when there are no results.',
     },
+    maxSelectionsMessage: {
+      type: String,
+      default: 'Max {selections} selections',
+      description: 'Message to display when the maximum amount of selections is reached.',
+    },
   },
   events: {
     input: {
@@ -190,7 +195,7 @@ export default {
       if (this.filteredOptions.length === 0) {
         if (this.multiple) {
           if (this.maximumValuesSelected) {
-            return `Max ${this.maxSelections} selections`;
+            return this.maxSelectionsMessage.replace('{selections}', this.maxSelections);
           }
         }
         if (this.filter && !this.allowAdditions) {
