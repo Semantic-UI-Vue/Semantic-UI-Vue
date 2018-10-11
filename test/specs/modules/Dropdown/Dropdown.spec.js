@@ -195,6 +195,7 @@ describe('Dropdown', () => {
       propsData: {
         multiple: true,
         maxSelections: 1,
+        maxSelectionsMessage: '{selections} selections allowed',
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
       },
     });
@@ -206,6 +207,7 @@ describe('Dropdown', () => {
     wrapper.setProps({ value: [1] });
     options.at(0).trigger('click');
     expect(wrapper.emitted().input[1]).to.be.undefined;
+    expect(wrapper.find('.message').text()).to.equal('1 selections allowed');
   });
 
   it('should have icons, flags and images in selected text', () => {
