@@ -112,6 +112,11 @@ export default {
       default: true,
       description: 'Whether or not the menu should close when the dropdown is blurred.',
     },
+    noResultsMessage: {
+      type: String,
+      default: 'No results found',
+      description: 'Message to display when there are no results.'
+    },
   },
   events: {
     input: {
@@ -189,7 +194,7 @@ export default {
           }
         }
         if (this.filter && !this.allowAdditions) {
-          return 'No results found';
+          return this.noResultsMessage;
         }
       }
       return '';

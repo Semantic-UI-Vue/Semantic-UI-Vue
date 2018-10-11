@@ -238,9 +238,11 @@ describe('Dropdown', () => {
   });
 
   it('should have icons, flags and images in selected options', () => {
+    const NO_RESULTS_MESSAGE = 'Ops.. no results'
     const wrapper = shallow(DropdownWithRequired, {
       propsData: {
         multiple: true,
+        noResultsMessage: NO_RESULTS_MESSAGE,
         options: [
           {
             text: 'foo',
@@ -285,7 +287,7 @@ describe('Dropdown', () => {
     const options2 = wrapper.findAll(DropdownItem);
     expect(options2.exists()).to.equal(false);
     const message = wrapper.find('.message');
-    expect(message.text()).to.equal('No results found');
+    expect(message.text()).to.equal(NO_RESULTS_MESSAGE);
   });
 
   it('should delete last option from selected when pressing backspace in search input when filter is empty', () => {
