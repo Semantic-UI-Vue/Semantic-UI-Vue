@@ -115,7 +115,7 @@ export default {
     noResultsMessage: {
       type: String,
       default: 'No results found',
-      description: 'Message to display when there are no results.'
+      description: 'Message to display when there are no results.',
     },
   },
   events: {
