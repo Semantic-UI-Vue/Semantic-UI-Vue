@@ -175,6 +175,10 @@ export default {
             return { name };
           }
 
+          if (!value.type) {
+            return { ...value, name };
+          }
+
           if (typeof value === 'function') {
             return { name, type: value.name };
           }
