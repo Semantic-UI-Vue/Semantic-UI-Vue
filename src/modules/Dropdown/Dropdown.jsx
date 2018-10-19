@@ -308,6 +308,7 @@ export default {
       }
     },
     closeMenu() {
+      if (!this.closeOnBlur) return;
       this.setOpen(false);
     },
     deselectItem(selectedValue) {
