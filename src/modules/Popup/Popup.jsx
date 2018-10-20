@@ -11,6 +11,10 @@ export default {
   description: 'A popup displays additional information on top of a page.',
   mixins: [SemanticUIVueMixin],
   props: {
+    basic: {
+      type: Boolean,
+      description: 'Display the popup without the pointing arrow.',
+    },
     content: {
       type: String,
       description: 'Simple text content for the popover.',
@@ -64,6 +68,7 @@ export default {
         {this.open && (
           <PopupContainer
             popupClass={this.classes(
+              this.basic && 'basic',
               this.flowing && 'flowing',
               this.inverted && 'inverted',
               this.size,
