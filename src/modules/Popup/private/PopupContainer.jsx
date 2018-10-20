@@ -17,9 +17,10 @@ export default {
     };
   },
   mounted() {
-    this.$emit('mount', this.$el);
-    this.popupCoords = this.$el.getBoundingClientRect();
-    this.setPopupStyle();
+    this.$nextTick(() => {
+      this.popupCoords = this.$refs.container.getBoundingClientRect();
+      this.setPopupStyle();
+    });
   },
   methods: {
     computePopupStyle(positions) {
@@ -120,10 +121,6 @@ export default {
       this.mountedStyle = style;
       this.mountedPosition = position;
     },
-    handlePopupMounted() {
-      this.popupCoords = this.$el.getBoundingClientRect();
-      this.setPopupStyle();
-    },
   },
   render() {
     const className = this.classes(
@@ -135,7 +132,7 @@ export default {
 
     return (
       <portal to="semantic-ui-vue">
-        <div class={className} style={this.mountedStyle}>
+        <div ref="container" class={className} style={this.mountedStyle}>
           {this.$slots.default}
         </div>
       </portal>
