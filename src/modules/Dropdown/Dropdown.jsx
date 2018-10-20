@@ -343,7 +343,7 @@ export default {
       if (this.open) {
         if (this.search && e.target === this.$refs.search) return;
         if (!e.path) {
-          this.addEventPath()
+          this.addEventPath();
         }
         if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
           this.$nextTick(() => this.focusSearch());
@@ -353,22 +353,27 @@ export default {
       this.focusSearch();
       this.setOpen(!this.open);
     },
-    addEventPath: function() {
+    addEventPath() {
       if (!('path' in Event.prototype)) {
         Object.defineProperty(Event.prototype, 'path', {
-          get: function () {
+          get() {
             const path = [];
             let currentElem = this.target;
             while (currentElem) {
               path.push(currentElem);
               currentElem = currentElem.parentElement;
             }
-            if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
+
+            if (path.indexOf(window) === -1 && path.indexOf(document) === -1) {
               path.push(document);
-            if (path.indexOf(window) === -1)
+            }
+
+            if (path.indexOf(window) === -1) {
               path.push(window);
+            }
+
             return path;
-          }
+          },
         });
       }
     },
