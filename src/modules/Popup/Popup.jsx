@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      coords: null,
+      triggerElm: null,
       open: false,
     };
   },
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     handleOpen() {
-      this.coords = this.$slots.trigger[0].elm.getBoundingClientRect();
+      this.triggerElm = this.$slots.trigger[0].elm;
       this.open = true;
     },
   },
@@ -42,7 +42,7 @@ export default {
         {this.$slots.trigger}
         {this.open && (
           <PopupContainer
-            triggerCoords={this.coords}
+            trigger-elm={this.triggerElm}
             position={this.position}
           >
             {this.$slots.default || this.content}

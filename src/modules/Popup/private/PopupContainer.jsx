@@ -7,13 +7,14 @@ export default {
   name: 'SuiPrivatePopupContainer',
   mixins: [SemanticUIVueMixin],
   props: {
-    triggerCoords: isBrowser ? [window.DOMRect, Object] : Object,
+    triggerElm: isBrowser ? [HTMLElement, Object] : Object,
     position: String,
   },
   data() {
     return {
       mountedPosition: this.position,
       mountedStyle: null,
+      triggerCoords: this.triggerElm.getBoundingClientRect(),
     };
   },
   mounted() {
@@ -28,36 +29,29 @@ export default {
       // Do not access window/document when server side rendering
       if (!isBrowser) return style;
 
-      const { offset } = this;
+      const { offset, triggerElm } = this;
       const { pageYOffset, pageXOffset } = window;
       const { clientWidth, clientHeight } = document.documentElement;
+      const { offsetHeight, offsetWidth } = this.$el;
 
       if (positions.includes('right')) {
-        style.right = Math.round(clientWidth - (this.triggerCoords.right + pageXOffset));
-        style.left = 'auto';
+        style.left = Math.round(triggerElm.offsetLeft + triggerElm.offsetWidth - offsetWidth);
       } else if (positions.includes('left')) {
-        style.left = Math.round(this.triggerCoords.left + pageXOffset);
-        style.right = 'auto';
+        style.left = Math.round(triggerElm.offsetLeft);
       } else { // if not left nor right, we are horizontally centering the element
-        const xOffset = (this.triggerCoords.width - this.popupCoords.width) / 2;
-        style.left = Math.round(this.triggerCoords.left + xOffset + pageXOffset);
-        style.right = 'auto';
+        style.left = Math.round(triggerElm.offsetLeft + (triggerElm.offsetWidth / 2) - (offsetWidth / 2));
       }
 
       if (positions.includes('top')) {
-        style.bottom = Math.round(clientHeight - (this.triggerCoords.top + pageYOffset));
-        style.top = 'auto';
+        style.top = Math.round(this.triggerElm.offsetTop - this.$el.offsetHeight - 7);
       } else if (positions.includes('bottom')) {
-        style.top = Math.round(this.triggerCoords.bottom + pageYOffset);
-        style.bottom = 'auto';
+        style.top = Math.round(this.triggerElm.offsetTop + this.triggerElm.offsetHeight);
       } else { // if not top nor bottom, we are vertically centering the element
-        const yOffset = (this.triggerCoords.height + this.popupCoords.height) / 2;
-        style.top = Math.round((this.triggerCoords.bottom + pageYOffset) - yOffset);
-        style.bottom = 'auto';
+        style.top = Math.round(this.triggerElm.offsetTop + (triggerElm.offsetHeight / 2) - (offsetHeight / 2));
 
-        const xOffset = this.popupCoords.width + 8;
+        const xOffset = offsetWidth + 8;
         if (positions.includes('right')) {
-          style.right -= xOffset;
+          style.left += xOffset;
         } else {
           style.left -= xOffset;
         }
@@ -74,6 +68,7 @@ export default {
       return style;
     },
     isStyleInViewport(style) {
+      return true;
       const { pageYOffset, pageXOffset } = window;
       const { clientWidth, clientHeight } = document.documentElement;
 

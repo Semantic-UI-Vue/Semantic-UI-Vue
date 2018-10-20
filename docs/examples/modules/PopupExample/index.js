@@ -7,6 +7,7 @@ import Fluid from './Fluid.example';
 import Size from './Size.example';
 import Flowing from './Flowing.example';
 import Inverted from './Inverted.example';
+import Position from './Position.example';
 
 export default [{
   title: 'Types',
@@ -49,5 +50,9 @@ export default [{
     title: 'Inverted',
     description: 'A popup can have its colors inverted.',
     component: Inverted,
+  }, {
+    title: 'Position',
+    description: 'A popup can be position around its trigger.',
+    component: Position,
   }],
 }];
