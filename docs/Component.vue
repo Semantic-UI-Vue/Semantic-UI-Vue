@@ -40,7 +40,7 @@
         </sui-list>
 
         <h4 class="props-switcher" is="sui-header" :color="propSwitcherColor">
-          <a href="javascript:void 0" @click="toggleProps">
+          <a href="#" @click="toggleProps">
             <sui-icon :name="propSwitcherIcon" />
             <template v-if="subcomponents.length">
               Props:
@@ -197,7 +197,9 @@ export default {
     },
   },
   methods: {
-    toggleProps() {
+    toggleProps(event) {
+      event.preventDefault();
+
       if (this.currentComponent) {
         this.currentComponent = null;
       } else {
