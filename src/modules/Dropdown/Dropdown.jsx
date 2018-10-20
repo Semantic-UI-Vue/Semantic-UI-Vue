@@ -342,10 +342,14 @@ export default {
       e.stopPropagation();
       if (this.open) {
         if (this.search && e.target === this.$refs.search) return;
-        if (!e.path) {
+
+        const path = e.path || (event.composedPath && event.composedPath());
+
+        if (!path) {
           this.addEventPath();
         }
-        if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
+
+        if (this.multiple && path.indexOf(this.menu.$el) !== -1) {
           this.$nextTick(() => this.focusSearch());
           return;
         }
