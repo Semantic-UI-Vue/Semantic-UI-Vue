@@ -82,6 +82,10 @@ export default {
       type: String,
       description: 'Placeholder text.',
     },
+    pointing: {
+      type: String,
+      description: 'A dropdown can be formatted so that its menu is pointing.',
+    },
     search: {
       type: Boolean,
       description: 'A dropdown can have a search field to filter options.',
@@ -523,6 +527,7 @@ export default {
           this.item && 'item',
           this.floating && 'floating',
           this.fluid && 'fluid',
+          this.pointing && `pointing ${this.pointing}`,
           this.loading && 'loading',
           this.labeled && 'labeled',
           this.multiple && 'multiple',
