@@ -25,6 +25,9 @@
         <router-link is="sui-menu-item" to="/contributing">
           Contributing
         </router-link>
+        <router-link is="sui-menu-item" to="/features">
+          Feature Status
+        </router-link>
         <a is="sui-menu-item" href="https://github.com/Semantic-UI-Vue/Semantic-UI-Vue">
           Github
           <sui-icon name="github" />

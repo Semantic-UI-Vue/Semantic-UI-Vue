@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Component from './Component';
 import Docs from './Docs';
 import DocsPage from './DocsPage';
+import Features from './Features';
 import Layouts from './Layouts';
 import Theming from './Layouts/Theming';
 import Login from './Layouts/Login';
@@ -44,6 +45,10 @@ const router = new Router({
         {
           path: '/layouts',
           component: Layouts,
+        },
+        {
+          path: '/features',
+          component: Features,
         },
         {
           path: '/:type/:componentName',

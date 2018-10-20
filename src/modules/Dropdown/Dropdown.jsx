@@ -64,6 +64,10 @@ export default {
       type: Boolean,
       description: 'A selection dropdown can allow multiple selections.',
     },
+    loading: {
+      type: Boolean,
+      description: 'A dropdown can show that it is currently loading data.',
+    },
     maxSelections: {
       type: Number,
       default: Infinity,
@@ -111,6 +115,16 @@ export default {
       type: Boolean,
       default: true,
       description: 'Whether or not the menu should close when the dropdown is blurred.',
+    },
+    noResultsMessage: {
+      type: String,
+      default: 'No results found',
+      description: 'Message to display when there are no results.',
+    },
+    maxSelectionsMessage: {
+      type: String,
+      default: 'Max {selections} selections',
+      description: 'Message to display when the maximum amount of selections is reached.',
     },
   },
   events: {
@@ -185,11 +199,11 @@ export default {
       if (this.filteredOptions.length === 0) {
         if (this.multiple) {
           if (this.maximumValuesSelected) {
-            return `Max ${this.maxSelections} selections`;
+            return this.maxSelectionsMessage.replace('{selections}', this.maxSelections);
           }
         }
         if (this.filter && !this.allowAdditions) {
-          return 'No results found';
+          return this.noResultsMessage;
         }
       }
       return '';
@@ -308,6 +322,7 @@ export default {
       }
     },
     closeMenu() {
+      if (!this.closeOnBlur) return;
       this.setOpen(false);
     },
     deselectItem(selectedValue) {
@@ -362,7 +377,9 @@ export default {
       if (!this.multiple && filter.trim() === '') filteredText.classList.remove('filtered');
     },
     handleKeyDown(e) {
-      this.toggleFilteredText(this.$refs.text, this.filter);
+      if (this.$refs.text) {
+        this.toggleFilteredText(this.$refs.text, this.filter);
+      }
       const KEYS = {
         ENTER: 13,
         ESCAPE: 27,
@@ -409,6 +426,7 @@ export default {
           return;
       }
       e.preventDefault();
+      if (this.filteredOptions.length === 0) return;
       const newValue = this.selectedIndex + direction;
       if (this.filteredOptions.length <= newValue) {
         this.selectedIndex = 0;
@@ -509,7 +527,8 @@ export default {
           this.item && 'item',
           this.floating && 'floating',
           this.fluid && 'fluid',
-          typeof this.$options.propsData === 'object' && this.$options.propsData !== null && Object.prototype.hasOwnProperty.call(this.$options.propsData, 'pointing') && `pointing ${this.pointing}`,
+          this.pointing && `pointing ${this.pointing}`,
+          this.loading && 'loading',
           this.labeled && 'labeled',
           this.multiple && 'multiple',
           this.selection && 'selection',

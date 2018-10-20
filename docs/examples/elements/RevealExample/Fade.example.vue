@@ -10,7 +10,5 @@
 </template>
 
 <script>
-export default {
-  name: 'FadeExample',
-};
+export default {};
 </script>

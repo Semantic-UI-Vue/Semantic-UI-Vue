@@ -1,11 +1,27 @@
 <template lang="html">
   <sui-segment inverted>
-    <sui-list inverted divided relaxed>
-      <sui-list-item>Apples</sui-list-item>
-      <sui-list-item>Pears</sui-list-item>
-      <sui-list-item>Oranges</sui-list-item>
+    <sui-list divided inverted relaxed>
+      <sui-list-item>
+        <sui-list-content>
+          <sui-list-header>Snickerdoodle</sui-list-header>
+          An excellent companion
+        </sui-list-content>
+      </sui-list-item>
+      <sui-list-item>
+        <sui-list-content>
+          <sui-list-header>Poodle</sui-list-header>
+          A poodle, its pretty basic
+        </sui-list-content>
+      </sui-list-item>
+      <sui-list-item>
+        <sui-list-content>
+          <sui-list-header>Paulo</sui-list-header>
+          He's also a dog
+        </sui-list-content>
+      </sui-list-item>
     </sui-list>
   </sui-segment>
+
 </template>
 
 <script>

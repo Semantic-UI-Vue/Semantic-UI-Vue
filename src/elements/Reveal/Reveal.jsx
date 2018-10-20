@@ -5,6 +5,10 @@ export default {
   name: 'SuiReveal',
   mixins: [SemanticUIVueMixin],
   props: {
+    active: {
+      type: Boolean,
+      description: 'An active reveal displays its hidden content.',
+    },
     animated: Enum([
       'fade',
       'small fade',
@@ -15,6 +19,14 @@ export default {
       'rotate',
       'rotate left',
     ]),
+    disabled: {
+      type: Boolean,
+      description: 'A disabled reveal will not animate when hovered.',
+    },
+    instant: {
+      type: Boolean,
+      description: 'An element can show its content without delay.',
+    },
   },
   render() {
     const ElementType = this.getElementType();
@@ -24,6 +36,9 @@ export default {
         class={this.classes(
           'ui',
           this.animated,
+          this.disabled && 'disabled',
+          this.instant && 'instant',
+          this.active && 'active',
           'reveal',
         )}
       >
