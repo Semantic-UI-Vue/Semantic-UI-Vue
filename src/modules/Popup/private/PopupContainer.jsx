@@ -7,6 +7,7 @@ export default {
   name: 'SuiPrivatePopupContainer',
   mixins: [SemanticUIVueMixin],
   props: {
+    popupClass: String,
     triggerCoords: isBrowser ? [window.DOMRect, Object] : Object,
     position: String,
   },
@@ -126,6 +127,7 @@ export default {
     const className = this.classes(
       'ui',
       this.mountedPosition,
+      this.popupClass,
       'popup',
       'transition visible',
     );
