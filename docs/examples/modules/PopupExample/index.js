@@ -1,5 +1,6 @@
 import Popup from './Popup.example';
 import Titled from './Titled.example';
+import Basic from './Basic.example';
 import Html from './Html.example';
 import Width from './Width.example';
 import Size from './Size.example';
@@ -25,6 +26,10 @@ export default [{
 }, {
   title: 'Variations',
   examples: [{
+    title: 'Basic',
+    description: 'A popup can provide more basic formatting.',
+    component: Basic,
+  }, {
     title: 'Width',
     description: 'A popup can be extra wide to allow for longer content.',
     component: Width,
