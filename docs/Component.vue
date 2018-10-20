@@ -184,7 +184,7 @@ export default {
           }
 
           if (value.type instanceof Array) {
-            return { ...value, name, type: value.type.map(type => type.name).join(' | ') };
+            return { ...value, name, type: value.type.map(type => type.name).join('\xa0|\xa0') };
           }
 
           return { ...value, name, type: value.type.name };
