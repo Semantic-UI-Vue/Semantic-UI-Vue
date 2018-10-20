@@ -96,6 +96,7 @@
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
+    "portal-vue": "^1.4.0",
     "prerender-spa-plugin": "mariolamacchia/prerender-spa-plugin#chrome-headless",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.0",

@@ -5023,6 +5023,10 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
+portal-vue@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/portal-vue/-/portal-vue-1.4.0.tgz#f689621783e309a64daa5af4603c649d0eddc4a1"
+
 portfinder@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.3.tgz#77944c1049271215fda7452cb1152bb9c3f05ba7"
