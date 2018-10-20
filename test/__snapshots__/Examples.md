@@ -2404,6 +2404,14 @@
     icon ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"file icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></button></div>"
 ```
 
+##     `Pointing`
+
+####       `should match snapshot`
+
+```
+"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Options</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Settings</div> <div role=\"option\" class=\"item\">Manage apps</div> <div role=\"option\" class=\"item\">Help</div></div></button></div>"
+```
+
 ##     `Floating`
 
 ####       `should match snapshot`

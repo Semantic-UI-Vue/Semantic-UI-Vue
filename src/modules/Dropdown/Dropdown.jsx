@@ -82,6 +82,10 @@ export default {
       type: String,
       description: 'Placeholder text.',
     },
+    pointing: {
+      type: String,
+      description: 'A dropdown can be formatted so that its menu is pointing.',
+    },
     search: {
       type: Boolean,
       description: 'A dropdown can have a search field to filter options.',
@@ -111,6 +115,16 @@ export default {
       type: Boolean,
       default: true,
       description: 'Whether or not the menu should close when the dropdown is blurred.',
+    },
+    noResultsMessage: {
+      type: String,
+      default: 'No results found',
+      description: 'Message to display when there are no results.',
+    },
+    maxSelectionsMessage: {
+      type: String,
+      default: 'Max {selections} selections',
+      description: 'Message to display when the maximum amount of selections is reached.',
     },
   },
   events: {
@@ -185,11 +199,11 @@ export default {
       if (this.filteredOptions.length === 0) {
         if (this.multiple) {
           if (this.maximumValuesSelected) {
-            return `Max ${this.maxSelections} selections`;
+            return this.maxSelectionsMessage.replace('{selections}', this.maxSelections);
           }
         }
         if (this.filter && !this.allowAdditions) {
-          return 'No results found';
+          return this.noResultsMessage;
         }
       }
       return '';
@@ -308,6 +322,7 @@ export default {
       }
     },
     closeMenu() {
+      if (!this.closeOnBlur) return;
       this.setOpen(false);
     },
     deselectItem(selectedValue) {
@@ -327,6 +342,9 @@ export default {
       e.stopPropagation();
       if (this.open) {
         if (this.search && e.target === this.$refs.search) return;
+        if (!e.path) {
+          this.addEventPath();
+        }
         if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
           this.$nextTick(() => this.focusSearch());
           return;
@@ -334,6 +352,30 @@ export default {
       }
       this.focusSearch();
       this.setOpen(!this.open);
+    },
+    addEventPath() {
+      if (!('path' in Event.prototype)) {
+        Object.defineProperty(Event.prototype, 'path', {
+          get() {
+            const path = [];
+            let currentElem = this.target;
+            while (currentElem) {
+              path.push(currentElem);
+              currentElem = currentElem.parentElement;
+            }
+
+            if (path.indexOf(window) === -1 && path.indexOf(document) === -1) {
+              path.push(document);
+            }
+
+            if (path.indexOf(window) === -1) {
+              path.push(window);
+            }
+
+            return path;
+          },
+        });
+      }
     },
     handleFocus() {
       if (this.focused) return;
@@ -512,6 +554,7 @@ export default {
           this.item && 'item',
           this.floating && 'floating',
           this.fluid && 'fluid',
+          this.pointing && `pointing ${this.pointing}`,
           this.loading && 'loading',
           this.labeled && 'labeled',
           this.multiple && 'multiple',

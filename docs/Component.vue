@@ -40,7 +40,7 @@
         </sui-list>
 
         <h4 class="props-switcher" is="sui-header" :color="propSwitcherColor">
-          <a href="javascript:void 0" @click="toggleProps">
+          <a href="#" @click="toggleProps">
             <sui-icon :name="propSwitcherIcon" />
             <template v-if="subcomponents.length">
               Props:
@@ -180,7 +180,11 @@ export default {
           }
 
           if (value.type instanceof Array) {
-            return { ...value, name, type: value.type.map(type => type.name).join('|') };
+            return { ...value, name, type: value.type.map(type => type.name).join('\xa0|\xa0') };
+          }
+
+          if (!value.type) {
+            return { ...value, name, type: 'Any' };
           }
 
           return { ...value, name, type: value.type.name };
@@ -193,7 +197,9 @@ export default {
     },
   },
   methods: {
-    toggleProps() {
+    toggleProps(event) {
+      event.preventDefault();
+
       if (this.currentComponent) {
         this.currentComponent = null;
       } else {

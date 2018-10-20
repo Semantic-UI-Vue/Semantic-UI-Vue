@@ -2,6 +2,8 @@ import Dropdown from './Dropdown.example';
 import DropdownDirection from './DropdownDirection.example';
 import DropdownButton from './DropdownButton.example';
 import DropdownFloating from './DropdownFloating.example';
+import DropdownPointing from './DropdownPointing.example';
+import DropdownPointingWithPosition from './DropdownPointingWithPosition.example';
 import FriendSelection from './FriendSelection.example';
 import MultipleSelection from './MultipleSelection.example';
 import MultipleMaxSelections from './MultipleMaxSelections.example';
@@ -67,6 +69,14 @@ export default [
         title: 'Button',
         description: 'A dropdown button style and icon.',
         component: DropdownButton,
+      },
+      {
+        title: 'Pointing',
+        description: 'A dropdown can be formatted so that its menu is pointing.',
+        component: DropdownPointing,
+      },
+      {
+        component: DropdownPointingWithPosition,
       },
       {
         title: 'Floating',
