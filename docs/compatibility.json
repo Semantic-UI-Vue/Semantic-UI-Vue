@@ -2145,40 +2145,34 @@
           "name": "types",
           "examples": [{
             "name": "popup",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "titled",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "html",
-            "implemented": false
-          }, {
-            "name": "pre-existing",
-            "implemented": false
-          }, {
-            "name": "tooltip",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "variations",
           "examples": [{
             "name": "basic",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "width",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "fluid",
             "implemented": false
           }, {
             "name": "size",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "flowing",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "inverted",
-            "implemented": false
+            "implemented": true
           }]
         }]
       },

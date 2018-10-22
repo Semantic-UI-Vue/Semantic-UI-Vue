@@ -2,6 +2,7 @@ import { SemanticUIVueMixin } from '../../lib';
 import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
 import Icon from '../../elements/Icon/Icon';
+import Label from '../../elements/Label/Label';
 
 export default {
   name: 'SuiDropdownItem',
@@ -18,6 +19,10 @@ export default {
     icon: {
       type: String,
       description: 'Shorthand for sui-icon.',
+    },
+    label: {
+      type: Object,
+      description: 'Shorthand for sui-label'
     },
     text: {
       type: String,
@@ -70,6 +75,7 @@ export default {
         {this.icon && <Icon name={this.icon} />}
         {this.image && <Image {...{ props: this.image }} />}
         {this.flag && <Flag name={this.flag} />}
+        {this.label && <Label {...{ props: this.label}}/>}
         {this.text || this.$slots.default}
       </ElementType>
     );
