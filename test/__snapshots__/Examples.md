@@ -2404,6 +2404,14 @@
     icon ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"file icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></button></div>"
 ```
 
+##     `Pointing`
+
+####       `should match snapshot`
+
+```
+"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Options</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Settings</div> <div role=\"option\" class=\"item\">Manage apps</div> <div role=\"option\" class=\"item\">Help</div></div></button></div>"
+```
+
 ##     `Floating`
 
 ####       `should match snapshot`
@@ -2520,6 +2528,100 @@
 "<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"ui standart modal transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image scrolling\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui positive button\">
         OK
       </button></div></div></div></div>"
+```
+
+## `PopupExample`
+
+##   `Types`
+
+##     `Popup`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui warning message\">
+      Popup relies on Vue Portal to be installed and globally added to you application.
+      For Popup to correctly work, install
+      <a href=\"https://linusborg.github.io/portal-vue\" target=\"_blank\">Portal Vue</a>
+
+      and write:
+
+      <pre>// index.js
+import Vue from 'vue';
+import PortalVue from 'portal-vue';
+// ...
+Vue.use(PortalVue);
+      </pre>
+
+      Also, make sure to add <code>&lt;portal-target name=\"semantic-ui-vue\"&gt;</code> at the
+      root level of your app.
+    </div> <button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button></div>"
+```
+
+##     `Titled`
+
+####       `should match snapshot`
+
+```
+"<div><img src=\"static/images/avatar/small/elliot.jpg\" class=\"ui avatar image\"><img src=\"static/images/avatar/small/stevie.jpg\" class=\"ui avatar image\"><img src=\"static/images/avatar/small/matt.jpg\" class=\"ui avatar image\"></div>"
+```
+
+##     `Html`
+
+####       `should match snapshot`
+
+```
+"<div class=\"v-fragment\"></div>"
+```
+
+##   `Variations`
+
+##     `Basic`
+
+####       `should match snapshot`
+
+```
+"<div class=\"v-fragment\"></div>"
+```
+
+##     `Width`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i></div>"
+```
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i></div>"
+```
+
+##     `Flowing`
+
+####       `should match snapshot`
+
+```
+"<div class=\"v-fragment\" hoverable=\"\"></div>"
+```
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button> <i class=\"heart circular icon\"></i></div>"
+```
+
+##     `Position`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui three column grid\" style=\"width: 600px;\"><div class=\"row\"><div class=\"column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"left floated column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right floated right aligned column\"><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><i class=\"red heart large circular icon\"></i></div></div></div>"
 ```
 
 ## `ProgressExample`

@@ -1,6 +1,6 @@
 {
   "name": "semantic-ui-vue",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Semantic-UI Vue integration",
   "author": "Mario Lamacchia <mario.lamacchia@mariolamacchia.com>",
   "repository": {
@@ -33,7 +33,8 @@
   "dependencies": {
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-runtime": "^6.26.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "vue-fragments": "^2.1.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.12",
@@ -95,6 +96,7 @@
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
+    "portal-vue": "^1.4.0",
     "prerender-spa-plugin": "mariolamacchia/prerender-spa-plugin#chrome-headless",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.0",
