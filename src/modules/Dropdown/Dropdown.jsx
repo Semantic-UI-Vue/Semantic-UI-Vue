@@ -293,6 +293,7 @@ export default {
         {value.icon && <Icon name={value.icon} />}
         {value.image && <Image {...{ props: value.image }} />}
         {value.flag && <Flag name={value.flag} />}
+        {value.label && <Label {...{ props: value.label}}/>}
         {value.text}
       </div>;
     },
