@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view />
+    <portal-target name="semantic-ui-vue" />
   </div>
 </template>
 
