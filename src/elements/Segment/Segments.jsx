@@ -10,6 +10,9 @@ export default {
     horizontal: Boolean,
     vertical: Boolean,
   },
+  meta: {
+    parent: 'SuiSegment',
+  },
   render() {
     const ElementType = this.getElementType();
     return (
@@ -21,6 +24,7 @@ export default {
           this.raised && 'raised',
           this.stacked && 'stacked',
           this.horizontal && 'horizontal',
+          this.vertical && 'vertical',
           'segments',
         )}
       >

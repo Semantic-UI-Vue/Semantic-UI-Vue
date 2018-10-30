@@ -3,6 +3,7 @@ import Raised from './Raised.example';
 import Stacked from './Stacked.example';
 import StackedTall from './StackedTall.example';
 import Piled from './Piled.example';
+import Segments from './Segments.example';
 
 export default [
   {
@@ -30,6 +31,16 @@ export default [
         title: 'Piled',
         description: 'A segment can be formatted to look like a pile of pages',
         component: Piled,
+      },
+    ],
+  },
+  {
+    title: 'Groups',
+    examples: [
+      {
+        title: 'Segments',
+        description: 'A group of segments',
+        component: Segments,
       },
     ],
   },
