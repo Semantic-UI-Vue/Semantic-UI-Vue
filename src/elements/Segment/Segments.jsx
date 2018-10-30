@@ -1,5 +1,4 @@
 import { SemanticUIVueMixin } from '../../lib';
-import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiSegments',

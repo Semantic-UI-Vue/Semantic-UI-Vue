@@ -76,7 +76,7 @@ export default {
     options: {
       type: Array,
       default: () => [],
-      description: 'Array of SuiDropdownItem props e.g. `{ text: \'\', value: \'\' }`',
+      description: "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
     },
     placeholder: {
       type: String,
@@ -170,7 +170,7 @@ export default {
       return false;
     },
     animation() {
-      return `${animations.name} ${(this.downward ? animations.down : animations.up)}`;
+      return `${animations.name} ${this.downward ? animations.down : animations.up}`;
     },
     filteredOptions() {
       if (!this.search && !this.multiple) {
@@ -184,10 +184,7 @@ export default {
 
         if (
           this.multiple &&
-          (
-            this.maximumValuesSelected ||
-            this.multipleValue.indexOf(option.value) > -1
-          )
+          (this.maximumValuesSelected || this.multipleValue.indexOf(option.value) > -1)
         ) {
           return false;
         }
@@ -211,18 +208,22 @@ export default {
     menuNode() {
       return (
         <DropdownMenu>
-          {
-            this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map((option, index) => (
+          {this.message ? (
+            <div class="message">{this.message}</div>
+          ) : (
+            this.filteredOptions.map((option, index) => (
               <DropdownItem
                 {...{ props: option }}
-                active={this.multiple ? (
-                  this.multipleValue.indexOf(option.value) !== -1
-                ) : this.value === option.value}
+                active={
+                  this.multiple
+                    ? this.multipleValue.indexOf(option.value) !== -1
+                    : this.value === option.value
+                }
                 selected={this.selectedIndex === index}
                 onSelect={this.selectItem}
               />
             ))
-          }
+          )}
         </DropdownMenu>
       );
     },
@@ -230,18 +231,20 @@ export default {
       return Array.isArray(this.value) ? this.value : [];
     },
     searchNode() {
-      return this.search && (
-        <input
-          type="text"
-          aria-autocomplete="list"
-          autoComplete="off"
-          class="search"
-          onInput={this.updateFilter}
-          onKeydown={this.handleSearchKeyDown}
-          ref="search"
-          tabindex="0"
-          value={this.filter}
-        />
+      return (
+        this.search && (
+          <input
+            type="text"
+            aria-autocomplete="list"
+            autoComplete="off"
+            class="search"
+            onInput={this.updateFilter}
+            onKeydown={this.handleSearchKeyDown}
+            ref="search"
+            tabindex="0"
+            value={this.filter}
+          />
+        )
       );
     },
     selectedNodes() {
@@ -257,10 +260,7 @@ export default {
             {option.image && <Image {...{ props: option.image }} />}
             {option.flag && <Flag name={option.flag} />}
             {option.text}
-            <Icon
-              name="delete"
-              nativeOnClick={() => this.deselectItem(value)}
-            />
+            <Icon name="delete" nativeOnClick={() => this.deselectItem(value)} />
           </Label>
         );
       });
@@ -271,7 +271,9 @@ export default {
       const shouldHideText =
         (this.multiple && this.value && this.value.length) ||
         (!this.multiple && [null, undefined].indexOf(this.value) === -1);
-      const shouldShowSelectedItem = !this.multiple && this.open &&
+      const shouldShowSelectedItem =
+        !this.multiple &&
+        this.open &&
         typeof this.filteredOptions[this.selectedIndex] !== 'undefined' &&
         this.filteredOptions[this.selectedIndex].value === this.value;
 
@@ -289,13 +291,15 @@ export default {
 
       const value = typeof text === 'object' ? text : { text };
 
-      return <div ref="text" class={className} role="alert" aria-live="polite">
-        {value.icon && <Icon name={value.icon} />}
-        {value.image && <Image {...{ props: value.image }} />}
-        {value.flag && <Flag name={value.flag} />}
-        {value.label && <Label {...{ props: value.label}}/>}
-        {value.text}
-      </div>;
+      return (
+        <div ref="text" class={className} role="alert" aria-live="polite">
+          {value.icon && <Icon name={value.icon} />}
+          {value.image && <Image {...{ props: value.image }} />}
+          {value.flag && <Flag name={value.flag} />}
+          {value.label && <Label {...{ props: value.label }} />}
+          {value.text}
+        </div>
+      );
     },
   },
   watch: {
@@ -334,10 +338,16 @@ export default {
     },
     handleMouseDown() {
       this.isMouseDown = true;
-      document.body.addEventListener('mouseup', () => { this.isMouseDown = false; }, {
-        capture: true,
-        once: true,
-      });
+      document.body.addEventListener(
+        'mouseup',
+        () => {
+          this.isMouseDown = false;
+        },
+        {
+          capture: true,
+          once: true,
+        },
+      );
     },
     handleClick(e) {
       e.stopPropagation();
@@ -472,9 +482,9 @@ export default {
     },
     selectItem(selectedValue) {
       if (this.multiple && this.maximumValuesSelected) return;
-      const newValue = this.multiple ? (
-        this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
-      ) : selectedValue;
+      const newValue = this.multiple
+        ? this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
+        : selectedValue;
       this.$emit('input', newValue);
       this.filter = '';
       if (!this.multiple) {
@@ -483,9 +493,10 @@ export default {
     },
     updateSelectedIndex() {
       if (this.multiple) {
-        this.selectedIndex = (
+        this.selectedIndex =
           this.filteredOptions.length > this.selectedIndex
-        ) ? this.selectedIndex : this.selectedIndex - 1;
+            ? this.selectedIndex
+            : this.selectedIndex - 1;
       } else {
         this.selectedIndex = this.filteredOptions.findIndex(item => item.value === this.value);
       }
@@ -568,8 +579,7 @@ export default {
         {...{
           on: eventHandlers,
           nativeOn: eventHandlers,
-        }
-        }
+        }}
       >
         {this.selectedNodes}
         {this.searchNode}
