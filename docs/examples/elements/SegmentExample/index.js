@@ -7,6 +7,8 @@ import Segments from './Segments.example';
 import NestedSegments from './NestedSegments.example';
 import HorizontalSegments from './HorizontalSegments.example';
 import RaisedSegments from './RaisedSegments.example';
+import StackedSegments from './StackedSegments.example';
+import PiledSegments from './PiledSegments.example';
 
 export default [
   {
@@ -59,6 +61,16 @@ export default [
         title: 'Raised Segments',
         description: 'A group of segments can be raised',
         component: RaisedSegments,
+      },
+      {
+        title: 'Stacked Segments',
+        description: 'A group of segments can be stacked',
+        component: StackedSegments,
+      },
+      {
+        title: 'Piled Segments',
+        description: 'A group of segments can be piled',
+        component: PiledSegments,
       },
     ],
   },
