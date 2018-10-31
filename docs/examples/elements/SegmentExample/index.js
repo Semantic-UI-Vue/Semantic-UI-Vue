@@ -6,6 +6,7 @@ import Piled from './Piled.example';
 import Segments from './Segments.example';
 import NestedSegments from './NestedSegments.example';
 import HorizontalSegments from './HorizontalSegments.example';
+import RaisedSegments from './RaisedSegments.example';
 
 export default [
   {
@@ -53,6 +54,11 @@ export default [
         title: 'Horizontal Segments',
         description: 'A segment group can appear horizontally',
         component: HorizontalSegments,
+      },
+      {
+        title: 'Raised Segments',
+        description: 'A group of segments can be raised',
+        component: RaisedSegments,
       },
     ],
   },
