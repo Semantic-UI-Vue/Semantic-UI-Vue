@@ -4,6 +4,7 @@ import Stacked from './Stacked.example';
 import StackedTall from './StackedTall.example';
 import Piled from './Piled.example';
 import Segments from './Segments.example';
+import NestedSegments from './NestedSegments.example';
 
 export default [
   {
@@ -41,6 +42,11 @@ export default [
         title: 'Segments',
         description: 'A group of segments',
         component: Segments,
+      },
+      {
+        title: 'Nested Segments',
+        description: 'A group of segments can be nested in another group of segments',
+        component: NestedSegments,
       },
     ],
   },
