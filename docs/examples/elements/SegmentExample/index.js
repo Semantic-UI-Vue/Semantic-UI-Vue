@@ -6,6 +6,9 @@ import Piled from './Piled.example';
 import Vertical from './Vertical.example';
 import Disabled from './Disabled.example';
 import Loading from './Loading.example';
+import Inverted from './Inverted.example';
+import Attached from './Attached.example';
+import Attached2 from './Attached2.example';
 
 export default [
   {
@@ -53,6 +56,26 @@ export default [
         title: 'Loading',
         description: 'A segment may show its content is being loaded',
         component: Loading,
+      },
+    ],
+  },
+  {
+    title: 'Variations',
+    examples: [
+      {
+        title: 'Inverted',
+        description: 'A segment can have its colors inverted for contrast',
+        component: Inverted,
+      },
+      {
+        title: 'Attached',
+        description: 'A segment can be attached to other content on a page',
+        info:
+          'Attached segments are designed to be used with other `attached` variations like `attached header` or `attached messages`.',
+        component: Attached,
+      },
+      {
+        component: Attached2,
       },
     ],
   },
