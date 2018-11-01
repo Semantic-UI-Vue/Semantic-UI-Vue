@@ -22,6 +22,8 @@ export default {
       type: Boolean,
     }),
     vertical: Boolean,
+    disabled: Boolean,
+    loading: Boolean
   },
   render() {
     const ElementType = this.getElementType();
@@ -35,10 +37,13 @@ export default {
           this.clearing && 'clearing',
           this.padded && 'padded',
           this.inverted && 'inverted',
-          this.stacked, this.stacked && 'stacked',
+          this.stacked,
+          this.stacked && 'stacked',
           this.piled && 'piled',
           this.raised && 'raised',
           this.vertical && 'vertical',
+          this.disabled && 'disabled',
+          this.loading && 'loading',
           'segment',
         )}
       >
