@@ -27,6 +27,10 @@ export default {
     vertical: Boolean,
     disabled: Boolean,
     loading: Boolean,
+    compact: Boolean,
+    color: Enum.Color({
+      type: String,
+    }),
   },
   render() {
     const ElementType = this.getElementType();
@@ -49,6 +53,8 @@ export default {
           this.vertical && 'vertical',
           this.disabled && 'disabled',
           this.loading && 'loading',
+          this.compact && 'compact',
+          this.color,
           'segment',
         )}
       >

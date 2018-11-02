@@ -11,6 +11,8 @@ import Attached from './Attached.example';
 import Attached2 from './Attached2.example';
 import Padded from './Padded.example';
 import Padded2 from './Padded2.example';
+import Compact from './Compact.example';
+import Color from './Color.example';
 
 export default [
   {
@@ -86,6 +88,16 @@ export default [
       },
       {
         component: Padded2,
+      },
+      {
+        title: 'Compact',
+        description: 'A segment may take up only as much space as is necessary',
+        component: Compact,
+      },
+      {
+        title: 'Colored',
+        description: 'A segment can be colored',
+        component: Color,
       },
     ],
   },
