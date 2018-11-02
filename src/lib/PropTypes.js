@@ -50,3 +50,4 @@ Enum.Number = Enum.Extend([
   'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
   'fourteen', 'fifteen', 'sixteen',
 ]);
+Enum.Padded = Enum.Extend(['very']);

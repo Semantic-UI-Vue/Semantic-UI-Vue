@@ -9,6 +9,8 @@ import Loading from './Loading.example';
 import Inverted from './Inverted.example';
 import Attached from './Attached.example';
 import Attached2 from './Attached2.example';
+import Padded from './Padded.example';
+import Padded2 from './Padded2.example';
 
 export default [
   {
@@ -76,6 +78,14 @@ export default [
       },
       {
         component: Attached2,
+      },
+      {
+        title: 'Padded',
+        description: 'A segment can increase its padding',
+        component: Padded,
+      },
+      {
+        component: Padded2,
       },
     ],
   },

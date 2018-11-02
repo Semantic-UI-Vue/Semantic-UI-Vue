@@ -15,7 +15,10 @@ export default {
       description: 'A segment can clear floated content.',
     },
     inverted: Boolean,
-    padded: Boolean,
+    padded: Enum.Padded({
+      type: Boolean,
+      description: 'A segment can increase its padding',
+    }),
     piled: Boolean,
     raised: Boolean,
     stacked: Enum(['tall'], {
@@ -23,7 +26,7 @@ export default {
     }),
     vertical: Boolean,
     disabled: Boolean,
-    loading: Boolean
+    loading: Boolean,
   },
   render() {
     const ElementType = this.getElementType();
@@ -32,9 +35,11 @@ export default {
         {...this.getChildPropsAndListeners()}
         class={this.classes(
           'ui',
+          this.attached,
           this.attached && 'attached',
           this.basic && 'basic',
           this.clearing && 'clearing',
+          this.padded,
           this.padded && 'padded',
           this.inverted && 'inverted',
           this.stacked,
