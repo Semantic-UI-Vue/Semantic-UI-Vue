@@ -13,6 +13,11 @@ import Padded from './Padded.example';
 import Padded2 from './Padded2.example';
 import Compact from './Compact.example';
 import Color from './Color.example';
+import Color2 from './Color2.example';
+import Emphasis from './Emphasis.example';
+import Emphasis2 from './Emphasis2.example';
+import Emphasis3 from './Emphasis3.example';
+import Circular from './Circular.example';
 
 export default [
   {
@@ -98,6 +103,27 @@ export default [
         title: 'Colored',
         description: 'A segment can be colored',
         component: Color,
+      },
+      {
+        description: 'These colors can be inverted',
+        component: Color2,
+      },
+      {
+        title: 'Emphasis',
+        description: 'A segment can be formatted to appear more or less noticeable',
+        component: Emphasis,
+      },
+      {
+        description: 'Inverted colors may also be more or less noticeable',
+        component: Emphasis2,
+      },
+      {
+        component: Emphasis3,
+      },
+      {
+        title: 'Circular',
+        description: 'A segment can be circular',
+        component: Circular,
       },
     ],
   },

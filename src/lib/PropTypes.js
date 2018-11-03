@@ -51,3 +51,4 @@ Enum.Number = Enum.Extend([
   'fourteen', 'fifteen', 'sixteen',
 ]);
 Enum.Padded = Enum.Extend(['very']);
+Enum.Emphasis = Enum.Extend(['secondary', 'tertiary']);

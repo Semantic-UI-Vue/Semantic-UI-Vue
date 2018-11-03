@@ -31,6 +31,10 @@ export default {
     color: Enum.Color({
       type: String,
     }),
+    emphasis: Enum.Emphasis({
+      type: String,
+    }),
+    circular: Boolean,
   },
   render() {
     const ElementType = this.getElementType();
@@ -55,6 +59,8 @@ export default {
           this.loading && 'loading',
           this.compact && 'compact',
           this.color,
+          this.emphasis,
+          this.circular && 'circular',
           'segment',
         )}
       >
