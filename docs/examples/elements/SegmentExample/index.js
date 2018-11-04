@@ -18,6 +18,7 @@ import Emphasis from './Emphasis.example';
 import Emphasis2 from './Emphasis2.example';
 import Emphasis3 from './Emphasis3.example';
 import Circular from './Circular.example';
+import Clearing from './Clearing.example';
 
 export default [
   {
@@ -124,6 +125,11 @@ export default [
         title: 'Circular',
         description: 'A segment can be circular',
         component: Circular,
+      },
+      {
+        title: 'Clearing',
+        description: 'A segment can clear floated content',
+        component: Clearing,
       },
     ],
   },
