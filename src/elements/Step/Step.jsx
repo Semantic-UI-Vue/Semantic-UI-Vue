@@ -15,6 +15,7 @@ export default {
     disabled: Boolean,
     icon: String,
     title: String,
+    link: Boolean
   },
   render() {
     const ElementType = this.getElementType();
@@ -26,6 +27,7 @@ export default {
           this.active && 'active',
           this.completed && 'completed',
           this.disabled && 'disabled',
+          this.link && 'link',
           'step',
         )}
       >

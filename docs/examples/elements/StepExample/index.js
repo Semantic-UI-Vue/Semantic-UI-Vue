@@ -4,6 +4,9 @@ import Ordered from './Ordered.example';
 import Vertical from './Vertical.example';
 import Description from './Description.example';
 import Description2 from './Description2.example';
+import Icon from './Icon.example';
+import Link from './Link.example';
+import Link2 from './Link2.example';
 
 export default [
   {
@@ -48,6 +51,21 @@ export default [
       {
         info: 'Using component',
         component: Description2,
+      },
+      {
+        title: 'Icon',
+        description: 'A step can contain an icon',
+        component: Icon,
+      },
+      {
+        title: 'Link',
+        description: 'A step can link',
+        info: 'Using `a` tag',
+        component: Link,
+      },
+      {
+        info: 'Using `link` props',
+        component: Link2,
       },
     ],
   },
