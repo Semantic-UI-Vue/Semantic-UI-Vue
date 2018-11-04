@@ -126,6 +126,7 @@ export default [
       },
       {
         title: 'Circular',
+        info: 'A circular segment will most likely have to have its content manually sized to be equal width and height, otherwise it will flow to the size of your content',
         description: 'A segment can be circular',
         component: Circular,
       },

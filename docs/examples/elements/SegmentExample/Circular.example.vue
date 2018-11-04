@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="example">
     <sui-segment circular>
       <sui-header>
         Buy Now
@@ -20,3 +20,10 @@ export default {
   name: 'CircularExample',
 };
 </script>
+
+<style>
+.example .circular.segment {
+  width: 175px;
+  height: 175px;
+}
+</style>
