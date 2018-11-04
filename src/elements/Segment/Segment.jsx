@@ -38,6 +38,9 @@ export default {
     floated: Enum.Floated({
       type: String,
     }),
+    aligned: Enum.TextAlign({
+      type: String,
+    }),
   },
   render() {
     const ElementType = this.getElementType();
@@ -66,6 +69,8 @@ export default {
           this.circular && 'circular',
           this.floated,
           this.floated && 'floated',
+          this.aligned,
+          this.aligned && 'aligned',
           'segment',
         )}
       >

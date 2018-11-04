@@ -20,6 +20,7 @@ import Emphasis3 from './Emphasis3.example';
 import Circular from './Circular.example';
 import Clearing from './Clearing.example';
 import Floated from './Floated.example';
+import TextAlign from './TextAlign.example';
 
 export default [
   {
@@ -136,6 +137,11 @@ export default [
         title: 'Floated',
         description: 'A segment can appear to the left or right of other content',
         component: Floated,
+      },
+      {
+        title: 'TextAlign',
+        description: 'A segment can have its text aligned to a side',
+        component: TextAlign,
       },
     ],
   },
