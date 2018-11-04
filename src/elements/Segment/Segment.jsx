@@ -35,6 +35,9 @@ export default {
       type: String,
     }),
     circular: Boolean,
+    floated: Enum.Floated({
+      type: String,
+    }),
   },
   render() {
     const ElementType = this.getElementType();
@@ -61,6 +64,8 @@ export default {
           this.color,
           this.emphasis,
           this.circular && 'circular',
+          this.floated,
+          this.floated && 'floated',
           'segment',
         )}
       >

@@ -19,6 +19,7 @@ import Emphasis2 from './Emphasis2.example';
 import Emphasis3 from './Emphasis3.example';
 import Circular from './Circular.example';
 import Clearing from './Clearing.example';
+import Floated from './Floated.example';
 
 export default [
   {
@@ -130,6 +131,11 @@ export default [
         title: 'Clearing',
         description: 'A segment can clear floated content',
         component: Clearing,
+      },
+      {
+        title: 'Floated',
+        description: 'A segment can appear to the left or right of other content',
+        component: Floated,
       },
     ],
   },

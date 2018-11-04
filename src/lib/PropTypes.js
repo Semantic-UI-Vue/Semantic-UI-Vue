@@ -52,3 +52,4 @@ Enum.Number = Enum.Extend([
 ]);
 Enum.Padded = Enum.Extend(['very']);
 Enum.Emphasis = Enum.Extend(['secondary', 'tertiary']);
+Enum.Floated = Enum.Extend(['right', 'left']);
