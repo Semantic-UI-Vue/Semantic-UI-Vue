@@ -21,6 +21,7 @@ import Circular from './Circular.example';
 import Clearing from './Clearing.example';
 import Floated from './Floated.example';
 import TextAlign from './TextAlign.example';
+import Basic from './Basic.example';
 
 export default [
   {
@@ -142,6 +143,11 @@ export default [
         title: 'TextAlign',
         description: 'A segment can have its text aligned to a side',
         component: TextAlign,
+      },
+      {
+        title: 'Basic',
+        description: 'A basic segment has no special formatting',
+        component: Basic,
       },
     ],
   },
