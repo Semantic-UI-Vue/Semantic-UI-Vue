@@ -7,6 +7,7 @@ import Description2 from './Description2.example';
 import Icon from './Icon.example';
 import Link from './Link.example';
 import Link2 from './Link2.example';
+import Active from './Active.example';
 
 export default [
   {
@@ -66,6 +67,16 @@ export default [
       {
         info: 'Using `link` props',
         component: Link2,
+      },
+    ],
+  },
+  {
+    title: 'States',
+    examples: [
+      {
+        title: 'Active',
+        description: 'A step can be highlighted as active',
+        component: Active,
       },
     ],
   },
