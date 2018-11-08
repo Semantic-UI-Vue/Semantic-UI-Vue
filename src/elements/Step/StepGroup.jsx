@@ -9,6 +9,7 @@ export default {
     ordered: Boolean,
     steps: Array,
     vertical: Boolean,
+    stackable: Boolean
   },
   render() {
     const ElementType = this.getElementType();
@@ -19,6 +20,7 @@ export default {
           'ui',
           this.ordered && 'ordered',
           this.vertical && 'vertical',
+          this.stackable && 'tablet stackable',
           'steps',
         )}
       >

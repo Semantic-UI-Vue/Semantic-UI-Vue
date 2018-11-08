@@ -11,6 +11,7 @@ import Active from './Active.example';
 import Completed from './Completed.example';
 import Completed2 from './Completed2.example';
 import Disabled from './Disabled.example';
+import Stackable from './Stackable.example';
 
 export default [
   {
@@ -94,6 +95,16 @@ export default [
         title: 'Disabled',
         description: 'A step can show that it cannot be selected',
         component: Disabled,
+      },
+    ],
+  },
+  {
+    title: 'Variations',
+    examples: [
+      {
+        title: 'Stackable',
+        description: 'A step can stack vertically only on smaller screens',
+        component: Stackable,
       },
     ],
   },
