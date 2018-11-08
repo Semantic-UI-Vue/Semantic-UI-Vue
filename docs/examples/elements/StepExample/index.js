@@ -12,6 +12,7 @@ import Completed from './Completed.example';
 import Completed2 from './Completed2.example';
 import Disabled from './Disabled.example';
 import Stackable from './Stackable.example';
+import Fluid from './Fluid.example';
 
 export default [
   {
@@ -105,6 +106,11 @@ export default [
         title: 'Stackable',
         description: 'A step can stack vertically only on smaller screens',
         component: Stackable,
+      },
+      {
+        title: 'Fluid',
+        description: 'A fluid step takes up the width of its container',
+        component: Fluid,
       },
     ],
   },
