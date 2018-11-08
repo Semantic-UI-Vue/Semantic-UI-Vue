@@ -10,6 +10,7 @@ export default {
     steps: Array,
     vertical: Boolean,
     stackable: Boolean,
+    unstackable: Boolean,
     fluid: Boolean
   },
   render() {
@@ -23,6 +24,7 @@ export default {
           this.vertical && 'vertical',
           this.fluid && 'fluid',
           this.stackable && 'tablet stackable',
+          this.unstackable && 'unstackable',
           'steps',
         )}
       >

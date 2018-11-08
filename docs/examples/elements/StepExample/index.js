@@ -13,6 +13,7 @@ import Completed2 from './Completed2.example';
 import Disabled from './Disabled.example';
 import Stackable from './Stackable.example';
 import Fluid from './Fluid.example';
+import UnStackable from './Unstackable.example';
 
 export default [
   {
@@ -111,6 +112,11 @@ export default [
         title: 'Fluid',
         description: 'A fluid step takes up the width of its container',
         component: Fluid,
+      },
+      {
+        title: 'UnStackable',
+        description: 'A step can prevent itself from stacking on mobile',
+        component: UnStackable,
       },
     ],
   },
