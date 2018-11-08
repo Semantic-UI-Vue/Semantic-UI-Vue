@@ -8,6 +8,8 @@ import Icon from './Icon.example';
 import Link from './Link.example';
 import Link2 from './Link2.example';
 import Active from './Active.example';
+import Completed from './Completed.example';
+import Completed2 from './Completed2.example';
 
 export default [
   {
@@ -77,6 +79,15 @@ export default [
         title: 'Active',
         description: 'A step can be highlighted as active',
         component: Active,
+      },
+      {
+        title: 'Completed',
+        description: 'A step can show that a user has completed it',
+        component: Completed,
+      },
+      {
+        info: 'when no `icon props`, there must be `ordered props`',
+        component: Completed2,
       },
     ],
   },
