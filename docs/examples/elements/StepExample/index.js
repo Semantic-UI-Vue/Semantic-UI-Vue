@@ -10,6 +10,7 @@ import Link2 from './Link2.example';
 import Active from './Active.example';
 import Completed from './Completed.example';
 import Completed2 from './Completed2.example';
+import Disabled from './Disabled.example';
 
 export default [
   {
@@ -88,6 +89,11 @@ export default [
       {
         info: 'when no `icon props`, there must be `ordered props`',
         component: Completed2,
+      },
+      {
+        title: 'Disabled',
+        description: 'A step can show that it cannot be selected',
+        component: Disabled,
       },
     ],
   },
