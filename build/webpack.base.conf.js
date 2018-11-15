@@ -53,7 +53,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('docs')]
+        include: [resolve('src'), resolve('test'), resolve('docs'), resolve('node_modules')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
