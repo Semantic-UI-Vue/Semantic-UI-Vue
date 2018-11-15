@@ -6844,10 +6844,6 @@ vue-eslint-parser@^2.0.1-beta.1:
     esquery "^1.0.0"
     lodash "^4.17.4"
 
-vue-fragments@^2.1.0:
-  version "2.1.0"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/vue-fragments/-/vue-fragments-2.1.0.tgz#b7f3ab480169eb70b00fef82e63063a0080e035b"
-
 vue-hot-reload-api@^2.1.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.4.tgz#683bd1d026c0d3b3c937d5875679e9a87ec6cd8f"
