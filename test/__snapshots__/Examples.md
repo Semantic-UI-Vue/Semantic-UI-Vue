@@ -2555,7 +2555,7 @@ Vue.use(PortalVue);
 
       Also, make sure to add <code>&lt;portal-target name=\"semantic-ui-vue\"&gt;</code> at the
       root level of your app.
-    </div> <button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button></div>"
+    </div> <!--fragment tail--><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button></div>"
 ```
 
 ##     `Titled`
@@ -2563,7 +2563,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><img src=\"static/images/avatar/small/elliot.jpg\" class=\"ui avatar image\"><img src=\"static/images/avatar/small/stevie.jpg\" class=\"ui avatar image\"><img src=\"static/images/avatar/small/matt.jpg\" class=\"ui avatar image\"></div>"
+"<div><!--fragment tail--><img src=\"static/images/avatar/small/elliot.jpg\" class=\"ui avatar image\"><!--fragment tail--><img src=\"static/images/avatar/small/stevie.jpg\" class=\"ui avatar image\"><!--fragment tail--><img src=\"static/images/avatar/small/matt.jpg\" class=\"ui avatar image\"></div>"
 ```
 
 ##     `Html`
@@ -2589,7 +2589,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
 ```
 
 ##     `Size`
@@ -2597,7 +2597,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
 ```
 
 ##     `Flowing`
@@ -2613,7 +2613,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button> <i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
 ```
 
 ##     `Position`
@@ -2621,7 +2621,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui three column grid\" style=\"width: 600px;\"><div class=\"row\"><div class=\"column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"left floated column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right floated right aligned column\"><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><i class=\"red heart large circular icon\"></i></div></div></div>"
+"<div class=\"ui three column grid\" style=\"width: 600px;\"><div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"left floated column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right floated right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div></div>"
 ```
 
 ## `ProgressExample`
