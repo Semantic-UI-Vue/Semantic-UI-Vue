@@ -1,4 +1,4 @@
-import { component as VFragment } from 'vue-fragments';
+import VFragment from '../../lib/VFragment';
 import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import PopupContainer from './private/PopupContainer';
