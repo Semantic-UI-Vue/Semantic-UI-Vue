@@ -1,3 +1,4 @@
+import DropdownNested from './DropdownNested.example';
 import Dropdown from './Dropdown.example';
 import DropdownDirection from './DropdownDirection.example';
 import DropdownButton from './DropdownButton.example';
@@ -19,6 +20,11 @@ export default [
   {
     title: 'Types',
     examples: [
+      {
+        title: 'Dropdown Nested',
+        description: 'A dropdown with nested menu.',
+        component: DropdownNested,
+      },
       {
         title: 'Dropdown',
         description: 'A dropdown.',

@@ -3,10 +3,11 @@ import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
 import Icon from '../../elements/Icon/Icon';
 import Label from '../../elements/Label/Label';
+import popupMixin from '../../lib/mixins/popupMixin';
 
 export default {
   name: 'SuiDropdownItem',
-  mixins: [SemanticUIVueMixin],
+  mixins: [SemanticUIVueMixin, popupMixin],
   props: {
     flag: {
       type: String,
@@ -53,11 +54,27 @@ export default {
       custom: true,
     },
   },
+  data() {
+    return {
+      open: false,
+    };
+  },
   methods: {
     select() {
       this.$emit('select', this.value);
     },
+    register(menu) {
+      this.menu = menu;
+    },
+    onClick(e) {
+      e.stopPropagation();
+      this.select();
+      if (this.menu) {
+        this.menu.toggleMenu();
+      }
+    },
   },
+
   render() {
     const ElementType = this.getElementType();
     return (
@@ -70,11 +87,11 @@ export default {
           this.selected && 'selected',
           'item',
         )}
-        onClick={this.select}
+        onClick={this.onClick}
       >
-        {this.icon && <Icon name={this.icon} />}
+        {this.icon && <Icon name={this.icon}/>}
         {this.image && <Image {...{ props: this.image }} />}
-        {this.flag && <Flag name={this.flag} />}
+        {this.flag && <Flag name={this.flag}/>}
         {this.label && <Label {...{ props: this.label }}/>}
         {this.text || this.$slots.default}
       </ElementType>

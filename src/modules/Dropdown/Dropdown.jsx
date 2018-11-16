@@ -1,36 +1,17 @@
 import escapeRegExp from 'lodash/escapeRegExp';
 import { SemanticUIVueMixin } from '../../lib';
-import { Enum } from '../../lib/PropTypes';
 import Icon from '../../elements/Icon/Icon';
 import Label from '../../elements/Label/Label';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
 import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
-
-const directions = {
-  auto: 'auto',
-  autoUpward: 'auto-upward',
-  upward: 'upward',
-  downward: 'downward',
-};
-
-const animations = {
-  name: 'slide',
-  down: 'down',
-  up: 'up',
-};
-
-function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-}
+import popupMixin from '../../lib/mixins/popupMixin';
+import { eventBus } from '../../lib/eventBus';
 
 export default {
   name: 'SuiDropdown',
-  mixins: [SemanticUIVueMixin],
+  mixins: [SemanticUIVueMixin, popupMixin],
   props: {
     allowAdditions: {
       type: Boolean,
@@ -102,10 +83,6 @@ export default {
       type: [Array, String, Number],
       description: 'Value of the dropdown.',
     },
-    direction: Enum(Object.values(directions), {
-      default: directions.auto,
-      description: 'A dropdown can have a direction to open',
-    }),
     openOnFocus: {
       type: Boolean,
       default: true,
@@ -146,31 +123,6 @@ export default {
   computed: {
     maximumValuesSelected() {
       return this.multipleValue.length >= this.maxSelections;
-    },
-    downward() {
-      if (this.direction !== directions.auto && this.direction !== directions.autoUpward) {
-        return this.direction === directions.downward;
-      }
-      this.calculateMenuDirection();
-      if (this.menuDirection === null) {
-        return true;
-      }
-
-      if (
-        (this.menuDirection.below && this.menuDirection.above) ||
-        (!this.menuDirection.below && !this.menuDirection.above)
-      ) {
-        // Dropdown can or cannot fit in either direction favoring specified
-        return this.direction === directions.auto;
-      } else if (this.menuDirection.below) {
-        // Dropdown can fit in context downward
-        return true;
-      }
-      // Dropdown cannot fit below, opening upward
-      return false;
-    },
-    animation() {
-      return `${animations.name} ${(this.downward ? animations.down : animations.up)}`;
     },
     filteredOptions() {
       if (!this.search && !this.multiple) {
@@ -306,12 +258,6 @@ export default {
       this.resizeInput();
     },
   },
-  mounted() {
-    document.body.addEventListener('click', this.closeMenu);
-  },
-  destroyed() {
-    document.body.removeEventListener('click', this.closeMenu);
-  },
   methods: {
     setOpen(value = true) {
       this.open = value;
@@ -321,10 +267,7 @@ export default {
       if (this.menu) {
         this.menu.setOpen(value);
       }
-    },
-    closeMenu() {
-      if (!this.closeOnBlur) return;
-      this.setOpen(false);
+      eventBus.$emit(value ? 'dropdown-open' : 'dropdown-close');
     },
     deselectItem(selectedValue) {
       this.$emit('input', this.multipleValue.filter(value => value !== selectedValue));
@@ -513,29 +456,6 @@ export default {
       this.multipleValue.pop();
       this.$emit('input', this.multipleValue);
     },
-    calculateMenuDirection() {
-      if (typeof window === 'undefined' || !this.menu || !this.menu.$el || !this.open) return;
-
-      this.menu.$el.classList.add('loading');
-      this.$el.classList.remove('upward');
-
-      const c = {
-        context: {
-          offset: { top: 0, left: 0 },
-          scrollTop: document.body.scrollTop,
-          height: document.body.offsetHeight,
-        },
-        menu: {
-          offset: getOffset(this.menu.$el),
-          height: this.menu.$el.offsetHeight,
-        },
-      };
-      this.menu.$el.classList.remove('loading');
-      this.menuDirection = {
-        above: c.menu.offset.top - c.menu.height - this.$el.clientHeight >= 0,
-        below: c.menu.offset.top + c.menu.height < c.context.height,
-      };
-    },
   },
   render() {
     const ElementType = this.getElementType(this.button ? 'button' : 'div');
@@ -566,12 +486,12 @@ export default {
           this.selection && 'selection',
           this.search && 'search',
           this.open && 'active visible',
-          !this.downward && directions.upward,
+          !this.downward && this.directions.upward,
           'dropdown',
         )}
         {...{
           on: eventHandlers,
-          nativeOn: eventHandlers,
+          // nativeOn: eventHandlers,
         }
         }
       >
