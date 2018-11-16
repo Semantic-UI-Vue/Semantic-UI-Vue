@@ -152,4 +152,39 @@ export default [
       },
     ],
   },
+  {
+    title: 'Groups',
+    examples: [
+      {
+        title: 'Segments',
+        description: 'A group of segments',
+        component: Segments,
+      },
+      {
+        title: 'Nested Segments',
+        description: 'A group of segments can be nested in another group of segments',
+        component: NestedSegments,
+      },
+      {
+        title: 'Horizontal Segments',
+        description: 'A segment group can appear horizontally',
+        component: HorizontalSegments,
+      },
+      {
+        title: 'Raised Segments',
+        description: 'A group of segments can be raised',
+        component: RaisedSegments,
+      },
+      {
+        title: 'Stacked Segments',
+        description: 'A group of segments can be stacked',
+        component: StackedSegments,
+      },
+      {
+        title: 'Piled Segments',
+        description: 'A group of segments can be piled',
+        component: PiledSegments,
+      },
+    ],
+  },
 ];
