@@ -427,7 +427,7 @@ export default {
     register(menu) {
       this.menu = menu;
     },
-    
+
     selectItem(selectedValue) {
       if (this.multiple && this.maximumValuesSelected) return;
       const newValue = this.multiple
@@ -509,7 +509,7 @@ export default {
         {this.selectedNodes}
         {this.searchNode}
         {this.textNode}
-        {this.icon ! null && (
+        {this.icon !== null && (
           <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
         )}
         <span class="sizer" ref="sizer" />
