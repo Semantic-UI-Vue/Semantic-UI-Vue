@@ -2084,6 +2084,16 @@
 "<div class=\"ui piled segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div>"
 ```
 
+##   `Groups`
+
+##     `Segments`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segments\"><div class=\"ui segment\"><p>Top</p></div> <div class=\"ui segment\"><p>Middle</p></div> <div class=\"ui segment\"><p>Bottom</p></div></div>"
+```
+
 ## `StepExample`
 
 ##   `Types`
