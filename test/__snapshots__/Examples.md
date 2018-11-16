@@ -2523,7 +2523,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"ui standart modal transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <p>We've found the following gravatar image associated with your e-mail address.</p> <p>Is it okay to use this photo?</p></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui positive button\">
+"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"ui standard modal transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <p>We've found the following gravatar image associated with your e-mail address.</p> <p>Is it okay to use this photo?</p></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui positive button\">
         OK
       </button></div></div></div></div>"
 ```
@@ -2535,7 +2535,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"ui standart modal transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image scrolling\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui positive button\">
+"<div><button role=\"button\" class=\"ui button\">Show Modal</button> <div class=\"ui dimmer modals page transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"ui standard modal transition\" style=\"display: none !important; animation-duration: 500ms;\"><div class=\"header\">Select a Photo</div> <div class=\"content image scrolling\"><div class=\"ui medium image\"><img src=\"static/images/avatar/large/rachel.png\"></div> <div class=\"description\"><div class=\"ui header\">Default Profile Image</div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div> <div class=\"actions\"><button role=\"button\" class=\"ui positive button\">
         OK
       </button></div></div></div></div>"
 ```
@@ -2565,7 +2565,7 @@ Vue.use(PortalVue);
 
       Also, make sure to add <code>&lt;portal-target name=\"semantic-ui-vue\"&gt;</code> at the
       root level of your app.
-    </div> <button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button></div>"
+    </div> <!--fragment tail--><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button></div>"
 ```
 
 ##     `Titled`
@@ -2573,7 +2573,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><img src=\"static/images/avatar/small/elliot.jpg\" class=\"ui avatar image\"><img src=\"static/images/avatar/small/stevie.jpg\" class=\"ui avatar image\"><img src=\"static/images/avatar/small/matt.jpg\" class=\"ui avatar image\"></div>"
+"<div><!--fragment tail--><img src=\"static/images/avatar/small/elliot.jpg\" class=\"ui avatar image\"><!--fragment tail--><img src=\"static/images/avatar/small/stevie.jpg\" class=\"ui avatar image\"><!--fragment tail--><img src=\"static/images/avatar/small/matt.jpg\" class=\"ui avatar image\"></div>"
 ```
 
 ##     `Html`
@@ -2599,7 +2599,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
 ```
 
 ##     `Size`
@@ -2607,7 +2607,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i> <i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
 ```
 
 ##     `Flowing`
@@ -2623,7 +2623,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button> <i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
 ```
 
 ##     `Position`
@@ -2631,7 +2631,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui three column grid\" style=\"width: 600px;\"><div class=\"row\"><div class=\"column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"left floated column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right floated right aligned column\"><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><i class=\"red heart large circular icon\"></i></div></div></div>"
+"<div class=\"ui three column grid\" style=\"width: 600px;\"><div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"left floated column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right floated right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div></div>"
 ```
 
 ## `ProgressExample`
