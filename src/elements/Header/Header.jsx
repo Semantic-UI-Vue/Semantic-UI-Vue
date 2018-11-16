@@ -22,6 +22,7 @@ export default {
     attached: Enum(['top', 'bottom'], {
       type: Boolean,
     }),
+    inverted: Boolean,
   },
   render() {
     const ElementType = this.getElementType();
@@ -42,10 +43,11 @@ export default {
           this.image && 'image',
           this.sub && 'sub',
           this.disabled && 'disabled',
+          this.inverted && 'inverted',
           'header',
         )}
       >
-        {this.image && <img src={this.image} class='ui image' />}
+        {this.image && <img src={this.image} class="ui image" />}
         {this.$slots.default || this.content}
       </ElementType>
     );

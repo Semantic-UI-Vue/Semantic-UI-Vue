@@ -91,8 +91,9 @@ export default {
       >
         {this.icon && <Icon name={this.icon}/>}
         {this.image && <Image {...{ props: this.image }} />}
-        {this.flag && <Flag name={this.flag}/>}
-        {this.label && <Label {...{ props: this.label }}/>}
+        {this.flag && <Flag name={this.flag} />}
+        {this.label && <Label {...{ props: this.label }} />}
+
         {this.text || this.$slots.default}
       </ElementType>
     );
