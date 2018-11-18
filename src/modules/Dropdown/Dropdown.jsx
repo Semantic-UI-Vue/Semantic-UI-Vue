@@ -94,7 +94,7 @@ export default {
     },
     searchInMenu: {
       type: Object,
-      description: "A dropdown can have a search input in dropdown menu. Should be passed an Object with SuiInput props."
+      description: 'A dropdown can have a search input in dropdown menu. Should be passed an Object with SuiInput props.',
     },
     selection: {
       type: Boolean,
@@ -215,11 +215,11 @@ export default {
       return (
         <DropdownMenu>
           {[
-            this.searchInMenu && [<Input {...{props: this.searchInMenu, ref: 'searchInMenu'}}
+            this.searchInMenu && [<Input {...{ props: this.searchInMenu, ref: 'searchInMenu' }}
                                          onInput={this.updateFilter}
                                          value={this.filter}
                                          onKeydown={this.handleSearchKeyDown}
-            />,<Divider/>],
+            />, <Divider/>],
             this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map((option, index) => (
               <DropdownItem
                 {...{ props: option }}
@@ -231,7 +231,7 @@ export default {
                 selected={this.selectedIndex === index}
                 onSelect={this.selectItem}
               />
-            ))
+            )),
           ]}
         </DropdownMenu>
       );
@@ -316,7 +316,9 @@ export default {
       this.updateSelectedIndex();
     },
     filter() {
-      this.search && this.resizeInput();
+      if (this.search) {
+        this.resizeInput();
+      }
     },
   },
   mounted() {
@@ -524,7 +526,7 @@ export default {
       this.$refs.search.style.minWidth = `${Math.ceil(width + 1)}px`;
     },
     updateFilter(event) {
-      this.filter = typeof event === "string" ? event : event.target.value;
+      this.filter = typeof event === 'string' ? event : event.target.value;
     },
     focusSearch() {
       if (this.search) this.$refs.search.focus();
