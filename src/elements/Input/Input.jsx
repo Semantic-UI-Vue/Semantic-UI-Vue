@@ -55,6 +55,7 @@ export default {
           value={this.value}
           onInput={e => this.$emit('input', e.target.value)}
           onBlur={e => this.$emit('blur', e)}
+          ref="input"
           {...{ attrs: this.$attrs }}
         />
         {icon}

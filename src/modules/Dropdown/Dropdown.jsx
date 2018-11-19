@@ -1,6 +1,8 @@
 import escapeRegExp from 'lodash/escapeRegExp';
 import { SemanticUIVueMixin } from '../../lib';
 import Icon from '../../elements/Icon/Icon';
+import Input from '../../elements/Input/Input';
+import Divider from '../../elements/Divider/Divider';
 import Label from '../../elements/Label/Label';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
@@ -70,6 +72,10 @@ export default {
       type: Boolean,
       description: 'A dropdown can have a search field to filter options.',
     },
+    searchInMenu: {
+      type: Object,
+      description: 'A dropdown can have a search input in dropdown menu. Should be passed an Object with SuiInput props.',
+    },
     selection: {
       type: Boolean,
       description: 'A dropdown can be used to select between choices in a form.',
@@ -124,7 +130,7 @@ export default {
       return this.multipleValue.length >= this.maxSelections;
     },
     filteredOptions() {
-      if (!this.search && !this.multiple) {
+      if (!this.search && !this.multiple && !this.searchInMenu) {
         return this.options;
       }
       const re = new RegExp(escapeRegExp(this.filter), 'i');
@@ -159,10 +165,13 @@ export default {
     menuNode() {
       return (
         <DropdownMenu>
-          {this.message ? (
-            <div class="message">{this.message}</div>
-          ) : (
-            this.filteredOptions.map((option, index) => (
+          {[
+            this.searchInMenu && [<Input {...{ props: this.searchInMenu, ref: 'searchInMenu' }}
+                                         onInput={this.updateFilter}
+                                         value={this.filter}
+                                         onKeydown={this.handleSearchKeyDown}
+            />, <Divider/>],
+            this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map((option, index) => (
               <DropdownItem
                 {...{ props: option }}
                 active={
@@ -173,8 +182,8 @@ export default {
                 selected={this.selectedIndex === index}
                 onSelect={this.selectItem}
               />
-            ))
-          )}
+            )),
+          ]}
         </DropdownMenu>
       );
     },
@@ -236,7 +245,7 @@ export default {
 
       const className = this.classes(
         this.placeholder && !shouldHideText && 'default',
-        this.filter && !shouldShowSelectedItem && 'filtered',
+        !this.searchInMenu && this.filter && !shouldShowSelectedItem && 'filtered',
         'text',
       );
 
@@ -258,7 +267,9 @@ export default {
       this.updateSelectedIndex();
     },
     filter() {
-      this.resizeInput();
+      if (this.search) {
+        this.resizeInput();
+      }
     },
   },
   methods: {
@@ -307,7 +318,8 @@ export default {
           this.addEventPath();
         }
 
-        if (this.multiple && path.indexOf(this.menu.$el) !== -1) {
+        if (this.searchInMenu && e.target === this.$refs.searchInMenu.$refs.input) return;
+        if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
           this.$nextTick(() => this.focusSearch());
           return;
         }
@@ -359,7 +371,7 @@ export default {
       e.stopPropagation();
     },
     toggleFilteredText(filteredText, filter) {
-      if (!this.multiple && !filteredText.classList.contains('filtered') && filter.trim() !== '') {
+      if (!this.searchInMenu && !this.multiple && !filteredText.classList.contains('filtered') && filter.trim() !== '') {
         filteredText.classList.add('filtered');
       }
 
@@ -391,7 +403,7 @@ export default {
           if (this.allowAdditions && this.selectedIndex === -1 && filter.trim() !== '') {
             e.preventDefault();
             this.selectItem(filter);
-          } else if (this.selection) {
+          } else if (this.selection || this.searchInMenu || this.search) {
             if (this.selectedIndex === -1) return;
             e.preventDefault();
             if (!this.multiple) {
@@ -424,7 +436,7 @@ export default {
       } else {
         this.selectedIndex = newValue;
       }
-      if (this.selection && !this.multiple) {
+      if ((this.selection || this.searchInMenu || this.search) && !this.multiple) {
         this.$emit('input', this.filteredOptions[this.selectedIndex].value);
       }
     },
@@ -462,7 +474,7 @@ export default {
       this.$refs.search.style.minWidth = `${Math.ceil(width + 1)}px`;
     },
     updateFilter(event) {
-      this.filter = event.target.value;
+      this.filter = typeof event === 'string' ? event : event.target.value;
     },
     focusSearch() {
       if (this.search) this.$refs.search.focus();
