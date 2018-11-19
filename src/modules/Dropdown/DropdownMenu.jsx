@@ -1,6 +1,5 @@
 import debounce from 'lodash/debounce';
 import { getEventAnimationEnd, SemanticUIVueMixin } from '../../lib';
-import { eventBus } from '../../lib/eventBus';
 
 const visualStates = {
   closed: 'closed',
@@ -43,15 +42,22 @@ export default {
   mounted() {
     this.onBodyClickDebounced = debounce(() => this.closeMenu(), 300);
     document.body.addEventListener('click', this.onBodyClickDebounced);
-    eventBus.$on('dropdown-close', () => this.closeMenu());
 
     let parent = this.$parent;
     while (!this.dropdown && parent && !this.accordion) {
-      if (/^SuiDropdownItem|SuiDropdown(WithRequired)?$/.test(parent.$options.name)) {
+      if (/^SuiDropdownItem(WithRequired)?|SuiDropdown(WithRequired)?$/.test(parent.$options.name)) {
         this.dropdown = parent;
+      }
+      if (/^SuiDropdown(WithRequired)?$/.test(parent.$options.name)) {
+        this.topLevelMenu = true;
       }
 
       parent = parent.$parent;
+    }
+
+    // close if sub-menu
+    if (!this.topLevelMenu) {
+      this.$root.$on('dropdown-close', () => this.closeMenu());
     }
 
     if (!this.dropdown) {
@@ -90,5 +96,3 @@ export default {
     parent: 'SuiDropdown',
   },
 };
-
-//         class={this.classes('menu', this.cssOpen, 'transition', this.animation)}

@@ -6,12 +6,11 @@ import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
 import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
-import popupMixin from '../../lib/mixins/popupMixin';
-import { eventBus } from '../../lib/eventBus';
+import dropdownMixin from '../../lib/mixins/dropdownMixin';
 
 export default {
   name: 'SuiDropdown',
-  mixins: [SemanticUIVueMixin, popupMixin],
+  mixins: [SemanticUIVueMixin, dropdownMixin],
   props: {
     allowAdditions: {
       type: Boolean,
@@ -268,10 +267,15 @@ export default {
       if (this.search && this.filteredOptions.length >= 0) {
         this.selectedIndex = 0;
       }
+
+      // close all sub-menus
+      if (!value) {
+        this.$root.$emit('dropdown-close');
+      }
+
       if (this.menu) {
         this.menu.setOpen(value);
       }
-      eventBus.$emit(value ? 'dropdown-open' : 'dropdown-close');
     },
     deselectItem(selectedValue) {
       this.$emit('input', this.multipleValue.filter(value => value !== selectedValue));

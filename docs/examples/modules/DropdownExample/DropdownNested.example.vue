@@ -1,6 +1,10 @@
 <template lang="html">
 
-  <sui-dropdown text="File" item :is-open="true">
+  <sui-dropdown
+    @input="onInput(event)"
+    text="File"
+    item
+    :is-open="true">
     <sui-dropdown-menu>
       <sui-dropdown-item>New</sui-dropdown-item>
       <sui-dropdown-item>Open... <span class="description">ctrl + o</span></sui-dropdown-item>
@@ -8,10 +12,22 @@
       <sui-dropdown-item>
         <sui-icon name="dropdown" /> Advanced
 
-        <sui-dropdown-menu class="">
+        <sui-dropdown-menu>
           <sui-dropdown-item>Make a copy</sui-dropdown-item>
           <sui-dropdown-item><sui-icon name="folder" />Move to folder</sui-dropdown-item>
           <sui-dropdown-item><sui-icon name="trash" />Move to trash</sui-dropdown-item>
+          <sui-dropdown-divider/>
+          <sui-dropdown-item>Download as...</sui-dropdown-item>
+        </sui-dropdown-menu>
+      </sui-dropdown-item>
+
+      <sui-dropdown-item>
+        <sui-icon name="dropdown" /> Advanced 2
+
+        <sui-dropdown-menu>
+          <sui-dropdown-item>Make a copy 2</sui-dropdown-item>
+          <sui-dropdown-item><sui-icon name="folder" />Move to folder 2 </sui-dropdown-item>
+          <sui-dropdown-item><sui-icon name="trash" />Move to trash 2</sui-dropdown-item>
           <sui-dropdown-divider/>
           <sui-dropdown-item>Download as...</sui-dropdown-item>
         </sui-dropdown-menu>

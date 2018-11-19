@@ -21,7 +21,7 @@ function getOffset(el) {
 }
 
 export default {
-  name: 'popupMixin',
+  name: 'dropdownMixin',
 
   props: {
     direction: Enum(Object.values(directions), {

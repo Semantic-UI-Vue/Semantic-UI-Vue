@@ -3,11 +3,11 @@ import Flag from '../../elements/Flag/Flag';
 import Image from '../../elements/Image/Image';
 import Icon from '../../elements/Icon/Icon';
 import Label from '../../elements/Label/Label';
-import popupMixin from '../../lib/mixins/popupMixin';
+import dropdownMixin from '../../lib/mixins/dropdownMixin';
 
 export default {
   name: 'SuiDropdownItem',
-  mixins: [SemanticUIVueMixin, popupMixin],
+  mixins: [SemanticUIVueMixin, dropdownMixin],
   props: {
     flag: {
       type: String,
@@ -68,6 +68,7 @@ export default {
     },
     onClick(e) {
       e.stopPropagation();
+      this.$root.$emit('dropdown-close');
       this.select();
       if (this.menu) {
         this.menu.toggleMenu();

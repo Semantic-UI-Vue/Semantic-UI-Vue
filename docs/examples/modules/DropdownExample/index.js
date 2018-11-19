@@ -21,11 +21,6 @@ export default [
     title: 'Types',
     examples: [
       {
-        title: 'Dropdown Nested',
-        description: 'A dropdown with nested menu.',
-        component: DropdownNested,
-      },
-      {
         title: 'Dropdown',
         description: 'A dropdown.',
         component: Dropdown,
@@ -88,6 +83,11 @@ export default [
         title: 'Floating',
         description: 'A dropdown menu can appear to be floating below an element.',
         component: DropdownFloating,
+      },
+      {
+        title: 'Dropdown Nested',
+        description: 'A dropdown with nested menu.',
+        component: DropdownNested,
       },
     ],
   },
