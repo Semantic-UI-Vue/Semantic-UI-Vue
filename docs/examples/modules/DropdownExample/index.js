@@ -4,6 +4,7 @@ import DropdownButton from './DropdownButton.example';
 import DropdownFloating from './DropdownFloating.example';
 import DropdownPointing from './DropdownPointing.example';
 import DropdownPointingWithPosition from './DropdownPointingWithPosition.example';
+import DropdownSearchInMenu from './DropdownSearchInMenu.example';
 import FriendSelection from './FriendSelection.example';
 import MultipleSelection from './MultipleSelection.example';
 import MultipleMaxSelections from './MultipleMaxSelections.example';
@@ -59,6 +60,11 @@ export default [
         title: 'Search Dropdown',
         description: 'A dropdown can be searchable.',
         component: SearchDropdown,
+      },
+      {
+        title: 'Search In-Menu',
+        description: 'A dropdown can include a search prompt inside its menu',
+        component: DropdownSearchInMenu,
       },
       {
         title: 'Loading',

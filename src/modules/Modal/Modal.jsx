@@ -72,8 +72,8 @@ export default {
       type: Boolean,
       default: false,
     },
-    size: Enum(['standart', 'fullscreen', 'small', 'large', 'mini', 'tiny'], {
-      default: 'standart',
+    size: Enum(['standard', 'fullscreen', 'small', 'large', 'mini', 'tiny'], {
+      default: 'standard',
     }),
     basic: {
       type: Boolean,
