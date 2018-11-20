@@ -1,4 +1,5 @@
 import { SemanticUIVueMixin } from '../../lib';
+import { Enum } from '../../lib/PropTypes';
 import SuiStep from './Step';
 
 export default {
@@ -11,7 +12,14 @@ export default {
     vertical: Boolean,
     stackable: Boolean,
     unstackable: Boolean,
-    fluid: Boolean
+    fluid: Boolean,
+    attached: Enum.Attached({
+      type: Boolean
+    }),
+    stepNumber: Enum.Number({
+      type: String,
+      description: 'Defined number of steps',
+    })
   },
   render() {
     const ElementType = this.getElementType();
@@ -20,11 +28,14 @@ export default {
         {...this.getChildPropsAndListeners()}
         class={this.classes(
           'ui',
+          this.stepNumber,
           this.ordered && 'ordered',
           this.vertical && 'vertical',
           this.fluid && 'fluid',
           this.stackable && 'tablet stackable',
           this.unstackable && 'unstackable',
+          this.attached,
+          this.attached && 'attached',
           'steps',
         )}
       >

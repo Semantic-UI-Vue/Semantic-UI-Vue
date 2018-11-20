@@ -14,6 +14,7 @@ import Disabled from './Disabled.example';
 import Stackable from './Stackable.example';
 import Fluid from './Fluid.example';
 import UnStackable from './Unstackable.example';
+import Attached from './Attached.example';
 
 export default [
   {
@@ -117,6 +118,11 @@ export default [
         title: 'UnStackable',
         description: 'A step can prevent itself from stacking on mobile',
         component: UnStackable,
+      },
+      {
+        title: 'Attached',
+        description: 'Steps can be attached to other elements',
+        component: Attached,
       },
     ],
   },
