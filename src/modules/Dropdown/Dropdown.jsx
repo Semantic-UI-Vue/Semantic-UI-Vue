@@ -2,6 +2,8 @@ import escapeRegExp from 'lodash/escapeRegExp';
 import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../../elements/Icon/Icon';
+import Input from '../../elements/Input/Input';
+import Divider from '../../elements/Divider/Divider';
 import Label from '../../elements/Label/Label';
 import DropdownItem from './DropdownItem';
 import DropdownMenu from './DropdownMenu';
@@ -76,7 +78,7 @@ export default {
     options: {
       type: Array,
       default: () => [],
-      description: 'Array of SuiDropdownItem props e.g. `{ text: \'\', value: \'\' }`',
+      description: "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
     },
     placeholder: {
       type: String,
@@ -89,6 +91,10 @@ export default {
     search: {
       type: Boolean,
       description: 'A dropdown can have a search field to filter options.',
+    },
+    searchInMenu: {
+      type: Object,
+      description: 'A dropdown can have a search input in dropdown menu. Should be passed an Object with SuiInput props.',
     },
     selection: {
       type: Boolean,
@@ -170,10 +176,10 @@ export default {
       return false;
     },
     animation() {
-      return `${animations.name} ${(this.downward ? animations.down : animations.up)}`;
+      return `${animations.name} ${this.downward ? animations.down : animations.up}`;
     },
     filteredOptions() {
-      if (!this.search && !this.multiple) {
+      if (!this.search && !this.multiple && !this.searchInMenu) {
         return this.options;
       }
       const re = new RegExp(escapeRegExp(this.filter), 'i');
@@ -184,10 +190,7 @@ export default {
 
         if (
           this.multiple &&
-          (
-            this.maximumValuesSelected ||
-            this.multipleValue.indexOf(option.value) > -1
-          )
+          (this.maximumValuesSelected || this.multipleValue.indexOf(option.value) > -1)
         ) {
           return false;
         }
@@ -211,18 +214,25 @@ export default {
     menuNode() {
       return (
         <DropdownMenu>
-          {
+          {[
+            this.searchInMenu && [<Input {...{ props: this.searchInMenu, ref: 'searchInMenu' }}
+                                         onInput={this.updateFilter}
+                                         value={this.filter}
+                                         onKeydown={this.handleSearchKeyDown}
+            />, <Divider/>],
             this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map((option, index) => (
               <DropdownItem
                 {...{ props: option }}
-                active={this.multiple ? (
-                  this.multipleValue.indexOf(option.value) !== -1
-                ) : this.value === option.value}
+                active={
+                  this.multiple
+                    ? this.multipleValue.indexOf(option.value) !== -1
+                    : this.value === option.value
+                }
                 selected={this.selectedIndex === index}
                 onSelect={this.selectItem}
               />
-            ))
-          }
+            )),
+          ]}
         </DropdownMenu>
       );
     },
@@ -230,18 +240,20 @@ export default {
       return Array.isArray(this.value) ? this.value : [];
     },
     searchNode() {
-      return this.search && (
-        <input
-          type="text"
-          aria-autocomplete="list"
-          autoComplete="off"
-          class="search"
-          onInput={this.updateFilter}
-          onKeydown={this.handleSearchKeyDown}
-          ref="search"
-          tabindex="0"
-          value={this.filter}
-        />
+      return (
+        this.search && (
+          <input
+            type="text"
+            aria-autocomplete="list"
+            autoComplete="off"
+            class="search"
+            onInput={this.updateFilter}
+            onKeydown={this.handleSearchKeyDown}
+            ref="search"
+            tabindex="0"
+            value={this.filter}
+          />
+        )
       );
     },
     selectedNodes() {
@@ -257,10 +269,7 @@ export default {
             {option.image && <Image {...{ props: option.image }} />}
             {option.flag && <Flag name={option.flag} />}
             {option.text}
-            <Icon
-              name="delete"
-              nativeOnClick={() => this.deselectItem(value)}
-            />
+            <Icon name="delete" nativeOnClick={() => this.deselectItem(value)} />
           </Label>
         );
       });
@@ -271,7 +280,9 @@ export default {
       const shouldHideText =
         (this.multiple && this.value && this.value.length) ||
         (!this.multiple && [null, undefined].indexOf(this.value) === -1);
-      const shouldShowSelectedItem = !this.multiple && this.open &&
+      const shouldShowSelectedItem =
+        !this.multiple &&
+        this.open &&
         typeof this.filteredOptions[this.selectedIndex] !== 'undefined' &&
         this.filteredOptions[this.selectedIndex].value === this.value;
 
@@ -283,19 +294,21 @@ export default {
 
       const className = this.classes(
         this.placeholder && !shouldHideText && 'default',
-        this.filter && !shouldShowSelectedItem && 'filtered',
+        !this.searchInMenu && this.filter && !shouldShowSelectedItem && 'filtered',
         'text',
       );
 
       const value = typeof text === 'object' ? text : { text };
 
-      return <div ref="text" class={className} role="alert" aria-live="polite">
-        {value.icon && <Icon name={value.icon} />}
-        {value.image && <Image {...{ props: value.image }} />}
-        {value.flag && <Flag name={value.flag} />}
-        {value.label && <Label {...{ props: value.label}}/>}
-        {value.text}
-      </div>;
+      return (
+        <div ref="text" class={className} role="alert" aria-live="polite">
+          {value.icon && <Icon name={value.icon} />}
+          {value.image && <Image {...{ props: value.image }} />}
+          {value.flag && <Flag name={value.flag} />}
+          {value.label && <Label {...{ props: value.label }} />}
+          {value.text}
+        </div>
+      );
     },
   },
   watch: {
@@ -303,7 +316,9 @@ export default {
       this.updateSelectedIndex();
     },
     filter() {
-      this.resizeInput();
+      if (this.search) {
+        this.resizeInput();
+      }
     },
   },
   mounted() {
@@ -334,18 +349,29 @@ export default {
     },
     handleMouseDown() {
       this.isMouseDown = true;
-      document.body.addEventListener('mouseup', () => { this.isMouseDown = false; }, {
-        capture: true,
-        once: true,
-      });
+      document.body.addEventListener(
+        'mouseup',
+        () => {
+          this.isMouseDown = false;
+        },
+        {
+          capture: true,
+          once: true,
+        },
+      );
     },
     handleClick(e) {
       e.stopPropagation();
       if (this.open) {
         if (this.search && e.target === this.$refs.search) return;
-        if (!e.path) {
+
+        const path = e.path || (event.composedPath && event.composedPath());
+
+        if (!path) {
           this.addEventPath();
         }
+
+        if (this.searchInMenu && e.target === this.$refs.searchInMenu.$refs.input) return;
         if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
           this.$nextTick(() => this.focusSearch());
           return;
@@ -398,7 +424,7 @@ export default {
       e.stopPropagation();
     },
     toggleFilteredText(filteredText, filter) {
-      if (!this.multiple && !filteredText.classList.contains('filtered') && filter.trim() !== '') {
+      if (!this.searchInMenu && !this.multiple && !filteredText.classList.contains('filtered') && filter.trim() !== '') {
         filteredText.classList.add('filtered');
       }
 
@@ -430,7 +456,7 @@ export default {
           if (this.allowAdditions && this.selectedIndex === -1 && filter.trim() !== '') {
             e.preventDefault();
             this.selectItem(filter);
-          } else if (this.selection) {
+          } else if (this.selection || this.searchInMenu || this.search) {
             if (this.selectedIndex === -1) return;
             e.preventDefault();
             if (!this.multiple) {
@@ -463,7 +489,7 @@ export default {
       } else {
         this.selectedIndex = newValue;
       }
-      if (this.selection && !this.multiple) {
+      if ((this.selection || this.searchInMenu || this.search) && !this.multiple) {
         this.$emit('input', this.filteredOptions[this.selectedIndex].value);
       }
     },
@@ -472,9 +498,9 @@ export default {
     },
     selectItem(selectedValue) {
       if (this.multiple && this.maximumValuesSelected) return;
-      const newValue = this.multiple ? (
-        this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
-      ) : selectedValue;
+      const newValue = this.multiple
+        ? this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
+        : selectedValue;
       this.$emit('input', newValue);
       this.filter = '';
       if (!this.multiple) {
@@ -483,9 +509,10 @@ export default {
     },
     updateSelectedIndex() {
       if (this.multiple) {
-        this.selectedIndex = (
+        this.selectedIndex =
           this.filteredOptions.length > this.selectedIndex
-        ) ? this.selectedIndex : this.selectedIndex - 1;
+            ? this.selectedIndex
+            : this.selectedIndex - 1;
       } else {
         this.selectedIndex = this.filteredOptions.findIndex(item => item.value === this.value);
       }
@@ -499,7 +526,7 @@ export default {
       this.$refs.search.style.minWidth = `${Math.ceil(width + 1)}px`;
     },
     updateFilter(event) {
-      this.filter = event.target.value;
+      this.filter = typeof event === 'string' ? event : event.target.value;
     },
     focusSearch() {
       if (this.search) this.$refs.search.focus();
@@ -568,8 +595,7 @@ export default {
         {...{
           on: eventHandlers,
           nativeOn: eventHandlers,
-        }
-        }
+        }}
       >
         {this.selectedNodes}
         {this.searchNode}
