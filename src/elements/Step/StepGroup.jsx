@@ -19,6 +19,9 @@ export default {
     stepNumber: Enum.Number({
       type: String,
       description: 'Defined number of steps',
+    }),
+    size: Enum.Size({
+      type: String
     })
   },
   render() {
@@ -36,6 +39,7 @@ export default {
           this.unstackable && 'unstackable',
           this.attached,
           this.attached && 'attached',
+          this.size,
           'steps',
         )}
       >

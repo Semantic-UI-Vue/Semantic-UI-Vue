@@ -15,6 +15,15 @@ import Stackable from './Stackable.example';
 import Fluid from './Fluid.example';
 import UnStackable from './Unstackable.example';
 import Attached from './Attached.example';
+import EvenlyDivided from './EvenlyDivided.example';
+import EvenlyDivided2 from './EvenlyDivided2.example';
+import SizeMini from './SizeMini.example';
+import SizeTiny from './SizeTiny.example';
+import SizeSmall from './SizeSmall.example';
+import SizeLarge from './SizeLarge.example';
+import SizeBig from './SizeBig.example';
+import SizeHuge from './SizeHuge.example';
+import SizeMassive from './SizeMassive.example';
 
 export default [
   {
@@ -123,6 +132,37 @@ export default [
         title: 'Attached',
         description: 'Steps can be attached to other elements',
         component: Attached,
+      },
+      {
+        title: 'EvenlyDivided',
+        description: 'Steps can be divided evenly inside their parent',
+        component: EvenlyDivided,
+      },
+      {
+        component: EvenlyDivided2,
+      },
+      {
+        title: 'Size',
+        description: 'Steps can have different sizes',
+        component: SizeMini,
+      },
+      {
+        component: SizeTiny,
+      },
+      {
+        component: SizeSmall,
+      },
+      {
+        component: SizeLarge,
+      },
+      {
+        component: SizeBig,
+      },
+      {
+        component: SizeHuge,
+      },
+      {
+        component: SizeMassive,
       },
     ],
   },
