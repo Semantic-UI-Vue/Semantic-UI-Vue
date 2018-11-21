@@ -14,15 +14,15 @@ export default {
     unstackable: Boolean,
     fluid: Boolean,
     attached: Enum.Attached({
-      type: Boolean
+      type: Boolean,
     }),
     stepNumber: Enum.Number({
       type: String,
       description: 'Defined number of steps',
     }),
     size: Enum.Size({
-      type: String
-    })
+      type: String,
+    }),
   },
   render() {
     const ElementType = this.getElementType();
@@ -43,9 +43,7 @@ export default {
           'steps',
         )}
       >
-        {this.steps ? this.steps.map(props => (
-          <SuiStep {...{ props }} />
-        )) : this.$slots.default}
+        {this.steps ? this.steps.map(props => <SuiStep {...{ props }} />) : this.$slots.default}
       </ElementType>
     );
   },
