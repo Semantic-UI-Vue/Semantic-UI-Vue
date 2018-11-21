@@ -797,46 +797,46 @@
           "name": "content",
           "examples": [{
             "name": "description",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "icon",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "link",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "states",
           "examples": [{
             "name": "active",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "completed",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "disabled",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "variations",
           "examples": [{
             "name": "stackable",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "fluid",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "unstackable",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "attached",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "evenly divided",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "size",
-            "implemented": false
+            "implemented": true
           }]
         }]
       }
