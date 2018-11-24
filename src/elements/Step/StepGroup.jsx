@@ -1,6 +1,6 @@
+import SuiStep from './Step';
 import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
-import SuiStep from './Step';
 
 export default {
   name: 'SuiStepGroup',
@@ -31,7 +31,7 @@ export default {
         {...this.getChildPropsAndListeners()}
         class={this.classes(
           'ui',
-          this.stepNumber,
+          this.stepNumber && this.num(this.stepNumber),
           this.ordered && 'ordered',
           this.vertical && 'vertical',
           this.fluid && 'fluid',
