@@ -365,7 +365,7 @@ export default {
       if (this.open) {
         if (this.search && e.target === this.$refs.search) return;
 
-        const path = e.path || (event.composedPath && event.composedPath());
+        const path = e.path || (e.composedPath && e.composedPath());
 
         if (!path) {
           this.addEventPath();
