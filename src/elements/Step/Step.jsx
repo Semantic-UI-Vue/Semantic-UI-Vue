@@ -15,6 +15,7 @@ export default {
     disabled: Boolean,
     icon: String,
     title: String,
+    link: Boolean,
   },
   render() {
     const ElementType = this.getElementType();
@@ -26,16 +27,19 @@ export default {
           this.active && 'active',
           this.completed && 'completed',
           this.disabled && 'disabled',
+          this.link && 'link',
           'step',
         )}
       >
         {this.icon && <SuiIcon name={this.icon} />}
-        {(this.title || this.description) ? (
+        {this.title || this.description ? (
           <SuiStepContent>
             {this.title && <SuiStepTitle>{this.title}</SuiStepTitle>}
             {this.description && <SuiStepDescription>{this.description}</SuiStepDescription>}
           </SuiStepContent>
-        ) : this.$slots.default}
+        ) : (
+          this.$slots.default
+        )}
       </ElementType>
     );
   },
