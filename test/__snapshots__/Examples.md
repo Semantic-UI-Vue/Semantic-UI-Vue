@@ -2084,6 +2084,132 @@
 "<div class=\"ui piled segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div>"
 ```
 
+##     `Vertical Segment`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui vertical segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div> <div class=\"ui vertical segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div> <div class=\"ui vertical segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div>"
+```
+
+##   `States`
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui disabled segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+```
+
+##     `Loading`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui loading segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+```
+
+##   `Variations`
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui inverted segment\"><p>Vue + SemanticUI = :)</p></div>"
+```
+
+##     `Attached`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui top attached segment\"><p>This segment is on top</p></div> <div class=\"ui attached segment\"><p>This segment is attached on both sides</p></div> <div class=\"ui bottom attached segment\"><p>This segment is on bottom</p></div></div>"
+```
+
+##     `Padded`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui padded segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+```
+
+##     `Compact`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui compact segment\"><p>Semantic UI Vue</p></div>"
+```
+
+##     `Colored`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui red segment\">Red</div> <div class=\"ui orange segment\">Orange</div> <div class=\"ui yellow segment\">Yellow</div> <div class=\"ui olive segment\">Olive</div> <div class=\"ui green segment\">Green</div> <div class=\"ui teal segment\">Teal</div> <div class=\"ui blue segment\">Blue</div> <div class=\"ui violet segment\">Violet</div> <div class=\"ui purple segment\">Purple</div> <div class=\"ui pink segment\">Pink</div> <div class=\"ui brown segment\">Brown</div> <div class=\"ui grey segment\">Grey</div> <div class=\"ui black segment\">Black</div></div>"
+```
+
+##     `Emphasis`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui segment\"><p>I'm here to tell you something, and you will probably read me first.</p></div> <div class=\"ui secondary segment\"><p>I am pretty noticeable but you might check out other content before you look at me.</p></div> <div class=\"ui tertiary segment\"><p>If you notice me you must be looking very hard.</p></div></div>"
+```
+
+##     `Circular`
+
+####       `should match snapshot`
+
+```
+"<div class=\"example\"><div class=\"ui circular segment\"><div class=\"ui header\">
+      Buy Now
+      <div class=\"ui sub header\">$10.99</div></div></div> <div class=\"ui inverted circular segment\"><div class=\"ui inverted header\">
+      Buy Now
+      <div class=\"ui sub header\">$10.99</div></div></div></div>"
+```
+
+##     `Clearing`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui clearing segment\"><button role=\"button\" class=\"ui right floated button\">
+    Floated
+  </button></div>"
+```
+
+##     `Floated`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui right floated segment\"><p>This segment will appear to the right</p></div> <div class=\"ui left floated segment\"><p>This segment will appear to the left</p></div></div>"
+```
+
+##     `TextAlign`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui right aligned segment\"><p>Right</p></div> <div class=\"ui left aligned segment\"><p>Left</p></div> <div class=\"ui center aligned segment\"><p>Center</p></div></div>"
+```
+
+##     `Basic`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui basic segment\"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas.
+      Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+      Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+      Mauris placerat eleifend leo.</p></div></div>"
+```
+
 ##   `Groups`
 
 ##     `Segments`
@@ -2092,6 +2218,64 @@
 
 ```
 "<div class=\"ui segments\"><div class=\"ui segment\"><p>Top</p></div> <div class=\"ui segment\"><p>Middle</p></div> <div class=\"ui segment\"><p>Bottom</p></div></div>"
+```
+
+##     `Nested Segments`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segments\"><div class=\"ui segment\"><p>Top</p></div> <div class=\"ui segments\"><div class=\"ui segment\"><p>Nested Top 1</p></div> <div class=\"ui segment\"><p>Nested Top 2</p></div></div> <div class=\"ui segment\"><p>Middle</p></div> <div class=\"ui horizontal segments\"><div class=\"ui segment\">Top</div> <div class=\"ui segment\">Middle</div> <div class=\"ui segment\">Bottom</div></div> <div class=\"ui segment\"><p>Bottom</p></div></div>"
+```
+
+##     `Horizontal Segments`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui horizontal segments\"><div class=\"ui segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div> <div class=\"ui segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div> <div class=\"ui segment\"><docs-wireframe name=\"short-paragraph\"></docs-wireframe></div></div>"
+```
+
+##     `Raised Segments`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui raised segments\"><div class=\"ui segment\">
+    Top
+  </div> <div class=\"ui segment\">
+    Middle
+  </div> <div class=\"ui segment\">
+    Bottom
+  </div></div>"
+```
+
+##     `Stacked Segments`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui stacked segments\"><div class=\"ui segment\">
+    Top
+  </div> <div class=\"ui segment\">
+    Middle
+  </div> <div class=\"ui segment\">
+    Bottom
+  </div></div>"
+```
+
+##     `Piled Segments`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui piled segments\"><div class=\"ui segment\">
+    Top
+  </div> <div class=\"ui segment\">
+    Middle
+  </div> <div class=\"ui segment\">
+    Bottom
+  </div></div>"
 ```
 
 ## `StepExample`
@@ -2130,6 +2314,108 @@
 
 ```
 "<div><div class=\"ui vertical steps\"><div class=\"ui completed step\"><i class=\"truck icon\"></i> <div class=\"content\"><div class=\"title\">Shipping</div> <div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui completed step\"><i class=\"credit card icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui active step\"><i class=\"info icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div></div>"
+```
+
+##   `Content`
+
+##     `Description`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui steps\"><div class=\"ui step\"><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div></div>"
+```
+
+##     `Icon`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui steps\"><div class=\"ui step\"><i class=\"truck icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div></div>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui steps\"><a class=\"ui active step\"><i class=\"truck icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></a> <a class=\"ui step\"><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></a></div>"
+```
+
+##   `States`
+
+##     `Active`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui steps\"><div class=\"ui active step\"><i class=\"payment icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div></div>"
+```
+
+##     `Completed`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui steps\"><div class=\"ui completed step\"><i class=\"payment icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div></div>"
+```
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui steps\"><div class=\"ui disabled step\"><i class=\"payment icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div></div>"
+```
+
+##   `Variations`
+
+##     `Stackable`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui tablet stackable steps\"><div class=\"ui step\"><i class=\"plane icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui active step\"><i class=\"dollar icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui disabled step\"><i class=\"info circle icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div></div>"
+```
+
+##     `Fluid`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui two column grid\"><div class=\"column\"><div class=\"ui vertical fluid steps\"><div class=\"ui completed step\"><i class=\"plane icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui active step\"><i class=\"dollar icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div></div></div> <div class=\"column\"><p>The steps take up the entire column width</p></div></div>"
+```
+
+##     `UnStackable`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui unstackable steps\"><div class=\"ui step\"><i class=\"plane icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui active step\"><i class=\"dollar icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui disabled step\"><i class=\"info circle icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div></div>"
+```
+
+##     `Attached`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui three top attached steps\"><div class=\"ui step\"><i class=\"plane icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui active step\"><i class=\"dollar icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui disabled step\"><i class=\"info circle icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div> <div class=\"ui attached segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div> <div class=\"ui three bottom attached steps\"><div class=\"ui step\"><i class=\"plane icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui active step\"><i class=\"dollar icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui disabled step\"><i class=\"info circle icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div></div>"
+```
+
+##     `EvenlyDivided`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui three steps\"><div class=\"ui step\"><i class=\"plane icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div></div></div> <div class=\"ui active step\"><i class=\"dollar icon\"></i><div class=\"content\"><div class=\"title\">Billing</div></div></div> <div class=\"ui disabled step\"><i class=\"info circle icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div></div></div></div>"
+```
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui mini steps\"><div class=\"ui step\"><i class=\"plane icon\"></i><div class=\"content\"><div class=\"title\">Shipping</div><div class=\"description\">Choose your shipping options</div></div></div> <div class=\"ui active step\"><i class=\"dollar icon\"></i><div class=\"content\"><div class=\"title\">Billing</div><div class=\"description\">Enter billing information</div></div></div> <div class=\"ui disabled step\"><i class=\"info circle icon\"></i><div class=\"content\"><div class=\"title\">Confirm Order</div><div class=\"description\">Verify order details</div></div></div></div>"
 ```
 
 ## `AccordionExample`
@@ -2395,6 +2681,14 @@
 
 ```
 "<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Select Language</div><i aria-hidden=\"true\" class=\"world icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Arabic</div><div role=\"option\" class=\"item\">Chinese</div><div role=\"option\" class=\"item\">Danish</div><div role=\"option\" class=\"item\">Dutch</div><div role=\"option\" class=\"item\">English</div><div role=\"option\" class=\"item\">French</div><div role=\"option\" class=\"item\">German</div><div role=\"option\" class=\"item\">Greek</div><div role=\"option\" class=\"item\">Hungarian</div><div role=\"option\" class=\"item\">Italian</div><div role=\"option\" class=\"item\">Japanese</div><div role=\"option\" class=\"item\">Korean</div><div role=\"option\" class=\"item\">Lithuanian</div><div role=\"option\" class=\"item\">Persian</div><div role=\"option\" class=\"item\">Polish</div><div role=\"option\" class=\"item\">Portuguese</div><div role=\"option\" class=\"item\">Russian</div><div role=\"option\" class=\"item\">Spanish</div><div role=\"option\" class=\"item\">Swedish</div><div role=\"option\" class=\"item\">Turkish</div><div role=\"option\" class=\"item\">Vietnamese</div></div></button></div>"
+```
+
+##     `Search In-Menu`
+
+####       `should match snapshot`
+
+```
+"<button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled dropdown\" menu-header=\"[object Object]\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Filter Posts</div><i aria-hidden=\"true\" class=\"filter icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div class=\"ui left icon input\"><input><i class=\"search icon\"></i></div><div class=\"ui divider\"></div><div role=\"option\" class=\"item\"><div class=\"ui red circular empty label\"></div>Important</div><div role=\"option\" class=\"item\"><div class=\"ui blue circular empty label\"></div>Announcement</div><div role=\"option\" class=\"item\"><div class=\"ui black circular empty label\"></div>Cannot Fix</div><div role=\"option\" class=\"item\"><div class=\"ui purple circular empty label\"></div>News</div><div role=\"option\" class=\"item\"><div class=\"ui orange circular empty label\"></div>Enhancement</div><div role=\"option\" class=\"item\"><div class=\"ui circular empty label\"></div>Change Declined</div><div role=\"option\" class=\"item\"><div class=\"ui yellow circular empty label\"></div>Off Topic</div><div role=\"option\" class=\"item\"><div class=\"ui pink circular empty label\"></div>Interesting</div><div role=\"option\" class=\"item\"><div class=\"ui green circular empty label\"></div>Discussion</div></div></button>"
 ```
 
 ##     `Loading`
