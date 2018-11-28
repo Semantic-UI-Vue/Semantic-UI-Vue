@@ -589,25 +589,25 @@
             "implemented": true
           }, {
             "name": "active",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "disabled",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "variations",
           "examples": [{
             "name": "inline",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "inline center",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "size",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "inverted",
-            "implemented": false
+            "implemented": true
           }]
         }]
       },
