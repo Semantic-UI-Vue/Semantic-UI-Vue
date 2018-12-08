@@ -24,11 +24,6 @@ describe('Header', () => {
     expect(header.classes()).to.include('12');
   });
 
-  it('should have a icon class', () => {
-    const header = shallow(Header, { propsData: { icon: true } });
-    expect(header.classes()).to.include('icon');
-  });
-
   it('should have a floated class', () => {
     const header = shallow(Header, { propsData: { floated: 'left' } });
     expect(header.classes()).to.include('floated');
@@ -51,5 +46,11 @@ describe('Header', () => {
 
     const header2 = shallow(Header, { slots: { default: '<span>Content String</span>' } });
     expect(header2.text()).to.equal('Content String');
+  });
+
+  it('should have an icon class', () => {
+    const header = shallow(Header, { propsData: { icon: 'settings' } });
+    expect(header.classes()).to.include('icon');
+    expect(!!header.find('.icon.settings')).to.equal(true);
   });
 });
