@@ -10,7 +10,7 @@ export default {
     dividing: Boolean,
     disabled: Boolean,
     floated: Enum(['left', 'right']),
-    icon: Boolean,
+    icon: String,
     image: {
       type: String,
       description: 'Add an image by img src or pass an Image.',
@@ -39,14 +39,16 @@ export default {
           this.size,
           this.block && 'block',
           this.dividing && 'dividing',
-          this.icon && 'icon',
           this.image && 'image',
+          this.icon && 'icon',
           this.sub && 'sub',
           this.disabled && 'disabled',
           this.inverted && 'inverted',
           'header',
         )}
       >
+
+        {this.icon && <sui-icon name={this.icon} />}
         {this.image && <img src={this.image} class="ui image" />}
         {this.$slots.default || this.content}
       </ElementType>
