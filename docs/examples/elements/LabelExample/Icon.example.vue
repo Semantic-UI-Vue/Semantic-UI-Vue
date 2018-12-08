@@ -1,6 +1,9 @@
 <template>
   <div>
-    <a is="sui-label" icon="mail">Mail</a>
+    <a is="sui-label">
+      <sui-icon name="mail" />
+      Mail
+    </a>
     <a is="sui-label">
       Tag
       <sui-icon name="delete" />
@@ -11,4 +14,3 @@
 <script>
 export default {};
 </script>
-
