@@ -372,7 +372,7 @@ export default {
         }
 
         if (this.searchInMenu && e.target === this.$refs.searchInMenu.$refs.input) return;
-        if (this.multiple && e.path.indexOf(this.menu.$el) !== -1) {
+        if (this.multiple && path.indexOf(this.menu.$el) !== -1) {
           this.$nextTick(() => this.focusSearch());
           return;
         }
