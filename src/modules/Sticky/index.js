@@ -1,3 +1,2 @@
-export { default as Sidebar } from './Sidebar';
-export { default as SidebarPushable } from './SidebarPushable';
-export { default as SidebarPusher } from './SidebarPusher';
+export { default as Sticky } from './Sticky';
+

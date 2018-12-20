@@ -6,6 +6,7 @@ export * from './Embed';
 export * from './Modal';
 export * from './Rating';
 export * from './Sidebar';
+export * from './Sticky';
 export * from './Popup';
 export * from './Progress';
 export * from './Tab';

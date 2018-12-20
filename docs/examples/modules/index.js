@@ -7,4 +7,5 @@ export { default as ModalExample } from './ModalExample';
 export { default as PopupExample } from './PopupExample';
 export { default as ProgressExample } from './ProgressExample';
 export { default as RatingExample } from './RatingExample';
+export { default as StickyExample } from './StickyExample';
 export { default as TabExample } from './TabExample';
