@@ -10,7 +10,10 @@ export default {
     dividing: Boolean,
     disabled: Boolean,
     floated: Enum(['left', 'right']),
-    icon: Boolean,
+    icon: {
+      type: [Boolean, String],
+      default: false,
+    },
     image: {
       type: String,
       description: 'Add an image by img src or pass an Image.',
@@ -26,6 +29,7 @@ export default {
   },
   render() {
     const ElementType = this.getElementType();
+
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
@@ -37,9 +41,9 @@ export default {
           this.attached && 'attached',
           this.color,
           this.size,
+          this.icon && 'icon',
           this.block && 'block',
           this.dividing && 'dividing',
-          this.icon && 'icon',
           this.image && 'image',
           this.sub && 'sub',
           this.disabled && 'disabled',
@@ -47,6 +51,8 @@ export default {
           'header',
         )}
       >
+
+        {this.icon !== !!this.icon && <sui-icon name={this.icon} />}
         {this.image && <img src={this.image} class="ui image" />}
         {this.$slots.default || this.content}
       </ElementType>

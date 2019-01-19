@@ -19,6 +19,15 @@ describe('Label', () => {
     expect(label.classes()).to.include('label');
     expect(label.classes()).to.include('image');
   });
+
+  it('should create a SUI Label with icon', () => {
+    const label = shallow(Label, { propsData: { icon: 'settings' } });
+    expect(label.is('div')).to.equal(true);
+    expect(label.classes()).to.include('ui');
+    expect(label.classes()).to.include('label');
+    expect(!!label.find('.icon.settings')).to.equal(true);
+  });
+
   it('should create a SUI colored Label ', () => {
     const label = shallow(Label, { propsData: { color: 'red' } });
     expect(label.is('div')).to.equal(true);

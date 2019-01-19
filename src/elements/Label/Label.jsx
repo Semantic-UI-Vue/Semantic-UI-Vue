@@ -33,6 +33,7 @@ export default {
       description: 'A label can point to content next to it.',
       type: Boolean,
     }),
+    icon: String,
     ribbon: Enum(['left', 'right'], {
       description: 'A label can appear as a ribbon attaching itself to an element.',
       type: Boolean,
@@ -81,6 +82,8 @@ export default {
           'label',
         )}
       >
+
+        {this.icon && <sui-icon name={this.icon} />}
         {this.$slots.default}
       </ElementType>
     );
