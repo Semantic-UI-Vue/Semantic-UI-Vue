@@ -9,12 +9,12 @@ export default {
   mixins: [SemanticUIVueMixin],
   props: {
     disabled: Boolean,
-    inputValue: [Array, Boolean, Number, String],
+    inputValue: [Array, Boolean, Number, String, Object],
     label: String,
     radio: Boolean,
     toggle: Boolean,
     name: String,
-    value: String,
+    value: [String, Object],
     required: Boolean,
   },
   events: {
