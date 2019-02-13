@@ -37,8 +37,9 @@ export default {
   mounted() {
     let parent = this.$parent;
     while (parent && !this.accordion) {
-      if (/^SuiDropdown(WithRequired)?$/.test(parent.$options.name)) {
+      if (parent.$options.name === 'SuiDropdown') {
         this.dropdown = parent;
+        break;
       }
 
       parent = parent.$parent;
