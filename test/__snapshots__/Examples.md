@@ -149,7 +149,7 @@
 ####       `should match snapshot`
 
 ```
-"<div><div class=\"ui pointing menu\"><a class=\"active item\">Home</a><a class=\"item\">Messages</a><a class=\"item\">Friends</a> <div class=\"right menu\"><div class=\"item\"><div class=\"ui transparent icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"search icon\"></i></div></div></div></div> <div class=\"ui segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div></div>"
+"<div><div class=\"ui pointing menu\"><a class=\"active item\">Home</a><a class=\"item\">Messages</a><a class=\"item\">Friends</a> <div class=\"right menu\"><div class=\"item\"><div class=\"ui transparent icon input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"><i class=\"search icon\"></i></div></div></div></div> <div class=\"ui segment\"><docs-wireframe name=\"paragraph\"></docs-wireframe></div></div>"
 ```
 
 ##     `Tabular`
@@ -1447,7 +1447,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui input\" placeholder=\"Search...\"><input placeholder=\"Search...\"></div>"
+"<div class=\"ui input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"></div>"
 ```
 
 ##   `States`
@@ -1457,7 +1457,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui focus input\" placeholder=\"Search...\"><input placeholder=\"Search...\"></div>"
+"<div class=\"ui focus input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"></div>"
 ```
 
 ##     `Loading`
@@ -1465,7 +1465,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui loading icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"loading icon\"></i></div>"
+"<div class=\"ui loading icon input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"><i class=\"loading icon\"></i></div>"
 ```
 
 ##     `Disabled`
@@ -1473,7 +1473,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui disabled icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"user icon\"></i></div>"
+"<div class=\"ui disabled icon input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"><i class=\"user icon\"></i></div>"
 ```
 
 ##   `Variations`
@@ -1483,7 +1483,7 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui icon input\" placeholder=\"Search...\"><input placeholder=\"Search...\"><i class=\"search icon\"></i></div>"
+"<div class=\"ui icon input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"><i class=\"search icon\"></i></div>"
 ```
 
 ## `LabelExample`
@@ -1934,6 +1934,56 @@
 
 ```
 "<div class=\"ui segment\"><div class=\"ui active dimmer\"><div class=\"content\"><div class=\"center\"><div class=\"ui indeterminate text loader\">Preparing Files</div></div></div></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+```
+
+##     `Active`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><div class=\"ui active loader\"></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+```
+
+##     `Disabled`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><div class=\"ui disabled loader\"></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+```
+
+##   `Variations`
+
+##     `Inline`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui active inline loader\"></div>"
+```
+
+##     `Inline Center`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui active inline centered loader\"></div>"
+```
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui segment\"><div class=\"ui active dimmer\"><div class=\"content\"><div class=\"center\"><div class=\"ui mini text loader\">Loading</div></div></div></div> <docs-wireframe name=\"short-paragraph\"></docs-wireframe></div>"
+```
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui inverted segment\"><div class=\"ui active inverted loader\"></div> <br> <br> <br> <br></div>"
 ```
 
 ## `RailExample`
@@ -2688,7 +2738,7 @@
 ####       `should match snapshot`
 
 ```
-"<button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled dropdown\" menu-header=\"[object Object]\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Filter Posts</div><i aria-hidden=\"true\" class=\"filter icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div class=\"ui left icon input\"><input><i class=\"search icon\"></i></div><div class=\"ui divider\"></div><div role=\"option\" class=\"item\"><div class=\"ui red circular empty label\"></div>Important</div><div role=\"option\" class=\"item\"><div class=\"ui blue circular empty label\"></div>Announcement</div><div role=\"option\" class=\"item\"><div class=\"ui black circular empty label\"></div>Cannot Fix</div><div role=\"option\" class=\"item\"><div class=\"ui purple circular empty label\"></div>News</div><div role=\"option\" class=\"item\"><div class=\"ui orange circular empty label\"></div>Enhancement</div><div role=\"option\" class=\"item\"><div class=\"ui circular empty label\"></div>Change Declined</div><div role=\"option\" class=\"item\"><div class=\"ui yellow circular empty label\"></div>Off Topic</div><div role=\"option\" class=\"item\"><div class=\"ui pink circular empty label\"></div>Interesting</div><div role=\"option\" class=\"item\"><div class=\"ui green circular empty label\"></div>Discussion</div></div></button>"
+"<button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled dropdown\" menu-header=\"[object Object]\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Filter Posts</div><i aria-hidden=\"true\" class=\"filter icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div class=\"ui left icon input\"><input type=\"text\"><i class=\"search icon\"></i></div><div class=\"ui divider\"></div><div role=\"option\" class=\"item\"><div class=\"ui red circular empty label\"></div>Important</div><div role=\"option\" class=\"item\"><div class=\"ui blue circular empty label\"></div>Announcement</div><div role=\"option\" class=\"item\"><div class=\"ui black circular empty label\"></div>Cannot Fix</div><div role=\"option\" class=\"item\"><div class=\"ui purple circular empty label\"></div>News</div><div role=\"option\" class=\"item\"><div class=\"ui orange circular empty label\"></div>Enhancement</div><div role=\"option\" class=\"item\"><div class=\"ui circular empty label\"></div>Change Declined</div><div role=\"option\" class=\"item\"><div class=\"ui yellow circular empty label\"></div>Off Topic</div><div role=\"option\" class=\"item\"><div class=\"ui pink circular empty label\"></div>Interesting</div><div role=\"option\" class=\"item\"><div class=\"ui green circular empty label\"></div>Discussion</div></div></button>"
 ```
 
 ##     `Loading`
