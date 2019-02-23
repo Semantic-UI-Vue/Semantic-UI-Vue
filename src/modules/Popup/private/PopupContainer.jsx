@@ -134,7 +134,13 @@ export default {
 
     return (
       <portal to="semantic-ui-vue">
-        <div ref="container" class={className} style={this.mountedStyle}>
+        <div
+          ref="container"
+          class={className}
+          style={this.mountedStyle}
+          onMouseover={() => this.$emit('mouseover')}
+          onMouseleave={() => this.$emit('mouseleave')}
+        >
           {this.$slots.default}
         </div>
       </portal>

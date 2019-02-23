@@ -6,6 +6,8 @@ import { POSITIONS } from './private/popupConstants';
 import PopupHeader from './PopupHeader';
 import PopupContent from './PopupContent';
 
+const HOVERABLE_BLUR_DELAY = 300;
+
 export default {
   name: 'SuiPopup',
   description: 'A popup displays additional information on top of a page.',
@@ -26,6 +28,10 @@ export default {
     header: {
       type: String,
       description: 'Header displayed above the content in bold.',
+    },
+    hoverable: {
+      type: Boolean,
+      description: 'Whether the popup should not close on hover.',
     },
     inverted: {
       type: Boolean,
@@ -51,14 +57,27 @@ export default {
   },
   mounted() {
     this.$slots.trigger[0].elm.addEventListener('mouseenter', this.handleOpen);
-    this.$slots.trigger[0].elm.addEventListener('mouseleave', () => {
-      this.open = false;
-    });
+    this.$slots.trigger[0].elm.addEventListener('mouseleave', this.handleBlur);
   },
   methods: {
     handleOpen() {
       this.coords = this.$slots.trigger[0].elm.getBoundingClientRect();
       this.open = true;
+    },
+    handleBlur() {
+      if (this.hoverable) {
+        this.blurTimeout = setTimeout(this.close, HOVERABLE_BLUR_DELAY);
+      } else {
+        this.close();
+      }
+    },
+    handleContainerHover() {
+      if (this.hoverable && this.blurTimeout) {
+        clearTimeout(this.blurTimeout);
+      }
+    },
+    close() {
+      this.open = false;
     },
   },
   render() {
@@ -67,6 +86,8 @@ export default {
         {this.$slots.trigger}
         {this.open && (
           <PopupContainer
+            onMouseover={this.handleContainerHover}
+            onMouseleave={this.handleBlur}
             popupClass={this.classes(
               this.basic && 'basic',
               this.flowing && 'flowing',
