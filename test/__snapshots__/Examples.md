@@ -2959,7 +2959,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div class=\"v-fragment\" hoverable=\"\"></div>"
+"<div class=\"v-fragment\"></div>"
 ```
 
 ##     `Inverted`
@@ -3113,12 +3113,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item active\"><span>HTML</span></a><a class=\"item\"><span>CSS</span></a><a class=\"item\"><span>JavaScript</span></a></div><div class=\"ui tab segment attached active\"><h3>HTML</h3> <p>
-        HTML (HyperText Markup Language) is the most basic building block of the Web.
-        It describes and defines the content of a webpage along with the basic layout of
-        the webpage. Other technologies besides HTML are generally used to describe a web
-        page's appearance/presentation (CSS) or functionality/ behavior (JavaScript).
-      </p> <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML\">developer.mozilla.org</a></div> <!----> <!----></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Pointing Menu`
@@ -3126,9 +3121,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui pointing menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+"<div><div><div class=\"ui pointing menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Secondary Menu`
@@ -3136,9 +3129,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui secondary menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+"<div><div><div class=\"ui secondary menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Text Menu`
@@ -3146,9 +3137,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui text menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+"<div><div><div class=\"ui text menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##   `States`
@@ -3158,9 +3147,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment loading attached active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Disabled`
@@ -3168,9 +3155,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><button role=\"button\" class=\"ui button\">Toggle Disabled Tab</button> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item disabled\"><span>Secret Triangle</span></a></div><div class=\"ui tab segment attached active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+"<div><button role=\"button\" class=\"ui button\">Toggle Disabled Tab</button> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##   `Menu Variations`
@@ -3180,9 +3165,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui tab segment attached active top\">
-      Circle
-    </div> <!----> <!----><div class=\"ui bottom attached menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div></div></div>"
+"<div><div><!----> <!----> <!----><div class=\"ui bottom attached menu\"></div></div></div>"
 ```
 
 ##     `Not Tabular`
@@ -3190,9 +3173,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+"<div><div><div class=\"ui menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Borderless`
@@ -3200,9 +3181,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui borderless menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+"<div><div><div class=\"ui borderless menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Colored`
@@ -3222,9 +3201,7 @@ Vue.use(PortalVue);
       blue
     </option><option value=\"purple\">
       purple
-    </option></select> <div class=\"ui hidden divider\"></div> <div><div class=\"ui blue menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
-      Circle
-    </div> <!----> <!----></div></div>"
+    </option></select> <div class=\"ui hidden divider\"></div> <div><div class=\"ui blue menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Vertical Tabular`
@@ -3232,9 +3209,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"four wide column\"><div class=\"ui vertical fluid tabular menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div></div><div class=\"twelve wide column stretched\"><div class=\"ui tab segment attached active\">
-      Circle
-    </div> <!----> <!----></div></div></div></div></div>"
+"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"four wide column\"><div class=\"ui vertical fluid tabular menu\"></div></div><div class=\"twelve wide column stretched\"><!----> <!----> <!----></div></div></div></div></div>"
 ```
 
 ##     `Menu Position`
@@ -3242,9 +3217,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"twelve wide column stretched\"><div class=\"ui tab segment attached active\">
-      Circle
-    </div> <!----> <!----></div><div class=\"four wide column\"><div class=\"ui vertical fluid menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div></div></div></div></div></div>"
+"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"twelve wide column stretched\"><!----> <!----> <!----></div><div class=\"four wide column\"><div class=\"ui vertical fluid menu\"></div></div></div></div></div></div>"
 ```
 
 ##   `Usage`
@@ -3254,9 +3227,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><p>Active Index 1</p> <input type=\"range\" max=\"2\"> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"><a class=\"item\"><span>Circle</span></a><a class=\"item active\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><!----> <div class=\"ui tab segment attached active\">
-      Box
-    </div> <!----></div></div>"
+"<div><p>Active Index 1</p> <input type=\"range\" max=\"2\"> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Default Active Index`
@@ -3264,9 +3235,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item active\"><span>Triangle</span></a></div><!----> <!----> <div class=\"ui tab segment attached active\">
-      Triangle
-    </div></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `On Tab Change`
@@ -3277,11 +3246,9 @@ Vue.use(PortalVue);
 "<div><p>
     Control active pane from outside,
     <a href=\"#\">Circle</a>,
-    <span>Box</span>,
+    <a href=\"#\">Box</a>,
     <a href=\"#\">Triangle</a>,
-  </p> <div class=\"ui hidden divider\"></div> <table class=\"ui very compact fixed table\"><tbody><tr class=\"\"><td class=\"\">Index</td> <td class=\"\">1</td></tr> <tr class=\"\"><td class=\"\">Label</td> <td class=\"\">Box</td></tr> <tr class=\"\"><td class=\"\">Clicked on the Tab Pane</td> <td class=\"\"><code>false</code></td></tr></tbody></table> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"><a class=\"item\"><span>Circle</span></a><a class=\"item active\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><!----> <div class=\"ui tab segment attached active\">
-      Box
-    </div> <!----></div></div>"
+  </p> <div class=\"ui hidden divider\"></div> <table class=\"ui very compact fixed table\"><tbody><tr class=\"\"><td class=\"\">Index</td> <td class=\"\"></td></tr> <tr class=\"\"><td class=\"\">Label</td> <td class=\"\"></td></tr> <tr class=\"\"><td class=\"\">Clicked on the Tab Pane</td> <td class=\"\"><code></code></td></tr></tbody></table> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ##     `Adding Icons and Labels`
@@ -3289,9 +3256,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item\"><i class=\"users icon\"></i><span>Circle</span></a><a class=\"item\"><span>Box</span><div class=\"ui label\">0</div></a><a class=\"item active\"><i class=\"check icon\"></i><span>Triangle</span><div class=\"ui label\">14</div></a></div><!----> <!----> <div class=\"ui tab segment attached active\">
-      Triangle
-    </div></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
 ## `CardExample`
@@ -4047,7 +4012,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div data-text=\"Banner\" class=\"ui banner  test ad\"></div> <div data-text=\"Vetical Banner\" class=\"ui vertical banner  test ad\"></div> <div data-text=\"Top Banner\" class=\"ui top banner  test ad\"></div> <div data-text=\"Half Banner\" class=\"ui half banner  test ad\"></div></div>"
+"<div><div data-text=\"Banner\" class=\"ui banner test ad\"></div> <div data-text=\"Vetical Banner\" class=\"ui vertical banner test ad\"></div> <div data-text=\"Top Banner\" class=\"ui top banner test ad\"></div> <div data-text=\"Half Banner\" class=\"ui half banner test ad\"></div></div>"
 ```
 
 ##     `Leaderboards`
@@ -4055,6 +4020,40 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div data-text=\"Leaderboard\" class=\"ui leaderboard  test ad\"></div> <div data-text=\"Large Leaderboard\" class=\"ui large leaderboard  test ad\"></div> <div data-text=\"Billboard\" class=\"ui billboard  test ad\"></div></div>"
+"<div><div data-text=\"Leaderboard\" class=\"ui leaderboard test ad\"></div> <div data-text=\"Large Leaderboard\" class=\"ui large leaderboard test ad\"></div> <div data-text=\"Billboard\" class=\"ui billboard test ad\"></div></div>"
+```
+
+##     `Panorama`
+
+####       `should match snapshot`
+
+```
+"<div><div data-text=\"Panorama\" class=\"ui panorama test ad\"></div></div>"
+```
+
+##     `Netboard`
+
+####       `should match snapshot`
+
+```
+"<div><div data-text=\"Netboard\" class=\"ui netboard test ad\"></div></div>"
+```
+
+##   `Variations`
+
+##     `Centered`
+
+####       `should match snapshot`
+
+```
+"<div><div data-text=\"Centered Ad\" class=\"ui centered banner test ad\"></div></div>"
+```
+
+##     `Test`
+
+####       `should match snapshot`
+
+```
+"<div><div data-text=\"Unit 1\" class=\"ui medium rectangle test ad\"></div> <div data-text=\"Unit 2\" class=\"ui medium rectangle test ad\"></div></div>"
 ```
 
