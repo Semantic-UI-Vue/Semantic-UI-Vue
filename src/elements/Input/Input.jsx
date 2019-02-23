@@ -17,6 +17,11 @@ export default {
     inverted: Boolean,
     loading: Boolean,
     transparent: Boolean,
+    type: {
+      description: 'The HTML input type.',
+      default: 'text',
+      type: String,
+    },
     value: [String, Number],
   },
   events: {
@@ -25,6 +30,13 @@ export default {
     },
     blur: {
       custom: true,
+    },
+  },
+  methods: {
+    handleChange(event) {
+      const eventValue = event.target.value;
+      const value = this.type === 'number' ? Number(eventValue) : eventValue;
+      this.$emit('input', value);
     },
   },
   render() {
@@ -53,9 +65,10 @@ export default {
       >
         <input
           value={this.value}
-          onInput={e => this.$emit('input', e.target.value)}
+          onInput={this.handleChange}
           onBlur={e => this.$emit('blur', e)}
           ref="input"
+          type={this.type}
           {...{ attrs: this.$attrs }}
         />
         {icon}
