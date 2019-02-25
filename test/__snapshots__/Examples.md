@@ -263,7 +263,7 @@
 ####       `should match snapshot`
 
 ```
-"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">No Name Specified</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"error\"><td class=\"\">Jimmy</td> <td class=\"\">Cannot pull data</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\" error=\"\"><i class=\"attention icon\"></i>
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">No Name Specified</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr> <tr class=\"error\"><td class=\"\">Jimmy</td> <td class=\"\">Cannot pull data</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"error\"><i class=\"attention icon\"></i>
         Classified
       </td></tr> <tr class=\"\"><td class=\"\">Jill</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
@@ -285,7 +285,7 @@
 ####       `should match snapshot`
 
 ```
-"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"active\"><td class=\"\">John</td> <td class=\"\">Selected</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"\" active=\"\">Jill</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody></table>"
+"<table class=\"ui celled table\"><thead class=\"\"><tr class=\"\"><th class=\"\">Name</th> <th class=\"\">Status</th> <th class=\"\">Notes</th></tr></thead> <tbody><tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"active\"><td class=\"\">John</td> <td class=\"\">Selected</td> <td class=\"\">None</td></tr> <tr class=\"\"><td class=\"\">Jamie</td> <td class=\"\">Approved</td> <td class=\"\">Requires call</td></tr> <tr class=\"\"><td class=\"active\">Jill</td> <td class=\"\">Approved</td> <td class=\"\">None</td></tr></tbody></table>"
 ```
 
 ##     `Disabled`
