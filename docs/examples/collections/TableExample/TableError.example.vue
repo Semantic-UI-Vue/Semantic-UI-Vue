@@ -13,7 +13,7 @@
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
       </sui-table-row>
-      <sui-table-row state="error">
+      <sui-table-row error>
         <sui-table-cell>Jimmy</sui-table-cell>
         <sui-table-cell>Cannot pull data</sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
@@ -21,7 +21,7 @@
       <sui-table-row>
         <sui-table-cell>Jamie</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
-        <sui-table-cell state="error">
+        <sui-table-cell error>
           <sui-icon name="attention"/>
           Classified
         </sui-table-cell>

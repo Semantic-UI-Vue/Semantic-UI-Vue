@@ -8,7 +8,7 @@
       </sui-table-row>
     </sui-table-header>
     <sui-table-body>
-      <sui-table-row state="disabled">
+      <sui-table-row disabled>
         <sui-table-cell>Jamie</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell>Requires call</sui-table-cell>
@@ -24,7 +24,7 @@
         <sui-table-cell>Requires call</sui-table-cell>
       </sui-table-row>
       <sui-table-row>
-        <sui-table-cell state="disabled">Jill</sui-table-cell>
+        <sui-table-cell disabled>Jill</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
       </sui-table-row>

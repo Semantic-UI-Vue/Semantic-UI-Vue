@@ -13,7 +13,7 @@
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell>Requires call</sui-table-cell>
       </sui-table-row>
-      <sui-table-row state="active">
+      <sui-table-row active>
         <sui-table-cell>John</sui-table-cell>
         <sui-table-cell>Selected</sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
@@ -24,7 +24,7 @@
         <sui-table-cell>Requires call</sui-table-cell>
       </sui-table-row>
       <sui-table-row>
-        <sui-table-cell state="active">Jill</sui-table-cell>
+        <sui-table-cell active>Jill</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
       </sui-table-row>
