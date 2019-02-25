@@ -29,7 +29,7 @@
           <a href="#">Edit</a>
         </sui-table-cell>
       </sui-table-row>
-      <sui-table-row state="warning">
+      <sui-table-row warning>
         <sui-table-cell>John</sui-table-cell>
         <sui-table-cell>No Action</sui-table-cell>
         <sui-table-cell selectable>

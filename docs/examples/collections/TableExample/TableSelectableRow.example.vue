@@ -23,7 +23,7 @@
         <sui-table-cell>Denied</sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
       </sui-table-row>
-      <sui-table-row state="warning">
+      <sui-table-row warning>
         <sui-table-cell>John</sui-table-cell>
         <sui-table-cell>No Action</sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
@@ -31,7 +31,7 @@
       <sui-table-row>
         <sui-table-cell>Jamie</sui-table-cell>
         <sui-table-cell positive>Approved</sui-table-cell>
-        <sui-table-cell state="warning">Requires call</sui-table-cell>
+        <sui-table-cell warning>Requires call</sui-table-cell>
       </sui-table-row>
       <sui-table-row>
         <sui-table-cell>Jill</sui-table-cell>
