@@ -84,4 +84,13 @@ describe('Search', () => {
     expect(resultItems.at(0).text()).to.equal('Cat');
     expect(resultItems.at(1).text()).to.equal('catfish');
   });
+
+  it('should emit input event when value changes', () => {
+    const source = [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'catfish' }];
+    const search = shallow(Search, { propsData: { value: 'c', source } });
+    const input = search.find('input.prompt');
+    input.element.value = 'av';
+    input.trigger('input');
+    expect(search.emitted().input[0][0]).to.equal('av');
+  });
 });
