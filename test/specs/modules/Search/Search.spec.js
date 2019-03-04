@@ -51,6 +51,18 @@ describe('Search', () => {
     expect(description.text()).to.equal('Your search returned no results');
   });
 
+  it('should display no records message when nothing is found with given query', () => {
+    const source = [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'Catfish' }];
+    const search = shallow(Search, { propsData: { value: 'x', source } });
+    const results = search.find('.results');
+    const input = search.find('input.prompt');
+    input.trigger('focus');
+    const header = results.find('.message.empty .header');
+    const description = results.find('.message.empty .description');
+    expect(header.text()).to.equal('No Results');
+    expect(description.text()).to.equal('Your search returned no results');
+  });
+
   it('should search through local source and display filtered results', () => {
     const source = [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'Catfish' }];
     const search = shallow(Search, { propsData: { value: 'C', source } });
