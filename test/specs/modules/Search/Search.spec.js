@@ -14,8 +14,6 @@ describe('Search', () => {
   it('should not display results when value is null', () => {
     const search = shallow(Search, { propsData: { value: null } });
     const results = search.find('.results');
-    const input = search.find('input.prompt');
-    input.trigger('focus');
     expect(results.exists()).to.equal(false);
   });
 
