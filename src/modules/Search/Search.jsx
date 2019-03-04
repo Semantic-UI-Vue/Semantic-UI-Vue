@@ -1,73 +1,64 @@
 import { SemanticUIVueMixin } from '../../lib';
+import Results from './Results';
 
 export default {
-  name: 'SuiRating',
+  name: 'SuiSearch',
+  components: { Results },
   mixins: [SemanticUIVueMixin],
-  binding: {
-    prop: 'rating',
-    event: 'changed',
-  },
   props: {
-    icon: String,
-    maxRating: Number,
-    rating: Number,
-  },
-  events: {
-    rate: {
-      custom: true,
+    value: {
+      type: String,
+      default: '',
+      description: 'Value of the search',
+    },
+    source: {
+      type: Array,
+      default: () => [],
+      description: 'Specify a Javascript object which will be searched locally',
     },
   },
   data() {
     return {
-      selected: 0,
+      focused: false,
     };
   },
+  computed: {
+    resultsVisible() {
+      return !!(this.value && this.value !== '' && this.focused);
+    },
+  },
   methods: {
-    getCurrentValue(evt) {
-      return Number(evt.target.getAttribute('aria-posinset'));
+    handleInput(event) {
+      const eventValue = event.target.value;
+      const value = this.type === 'number' ? Number(eventValue) : eventValue;
+      this.$emit('input', value);
     },
-    onRate(evt) {
-      const rating = this.getCurrentValue(evt);
-      this.$emit('rate', evt, { ...this.$props, rating });
+    handleFocus() {
+      this.focused = true;
     },
-    onMouseleave() {
-      this.selected = 0;
-    },
-    onMouseover(evt) {
-      this.selected = this.getCurrentValue(evt);
+    handleBlur() {
+      this.focused = false;
     },
   },
   render() {
     const ElementType = this.getElementType();
+
     return (
-      <ElementType
-        {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'ui',
-          this.icon,
-          'rating',
-        )}
-        role="radiogroup"
-      >
-        {[...new Array(this.maxRating)].map((v, i) => {
-          const elementValue = i + 1;
-          const active = this.rating > i;
-          const selected = this.selected > i;
-          return (
-            <i
-              aria-checked={active.toString()}
-              aria-posinset={elementValue}
-              aria-setsize={this.maxRating}
-              class={this.classes(active && 'active', selected && 'selected', 'icon')}
-              tabindex="0"
-              role="radio"
-              onClick={this.onRate}
-              onMouseover={this.onMouseover}
-              onMouseleave={this.onMouseleave}
-            />
-          );
-        })}
-      </ElementType>
+        <ElementType
+          class={this.classes(
+            'ui',
+            'search',
+          )}>
+          <input onBlur={this.handleBlur}
+                 onFocus={this.handleFocus}
+                 onInput={this.handleInput}
+                 value={this.value}
+                 class={this.classes('prompt')}
+                 {...{ attrs: this.$attrs }}/>
+          {this.value !== null &&
+            <Results query={this.value} source={this.source} visible={this.resultsVisible}/>
+          }
+        </ElementType>
     );
   },
 };

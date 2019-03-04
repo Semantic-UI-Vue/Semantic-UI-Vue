@@ -1,14 +1,17 @@
 <template lang="html">
   <div>
-    <sui-rating :rating="value" :max-rating="5" />
+    <sui-search placeholder="Search animal..." :source="source" v-model="value" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RatingExample',
+  name: 'SearchExample',
   data() {
-    return { value: 1 };
+    return {
+      value: null,
+      source: [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'Catfish' }],
+    };
   },
 };
 </script>

@@ -3259,6 +3259,18 @@ Vue.use(PortalVue);
 "<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
 ```
 
+## `SearchExample`
+
+##   `Types`
+
+##     `Search`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui search\" placeholder=\"Search animal...\"><input placeholder=\"Search animal...\" class=\"prompt\"></div></div>"
+```
+
 ## `CardExample`
 
 ##   `Types`
