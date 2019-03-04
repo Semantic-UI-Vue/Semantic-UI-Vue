@@ -93,4 +93,17 @@ describe('Search', () => {
     input.trigger('input');
     expect(search.emitted().input[0][0]).to.equal('av');
   });
+
+  it('should display previous results when query is cleared', () => {
+    const source = [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'catfish' }];
+    const search = shallow(Search, { propsData: { value: 'c', source } });
+    const results = search.find('.results');
+    const input = search.find('input.prompt');
+    input.trigger('focus');
+    search.setProps({ value: '' });
+    expect(results.classes()).to.include('out');
+    const resultItems = results.findAll('.result .content .title');
+    expect(resultItems.at(0).text()).to.equal('Cat');
+    expect(resultItems.at(1).text()).to.equal('catfish');
+  });
 });
