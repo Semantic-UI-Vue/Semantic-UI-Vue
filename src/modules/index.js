@@ -5,6 +5,7 @@ export * from './Dropdown';
 export * from './Embed';
 export * from './Modal';
 export * from './Rating';
+export * from './Search';
 export * from './Sidebar';
 export * from './Popup';
 export * from './Progress';
