@@ -31,9 +31,9 @@ export default {
     },
     results() {
       const results = this.source.filter(item => item.name.toLowerCase()
-        .includes(this.query !== '' ? this.query.toLowerCase() : this.prevQuery.toLowerCase()));
+          .includes(this.query !== '' ? this.query.toLowerCase() : this.prevQuery.toLowerCase()));
       return (
-        results.length ? results.map(item => <Result item={item} />) : <EmptyMessage/>
+          results.length ? results.map(item => <Result item={item} />) : <EmptyMessage/>
       );
     },
   },
@@ -47,9 +47,9 @@ export default {
   },
   render() {
     return (
-      <div class={this.classes('results', 'transition', 'scale', 'fade', 'visible', this.transitionClass)}>
-        {this.results}
-      </div>
+        <div class={this.classes('results', 'transition', 'scale', 'fade', 'visible', this.transitionClass)}>
+          {this.results}
+        </div>
     );
   },
 };
