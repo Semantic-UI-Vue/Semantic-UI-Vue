@@ -11,7 +11,7 @@ describe('Search', () => {
     expect(search.exists()).to.equal(true);
   });
 
-  it('should not display results when value is null', () => {
+  it('should not display results before first search', () => {
     const search = shallow(Search, { propsData: { value: null } });
     const results = search.find('.results');
     expect(results.exists()).to.equal(false);
