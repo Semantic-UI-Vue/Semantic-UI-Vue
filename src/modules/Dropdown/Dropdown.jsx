@@ -561,7 +561,7 @@ export default {
     },
   },
   render() {
-    const ElementType = this.getElementType(this.button ? 'button' : 'div');
+    const ElementType = this.getElementType('div');
 
     const eventHandlers = {
       '!mousedown': this.handleMouseDown,
