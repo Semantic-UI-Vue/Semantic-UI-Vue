@@ -2730,7 +2730,7 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Select Language</div><i aria-hidden=\"true\" class=\"world icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Arabic</div><div role=\"option\" class=\"item\">Chinese</div><div role=\"option\" class=\"item\">Danish</div><div role=\"option\" class=\"item\">Dutch</div><div role=\"option\" class=\"item\">English</div><div role=\"option\" class=\"item\">French</div><div role=\"option\" class=\"item\">German</div><div role=\"option\" class=\"item\">Greek</div><div role=\"option\" class=\"item\">Hungarian</div><div role=\"option\" class=\"item\">Italian</div><div role=\"option\" class=\"item\">Japanese</div><div role=\"option\" class=\"item\">Korean</div><div role=\"option\" class=\"item\">Lithuanian</div><div role=\"option\" class=\"item\">Persian</div><div role=\"option\" class=\"item\">Polish</div><div role=\"option\" class=\"item\">Portuguese</div><div role=\"option\" class=\"item\">Russian</div><div role=\"option\" class=\"item\">Spanish</div><div role=\"option\" class=\"item\">Swedish</div><div role=\"option\" class=\"item\">Turkish</div><div role=\"option\" class=\"item\">Vietnamese</div></div></button></div>"
+"<div id=\"app\"><div role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled search dropdown\"><input type=\"text\" aria-autocomplete=\"list\" autocomplete=\"off\" tabindex=\"0\" class=\"search\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Select Language</div><i aria-hidden=\"true\" class=\"world icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Arabic</div><div role=\"option\" class=\"item\">Chinese</div><div role=\"option\" class=\"item\">Danish</div><div role=\"option\" class=\"item\">Dutch</div><div role=\"option\" class=\"item\">English</div><div role=\"option\" class=\"item\">French</div><div role=\"option\" class=\"item\">German</div><div role=\"option\" class=\"item\">Greek</div><div role=\"option\" class=\"item\">Hungarian</div><div role=\"option\" class=\"item\">Italian</div><div role=\"option\" class=\"item\">Japanese</div><div role=\"option\" class=\"item\">Korean</div><div role=\"option\" class=\"item\">Lithuanian</div><div role=\"option\" class=\"item\">Persian</div><div role=\"option\" class=\"item\">Polish</div><div role=\"option\" class=\"item\">Portuguese</div><div role=\"option\" class=\"item\">Russian</div><div role=\"option\" class=\"item\">Spanish</div><div role=\"option\" class=\"item\">Swedish</div><div role=\"option\" class=\"item\">Turkish</div><div role=\"option\" class=\"item\">Vietnamese</div></div></div></div>"
 ```
 
 ##     `Search In-Menu`
@@ -2738,7 +2738,7 @@
 ####       `should match snapshot`
 
 ```
-"<button role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled dropdown\" menu-header=\"[object Object]\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Filter Posts</div><i aria-hidden=\"true\" class=\"filter icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div class=\"ui left icon input\"><input type=\"text\"><i class=\"search icon\"></i></div><div class=\"ui divider\"></div><div role=\"option\" class=\"item\"><div class=\"ui red circular empty label\"></div>Important</div><div role=\"option\" class=\"item\"><div class=\"ui blue circular empty label\"></div>Announcement</div><div role=\"option\" class=\"item\"><div class=\"ui black circular empty label\"></div>Cannot Fix</div><div role=\"option\" class=\"item\"><div class=\"ui purple circular empty label\"></div>News</div><div role=\"option\" class=\"item\"><div class=\"ui orange circular empty label\"></div>Enhancement</div><div role=\"option\" class=\"item\"><div class=\"ui circular empty label\"></div>Change Declined</div><div role=\"option\" class=\"item\"><div class=\"ui yellow circular empty label\"></div>Off Topic</div><div role=\"option\" class=\"item\"><div class=\"ui pink circular empty label\"></div>Interesting</div><div role=\"option\" class=\"item\"><div class=\"ui green circular empty label\"></div>Discussion</div></div></button>"
+"<div role=\"listbox\" tabindex=\"0\" class=\"icon ui button floating labeled dropdown\" menu-header=\"[object Object]\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Filter Posts</div><i aria-hidden=\"true\" class=\"filter icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div class=\"ui left icon input\"><input type=\"text\"><i class=\"search icon\"></i></div><div class=\"ui divider\"></div><div role=\"option\" class=\"item\"><div class=\"ui red circular empty label\"></div>Important</div><div role=\"option\" class=\"item\"><div class=\"ui blue circular empty label\"></div>Announcement</div><div role=\"option\" class=\"item\"><div class=\"ui black circular empty label\"></div>Cannot Fix</div><div role=\"option\" class=\"item\"><div class=\"ui purple circular empty label\"></div>News</div><div role=\"option\" class=\"item\"><div class=\"ui orange circular empty label\"></div>Enhancement</div><div role=\"option\" class=\"item\"><div class=\"ui circular empty label\"></div>Change Declined</div><div role=\"option\" class=\"item\"><div class=\"ui yellow circular empty label\"></div>Off Topic</div><div role=\"option\" class=\"item\"><div class=\"ui pink circular empty label\"></div>Interesting</div><div role=\"option\" class=\"item\"><div class=\"ui green circular empty label\"></div>Discussion</div></div></div>"
 ```
 
 ##     `Loading`
@@ -2754,8 +2754,8 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"labeled
-    icon ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"file icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></button></div>"
+"<div id=\"app\"><div role=\"listbox\" tabindex=\"0\" class=\"labeled
+    icon ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"file icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></div></div>"
 ```
 
 ##     `Pointing`
@@ -2763,7 +2763,7 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Options</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Settings</div> <div role=\"option\" class=\"item\">Manage apps</div> <div role=\"option\" class=\"item\">Help</div></div></button></div>"
+"<div id=\"app\"><div role=\"listbox\" tabindex=\"0\" class=\"ui button dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Options</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">Settings</div> <div role=\"option\" class=\"item\">Manage apps</div> <div role=\"option\" class=\"item\">Help</div></div></div></div>"
 ```
 
 ##     `Floating`
@@ -2771,7 +2771,7 @@
 ####       `should match snapshot`
 
 ```
-"<div id=\"app\"><button role=\"listbox\" tabindex=\"0\" class=\"teal ui button floating dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Save</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\"><i class=\"edit icon\"></i>Edit Post</div> <div role=\"option\" class=\"item\"><i class=\"delete icon\"></i>Remove Post</div> <div role=\"option\" class=\"item\"><i class=\"hide icon\"></i>Hide Post</div></div></button></div>"
+"<div id=\"app\"><div role=\"listbox\" tabindex=\"0\" class=\"teal ui button floating dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">Save</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\"><i class=\"edit icon\"></i>Edit Post</div> <div role=\"option\" class=\"item\"><i class=\"delete icon\"></i>Remove Post</div> <div role=\"option\" class=\"item\"><i class=\"hide icon\"></i>Hide Post</div></div></div></div>"
 ```
 
 ##   `Usage`
@@ -3113,7 +3113,12 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item active\"><span>HTML</span></a><a class=\"item\"><span>CSS</span></a><a class=\"item\"><span>JavaScript</span></a></div><div class=\"ui tab segment attached active\"><h3>HTML</h3> <p>
+        HTML (HyperText Markup Language) is the most basic building block of the Web.
+        It describes and defines the content of a webpage along with the basic layout of
+        the webpage. Other technologies besides HTML are generally used to describe a web
+        page's appearance/presentation (CSS) or functionality/ behavior (JavaScript).
+      </p> <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML\">developer.mozilla.org</a></div> <!----> <!----></div></div>"
 ```
 
 ##     `Pointing Menu`
@@ -3121,7 +3126,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui pointing menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui pointing menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##     `Secondary Menu`
@@ -3129,7 +3136,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui secondary menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui secondary menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##     `Text Menu`
@@ -3137,7 +3146,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui text menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui text menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##   `States`
@@ -3147,7 +3158,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment loading attached active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##     `Disabled`
@@ -3155,7 +3168,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><button role=\"button\" class=\"ui button\">Toggle Disabled Tab</button> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+"<div><button role=\"button\" class=\"ui button\">Toggle Disabled Tab</button> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item disabled\"><span>Secret Triangle</span></a></div><div class=\"ui tab segment attached active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##   `Menu Variations`
@@ -3165,7 +3180,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><!----> <!----> <!----><div class=\"ui bottom attached menu\"></div></div></div>"
+"<div><div><div class=\"ui tab segment attached active top\">
+      Circle
+    </div> <!----> <!----><div class=\"ui bottom attached menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div></div></div>"
 ```
 
 ##     `Not Tabular`
@@ -3173,7 +3190,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##     `Borderless`
@@ -3181,7 +3200,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui borderless menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui borderless menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##     `Colored`
@@ -3201,7 +3222,9 @@ Vue.use(PortalVue);
       blue
     </option><option value=\"purple\">
       purple
-    </option></select> <div class=\"ui hidden divider\"></div> <div><div class=\"ui blue menu\"></div><!----> <!----> <!----></div></div>"
+    </option></select> <div class=\"ui hidden divider\"></div> <div><div class=\"ui blue menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><div class=\"ui tab segment active\">
+      Circle
+    </div> <!----> <!----></div></div>"
 ```
 
 ##     `Vertical Tabular`
@@ -3209,7 +3232,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"four wide column\"><div class=\"ui vertical fluid tabular menu\"></div></div><div class=\"twelve wide column stretched\"><!----> <!----> <!----></div></div></div></div></div>"
+"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"four wide column\"><div class=\"ui vertical fluid tabular menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div></div><div class=\"twelve wide column stretched\"><div class=\"ui tab segment attached active\">
+      Circle
+    </div> <!----> <!----></div></div></div></div></div>"
 ```
 
 ##     `Menu Position`
@@ -3217,7 +3242,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"twelve wide column stretched\"><!----> <!----> <!----></div><div class=\"four wide column\"><div class=\"ui vertical fluid menu\"></div></div></div></div></div></div>"
+"<div><div><div class=\"ui grid\"><div class=\"row\"><div class=\"twelve wide column stretched\"><div class=\"ui tab segment attached active\">
+      Circle
+    </div> <!----> <!----></div><div class=\"four wide column\"><div class=\"ui vertical fluid menu\"><a class=\"item active\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div></div></div></div></div></div>"
 ```
 
 ##   `Usage`
@@ -3227,7 +3254,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><p>Active Index 1</p> <input type=\"range\" max=\"2\"> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+"<div><p>Active Index 1</p> <input type=\"range\" max=\"2\"> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"><a class=\"item\"><span>Circle</span></a><a class=\"item active\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><!----> <div class=\"ui tab segment attached active\">
+      Box
+    </div> <!----></div></div>"
 ```
 
 ##     `Default Active Index`
@@ -3235,7 +3264,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item\"><span>Circle</span></a><a class=\"item\"><span>Box</span></a><a class=\"item active\"><span>Triangle</span></a></div><!----> <!----> <div class=\"ui tab segment attached active\">
+      Triangle
+    </div></div></div>"
 ```
 
 ##     `On Tab Change`
@@ -3246,9 +3277,11 @@ Vue.use(PortalVue);
 "<div><p>
     Control active pane from outside,
     <a href=\"#\">Circle</a>,
-    <a href=\"#\">Box</a>,
+    <span>Box</span>,
     <a href=\"#\">Triangle</a>,
-  </p> <div class=\"ui hidden divider\"></div> <table class=\"ui very compact fixed table\"><tbody><tr class=\"\"><td class=\"\">Index</td> <td class=\"\"></td></tr> <tr class=\"\"><td class=\"\">Label</td> <td class=\"\"></td></tr> <tr class=\"\"><td class=\"\">Clicked on the Tab Pane</td> <td class=\"\"><code></code></td></tr></tbody></table> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+  </p> <div class=\"ui hidden divider\"></div> <table class=\"ui very compact fixed table\"><tbody><tr class=\"\"><td class=\"\">Index</td> <td class=\"\">1</td></tr> <tr class=\"\"><td class=\"\">Label</td> <td class=\"\">Box</td></tr> <tr class=\"\"><td class=\"\">Clicked on the Tab Pane</td> <td class=\"\"><code>false</code></td></tr></tbody></table> <div class=\"ui hidden divider\"></div> <div><div class=\"ui true attached tabular menu\"><a class=\"item\"><span>Circle</span></a><a class=\"item active\"><span>Box</span></a><a class=\"item\"><span>Triangle</span></a></div><!----> <div class=\"ui tab segment attached active\">
+      Box
+    </div> <!----></div></div>"
 ```
 
 ##     `Adding Icons and Labels`
@@ -3256,7 +3289,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><div><div class=\"ui true attached tabular menu\"></div><!----> <!----> <!----></div></div>"
+"<div><div><div class=\"ui true attached tabular menu\"><a class=\"item\"><i class=\"users icon\"></i><span>Circle</span></a><a class=\"item\"><span>Box</span><div class=\"ui label\">0</div></a><a class=\"item active\"><i class=\"check icon\"></i><span>Triangle</span><div class=\"ui label\">14</div></a></div><!----> <!----> <div class=\"ui tab segment attached active\">
+      Triangle
+    </div></div></div>"
 ```
 
 ## `SearchExample`

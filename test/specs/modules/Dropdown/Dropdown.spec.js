@@ -11,7 +11,7 @@ const DropdownWithRequired = common.withRequired(Dropdown, { options: [] });
 
 describe('Dropdown', () => {
   common.testTag(DropdownWithRequired, 'div', {
-    button: 'button',
+    button: 'div',
   });
   common.testClass(DropdownWithRequired, ['ui', 'dropdown']);
   common.testClassFromProps(DropdownWithRequired, [
