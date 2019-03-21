@@ -16,16 +16,30 @@ export default {
       default: () => [],
       description: 'Specify a Javascript object which will be searched locally',
     },
+    minCharacters: {
+      type: Number,
+      default: 1,
+      descriptiom: 'Minimum characters to query for results',
+    },
   },
   data() {
     return {
       focused: false,
+      firstSearch: null,
     };
   },
   computed: {
     resultsVisible() {
-      return !!(this.value && this.value !== '' && this.focused);
+      return !!(this.value && (this.value.length >= this.minCharacters) && this.focused);
     },
+  },
+  watch: {
+    value() {
+      this.checkFirstSearch();
+    },
+  },
+  created() {
+    this.checkFirstSearch();
   },
   methods: {
     handleInput(event) {
@@ -39,24 +53,29 @@ export default {
     handleBlur() {
       this.focused = false;
     },
+    checkFirstSearch() {
+      if (this.value && (this.value.length >= this.minCharacters) && this.firstSearch === null) {
+        this.firstSearch = true;
+      }
+    },
   },
   render() {
     const ElementType = this.getElementType();
 
     return (
         <ElementType
-          class={this.classes(
-            'ui',
-            'search',
-          )}>
+            class={this.classes(
+                'ui',
+                'search',
+            )}>
           <input onBlur={this.handleBlur}
                  onFocus={this.handleFocus}
                  onInput={this.handleInput}
                  value={this.value}
                  class={this.classes('prompt')}
                  {...{ attrs: this.$attrs }}/>
-          {this.value !== null &&
-            <Results query={this.value} source={this.source} visible={this.resultsVisible}/>
+          {this.firstSearch &&
+          <Results query={this.value} source={this.source} visible={this.resultsVisible}/>
           }
         </ElementType>
     );
