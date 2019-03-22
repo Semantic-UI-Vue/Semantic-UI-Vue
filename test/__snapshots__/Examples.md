@@ -3279,6 +3279,14 @@ Vue.use(PortalVue);
 "<div><div class=\"ui search\" placeholder=\"Search animal...\"><input placeholder=\"Search animal...\" class=\"prompt\"></div></div>"
 ```
 
+##     `Min characters`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui search\" placeholder=\"Search animal...\"><input placeholder=\"Search animal...\" class=\"prompt\"></div></div>"
+```
+
 ## `CardExample`
 
 ##   `Types`
