@@ -10,7 +10,8 @@
         <sui-feed-meta>
           <sui-feed-like>
             <sui-icon name="like" />
-            4 Likes</sui-feed-like>
+            4 Likes
+          </sui-feed-like>
         </sui-feed-meta>
       </sui-feed-content>
     </sui-feed-event>

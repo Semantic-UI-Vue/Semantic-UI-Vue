@@ -13,7 +13,7 @@
         <sui-card-content extra>
           <sui-icon name="user" /> 75 Friends
           <span slot="right">Joined in 2013</span>
-          </sui-card-content>
+        </sui-card-content>
       </sui-card>
       <sui-card>
         <sui-image src="static/images/avatar/large/molly.png" />
@@ -27,7 +27,7 @@
         <sui-card-content extra>
           <sui-icon name="user" /> 35 Friends
           <span slot="right">Joined in 2011</span>
-          </sui-card-content>
+        </sui-card-content>
       </sui-card>
       <sui-card>
         <sui-image src="static/images/avatar/large/elyse.png" />
@@ -41,10 +41,9 @@
         <sui-card-content extra>
           <sui-icon name="user" /> 151 Friends
           <span slot="right">Joined in 2014</span>
-          </sui-card-content>
+        </sui-card-content>
       </sui-card>
     </sui-card-group>
-
   </div>
 </template>
 

@@ -15,7 +15,8 @@
       </sui-card-content>
       <sui-card-content extra>
         <sui-icon name="users" />
-        2 Members</sui-card-content>
+        2 Members
+      </sui-card-content>
     </sui-card>
   </div>
 </template>

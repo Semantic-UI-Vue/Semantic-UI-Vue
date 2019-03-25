@@ -68,8 +68,7 @@
     <form reply>
       <form-text-area />
       <sui-button
-        content="Add
-        Reply"
+        content="Add Reply"
         label-position="left"
         icon="edit"
         primary
