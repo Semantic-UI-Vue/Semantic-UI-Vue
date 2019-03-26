@@ -1,4 +1,5 @@
-import Search from './Search.example';
+import SearchStandard from './Search.standard.example';
+import SearchMinCharacters from './Search.minCharacters.example';
 
 export default [
   {
@@ -7,7 +8,12 @@ export default [
       {
         title: 'Search',
         description: 'A basic search element',
-        component: Search,
+        component: SearchStandard,
+      },
+      {
+        title: 'Min characters',
+        description: 'An example of minimal characters to search requirement (min 3)',
+        component: SearchMinCharacters,
       },
     ],
   },
