@@ -1,3 +1,6 @@
+import groupBy from 'lodash.groupby';
+import sortBy from 'lodash.sortby';
+import forIn from 'lodash.forin';
 import { SemanticUIVueMixin } from '../../lib';
 import EmptyMessage from './EmptyMessage';
 import Result from './Result';
@@ -19,6 +22,14 @@ export default {
       type: String,
       default: '',
     },
+    category: {
+      type: Boolean,
+      default: false,
+    },
+    firstFocus: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -30,11 +41,11 @@ export default {
       return (this.visible) ? 'in' : 'out';
     },
     results() {
-      const results = this.source.filter(item => item.name.toLowerCase()
-          .includes(this.query !== '' ? this.query.toLowerCase() : this.prevQuery.toLowerCase()));
-      return (
-          results.length ? results.map(item => <Result item={item} />) : <EmptyMessage/>
-      );
+      const results = this.filterResults(this.source, this.query, this.prevQuery);
+      return this.category ? this.renderCategoryResults(results) : this.renderResults(results);
+    },
+    visibleClass() {
+      return this.firstFocus ? 'visible' : '';
     },
   },
   watch: {
@@ -45,9 +56,47 @@ export default {
   mounted() {
     this.prevQuery = this.query;
   },
+  methods: {
+    renderResults(results) {
+      return results.length ? results.map(item => this.renderResult(item)) : <EmptyMessage/>;
+    },
+    renderCategoryResults(results) {
+      const categorizedResultsObject = groupBy(results, 'category');
+      let categorizedResultsArray = [];
+      forIn(categorizedResultsObject, (value, key) => categorizedResultsArray.push(
+          { name: key, items: value },
+      ));
+
+      categorizedResultsArray = sortBy(categorizedResultsArray, 'name');
+
+      return categorizedResultsArray.length
+              ? categorizedResultsArray.map(category => this.renderCategory(category))
+              : <EmptyMessage/>;
+    },
+    renderResult(item) {
+      return <Result onSelected={this.handleSelect} item={item} />;
+    },
+    filterResults(results, query, prevQuery) {
+      return results.filter(item => item.title.toLowerCase()
+          .includes(query !== '' ? query.toLowerCase() : prevQuery.toLowerCase()));
+    },
+    renderCategory(category) {
+      return (
+        <div class={this.classes('category')}>
+          <div class={this.classes('name')}>{category.name}</div>
+          <div class={this.classes('results')}>
+            {category.items.map(item => this.renderResult(item))}
+          </div>
+        </div>
+      );
+    },
+    handleSelect(item) {
+      this.$emit('selected', item);
+    },
+  },
   render() {
     return (
-        <div class={this.classes('results', 'transition', 'scale', 'fade', 'visible', this.transitionClass)}>
+        <div class={this.classes('results', 'transition', 'scale', 'fade', this.visibleClass, this.transitionClass)}>
           {this.results}
         </div>
     );
