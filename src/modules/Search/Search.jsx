@@ -26,6 +26,11 @@ export default {
       default: false,
       description: 'Whether to display search component in category mode.',
     },
+    input: {
+      type: Boolean,
+      default: false,
+      description: 'Whether the search component should has input class.',
+    },
   },
   data() {
     return {
@@ -70,6 +75,19 @@ export default {
     handleInput(event) {
       this.internalQuery = event.target.value;
     },
+    renderInput() {
+      let input = <input onBlur={this.handleBlur}
+                    onFocus={this.handleFocus}
+                    onInput={this.handleInput}
+                    value={this.value}
+                    class={this.classes('prompt')}
+                    {...{ attrs: this.$attrs }}/>;
+      input = this.input
+          ? <div class={this.classes('ui', 'icon', 'input')}>{input}{this.$slots.icon}</div>
+          : input;
+
+      return input;
+    },
   },
   render() {
     const ElementType = this.getElementType();
@@ -81,12 +99,7 @@ export default {
                 'search',
                 this.category ? 'category' : '',
             )}>
-          <input onBlur={this.handleBlur}
-                 onFocus={this.handleFocus}
-                 onInput={this.handleInput}
-                 value={this.internalQuery}
-                 class={this.classes('prompt')}
-                 {...{ attrs: this.$attrs }}/>
+            {this.renderInput()}
           {this.firstSearch &&
           <Results query={this.internalQuery}
                    source={this.source}

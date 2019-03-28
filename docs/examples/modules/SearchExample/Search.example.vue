@@ -1,9 +1,6 @@
 <template lang="html">
   <div>
-    <sui-search
-            placeholder="Search animal..."
-            :source="source"
-            v-model="value"/>
+    <sui-search placeholder="Search animal..." :source="source" v-model="value" />
   </div>
 </template>
 
@@ -13,7 +10,7 @@ export default {
   data() {
     return {
       value: null,
-      source: [{ title: 'Horse', description: 'asd' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }],
+      source: [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'Catfish' }],
     };
   },
 };

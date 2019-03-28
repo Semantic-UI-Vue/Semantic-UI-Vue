@@ -3268,6 +3268,14 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
+"<div><div class=\"ui search\" placeholder=\"Search animal...\"><input placeholder=\"Search animal...\" class=\"prompt\"></div> <div class=\"ui message\">Using a ui input allows you to use additional input types, like this icon input</div> <div class=\"ui search\" placeholder=\"Search animal...\"><div class=\"ui icon input\"><input placeholder=\"Search animal...\" class=\"prompt\"><i class=\"search icon\"></i></div></div></div>"
+```
+
+##     `Min characters`
+
+####       `should match snapshot`
+
+```
 "<div><div class=\"ui search\" placeholder=\"Search animal...\"><input placeholder=\"Search animal...\" class=\"prompt\"></div></div>"
 ```
 
