@@ -9,11 +9,17 @@ export default {
       default: null,
     },
   },
+  methods: {
+    handleClick() {
+      this.$emit('selected', this.item);
+    },
+  },
   render() {
     return (
-      <a class="result">
+      <a onClick={this.handleClick} class="result">
         <div class="content">
-          <div class="title">{this.item.name}</div>
+          <div class="title">{this.item.title}</div>
+          {this.item.description && <div class="description">{this.item.description}</div>}
         </div>
       </a>
     );

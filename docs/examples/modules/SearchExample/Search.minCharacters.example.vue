@@ -14,7 +14,7 @@
       data() {
         return {
           value: null,
-          source: [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'Catfish' }],
+          source: [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }],
         };
       },
     };
