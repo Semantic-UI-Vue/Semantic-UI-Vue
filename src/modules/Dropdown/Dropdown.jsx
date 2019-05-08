@@ -263,6 +263,7 @@ export default {
       return this.multipleValue.map((value) => {
         const existingOption = this.findOption(value);
         const option = this.allowAdditions && !existingOption ? { text: value } : existingOption;
+        if (typeof option === 'undefined') return false;
         return (
           <Label nativeOnClick={this.handleClickOnSelectedNode}>
             {option.icon && <Icon name={option.icon} />}
@@ -272,7 +273,7 @@ export default {
             <Icon name="delete" nativeOnClick={() => this.deselectItem(value)} />
           </Label>
         );
-      });
+      }).filter(elm => elm !== false);
     },
     textNode() {
       const defaultText = this.text || this.placeholder;
