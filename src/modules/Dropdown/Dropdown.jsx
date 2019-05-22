@@ -412,8 +412,8 @@ export default {
       }
     },
     handleBlur(e) {
-      var filter = this.filter;
-      if(filter!='' && this.multiple){
+      const filter = this.filter;
+      if (filter!=='' && this.multiple) {
         this.selectItem(filter);
       }
       if (this.isMouseDown || e.relatedTarget === this.$refs.search) {
