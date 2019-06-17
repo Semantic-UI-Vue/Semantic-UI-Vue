@@ -327,4 +327,29 @@ describe('Dropdown', () => {
 
     expect(wrapper.emitted().input).to.be.undefined;
   });
+
+  describe('allowAdditions', () => {
+    it('should allow non-existent values if allowAdditions is true', () => {
+      const wrapper = shallow(DropdownWithRequired, {
+        propsData: {
+          multiple: true,
+          allowAdditions: true,
+          value: [1, 2, 4000],
+          options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
+        },
+      });
+      expect(wrapper.vm.selectedNodes.length).to.equal(3);
+    });
+
+    it('should select only existent values if allowAdditions is false. #320', () => {
+      const wrapper = shallow(DropdownWithRequired, {
+        propsData: {
+          multiple: true,
+          value: [1, 2, 4000],
+          options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
+        },
+      });
+      expect(wrapper.vm.selectedNodes.length).to.equal(2);
+    });
+  });
 });
