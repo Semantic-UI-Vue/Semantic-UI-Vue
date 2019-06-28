@@ -263,6 +263,9 @@ export default {
       return this.multipleValue.map((value) => {
         const existingOption = this.findOption(value);
         const option = this.allowAdditions && !existingOption ? { text: value } : existingOption;
+        if (!option) {
+          return null;
+        }
         return (
           <Label nativeOnClick={this.handleClickOnSelectedNode}>
             {option.icon && <Icon name={option.icon} />}
@@ -272,7 +275,7 @@ export default {
             <Icon name="delete" nativeOnClick={() => this.deselectItem(value)} />
           </Label>
         );
-      });
+      }).filter(v => v != null);
     },
     textNode() {
       const defaultText = this.text || this.placeholder;
