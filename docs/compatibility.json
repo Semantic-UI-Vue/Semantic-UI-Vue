@@ -275,25 +275,25 @@
             "implemented": true
           }, {
             "name": "link",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "flipped",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "rotated",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "circular",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "bordered",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "colored",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "inverted",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "groups",
