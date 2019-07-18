@@ -299,10 +299,10 @@
           "name": "groups",
           "examples": [{
             "name": "icons",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "corner icon",
-            "implemented": false
+            "implemented": true
           }]
         }]
       },

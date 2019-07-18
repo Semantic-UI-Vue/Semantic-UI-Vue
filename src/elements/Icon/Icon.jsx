@@ -1,4 +1,4 @@
-import { SemanticUIVueMixin, iconFlipped, iconRotation } from '../../lib';
+import { SemanticUIVueMixin, iconFlipped, iconRotation, iconCorner } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -16,6 +16,10 @@ export default {
     color: Enum.Color({
       description: 'Icon color.',
     }),
+    corner: {
+      type: [Boolean, String],
+      description: 'Align icon to corner',
+    },
     disabled: {
       type: Boolean,
       description: 'Reducing icon opacity to create "disabled icon" effect.',
@@ -44,6 +48,7 @@ export default {
       required: true,
       description: 'Icon name.',
     },
+    outline: Boolean,
     rotated: Enum.RotateDirection({
       description: 'Icon rotate direction.',
     }),
@@ -62,6 +67,7 @@ export default {
           this.bordered && 'bordered',
           this.circular && 'circular',
           this.inverted && 'inverted',
+          iconCorner(this.corner),
           this.color,
           this.name,
           this.size,
@@ -69,6 +75,7 @@ export default {
           this.fitted && 'fitted',
           this.link && 'link',
           this.loading && 'loading',
+          this.outline && 'outline',
           'icon',
         )}
       />
