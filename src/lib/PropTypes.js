@@ -55,3 +55,4 @@ Enum.Emphasis = Enum.Extend(['secondary', 'tertiary']);
 Enum.Floated = Enum.Extend(['right', 'left']);
 Enum.Direction = Enum.Extend(['horizontally', 'vertically']);
 Enum.RotateDirection = Enum.Extend(['clockwise', 'counterclockwise']);
+Enum.Corner = Enum.Extend(['top left', 'top right', 'bottom left', 'bottom right']);

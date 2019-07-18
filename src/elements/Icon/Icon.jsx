@@ -16,10 +16,10 @@ export default {
     color: Enum.Color({
       description: 'Icon color.',
     }),
-    corner: {
+    corner: Enum.Corner({
       type: [Boolean, String],
       description: 'Align icon to corner',
-    },
+    }),
     disabled: {
       type: Boolean,
       description: 'Reducing icon opacity to create "disabled icon" effect.',
@@ -48,7 +48,10 @@ export default {
       required: true,
       description: 'Icon name.',
     },
-    outline: Boolean,
+    outline: {
+      type: Boolean,
+      description: 'Set font-family icon to outlined',
+    },
     rotated: Enum.RotateDirection({
       description: 'Icon rotate direction.',
     }),
