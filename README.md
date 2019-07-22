@@ -142,8 +142,8 @@ Usage:
 ```js
 {
   modules: [
-    'semantic-ui-vue/nuxt', // includes styles from semantic-ui-css
-    ['semantic-ui-vue/nuxt', {css: false}] // if you have your own semantic-ui styles
+    '@/node_modules/semantic-ui-vue/nuxt', // includes styles from semantic-ui-css
+    ['@/node_modules/semantic-ui-vue/nuxt', {css: false}] // if you have your own semantic-ui styles
   ]
 }
 ```
