@@ -132,6 +132,11 @@ export default {
       default: 'Max {selections} selections',
       description: 'Message to display when the maximum amount of selections is reached.',
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+      description: 'Whether or not the dropdown is disabled',
+    },
   },
   events: {
     input: {
@@ -592,6 +597,7 @@ export default {
           this.selection && 'selection',
           this.search && 'search',
           this.open && 'active visible',
+          this.disabled && 'disabled',
           !this.downward && directions.upward,
           'dropdown',
         )}
