@@ -41,7 +41,7 @@ Enum.Color = Enum.Extend([
   'violet', 'purple', 'pink', 'brown', 'grey', 'black',
 ]);
 Enum.Attached = Enum.Extend(['top', 'bottom']);
-Enum.TextAlign = Enum.Extend(['left', 'right', 'center', 'justify']);
+Enum.TextAlign = Enum.Extend(['left', 'right', 'center', 'justified']);
 Enum.VerticalAlign = Enum.Extend(['top', 'middle', 'bottom']);
 Enum.Social = Enum.Extend(['facebook', 'twitter', 'google', 'google plus', 'vk', 'instagram', 'linkedin', 'youtube']);
 Enum.Number = Enum.Extend([
@@ -53,3 +53,6 @@ Enum.Number = Enum.Extend([
 Enum.Padded = Enum.Extend(['very']);
 Enum.Emphasis = Enum.Extend(['secondary', 'tertiary']);
 Enum.Floated = Enum.Extend(['right', 'left']);
+Enum.Direction = Enum.Extend(['horizontally', 'vertically']);
+Enum.RotateDirection = Enum.Extend(['clockwise', 'counterclockwise']);
+Enum.Corner = Enum.Extend(['top left', 'top right', 'bottom left', 'bottom right']);
