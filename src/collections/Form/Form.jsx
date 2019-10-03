@@ -24,7 +24,7 @@ export default {
       type: Boolean,
       description: 'Automatically show any error Message children.',
     },
-    state: Enum(['success', 'warning', 'error'], {
+    state: Enum(['success', 'warning', 'error', 'loading'], {
       description: 'You can set the state of form using one variable',
     }),
     inverted: {
