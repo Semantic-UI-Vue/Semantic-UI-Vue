@@ -233,6 +233,7 @@ export default {
                     ? this.multipleValue.indexOf(option.value) !== -1
                     : this.value === option.value
                 }
+                class={option.class}
                 selected={this.selectedIndex === index}
                 onSelect={this.selectItem}
               />
