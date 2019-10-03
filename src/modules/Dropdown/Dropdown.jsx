@@ -324,7 +324,8 @@ export default {
     filteredOptions() {
       this.updateSelectedIndex();
     },
-    filter() {
+    filter(val) {
+      this.$emit('filtered', val);
       if (this.search) {
         this.resizeInput();
       }
