@@ -15,6 +15,7 @@ import SearchDropdown from './SearchDropdown.example';
 import SearchSelection from './SearchSelection.example';
 import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
 import LoadingExample from './Loading.example';
+import DisabledDropdown from './DisabledDropdown.example';
 
 export default [
   {
@@ -24,6 +25,11 @@ export default [
         title: 'Dropdown',
         description: 'A dropdown.',
         component: Dropdown,
+      },
+      {
+        title: 'Disabled dropdown',
+        description: 'A dropdown that is disabled.',
+        component: DisabledDropdown,
       },
       {
         title: 'Selection',
