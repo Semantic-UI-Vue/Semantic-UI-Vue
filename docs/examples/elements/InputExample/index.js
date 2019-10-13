@@ -4,6 +4,12 @@ import Loading from './Loading.example';
 import Loading2 from './Loading2.example';
 import Disabled from './Disabled.example';
 import Icon from './Icon.example';
+import Size from './Size.example';
+import Size2 from './Size2.example';
+import Size3 from './Size3.example';
+import Size4 from './Size4.example';
+import Size5 from './Size5.example';
+import Size6 from './Size6.example';
 
 export default [
   {
@@ -46,6 +52,26 @@ export default [
         title: 'Icon',
         description: 'An input can be formatted with an icon',
         component: Icon,
+      },
+      {
+        title: 'Size',
+        description: 'An input can vary in size',
+        component: Size,
+      },
+      {
+        component: Size2,
+      },
+      {
+        component: Size3,
+      },
+      {
+        component: Size4,
+      },
+      {
+        component: Size5,
+      },
+      {
+        component: Size6,
       },
     ],
   },
