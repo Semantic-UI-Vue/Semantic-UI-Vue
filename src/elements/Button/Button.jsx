@@ -86,7 +86,7 @@ export default {
       type: [Number, String],
       description: 'A button can receive focus.',
     },
-    toggle: { // TODO: Add props and functional for toggle buttons
+    toggle: {
       type: Boolean,
       description: 'A button can be formatted to toggle on and off.',
     },
@@ -121,6 +121,7 @@ export default {
       !label && this.labelPosition && this.labelPosition,
       !label && this.labelPosition && 'labeled',
       this.loading && 'loading',
+      this.toggle && 'toggle',
       this.negative && 'negative',
       this.positive && 'positive',
       this.primary && 'primary',
