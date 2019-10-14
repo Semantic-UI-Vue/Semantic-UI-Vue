@@ -216,6 +216,24 @@
 "<div><div class=\"ui message\" name=\"fade\"><i class=\"close icon\"></i><div class=\"header\">Welcome back!</div>This is a special notification which you can dismiss.</div> <!----></div>"
 ```
 
+##   `States`
+
+##     `Hidden`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui hidden message\"><p>You can't see me</p></div></div>"
+```
+
+##     `Visible`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui visible message\"><p>You can always see me</p></div></div>"
+```
+
 ## `TableExample`
 
 ##   `Types`
@@ -798,21 +816,21 @@
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui container\">
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa <b>strong</b>. Cum sociis natoque penatibus
-  et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-  quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-  arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-  Nullam dictum felis eu pede <a href=\"javascript:void 0\">link</a> mollis
-  pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-  vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
-  feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-  ullamcorper ultricies nisi.
-</div>"
+"<div class=\"ui container\"><p>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+    ligula eget dolor. Aenean massa <b>strong</b>. Cum sociis natoque penatibus
+    et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+    ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+    quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+    arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+    Nullam dictum felis eu pede <a href=\"javascript:void 0\">link</a> mollis
+    pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+    vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
+    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+    ullamcorper ultricies nisi.
+  </p></div>"
 ```
 
 ##     `Text Container`
@@ -1272,6 +1290,80 @@
 
 ```
 "<div><i class=\"home mini icon\"></i> <i class=\"home tiny icon\"></i> <i class=\"home small icon\"></i> <i class=\"home small icon\"></i> <i class=\"home icon\"></i> <i class=\"home large icon\"></i> <i class=\"home big icon\"></i> <i class=\"home huge icon\"></i> <i class=\"home massive icon\"></i></div>"
+```
+
+##     `Link`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"close link icon\"></i> <i class=\"help link icon\"></i></div>"
+```
+
+##     `Flipped`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"horizontally flipped cloud icon\"></i> <i class=\"vertically flipped cloud icon\"></i></div>"
+```
+
+##     `Rotated`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"clockwise rotated cloud icon\"></i> <i class=\"counterclockwise rotated cloud icon\"></i></div>"
+```
+
+##     `Circular`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"circular users icon\"></i> <i class=\"circular teal users icon\"></i> <i class=\"circular inverted users icon\"></i> <i class=\"circular inverted teal users icon\"></i></div>"
+```
+
+##     `Bordered`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"bordered users icon\"></i> <i class=\"bordered teal users icon\"></i> <i class=\"bordered inverted users icon\"></i> <i class=\"bordered inverted teal users icon\"></i></div>"
+```
+
+##     `Colored`
+
+####       `should match snapshot`
+
+```
+"<div><i class=\"red users icon\"></i> <i class=\"orange users icon\"></i> <i class=\"yellow users icon\"></i> <i class=\"olive users icon\"></i> <i class=\"green users icon\"></i> <i class=\"teal users icon\"></i> <i class=\"blue users icon\"></i> <i class=\"violet users icon\"></i> <i class=\"purple users icon\"></i> <i class=\"pink users icon\"></i> <i class=\"brown users icon\"></i> <i class=\"grey users icon\"></i> <i class=\"black users icon\"></i></div>"
+```
+
+##     `Inverted`
+
+####       `should match snapshot`
+
+```
+"<div><div class=\"ui inverted segment\"><i class=\"inverted red users icon\"></i> <i class=\"inverted orange users icon\"></i> <i class=\"inverted yellow users icon\"></i> <i class=\"inverted olive users icon\"></i> <i class=\"inverted green users icon\"></i> <i class=\"inverted teal users icon\"></i> <i class=\"inverted blue users icon\"></i> <i class=\"inverted violet users icon\"></i> <i class=\"inverted purple users icon\"></i> <i class=\"inverted pink users icon\"></i> <i class=\"inverted brown users icon\"></i> <i class=\"inverted grey users icon\"></i> <i class=\"inverted black users icon\"></i></div></div>"
+```
+
+##   `Groups`
+
+##     `Icons`
+
+####       `should match snapshot`
+
+```
+"<i class=\"huge icons\"><i class=\"circle big outline icon\"></i> <i class=\"user icon\"></i></i>"
+```
+
+##     `Corner Icon`
+
+####       `should match snapshot`
+
+```
+"<i class=\"huge icons\"><i class=\"puzzle icon\"></i> <i class=\"true corner add icon\"></i></i>"
 ```
 
 ## `ImageExample`
@@ -2701,6 +2793,14 @@
 "<div role=\"listbox\" tabindex=\"0\" class=\"ui dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></div>"
 ```
 
+##     `Disabled dropdown`
+
+####       `should match snapshot`
+
+```
+"<div role=\"listbox\" tabindex=\"0\" class=\"ui disabled dropdown\"><div role=\"alert\" aria-live=\"polite\" class=\"text\">File</div><i aria-hidden=\"true\" class=\"dropdown icon\"></i><span class=\"sizer\"></span><div tabindex=\"-1\" class=\"menu transition\"><div role=\"option\" class=\"item\">New</div> <div role=\"option\" class=\"item\">Open... <span class=\"description\">ctrl + o</span></div> <div role=\"option\" class=\"item\">Save as... <span class=\"description\">ctrl + s</span></div> <div role=\"option\" class=\"item\">Rename <span class=\"description\">ctrl + r</span></div> <div role=\"option\" class=\"item\">Make a copy</div> <div role=\"option\" class=\"item\"><i class=\"folder icon\"></i>Move to folder</div> <div role=\"option\" class=\"item\"><i class=\"trash icon\"></i>Move to trash</div> <div role=\"option\" class=\"divider\"></div> <div role=\"option\" class=\"item\">Download as...</div></div></div>"
+```
+
 ##     `Selection`
 
 ####       `should match snapshot`
@@ -2959,7 +3059,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><i class=\"circular heart icon\"></i> <!--fragment tail--><i class=\"circular heart icon\"></i> <!--fragment tail--><i class=\"circular heart icon\"></i></div>"
 ```
 
 ##     `Size`
@@ -2967,7 +3067,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><i class=\"circular heart icon\"></i> <!--fragment tail--><i class=\"circular heart icon\"></i> <!--fragment tail--><i class=\"circular heart icon\"></i> <!--fragment tail--><i class=\"circular heart icon\"></i> <!--fragment tail--><i class=\"circular heart icon\"></i></div>"
 ```
 
 ##     `Flowing`
@@ -2983,7 +3083,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><!--fragment tail--><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button> <!--fragment tail--><i class=\"heart circular icon\"></i></div>"
+"<div><!--fragment tail--><button role=\"button\" class=\"ui icon button\"><i class=\"add icon\"></i></button> <!--fragment tail--><i class=\"circular heart icon\"></i></div>"
 ```
 
 ##     `Position`
@@ -2991,7 +3091,7 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div class=\"ui three column grid\" style=\"width: 600px;\"><div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"left floated column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right floated right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div> <div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"red heart large circular icon\"></i></div></div></div>"
+"<div class=\"ui three column grid\" style=\"width: 600px;\"><div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div></div> <div class=\"row\"><div class=\"left floated column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div> <div class=\"right floated right aligned column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div></div> <div class=\"row\"><div class=\"column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div> <div class=\"center aligned column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div> <div class=\"right aligned column\"><!--fragment tail--><i class=\"circular red heart large icon\"></i></div></div></div>"
 ```
 
 ## `ProgressExample`
@@ -3285,14 +3385,6 @@ Vue.use(PortalVue);
 
 ```
 "<div><div class=\"ui search\" placeholder=\"Search animal...\"><input placeholder=\"Search animal...\" class=\"prompt\"></div> <div class=\"ui message\">Using a ui input allows you to use additional input types, like this icon input</div> <div class=\"ui search\" placeholder=\"Search animal...\"><div class=\"ui icon input\"><input placeholder=\"Search animal...\" class=\"prompt\"><i class=\"search icon\"></i></div></div></div>"
-```
-
-##     `Min characters`
-
-####       `should match snapshot`
-
-```
-"<div><div class=\"ui search\" placeholder=\"Search animal...\"><input placeholder=\"Search animal...\" class=\"prompt\"></div></div>"
 ```
 
 ##     `Min characters`

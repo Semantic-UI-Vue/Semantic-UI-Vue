@@ -73,6 +73,14 @@ export default {
       type: Boolean,
       description: 'A message may be formatted to display a positive message. Same as `success`.',
     },
+    hidden: {
+      type: Boolean,
+      description: 'A message can be hidden.',
+    },
+    visible: {
+      type: Boolean,
+      description: 'A message can be set to visible to force itself to be shown.',
+    },
   },
   events: {
     dismiss: {
@@ -114,6 +122,8 @@ export default {
           this.attached, this.attached && 'attached',
           this.icon && 'icon',
           this.compact && 'compact',
+          this.hidden && 'hidden',
+          this.visible && 'visible',
           'message',
         )}
       >
