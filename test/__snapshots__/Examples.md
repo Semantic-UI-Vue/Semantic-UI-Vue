@@ -1486,6 +1486,14 @@
 "<div class=\"ui icon input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"><i class=\"search icon\"></i></div>"
 ```
 
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui icon mini input\" placeholder=\"Search mini...\"><input type=\"text\" placeholder=\"Search mini...\"><i class=\"search icon\"></i></div>"
+```
+
 ## `LabelExample`
 
 ##   `Types`
