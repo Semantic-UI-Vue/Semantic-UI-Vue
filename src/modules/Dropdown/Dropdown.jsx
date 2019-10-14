@@ -132,6 +132,11 @@ export default {
       default: 'Max {selections} selections',
       description: 'Message to display when the maximum amount of selections is reached.',
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+      description: 'Whether or not the dropdown is disabled',
+    },
   },
   events: {
     input: {
@@ -228,6 +233,7 @@ export default {
                     ? this.multipleValue.indexOf(option.value) !== -1
                     : this.value === option.value
                 }
+                class={option.class}
                 selected={this.selectedIndex === index}
                 onSelect={this.selectItem}
               />
@@ -318,7 +324,8 @@ export default {
     filteredOptions() {
       this.updateSelectedIndex();
     },
-    filter() {
+    filter(val) {
+      this.$emit('filtered', val);
       if (this.search) {
         this.resizeInput();
       }
@@ -592,6 +599,7 @@ export default {
           this.selection && 'selection',
           this.search && 'search',
           this.open && 'active visible',
+          this.disabled && 'disabled',
           !this.downward && directions.upward,
           'dropdown',
         )}
