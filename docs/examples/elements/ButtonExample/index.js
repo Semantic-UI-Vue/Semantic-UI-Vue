@@ -22,7 +22,7 @@ import Size from './Size.example';
 import Floated from './Floated.example';
 import Colored from './Colored.example';
 import Compact from './Compact.example';
-// TODO: Add example for toggle button
+import Toggle from './Toggle.example';
 import Positive from './Positive.example';
 import Negative from './Negative.example';
 import Fluid from './Fluid.example';
@@ -177,6 +177,11 @@ export default [
         title: 'Compact',
         description: 'A button can reduce its padding to fit into tighter spaces',
         component: Compact,
+      },
+      {
+        title: 'Toggle',
+        description: 'A button can be formatted to toggle on and off',
+        component: Toggle,
       },
       {
         title: 'Positive',

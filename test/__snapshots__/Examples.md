@@ -659,6 +659,14 @@
 "<div><button role=\"button\" class=\"ui compact button\">Hold</button> <button role=\"button\" class=\"ui compact icon button\"><i class=\"pause icon\"></i></button> <button role=\"button\" class=\"ui compact icon left labeled button\"><i class=\"pause icon\"></i>Pause</button></div>"
 ```
 
+##     `Toggle`
+
+####       `should match snapshot`
+
+```
+"<button role=\"button\" class=\"ui toggle button\">Vote</button>"
+```
+
 ##     `Positive`
 
 ####       `should match snapshot`
