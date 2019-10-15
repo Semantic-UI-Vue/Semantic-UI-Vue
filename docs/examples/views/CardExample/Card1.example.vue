@@ -9,7 +9,8 @@
       </sui-card-content>
       <sui-card-content extra>
         <sui-icon name="user" />
-        22 Friends</sui-card-content>
+        22 Friends
+      </sui-card-content>
     </sui-card>
   </div>
 </template>

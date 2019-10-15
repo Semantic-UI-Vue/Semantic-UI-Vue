@@ -422,6 +422,10 @@ export default {
       }
     },
     handleBlur(e) {
+      const filter = this.filter;
+      if (filter!=='' && this.multiple) {
+        this.selectItem(filter);
+      }
       if (this.isMouseDown || e.relatedTarget === this.$refs.search) {
         return;
       }
@@ -571,7 +575,7 @@ export default {
     },
   },
   render() {
-    const ElementType = this.getElementType(this.button ? 'button' : 'div');
+    const ElementType = this.getElementType('div');
 
     const eventHandlers = {
       '!mousedown': this.handleMouseDown,
