@@ -16,7 +16,7 @@
         </sui-card-content>
         <sui-card-content extra>
           <sui-icon name="users" /> 2 Members
-          </sui-card-content>
+        </sui-card-content>
       </sui-card>
       <sui-card>
         <sui-dimmer-dimmable
@@ -27,17 +27,15 @@
             <sui-button primary>Add Friend</sui-button>
           </sui-dimmer>
         </sui-dimmer-dimmable>
-      </sui-image>
         <sui-card-content>
           <sui-card-header>Team Hess</sui-card-header>
           <sui-card-meta>Create in Aug 2014</sui-card-meta>
         </sui-card-content>
         <sui-card-content extra>
           <sui-icon name="users" /> 2 Members
-          </sui-card-content>
+        </sui-card-content>
       </sui-card>
     </sui-card-group>
-
   </div>
 </template>
 
