@@ -9,6 +9,10 @@ export default {
       type: Boolean,
       description: 'Multiple fields may be inline in a row.',
     },
+    equalWidth: {
+      type: Boolean,
+      description: 'Field group can automatically divide fields to be equal width.',
+    },
     grouped: {
       type: Boolean,
       description: 'Fields can show related choices.',
@@ -30,6 +34,7 @@ export default {
         class={this.classes(
           this.unstackable && 'unstackable',
           this.inline && 'inline',
+          this.equalWidth && 'equal width',
           this.grouped && 'grouped',
           this.num(this.fields),
           'fields',
