@@ -7,10 +7,10 @@ describe('Search', () => {
 
   it('should render categories', () => {
     const source = [
-        { title: 'Camel', category: 'Mammal' },
-        { title: 'Canary', category: 'Bird' },
-        { title: 'Cat', category: 'Mammal' },
-        { title: 'Tuna', category: 'Fish' },
+      { title: 'Camel', category: 'Mammal' },
+      { title: 'Canary', category: 'Bird' },
+      { title: 'Cat', category: 'Mammal' },
+      { title: 'Tuna', category: 'Fish' },
     ];
     const search = shallow(Search, { propsData: { source, category: true } });
     const input = search.find('input.prompt');

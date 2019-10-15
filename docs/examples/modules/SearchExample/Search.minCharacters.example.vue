@@ -9,13 +9,13 @@
 </template>
 
 <script>
-    export default {
-      name: 'SearchExample',
-      data() {
-        return {
-          value: null,
-          source: [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }],
-        };
-      },
+export default {
+  name: 'SearchExample',
+  data() {
+    return {
+      value: null,
+      source: [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }],
     };
+  },
+};
 </script>

@@ -38,7 +38,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'BasicExample',
-  };
+export default {
+  name: 'BasicExample',
+};
 </script>

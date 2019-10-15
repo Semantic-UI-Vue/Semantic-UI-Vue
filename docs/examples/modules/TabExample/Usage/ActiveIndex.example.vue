@@ -27,10 +27,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'ActiveIndexExample',
-    data: () => ({
-      activeIndex: 1,
-    }),
-  };
+export default {
+  name: 'ActiveIndexExample',
+  data: () => ({
+    activeIndex: 1,
+  }),
+};
 </script>
