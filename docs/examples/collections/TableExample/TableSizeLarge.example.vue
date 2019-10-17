@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'TableSizeLargeExample',
-  };
+export default {
+  name: 'TableSizeLargeExample',
+};
 </script>

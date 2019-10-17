@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'VerticalTabularRightExample',
-  };
+export default {
+  name: 'VerticalTabularRightExample',
+};
 </script>

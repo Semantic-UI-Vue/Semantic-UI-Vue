@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'TextExample',
-  };
+export default {
+  name: 'TextExample',
+};
 </script>

@@ -64,21 +64,21 @@ export default {
       const categorizedResultsObject = groupBy(results, 'category');
       let categorizedResultsArray = [];
       forIn(categorizedResultsObject, (value, key) => categorizedResultsArray.push(
-          { name: key, items: value },
+        { name: key, items: value },
       ));
 
       categorizedResultsArray = sortBy(categorizedResultsArray, 'name');
 
       return categorizedResultsArray.length
-              ? categorizedResultsArray.map(category => this.renderCategory(category))
-              : <EmptyMessage/>;
+        ? categorizedResultsArray.map(category => this.renderCategory(category))
+        : <EmptyMessage/>;
     },
     renderResult(item) {
       return <Result onSelected={this.handleSelect} item={item} />;
     },
     filterResults(results, query, prevQuery) {
       return results.filter(item => item.title.toLowerCase()
-          .includes(query !== '' ? query.toLowerCase() : prevQuery.toLowerCase()));
+        .includes(query !== '' ? query.toLowerCase() : prevQuery.toLowerCase()));
     },
     renderCategory(category) {
       return (
@@ -96,9 +96,9 @@ export default {
   },
   render() {
     return (
-        <div class={this.classes('results', 'transition', 'scale', 'fade', this.visibleClass, this.transitionClass)}>
-          {this.results}
-        </div>
+      <div class={this.classes('results', 'transition', 'scale', 'fade', this.visibleClass, this.transitionClass)}>
+        {this.results}
+      </div>
     );
   },
 };

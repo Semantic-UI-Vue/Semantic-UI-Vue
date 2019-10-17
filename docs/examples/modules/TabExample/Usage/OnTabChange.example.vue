@@ -67,29 +67,29 @@
 </template>
 
 <script>
-  export default {
-    name: 'OnTabChangeExample',
-    data: () => ({
-      table: {
-        inside: null,
-        index: null,
-        title: null,
-      },
-      activeIndex: null,
-    }),
-    mounted() {
-      this.activatePane(1);
+export default {
+  name: 'OnTabChangeExample',
+  data: () => ({
+    table: {
+      inside: null,
+      index: null,
+      title: null,
     },
-    methods: {
-      activatePane(index) {
-        this.table.index = +index;
-        this.activeIndex = +index;
-      },
-      handleChange(e, activePane, index) {
-        this.table.inside = !!e;
-        this.table.index = +index;
-        this.table.title = activePane.title;
-      },
+    activeIndex: null,
+  }),
+  mounted() {
+    this.activatePane(1);
+  },
+  methods: {
+    activatePane(index) {
+      this.table.index = +index;
+      this.activeIndex = +index;
     },
-  };
+    handleChange(e, activePane, index) {
+      this.table.inside = !!e;
+      this.table.index = +index;
+      this.table.title = activePane.title;
+    },
+  },
+};
 </script>
