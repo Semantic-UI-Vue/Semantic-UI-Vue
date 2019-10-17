@@ -10,6 +10,9 @@ import Size3 from './Size3.example';
 import Size4 from './Size4.example';
 import Size5 from './Size5.example';
 import Size6 from './Size6.example';
+import Transparent from './Transparent.example';
+import Transparent2 from './Transparent2.example';
+import Transparent3 from './Transparent3.example';
 
 export default [
   {
@@ -72,6 +75,17 @@ export default [
       },
       {
         component: Size6,
+      },
+      {
+        title: 'Transparent',
+        description: 'A transparent input has no background',
+        component: Transparent,
+      },
+      {
+        component: Transparent2,
+      },
+      {
+        component: Transparent3,
       },
     ],
   },
