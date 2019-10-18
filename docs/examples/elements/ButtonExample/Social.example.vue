@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'ButtonSocialExample',
+  name: 'Social',
 };
 </script>

@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: 'AspectRatioExample',
+  name: 'AspectRatio',
 };
 </script>

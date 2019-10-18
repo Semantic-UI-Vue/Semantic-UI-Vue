@@ -22,6 +22,6 @@
 
 <script>
 export default {
-  name: 'ApprovalCardExample',
+  name: 'ApprovalCard',
 };
 </script>

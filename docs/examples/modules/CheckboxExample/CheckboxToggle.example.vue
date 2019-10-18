@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'CheckboxToggleExample',
+  name: 'CheckboxToggle',
   data() {
     return { value: true };
   },

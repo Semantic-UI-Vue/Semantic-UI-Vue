@@ -54,6 +54,6 @@
 
 <script>
   export default {
-    name: 'TableCompactExample',
+    name: 'TableCompact',
   };
 </script>

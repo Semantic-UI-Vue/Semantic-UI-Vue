@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'NetboardAdExample',
+  name: 'NetboardAd',
 };
 </script>

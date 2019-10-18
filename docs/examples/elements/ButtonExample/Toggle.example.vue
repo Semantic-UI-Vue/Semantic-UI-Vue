@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'ButtonToggleExample',
+  name: 'Toggle',
   data: () => ({
     isActive: false,
   }),

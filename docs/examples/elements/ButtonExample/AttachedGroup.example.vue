@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: 'ButtonAttachedExample',
+  name: 'AttachedGroup',
 };
 </script>

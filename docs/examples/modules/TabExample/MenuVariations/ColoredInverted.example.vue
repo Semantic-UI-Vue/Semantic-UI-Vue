@@ -30,7 +30,7 @@
 
 <script>
   export default {
-    name: 'ColoredExample',
+    name: 'ColoredInverted',
     data: () => ({
       selectedColor: 'blue',
       colors: [

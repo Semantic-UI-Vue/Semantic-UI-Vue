@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'DropdownPointingExample',
+  name: 'DropdownPointing',
 };
 </script>

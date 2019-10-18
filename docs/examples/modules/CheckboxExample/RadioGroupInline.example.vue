@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: 'RadioGroupInlineExample',
+  name: 'RadioGroupInline',
   data() {
     return {
       value: '1',

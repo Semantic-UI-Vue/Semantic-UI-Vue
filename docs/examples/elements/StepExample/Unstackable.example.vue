@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'UnStackableExample',
+  name: 'Unstackable',
 };
 </script>

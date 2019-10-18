@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: 'TablePaddedExample',
+  name: 'TablePadded',
 };
 </script>

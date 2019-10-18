@@ -28,6 +28,6 @@
 
 <script>
 export default {
-  name: 'InternallyCelledExample',
+  name: 'InternallyCelled',
 };
 </script>

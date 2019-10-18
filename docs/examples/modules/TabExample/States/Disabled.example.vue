@@ -20,7 +20,7 @@
 
 <script>
   export default {
-    name: 'DisabledExample',
+    name: 'Disabled',
     data: () => ({
       disabled: true,
     }),

@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'ButtonAttachedExample',
+  name: 'Attached',
 };
 </script>

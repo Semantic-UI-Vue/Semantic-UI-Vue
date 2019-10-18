@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'ButtonCircularExample',
+  name: 'Circular',
 };
 </script>

@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'SegmentExample',
+  name: 'Segment',
 };
 </script>

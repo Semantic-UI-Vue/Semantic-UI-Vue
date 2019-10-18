@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'LabelProgressExample',
+  name: 'Label',
 };
 </script>

@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'LeaderboardsAdExample',
+  name: 'Leaderboards',
 };
 </script>

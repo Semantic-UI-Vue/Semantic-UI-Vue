@@ -31,6 +31,6 @@
 
 <script>
 export default {
-  name: 'TableFixedSingleLineExample',
+  name: 'TableFixedSingleLine',
 };
 </script>

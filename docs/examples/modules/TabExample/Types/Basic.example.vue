@@ -39,6 +39,6 @@
 
 <script>
   export default {
-    name: 'BasicExample',
+    name: 'Basic',
   };
 </script>

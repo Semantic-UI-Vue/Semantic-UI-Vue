@@ -19,6 +19,6 @@
 
 <script>
   export default {
-    name: 'MenuPositionRightExample',
+    name: 'MenuPositionRight',
   };
 </script>

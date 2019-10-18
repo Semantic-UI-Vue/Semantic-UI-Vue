@@ -31,6 +31,6 @@
 
 <script>
 export default {
-  name: 'FluidCardExample',
+  name: 'FluidCard',
 };
 </script>

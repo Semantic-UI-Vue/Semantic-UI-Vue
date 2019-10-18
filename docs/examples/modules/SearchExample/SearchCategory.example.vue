@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'SearchCategoryExample',
+  name: 'SearchCategory',
   data() {
     return {
       value: null,

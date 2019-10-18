@@ -63,6 +63,6 @@
 
 <script>
   export default {
-    name: 'TableCompactVeryExample',
+    name: 'TableCompactVery',
   };
 </script>

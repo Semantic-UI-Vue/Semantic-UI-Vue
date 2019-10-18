@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ListShorthandExample',
+  name: 'ListShorthand',
   data() {
     return {
       items: ['Apples', 'Pears', 'Oranges'],

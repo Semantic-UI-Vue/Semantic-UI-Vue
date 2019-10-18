@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'RadioDisabledExample',
+  name: 'RadioDisabled',
 };
 </script>

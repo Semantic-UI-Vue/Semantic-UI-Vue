@@ -32,6 +32,6 @@
 
 <script>
 export default {
-  name: 'TableVerticalAlignmentExample',
+  name: 'TableVerticalAlignment',
 };
 </script>

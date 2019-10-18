@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'DismissableBlockExample',
+  name: 'DismissableBlock',
   data() {
     return { visible: true };
   },

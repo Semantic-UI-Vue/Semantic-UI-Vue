@@ -28,6 +28,6 @@
 
 <script>
   export default {
-    name: 'DefaultActiveIndexExample',
+    name: 'CustomMenuItems',
   };
 </script>

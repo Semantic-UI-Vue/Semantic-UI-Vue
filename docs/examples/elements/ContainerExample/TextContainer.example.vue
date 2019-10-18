@@ -36,6 +36,6 @@
 
 <script>
 export default {
-  name: 'TextContainerExample',
+  name: 'TextContainer',
 };
 </script>

@@ -38,6 +38,6 @@
 
 <script>
 export default {
-  name: 'TableFixedExample',
+  name: 'TableFixed',
 };
 </script>

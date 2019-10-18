@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'ButtonAttachedHorizontallyExample',
+  name: 'AttachedHorizontally',
 };
 </script>

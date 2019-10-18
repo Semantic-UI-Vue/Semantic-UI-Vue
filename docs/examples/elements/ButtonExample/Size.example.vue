@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: 'ButtonSizeExample',
+  name: 'Size',
 };
 </script>

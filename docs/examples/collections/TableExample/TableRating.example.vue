@@ -53,6 +53,6 @@
 
 <script>
 export default {
-  name: 'TableRatingExample',
+  name: 'TableRating',
 };
 </script>

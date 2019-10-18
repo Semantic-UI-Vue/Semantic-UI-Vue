@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'LinkCardExample',
+  name: 'LinkCard',
 };
 </script>

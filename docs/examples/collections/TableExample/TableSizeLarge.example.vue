@@ -34,6 +34,6 @@
 
 <script>
   export default {
-    name: 'TableSizeLargeExample',
+    name: 'TableSizeLarge',
   };
 </script>

@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'Emphasis2Example',
+  name: 'Emphasis2',
 };
 </script>

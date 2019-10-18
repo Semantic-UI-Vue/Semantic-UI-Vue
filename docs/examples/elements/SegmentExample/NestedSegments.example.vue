@@ -27,6 +27,6 @@
 
 <script>
 export default {
-  name: 'NestedSegmentsExample',
+  name: 'NestedSegments',
 };
 </script>

@@ -10,7 +10,7 @@
 
 <script>
     export default {
-      name: 'SearchExample',
+      name: 'SearchMinCharacters',
       data() {
         return {
           value: null,

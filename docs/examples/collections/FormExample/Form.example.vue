@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'FormExample',
+  name: 'Form',
 };
 </script>

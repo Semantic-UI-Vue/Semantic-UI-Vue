@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'ButtonsBasicColoredExample',
+  name: 'ButtonsBasicColored',
 };
 </script>

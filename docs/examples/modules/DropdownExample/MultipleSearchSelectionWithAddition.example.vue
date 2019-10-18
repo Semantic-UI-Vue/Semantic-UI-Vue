@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'MultipleSearchSelectionWithAdditionExample',
+  name: 'MultipleSearchSelectionWithAddition',
   data() {
     return {
       current: null,

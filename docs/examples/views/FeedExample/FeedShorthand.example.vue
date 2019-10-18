@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'FeedShorthandExample',
+  name: 'FeedShorthand',
   data() {
     return {
       events: [{

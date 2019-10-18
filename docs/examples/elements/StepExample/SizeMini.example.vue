@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  name: 'SizeMiniExample',
+  name: 'SizeMini',
 };
 </script>

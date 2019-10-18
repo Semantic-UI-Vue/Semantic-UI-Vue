@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'CheckboxToggleDisabledExample',
+  name: 'CheckboxToggleDisabled',
   data() {
     return { value: true };
   },

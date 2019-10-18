@@ -33,6 +33,6 @@
 
 <script>
 export default {
-  name: 'HeaderCardExample',
+  name: 'HeaderCard',
 };
 </script>

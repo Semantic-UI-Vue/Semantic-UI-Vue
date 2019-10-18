@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'ExtraContentCardExample',
+  name: 'ExtraContentCard',
 };
 </script>

@@ -36,6 +36,6 @@
 
 <script>
 export default {
-  name: 'MenuExample',
+  name: 'TopAttachedMenu',
 };
 </script>

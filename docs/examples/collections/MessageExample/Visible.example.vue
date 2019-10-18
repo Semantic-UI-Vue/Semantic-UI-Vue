@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'VisibleMessageExample',
+  name: 'Visible',
 };
 </script>

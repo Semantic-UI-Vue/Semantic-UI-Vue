@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'FriendSelectionExample',
+  name: 'FriendSelection',
   data() {
     return {
       current: null,

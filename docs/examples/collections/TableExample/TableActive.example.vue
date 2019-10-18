@@ -34,6 +34,6 @@
 
 <script>
 export default {
-  name: 'TableActiveExample',
+  name: 'TableActive',
 };
 </script>

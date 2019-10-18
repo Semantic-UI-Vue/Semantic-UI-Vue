@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'CustomContentExample',
+  name: 'CustomContent',
 };
 </script>

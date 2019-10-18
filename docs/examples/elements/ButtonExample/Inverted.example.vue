@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'ButtonInvertedExample',
+  name: 'Inverted',
 };
 </script>

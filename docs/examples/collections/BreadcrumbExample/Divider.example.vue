@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'DividerExample',
+  name: 'Divider',
 };
 </script>

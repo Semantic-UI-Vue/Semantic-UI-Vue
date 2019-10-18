@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'TabularMenuBottomExample',
+  name: 'TabularMenuBottom',
   data() {
     return {
       items: ['Active Project', 'Project #2', 'Project #3'],

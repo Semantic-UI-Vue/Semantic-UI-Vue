@@ -15,5 +15,5 @@
 </template>
 
 <script>
-export default {};
+export default { name: 'Ordered' };
 </script>

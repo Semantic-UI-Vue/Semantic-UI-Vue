@@ -26,6 +26,6 @@
 
 <script>
 export default {
-  name: 'ListInvertedExample',
+  name: 'ListInverted',
 };
 </script>

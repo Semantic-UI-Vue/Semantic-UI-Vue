@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'ButtonFluidExample',
+  name: 'Fluid',
 };
 </script>

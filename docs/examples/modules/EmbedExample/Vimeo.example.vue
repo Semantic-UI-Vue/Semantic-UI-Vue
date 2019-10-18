@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'VimeoExample',
+  name: 'Vimeo',
 };
 </script>

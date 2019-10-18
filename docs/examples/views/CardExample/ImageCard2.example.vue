@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: 'ImageCard2Example',
+  name: 'ImageCard2',
   data() {
     return {
       cardOneActive: false,

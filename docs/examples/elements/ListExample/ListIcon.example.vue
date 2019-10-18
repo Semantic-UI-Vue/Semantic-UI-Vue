@@ -26,6 +26,6 @@
 
 <script>
 export default {
-  name: 'ListIconExample',
+  name: 'ListIcon',
 };
 </script>

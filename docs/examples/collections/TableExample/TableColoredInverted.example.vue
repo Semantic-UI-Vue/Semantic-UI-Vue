@@ -278,6 +278,6 @@
 
 <script>
 export default {
-  name: 'TableColoredExample',
+  name: 'TableColoredInverted',
 };
 </script>

@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'IconMessageExample',
+  name: 'IconMessage',
 };
 </script>

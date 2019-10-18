@@ -16,6 +16,6 @@
 </template>
 
 <script>
-export default {};
+export default { name: 'Floating' };
 </script>
 

@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'ButtonFloatedExample',
+  name: 'Floated',
 };
 </script>

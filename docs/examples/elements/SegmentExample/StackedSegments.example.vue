@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'StackedSegmentsExample',
+  name: 'StackedSegments',
 };
 </script>

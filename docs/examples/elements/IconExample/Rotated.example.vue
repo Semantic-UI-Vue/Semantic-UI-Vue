@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'RotatedExample',
+  name: 'Rotated',
 };
 </script>

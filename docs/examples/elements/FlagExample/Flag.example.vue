@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'FlagExample',
+  name: 'Flag',
 };
 </script>

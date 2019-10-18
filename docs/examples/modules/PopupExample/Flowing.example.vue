@@ -28,5 +28,5 @@
 </template>
 
 <script>
-export default {};
+export default { name: 'Flowing' };
 </script>

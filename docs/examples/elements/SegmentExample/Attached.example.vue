@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'AttachedExample',
+  name: 'Attached',
 };
 </script>

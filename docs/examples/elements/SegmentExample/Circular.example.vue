@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'CircularExample',
+  name: 'Circular',
 };
 </script>
 

@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'IframeExample',
+  name: 'Iframe',
 };
 </script>

@@ -18,6 +18,6 @@
 
 <script>
   export default {
-    name: 'DefaultActiveIndexExample',
+    name: 'DefaultActiveIndex',
   };
 </script>

@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'TabularMenuExample',
+  name: 'TabularMenuLeft',
   data() {
     return {
       items: ['Bio', 'Pics', 'Companies', 'Links'],

@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'InlineCenteredExample',
+  name: 'InlineCentered',
 };
 </script>

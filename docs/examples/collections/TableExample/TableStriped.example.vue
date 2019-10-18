@@ -63,6 +63,6 @@
 
 <script>
 export default {
-  name: 'TableStripedExample',
+  name: 'TableStriped',
 };
 </script>

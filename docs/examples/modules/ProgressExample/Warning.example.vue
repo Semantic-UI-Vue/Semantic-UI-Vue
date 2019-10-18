@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'WarningProgressExample',
+  name: 'Warning',
 };
 </script>

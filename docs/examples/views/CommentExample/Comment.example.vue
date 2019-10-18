@@ -79,6 +79,6 @@
 
 <script>
 export default {
-  name: 'CommentExample',
+  name: 'Comment',
 };
 </script>

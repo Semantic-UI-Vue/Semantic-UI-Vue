@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: 'ButtonsVerticalExample',
+  name: 'ButtonsVertical',
 };
 </script>

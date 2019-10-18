@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'IndicatingProgressExample',
+  name: 'Indicating',
   data() {
     return { percent: 43 };
   },

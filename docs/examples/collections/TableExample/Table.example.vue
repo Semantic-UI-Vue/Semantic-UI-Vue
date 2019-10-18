@@ -51,6 +51,6 @@
 
 <script>
 export default {
-  name: 'TableExample',
+  name: 'Table',
 };
 </script>

@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: 'IconGroup',
+  name: 'IconGroup2',
 };
 </script>

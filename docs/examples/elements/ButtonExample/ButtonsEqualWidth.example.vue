@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'ButtonsEqualWidthExample',
+  name: 'ButtonsEqualWidth',
 };
 </script>

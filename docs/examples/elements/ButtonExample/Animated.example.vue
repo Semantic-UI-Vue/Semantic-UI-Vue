@@ -27,6 +27,6 @@
 
 <script>
 export default {
-  name: 'ButtonAnimatedExample',
+  name: 'Animated',
 };
 </script>

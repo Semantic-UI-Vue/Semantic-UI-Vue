@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'ContentDateExample',
+  name: 'ContentDate',
   data() {
     return {
       imageSrc: 'static/images/avatar/small/jenny.jpg',

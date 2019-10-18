@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'PointingMenuSecondaryExample',
+  name: 'PointingSecondaryMenu',
   data() {
     return {
       active: 'Home',

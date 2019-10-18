@@ -23,6 +23,6 @@
 
 <script>
 export default {
-  name: 'ImageCard1Example',
+  name: 'ImageCard1',
 };
 </script>

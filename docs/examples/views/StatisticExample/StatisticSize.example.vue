@@ -108,6 +108,6 @@
 
 <script>
 export default {
-  name: 'StatisticSizeExample',
+  name: 'StatisticSize',
 };
 </script>

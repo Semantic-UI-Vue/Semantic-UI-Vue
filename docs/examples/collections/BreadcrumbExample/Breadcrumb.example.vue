@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'BreadcrumbExample',
+  name: 'Breadcrumb',
   data() {
     return {
       sections: [

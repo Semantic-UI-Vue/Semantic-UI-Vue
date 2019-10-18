@@ -46,6 +46,6 @@
 
 <script>
 export default {
-  name: 'ColoredCardExample',
+  name: 'ColoredCard',
 };
 </script>

@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'SearchExample',
+  name: 'SearchStandard',
   data() {
     return {
       valueBasic: null,

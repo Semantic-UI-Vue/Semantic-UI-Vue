@@ -18,17 +18,17 @@ export default {
     return {
       users: [
         {
-          name: 'Elliot Fu',
+          name: 'Titled',
           bio: 'Elliot has been a member since July 2012',
           avatar: 'static/images/avatar/small/elliot.jpg',
         },
         {
-          name: 'Stevie Feliciano',
+          name: 'Titled',
           bio: 'Stevie has been a member since August 2013',
           avatar: 'static/images/avatar/small/stevie.jpg',
         },
         {
-          name: 'Matt',
+          name: 'Titled',
           bio: 'Matt has been a member since July 2014',
           avatar: 'static/images/avatar/small/matt.jpg',
         },

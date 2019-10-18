@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'ButtonNegativeExample',
+  name: 'Negative',
 };
 </script>

@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'TextAlignExample',
+  name: 'TextAlign',
 };
 </script>

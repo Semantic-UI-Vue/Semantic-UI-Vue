@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'SizeBigExample',
+  name: 'SizeBig',
 };
 </script>

@@ -44,6 +44,6 @@
 
 <script>
 export default {
-  name: 'ButtonsCardExample',
+  name: 'ButtonsCard',
 };
 </script>

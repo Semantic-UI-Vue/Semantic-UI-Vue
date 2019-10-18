@@ -3,5 +3,5 @@
 </template>
 
 <script>
-export default {};
+export default { name: 'Bordered' };
 </script>

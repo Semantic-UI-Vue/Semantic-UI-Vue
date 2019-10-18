@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: 'SummaryDateExample',
+  name: 'SummaryDate',
 };
 </script>

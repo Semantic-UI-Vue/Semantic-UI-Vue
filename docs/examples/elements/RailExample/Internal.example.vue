@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'InternalExample',
+  name: 'Internal',
 };
 </script>
 

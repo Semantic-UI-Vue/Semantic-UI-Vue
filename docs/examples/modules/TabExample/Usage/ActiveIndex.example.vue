@@ -28,7 +28,7 @@
 
 <script>
   export default {
-    name: 'ActiveIndexExample',
+    name: 'ActiveIndex',
     data: () => ({
       activeIndex: 1,
     }),

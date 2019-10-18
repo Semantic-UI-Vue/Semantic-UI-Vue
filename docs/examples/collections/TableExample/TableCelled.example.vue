@@ -34,6 +34,6 @@
 
 <script>
 export default {
-  name: 'TableCelledExample',
+  name: 'TableCelled',
 };
 </script>

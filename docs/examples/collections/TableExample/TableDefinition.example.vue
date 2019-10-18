@@ -24,6 +24,6 @@
 
 <script>
 export default {
-  name: 'TableDefinitionExample',
+  name: 'TableDefinition',
 };
 </script>

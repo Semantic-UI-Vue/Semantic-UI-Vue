@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'MessageListExample',
+  name: 'ListMessage',
   data() {
     return {
       list: [

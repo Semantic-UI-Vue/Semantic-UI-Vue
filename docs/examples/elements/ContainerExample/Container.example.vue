@@ -20,6 +20,6 @@
 
 <script>
 export default {
-  name: 'ContainerExample',
+  name: 'Container',
 };
 </script>

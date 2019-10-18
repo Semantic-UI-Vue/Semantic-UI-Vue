@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: 'EvenlyDivided2Example',
+  name: 'EvenlyDivided2',
 };
 </script>

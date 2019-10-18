@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  name: 'StretchedExample',
+  name: 'Stretched',
 };
 </script>

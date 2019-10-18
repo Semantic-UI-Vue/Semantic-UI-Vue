@@ -18,6 +18,6 @@
 
 <script>
   export default {
-    name: 'NotAttachedExample',
+    name: 'NotAttached',
   };
 </script>

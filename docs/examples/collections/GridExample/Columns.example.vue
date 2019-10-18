@@ -22,6 +22,6 @@
 
 <script>
 export default {
-  name: 'ColumnsExample',
+  name: 'Columns',
 };
 </script>

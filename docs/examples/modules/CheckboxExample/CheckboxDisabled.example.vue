@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'CheckboxDisabledExample',
+  name: 'CheckboxDisabled',
   data() {
     return { value: true };
   },

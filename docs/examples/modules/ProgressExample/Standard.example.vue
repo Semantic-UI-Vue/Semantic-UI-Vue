@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'StandardProgressExample',
+  name: 'Standard',
   data() {
     return { percent: 10 };
   },

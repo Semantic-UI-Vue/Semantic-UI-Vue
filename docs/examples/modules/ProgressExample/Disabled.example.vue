@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'DisabledProgressExample',
+  name: 'Disabled',
 };
 </script>

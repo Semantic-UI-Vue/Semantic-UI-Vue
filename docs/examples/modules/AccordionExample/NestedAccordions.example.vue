@@ -47,6 +47,6 @@
 
 <script>
 export default {
-  name: 'NestedAccordionsExample',
+  name: 'NestedAccordions',
 };
 </script>

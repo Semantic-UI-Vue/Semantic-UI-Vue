@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'CenteredCardExample',
+  name: 'CenteredCard',
 };
 </script>

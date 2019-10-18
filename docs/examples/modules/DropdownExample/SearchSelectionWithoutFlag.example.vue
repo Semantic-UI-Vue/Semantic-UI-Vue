@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'SearchSelectionWithoutFlagExample',
+  name: 'SearchSelectionWithoutFlag',
   data() {
     return {
       countries: [

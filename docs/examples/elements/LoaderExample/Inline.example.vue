@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'InlineExample',
+  name: 'Inline',
 };
 </script>

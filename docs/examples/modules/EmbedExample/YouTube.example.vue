@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'YouTubeExample',
+  name: 'YouTube',
 };
 </script>

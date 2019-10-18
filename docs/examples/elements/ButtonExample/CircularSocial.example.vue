@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: 'ButtonCircularSocialExample',
+  name: 'CircularSocial',
 };
 </script>

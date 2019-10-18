@@ -24,6 +24,6 @@
 
 <script>
 export default {
-  name: 'CelledExample',
+  name: 'Celled',
 };
 </script>

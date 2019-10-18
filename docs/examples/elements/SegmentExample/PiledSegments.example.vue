@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'PiledSegmentsExample',
+  name: 'PiledSegments',
 };
 </script>

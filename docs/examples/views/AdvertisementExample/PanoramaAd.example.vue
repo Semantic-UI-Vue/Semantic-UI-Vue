@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'PanoramaAdExample',
+  name: 'PanoramaAd',
 };
 </script>

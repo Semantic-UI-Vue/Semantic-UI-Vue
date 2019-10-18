@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'SuccessProgressExample',
+  name: 'Success',
 };
 </script>

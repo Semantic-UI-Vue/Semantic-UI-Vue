@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'ImageExample',
+  name: 'Image',
 };
 </script>

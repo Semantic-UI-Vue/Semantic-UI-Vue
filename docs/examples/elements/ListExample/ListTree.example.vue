@@ -76,6 +76,6 @@
 
 <script>
 export default {
-  name: 'ListShorthandExample',
+  name: 'ListTree',
 };
 </script>

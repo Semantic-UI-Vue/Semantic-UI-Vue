@@ -25,6 +25,6 @@
 
 <script>
 export default {
-  name: 'DoublingCardExample',
+  name: 'DoublingCard',
 };
 </script>

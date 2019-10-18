@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'TabularMenuExample',
+  name: 'TabularMenu',
   data() {
     return {
       items: ['Bio', 'Photos'],

@@ -25,5 +25,5 @@ Vue.use(PortalVue);
 </template>
 
 <script>
-export default {};
+export default { name: 'Popup' };
 </script>

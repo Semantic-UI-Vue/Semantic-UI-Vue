@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'DropdownFloatingExample',
+  name: 'DropdownFloating',
 };
 </script>

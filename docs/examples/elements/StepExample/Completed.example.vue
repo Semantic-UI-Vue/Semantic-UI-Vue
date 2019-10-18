@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'CompletedExample',
+  name: 'Completed',
 };
 </script>

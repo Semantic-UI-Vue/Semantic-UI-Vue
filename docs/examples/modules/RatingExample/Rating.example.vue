@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'RatingExample',
+  name: 'Rating',
   data() {
     return { value: 1 };
   },

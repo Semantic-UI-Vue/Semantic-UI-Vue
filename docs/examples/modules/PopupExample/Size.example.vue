@@ -34,5 +34,5 @@
 </template>
 
 <script>
-export default {};
+export default { name: 'Size' };
 </script>

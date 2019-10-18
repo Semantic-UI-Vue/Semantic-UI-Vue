@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: 'SizeProgressExample',
+  name: 'Size',
 };
 </script>

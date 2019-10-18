@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'SectionDivider',
+  name: 'ClearingDivider',
 };
 </script>

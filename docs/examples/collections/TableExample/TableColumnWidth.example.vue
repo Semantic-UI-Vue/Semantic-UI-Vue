@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: 'TableColumnWidthExample',
+  name: 'TableColumnWidth',
 };
 </script>

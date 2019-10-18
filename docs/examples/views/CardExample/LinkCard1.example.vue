@@ -20,6 +20,6 @@
 
 <script>
 export default {
-  name: 'LinkCard1Example',
+  name: 'LinkCard1',
 };
 </script>

@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'BarProgressExample',
+  name: 'Bar',
 };
 </script>

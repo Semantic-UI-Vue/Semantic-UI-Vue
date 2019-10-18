@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  name: 'MessageExample',
+  name: 'Message',
 };
 </script>

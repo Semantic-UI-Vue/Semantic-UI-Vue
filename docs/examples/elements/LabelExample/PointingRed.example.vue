@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: 'PointingExample',
+  name: 'PointingRed',
 };
 </script>

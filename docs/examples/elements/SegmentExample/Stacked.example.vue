@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'StackedExample',
+  name: 'Stacked',
 };
 </script>

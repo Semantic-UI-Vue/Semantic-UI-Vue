@@ -43,6 +43,6 @@
 
 <script>
 export default {
-  name: 'StatisticFloatedExample',
+  name: 'StatisticFloated',
 };
 </script>

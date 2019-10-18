@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'CallbackExample',
+  name: 'Callback',
   data() {
     return {
       value: 1,

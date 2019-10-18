@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'ExtraTextExample',
+  name: 'ExtraText',
 };
 </script>

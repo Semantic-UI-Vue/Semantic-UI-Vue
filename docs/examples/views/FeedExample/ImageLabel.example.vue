@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: 'ImageLabelExample',
+  name: 'ImageLabel',
 };
 </script>

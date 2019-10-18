@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'Color2Example',
+  name: 'Color2',
 };
 </script>

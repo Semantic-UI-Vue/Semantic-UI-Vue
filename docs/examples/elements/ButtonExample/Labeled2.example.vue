@@ -33,6 +33,6 @@
 
 <script>
 export default {
-  name: 'ButtonLabeledBasicExample',
+  name: 'Labeled2',
 };
 </script>

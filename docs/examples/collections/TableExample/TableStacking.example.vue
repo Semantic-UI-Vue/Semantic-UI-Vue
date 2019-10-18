@@ -57,6 +57,6 @@
 
 <script>
 export default {
-  name: 'TableStackingExample',
+  name: 'TableStacking',
 };
 </script>

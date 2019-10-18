@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'StackableExample',
+  name: 'Stackable',
 };
 </script>

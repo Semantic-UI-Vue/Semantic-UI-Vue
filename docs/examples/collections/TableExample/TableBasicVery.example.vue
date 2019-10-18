@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: 'TableBasicVeryExample',
+  name: 'TableBasicVery',
 };
 </script>

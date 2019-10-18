@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'RowsExample',
+  name: 'Rows',
 };
 </script>
 

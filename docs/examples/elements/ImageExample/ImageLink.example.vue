@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'ImageLinkExample',
+  name: 'ImageLink',
 };
 </script>

@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'ActiveExample',
+  name: 'Active',
   data() {
     return {
       active: false,

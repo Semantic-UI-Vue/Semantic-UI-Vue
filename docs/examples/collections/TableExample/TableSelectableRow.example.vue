@@ -44,6 +44,6 @@
 
 <script>
 export default {
-  name: 'TableSelectableRowExample',
+  name: 'TableSelectableRow',
 };
 </script>

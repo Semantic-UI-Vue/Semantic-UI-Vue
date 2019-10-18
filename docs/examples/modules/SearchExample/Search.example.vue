@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'SearchExample',
+  name: 'Search',
   data() {
     return {
       value: null,

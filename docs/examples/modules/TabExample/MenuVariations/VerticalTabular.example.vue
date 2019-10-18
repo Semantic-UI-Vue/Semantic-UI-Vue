@@ -18,6 +18,6 @@
 
 <script>
   export default {
-    name: 'VerticalTabularExample',
+    name: 'VerticalTabular',
   };
 </script>

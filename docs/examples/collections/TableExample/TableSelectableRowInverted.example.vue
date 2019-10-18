@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: 'TableSelectableRowInvertedExample',
+  name: 'TableSelectableRowInverted',
 };
 </script>

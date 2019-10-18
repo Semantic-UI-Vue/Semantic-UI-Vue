@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: 'SizeLargeExample',
+  name: 'SizeLarge',
 };
 </script>

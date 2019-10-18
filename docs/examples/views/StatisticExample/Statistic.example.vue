@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'StatisticExample',
+  name: 'Statistic',
 };
 </script>
 

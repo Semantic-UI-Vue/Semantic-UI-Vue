@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'ContentDateShorthandExample',
+  name: 'ContentDateShorthand',
   data() {
     return {
       image: 'static/images/avatar/small/jenny.jpg',

@@ -25,6 +25,6 @@
 
 <script>
 export default {
-  name: 'DropdownButtonExample',
+  name: 'DropdownButton',
 };
 </script>

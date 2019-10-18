@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'StepExample',
+  name: 'Steps',
   data() {
     return {
       steps: [

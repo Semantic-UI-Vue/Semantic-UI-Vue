@@ -44,6 +44,6 @@
 
 <script>
 export default {
-  name: 'TableColumnCountExample',
+  name: 'TableColumnCount',
 };
 </script>

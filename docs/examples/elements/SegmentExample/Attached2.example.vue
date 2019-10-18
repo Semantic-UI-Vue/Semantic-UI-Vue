@@ -23,6 +23,6 @@
 
 <script>
 export default {
-  name: 'Attached2Example',
+  name: 'Attached2',
 };
 </script>

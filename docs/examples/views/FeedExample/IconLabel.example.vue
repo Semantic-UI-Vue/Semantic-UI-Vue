@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: 'IconLabelExample',
+  name: 'IconLabel',
 };
 </script>

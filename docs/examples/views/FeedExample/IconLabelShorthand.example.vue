@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'IconLabelShorthandExample',
+  name: 'IconLabelShorthand',
 };
 </script>

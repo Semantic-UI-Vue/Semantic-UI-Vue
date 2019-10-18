@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'StackedTallExample',
+  name: 'StackedTall',
 };
 </script>

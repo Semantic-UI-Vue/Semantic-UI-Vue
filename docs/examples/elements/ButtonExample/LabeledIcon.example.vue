@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'ButtonLabeledIconExample',
+  name: 'LabeledIcon',
 };
 </script>

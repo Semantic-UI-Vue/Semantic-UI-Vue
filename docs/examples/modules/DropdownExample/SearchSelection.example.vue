@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'SearchSelectionExample',
+  name: 'SearchSelection',
   data() {
     return {
       current: null,

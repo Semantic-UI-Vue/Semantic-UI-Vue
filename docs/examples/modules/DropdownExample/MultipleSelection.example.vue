@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'MultipleSelectionExample',
+  name: 'MultipleSelection',
   data() {
     return {
       current: null,

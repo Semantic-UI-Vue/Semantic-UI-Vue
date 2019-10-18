@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'RaisedSegmentsExample',
+  name: 'RaisedSegments',
 };
 </script>

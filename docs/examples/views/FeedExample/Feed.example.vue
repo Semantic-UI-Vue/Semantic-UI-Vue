@@ -96,6 +96,6 @@
 
 <script>
 export default {
-  name: 'FeedExample',
+  name: 'Feed',
 };
 </script>

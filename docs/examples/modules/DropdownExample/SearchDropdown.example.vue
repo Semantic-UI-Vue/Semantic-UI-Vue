@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'DropdownExample',
+  name: 'SearchDropdown',
   data() {
     return {
       current: null,

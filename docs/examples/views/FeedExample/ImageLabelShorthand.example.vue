@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'ImageLabelShorthandExample',
+  name: 'ImageLabelShorthand',
 };
 </script>

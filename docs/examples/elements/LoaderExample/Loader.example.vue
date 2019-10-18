@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'LoaderExample',
+  name: 'Loader',
 };
 </script>

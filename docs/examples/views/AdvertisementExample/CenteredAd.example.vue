@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'CenteredAdExample',
+  name: 'CenteredAd',
 };
 </script>

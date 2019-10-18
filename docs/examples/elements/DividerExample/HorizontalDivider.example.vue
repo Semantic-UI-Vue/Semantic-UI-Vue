@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'HorizontalDividerExample',
+  name: 'HorizontalDivider',
 };
 </script>

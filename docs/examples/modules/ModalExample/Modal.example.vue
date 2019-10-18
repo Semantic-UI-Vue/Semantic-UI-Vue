@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'ModalExample',
+  name: 'Modal',
   data() {
     return { open: false };
   },

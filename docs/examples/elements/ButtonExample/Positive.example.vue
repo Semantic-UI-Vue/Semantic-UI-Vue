@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'ButtonPositiveExample',
+  name: 'Positive',
 };
 </script>

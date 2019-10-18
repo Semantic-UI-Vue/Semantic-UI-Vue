@@ -20,6 +20,6 @@
 
 <script>
 export default {
-  name: 'InvertedProgressExample',
+  name: 'Inverted',
 };
 </script>

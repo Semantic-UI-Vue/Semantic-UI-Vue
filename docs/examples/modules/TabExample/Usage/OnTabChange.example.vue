@@ -68,7 +68,7 @@
 
 <script>
   export default {
-    name: 'OnTabChangeExample',
+    name: 'OnTabChange',
     data: () => ({
       table: {
         inside: null,

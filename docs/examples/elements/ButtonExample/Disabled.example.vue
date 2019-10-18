@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'ButtonDisabledExample',
+  name: 'Disabled',
 };
 </script>

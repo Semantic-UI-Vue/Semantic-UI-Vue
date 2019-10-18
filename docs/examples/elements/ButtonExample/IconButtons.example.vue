@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: 'IconButtonsExample',
+  name: 'IconButtons',
 };
 </script>

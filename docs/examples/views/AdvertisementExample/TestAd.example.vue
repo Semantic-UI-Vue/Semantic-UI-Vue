@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'TestAdExample',
+  name: 'TestAd',
 };
 </script>

@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: 'ButtonLoadingExample',
+  name: 'Loading',
 };
 </script>

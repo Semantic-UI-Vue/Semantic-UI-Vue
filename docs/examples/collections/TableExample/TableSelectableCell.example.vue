@@ -56,6 +56,6 @@
 
 <script>
 export default {
-  name: 'TableSelectableCellExample',
+  name: 'TableSelectableCell',
 };
 </script>

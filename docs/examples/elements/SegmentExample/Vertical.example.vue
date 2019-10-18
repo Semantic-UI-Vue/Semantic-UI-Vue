@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'VerticalExample',
+  name: 'Vertical',
 };
 </script>

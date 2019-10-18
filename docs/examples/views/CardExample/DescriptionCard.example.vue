@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'DescriptionCardExample',
+  name: 'DescriptionCard',
 };
 </script>

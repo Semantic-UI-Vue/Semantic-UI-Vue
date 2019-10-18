@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'ActiveProgressExample',
+  name: 'Active',
 };
 </script>

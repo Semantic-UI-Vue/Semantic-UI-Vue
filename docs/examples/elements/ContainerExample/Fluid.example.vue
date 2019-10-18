@@ -25,6 +25,6 @@
 
 <script>
 export default {
-  name: 'FluidExample',
+  name: 'Fluid',
 };
 </script>

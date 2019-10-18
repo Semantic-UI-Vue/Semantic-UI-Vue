@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'InvertedDivider',
+  name: 'FittedDivider',
 };
 </script>

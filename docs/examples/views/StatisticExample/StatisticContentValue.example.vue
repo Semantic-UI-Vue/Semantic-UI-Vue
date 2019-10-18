@@ -39,6 +39,6 @@
 
 <script>
 export default {
-  name: 'StatisticContentValueExample',
+  name: 'StatisticContentValue',
 };
 </script>

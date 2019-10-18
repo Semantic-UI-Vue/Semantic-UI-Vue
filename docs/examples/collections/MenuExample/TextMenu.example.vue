@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'TextMenuExample',
+  name: 'TextMenu',
   data() {
     return {
       items: ['Closest', 'Most Comments', 'Most Popular'],

@@ -40,6 +40,6 @@
 
 <script>
 export default {
-  name: 'TablePositiveNegativeExample',
+  name: 'TablePositiveNegative',
 };
 </script>

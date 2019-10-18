@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'StatisticGroupExample',
+  name: 'StatisticGroup',
 };
 </script>

@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: 'ButtonsBasicExample',
+  name: 'ButtonsBasic',
 };
 </script>

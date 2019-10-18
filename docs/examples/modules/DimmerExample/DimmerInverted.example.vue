@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: 'DimmerBasicExample',
+  name: 'DimmerInverted',
   data() {
     return { enable: true };
   },

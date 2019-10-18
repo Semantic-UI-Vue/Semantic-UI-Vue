@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  name: 'FloatedContentCardExample',
+  name: 'FloatedContentCard',
 };
 </script>

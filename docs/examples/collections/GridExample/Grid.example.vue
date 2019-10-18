@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'GridExample',
+  name: 'Grid',
   data() {
     return { columns: [...new Array(16)] };
   },

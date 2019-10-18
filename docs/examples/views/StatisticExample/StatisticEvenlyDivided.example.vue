@@ -39,6 +39,6 @@
 
 <script>
 export default {
-  name: 'StatisticEvenlyDividedExample',
+  name: 'StatisticEvenlyDivided',
 };
 </script>

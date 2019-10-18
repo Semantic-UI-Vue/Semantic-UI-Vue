@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'ButtonEmphasisExample',
+  name: 'Emphasis',
 };
 </script>

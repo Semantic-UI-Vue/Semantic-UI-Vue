@@ -15,6 +15,6 @@
 
 <script>
 export default {
-  name: 'MetadataCardExample',
+  name: 'MetadataCard',
 };
 </script>

@@ -20,6 +20,6 @@
 
 <script>
 export default {
-  name: 'Image3Example',
+  name: 'Image3',
 };
 </script>

@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'Link2Example',
+  name: 'Link2',
 };
 </script>

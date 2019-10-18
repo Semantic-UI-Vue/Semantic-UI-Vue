@@ -18,6 +18,6 @@
 
 <script>
   export default {
-    name: 'BorderlessExample',
+    name: 'Borderless',
   };
 </script>

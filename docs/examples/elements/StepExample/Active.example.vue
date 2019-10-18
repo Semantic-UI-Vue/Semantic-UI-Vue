@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'ActiveExample',
+  name: 'Active',
 };
 </script>

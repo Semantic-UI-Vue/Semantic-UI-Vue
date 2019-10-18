@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'DropdownExample',
+  name: 'DropdownSearchInMenu',
   data() {
     return {
       menuHeader: {

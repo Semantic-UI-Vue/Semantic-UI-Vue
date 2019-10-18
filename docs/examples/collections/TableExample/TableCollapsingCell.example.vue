@@ -31,6 +31,6 @@
 
 <script>
 export default {
-  name: 'TableCollapsingCellExample',
+  name: 'TableCollapsingCell',
 };
 </script>

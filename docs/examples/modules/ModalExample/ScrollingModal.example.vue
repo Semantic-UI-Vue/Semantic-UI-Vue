@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'ScrollingModalExample',
+  name: 'ScrollingModal',
   data() {
     return { open: false };
   },

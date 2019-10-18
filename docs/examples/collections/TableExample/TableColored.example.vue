@@ -257,6 +257,6 @@
 
 <script>
 export default {
-  name: 'TableColoredExample',
+  name: 'TableColored',
 };
 </script>

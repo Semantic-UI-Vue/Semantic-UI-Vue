@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'IndeterminateExample',
+  name: 'Indeterminate',
 };
 </script>

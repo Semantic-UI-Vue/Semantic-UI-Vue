@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: 'TableVerticalAlignmentExample',
+  name: 'TableTextAlignment',
 };
 </script>

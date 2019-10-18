@@ -38,6 +38,6 @@
 
 <script>
 export default {
-  name: 'SizeSmallExample',
+  name: 'SizeSmall',
 };
 </script>

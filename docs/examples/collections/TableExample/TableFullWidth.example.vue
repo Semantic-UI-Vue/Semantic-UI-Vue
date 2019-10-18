@@ -63,6 +63,6 @@
 
 <script>
 export default {
-  name: 'TableFullWidthExample',
+  name: 'TableFullWidth',
 };
 </script>

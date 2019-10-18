@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'ButtonCompactExample',
+  name: 'Compact',
 };
 </script>

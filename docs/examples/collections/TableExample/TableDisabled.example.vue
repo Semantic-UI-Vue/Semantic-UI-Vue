@@ -34,6 +34,6 @@
 
 <script>
 export default {
-  name: 'TableWarningExample',
+  name: 'TableDisabled',
 };
 </script>

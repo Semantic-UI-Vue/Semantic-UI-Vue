@@ -37,6 +37,6 @@
 
 <script>
 export default {
-  name: 'TableErrorExample',
+  name: 'TableError',
 };
 </script>

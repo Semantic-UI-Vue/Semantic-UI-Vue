@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'AttachedProgressExample',
+  name: 'Attached',
   data() {
     return { percent: 43 };
   },

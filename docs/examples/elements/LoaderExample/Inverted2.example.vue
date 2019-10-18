@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'Inverted2Example',
+  name: 'Inverted2',
 };
 </script>

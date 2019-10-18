@@ -49,6 +49,6 @@
 
 <script>
 export default {
-  name: 'Card1Example',
+  name: 'CardGroup2',
 };
 </script>

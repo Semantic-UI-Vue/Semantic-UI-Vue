@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'CheckboxModelExample',
+  name: 'CheckboxModel',
   data() {
     return { value: true };
   },

@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'SegmentsExample',
+  name: 'Segments',
 };
 </script>

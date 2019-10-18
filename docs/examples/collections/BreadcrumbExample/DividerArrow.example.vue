@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'DividerArrowExample',
+  name: 'DividerArrow',
 };
 </script>

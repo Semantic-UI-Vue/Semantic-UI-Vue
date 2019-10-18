@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  name: 'TextAlignmentCardExample',
+  name: 'TextAlignmentCard',
 };
 </script>

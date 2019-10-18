@@ -18,6 +18,6 @@
 
 <script>
   export default {
-    name: 'TextExample',
+    name: 'Text',
   };
 </script>

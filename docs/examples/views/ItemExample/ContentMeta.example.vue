@@ -53,6 +53,6 @@
 
 <script>
 export default {
-  name: 'ContentHeaderExample',
+  name: 'ContentMeta',
 };
 </script>

@@ -41,6 +41,6 @@
 
 <script>
 export default {
-  name: 'ItemGroupExample',
+  name: 'ItemGroup',
 };
 </script>

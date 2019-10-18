@@ -70,6 +70,6 @@
 
 <script>
 export default {
-  name: 'TableAvatarExample',
+  name: 'TableAvatar',
 };
 </script>

@@ -111,6 +111,6 @@
 
 <script>
 export default {
-  name: 'StatisticInvertedExample',
+  name: 'StatisticInverted',
 };
 </script>

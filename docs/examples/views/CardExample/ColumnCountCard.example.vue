@@ -55,6 +55,6 @@
 
 <script>
 export default {
-  name: 'ColumnCountCardExample',
+  name: 'ColumnCountCard',
 };
 </script>

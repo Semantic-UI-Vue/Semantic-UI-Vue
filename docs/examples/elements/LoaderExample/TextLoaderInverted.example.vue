@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'TextLoaderInvertedExample',
+  name: 'TextLoaderInverted',
 };
 </script>

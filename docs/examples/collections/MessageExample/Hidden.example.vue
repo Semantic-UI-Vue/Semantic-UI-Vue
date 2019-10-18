@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'HiddenMessageExample',
+  name: 'Hidden',
 };
 </script>

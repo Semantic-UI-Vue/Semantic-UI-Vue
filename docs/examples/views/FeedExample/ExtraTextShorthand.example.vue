@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'ExtraImagesShorthandExample',
+  name: 'ExtraTextShorthand',
   data() {
     return {
       image: 'static/images/avatar/small/laura.jpg',

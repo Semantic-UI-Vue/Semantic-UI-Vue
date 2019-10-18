@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  name: 'RailExample',
+  name: 'Dividing',
 };
 </script>

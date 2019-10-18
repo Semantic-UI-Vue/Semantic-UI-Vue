@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'HorizontalSegmentsExample',
+  name: 'HorizontalSegments',
 };
 </script>

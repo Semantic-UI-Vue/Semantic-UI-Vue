@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'RaisedCardExample',
+  name: 'RaisedCard',
 };
 </script>

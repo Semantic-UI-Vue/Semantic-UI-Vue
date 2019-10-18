@@ -24,6 +24,6 @@
 
 <script>
 export default {
-  name: 'VerticallyDividedExample',
+  name: 'VerticallyDivided',
 };
 </script>

@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: 'RaisedLinkCardExample',
+  name: 'RaisedLinkCard',
 };
 </script>

@@ -18,6 +18,6 @@
 
 <script>
   export default {
-    name: 'NotTabularExample',
+    name: 'NotTabular',
   };
 </script>

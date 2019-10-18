@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'BreadcrumbExampleAngle',
+  name: 'BreadcrumbAngle',
   data() {
     return {
       sections: [

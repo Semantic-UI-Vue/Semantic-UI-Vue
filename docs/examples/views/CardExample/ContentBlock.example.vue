@@ -45,6 +45,6 @@
 
 <script>
 export default {
-  name: 'ContentBlockExample',
+  name: 'ContentBlock',
 };
 </script>

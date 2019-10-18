@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'SourceSettingsExample',
+  name: 'SourceSettings',
 };
 </script>

@@ -1,6 +1,6 @@
-import SearchStandard from './Search.standard.example';
-import SearchMinCharacters from './Search.minCharacters.example';
-import SearchCategory from './Search.category.example';
+import SearchStandard from './SearchStandard.example';
+import SearchMinCharacters from './SearchMinCharacters.example';
+import SearchCategory from './SearchCategory.example';
 
 export default [
   {

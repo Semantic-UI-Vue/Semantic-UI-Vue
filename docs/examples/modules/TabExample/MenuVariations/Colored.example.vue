@@ -30,7 +30,7 @@
 
 <script>
   export default {
-    name: 'ColoredExample',
+    name: 'Colored',
     data: () => ({
       selectedColor: 'blue',
       colors: [
