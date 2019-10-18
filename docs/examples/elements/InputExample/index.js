@@ -10,6 +10,7 @@ import Size3 from './Size3.example';
 import Size4 from './Size4.example';
 import Size5 from './Size5.example';
 import Size6 from './Size6.example';
+import Fluid from './Fluid.example';
 
 export default [
   {
@@ -72,6 +73,11 @@ export default [
       },
       {
         component: Size6,
+      },
+      {
+        title: 'Fluid',
+        description: 'An input can take the size of its container',
+        component: Fluid,
       },
     ],
   },
