@@ -4,6 +4,7 @@ import Divider from './Divider.example';
 import DividerArrow from './DividerArrow.example';
 import Section from './Section.example';
 import Link from './Link.example';
+import Size from './Size.example';
 
 export default [
   {
@@ -39,6 +40,16 @@ export default [
         title: 'Link',
         description: 'A section may be linkable or contain a link',
         component: Link,
+      },
+    ],
+  },
+  {
+    title: 'Variations',
+    examples: [
+      {
+        title: 'Size',
+        description: 'A breadcrumb can vary in size',
+        component: Size,
       },
     ],
   },
