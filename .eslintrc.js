@@ -47,8 +47,7 @@ module.exports = {
     'vue/require-render-return': 'error',
     'vue/require-valid-default-prop': 'error',
     'vue/return-in-computed-property': 'error',
-    // TODO: enable when https://github.com/vuejs/eslint-plugin-vue/issues/217 is fixed
-    'vue/html-end-tags': 'off',
+    'vue/html-end-tags': 'on',
     'vue/no-async-in-computed-properties': 'error',
     'vue/no-duplicate-attributes': 'error',
     'vue/no-side-effects-in-computed-properties': 'error',
@@ -62,5 +61,6 @@ module.exports = {
     // 'vue/no-multi-spaces': 'error',
     'vue/v-bind-style': 'error',
     'vue/v-on-style': 'error',
+    'indent': ['warn', 2]
   }
 }
