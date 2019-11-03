@@ -7,5 +7,9 @@ export const classMixin = {
       const inGroup = ownName && parentName && parentName.match(new RegExp(`^${ownName}.*Group$`));
       return inGroup ? '' : 'ui';
     },
+    getParentName() {
+      return (this.$parent && this.$parent.constructor.options &&
+        this.$parent.constructor.options.name) || '';
+    },
   },
 };

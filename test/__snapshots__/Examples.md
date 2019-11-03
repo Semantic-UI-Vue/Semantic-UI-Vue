@@ -3679,6 +3679,42 @@ Vue.use(PortalVue);
       Reply</button></form></div>"
 ```
 
+##     `Threaded`
+
+####       `should match snapshot`
+
+```
+"<div class=\"comments threaded ui\"><h3 class=\"ui dividing header\">Comments</h3> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/matt.jpg\"></div> <div class=\"content\"><a class=\"author\">Matt</a> <div class=\"metadata\"><div>Today at 5:42PM</div></div> <div class=\"text\">How artistic!</div> <div class=\"actions\"><a>Reply</a></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/elliot.jpg\"></div> <div class=\"content\"><a class=\"author\">Elliot Fu</a> <div class=\"metadata\"><div>Yesterday at 12:30AM</div></div> <div class=\"text\"><p>This has been very useful for my research. Thanks as well!</p></div> <div class=\"actions\"><a>Reply</a></div></div> <div class=\"comments\"><div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/jenny.jpg\"></div> <div class=\"content\"><a class=\"author\">Jenny Hess</a> <div class=\"metadata\"><div>Just now</div></div> <div class=\"text\">
+            Elliot you are always so right :)
+          </div> <div class=\"actions\"><a>Reply</a></div></div></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/joe.jpg\"></div> <div class=\"content\"><a class=\"author\">Joe Henderson</a> <div class=\"metadata\"><div>5 days ago</div></div> <div class=\"text\">
+        Dude, this is awesome. Thanks so much
+      </div> <div class=\"actions\"><a>Reply</a></div></div></div> <form reply=\"\"><form-text-area></form-text-area> <button role=\"button\" class=\"ui icon left labeled primary button\"><i class=\"edit icon\"></i>Add Reply</button></form></div>"
+```
+
+##     `Minimal`
+
+####       `should match snapshot`
+
+```
+"<div class=\"comments minimal ui\"><h3 class=\"ui dividing header\">Comments</h3> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/matt.jpg\"></div> <div class=\"content\"><a class=\"author\">Matt</a> <div class=\"metadata\"><div>Today at 5:42PM</div></div> <div class=\"text\">How artistic!</div> <div class=\"actions\"><a>Reply</a></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/elliot.jpg\"></div> <div class=\"content\"><a class=\"author\">Elliot Fu</a> <div class=\"metadata\"><div>Yesterday at 12:30AM</div></div> <div class=\"text\"><p>This has been very useful for my research. Thanks as well!</p></div> <div class=\"actions\"><a>Reply</a></div></div> <div class=\"comments\"><div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/jenny.jpg\"></div> <div class=\"content\"><a class=\"author\">Jenny Hess</a> <div class=\"metadata\"><div>Just now</div></div> <div class=\"text\">
+            Elliot you are always so right :)
+          </div> <div class=\"actions\"><a>Reply</a></div></div></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/joe.jpg\"></div> <div class=\"content\"><a class=\"author\">Joe Henderson</a> <div class=\"metadata\"><div>5 days ago</div></div> <div class=\"text\">
+        Dude, this is awesome. Thanks so much
+      </div> <div class=\"actions\"><a>Reply</a></div></div></div> <form reply=\"\"><form-text-area></form-text-area> <button role=\"button\" class=\"ui icon left labeled primary button\"><i class=\"edit icon\"></i>Add Reply</button></form></div>"
+```
+
+##     `Size`
+
+####       `should match snapshot`
+
+```
+"<div class=\"comments threaded massive ui\"><h3 class=\"ui dividing header\">Comments</h3> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/matt.jpg\"></div> <div class=\"content\"><a class=\"author\">Matt</a> <div class=\"metadata\"><div>Today at 5:42PM</div></div> <div class=\"text\">How artistic!</div> <div class=\"actions\"><a>Reply</a></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/elliot.jpg\"></div> <div class=\"content\"><a class=\"author\">Elliot Fu</a> <div class=\"metadata\"><div>Yesterday at 12:30AM</div></div> <div class=\"text\"><p>This has been very useful for my research. Thanks as well!</p></div> <div class=\"actions\"><a>Reply</a></div></div> <div class=\"comments\"><div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/jenny.jpg\"></div> <div class=\"content\"><a class=\"author\">Jenny Hess</a> <div class=\"metadata\"><div>Just now</div></div> <div class=\"text\">
+            Elliot you are always so right :)
+          </div> <div class=\"actions\"><a>Reply</a></div></div></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/joe.jpg\"></div> <div class=\"content\"><a class=\"author\">Joe Henderson</a> <div class=\"metadata\"><div>5 days ago</div></div> <div class=\"text\">
+        Dude, this is awesome. Thanks so much
+      </div> <div class=\"actions\"><a>Reply</a></div></div></div> <form reply=\"\"><form-text-area></form-text-area> <button role=\"button\" class=\"ui icon left labeled primary button\"><i class=\"edit icon\"></i>Add Reply</button></form></div>"
+```
+
 ## `FeedExample`
 
 ##   `Types`

@@ -1,9 +1,9 @@
-import { SemanticUIVueMixin } from '../../lib';
+import { classMixin, SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
   name: 'SuiCommentGroup',
-  mixins: [SemanticUIVueMixin],
+  mixins: [SemanticUIVueMixin, classMixin],
   props: {
     threaded: {
       type: Boolean,
@@ -19,17 +19,18 @@ export default {
   },
   render() {
     const ElementType = this.getElementType();
-    const classList = this.classes(
-      'ui',
+    const classList = [
       'comments',
       this.threaded && 'threaded',
       this.minimal && 'minimal',
       this.size,
-    );
+    ];
+    const parentName = this.getParentName();
+    if (parentName !== 'SuiComment') classList.push('ui');
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={classList}
+        class={this.classes(...classList)}
       >
         {this.$slots.default}
       </ElementType>
