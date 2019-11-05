@@ -84,8 +84,8 @@ export default {
         <label
           onClick={() => this.$refs.input.click()}
           for={this.name}>
-            {this.label || this.$slots.default}
-          </label>
+          {this.label || this.$slots.default}
+        </label>
       </ElementType>
     );
   },

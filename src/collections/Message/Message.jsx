@@ -128,7 +128,7 @@ export default {
         )}
       >
         {this.dismissable && <SuiIcon name="close"
-                                      nativeOnClick={this.handleDismiss} />}
+          nativeOnClick={this.handleDismiss} />}
         {this.icon && <SuiIcon name={this.icon} />}
         {this.icon && <SuiMessageContent>{content}</SuiMessageContent>}
         {!this.icon && content}

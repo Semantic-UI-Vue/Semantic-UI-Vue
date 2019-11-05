@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'NotTabularExample',
-  };
+export default {
+  name: 'NotTabularExample',
+};
 </script>

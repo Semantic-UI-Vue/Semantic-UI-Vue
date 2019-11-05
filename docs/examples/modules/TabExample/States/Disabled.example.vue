@@ -19,15 +19,15 @@
 </template>
 
 <script>
-  export default {
-    name: 'DisabledExample',
-    data: () => ({
-      disabled: true,
-    }),
-    methods: {
-      toggleDisabled() {
-        this.disabled = !this.disabled;
-      },
+export default {
+  name: 'DisabledExample',
+  data: () => ({
+    disabled: true,
+  }),
+  methods: {
+    toggleDisabled() {
+      this.disabled = !this.disabled;
     },
-  };
+  },
+};
 </script>

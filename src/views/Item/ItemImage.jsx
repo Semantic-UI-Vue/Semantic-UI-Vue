@@ -26,8 +26,8 @@ export default {
       <ElementType
         href={this.href}
         class={this.classes(
-            this.size && `ui ${this.size}`,
-            'image',
+          this.size && `ui ${this.size}`,
+          'image',
         )}
       >
         <img src={this.src} />

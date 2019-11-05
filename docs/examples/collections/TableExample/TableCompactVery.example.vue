@@ -62,7 +62,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'TableCompactVeryExample',
-  };
+export default {
+  name: 'TableCompactVeryExample',
+};
 </script>

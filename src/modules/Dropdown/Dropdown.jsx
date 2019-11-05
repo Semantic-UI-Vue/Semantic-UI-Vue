@@ -221,9 +221,9 @@ export default {
         <DropdownMenu>
           {[
             this.searchInMenu && [<Input {...{ props: this.searchInMenu, ref: 'searchInMenu' }}
-                                         onInput={this.updateFilter}
-                                         value={this.filter}
-                                         onKeydown={this.handleSearchKeyDown}
+              onInput={this.updateFilter}
+              value={this.filter}
+              onKeydown={this.handleSearchKeyDown}
             />, <Divider/>],
             this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map((option, index) => (
               <DropdownItem
@@ -423,7 +423,7 @@ export default {
     },
     handleBlur(e) {
       const filter = this.filter;
-      if (filter!=='' && this.multiple) {
+      if (filter !== '' && this.multiple) {
         this.selectItem(filter);
       }
       if (this.isMouseDown || e.relatedTarget === this.$refs.search) {
