@@ -4,7 +4,7 @@ node_js:
   - node
 script:
   - npm run lint
-  - npm test
+  - npm test:update
   - npm run report-coverage
   - npm run build
   - ls dist
