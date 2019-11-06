@@ -3448,7 +3448,8 @@ Vue.use(PortalVue);
 
 ```
 "<div><div class=\"ui card\"><img src=\"static/images/avatar/large/kristy.png\" class=\"ui image\"> <div class=\"content\"><div class=\"header\">Kristy</div> <div class=\"meta\">Joined in 2013</div> <div class=\"description\">Kristy is an art director living in New York.</div></div> <div class=\"extra content\"><i class=\"user icon\"></i>
-      22 Friends</div></div></div>"
+      22 Friends
+    </div></div></div>"
 ```
 
 ##     `Cards`
@@ -3482,7 +3483,8 @@ Vue.use(PortalVue);
 
 ```
 "<div><div class=\"ui card\"><div class=\"ui move reveal\"><div class=\"ui visible content\"><img src=\"static/images/avatar/large/jenny.jpg\" class=\"ui image\"></div> <div class=\"ui hidden content\"><img src=\"static/images/avatar/large/elliot.jpg\" class=\"ui image\"></div></div> <div class=\"content\"><div class=\"header\">Team Fu &amp; Hess</div> <div class=\"meta\">Create in Sep 2014</div></div> <div class=\"extra content\"><i class=\"users icon\"></i>
-      2 Members</div></div></div>"
+      2 Members
+    </div></div></div>"
 ```
 
 ##     `Header`
@@ -3598,8 +3600,9 @@ Vue.use(PortalVue);
 ####       `should match snapshot`
 
 ```
-"<div><a><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">Animals</div> <img src=\"/static/images/wireframes/paragraph.png\" class=\"ui image\"></div> <div class=\"extra content\"><div class=\"right floated\"><span><img src=\"/static/images/avatar/small/matt.jpg\" class=\"ui mini circular image\"> Matt
-      </span></div></div></div></a></div>"
+"<div><a><div class=\"ui card\"><div class=\"content\"><div class=\"header\">Cute Dog</div> <div class=\"meta\">Animals</div> <img src=\"/static/images/wireframes/paragraph.png\" class=\"ui image\"></div> <div class=\"extra content\"><div class=\"right floated\"><span><img src=\"/static/images/avatar/small/matt.jpg\" class=\"ui mini circular image\">
+          Matt
+        </span></div></div></div></a></div>"
 ```
 
 ##     `Floated Content`
@@ -3675,8 +3678,7 @@ Vue.use(PortalVue);
             Elliot you are always so right :)
           </div> <div class=\"actions\"><a>Reply</a></div></div></div></div></div> <div class=\"ui comment\"><div class=\"avatar\"><img src=\"static/images/avatar/small/joe.jpg\"></div> <div class=\"content\"><a class=\"author\">Joe Henderson</a> <div class=\"metadata\"><div>5 days ago</div></div> <div class=\"text\">
         Dude, this is awesome. Thanks so much
-      </div> <div class=\"actions\"><a>Reply</a></div></div></div> <form reply=\"\"><form-text-area></form-text-area> <button role=\"button\" class=\"ui icon left labeled primary button\"><i class=\"edit icon\"></i>Add
-      Reply</button></form></div>"
+      </div> <div class=\"actions\"><a>Reply</a></div></div></div> <form reply=\"\"><form-text-area></form-text-area> <button role=\"button\" class=\"ui icon left labeled primary button\"><i class=\"edit icon\"></i>Add Reply</button></form></div>"
 ```
 
 ## `FeedExample`

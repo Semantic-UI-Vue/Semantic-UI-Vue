@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Search from 'src/modules/Search/Search';
 
@@ -18,7 +18,7 @@ describe('Search', () => {
   });
 
   it('should display the results when text is entered and input is focused', () => {
-    const search = shallow(Search, {});
+    const search = mount(Search, {});
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'a';
@@ -29,7 +29,7 @@ describe('Search', () => {
   });
 
   it('should hide the results when text has been removed', () => {
-    const search = shallow(Search, {});
+    const search = mount(Search, {});
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'a';
@@ -41,7 +41,7 @@ describe('Search', () => {
   });
 
   it('should hide the results when it is not focused', () => {
-    const search = shallow(Search, {});
+    const search = mount(Search, {});
     const input = search.find('input.prompt');
     input.element.value = 'a';
     input.trigger('input');
@@ -53,7 +53,7 @@ describe('Search', () => {
   });
 
   it('should display no records message when search list is empty', () => {
-    const search = shallow(Search, {});
+    const search = mount(Search, {});
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'a';
@@ -67,7 +67,7 @@ describe('Search', () => {
 
   it('should display no records message when nothing is found with given query', () => {
     const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }];
-    const search = shallow(Search, { propsData: { source } });
+    const search = mount(Search, { propsData: { source } });
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'x';
@@ -81,7 +81,7 @@ describe('Search', () => {
 
   it('should search through local source and display filtered results', () => {
     const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }];
-    const search = shallow(Search, { propsData: { source } });
+    const search = mount(Search, { propsData: { source } });
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'C';
@@ -94,7 +94,7 @@ describe('Search', () => {
 
   it('should search using non case sensitive mode', () => {
     const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'catfish' }];
-    const search = shallow(Search, { propsData: { source } });
+    const search = mount(Search, { propsData: { source } });
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'c';
@@ -108,7 +108,7 @@ describe('Search', () => {
   it('should emit input event when value changes', () => {
     const horse = { title: 'Horse' };
     const source = [horse];
-    const search = shallow(Search, { propsData: { source } });
+    const search = mount(Search, { propsData: { source } });
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'Horse';
@@ -121,7 +121,7 @@ describe('Search', () => {
 
   it('should display previous results when query is cleared', () => {
     const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'catfish' }];
-    const search = shallow(Search, { propsData: { source } });
+    const search = mount(Search, { propsData: { source } });
     const input = search.find('input.prompt');
     input.trigger('focus');
     input.element.value = 'c';
@@ -138,7 +138,7 @@ describe('Search', () => {
 
   it('should display description', () => {
     const source = [{ title: 'Horse', description: 'horse description' }];
-    const search = shallow(Search, { propsData: { source } });
+    const search = mount(Search, { propsData: { source } });
 
     const input = search.find('input.prompt');
     input.trigger('focus');

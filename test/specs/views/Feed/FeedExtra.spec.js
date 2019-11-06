@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import FeedExtra from 'src/views/Feed/FeedExtra';
 
 describe('FeedExtra', () => {
@@ -26,7 +26,7 @@ describe('FeedExtra', () => {
   });
 
   it('should create a SUI FeedExtra with images', () => {
-    const extra = shallow(FeedExtra, { propsData: { images: [
+    const extra = mount(FeedExtra, { propsData: { images: [
       '/image0.png',
       '/image1.png',
     ] } });

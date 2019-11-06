@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import Feed from 'src/views/Feed/Feed';
 
 describe('Feed', () => {
@@ -39,7 +39,7 @@ describe('Feed', () => {
         summary: 'This is a feed summary',
       },
     ];
-    const feed = shallow(Feed, {
+    const feed = mount(Feed, {
       propsData: {
         events,
       },
@@ -75,7 +75,7 @@ describe('Feed', () => {
         summary: 'This is a feed summary',
       },
     ];
-    const feed = shallow(Feed, {
+    const feed = mount(Feed, {
       propsData: {
         events,
       },

@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Input from 'src/elements/Input/Input';
 
@@ -20,7 +20,7 @@ describe('Input', () => {
   });
 
   it('should create a SUI Input with loading icon', () => {
-    const input = shallow(Input, { propsData: { loading: true } });
+    const input = mount(Input, { propsData: { loading: true } });
     expect(input.classes()).to.include('loading');
     expect(input.classes()).to.include('icon');
     expect(input.find('i').classes()).to.include('loading');

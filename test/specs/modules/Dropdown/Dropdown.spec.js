@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import * as common from 'test/utils';
 import Label from 'src/elements/Label/Label';
 import Icon from 'src/elements/Icon/Icon';
@@ -113,7 +113,7 @@ describe('Dropdown', () => {
   });
 
   it('should have icons, flags and images in option', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         options: [
           {
@@ -138,7 +138,7 @@ describe('Dropdown', () => {
   });
 
   it('should choose option', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
       },
@@ -152,7 +152,7 @@ describe('Dropdown', () => {
   });
 
   it('should choose few options', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
@@ -169,7 +169,7 @@ describe('Dropdown', () => {
   });
 
   it('should deselect option from selected', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
@@ -191,7 +191,7 @@ describe('Dropdown', () => {
   });
 
   it('should not select more than max-selections', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         maxSelections: 1,
@@ -211,7 +211,7 @@ describe('Dropdown', () => {
   });
 
   it('should have icons, flags and images in selected text', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         options: [
           {
@@ -240,7 +240,7 @@ describe('Dropdown', () => {
   });
 
   it('should have icons, flags and images in selected options', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         options: [
@@ -270,7 +270,7 @@ describe('Dropdown', () => {
   });
 
   it('should filter options', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         search: true,
         noResultsMessage: 'Ops.. no results',
@@ -292,7 +292,7 @@ describe('Dropdown', () => {
   });
 
   it('should delete last option from selected when pressing backspace in search input when filter is empty', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = mount(DropdownWithRequired, {
       propsData: {
         search: true,
         multiple: true,

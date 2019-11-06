@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import FeedSummary from 'src/views/Feed/FeedSummary';
 
 describe('FeedSummary', () => {
@@ -17,7 +17,7 @@ describe('FeedSummary', () => {
   });
 
   it('should create a SUI FeedSummary with FeedUser and FeedDate', () => {
-    const summary = shallow(FeedSummary, { propsData: {
+    const summary = mount(FeedSummary, { propsData: {
       date: '2 hours ago',
       content: 'This is a summary',
       user: 'Jenny',

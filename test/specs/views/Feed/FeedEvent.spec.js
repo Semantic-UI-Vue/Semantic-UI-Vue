@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import FeedEvent from 'src/views/Feed/FeedEvent';
 
 describe('FeedEvent', () => {
@@ -10,7 +10,7 @@ describe('FeedEvent', () => {
   });
 
   it('should create a SUI FeedEvent with content', () => {
-    const event = shallow(FeedEvent, { propsData: { content: 'This is a feed event' } });
+    const event = mount(FeedEvent, { propsData: { content: 'This is a feed event' } });
     expect(event.is('div')).to.equal(true);
     expect(event.classes()).to.include('event');
     const divs = event.findAll('div');
@@ -20,7 +20,7 @@ describe('FeedEvent', () => {
   });
 
   it('should create a SUI FeedEvent with icon, content and default slot', () => {
-    const event = shallow(FeedEvent, {
+    const event = mount(FeedEvent, {
       propsData: {
         icon: 'pencil',
         content: 'This is a feed event',
@@ -42,7 +42,7 @@ describe('FeedEvent', () => {
   });
 
   it('should create a SUI FeedEvent with image avatar, content and default slot', () => {
-    const event = shallow(FeedEvent, {
+    const event = mount(FeedEvent, {
       propsData: {
         image: '/avatar.png',
         content: 'This is a feed event',
@@ -83,7 +83,7 @@ describe('FeedEvent', () => {
   });
 
   it('should create a SUI FeedEvent with default slot', () => {
-    const event = shallow(FeedEvent, { slots: { default: '<span>This is a feed event</span>' } });
+    const event = mount(FeedEvent, { slots: { default: '<span>This is a feed event</span>' } });
     expect(event.is('div')).to.equal(true);
     expect(event.classes()).to.include('event');
     expect(event.text()).to.equal('This is a feed event');

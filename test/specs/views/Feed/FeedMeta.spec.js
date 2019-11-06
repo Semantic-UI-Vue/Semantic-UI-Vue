@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import FeedMeta from 'src/views/Feed/FeedMeta';
 
 describe('FeedMeta', () => {
@@ -17,7 +17,7 @@ describe('FeedMeta', () => {
   });
 
   it('should create a SUI FeedMeta with FeedLike', () => {
-    const meta = shallow(FeedMeta, { propsData: { like: '4 likes' } });
+    const meta = mount(FeedMeta, { propsData: { like: '4 likes' } });
     expect(meta.is('div')).to.equal(true);
     expect(meta.classes()).to.include('meta');
     expect(meta.contains('a')).to.equal(true);

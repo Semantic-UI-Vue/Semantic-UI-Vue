@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Search from 'src/modules/Search/Search';
 
@@ -6,7 +6,7 @@ describe('Search', () => {
   testClassFromProps(Search, ['ui', 'search']);
 
   it('should by default search when min 1 character is typed', () => {
-    const search = shallow(Search);
+    const search = mount(Search);
 
     const input = search.find('input.prompt');
     input.trigger('focus');
@@ -18,7 +18,7 @@ describe('Search', () => {
   });
 
   it('should not search when a number of typed characters is smaller than min characters', () => {
-    const search = shallow(Search, { propsData: { minCharacters: 2 } });
+    const search = mount(Search, { propsData: { minCharacters: 2 } });
     search.setProps({});
 
     const input = search.find('input.prompt');
@@ -32,7 +32,7 @@ describe('Search', () => {
 
   it('should search when a number of typed characters is equal to min characters', () => {
     const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'catfish' }];
-    const search = shallow(Search, { propsData: { source, minCharacters: 3 } });
+    const search = mount(Search, { propsData: { source, minCharacters: 3 } });
 
     const input = search.find('input.prompt');
     input.trigger('focus');
@@ -48,7 +48,7 @@ describe('Search', () => {
 
   it('should search when a number of typed characters is greater than min characters', () => {
     const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'catfish' }];
-    const search = shallow(Search, { propsData: { source, minCharacters: 3 } });
+    const search = mount(Search, { propsData: { source, minCharacters: 3 } });
 
     const input = search.find('input.prompt');
     input.trigger('focus');

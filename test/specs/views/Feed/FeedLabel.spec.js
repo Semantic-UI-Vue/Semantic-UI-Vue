@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import FeedLabel from 'src/views/Feed/FeedLabel';
 
 describe('FeedLabel', () => {
@@ -17,7 +17,7 @@ describe('FeedLabel', () => {
   });
 
   it('should create a SUI FeedLabel with icon', () => {
-    const label = shallow(FeedLabel, { propsData: { icon: 'pencil' } });
+    const label = mount(FeedLabel, { propsData: { icon: 'pencil' } });
     expect(label.is('div')).to.equal(true);
     expect(label.classes()).to.include('label');
     expect(label.contains('i')).to.equal(true);
@@ -25,7 +25,7 @@ describe('FeedLabel', () => {
   });
 
   it('should create a SUI FeedLabel with image', () => {
-    const label = shallow(FeedLabel, { propsData: { image: '/test-image.jpg' } });
+    const label = mount(FeedLabel, { propsData: { image: '/test-image.jpg' } });
     expect(label.is('div')).to.equal(true);
     expect(label.classes()).to.include('label');
     expect(label.contains('img')).to.equal(true);

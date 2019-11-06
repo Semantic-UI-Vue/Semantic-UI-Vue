@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import FeedContent from 'src/views/Feed/FeedContent';
 
 describe('FeedContent', () => {
@@ -17,7 +17,7 @@ describe('FeedContent', () => {
   });
 
   it('should create a SUI FeedContent with content and other components', () => {
-    const content = shallow(FeedContent, { propsData: {
+    const content = mount(FeedContent, { propsData: {
       content: 'Main content here',
       date: '1 hour ago',
       summary: 'Summary text',

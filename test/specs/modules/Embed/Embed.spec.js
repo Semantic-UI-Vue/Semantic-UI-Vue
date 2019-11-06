@@ -1,9 +1,9 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import Embed from 'src/modules/Embed/Embed';
 
 describe('Embed', () => {
   it('should create a SUI Embed default without active, placeholder and iframe', () => {
-    const embed = shallow(Embed);
+    const embed = mount(Embed);
     expect(embed.is('div')).to.equal(true);
     expect(embed.classes()).to.include('ui');
     expect(embed.classes()).to.not.include('active');
@@ -30,7 +30,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with custom icon', () => {
-    const embed = shallow(Embed, {
+    const embed = mount(Embed, {
       propsData: {
         icon: 'pencil',
       },

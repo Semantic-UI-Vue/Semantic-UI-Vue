@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallow, mount } from '@vue/test-utils';
 import FeedLike from 'src/views/Feed/FeedLike';
 
 describe('FeedLike', () => {
@@ -17,7 +17,7 @@ describe('FeedLike', () => {
   });
 
   it('should create a SUI FeedLike with icon', () => {
-    const like = shallow(FeedLike, { propsData: { icon: 'like', content: '4 likes' } });
+    const like = mount(FeedLike, { propsData: { icon: 'like', content: '4 likes' } });
     expect(like.is('a')).to.equal(true);
     expect(like.classes()).to.include('like');
     expect(like.text()).to.equal('4 likes');

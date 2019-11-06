@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Search from 'src/modules/Search/Search';
 
@@ -12,7 +12,7 @@ describe('Search', () => {
       { title: 'Cat', category: 'Mammal' },
       { title: 'Tuna', category: 'Fish' },
     ];
-    const search = shallow(Search, { propsData: { source, category: true } });
+    const search = mount(Search, { propsData: { source, category: true } });
     const input = search.find('input.prompt');
     input.element.value = 'c';
     input.trigger('input');
