@@ -1602,6 +1602,14 @@
 "<div class=\"ui icon mini input\" placeholder=\"Search mini...\"><input type=\"text\" placeholder=\"Search mini...\"><i class=\"search icon\"></i></div>"
 ```
 
+##     `Transparent`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui transparent input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"></div>"
+```
+
 ## `LabelExample`
 
 ##   `Types`
