@@ -29,18 +29,18 @@
 </template>
 
 <script>
-  export default {
-    name: 'ColoredExample',
-    data: () => ({
-      selectedColor: 'blue',
-      colors: [
-        'red',
-        'orange',
-        'yellow',
-        'green',
-        'blue',
-        'purple',
-      ],
-    }),
-  };
+export default {
+  name: 'ColoredExample',
+  data: () => ({
+    selectedColor: 'blue',
+    colors: [
+      'red',
+      'orange',
+      'yellow',
+      'green',
+      'blue',
+      'purple',
+    ],
+  }),
+};
 </script>

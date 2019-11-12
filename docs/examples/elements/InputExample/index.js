@@ -1,4 +1,5 @@
 import Input from './Input.example';
+import Error from './Error.example';
 import Focus from './Focus.example';
 import Loading from './Loading.example';
 import Loading2 from './Loading2.example';
@@ -11,6 +12,9 @@ import Size4 from './Size4.example';
 import Size5 from './Size5.example';
 import Size6 from './Size6.example';
 import Fluid from './Fluid.example';
+import Transparent from './Transparent.example';
+import Transparent2 from './Transparent2.example';
+import Transparent3 from './Transparent3.example';
 
 export default [
   {
@@ -43,6 +47,11 @@ export default [
         title: 'Disabled',
         description: 'An input field can show that it is disabled',
         component: Disabled,
+      },
+      {
+        title: 'Error',
+        description: 'An input field can show the data contains errors',
+        component: Error,
       },
     ],
   },
@@ -78,6 +87,17 @@ export default [
         title: 'Fluid',
         description: 'An input can take the size of its container',
         component: Fluid,
+      },
+      {
+        title: 'Transparent',
+        description: 'A transparent input has no background',
+        component: Transparent,
+      },
+      {
+        component: Transparent2,
+      },
+      {
+        component: Transparent3,
       },
     ],
   },

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'BorderlessExample',
-  };
+export default {
+  name: 'BorderlessExample',
+};
 </script>

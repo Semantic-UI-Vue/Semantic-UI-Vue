@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'MenuPositionRightExample',
-  };
+export default {
+  name: 'MenuPositionRightExample',
+};
 </script>

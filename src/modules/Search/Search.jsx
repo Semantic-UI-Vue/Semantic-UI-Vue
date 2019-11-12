@@ -77,14 +77,14 @@ export default {
     },
     renderInput() {
       let input = <input onBlur={this.handleBlur}
-                    onFocus={this.handleFocus}
-                    onInput={this.handleInput}
-                    value={this.value}
-                    class={this.classes('prompt')}
-                    {...{ attrs: this.$attrs }}/>;
+        onFocus={this.handleFocus}
+        onInput={this.handleInput}
+        value={this.value}
+        class={this.classes('prompt')}
+        {...{ attrs: this.$attrs }}/>;
       input = this.input
-          ? <div class={this.classes('ui', 'icon', 'input')}>{input}{this.$slots.icon}</div>
-          : input;
+        ? <div class={this.classes('ui', 'icon', 'input')}>{input}{this.$slots.icon}</div>
+        : input;
 
       return input;
     },
@@ -93,22 +93,22 @@ export default {
     const ElementType = this.getElementType();
 
     return (
-        <ElementType
-            class={this.classes(
-                'ui',
-                'search',
-                this.category ? 'category' : '',
-            )}>
-            {this.renderInput()}
-          {this.firstSearch &&
+      <ElementType
+        class={this.classes(
+          'ui',
+          'search',
+          this.category ? 'category' : '',
+        )}>
+        {this.renderInput()}
+        {this.firstSearch &&
           <Results query={this.internalQuery}
-                   source={this.source}
-                   onSelected={this.handleSelect}
-                   category={this.category}
-                   firstFocus={this.firstFocus}
-                   visible={this.resultsVisible}/>
-          }
-        </ElementType>
+            source={this.source}
+            onSelected={this.handleSelect}
+            category={this.category}
+            firstFocus={this.firstFocus}
+            visible={this.resultsVisible}/>
+        }
+      </ElementType>
     );
   },
 };

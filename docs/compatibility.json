@@ -890,13 +890,13 @@
           "name": "content",
           "examples": [{
             "name": "field",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "fields",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "text area",
-            "implemented": false
+            "implemented": true
           }, {
             "name": {
               "name": "checkbox",
@@ -904,16 +904,16 @@
                 "name": "types",
                 "examples": [{
                   "name": "checkbox",
-                  "implemented": false
+                  "implemented": true
                 }, {
                   "name": "radio",
-                  "implemented": false
+                  "implemented": true
                 }, {
                   "name": "slider",
-                  "implemented": false
+                  "implemented": true
                 }, {
                   "name": "toggle",
-                  "implemented": false
+                  "implemented": true
                 }]
               }, {
                 "name": "states",
@@ -941,7 +941,7 @@
             "implemented": false
           }, {
             "name": "radio checkbox",
-            "implemented": false
+            "implemented": true
           }, {
             "name": {
               "name": "dropdown",
@@ -1049,10 +1049,10 @@
             "implemented": false
           }, {
             "name": "multiple select",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "html select",
-            "implemented": false
+            "implemented": true
           }, {
             "name": {
               "name": "message",
@@ -1118,61 +1118,61 @@
           "name": "states",
           "examples": [{
             "name": "loading",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "success",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "error",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "warning",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "field error",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "disabled field",
-            "implemented": false
+            "implemented": true
           }, "read-only field"]
         }, {
           "name": "form variations",
           "examples": [{
             "name": "size",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "equal width form",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "inverted",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "field variations",
           "examples": [{
             "name": "inline field",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "width",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "required",
-            "implemented": false
+            "implemented": true
           }]
         }, {
           "name": "group variations",
           "examples": [{
             "name": "evenly divided",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "grouped fields",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "equal width fields",
-            "implemented": false
+            "implemented": true
           }, {
             "name": "inline fields",
-            "implemented": false
+            "implemented": true
           }]
         }]
       },

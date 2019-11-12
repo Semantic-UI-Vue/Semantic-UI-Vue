@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'SecondaryExample',
-  };
+export default {
+  name: 'SecondaryExample',
+};
 </script>

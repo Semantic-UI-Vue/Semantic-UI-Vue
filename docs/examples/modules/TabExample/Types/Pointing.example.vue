@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'PointingExample',
-  };
+export default {
+  name: 'PointingExample',
+};
 </script>

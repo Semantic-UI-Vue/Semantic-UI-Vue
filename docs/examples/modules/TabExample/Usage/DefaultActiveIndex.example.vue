@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'DefaultActiveIndexExample',
-  };
+export default {
+  name: 'DefaultActiveIndexExample',
+};
 </script>
