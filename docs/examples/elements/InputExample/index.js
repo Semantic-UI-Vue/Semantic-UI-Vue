@@ -1,4 +1,5 @@
 import Input from './Input.example';
+import Error from './Error.example';
 import Focus from './Focus.example';
 import Loading from './Loading.example';
 import Loading2 from './Loading2.example';
@@ -42,6 +43,11 @@ export default [
         title: 'Disabled',
         description: 'An input field can show that it is disabled',
         component: Disabled,
+      },
+      {
+        title: 'Error',
+        description: 'An input field can show the data contains errors',
+        component: Error,
       },
     ],
   },

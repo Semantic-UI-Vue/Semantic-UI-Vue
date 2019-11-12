@@ -1576,6 +1576,14 @@
 "<div class=\"ui disabled icon input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"><i class=\"user icon\"></i></div>"
 ```
 
+##     `Error`
+
+####       `should match snapshot`
+
+```
+"<div class=\"ui error input\" placeholder=\"Search...\"><input type=\"text\" placeholder=\"Search...\"></div>"
+```
+
 ##   `Variations`
 
 ##     `Icon`
