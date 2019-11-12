@@ -11,6 +11,7 @@ import Size3 from './Size3.example';
 import Size4 from './Size4.example';
 import Size5 from './Size5.example';
 import Size6 from './Size6.example';
+import Fluid from './Fluid.example';
 import Transparent from './Transparent.example';
 import Transparent2 from './Transparent2.example';
 import Transparent3 from './Transparent3.example';
@@ -81,6 +82,11 @@ export default [
       },
       {
         component: Size6,
+      },
+      {
+        title: 'Fluid',
+        description: 'An input can take the size of its container',
+        component: Fluid,
       },
       {
         title: 'Transparent',
