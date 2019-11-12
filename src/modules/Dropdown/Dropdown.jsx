@@ -100,6 +100,11 @@ export default {
       type: Boolean,
       description: 'A dropdown can be used to select between choices in a form.',
     },
+    simple: {
+      type: Boolean,
+      description: 'A dropdown that works without JavaScript',
+      default: false,
+    },
     text: {
       type: String,
       description: 'Text of dropdown',
@@ -604,6 +609,7 @@ export default {
           this.search && 'search',
           this.open && 'active visible',
           this.disabled && 'disabled',
+          this.simple && 'simple',
           !this.downward && directions.upward,
           'dropdown',
         )}

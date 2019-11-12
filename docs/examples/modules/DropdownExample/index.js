@@ -16,6 +16,7 @@ import SearchSelection from './SearchSelection.example';
 import SearchSelectionWithoutFlag from './SearchSelectionWithoutFlag.example';
 import LoadingExample from './Loading.example';
 import DisabledDropdown from './DisabledDropdown.example';
+import SimpleDropdown from './SimpleDropdown.example';
 
 export default [
   {
@@ -94,6 +95,11 @@ export default [
         title: 'Floating',
         description: 'A dropdown menu can appear to be floating below an element.',
         component: DropdownFloating,
+      },
+      {
+        title: 'Simple',
+        description: 'A dropdown that works without JavaScript',
+        component: SimpleDropdown,
       },
     ],
   },
