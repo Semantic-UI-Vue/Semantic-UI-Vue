@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import ButtonGroup from 'src/elements/Button/ButtonGroup';
+import ButtonGroup from 'semantic-ui-vue/elements/Button/ButtonGroup';
 
 describe('Button', () => {
   describe('ButtonGroup', () => {

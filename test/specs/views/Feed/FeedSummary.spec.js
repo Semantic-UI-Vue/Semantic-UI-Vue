@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedSummary from 'src/views/Feed/FeedSummary';
+import FeedSummary from 'semantic-ui-vue/views/Feed/FeedSummary';
 
 describe('FeedSummary', () => {
   it('should create a SUI FeedSummary', () => {

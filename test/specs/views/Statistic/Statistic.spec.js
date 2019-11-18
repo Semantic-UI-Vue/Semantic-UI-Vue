@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
-import { Statistic, StatisticGroup } from 'src/views/Statistic';
-import Container from 'src/elements/Container/Container';
+import { Statistic, StatisticGroup } from 'semantic-ui-vue/views/Statistic';
+import Container from 'semantic-ui-vue/elements/Container/Container';
 
 describe('Statistic', () => {
   it('should create a standalone SUI Statistic', () => {

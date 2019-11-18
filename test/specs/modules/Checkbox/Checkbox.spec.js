@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Checkbox from 'src/modules/Checkbox/Checkbox';
+import Checkbox from 'semantic-ui-vue/modules/Checkbox/Checkbox';
 
 describe('Checkbox', () => {
   testClassFromProps(Checkbox, ['ui', 'checkbox']);

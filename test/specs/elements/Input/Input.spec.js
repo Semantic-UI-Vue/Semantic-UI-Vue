@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Input from 'src/elements/Input/Input';
+import Input from 'semantic-ui-vue/elements/Input/Input';
 
 describe('Input', () => {
   testClassFromProps(Input, [

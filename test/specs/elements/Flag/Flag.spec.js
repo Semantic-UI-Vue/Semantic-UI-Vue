@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Flag from 'src/elements/Flag/Flag';
+import Flag from 'semantic-ui-vue/elements/Flag/Flag';
 
 describe('Flag', () => {
   testClassFromProps(Flag, ['flag']);

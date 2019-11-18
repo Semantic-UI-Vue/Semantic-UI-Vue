@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Label from 'src/elements/Label/Label';
+import Label from 'semantic-ui-vue/elements/Label/Label';
 
 describe('Label', () => {
   testClassFromProps(Label, ['ui', 'label']);

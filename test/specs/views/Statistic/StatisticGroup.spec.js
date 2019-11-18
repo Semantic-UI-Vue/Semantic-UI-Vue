@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import StatisticGroup from 'src/views/Statistic/StatisticGroup';
+import StatisticGroup from 'semantic-ui-vue/views/Statistic/StatisticGroup';
 
 describe('StatisticGroup', () => {
   it('should create a standalone SUI StatisticGroup', () => {

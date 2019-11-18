@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Image from 'src/elements/Image/Image';
+import Image from 'semantic-ui-vue/elements/Image/Image';
 
 describe('Image', () => {
   testClassFromProps(Image, [

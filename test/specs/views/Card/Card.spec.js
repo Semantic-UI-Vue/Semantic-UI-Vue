@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import Card from 'src/views/Card/Card';
+import Card from 'semantic-ui-vue/views/Card/Card';
 
 describe('Card', () => {
   it('should create a SUI Card', () => {

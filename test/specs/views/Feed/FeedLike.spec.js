@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedLike from 'src/views/Feed/FeedLike';
+import FeedLike from 'semantic-ui-vue/views/Feed/FeedLike';
 
 describe('FeedLike', () => {
   it('should create a SUI FeedLike', () => {

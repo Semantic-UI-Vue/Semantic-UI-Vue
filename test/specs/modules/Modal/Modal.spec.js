@@ -1,7 +1,7 @@
 import { shallow } from '@vue/test-utils';
 import { testClass } from 'test/utils';
-import Modal from 'src/modules/Modal/Modal';
-import Icon from 'src/elements/Icon/Icon';
+import Modal from 'semantic-ui-vue/modules/Modal/Modal';
+import Icon from 'semantic-ui-vue/elements/Icon/Icon';
 
 describe('Modal', () => {
   testClass(Modal, ['ui', 'dimmer', 'page', 'modals', 'transition']);

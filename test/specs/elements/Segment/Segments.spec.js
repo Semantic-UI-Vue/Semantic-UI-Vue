@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Segments from 'src/elements/Segment/Segments';
+import Segments from 'semantic-ui-vue/elements/Segment/Segments';
 
 describe('Segments', () => {
   testClassFromProps(Segments, ['stacked', 'piled', 'raised', 'vertical', 'horizontal']);

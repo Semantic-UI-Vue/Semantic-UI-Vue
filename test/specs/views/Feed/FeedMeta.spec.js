@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedMeta from 'src/views/Feed/FeedMeta';
+import FeedMeta from 'semantic-ui-vue/views/Feed/FeedMeta';
 
 describe('FeedMeta', () => {
   it('should create a SUI FeedMeta', () => {

@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedDate from 'src/views/Feed/FeedDate';
+import FeedDate from 'semantic-ui-vue/views/Feed/FeedDate';
 
 describe('FeedDate', () => {
   it('should create a SUI FeedDate', () => {

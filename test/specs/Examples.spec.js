@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from '@vue/test-utils';
 import chai from 'chai';
 import { matchSnapshot } from 'chai-karma-snapshot';
-import SuiVue from 'src';
+import SuiVue from 'semantic-ui-vue';
 import * as Examples from '../../docs/examples';
 import getComponentFromString from '../../docs/getComponentFromString';
 

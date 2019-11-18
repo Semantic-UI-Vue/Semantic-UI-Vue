@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedEvent from 'src/views/Feed/FeedEvent';
+import FeedEvent from 'semantic-ui-vue/views/Feed/FeedEvent';
 
 describe('FeedEvent', () => {
   it('should create a SUI FeedEvent', () => {

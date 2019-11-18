@@ -7,7 +7,7 @@
     :visible="visible"
   >
     <sui-menu-item>
-      <sui-image :src="`${publicPath}static/images/logo.png`" spaced="right" size="mini" />
+      <sui-image :src="`/static/images/logo.png`" spaced="right" size="mini" />
       <strong>
         Semantic UI Vue
         <small>
@@ -82,10 +82,10 @@
 
 <script>
 import 'semantic-ui-css/semantic.css';
-import * as collections from 'src/collections';
-import * as elements from 'src/elements';
-import * as modules from 'src/modules';
-import * as views from 'src/views';
+import * as collections from 'semantic-ui-vue/collections';
+import * as elements from 'semantic-ui-vue/elements';
+import * as modules from 'semantic-ui-vue/modules';
+import * as views from 'semantic-ui-vue/views';
 
 export default {
   props: {
@@ -116,7 +116,6 @@ export default {
         },
       ],
       search: '',
-      publicPath,
       version: process.version,
     };
   },

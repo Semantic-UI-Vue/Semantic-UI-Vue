@@ -35,11 +35,12 @@
               <router-link
                 is="sui-menu-item"
                 :key="example.title"
-                v-if="example.title"
                 v-for="example in section.examples"
                 :to="{ hash: kebabCase(example.title) }"
               >
-                {{ example.title }}
+                <template v-if="example.title">
+                  {{ example.title }}
+                </template>
               </router-link>
             </sui-accordion-content>
           </sui-menu-item>
@@ -64,7 +65,7 @@
 
 <script>
 import kebabCase from 'lodash/kebabCase';
-import * as examples from 'docs/examples';
+import * as examples from './examples';
 import Example from './Example';
 
 export default {

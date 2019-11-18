@@ -5,7 +5,7 @@
 <script>
 import ace from 'brace';
 import kebabCase from 'lodash/kebabCase';
-import * as components from 'src';
+import * as components from 'semantic-ui-vue';
 import 'brace/ext/language_tools';
 import 'brace/mode/html';
 import 'brace/theme/tomorrow';

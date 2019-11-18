@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import CardGroup from 'src/views/Card/CardGroup';
+import CardGroup from 'semantic-ui-vue/views/Card/CardGroup';
 
 describe('CardGroup', () => {
   it('should create a standalone SUI CardGroup', () => {

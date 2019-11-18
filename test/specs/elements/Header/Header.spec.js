@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Header from 'src/elements/Header/Header';
+import Header from 'semantic-ui-vue/elements/Header/Header';
 
 describe('Header', () => {
   testClassFromProps(Header, [

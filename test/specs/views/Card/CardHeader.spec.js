@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import CardHeader from 'src/views/Card/CardHeader';
+import CardHeader from 'semantic-ui-vue/views/Card/CardHeader';
 
 describe('CardHeader', () => {
   it('should create a standalone SUI CardHeader', () => {

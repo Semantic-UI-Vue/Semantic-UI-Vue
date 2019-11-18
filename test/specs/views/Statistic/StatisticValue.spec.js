@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import StatisticValue from 'src/views/Statistic/StatisticValue';
+import StatisticValue from 'semantic-ui-vue/views/Statistic/StatisticValue';
 
 describe('StatisticValue', () => {
   it('should create a SUI StatisticValue', () => {

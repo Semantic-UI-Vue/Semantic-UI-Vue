@@ -124,7 +124,7 @@
 <script>
 import capitalize from 'lodash/capitalize';
 import get from 'lodash/get';
-import * as components from 'src';
+import * as components from 'semantic-ui-vue';
 import ExamplesList from './ExamplesList';
 
 const getComponentFromName = name => components[capitalize(name)];

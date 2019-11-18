@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import Embed from 'src/modules/Embed/Embed';
+import Embed from 'semantic-ui-vue/modules/Embed/Embed';
 
 describe('Embed', () => {
   it('should create a SUI Embed default without active, placeholder and iframe', () => {

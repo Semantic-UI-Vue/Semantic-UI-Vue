@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import StatisticLabel from 'src/views/Statistic/StatisticLabel';
+import StatisticLabel from 'semantic-ui-vue/views/Statistic/StatisticLabel';
 
 describe('StatisticLabel', () => {
   it('should create a SUI StatisticLabel', () => {

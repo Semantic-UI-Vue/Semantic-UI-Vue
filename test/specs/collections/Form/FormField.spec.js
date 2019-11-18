@@ -1,5 +1,5 @@
 import * as common from 'test/utils';
-import FormField from 'src/collections/Form/FormField';
+import FormField from 'semantic-ui-vue/collections/Form/FormField';
 
 describe('Form', () => describe('FormField', () => {
   common.testClassFromProps(FormField, [

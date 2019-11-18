@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Form from 'src/collections/Form/Form';
+import Form from 'semantic-ui-vue/collections/Form/Form';
 
 describe('Form', () => {
   testClassFromProps(Form, [

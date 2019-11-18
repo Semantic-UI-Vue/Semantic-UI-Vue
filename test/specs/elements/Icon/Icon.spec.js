@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Icon from 'src/elements/Icon/Icon';
+import Icon from 'semantic-ui-vue/elements/Icon/Icon';
 
 describe('Icon', () => {
   testClassFromProps(Icon, [

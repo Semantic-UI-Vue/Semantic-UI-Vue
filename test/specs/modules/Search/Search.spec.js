@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Search from 'src/modules/Search/Search';
+import Search from 'semantic-ui-vue/modules/Search/Search';
 
 describe('Search', () => {
   testClassFromProps(Search, ['ui', 'search']);

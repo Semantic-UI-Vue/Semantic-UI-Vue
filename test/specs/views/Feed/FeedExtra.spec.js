@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedExtra from 'src/views/Feed/FeedExtra';
+import FeedExtra from 'semantic-ui-vue/views/Feed/FeedExtra';
 
 describe('FeedExtra', () => {
   it('should create a SUI FeedExtra', () => {

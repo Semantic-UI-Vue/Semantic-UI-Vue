@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import StepGroup from 'src/elements/Step/StepGroup';
+import StepGroup from 'semantic-ui-vue/elements/Step/StepGroup';
 
 describe('StepGroup', () => {
   it('should have class "three" when pass number/string', () => {

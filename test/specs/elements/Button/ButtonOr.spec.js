@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import ButtonOr from 'src/elements/Button/ButtonOr';
+import ButtonOr from 'semantic-ui-vue/elements/Button/ButtonOr';
 
 describe('Button', () => {
   describe('ButtonOr', () => {

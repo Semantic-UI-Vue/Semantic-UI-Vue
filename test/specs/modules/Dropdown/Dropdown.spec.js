@@ -1,11 +1,11 @@
 import { shallow } from '@vue/test-utils';
 import * as common from 'test/utils';
-import Label from 'src/elements/Label/Label';
-import Icon from 'src/elements/Icon/Icon';
-import Flag from 'src/elements/Flag/Flag';
-import Image from 'src/elements/Image/Image';
-import Dropdown from 'src/modules/Dropdown/Dropdown';
-import DropdownItem from 'src/modules/Dropdown/DropdownItem';
+import Label from 'semantic-ui-vue/elements/Label/Label';
+import Icon from 'semantic-ui-vue/elements/Icon/Icon';
+import Flag from 'semantic-ui-vue/elements/Flag/Flag';
+import Image from 'semantic-ui-vue/elements/Image/Image';
+import Dropdown from 'semantic-ui-vue/modules/Dropdown/Dropdown';
+import DropdownItem from 'semantic-ui-vue/modules/Dropdown/DropdownItem';
 
 const DropdownWithRequired = common.withRequired(Dropdown, { options: [] });
 

@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Segment from 'src/elements/Segment/Segment';
+import Segment from 'semantic-ui-vue/elements/Segment/Segment';
 
 describe('Segment', () => {
   testClassFromProps(Segment, [

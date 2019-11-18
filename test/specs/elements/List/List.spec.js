@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import List from 'src/elements/List/List';
+import List from 'semantic-ui-vue/elements/List/List';
 
 describe('List', () => {
   testClassFromProps(List, ['ui', 'list']);

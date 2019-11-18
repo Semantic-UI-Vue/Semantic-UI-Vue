@@ -1,6 +1,6 @@
 import { mount, shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Rating from 'src/modules/Rating/Rating';
+import Rating from 'semantic-ui-vue/modules/Rating/Rating';
 
 describe('Rating', () => {
   testClassFromProps(Rating, ['ui', 'rating']);

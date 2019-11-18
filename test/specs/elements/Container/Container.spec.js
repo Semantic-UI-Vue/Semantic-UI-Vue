@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Container from 'src/elements/Container/Container';
+import Container from 'semantic-ui-vue/elements/Container/Container';
 
 describe('Container', () => {
   testClassFromProps(Container, [

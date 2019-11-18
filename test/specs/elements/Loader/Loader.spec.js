@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Loader from 'src/elements/Loader/Loader';
+import Loader from 'semantic-ui-vue/elements/Loader/Loader';
 
 describe('Loader', () => {
   testClassFromProps(Loader, [

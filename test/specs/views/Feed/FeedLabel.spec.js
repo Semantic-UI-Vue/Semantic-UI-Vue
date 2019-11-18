@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedLabel from 'src/views/Feed/FeedLabel';
+import FeedLabel from 'semantic-ui-vue/views/Feed/FeedLabel';
 
 describe('FeedLabel', () => {
   it('should create a SUI FeedLabel', () => {

@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedUser from 'src/views/Feed/FeedUser';
+import FeedUser from 'semantic-ui-vue/views/Feed/FeedUser';
 
 describe('FeedUser', () => {
   it('should create a SUI FeedUser', () => {

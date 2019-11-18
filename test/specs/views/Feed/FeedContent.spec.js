@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import FeedContent from 'src/views/Feed/FeedContent';
+import FeedContent from 'semantic-ui-vue/views/Feed/FeedContent';
 
 describe('FeedContent', () => {
   it('should create a SUI FeedContent', () => {

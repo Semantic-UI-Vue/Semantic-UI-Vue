@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import * as common from 'test/utils';
-import FormFields from 'src/collections/Form/FormFields';
+import FormFields from 'semantic-ui-vue/collections/Form/FormFields';
 
 describe('Form', () => describe('FormFields', () => {
   common.testClassFromProps(FormFields, [

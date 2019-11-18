@@ -1,6 +1,6 @@
 import { shallow } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
-import Divider from 'src/elements/Divider/Divider';
+import Divider from 'semantic-ui-vue/elements/Divider/Divider';
 
 describe('Divider', () => {
   testClassFromProps(Divider, [
