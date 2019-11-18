@@ -18,7 +18,7 @@
   "scripts": {
     "start": "vue-cli-service serve docs/main.js",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint src docs test"
   },
   "dependencies": {
     "lodash.forin": "^4.4.0",
