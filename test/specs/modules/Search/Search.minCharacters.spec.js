@@ -14,7 +14,7 @@ describe('Search', () => {
     input.trigger('input');
     const results = search.find('.results');
 
-    expect(results.classes()).to.include('in');
+    expect(results.classes()).toContain('in');
   });
 
   it('should not search when a number of typed characters is smaller than min characters', () => {
@@ -27,7 +27,7 @@ describe('Search', () => {
     input.trigger('focus');
     const results = search.find('.results');
 
-    expect(results.exists()).to.equal(false);
+    expect(results.exists()).toEqual(false);
   });
 
   it('should search when a number of typed characters is equal to min characters', () => {
@@ -40,10 +40,10 @@ describe('Search', () => {
     input.trigger('input');
     const results = search.find('.results');
 
-    expect(results.classes()).to.include('in');
+    expect(results.classes()).toContain('in');
     const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).to.equal('Cat');
-    expect(resultItems.at(1).text()).to.equal('catfish');
+    expect(resultItems.at(0).text()).toEqual('Cat');
+    expect(resultItems.at(1).text()).toEqual('catfish');
   });
 
   it('should search when a number of typed characters is greater than min characters', () => {
@@ -56,8 +56,8 @@ describe('Search', () => {
     input.trigger('input');
     const results = search.find('.results');
 
-    expect(results.classes()).to.include('in');
+    expect(results.classes()).toContain('in');
     const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).to.equal('catfish');
+    expect(resultItems.at(0).text()).toEqual('catfish');
   });
 });

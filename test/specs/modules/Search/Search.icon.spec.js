@@ -18,7 +18,7 @@ describe('Search', () => {
     const icon = iconContainer.find('i.search.icon');
 
     input.trigger('focus');
-    expect(iconContainer.exists()).to.equal(true);
-    expect(icon.exists()).to.equal(true);
+    expect(iconContainer.exists()).toEqual(true);
+    expect(icon.exists()).toEqual(true);
   });
 });

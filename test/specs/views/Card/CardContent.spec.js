@@ -4,9 +4,9 @@ import CardContent from 'semantic-ui-vue/views/Card/CardContent';
 describe('CardContent', () => {
   it('should create a standalone SUI CardContent', () => {
     const cardContent = shallow(CardContent);
-    expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.classes()).to.include('content');
-    expect(cardContent.text()).to.equal('');
+    expect(cardContent.is('div')).toEqual(true);
+    expect(cardContent.classes()).toContain('content');
+    expect(cardContent.text()).toEqual('');
   });
 
   it('should create a SUI CardContent with default slot', () => {
@@ -15,9 +15,9 @@ describe('CardContent', () => {
         default: '<span>Default slot</span>',
       },
     });
-    expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.classes()).to.include('content');
-    expect(cardContent.text()).to.equal('Default slot');
+    expect(cardContent.is('div')).toEqual(true);
+    expect(cardContent.classes()).toContain('content');
+    expect(cardContent.text()).toEqual('Default slot');
   });
 
   it('should create a SUI CardContent with right slot', () => {
@@ -26,10 +26,10 @@ describe('CardContent', () => {
         right: '<span>Right slot</span>',
       },
     });
-    expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.classes()).to.include('content');
+    expect(cardContent.is('div')).toEqual(true);
+    expect(cardContent.classes()).toContain('content');
     const right = cardContent.find('div.right');
-    expect(right.text()).to.equal('Right slot');
+    expect(right.text()).toEqual('Right slot');
   });
 
   it('should create a SUI CardContent with extra class according to extra prop', () => {
@@ -38,9 +38,9 @@ describe('CardContent', () => {
         extra: true,
       },
     });
-    expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.classes()).to.include('content');
-    expect(cardContent.classes()).to.include('extra');
-    expect(cardContent.text()).to.equal('');
+    expect(cardContent.is('div')).toEqual(true);
+    expect(cardContent.classes()).toContain('content');
+    expect(cardContent.classes()).toContain('extra');
+    expect(cardContent.text()).toEqual('');
   });
 });

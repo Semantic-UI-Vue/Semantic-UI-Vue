@@ -4,9 +4,9 @@ import CardDescription from 'semantic-ui-vue/views/Card/CardDescription';
 describe('CardDescription', () => {
   it('should create a standalone SUI CardDescription', () => {
     const cardDescription = shallow(CardDescription);
-    expect(cardDescription.is('div')).to.equal(true);
-    expect(cardDescription.classes()).to.include('description');
-    expect(cardDescription.text()).to.equal('');
+    expect(cardDescription.is('div')).toEqual(true);
+    expect(cardDescription.classes()).toContain('description');
+    expect(cardDescription.text()).toEqual('');
   });
 
   it('should create a SUI CardDescription with default slot', () => {
@@ -15,8 +15,8 @@ describe('CardDescription', () => {
         default: '<span>Default slot</span>',
       },
     });
-    expect(cardContent.is('div')).to.equal(true);
-    expect(cardContent.classes()).to.include('description');
-    expect(cardContent.text()).to.equal('Default slot');
+    expect(cardContent.is('div')).toEqual(true);
+    expect(cardContent.classes()).toContain('description');
+    expect(cardContent.text()).toEqual('Default slot');
   });
 });

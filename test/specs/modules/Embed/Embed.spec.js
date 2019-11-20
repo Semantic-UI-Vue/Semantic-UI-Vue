@@ -4,16 +4,16 @@ import Embed from 'semantic-ui-vue/modules/Embed/Embed';
 describe('Embed', () => {
   it('should create a SUI Embed default without active, placeholder and iframe', () => {
     const embed = shallow(Embed);
-    expect(embed.is('div')).to.equal(true);
-    expect(embed.classes()).to.include('ui');
-    expect(embed.classes()).to.not.include('active');
-    expect(embed.classes()).to.include('embed');
-    expect(embed.contains('i')).to.equal(true);
-    expect(embed.find('i').classes()).to.include('video');
-    expect(embed.find('i').classes()).to.include('play');
-    expect(embed.contains('img')).to.equal(false);
-    expect(embed.contains('iframe')).to.equal(false);
-    expect(embed.text()).to.equal('');
+    expect(embed.is('div')).toEqual(true);
+    expect(embed.classes()).toContain('ui');
+    expect(embed.classes()).not.toContain('active');
+    expect(embed.classes()).toContain('embed');
+    expect(embed.contains('i')).toEqual(true);
+    expect(embed.find('i').classes()).toContain('video');
+    expect(embed.find('i').classes()).toContain('play');
+    expect(embed.contains('img')).toEqual(false);
+    expect(embed.contains('iframe')).toEqual(false);
+    expect(embed.text()).toEqual('');
   });
 
   it('should create a SUI Embed with aspect ratio', () => {
@@ -22,11 +22,11 @@ describe('Embed', () => {
         aspectRatio: '21:9',
       },
     });
-    expect(embed.is('div')).to.equal(true);
-    expect(embed.classes()).to.include('ui');
-    expect(embed.classes()).to.include('21:9');
-    expect(embed.classes()).to.include('embed');
-    expect(embed.text()).to.equal('');
+    expect(embed.is('div')).toEqual(true);
+    expect(embed.classes()).toContain('ui');
+    expect(embed.classes()).toContain('21:9');
+    expect(embed.classes()).toContain('embed');
+    expect(embed.text()).toEqual('');
   });
 
   it('should create a SUI Embed with custom icon', () => {
@@ -35,9 +35,9 @@ describe('Embed', () => {
         icon: 'pencil',
       },
     });
-    expect(embed.contains('i')).to.equal(true);
-    expect(embed.find('i').classes()).to.include('pencil');
-    expect(embed.text()).to.equal('');
+    expect(embed.contains('i')).toEqual(true);
+    expect(embed.find('i').classes()).toContain('pencil');
+    expect(embed.text()).toEqual('');
   });
 
   it('should create a SUI Embed with placeholder image', () => {
@@ -46,22 +46,22 @@ describe('Embed', () => {
         placeholder: '/placeholder',
       },
     });
-    expect(embed.contains('img')).to.equal(true);
-    expect(embed.find('img').attributes().src).to.equal('/placeholder');
-    expect(embed.text()).to.equal('');
+    expect(embed.contains('img')).toEqual(true);
+    expect(embed.find('img').attributes().src).toEqual('/placeholder');
+    expect(embed.text()).toEqual('');
   });
 
   it('should create a SUI Embed that active after click', () => {
     const embed = shallow(Embed);
-    expect(embed.classes()).to.not.include('active');
-    expect(embed.findAll('div').length).to.equal(1);
-    expect(embed.contains('iframe')).to.equal(false);
+    expect(embed.classes()).not.toContain('active');
+    expect(embed.findAll('div').length).toEqual(1);
+    expect(embed.contains('iframe')).toEqual(false);
     embed.trigger('click');
-    expect(embed.classes()).to.include('active');
-    expect(embed.findAll('div').length).to.equal(2);
-    expect(embed.findAll('div').at(1).classes()).to.include('embed');
-    expect(embed.contains('iframe')).to.equal(true);
-    expect(embed.text()).to.equal('');
+    expect(embed.classes()).toContain('active');
+    expect(embed.findAll('div').length).toEqual(2);
+    expect(embed.findAll('div').at(1).classes()).toContain('embed');
+    expect(embed.contains('iframe')).toEqual(true);
+    expect(embed.text()).toEqual('');
   });
 
   it('should create a SUI Embed with default slot when state is active', () => {
@@ -73,10 +73,10 @@ describe('Embed', () => {
         default: '<span>This is default</span>',
       },
     });
-    expect(embed.classes()).to.include('active');
-    expect(embed.contains('iframe')).to.equal(false);
-    expect(embed.contains('span')).to.equal(true);
-    expect(embed.text()).to.equal('This is default');
+    expect(embed.classes()).toContain('active');
+    expect(embed.contains('iframe')).toEqual(false);
+    expect(embed.contains('span')).toEqual(true);
+    expect(embed.text()).toEqual('This is default');
   });
 
   it('should create a SUI Embed with youtube iframe', () => {
@@ -96,14 +96,14 @@ describe('Embed', () => {
       '&amp;jsapi=false',
       '&amp;modestbranding=false',
     ].join('');
-    expect(embed.contains('iframe')).to.equal(true);
+    expect(embed.contains('iframe')).toEqual(true);
     const iframe = embed.find('iframe');
-    expect(iframe.attributes().src).to.equal(expectedIframeSrc);
-    expect(iframe.attributes().width).to.equal('100%');
-    expect(iframe.attributes().height).to.equal('100%');
-    expect(iframe.attributes().frameborder).to.equal('0');
-    expect(iframe.attributes().scrolling).to.equal('no');
-    expect(iframe.attributes().title).to.equal('Embedded content from youtube');
+    expect(iframe.attributes().src).toEqual(expectedIframeSrc);
+    expect(iframe.attributes().width).toEqual('100%');
+    expect(iframe.attributes().height).toEqual('100%');
+    expect(iframe.attributes().frameborder).toEqual('0');
+    expect(iframe.attributes().scrolling).toEqual('no');
+    expect(iframe.attributes().title).toEqual('Embedded content from youtube');
   });
 
   it('should create a SUI Embed with vimeo iframe', () => {
@@ -125,14 +125,14 @@ describe('Embed', () => {
       '&amp;portrait=false',
       '&amp;title=false',
     ].join('');
-    expect(embed.contains('iframe')).to.equal(true);
+    expect(embed.contains('iframe')).toEqual(true);
     const iframe = embed.find('iframe');
-    expect(iframe.attributes().src).to.equal(expectedIframeSrc);
-    expect(iframe.attributes().width).to.equal('100%');
-    expect(iframe.attributes().height).to.equal('100%');
-    expect(iframe.attributes().frameborder).to.equal('0');
-    expect(iframe.attributes().scrolling).to.equal('no');
-    expect(iframe.attributes().title).to.equal('Embedded content from vimeo');
+    expect(iframe.attributes().src).toEqual(expectedIframeSrc);
+    expect(iframe.attributes().width).toEqual('100%');
+    expect(iframe.attributes().height).toEqual('100%');
+    expect(iframe.attributes().frameborder).toEqual('0');
+    expect(iframe.attributes().scrolling).toEqual('no');
+    expect(iframe.attributes().title).toEqual('Embedded content from vimeo');
   });
 
   it('should create a SUI Embed with custom host iframe', () => {
@@ -142,14 +142,14 @@ describe('Embed', () => {
         active: true,
       },
     });
-    expect(embed.contains('iframe')).to.equal(true);
+    expect(embed.contains('iframe')).toEqual(true);
     const iframe = embed.find('iframe');
-    expect(iframe.attributes().src).to.equal('https://www.example.com');
-    expect(iframe.attributes().width).to.equal('100%');
-    expect(iframe.attributes().height).to.equal('100%');
-    expect(iframe.attributes().frameborder).to.equal('0');
-    expect(iframe.attributes().scrolling).to.equal('no');
-    expect(iframe.attributes().title).to.equal('Embedded content from custom host');
+    expect(iframe.attributes().src).toEqual('https://www.example.com');
+    expect(iframe.attributes().width).toEqual('100%');
+    expect(iframe.attributes().height).toEqual('100%');
+    expect(iframe.attributes().frameborder).toEqual('0');
+    expect(iframe.attributes().scrolling).toEqual('no');
+    expect(iframe.attributes().title).toEqual('Embedded content from custom host');
   });
 
   it('should create a SUI Embed with iframe shorthand', () => {
@@ -166,15 +166,15 @@ describe('Embed', () => {
         },
       },
     });
-    expect(embed.contains('iframe')).to.equal(true);
+    expect(embed.contains('iframe')).toEqual(true);
     const iframe = embed.find('iframe');
-    expect(iframe.attributes().src).to.equal('https://www.example.com');
-    expect(iframe.attributes().width).to.equal('75%');
-    expect(iframe.attributes().height).to.equal('100%');
-    expect(iframe.attributes().frameborder).to.equal('0');
-    expect(iframe.attributes().scrolling).to.equal('no');
-    expect(iframe.attributes().allowfullscreen).to.equal('true');
-    expect(iframe.attributes().style).to.equal('padding: 10px;');
-    expect(iframe.attributes().title).to.equal('Embedded content from custom host');
+    expect(iframe.attributes().src).toEqual('https://www.example.com');
+    expect(iframe.attributes().width).toEqual('75%');
+    expect(iframe.attributes().height).toEqual('100%');
+    expect(iframe.attributes().frameborder).toEqual('0');
+    expect(iframe.attributes().scrolling).toEqual('no');
+    expect(iframe.attributes().allowfullscreen).toEqual('true');
+    expect(iframe.attributes().style).toEqual('padding: 10px;');
+    expect(iframe.attributes().title).toEqual('Embedded content from custom host');
   });
 });

@@ -4,10 +4,10 @@ import CardGroup from 'semantic-ui-vue/views/Card/CardGroup';
 describe('CardGroup', () => {
   it('should create a standalone SUI CardGroup', () => {
     const cardGroup = shallow(CardGroup);
-    expect(cardGroup.is('div')).to.equal(true);
-    expect(cardGroup.classes()).to.include('ui');
-    expect(cardGroup.classes()).to.include('cards');
-    expect(cardGroup.text()).to.equal('');
+    expect(cardGroup.is('div')).toEqual(true);
+    expect(cardGroup.classes()).toContain('ui');
+    expect(cardGroup.classes()).toContain('cards');
+    expect(cardGroup.text()).toEqual('');
   });
 
   it('should create create a SUI CardGroup with correct classes according to props', () => {
@@ -17,11 +17,11 @@ describe('CardGroup', () => {
         stackable: true,
       },
     });
-    expect(cardGroup.is('div')).to.equal(true);
-    expect(cardGroup.classes()).to.include('ui');
-    expect(cardGroup.classes()).to.include('three');
-    expect(cardGroup.classes()).to.include('stackable');
-    expect(cardGroup.classes()).to.include('cards');
-    expect(cardGroup.text()).to.equal('');
+    expect(cardGroup.is('div')).toEqual(true);
+    expect(cardGroup.classes()).toContain('ui');
+    expect(cardGroup.classes()).toContain('three');
+    expect(cardGroup.classes()).toContain('stackable');
+    expect(cardGroup.classes()).toContain('cards');
+    expect(cardGroup.text()).toEqual('');
   });
 });

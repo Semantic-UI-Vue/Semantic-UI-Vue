@@ -4,32 +4,32 @@ import FeedLabel from 'semantic-ui-vue/views/Feed/FeedLabel';
 describe('FeedLabel', () => {
   it('should create a SUI FeedLabel', () => {
     const label = shallow(FeedLabel);
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.text()).to.equal('');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.text()).toEqual('');
   });
 
   it('should create a SUI FeedLabel with content', () => {
     const label = shallow(FeedLabel, { propsData: { content: 'LABEL' } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.text()).to.equal('LABEL');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.text()).toEqual('LABEL');
   });
 
   it('should create a SUI FeedLabel with icon', () => {
     const label = shallow(FeedLabel, { propsData: { icon: 'pencil' } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.contains('i')).to.equal(true);
-    expect(label.find('i').classes()).to.include('pencil');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.contains('i')).toEqual(true);
+    expect(label.find('i').classes()).toContain('pencil');
   });
 
   it('should create a SUI FeedLabel with image', () => {
     const label = shallow(FeedLabel, { propsData: { image: '/test-image.jpg' } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.contains('img')).to.equal(true);
-    expect(label.find('img').attributes().src).to.equal('/test-image.jpg');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.contains('img')).toEqual(true);
+    expect(label.find('img').attributes().src).toEqual('/test-image.jpg');
   });
 
   it('should only render default slot if both props and default slot exist', () => {
@@ -41,15 +41,15 @@ describe('FeedLabel', () => {
         default: '<span>Only render this</span>',
       },
     });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.text()).to.equal('Only render this');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.text()).toEqual('Only render this');
   });
 
   it('should create a SUI FeedLabel with default slot', () => {
     const label = shallow(FeedLabel, { slots: { default: '<span>LABEL</span>' } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.text()).to.equal('LABEL');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.text()).toEqual('LABEL');
   });
 });

@@ -5,14 +5,14 @@ describe('Button', () => {
   describe('ButtonGroup', () => {
     it('should create a SUI ButtonGroup', () => {
       const buttonGroup = shallow(ButtonGroup);
-      expect(buttonGroup.is('div')).to.equal(true);
-      expect(buttonGroup.classes()).to.include('ui');
-      expect(buttonGroup.classes()).to.include('buttons');
+      expect(buttonGroup.is('div')).toEqual(true);
+      expect(buttonGroup.classes()).toContain('ui');
+      expect(buttonGroup.classes()).toContain('buttons');
     });
 
     it('should set a width', () => {
       const buttonGroup = shallow(ButtonGroup, { propsData: { widths: 3 } });
-      expect(buttonGroup.classes()).to.include('three');
+      expect(buttonGroup.classes()).toContain('three');
     });
   });
 });

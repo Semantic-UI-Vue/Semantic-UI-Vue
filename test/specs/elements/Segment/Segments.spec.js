@@ -7,13 +7,13 @@ describe('Segments', () => {
 
   it('should create a SUI Segments', () => {
     const segments = shallow(Segments);
-    expect(segments.is('div')).to.equal(true);
-    expect(segments.classes()).to.include('ui');
-    expect(segments.classes()).to.include('segments');
+    expect(segments.is('div')).toEqual(true);
+    expect(segments.classes()).toContain('ui');
+    expect(segments.classes()).toContain('segments');
   });
 
   it('should have content', () => {
     const segments = shallow(Segments, { slots: { default: '<span>bar</span>' } });
-    expect(segments.text()).to.equal('bar');
+    expect(segments.text()).toEqual('bar');
   });
 });

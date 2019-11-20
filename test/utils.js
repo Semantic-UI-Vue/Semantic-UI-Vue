@@ -3,28 +3,28 @@ import { shallow } from '@vue/test-utils';
 export function testClass(Component, props) {
   props.forEach(prop => it(`should have class ${prop}`, () => {
     const wrapper = shallow(Component);
-    expect(wrapper.classes()).to.include(prop);
+    expect(wrapper.classes()).toContain(prop);
   }));
 }
 
 export function testClassFromProps(Component, props) {
   props.forEach(prop => it(`should have class ${prop}`, () => {
     const wrapper = shallow(Component, { propsData: { [prop]: true } });
-    expect(wrapper.classes()).to.include(prop);
+    expect(wrapper.classes()).toContain(prop);
   }));
 }
 
 export function testTag(Component, defaultTag, props = {}) {
   it(`should be a \`${defaultTag}\``, () => {
     const wrapper = shallow(Component);
-    expect(wrapper.is(defaultTag)).to.equal(true);
+    expect(wrapper.is(defaultTag)).toEqual(true);
   });
 
   Object.keys(props).forEach((prop) => {
     const tag = props[prop];
     it(`should be a \`${tag}\``, () => {
       const wrapper = shallow(Component, { propsData: { [prop]: true } });
-      expect(wrapper.is(tag)).to.equal(true);
+      expect(wrapper.is(tag)).toEqual(true);
     });
   });
 }

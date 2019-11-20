@@ -46,7 +46,7 @@ describe('Dropdown', () => {
     wrapper.trigger('click');
     wrapper.find(DropdownItem).trigger('click');
     wrapper.vm.$nextTick(() => {
-      expect(wrapper.classes()).to.not.include('visible');
+      expect(wrapper.classes()).not.toContain('visible');
       done();
     });
   });
@@ -61,7 +61,7 @@ describe('Dropdown', () => {
 
     wrapper.trigger('click');
     wrapper.find('.text').trigger('click');
-    expect(wrapper.classes()).to.not.include('visible');
+    expect(wrapper.classes()).not.toContain('visible');
   });
 
   it('should not close the menu when clicking on search input', () => {
@@ -74,7 +74,7 @@ describe('Dropdown', () => {
 
     wrapper.trigger('click');
     wrapper.find('input.search').trigger('click');
-    expect(wrapper.classes()).to.include('visible');
+    expect(wrapper.classes()).toContain('visible');
   });
 
   it('should not close the menu when clicking on option when multiple=true', () => {
@@ -87,7 +87,7 @@ describe('Dropdown', () => {
 
     wrapper.trigger('click');
     wrapper.find(DropdownItem).trigger('click');
-    expect(wrapper.classes()).to.include('visible');
+    expect(wrapper.classes()).toContain('visible');
   });
 
   it('should remove handler', () => {
@@ -107,9 +107,9 @@ describe('Dropdown', () => {
     });
 
     const options = wrapper.findAll(DropdownItem);
-    expect(options.length).to.equal(2);
-    expect(options.at(0).props().text).to.equal('foo');
-    expect(options.at(1).props().text).to.equal('bar');
+    expect(options.length).toEqual(2);
+    expect(options.at(0).props().text).toEqual('foo');
+    expect(options.at(1).props().text).toEqual('bar');
   });
 
   it('should have icons, flags and images in option', () => {
@@ -130,11 +130,11 @@ describe('Dropdown', () => {
     });
     const item = wrapper.find(DropdownItem);
     const icon = item.find(Icon);
-    expect(icon.exists()).to.equal(true);
+    expect(icon.exists()).toEqual(true);
     const flag = item.find(Flag);
-    expect(flag.exists()).to.equal(true);
+    expect(flag.exists()).toEqual(true);
     const image = item.find(Image);
-    expect(image.exists()).to.equal(true);
+    expect(image.exists()).toEqual(true);
   });
 
   it('should choose option', () => {
@@ -147,8 +147,8 @@ describe('Dropdown', () => {
     const options = wrapper.findAll(DropdownItem);
     options.at(0).trigger('click');
     options.at(1).trigger('click');
-    expect(wrapper.emitted().input[0][0]).to.equal(1);
-    expect(wrapper.emitted().input[1][0]).to.equal(2);
+    expect(wrapper.emitted().input[0][0]).toEqual(1);
+    expect(wrapper.emitted().input[1][0]).toEqual(2);
   });
 
   it('should choose few options', () => {
@@ -206,8 +206,8 @@ describe('Dropdown', () => {
     expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
     wrapper.setProps({ value: [1] });
     options.at(0).trigger('click');
-    expect(wrapper.emitted().input[1]).to.be.undefined;
-    expect(wrapper.find('.message').text()).to.equal('1 selections allowed');
+    expect(wrapper.emitted().input[1]).toBeUndefined();
+    expect(wrapper.find('.message').text()).toEqual('1 selections allowed');
   });
 
   it('should have icons, flags and images in selected text', () => {
@@ -232,11 +232,11 @@ describe('Dropdown', () => {
     const text = wrapper.find('div.text');
 
     const icon = text.find(Icon);
-    expect(icon.exists()).to.equal(true);
+    expect(icon.exists()).toEqual(true);
     const flag = text.find(Flag);
-    expect(flag.exists()).to.equal(true);
+    expect(flag.exists()).toEqual(true);
     const image = text.find(Image);
-    expect(image.exists()).to.equal(true);
+    expect(image.exists()).toEqual(true);
   });
 
   it('should have icons, flags and images in selected options', () => {
@@ -262,11 +262,11 @@ describe('Dropdown', () => {
     const label = wrapper.find(Label);
 
     const icon = label.find(Icon);
-    expect(icon.exists()).to.equal(true);
+    expect(icon.exists()).toEqual(true);
     const flag = label.find(Flag);
-    expect(flag.exists()).to.equal(true);
+    expect(flag.exists()).toEqual(true);
     const image = label.find(Image);
-    expect(image.exists()).to.equal(true);
+    expect(image.exists()).toEqual(true);
   });
 
   it('should filter options', () => {
@@ -281,14 +281,14 @@ describe('Dropdown', () => {
     input.element.value = 'ba';
     input.trigger('input');
     const options = wrapper.findAll(DropdownItem);
-    expect(options.at(0).props().text).to.equal('bar');
-    expect(options.at(1).props().text).to.equal('baz');
+    expect(options.at(0).props().text).toEqual('bar');
+    expect(options.at(1).props().text).toEqual('baz');
     input.element.value = 'blah';
     input.trigger('input');
     const options2 = wrapper.findAll(DropdownItem);
-    expect(options2.exists()).to.equal(false);
+    expect(options2.exists()).toEqual(false);
     const message = wrapper.find('.message');
-    expect(message.text()).to.equal('Ops.. no results');
+    expect(message.text()).toEqual('Ops.. no results');
   });
 
   it('should delete last option from selected when pressing backspace in search input when filter is empty', () => {
@@ -325,7 +325,7 @@ describe('Dropdown', () => {
       keyCode: 8,
     });
 
-    expect(wrapper.emitted().input).to.be.undefined;
+    expect(wrapper.emitted().input).toBeUndefined();
   });
 
   describe('allowAdditions', () => {
@@ -338,7 +338,7 @@ describe('Dropdown', () => {
           options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
         },
       });
-      expect(wrapper.vm.selectedNodes.length).to.equal(3);
+      expect(wrapper.vm.selectedNodes.length).toEqual(3);
     });
 
     it('should select only existent values if allowAdditions is false. #320', () => {
@@ -349,7 +349,7 @@ describe('Dropdown', () => {
           options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
         },
       });
-      expect(wrapper.vm.selectedNodes.length).to.equal(2);
+      expect(wrapper.vm.selectedNodes.length).toEqual(2);
     });
   });
 });

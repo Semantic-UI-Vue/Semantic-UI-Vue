@@ -19,6 +19,6 @@ describe('Dropdown', () => describe('DropdownItem', () => {
     });
 
     const image = wrapper.find(Image);
-    expect(image.props().src).to.equal('bar');
+    expect(image.props().src).toEqual('bar');
   });
 }));

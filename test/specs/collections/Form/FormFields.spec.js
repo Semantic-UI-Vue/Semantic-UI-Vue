@@ -12,10 +12,10 @@ describe('Form', () => describe('FormFields', () => {
     const formFields = shallow(FormFields);
 
     formFields.setProps({ fields: 2 });
-    expect(formFields.classes()).to.include('two');
+    expect(formFields.classes()).toContain('two');
     // formFields.setProps({ fields: 'three' });
-    // expect(formFields.classes()).to.include('three');
+    // expect(formFields.classes()).toContain('three');
     // formFields.setProps({ fields: 'equal' });
-    // expect(formFields.classes()).to.include('equal');
+    // expect(formFields.classes()).toContain('equal');
   });
 }));

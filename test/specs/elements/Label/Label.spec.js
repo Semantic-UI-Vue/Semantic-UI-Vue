@@ -7,32 +7,32 @@ describe('Label', () => {
 
   it('should create a SUI Label', () => {
     const label = shallow(Label);
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('ui');
-    expect(label.classes()).to.include('label');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('ui');
+    expect(label.classes()).toContain('label');
   });
 
   it('should create a SUI Label with image', () => {
     const label = shallow(Label, { propsData: { image: true } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('ui');
-    expect(label.classes()).to.include('label');
-    expect(label.classes()).to.include('image');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('ui');
+    expect(label.classes()).toContain('label');
+    expect(label.classes()).toContain('image');
   });
 
   it('should create a SUI Label with icon', () => {
     const label = shallow(Label, { propsData: { icon: 'settings' } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('ui');
-    expect(label.classes()).to.include('label');
-    expect(!!label.find('.icon.settings')).to.equal(true);
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('ui');
+    expect(label.classes()).toContain('label');
+    expect(!!label.find('.icon.settings')).toEqual(true);
   });
 
   it('should create a SUI colored Label ', () => {
     const label = shallow(Label, { propsData: { color: 'red' } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('ui');
-    expect(label.classes()).to.include('label');
-    expect(label.classes()).to.include('red');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('ui');
+    expect(label.classes()).toContain('label');
+    expect(label.classes()).toContain('red');
   });
 });

@@ -1,10 +1,7 @@
 import { createLocalVue } from '@vue/test-utils';
-import chai from 'chai';
-import { matchSnapshot } from 'chai-karma-snapshot';
 import SuiVue from 'semantic-ui-vue';
 import * as Examples from '../../docs/examples';
-
-chai.use(matchSnapshot);
+import renderer from 'react-test-renderer';
 
 const localVue = createLocalVue();
 localVue.use(SuiVue);
@@ -19,8 +16,8 @@ describe('Examples', () => {
             if (example.title) {
               describe(example.title, () => {
                 it('should match snapshot', () => {
-                  // const Component = getComponentFromString(example.component);
-                  // chai.expect(mount(Component, { localVue }).html()).to.matchSnapshot();
+                  const tree = renderer.create(example).toJSON();
+                  expect(tree).toMatchSnapshot();
                 });
               });
             }

@@ -4,10 +4,10 @@ import StatisticGroup from 'semantic-ui-vue/views/Statistic/StatisticGroup';
 describe('StatisticGroup', () => {
   it('should create a standalone SUI StatisticGroup', () => {
     const statistics = shallow(StatisticGroup);
-    expect(statistics.is('div')).to.equal(true);
-    expect(statistics.classes()).to.include('ui');
-    expect(statistics.classes()).to.include('statistics');
-    expect(statistics.text()).to.equal('');
+    expect(statistics.is('div')).toEqual(true);
+    expect(statistics.classes()).toContain('ui');
+    expect(statistics.classes()).toContain('statistics');
+    expect(statistics.text()).toEqual('');
   });
 
   it('should create a SUI StatisticGroup with correct classes according to props', () => {
@@ -16,18 +16,18 @@ describe('StatisticGroup', () => {
         horizontal: true,
       },
     });
-    expect(statistics.is('div')).to.equal(true);
-    expect(statistics.classes()).to.include('ui');
-    expect(statistics.classes()).to.include('statistics');
-    expect(statistics.classes()).to.include('horizontal');
-    expect(statistics.text()).to.equal('');
+    expect(statistics.is('div')).toEqual(true);
+    expect(statistics.classes()).toContain('ui');
+    expect(statistics.classes()).toContain('statistics');
+    expect(statistics.classes()).toContain('horizontal');
+    expect(statistics.text()).toEqual('');
   });
 
   it('should create a SUI StatisticGroup with default slot', () => {
     const statistics = shallow(StatisticGroup, { slots: { default: '<span>40 meters</span>' } });
-    expect(statistics.is('div')).to.equal(true);
-    expect(statistics.classes()).to.include('ui');
-    expect(statistics.classes()).to.include('statistics');
-    expect(statistics.text()).to.equal('40 meters');
+    expect(statistics.is('div')).toEqual(true);
+    expect(statistics.classes()).toContain('ui');
+    expect(statistics.classes()).toContain('statistics');
+    expect(statistics.text()).toEqual('40 meters');
   });
 });

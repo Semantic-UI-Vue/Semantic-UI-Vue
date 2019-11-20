@@ -4,9 +4,9 @@ import CardMeta from 'semantic-ui-vue/views/Card/CardMeta';
 describe('CardMeta', () => {
   it('should create a standalone SUI CardMeta', () => {
     const cardMeta = shallow(CardMeta);
-    expect(cardMeta.is('div')).to.equal(true);
-    expect(cardMeta.classes()).to.include('meta');
-    expect(cardMeta.text()).to.equal('');
+    expect(cardMeta.is('div')).toEqual(true);
+    expect(cardMeta.classes()).toContain('meta');
+    expect(cardMeta.text()).toEqual('');
   });
 
   it('should create a SUI CardHeader with default slot', () => {
@@ -15,8 +15,8 @@ describe('CardMeta', () => {
         default: '<span>Default slot</span>',
       },
     });
-    expect(cardMeta.is('div')).to.equal(true);
-    expect(cardMeta.classes()).to.include('meta');
-    expect(cardMeta.text()).to.equal('Default slot');
+    expect(cardMeta.is('div')).toEqual(true);
+    expect(cardMeta.classes()).toContain('meta');
+    expect(cardMeta.text()).toEqual('Default slot');
   });
 });

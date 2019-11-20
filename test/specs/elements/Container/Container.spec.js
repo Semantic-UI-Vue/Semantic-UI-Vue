@@ -9,29 +9,29 @@ describe('Container', () => {
 
   it('should create a SUI Container', () => {
     const container = shallow(Container);
-    expect(container.is('div')).to.equal(true);
-    expect(container.classes()).to.include('ui');
-    expect(container.classes()).to.include('container');
+    expect(container.is('div')).toEqual(true);
+    expect(container.classes()).toContain('ui');
+    expect(container.classes()).toContain('container');
   });
 
   it('should be able to set fluid', () => {
     const container1 = shallow(Container, { propsData: { fluid: true } });
-    expect(container1.classes()).to.include('fluid');
+    expect(container1.classes()).toContain('fluid');
 
     const container2 = shallow(Container, { propsData: { fluid: false } });
-    expect(container2.classes()).to.not.include('fluid');
+    expect(container2.classes()).not.toContain('fluid');
   });
 
   it('should be able to set text', () => {
     const container1 = shallow(Container, { propsData: { text: true } });
-    expect(container1.classes()).to.include('text');
+    expect(container1.classes()).toContain('text');
 
     const container2 = shallow(Container, { propsData: { text: false } });
-    expect(container2.classes()).to.not.include('text');
+    expect(container2.classes()).not.toContain('text');
   });
 
   it('should have content', () => {
     const container = shallow(Container, { slots: { default: '<span>bar</span>' } });
-    expect(container.text()).to.equal('bar');
+    expect(container.text()).toEqual('bar');
   });
 });

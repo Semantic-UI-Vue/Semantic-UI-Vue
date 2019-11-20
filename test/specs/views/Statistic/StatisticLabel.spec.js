@@ -4,15 +4,15 @@ import StatisticLabel from 'semantic-ui-vue/views/Statistic/StatisticLabel';
 describe('StatisticLabel', () => {
   it('should create a SUI StatisticLabel', () => {
     const label = shallow(StatisticLabel);
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.text()).to.equal('');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.text()).toEqual('');
   });
 
   it('should create a SUI StatisticLabel with default slot', () => {
     const label = shallow(StatisticLabel, { slots: { default: '<span>Stat label</span>' } });
-    expect(label.is('div')).to.equal(true);
-    expect(label.classes()).to.include('label');
-    expect(label.text()).to.equal('Stat label');
+    expect(label.is('div')).toEqual(true);
+    expect(label.classes()).toContain('label');
+    expect(label.text()).toEqual('Stat label');
   });
 });

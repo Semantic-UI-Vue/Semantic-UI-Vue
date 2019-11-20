@@ -7,16 +7,16 @@ describe('Rating', () => {
 
   it('should create rating stars', () => {
     const rating = shallow(Rating, { propsData: { rating: 3, maxRating: 5 } });
-    expect(rating.findAll('i').length).to.equal(5);
-    expect(rating.findAll('i[aria-checked=true]').length).to.equal(3);
-    expect(rating.findAll('i[aria-checked=false]').length).to.equal(2);
+    expect(rating.findAll('i').length).toEqual(5);
+    expect(rating.findAll('i[aria-checked=true]').length).toEqual(3);
+    expect(rating.findAll('i[aria-checked=false]').length).toEqual(2);
   });
 
   it('should pass props new rating value in onRate arguments', () => {
     const rating = mount(Rating, { propsData: { rating: 1, maxRating: 5 } });
     rating.findAll('i').at(4).trigger('click');
     const emittedEvent = rating.emitted().rate[0];
-    expect(emittedEvent[1].rating).to.be.equal(5);
-    expect(emittedEvent[1].maxRating).to.be.equal(5);
+    expect(emittedEvent[1].rating).toEqual(5);
+    expect(emittedEvent[1].maxRating).toEqual(5);
   });
 });

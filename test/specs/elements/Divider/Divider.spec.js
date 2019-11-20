@@ -9,13 +9,13 @@ describe('Divider', () => {
 
   it('should create a SUI Divider', () => {
     const divider = shallow(Divider);
-    expect(divider.is('div')).to.equal(true);
-    expect(divider.classes()).to.include('ui');
-    expect(divider.classes()).to.include('divider');
+    expect(divider.is('div')).toEqual(true);
+    expect(divider.classes()).toContain('ui');
+    expect(divider.classes()).toContain('divider');
   });
 
   it('should have content', () => {
     const divider = shallow(Divider, { slots: { default: '<span>bar</span>' } });
-    expect(divider.text()).to.equal('bar');
+    expect(divider.text()).toEqual('bar');
   });
 });

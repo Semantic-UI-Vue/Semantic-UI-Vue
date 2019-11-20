@@ -17,32 +17,32 @@ describe('Search', () => {
     input.element.value = 'c';
     input.trigger('input');
     const results = search.find('.results');
-    expect(results.exists()).to.equal(true);
+    expect(results.exists()).toEqual(true);
 
     const categories = results.findAll('.category');
-    expect(categories.exists()).to.equal(true);
+    expect(categories.exists()).toEqual(true);
 
     /** Bird category */
     const birdCategory = categories.at(0);
-    expect(birdCategory.exists()).to.equal(true);
+    expect(birdCategory.exists()).toEqual(true);
 
     const birdCategoryName = birdCategory.find('.name');
-    expect(birdCategoryName.exists()).to.equal(true);
+    expect(birdCategoryName.exists()).toEqual(true);
 
     const birdCategoryResults = birdCategory.findAll('.results .result');
-    expect(birdCategoryName.text()).to.equal('Bird');
-    expect(birdCategoryResults.at(0).text()).to.equal('Canary');
+    expect(birdCategoryName.text()).toEqual('Bird');
+    expect(birdCategoryResults.at(0).text()).toEqual('Canary');
 
     /** Mammal category */
     const mammalCategory = categories.at(1);
-    expect(mammalCategory.exists()).to.equal(true);
+    expect(mammalCategory.exists()).toEqual(true);
 
     const mammalCategoryName = mammalCategory.find('.name');
-    expect(mammalCategoryName.exists()).to.equal(true);
+    expect(mammalCategoryName.exists()).toEqual(true);
 
     const mammalCategoryResults = mammalCategory.findAll('.results .result');
-    expect(mammalCategoryName.text()).to.equal('Mammal');
-    expect(mammalCategoryResults.at(0).text()).to.equal('Camel');
-    expect(mammalCategoryResults.at(1).text()).to.equal('Cat');
+    expect(mammalCategoryName.text()).toEqual('Mammal');
+    expect(mammalCategoryResults.at(0).text()).toEqual('Camel');
+    expect(mammalCategoryResults.at(1).text()).toEqual('Cat');
   });
 });

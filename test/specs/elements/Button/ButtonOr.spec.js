@@ -5,8 +5,8 @@ describe('Button', () => {
   describe('ButtonOr', () => {
     it('should create a SUI ButtonOr', () => {
       const buttonOr = shallow(ButtonOr);
-      expect(buttonOr.is('div')).to.equal(true);
-      expect(buttonOr.classes()).to.include('or');
+      expect(buttonOr.is('div')).toEqual(true);
+      expect(buttonOr.classes()).toContain('or');
     });
   });
 });

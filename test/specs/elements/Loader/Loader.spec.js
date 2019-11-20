@@ -9,32 +9,32 @@ describe('Loader', () => {
 
   it('should create a SUI Loader', () => {
     const loader = shallow(Loader);
-    expect(loader.is('div')).to.equal(true);
-    expect(loader.classes()).to.include('ui');
-    expect(loader.classes()).to.include('loader');
+    expect(loader.is('div')).toEqual(true);
+    expect(loader.classes()).toContain('ui');
+    expect(loader.classes()).toContain('loader');
   });
 
   it('should be able to set active', () => {
     const loader1 = shallow(Loader, { propsData: { active: true } });
-    expect(loader1.classes()).to.include('active');
+    expect(loader1.classes()).toContain('active');
 
     const loader2 = shallow(Loader, { propsData: { active: false } });
-    expect(loader2.classes()).to.not.include('active');
+    expect(loader2.classes()).not.toContain('active');
   });
 
   it('should be able to set indeterminate', () => {
     const loader1 = shallow(Loader, { propsData: { indeterminate: true } });
-    expect(loader1.classes()).to.include('indeterminate');
+    expect(loader1.classes()).toContain('indeterminate');
 
     const loader2 = shallow(Loader, { propsData: { indeterminate: false } });
-    expect(loader2.classes()).to.not.include('indeterminate');
+    expect(loader2.classes()).not.toContain('indeterminate');
   });
 
   it('should be able to set content', () => {
     const loader1 = shallow(Loader, { propsData: { content: 'Loading...' } });
-    expect(loader1.text()).to.equal('Loading...');
+    expect(loader1.text()).toEqual('Loading...');
 
     const loader2 = shallow(Loader, { propsData: { content: '' } });
-    expect(loader2.text()).to.equal('');
+    expect(loader2.text()).toEqual('');
   });
 });

@@ -9,48 +9,48 @@ describe('Header', () => {
 
   it('should create a SUI Header', () => {
     const header = shallow(Header);
-    expect(header.is('div')).to.equal(true);
-    expect(header.classes()).to.include('ui');
-    expect(header.classes()).to.include('header');
+    expect(header.is('div')).toEqual(true);
+    expect(header.classes()).toContain('ui');
+    expect(header.classes()).toContain('header');
   });
 
   it('should have a color', () => {
     const header = shallow(Header, { propsData: { color: 'red' } });
-    expect(header.classes()).to.include('red');
+    expect(header.classes()).toContain('red');
   });
 
   it('should have a size', () => {
     const header = shallow(Header, { propsData: { size: '12' } });
-    expect(header.classes()).to.include('12');
+    expect(header.classes()).toContain('12');
   });
 
   it('should have a floated class', () => {
     const header = shallow(Header, { propsData: { floated: 'left' } });
-    expect(header.classes()).to.include('floated');
-    expect(header.classes()).to.include('left');
+    expect(header.classes()).toContain('floated');
+    expect(header.classes()).toContain('left');
   });
 
   it('should have an image class', () => {
     const header = shallow(Header, { propsData: { image: true } });
-    expect(header.classes()).to.include('image');
+    expect(header.classes()).toContain('image');
   });
 
   it('should have a sub class', () => {
     const header = shallow(Header, { propsData: { sub: true } });
-    expect(header.classes()).to.include('sub');
+    expect(header.classes()).toContain('sub');
   });
 
   it('should have content', () => {
     const header1 = shallow(Header, { propsData: { content: 'Content String' } });
-    expect(header1.text()).to.equal('Content String');
+    expect(header1.text()).toEqual('Content String');
 
     const header2 = shallow(Header, { slots: { default: '<span>Content String</span>' } });
-    expect(header2.text()).to.equal('Content String');
+    expect(header2.text()).toEqual('Content String');
   });
 
   it('should have an icon class', () => {
     const header = shallow(Header, { propsData: { icon: 'settings' } });
-    expect(header.classes()).to.include('icon');
-    expect(!!header.find('.icon.settings')).to.equal(true);
+    expect(header.classes()).toContain('icon');
+    expect(!!header.find('.icon.settings')).toEqual(true);
   });
 });

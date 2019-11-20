@@ -8,13 +8,13 @@ describe('Search', () => {
   it('should create a SUI Search', () => {
     const search = shallow(Search, {});
     expect(search.find('input'));
-    expect(search.exists()).to.equal(true);
+    expect(search.exists()).toEqual(true);
   });
 
   it('should not display results before first search', () => {
     const search = shallow(Search, { propsData: { query: null } });
     const results = search.find('.results');
-    expect(results.exists()).to.equal(false);
+    expect(results.exists()).toEqual(false);
   });
 
   it('should display the results when text is entered and input is focused', () => {
@@ -24,8 +24,8 @@ describe('Search', () => {
     input.element.value = 'a';
     input.trigger('input');
     const results = search.find('.results');
-    expect(results.exists()).to.equal(true);
-    expect(results.classes()).to.include('in');
+    expect(results.exists()).toEqual(true);
+    expect(results.classes()).toContain('in');
   });
 
   it('should hide the results when text has been removed', () => {
@@ -37,7 +37,7 @@ describe('Search', () => {
     input.element.value = '';
     input.trigger('input');
     const results = search.find('.results');
-    expect(results.classes()).to.include('out');
+    expect(results.classes()).toContain('out');
   });
 
   it('should hide the results when it is not focused', () => {
@@ -48,8 +48,8 @@ describe('Search', () => {
     input.element.value = '';
     input.trigger('input');
     const results = search.find('.results');
-    expect(results.exists()).to.equal(true);
-    expect(results.classes()).to.include('out');
+    expect(results.exists()).toEqual(true);
+    expect(results.classes()).toContain('out');
   });
 
   it('should display no records message when search list is empty', () => {
@@ -61,8 +61,8 @@ describe('Search', () => {
     const results = search.find('.results');
     const header = results.find('.message.empty .header');
     const description = results.find('.message.empty .description');
-    expect(header.text()).to.equal('No Results');
-    expect(description.text()).to.equal('Your search returned no results');
+    expect(header.text()).toEqual('No Results');
+    expect(description.text()).toEqual('Your search returned no results');
   });
 
   it('should display no records message when nothing is found with given query', () => {
@@ -75,8 +75,8 @@ describe('Search', () => {
     const results = search.find('.results');
     const header = results.find('.message.empty .header');
     const description = results.find('.message.empty .description');
-    expect(header.text()).to.equal('No Results');
-    expect(description.text()).to.equal('Your search returned no results');
+    expect(header.text()).toEqual('No Results');
+    expect(description.text()).toEqual('Your search returned no results');
   });
 
   it('should search through local source and display filtered results', () => {
@@ -88,8 +88,8 @@ describe('Search', () => {
     input.trigger('input');
     const results = search.find('.results');
     const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).to.equal('Cat');
-    expect(resultItems.at(1).text()).to.equal('Catfish');
+    expect(resultItems.at(0).text()).toEqual('Cat');
+    expect(resultItems.at(1).text()).toEqual('Catfish');
   });
 
   it('should search using non case sensitive mode', () => {
@@ -101,8 +101,8 @@ describe('Search', () => {
     input.trigger('input');
     const results = search.find('.results');
     const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).to.equal('Cat');
-    expect(resultItems.at(1).text()).to.equal('catfish');
+    expect(resultItems.at(0).text()).toEqual('Cat');
+    expect(resultItems.at(1).text()).toEqual('catfish');
   });
 
   it('should emit input event when value changes', () => {
@@ -116,7 +116,7 @@ describe('Search', () => {
     const result = search.find('.result');
     result.trigger('click');
 
-    expect(search.emitted().input[0][0]).to.equal(horse);
+    expect(search.emitted().input[0][0]).toEqual(horse);
   });
 
   it('should display previous results when query is cleared', () => {
@@ -130,10 +130,10 @@ describe('Search', () => {
 
     input.element.value = '';
     input.trigger('input');
-    expect(results.classes()).to.include('out');
+    expect(results.classes()).toContain('out');
     const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).to.equal('Cat');
-    expect(resultItems.at(1).text()).to.equal('catfish');
+    expect(resultItems.at(0).text()).toEqual('Cat');
+    expect(resultItems.at(1).text()).toEqual('catfish');
   });
 
   it('should display description', () => {
@@ -147,7 +147,7 @@ describe('Search', () => {
     const results = search.find('.results');
 
     const result = results.find('.result');
-    expect(result.find('.content .title').text()).to.equal('Horse');
-    expect(result.find('.content .description').text()).to.equal('horse description');
+    expect(result.find('.content .title').text()).toEqual('Horse');
+    expect(result.find('.content .description').text()).toEqual('horse description');
   });
 });

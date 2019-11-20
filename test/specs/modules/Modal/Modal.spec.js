@@ -9,52 +9,52 @@ describe('Modal', () => {
   it('should create a SUI Modal', () => {
     const wrapper = shallow(Modal);
     const modal = wrapper.find('.ui.modal');
-    expect(modal.exists()).to.equal(true);
+    expect(modal.exists()).toEqual(true);
   });
 
   it('should be basic', () => {
     const wrapper = shallow(Modal, { propsData: { basic: true } });
     const modal = wrapper.find('.ui.modal');
-    expect(modal.classes()).to.include('basic');
+    expect(modal.classes()).toContain('basic');
   });
 
   it('should be top aligned', () => {
     const wrapper = shallow(Modal, { propsData: { aligned: 'top' } });
     const modal = wrapper.find('.ui.modal');
-    expect(modal.classes()).to.include('top');
-    expect(modal.classes()).to.include('aligned');
+    expect(modal.classes()).toContain('top');
+    expect(modal.classes()).toContain('aligned');
   });
 
   it('should have close icon', () => {
     const wrapper = shallow(Modal, { propsData: { closeIcon: true } });
     const icon = wrapper.find(Icon);
-    expect(icon.exists()).to.equal(true);
-    expect(icon.props().name).to.equal('close');
+    expect(icon.exists()).toEqual(true);
+    expect(icon.props().name).toEqual('close');
   });
 
   it('should have inverted dimmer', () => {
     const wrapper = shallow(Modal, { propsData: { dimmer: 'inverted' } });
-    expect(wrapper.classes()).to.include('inverted');
+    expect(wrapper.classes()).toContain('inverted');
   });
 
   it('should close modal when clicking on close icon', () => {
     const wrapper = shallow(Modal, { propsData: { open: true, closeIcon: true } });
     const icon = wrapper.find(Icon);
     icon.trigger('click');
-    expect(wrapper.emitted().changed[0][0]).to.equal(false);
+    expect(wrapper.emitted().changed[0][0]).toEqual(false);
   });
 
   it('should close modal when clicking on dimmer', () => {
     const wrapper = shallow(Modal, { propsData: { open: true } });
     const dimmer = wrapper.find('.ui.dimmer');
     dimmer.trigger('click');
-    expect(wrapper.emitted().changed[0][0]).to.equal(false);
+    expect(wrapper.emitted().changed[0][0]).toEqual(false);
   });
 
   it('should not close modal when clicking on dimmer within closable=false', () => {
     const wrapper = shallow(Modal, { propsData: { open: true, closable: false } });
     const dimmer = wrapper.find('.ui.dimmer');
     dimmer.trigger('click');
-    expect(wrapper.emitted().changed).to.be.undefined;
+    expect(wrapper.emitted().changed).toBeUndefined();
   });
 });

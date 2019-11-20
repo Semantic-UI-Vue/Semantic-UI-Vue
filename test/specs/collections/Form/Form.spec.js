@@ -9,31 +9,31 @@ describe('Form', () => {
 
   it('should have class equal width', () => {
     const form = shallow(Form, { propsData: { equalWidth: true } });
-    expect(form.classes()).to.include('equal');
-    expect(form.classes()).to.include('width');
+    expect(form.classes()).toContain('equal');
+    expect(form.classes()).toContain('width');
   });
 
   it('should create a SUI form', () => {
     const form = shallow(Form);
-    expect(form.classes()).to.include('ui');
-    expect(form.classes()).to.include('form');
+    expect(form.classes()).toContain('ui');
+    expect(form.classes()).toContain('form');
   });
 
   it('should have a size', () => {
     const form = shallow(Form, { propsData: { size: 'massive' } });
-    expect(form.classes()).to.include('massive');
+    expect(form.classes()).toContain('massive');
   });
 
   it('should have single state', () => {
     const form = shallow(Form);
 
     form.setProps({ state: 'success' });
-    expect(form.classes()).to.include('success');
+    expect(form.classes()).toContain('success');
 
     form.setProps({ state: 'warning' });
-    expect(form.classes()).to.include('warning');
+    expect(form.classes()).toContain('warning');
 
     form.setProps({ state: 'error' });
-    expect(form.classes()).to.include('error');
+    expect(form.classes()).toContain('error');
   });
 });
