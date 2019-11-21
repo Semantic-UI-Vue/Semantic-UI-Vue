@@ -63,8 +63,7 @@ export default {
       this.focused = false;
     },
     checkFirstSearch() {
-      if (this.internalQuery && (this.internalQuery.length >= this.minCharacters)
-          && this.firstSearch === null) {
+      if (this.internalQuery && (this.internalQuery.length >= this.minCharacters)) {
         this.firstSearch = true;
       }
     },

@@ -1845,7 +1845,7 @@ braces@^2.3.1, braces@^2.3.2:
   dependencies:
     arr-flatten "^1.1.0"
     array-unique "^0.3.2"
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     fill-range "^4.0.0"
     isobject "^3.0.1"
     repeat-element "^1.1.2"
@@ -2388,7 +2388,7 @@ condense-newlines@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/condense-newlines/-/condense-newlines-0.2.1.tgz#3de985553139475d32502c83b02f60684d24c55f"
   dependencies:
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     is-whitespace "^0.3.0"
     kind-of "^3.0.2"
 
@@ -3394,7 +3394,7 @@ expand-brackets@^2.1.4:
   dependencies:
     debug "^2.3.3"
     define-property "^0.2.5"
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     posix-character-classes "^0.1.0"
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
@@ -3446,15 +3446,15 @@ express@^4.16.3, express@^4.17.1:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-extend-shallow@^2.0.1:
+extend-shallowMount@^2.0.1:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
+  resolved "https://registry.yarnpkg.com/extend-shallowMount/-/extend-shallowMount-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
   dependencies:
     is-extendable "^0.1.0"
 
-extend-shallow@^3.0.0, extend-shallow@^3.0.2:
+extend-shallowMount@^3.0.0, extend-shallowMount@^3.0.2:
   version "3.0.2"
-  resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-3.0.2.tgz#26a71aaf073b39fb2127172746131c2704028db8"
+  resolved "https://registry.yarnpkg.com/extend-shallowMount/-/extend-shallowMount-3.0.2.tgz#26a71aaf073b39fb2127172746131c2704028db8"
   dependencies:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
@@ -3478,7 +3478,7 @@ extglob@^2.0.4:
     array-unique "^0.3.2"
     define-property "^1.0.0"
     expand-brackets "^2.1.4"
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     fragment-cache "^0.2.1"
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
@@ -3570,7 +3570,7 @@ fill-range@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
   dependencies:
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     is-number "^3.0.0"
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
@@ -5446,7 +5446,7 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     array-unique "^0.3.2"
     braces "^2.3.1"
     define-property "^2.0.2"
-    extend-shallow "^3.0.2"
+    extend-shallowMount "^3.0.2"
     extglob "^2.0.4"
     fragment-cache "^0.2.1"
     kind-of "^6.0.2"
@@ -5646,7 +5646,7 @@ nanomatch@^1.2.9:
     arr-diff "^4.0.0"
     array-unique "^0.3.2"
     define-property "^2.0.2"
-    extend-shallow "^3.0.2"
+    extend-shallowMount "^3.0.2"
     fragment-cache "^0.2.1"
     is-windows "^1.0.2"
     kind-of "^6.0.2"
@@ -6681,7 +6681,7 @@ pretty@2.0.0:
   resolved "https://registry.yarnpkg.com/pretty/-/pretty-2.0.0.tgz#adbc7960b7bbfe289a557dc5f737619a220d06a5"
   dependencies:
     condense-newlines "^0.2.1"
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     js-beautify "^1.6.12"
 
 private@^0.1.6:
@@ -6942,7 +6942,7 @@ regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
   dependencies:
-    extend-shallow "^3.0.2"
+    extend-shallowMount "^3.0.2"
     safe-regex "^1.1.0"
 
 regexp.prototype.flags@^1.2.0:
@@ -7289,7 +7289,7 @@ set-value@^2.0.0, set-value@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/set-value/-/set-value-2.0.1.tgz#a18d40530e6f07de4228c7defe4227af8cad005b"
   dependencies:
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     is-extendable "^0.1.1"
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
@@ -7400,7 +7400,7 @@ snapdragon@^0.8.1:
     base "^0.11.1"
     debug "^2.2.0"
     define-property "^0.2.5"
-    extend-shallow "^2.0.1"
+    extend-shallowMount "^2.0.1"
     map-cache "^0.2.2"
     source-map "^0.5.6"
     source-map-resolve "^0.5.0"
@@ -7510,7 +7510,7 @@ split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
   dependencies:
-    extend-shallow "^3.0.0"
+    extend-shallowMount "^3.0.0"
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -7951,7 +7951,7 @@ to-regex@^3.0.1, to-regex@^3.0.2:
   resolved "https://registry.yarnpkg.com/to-regex/-/to-regex-3.0.2.tgz#13cfdd9b336552f30b51f33a8ae1b42a7a7599ce"
   dependencies:
     define-property "^2.0.2"
-    extend-shallow "^3.0.2"
+    extend-shallowMount "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 

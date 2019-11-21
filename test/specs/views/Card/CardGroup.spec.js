@@ -1,9 +1,9 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import CardGroup from 'semantic-ui-vue/views/Card/CardGroup';
 
 describe('CardGroup', () => {
   it('should create a standalone SUI CardGroup', () => {
-    const cardGroup = shallow(CardGroup);
+    const cardGroup = shallowMount(CardGroup);
     expect(cardGroup.is('div')).toEqual(true);
     expect(cardGroup.classes()).toContain('ui');
     expect(cardGroup.classes()).toContain('cards');
@@ -11,7 +11,7 @@ describe('CardGroup', () => {
   });
 
   it('should create create a SUI CardGroup with correct classes according to props', () => {
-    const cardGroup = shallow(CardGroup, {
+    const cardGroup = shallowMount(CardGroup, {
       propsData: {
         itemsPerRow: 3,
         stackable: true,

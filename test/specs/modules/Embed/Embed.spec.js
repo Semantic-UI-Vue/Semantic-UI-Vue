@@ -1,9 +1,9 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import Embed from 'semantic-ui-vue/modules/Embed/Embed';
 
 describe('Embed', () => {
   it('should create a SUI Embed default without active, placeholder and iframe', () => {
-    const embed = shallow(Embed);
+    const embed = shallowMount(Embed);
     expect(embed.is('div')).toEqual(true);
     expect(embed.classes()).toContain('ui');
     expect(embed.classes()).not.toContain('active');
@@ -17,7 +17,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with aspect ratio', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         aspectRatio: '21:9',
       },
@@ -30,7 +30,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with custom icon', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         icon: 'pencil',
       },
@@ -41,7 +41,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with placeholder image', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         placeholder: '/placeholder',
       },
@@ -52,7 +52,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed that active after click', () => {
-    const embed = shallow(Embed);
+    const embed = shallowMount(Embed);
     expect(embed.classes()).not.toContain('active');
     expect(embed.findAll('div').length).toEqual(1);
     expect(embed.contains('iframe')).toEqual(false);
@@ -65,7 +65,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with default slot when state is active', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         active: true,
       },
@@ -80,7 +80,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with youtube iframe', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         source: 'youtube',
         id: 'testId',
@@ -107,7 +107,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with vimeo iframe', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         source: 'vimeo',
         id: 'testId',
@@ -136,7 +136,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with custom host iframe', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         url: 'https://www.example.com',
         active: true,
@@ -153,7 +153,7 @@ describe('Embed', () => {
   });
 
   it('should create a SUI Embed with iframe shorthand', () => {
-    const embed = shallow(Embed, {
+    const embed = shallowMount(Embed, {
       propsData: {
         url: 'https://www.example.com',
         active: true,

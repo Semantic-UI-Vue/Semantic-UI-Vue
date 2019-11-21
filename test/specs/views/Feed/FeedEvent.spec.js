@@ -1,16 +1,16 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import FeedEvent from 'semantic-ui-vue/views/Feed/FeedEvent';
 
 describe('FeedEvent', () => {
   it('should create a SUI FeedEvent', () => {
-    const event = shallow(FeedEvent);
+    const event = shallowMount(FeedEvent);
     expect(event.is('div')).toEqual(true);
     expect(event.classes()).toContain('event');
     expect(event.text()).toEqual('');
   });
 
   it('should create a SUI FeedEvent with content', () => {
-    const event = shallow(FeedEvent, { propsData: { content: 'This is a feed event' } });
+    const event = shallowMount(FeedEvent, { propsData: { content: 'This is a feed event' } });
     expect(event.is('div')).toEqual(true);
     expect(event.classes()).toContain('event');
     const divs = event.findAll('div');
@@ -20,7 +20,7 @@ describe('FeedEvent', () => {
   });
 
   it('should create a SUI FeedEvent with icon, content and default slot', () => {
-    const event = shallow(FeedEvent, {
+    const event = shallowMount(FeedEvent, {
       propsData: {
         icon: 'pencil',
         content: 'This is a feed event',
@@ -42,7 +42,7 @@ describe('FeedEvent', () => {
   });
 
   it('should create a SUI FeedEvent with image avatar, content and default slot', () => {
-    const event = shallow(FeedEvent, {
+    const event = shallowMount(FeedEvent, {
       propsData: {
         image: '/avatar.png',
         content: 'This is a feed event',
@@ -83,7 +83,7 @@ describe('FeedEvent', () => {
   });
 
   it('should create a SUI FeedEvent with default slot', () => {
-    const event = shallow(FeedEvent, { slots: { default: '<span>This is a feed event</span>' } });
+    const event = shallowMount(FeedEvent, { slots: { default: '<span>This is a feed event</span>' } });
     expect(event.is('div')).toEqual(true);
     expect(event.classes()).toContain('event');
     expect(event.text()).toEqual('This is a feed event');

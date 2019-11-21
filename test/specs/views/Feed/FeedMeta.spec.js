@@ -1,23 +1,23 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import FeedMeta from 'semantic-ui-vue/views/Feed/FeedMeta';
 
 describe('FeedMeta', () => {
   it('should create a SUI FeedMeta', () => {
-    const meta = shallow(FeedMeta);
+    const meta = shallowMount(FeedMeta);
     expect(meta.is('div')).toEqual(true);
     expect(meta.classes()).toContain('meta');
     expect(meta.text()).toEqual('');
   });
 
   it('should create a SUI FeedMeta with content', () => {
-    const meta = shallow(FeedMeta, { propsData: { content: 'Primary meta content' } });
+    const meta = shallowMount(FeedMeta, { propsData: { content: 'Primary meta content' } });
     expect(meta.is('div')).toEqual(true);
     expect(meta.classes()).toContain('meta');
     expect(meta.text()).toEqual('Primary meta content');
   });
 
   it('should create a SUI FeedMeta with FeedLike', () => {
-    const meta = shallow(FeedMeta, { propsData: { like: '4 likes' } });
+    const meta = shallowMount(FeedMeta, { propsData: { like: '4 likes' } });
     expect(meta.is('div')).toEqual(true);
     expect(meta.classes()).toContain('meta');
     expect(meta.contains('a')).toEqual(true);
@@ -26,7 +26,7 @@ describe('FeedMeta', () => {
   });
 
   it('should only render default slot if both props and default slot exist', () => {
-    const meta = shallow(FeedMeta, {
+    const meta = shallowMount(FeedMeta, {
       propsData: {
         like: '4 likes',
       },
@@ -40,7 +40,7 @@ describe('FeedMeta', () => {
   });
 
   it('should create a SUI FeedMeta with default slot', () => {
-    const meta = shallow(FeedMeta, { slots: { default: '<span>Meta text</span>' } });
+    const meta = shallowMount(FeedMeta, { slots: { default: '<span>Meta text</span>' } });
     expect(meta.is('div')).toEqual(true);
     expect(meta.classes()).toContain('meta');
     expect(meta.text()).toEqual('Meta text');

@@ -1,9 +1,9 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import StatisticGroup from 'semantic-ui-vue/views/Statistic/StatisticGroup';
 
 describe('StatisticGroup', () => {
   it('should create a standalone SUI StatisticGroup', () => {
-    const statistics = shallow(StatisticGroup);
+    const statistics = shallowMount(StatisticGroup);
     expect(statistics.is('div')).toEqual(true);
     expect(statistics.classes()).toContain('ui');
     expect(statistics.classes()).toContain('statistics');
@@ -11,7 +11,7 @@ describe('StatisticGroup', () => {
   });
 
   it('should create a SUI StatisticGroup with correct classes according to props', () => {
-    const statistics = shallow(StatisticGroup, {
+    const statistics = shallowMount(StatisticGroup, {
       propsData: {
         horizontal: true,
       },
@@ -24,7 +24,7 @@ describe('StatisticGroup', () => {
   });
 
   it('should create a SUI StatisticGroup with default slot', () => {
-    const statistics = shallow(StatisticGroup, { slots: { default: '<span>40 meters</span>' } });
+    const statistics = shallowMount(StatisticGroup, { slots: { default: '<span>40 meters</span>' } });
     expect(statistics.is('div')).toEqual(true);
     expect(statistics.classes()).toContain('ui');
     expect(statistics.classes()).toContain('statistics');

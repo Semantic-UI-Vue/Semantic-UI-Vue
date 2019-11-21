@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import * as common from 'test/utils';
 import FormFields from 'semantic-ui-vue/collections/Form/FormFields';
 
@@ -9,7 +9,7 @@ describe('Form', () => describe('FormFields', () => {
   common.testClass(FormFields, ['fields']);
 
   it('should have fields number', () => {
-    const formFields = shallow(FormFields);
+    const formFields = shallowMount(FormFields);
 
     formFields.setProps({ fields: 2 });
     expect(formFields.classes()).toContain('two');

@@ -1,16 +1,16 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import CardContent from 'semantic-ui-vue/views/Card/CardContent';
 
 describe('CardContent', () => {
   it('should create a standalone SUI CardContent', () => {
-    const cardContent = shallow(CardContent);
+    const cardContent = shallowMount(CardContent);
     expect(cardContent.is('div')).toEqual(true);
     expect(cardContent.classes()).toContain('content');
     expect(cardContent.text()).toEqual('');
   });
 
   it('should create a SUI CardContent with default slot', () => {
-    const cardContent = shallow(CardContent, {
+    const cardContent = shallowMount(CardContent, {
       slots: {
         default: '<span>Default slot</span>',
       },
@@ -21,7 +21,7 @@ describe('CardContent', () => {
   });
 
   it('should create a SUI CardContent with right slot', () => {
-    const cardContent = shallow(CardContent, {
+    const cardContent = shallowMount(CardContent, {
       slots: {
         right: '<span>Right slot</span>',
       },
@@ -33,7 +33,7 @@ describe('CardContent', () => {
   });
 
   it('should create a SUI CardContent with extra class according to extra prop', () => {
-    const cardContent = shallow(CardContent, {
+    const cardContent = shallowMount(CardContent, {
       propsData: {
         extra: true,
       },

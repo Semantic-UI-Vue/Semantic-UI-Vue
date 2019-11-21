@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import * as common from 'test/utils';
 import DropdownItem from 'semantic-ui-vue/modules/Dropdown/DropdownItem';
 import Image from 'semantic-ui-vue/elements/Image/Image';
@@ -12,7 +12,7 @@ describe('Dropdown', () => describe('DropdownItem', () => {
       src: 'bar',
     };
 
-    const wrapper = shallow(DropdownItem, {
+    const wrapper = shallowMount(DropdownItem, {
       propsData: {
         image: imageProps,
       },

@@ -1,23 +1,23 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import FeedDate from 'semantic-ui-vue/views/Feed/FeedDate';
 
 describe('FeedDate', () => {
   it('should create a SUI FeedDate', () => {
-    const date = shallow(FeedDate);
+    const date = shallowMount(FeedDate);
     expect(date.is('div')).toEqual(true);
     expect(date.classes()).toContain('date');
     expect(date.text()).toEqual('');
   });
 
   it('should create a SUI FeedDate with content', () => {
-    const date = shallow(FeedDate, { propsData: { content: '3 hours ago' } });
+    const date = shallowMount(FeedDate, { propsData: { content: '3 hours ago' } });
     expect(date.is('div')).toEqual(true);
     expect(date.classes()).toContain('date');
     expect(date.text()).toEqual('3 hours ago');
   });
 
   it('should only render default slot if both props and default slot exist', () => {
-    const date = shallow(FeedDate, {
+    const date = shallowMount(FeedDate, {
       propsData: {
         content: '3 hours ago',
       },
@@ -31,7 +31,7 @@ describe('FeedDate', () => {
   });
 
   it('should create a SUI FeedDate with default slot', () => {
-    const date = shallow(FeedDate, { slots: { default: '<span>3 hours ago</span>' } });
+    const date = shallowMount(FeedDate, { slots: { default: '<span>3 hours ago</span>' } });
     expect(date.is('div')).toEqual(true);
     expect(date.classes()).toContain('date');
     expect(date.text()).toEqual('3 hours ago');

@@ -1,153 +1,94 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Search from 'semantic-ui-vue/modules/Search/Search';
+import Results from 'semantic-ui-vue/modules/Search/Results';
 
 describe('Search', () => {
   testClassFromProps(Search, ['ui', 'search']);
 
   it('should create a SUI Search', () => {
-    const search = shallow(Search, {});
+    const search = shallowMount(Search, {});
     expect(search.find('input'));
     expect(search.exists()).toEqual(true);
   });
 
   it('should not display results before first search', () => {
-    const search = shallow(Search, { propsData: { query: null } });
-    const results = search.find('.results');
+    const search = shallowMount(Search, { propsData: { query: null } });
+    const results = search.find(Results);
     expect(results.exists()).toEqual(false);
   });
 
-  it('should display the results when text is entered and input is focused', () => {
-    const search = shallow(Search, {});
+  it('should display the results when the minimum characters are input', () => {
+    const search = shallowMount(Search, { propsData: { minCharacters: 5 } })
     const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'a';
+    input.element.value = '1234';
     input.trigger('input');
-    const results = search.find('.results');
+    let results = search.find(Results);
+    expect(results.exists()).toEqual(false);
+    input.element.value = '12345';
+    input.trigger('input');
+    results = search.find(Results);
     expect(results.exists()).toEqual(true);
-    expect(results.classes()).toContain('in');
   });
 
-  it('should hide the results when text has been removed', () => {
-    const search = shallow(Search, {});
-    const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'a';
-    input.trigger('input');
-    input.element.value = '';
-    input.trigger('input');
-    const results = search.find('.results');
-    expect(results.classes()).toContain('out');
-  });
-
-  it('should hide the results when it is not focused', () => {
-    const search = shallow(Search, {});
+  it('should show results only when focused', () => {
+    const search = shallowMount(Search);
     const input = search.find('input.prompt');
     input.element.value = 'a';
     input.trigger('input');
-    input.element.value = '';
-    input.trigger('input');
-    const results = search.find('.results');
-    expect(results.exists()).toEqual(true);
-    expect(results.classes()).toContain('out');
+    let results = search.find(Results);
+    expect(results.props()).toMatchObject({ visible: false });
+    input.trigger('focus');
+    results = search.find(Results);
+    expect(results.props()).toMatchObject({ visible: true });
   });
 
-  it('should display no records message when search list is empty', () => {
-    const search = shallow(Search, {});
+  it('should hide results on blur', () => {
+    const search = shallowMount(Search);
     const input = search.find('input.prompt');
-    input.trigger('focus');
     input.element.value = 'a';
     input.trigger('input');
-    const results = search.find('.results');
-    const header = results.find('.message.empty .header');
-    const description = results.find('.message.empty .description');
-    expect(header.text()).toEqual('No Results');
-    expect(description.text()).toEqual('Your search returned no results');
+    input.trigger('focus');
+    input.trigger('blur');
+    const results = search.find(Results);
+    expect(results.props()).toMatchObject({ visible: false });
   });
 
-  it('should display no records message when nothing is found with given query', () => {
-    const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }];
-    const search = shallow(Search, { propsData: { source } });
+  it('should set pass firstFocus to results', () => {
+    const search = shallowMount(Search);
     const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'x';
+    input.element.value = 'a';
     input.trigger('input');
-    const results = search.find('.results');
-    const header = results.find('.message.empty .header');
-    const description = results.find('.message.empty .description');
-    expect(header.text()).toEqual('No Results');
-    expect(description.text()).toEqual('Your search returned no results');
+    let results = search.find(Results);
+    expect(results.props()).toMatchObject({ firstFocus: false });
+    input.trigger('focus');
+    results = search.find(Results);
+    expect(results.props()).toMatchObject({ firstFocus: true });
+    input.trigger('blur');
+    results = search.find(Results);
+    expect(results.props()).toMatchObject({ firstFocus: true });
   });
 
-  it('should search through local source and display filtered results', () => {
-    const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }];
-    const search = shallow(Search, { propsData: { source } });
-    const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'C';
-    input.trigger('input');
-    const results = search.find('.results');
-    const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).toEqual('Cat');
-    expect(resultItems.at(1).text()).toEqual('Catfish');
+  it('should wrap the input inside a .input div', () => {
+    const search = shallowMount(Search, { propsData: { input: true } });
+    const input = search.find('.input');
+    expect(input.exists()).toEqual(true);
   });
 
-  it('should search using non case sensitive mode', () => {
-    const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'catfish' }];
-    const search = shallow(Search, { propsData: { source } });
+  it('should should update the value when a result is selected', () => {
+    const search = shallowMount(Search);
     const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'c';
+    input.element.value = 'foo';
     input.trigger('input');
-    const results = search.find('.results');
-    const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).toEqual('Cat');
-    expect(resultItems.at(1).text()).toEqual('catfish');
-  });
-
-  it('should emit input event when value changes', () => {
-    const horse = { title: 'Horse' };
-    const source = [horse];
-    const search = shallow(Search, { propsData: { source } });
-    const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'Horse';
-    input.trigger('input');
-    const result = search.find('.result');
-    result.trigger('click');
-
-    expect(search.emitted().input[0][0]).toEqual(horse);
-  });
-
-  it('should display previous results when query is cleared', () => {
-    const source = [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'catfish' }];
-    const search = shallow(Search, { propsData: { source } });
-    const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'c';
-    input.trigger('input');
-    const results = search.find('.results');
-
-    input.element.value = '';
-    input.trigger('input');
-    expect(results.classes()).toContain('out');
-    const resultItems = results.findAll('.result .content .title');
-    expect(resultItems.at(0).text()).toEqual('Cat');
-    expect(resultItems.at(1).text()).toEqual('catfish');
-  });
-
-  it('should display description', () => {
-    const source = [{ title: 'Horse', description: 'horse description' }];
-    const search = shallow(Search, { propsData: { source } });
-
-    const input = search.find('input.prompt');
-    input.trigger('focus');
-    input.element.value = 'h';
-    input.trigger('input');
-    const results = search.find('.results');
-
-    const result = results.find('.result');
-    expect(result.find('.content .title').text()).toEqual('Horse');
-    expect(result.find('.content .description').text()).toEqual('horse description');
+    let results = search.find(Results);
+    expect(results.props().query).toEqual('foo');
+    const item = {
+      title: 'title',
+      value: 'value',
+    };
+    results.vm.$listeners.selected(item);
+    results = search.find(Results);
+    expect(results.props().query).toEqual(item.title);
+    expect(search.emitted()).toMatchObject({ input: [[item]] })
   });
 });

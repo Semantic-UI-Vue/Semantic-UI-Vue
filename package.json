@@ -73,6 +73,10 @@
     "last 2 versions"
   ],
   "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/src/**/*.{js,jsx}"
+    ],
     "moduleFileExtensions": [
       "js",
       "jsx",
@@ -81,6 +85,10 @@
     "moduleNameMapper": {
       "^test(.*)$": "<rootDir>/test/$1",
       "^semantic-ui-vue(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
     }
   }
 }

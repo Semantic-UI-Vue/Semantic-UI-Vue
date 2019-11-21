@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Icon from 'semantic-ui-vue/elements/Icon/Icon';
 
@@ -8,13 +8,13 @@ describe('Icon', () => {
   ]);
 
   it('should create a SUI Icon', () => {
-    const icon = shallow(Icon);
+    const icon = shallowMount(Icon);
     expect(icon.is('i')).toEqual(true);
     expect(icon.classes()).toContain('icon');
   });
 
   it('should display user icon', () => {
-    const icon = shallow(Icon, { propsData: { name: 'user' } });
+    const icon = shallowMount(Icon, { propsData: { name: 'user' } });
     expect(icon.classes()).toContain('user');
   });
 });

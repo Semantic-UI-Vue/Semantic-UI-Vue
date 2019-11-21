@@ -1,23 +1,23 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import FeedSummary from 'semantic-ui-vue/views/Feed/FeedSummary';
 
 describe('FeedSummary', () => {
   it('should create a SUI FeedSummary', () => {
-    const summary = shallow(FeedSummary);
+    const summary = shallowMount(FeedSummary);
     expect(summary.is('div')).toEqual(true);
     expect(summary.classes()).toContain('summary');
     expect(summary.text()).toEqual('');
   });
 
   it('should create a SUI FeedSummary with content', () => {
-    const summary = shallow(FeedSummary, { propsData: { content: 'This is a summary' } });
+    const summary = shallowMount(FeedSummary, { propsData: { content: 'This is a summary' } });
     expect(summary.is('div')).toEqual(true);
     expect(summary.classes()).toContain('summary');
     expect(summary.text()).toEqual('This is a summary');
   });
 
   it('should create a SUI FeedSummary with FeedUser and FeedDate', () => {
-    const summary = shallow(FeedSummary, { propsData: {
+    const summary = shallowMount(FeedSummary, { propsData: {
       date: '2 hours ago',
       content: 'This is a summary',
       user: 'Jenny',
@@ -35,7 +35,7 @@ describe('FeedSummary', () => {
   });
 
   it('should only render default slot if both props and default slot exist', () => {
-    const summary = shallow(FeedSummary, {
+    const summary = shallowMount(FeedSummary, {
       propsData: {
         date: '2 hours ago',
         content: 'This is a summary',
@@ -51,7 +51,7 @@ describe('FeedSummary', () => {
   });
 
   it('should create a SUI FeedSummary with default slot', () => {
-    const summary = shallow(FeedSummary, { slots: { default: '<span>Summary text</span>' } });
+    const summary = shallowMount(FeedSummary, { slots: { default: '<span>Summary text</span>' } });
     expect(summary.is('div')).toEqual(true);
     expect(summary.classes()).toContain('summary');
     expect(summary.text()).toEqual('Summary text');

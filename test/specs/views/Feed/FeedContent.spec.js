@@ -1,23 +1,23 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import FeedContent from 'semantic-ui-vue/views/Feed/FeedContent';
 
 describe('FeedContent', () => {
   it('should create a SUI FeedContent', () => {
-    const content = shallow(FeedContent);
+    const content = shallowMount(FeedContent);
     expect(content.is('div')).toEqual(true);
     expect(content.classes()).toContain('content');
     expect(content.text()).toEqual('');
   });
 
   it('should create a SUI FeedContent with content', () => {
-    const content = shallow(FeedContent, { propsData: { content: 'Main content here' } });
+    const content = shallowMount(FeedContent, { propsData: { content: 'Main content here' } });
     expect(content.is('div')).toEqual(true);
     expect(content.classes()).toContain('content');
     expect(content.text()).toEqual('Main content here');
   });
 
   it('should create a SUI FeedContent with content and other components', () => {
-    const content = shallow(FeedContent, { propsData: {
+    const content = shallowMount(FeedContent, { propsData: {
       content: 'Main content here',
       date: '1 hour ago',
       summary: 'Summary text',
@@ -47,7 +47,7 @@ describe('FeedContent', () => {
   });
 
   it('should only render default slot if both props and default slot exist', () => {
-    const content = shallow(FeedContent, {
+    const content = shallowMount(FeedContent, {
       propsData: {
         content: 'Main content here',
         date: '1 hour ago',
@@ -68,7 +68,7 @@ describe('FeedContent', () => {
   });
 
   it('should create a SUI FeedContent with default slot', () => {
-    const content = shallow(FeedContent, { slots: { default: '<span>Main content here</span>' } });
+    const content = shallowMount(FeedContent, { slots: { default: '<span>Main content here</span>' } });
     expect(content.is('div')).toEqual(true);
     expect(content.classes()).toContain('content');
     expect(content.text()).toEqual('Main content here');

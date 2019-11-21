@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Search from 'semantic-ui-vue/modules/Search/Search';
 
@@ -6,7 +6,7 @@ describe('Search', () => {
   testClassFromProps(Search, ['ui', 'search']);
 
   it('should render input icon', () => {
-    const search = shallow(Search, {
+    const search = shallowMount(Search, {
       slots: {
         icon: '<i class="search icon"></i>',
       },

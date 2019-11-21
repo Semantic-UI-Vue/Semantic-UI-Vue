@@ -1,9 +1,9 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import Feed from 'semantic-ui-vue/views/Feed/Feed';
 
 describe('Feed', () => {
   it('should create a SUI Feed', () => {
-    const feed = shallow(Feed);
+    const feed = shallowMount(Feed);
     expect(feed.is('div')).toEqual(true);
     expect(feed.classes()).toContain('ui');
     expect(feed.classes()).toContain('feed');
@@ -11,7 +11,7 @@ describe('Feed', () => {
   });
 
   it('should create a SUI Feed with small size', () => {
-    const feed = shallow(Feed, { propsData: { size: 'small' } });
+    const feed = shallowMount(Feed, { propsData: { size: 'small' } });
     expect(feed.is('div')).toEqual(true);
     expect(feed.classes()).toContain('ui');
     expect(feed.classes()).toContain('small');
@@ -20,7 +20,7 @@ describe('Feed', () => {
   });
 
   it('should create a SUI Feed with large size', () => {
-    const feed = shallow(Feed, { propsData: { size: 'large' } });
+    const feed = shallowMount(Feed, { propsData: { size: 'large' } });
     expect(feed.is('div')).toEqual(true);
     expect(feed.classes()).toContain('ui');
     expect(feed.classes()).toContain('large');
@@ -39,7 +39,7 @@ describe('Feed', () => {
         summary: 'This is a feed summary',
       },
     ];
-    const feed = shallow(Feed, {
+    const feed = shallowMount(Feed, {
       propsData: {
         events,
       },
@@ -75,7 +75,7 @@ describe('Feed', () => {
         summary: 'This is a feed summary',
       },
     ];
-    const feed = shallow(Feed, {
+    const feed = shallowMount(Feed, {
       propsData: {
         events,
       },
@@ -92,7 +92,7 @@ describe('Feed', () => {
   });
 
   it('should create a SUI Feed with default slot', () => {
-    const feed = shallow(Feed, { slots: { default: '<span>This is a feed</span>' } });
+    const feed = shallowMount(Feed, { slots: { default: '<span>This is a feed</span>' } });
     expect(feed.is('div')).toEqual(true);
     expect(feed.classes()).toContain('ui');
     expect(feed.classes()).toContain('feed');

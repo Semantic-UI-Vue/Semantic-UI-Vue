@@ -1,4 +1,4 @@
-// import { shallow } from '@vue/test-utils';
+// import { shallowMount } from '@vue/test-utils';
 import * as common from 'test/utils';
 import DropdownDivider from 'semantic-ui-vue/modules/Dropdown/DropdownDivider';
 

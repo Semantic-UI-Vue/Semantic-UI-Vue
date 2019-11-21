@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Form from 'semantic-ui-vue/collections/Form/Form';
 
@@ -8,24 +8,24 @@ describe('Form', () => {
   ]);
 
   it('should have class equal width', () => {
-    const form = shallow(Form, { propsData: { equalWidth: true } });
+    const form = shallowMount(Form, { propsData: { equalWidth: true } });
     expect(form.classes()).toContain('equal');
     expect(form.classes()).toContain('width');
   });
 
   it('should create a SUI form', () => {
-    const form = shallow(Form);
+    const form = shallowMount(Form);
     expect(form.classes()).toContain('ui');
     expect(form.classes()).toContain('form');
   });
 
   it('should have a size', () => {
-    const form = shallow(Form, { propsData: { size: 'massive' } });
+    const form = shallowMount(Form, { propsData: { size: 'massive' } });
     expect(form.classes()).toContain('massive');
   });
 
   it('should have single state', () => {
-    const form = shallow(Form);
+    const form = shallowMount(Form);
 
     form.setProps({ state: 'success' });
     expect(form.classes()).toContain('success');

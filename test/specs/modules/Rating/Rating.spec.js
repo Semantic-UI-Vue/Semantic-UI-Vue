@@ -1,4 +1,4 @@
-import { mount, shallow } from '@vue/test-utils';
+import { mount, shallowMount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Rating from 'semantic-ui-vue/modules/Rating/Rating';
 
@@ -6,7 +6,7 @@ describe('Rating', () => {
   testClassFromProps(Rating, ['ui', 'rating']);
 
   it('should create rating stars', () => {
-    const rating = shallow(Rating, { propsData: { rating: 3, maxRating: 5 } });
+    const rating = shallowMount(Rating, { propsData: { rating: 3, maxRating: 5 } });
     expect(rating.findAll('i').length).toEqual(5);
     expect(rating.findAll('i[aria-checked=true]').length).toEqual(3);
     expect(rating.findAll('i[aria-checked=false]').length).toEqual(2);

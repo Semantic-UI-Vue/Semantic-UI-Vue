@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import * as common from 'test/utils';
 import Label from 'semantic-ui-vue/elements/Label/Label';
 import Icon from 'semantic-ui-vue/elements/Icon/Icon';
@@ -20,7 +20,7 @@ describe('Dropdown', () => {
 
   it('should open a menu', () => {
     const openSpy = sinon.spy();
-    const wrapper = shallow(DropdownWithRequired, { propsData: { placeholder: 'foo' } });
+    const wrapper = shallowMount(DropdownWithRequired, { propsData: { placeholder: 'foo' } });
     wrapper.setData({ menu: { setOpen: openSpy } });
     wrapper.trigger('click');
     expect(openSpy).to.have.been.calledOnce;
@@ -31,14 +31,14 @@ describe('Dropdown', () => {
 
   it('should close the menu', () => {
     const openSpy = sinon.spy();
-    const wrapper = shallow(DropdownWithRequired);
+    const wrapper = shallowMount(DropdownWithRequired);
     wrapper.setData({ menu: { setOpen: openSpy } });
     document.body.click();
     expect(openSpy).to.have.been.calledWith(false);
   });
 
   it('should close the menu when clicking on option', (done) => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         options: [{ text: 'foo', value: 1 }],
       },
@@ -52,7 +52,7 @@ describe('Dropdown', () => {
   });
 
   it('should close the menu when re-clicking on dropdown head', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         placeholder: 'foo',
         options: [{ text: 'foo', value: 1 }],
@@ -65,7 +65,7 @@ describe('Dropdown', () => {
   });
 
   it('should not close the menu when clicking on search input', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         search: true,
         options: [{ text: 'foo', value: 1 }],
@@ -78,7 +78,7 @@ describe('Dropdown', () => {
   });
 
   it('should not close the menu when clicking on option when multiple=true', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         options: [{ text: 'foo', value: 1 }],
@@ -92,7 +92,7 @@ describe('Dropdown', () => {
 
   it('should remove handler', () => {
     const openSpy = sinon.spy();
-    const wrapper = shallow(DropdownWithRequired);
+    const wrapper = shallowMount(DropdownWithRequired);
     wrapper.setData({ menu: { setOpen: openSpy } });
     wrapper.destroy();
     document.body.click();
@@ -100,7 +100,7 @@ describe('Dropdown', () => {
   });
 
   it('should have options', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         options: [{ text: 'foo' }, { text: 'bar' }],
       },
@@ -113,7 +113,7 @@ describe('Dropdown', () => {
   });
 
   it('should have icons, flags and images in option', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         options: [
           {
@@ -138,7 +138,7 @@ describe('Dropdown', () => {
   });
 
   it('should choose option', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
       },
@@ -152,7 +152,7 @@ describe('Dropdown', () => {
   });
 
   it('should choose few options', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
@@ -169,7 +169,7 @@ describe('Dropdown', () => {
   });
 
   it('should deselect option from selected', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
@@ -191,7 +191,7 @@ describe('Dropdown', () => {
   });
 
   it('should not select more than max-selections', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         maxSelections: 1,
@@ -211,7 +211,7 @@ describe('Dropdown', () => {
   });
 
   it('should have icons, flags and images in selected text', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         options: [
           {
@@ -240,7 +240,7 @@ describe('Dropdown', () => {
   });
 
   it('should have icons, flags and images in selected options', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         multiple: true,
         options: [
@@ -270,7 +270,7 @@ describe('Dropdown', () => {
   });
 
   it('should filter options', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         search: true,
         noResultsMessage: 'Ops.. no results',
@@ -292,7 +292,7 @@ describe('Dropdown', () => {
   });
 
   it('should delete last option from selected when pressing backspace in search input when filter is empty', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         search: true,
         multiple: true,
@@ -310,7 +310,7 @@ describe('Dropdown', () => {
   });
 
   it('should not delete last option from selected when pressing backspace in search input when filter is not empty', () => {
-    const wrapper = shallow(DropdownWithRequired, {
+    const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         search: true,
         multiple: true,
@@ -330,7 +330,7 @@ describe('Dropdown', () => {
 
   describe('allowAdditions', () => {
     it('should allow non-existent values if allowAdditions is true', () => {
-      const wrapper = shallow(DropdownWithRequired, {
+      const wrapper = shallowMount(DropdownWithRequired, {
         propsData: {
           multiple: true,
           allowAdditions: true,
@@ -342,7 +342,7 @@ describe('Dropdown', () => {
     });
 
     it('should select only existent values if allowAdditions is false. #320', () => {
-      const wrapper = shallow(DropdownWithRequired, {
+      const wrapper = shallowMount(DropdownWithRequired, {
         propsData: {
           multiple: true,
           value: [1, 2, 4000],

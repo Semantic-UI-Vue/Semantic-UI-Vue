@@ -1,23 +1,23 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import FeedLabel from 'semantic-ui-vue/views/Feed/FeedLabel';
 
 describe('FeedLabel', () => {
   it('should create a SUI FeedLabel', () => {
-    const label = shallow(FeedLabel);
+    const label = shallowMount(FeedLabel);
     expect(label.is('div')).toEqual(true);
     expect(label.classes()).toContain('label');
     expect(label.text()).toEqual('');
   });
 
   it('should create a SUI FeedLabel with content', () => {
-    const label = shallow(FeedLabel, { propsData: { content: 'LABEL' } });
+    const label = shallowMount(FeedLabel, { propsData: { content: 'LABEL' } });
     expect(label.is('div')).toEqual(true);
     expect(label.classes()).toContain('label');
     expect(label.text()).toEqual('LABEL');
   });
 
   it('should create a SUI FeedLabel with icon', () => {
-    const label = shallow(FeedLabel, { propsData: { icon: 'pencil' } });
+    const label = shallowMount(FeedLabel, { propsData: { icon: 'pencil' } });
     expect(label.is('div')).toEqual(true);
     expect(label.classes()).toContain('label');
     expect(label.contains('i')).toEqual(true);
@@ -25,7 +25,7 @@ describe('FeedLabel', () => {
   });
 
   it('should create a SUI FeedLabel with image', () => {
-    const label = shallow(FeedLabel, { propsData: { image: '/test-image.jpg' } });
+    const label = shallowMount(FeedLabel, { propsData: { image: '/test-image.jpg' } });
     expect(label.is('div')).toEqual(true);
     expect(label.classes()).toContain('label');
     expect(label.contains('img')).toEqual(true);
@@ -33,7 +33,7 @@ describe('FeedLabel', () => {
   });
 
   it('should only render default slot if both props and default slot exist', () => {
-    const label = shallow(FeedLabel, {
+    const label = shallowMount(FeedLabel, {
       propsData: {
         image: '/test-image.jpg',
       },
@@ -47,7 +47,7 @@ describe('FeedLabel', () => {
   });
 
   it('should create a SUI FeedLabel with default slot', () => {
-    const label = shallow(FeedLabel, { slots: { default: '<span>LABEL</span>' } });
+    const label = shallowMount(FeedLabel, { slots: { default: '<span>LABEL</span>' } });
     expect(label.is('div')).toEqual(true);
     expect(label.classes()).toContain('label');
     expect(label.text()).toEqual('LABEL');
