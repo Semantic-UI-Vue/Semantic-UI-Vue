@@ -1,5 +1,6 @@
 import { SemanticUIVueMixin } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
+import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiLabel',
@@ -83,7 +84,7 @@ export default {
         )}
       >
 
-        {this.icon && <sui-icon name={this.icon} />}
+        {this.icon && <Icon name={this.icon} />}
         {this.$slots.default}
       </ElementType>
     );

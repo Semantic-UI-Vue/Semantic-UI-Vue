@@ -1,10 +1,7 @@
 import { mount, shallowMount } from '@vue/test-utils';
-import { testClassFromProps } from 'test/utils';
 import Rating from 'semantic-ui-vue/modules/Rating/Rating';
 
 describe('Rating', () => {
-  testClassFromProps(Rating, ['ui', 'rating']);
-
   it('should create rating stars', () => {
     const rating = shallowMount(Rating, { propsData: { rating: 3, maxRating: 5 } });
     expect(rating.findAll('i').length).toEqual(5);

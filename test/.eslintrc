@@ -4,9 +4,6 @@
   },
   "globals": {
     "expect": true,
-    "sinon": true
-  },
-  "rules": {
-    "no-unused-expressions": "off"
+    "jest": true
   }
 }

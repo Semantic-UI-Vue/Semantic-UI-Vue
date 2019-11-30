@@ -348,7 +348,7 @@ export default {
       if (this.search && this.filteredOptions.length >= 0) {
         this.selectedIndex = 0;
       }
-      if (this.menu) {
+      if (this.menu && this.menu.setOpen) {
         this.menu.setOpen(value);
       }
     },

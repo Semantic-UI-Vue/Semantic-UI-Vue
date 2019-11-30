@@ -19,22 +19,22 @@ describe('Dropdown', () => {
   ]);
 
   it('should open a menu', () => {
-    const openSpy = sinon.spy();
+    const openSpy = jest.fn();
     const wrapper = shallowMount(DropdownWithRequired, { propsData: { placeholder: 'foo' } });
     wrapper.setData({ menu: { setOpen: openSpy } });
     wrapper.trigger('click');
-    expect(openSpy).to.have.been.calledOnce;
+    expect(openSpy).toHaveBeenCalledTimes(1);
     wrapper.find('i').trigger('click');
     wrapper.find('.text').trigger('click');
-    expect(openSpy).to.have.been.calledThrice;
+    expect(openSpy).toHaveBeenCalledTimes(3);
   });
 
   it('should close the menu', () => {
-    const openSpy = sinon.spy();
+    const openSpy = jest.fn();
     const wrapper = shallowMount(DropdownWithRequired);
     wrapper.setData({ menu: { setOpen: openSpy } });
     document.body.click();
-    expect(openSpy).to.have.been.calledWith(false);
+    expect(openSpy).toHaveBeenCalledWith(false);
   });
 
   it('should close the menu when clicking on option', (done) => {
@@ -86,17 +86,20 @@ describe('Dropdown', () => {
     });
 
     wrapper.trigger('click');
-    wrapper.find(DropdownItem).trigger('click');
+    const item = wrapper.find(DropdownItem);
+    wrapper.vm.register(item.vm);
+    item.vm.$listeners.select({ text: 'foo', value: 1 });
+    item.trigger('click');
     expect(wrapper.classes()).toContain('visible');
   });
 
   it('should remove handler', () => {
-    const openSpy = sinon.spy();
+    const openSpy = jest.fn();
     const wrapper = shallowMount(DropdownWithRequired);
     wrapper.setData({ menu: { setOpen: openSpy } });
     wrapper.destroy();
     document.body.click();
-    expect(openSpy).not.to.have.been.called;
+    expect(openSpy).not.toHaveBeenCalled();
   });
 
   it('should have options', () => {
@@ -110,104 +113,6 @@ describe('Dropdown', () => {
     expect(options.length).toEqual(2);
     expect(options.at(0).props().text).toEqual('foo');
     expect(options.at(1).props().text).toEqual('bar');
-  });
-
-  it('should have icons, flags and images in option', () => {
-    const wrapper = shallowMount(DropdownWithRequired, {
-      propsData: {
-        options: [
-          {
-            text: 'foo',
-            value: 1,
-            flag: 'cn',
-            icon: 'question',
-            image: {
-              src: '/test',
-            },
-          },
-        ],
-      },
-    });
-    const item = wrapper.find(DropdownItem);
-    const icon = item.find(Icon);
-    expect(icon.exists()).toEqual(true);
-    const flag = item.find(Flag);
-    expect(flag.exists()).toEqual(true);
-    const image = item.find(Image);
-    expect(image.exists()).toEqual(true);
-  });
-
-  it('should choose option', () => {
-    const wrapper = shallowMount(DropdownWithRequired, {
-      propsData: {
-        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
-      },
-    });
-
-    const options = wrapper.findAll(DropdownItem);
-    options.at(0).trigger('click');
-    options.at(1).trigger('click');
-    expect(wrapper.emitted().input[0][0]).toEqual(1);
-    expect(wrapper.emitted().input[1][0]).toEqual(2);
-  });
-
-  it('should choose few options', () => {
-    const wrapper = shallowMount(DropdownWithRequired, {
-      propsData: {
-        multiple: true,
-        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
-      },
-    });
-
-    const options = wrapper.findAll(DropdownItem);
-
-    options.at(0).trigger('click');
-    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
-    wrapper.setProps({ value: [1] });
-    options.at(0).trigger('click');
-    expect(wrapper.emitted().input[1][0]).to.deep.equal([1, 2]);
-  });
-
-  it('should deselect option from selected', () => {
-    const wrapper = shallowMount(DropdownWithRequired, {
-      propsData: {
-        multiple: true,
-        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
-      },
-    });
-
-    const options = wrapper.findAll(DropdownItem);
-
-    options.at(0).trigger('click');
-    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
-    wrapper.setProps({ value: [1] });
-    options.at(0).trigger('click');
-    expect(wrapper.emitted().input[1][0]).to.deep.equal([1, 2]);
-    wrapper.setProps({ value: [1, 2] });
-
-    const selectedOptions = wrapper.findAll(Label);
-    selectedOptions.at(0).find('i.icon.delete').trigger('click');
-    expect(wrapper.emitted().input[2][0]).to.deep.equal([2]);
-  });
-
-  it('should not select more than max-selections', () => {
-    const wrapper = shallowMount(DropdownWithRequired, {
-      propsData: {
-        multiple: true,
-        maxSelections: 1,
-        maxSelectionsMessage: '{selections} selections allowed',
-        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
-      },
-    });
-
-    const options = wrapper.findAll(DropdownItem);
-
-    options.at(0).trigger('click');
-    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
-    wrapper.setProps({ value: [1] });
-    options.at(0).trigger('click');
-    expect(wrapper.emitted().input[1]).toBeUndefined();
-    expect(wrapper.find('.message').text()).toEqual('1 selections allowed');
   });
 
   it('should have icons, flags and images in selected text', () => {
@@ -289,24 +194,6 @@ describe('Dropdown', () => {
     expect(options2.exists()).toEqual(false);
     const message = wrapper.find('.message');
     expect(message.text()).toEqual('Ops.. no results');
-  });
-
-  it('should delete last option from selected when pressing backspace in search input when filter is empty', () => {
-    const wrapper = shallowMount(DropdownWithRequired, {
-      propsData: {
-        search: true,
-        multiple: true,
-        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }, { text: 'baz', value: 3 }],
-      },
-    });
-
-    wrapper.setProps({ value: [1, 2] });
-
-    wrapper.find('input.search').trigger('keydown', {
-      keyCode: 8,
-    });
-
-    expect(wrapper.emitted().input[0][0]).to.deep.equal([1]);
   });
 
   it('should not delete last option from selected when pressing backspace in search input when filter is not empty', () => {

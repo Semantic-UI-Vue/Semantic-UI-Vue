@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import Embed from 'semantic-ui-vue/modules/Embed/Embed';
+import { Icon } from 'semantic-ui-vue/elements';
 
 describe('Embed', () => {
   it('should create a SUI Embed default without active, placeholder and iframe', () => {
@@ -8,9 +9,8 @@ describe('Embed', () => {
     expect(embed.classes()).toContain('ui');
     expect(embed.classes()).not.toContain('active');
     expect(embed.classes()).toContain('embed');
-    expect(embed.contains('i')).toEqual(true);
-    expect(embed.find('i').classes()).toContain('video');
-    expect(embed.find('i').classes()).toContain('play');
+    expect(embed.contains(Icon)).toEqual(true);
+    expect(embed.find(Icon).props()).toMatchObject({ name: 'video play'})
     expect(embed.contains('img')).toEqual(false);
     expect(embed.contains('iframe')).toEqual(false);
     expect(embed.text()).toEqual('');
@@ -35,8 +35,8 @@ describe('Embed', () => {
         icon: 'pencil',
       },
     });
-    expect(embed.contains('i')).toEqual(true);
-    expect(embed.find('i').classes()).toContain('pencil');
+    expect(embed.contains(Icon)).toEqual(true);
+    expect(embed.find(Icon).props()).toMatchObject({ name: 'pencil'})
     expect(embed.text()).toEqual('');
   });
 

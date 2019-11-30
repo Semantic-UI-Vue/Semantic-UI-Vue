@@ -20,8 +20,8 @@ describe('Header', () => {
   });
 
   it('should have a size', () => {
-    const header = shallowMount(Header, { propsData: { size: '12' } });
-    expect(header.classes()).toContain('12');
+    const header = shallowMount(Header, { propsData: { size: 'small' } });
+    expect(header.classes()).toContain('small');
   });
 
   it('should have a floated class', () => {
@@ -31,7 +31,7 @@ describe('Header', () => {
   });
 
   it('should have an image class', () => {
-    const header = shallowMount(Header, { propsData: { image: true } });
+    const header = shallowMount(Header, { propsData: { image: 'test-image.jpg' } });
     expect(header.classes()).toContain('image');
   });
 
