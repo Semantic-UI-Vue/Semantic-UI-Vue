@@ -5,6 +5,7 @@ import Icon from '../Icon/Icon';
 export default {
   name: 'SuiLabel',
   mixins: [SemanticUIVueMixin],
+  description: 'A label displays content classification.',
   props: {
     attached: Enum(['top', 'bottom', 'top right', 'top left', 'bottom left', 'bottom right'], {
       description: 'A label can attach to a content segment.',

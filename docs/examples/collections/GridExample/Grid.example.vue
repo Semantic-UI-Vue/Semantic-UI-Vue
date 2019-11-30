@@ -1,7 +1,7 @@
 <template lang="html">
-  <sui-grid>
+  <sui-grid :class="$style.grid">
     <template v-for="(col, index) in columns">
-      <sui-grid-column :key="index" />
+      <sui-grid-column :class="$style.column" :key="index" />
     </template>
   </sui-grid>
 </template>
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style module lang="css">
 .grid:before {
   position: absolute;
   top: 1rem;

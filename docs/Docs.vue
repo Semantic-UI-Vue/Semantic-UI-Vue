@@ -52,10 +52,6 @@ export default {
 </script>
 
 <style scoped>
-#docs {
-  background-color: #F7F7F7;
-}
-
 .docs-container {
   margin-left: 250px;
   min-width: 550px;

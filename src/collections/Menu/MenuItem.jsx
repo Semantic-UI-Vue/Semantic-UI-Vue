@@ -52,6 +52,7 @@ export default {
           this.fitted, this.fitted && 'fitted',
           this.header && 'header',
           this.link && 'link',
+          this.icon && 'icon',
           this.position,
           'item',
         )}
