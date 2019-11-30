@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style media="screen">
+<style media="screen" scoped>
 .container {
   min-height: 300px;
   width: 960px;

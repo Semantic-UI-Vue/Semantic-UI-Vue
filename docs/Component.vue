@@ -2,8 +2,8 @@
   <div>
     <component-head :component-name="componentName" />
     <sui-container class="main">
-      adcadcadc
-      <component-rail />
+      <component-body :component-name="componentName" />
+      <component-rail :component-name="componentName" />
     </sui-container>
   </div>
 </template>
@@ -11,15 +11,18 @@
 <script>
 import ComponentHead from './ComponentHead';
 import ComponentRail from './ComponentRail';
+import ComponentBody from './ComponentBody';
 
 export default {
   name: 'SuiComponent',
   components: {
     ComponentHead,
     ComponentRail,
+    ComponentBody,
   },
   props: {
     componentName: String,
+    type: String,
   },
 };
 </script>
