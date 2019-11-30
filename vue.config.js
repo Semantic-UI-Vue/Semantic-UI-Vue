@@ -24,4 +24,13 @@ module.exports = {
       ]
     },
   },
+  chainWebpack: config => {
+    config
+      .plugin('copy')
+      .tap(args => {
+        args[0][0].from = path.resolve(__dirname, 'docs/public');
+        return args
+      })
+  }
+
 }
