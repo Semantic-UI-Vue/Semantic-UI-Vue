@@ -69,9 +69,6 @@ export default [
         component: TablePositiveNegative,
       },
       {
-        title: 'Cells',
-      },
-      {
         title: 'Error',
         description: 'A cell or row may call attention to an error or a negative value',
         component: TableError,

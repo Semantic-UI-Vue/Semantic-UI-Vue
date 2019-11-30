@@ -56,7 +56,7 @@ export default {
           'item',
         )}
       >
-        {this.icon && <SuiIcon name={this.icon} />}
+        {typeof this.icon === 'string' && <SuiIcon name={this.icon} />}
         {this.$slots.default || this.content}
       </ElementType>
     );

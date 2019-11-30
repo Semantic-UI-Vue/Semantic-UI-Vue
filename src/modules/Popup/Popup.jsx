@@ -44,7 +44,7 @@ export default {
     size: Enum(['mini', 'tiny', 'small', 'large', 'huge'], {
       description: 'Popup size.',
     }),
-    wide: Enum(['wide'], {
+    wide: Enum(['very'], {
       type: Boolean,
       description: 'Popup width.',
     }),

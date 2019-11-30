@@ -1,11 +1,25 @@
 import { mount, createLocalVue } from '@vue/test-utils';
 import SuiVue from 'semantic-ui-vue';
+import Wireframe from './../components/Wireframe';
 import * as Examples from '../../docs/examples';
 
 const localVue = createLocalVue();
 localVue.use(SuiVue);
+localVue.component('docs-wireframe', Wireframe);
 
-describe.skip('Examples', () => {
+describe.only('Examples', () => {
+  const consoleError = global.console.error;
+
+  beforeAll(() => {
+    // global.console.error = (message) => {
+    //   throw new Error(message);
+    // }
+  });
+
+  afterAll(() => {
+    global.console.error = consoleError;
+  });
+
   Object.keys(Examples).forEach((componentName) => {
     describe(componentName, () => {
       const exampleSections = Examples[componentName];

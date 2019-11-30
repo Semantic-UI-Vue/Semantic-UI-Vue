@@ -66,7 +66,6 @@
     </sui-comment>
 
     <form reply>
-      <form-text-area />
       <sui-button
         content="Add Reply"
         label-position="left"
