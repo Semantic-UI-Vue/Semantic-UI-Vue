@@ -1,6 +1,7 @@
 <template>
   <sui-menu
     is="sui-sidebar"
+    id="docs-menu"
     inverted="true"
     vertical="true"
     animation="overlay"
@@ -155,5 +156,17 @@ export default {
 
 .semantic-ui.icon img {
   height: 12px;
+}
+
+#docs-menu:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#docs-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#docs-menu::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
 }
 </style>
