@@ -2,10 +2,10 @@
   <sui-segment class="masthead">
     <sui-container>
       <sui-menu floated="right">
-        <sui-popup position="bottom center" content="View component on GitHub">
+        <sui-popup position="bottom center" content="View on GitHub">
           <a slot="trigger" is="sui-menu-item" icon="github" />
         </sui-popup>
-        <sui-popup position="bottom center" content="View component on Semantic UI">
+        <sui-popup position="bottom center" content="View on Semantic UI">
           <a slot="trigger" is="sui-menu-item" icon="book" />
         </sui-popup>
       </sui-menu>
