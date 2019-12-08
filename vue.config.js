@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   runtimeCompiler: true,
@@ -23,14 +24,16 @@ module.exports = {
         },
       ]
     },
+    plugins: [
+      new CopyPlugin(
+        [
+          {
+            from: path.resolve(__dirname, 'docs/public'),
+            to: path.resolve(__dirname, 'dist'),
+            toType: 'dir',
+          }
+        ]
+      ),
+    ]
   },
-  chainWebpack: config => {
-    config
-      .plugin('copy')
-      .tap(args => {
-        args[0][0].from = path.resolve(__dirname, 'docs/public');
-        return args
-      })
-  }
-
 }
