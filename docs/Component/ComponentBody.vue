@@ -8,8 +8,6 @@
           :key="index"
           class="example"
           :example="example"
-          @open="openCode(index)"
-          :open="open === index"
         />
       </div>
     </template>
@@ -20,7 +18,6 @@
 import * as examples from '../examples';
 import capitalize from 'lodash/capitalize';
 import Example from './Example';
-console.log(examples);
 
 export default {
   props: {
@@ -38,11 +35,6 @@ export default {
     },
     title() {
       return capitalize(this.componentName);
-    }
-  },
-  methods: {
-    openCode(index) {
-      this.open = this.open === index ? -1 : index;
     }
   },
 }

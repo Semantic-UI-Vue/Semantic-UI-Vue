@@ -1,7 +1,7 @@
 /* eslint-disable */
 import Vue from 'vue';
 import Router from 'vue-router';
-import Component from './Component';
+import Component from './Component/Component';
 import Docs from './Docs';
 import DocsPage from './DocsPage';
 import Features from './Features';

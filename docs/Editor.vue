@@ -4,48 +4,15 @@
 
 <script>
 import ace from 'brace';
-import kebabCase from 'lodash/kebabCase';
-import * as components from 'semantic-ui-vue';
 import 'brace/ext/language_tools';
 import 'brace/mode/html';
 import 'brace/theme/tomorrow';
-
-const languageTools = ace.acequire('ace/ext/language_tools');
-
-const semanticUIVueCompleter = {
-  getCompletions(editor, session, pos, prefix, callback) {
-    const completions = [];
-
-    Object.values(components).forEach(({ name, props }) => {
-      completions.push({
-        caption: name,
-        value: kebabCase(name),
-        meta: 'Component',
-      });
-
-      if (props) {
-        Object.keys(props).forEach((propName) => {
-          if (completions.find(({ value }) => value === propName)) return;
-          completions.push({
-            caption: propName,
-            value: kebabCase(propName),
-            meta: 'Component Prop',
-          });
-        });
-      }
-    });
-    callback(null, completions);
-  },
-};
-
-languageTools.addCompleter(semanticUIVueCompleter);
 
 export default {
   name: 'Editor',
   template: '<div></div>',
   props: {
     value: String,
-    readonly: Boolean,
   },
   watch: {
     value(value) {
@@ -69,7 +36,7 @@ export default {
     editor.setOptions({ maxLines: Infinity });
     editor.setOptions({ enableBasicAutocompletion: true });
     editor.setOptions({ enableLiveAutocompletion: true });
-    editor.setReadOnly(this.readonly);
+    editor.setReadOnly(true);
     editor.renderer.setShowGutter(false);
     editor.session.setTabSize(2);
     editor.selection.moveTo(Infinity, Infinity);

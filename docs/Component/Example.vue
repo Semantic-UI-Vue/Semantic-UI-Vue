@@ -2,7 +2,7 @@
   <div :class="$style.example">
     <sui-menu floated="right" text>
       <sui-popup content="View code" position="bottom center">
-        <sui-menu-item slot="trigger" icon="code" :class="$style.action" @click="$emit('open')" />
+        <sui-menu-item slot="trigger" icon="code" :class="$style.action" @click="open = !open" />
       </sui-popup>
       <sui-popup content="Open on CodeSandbox" position="bottom center">
         <sui-menu-item slot="trigger" icon="connectdevelop" :class="$style.action" />
@@ -27,26 +27,36 @@
         Example
       </sui-label>
     </div>
-    <div>
+    <div v-if="open">
       <sui-segment attached="bottom">
-        <pre>
-          hello
-        </pre>
+        <editor :value="sourceCode" />
       </sui-segment>
     </div>
   </div>
 </template>
 
 <script>
+import Editor from '../Editor.vue';
+const sourceCodeContext = require.context('!raw-loader!../examples', true, /\.vue$/);
+
 export default {
+  components: { Editor },
   props: {
     example: Object,
-    open: Boolean,
+  },
+  data() {
+    return {
+      open: false,
+    };
   },
   computed: {
     previewContainerComponent() {
       return this.open ? 'sui-segment' : 'div';
-    }
+    },
+    sourceCode() {
+      const fileName = this.example.component.__file.replace('docs/examples', '.');
+      return sourceCodeContext(fileName).default;
+    },
   }
 };
 </script>
@@ -68,6 +78,7 @@ export default {
 .action {
   opacity: .5 !important;
   transition: opacity 0.3s ease-out;
+  cursor: pointer;
 }
 
 .action:hover {
