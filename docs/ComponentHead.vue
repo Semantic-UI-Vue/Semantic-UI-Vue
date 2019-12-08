@@ -3,10 +3,10 @@
     <sui-container>
       <sui-menu floated="right">
         <sui-popup position="bottom center" content="View on GitHub">
-          <a slot="trigger" is="sui-menu-item" icon="github" />
+          <a slot="trigger" is="sui-menu-item" icon="github" :href="githubLink" />
         </sui-popup>
         <sui-popup position="bottom center" content="View on Semantic UI">
-          <a slot="trigger" is="sui-menu-item" icon="book" />
+          <a slot="trigger" is="sui-menu-item" icon="book" :href="suiLink" />
         </sui-popup>
       </sui-menu>
       <h1 is="sui-header">
@@ -37,6 +37,12 @@ export default {
   computed: {
     title() {
       return capitalize(this.componentName);
+    },
+    suiLink() {
+      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`
+    },
+    githubLink() {
+      return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/tree/master/src/${this.type}/${this.title}/${this.title}.jsx`
     },
   },
 };

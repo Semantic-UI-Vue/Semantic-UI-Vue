@@ -1,9 +1,9 @@
 <template>
   <div>
-    <component-head :component-name="componentName" />
+    <component-head :component-name="componentName" :type="type" />
     <sui-container class="main">
-      <component-body :component-name="componentName" />
-      <component-rail :component-name="componentName" />
+      <component-body :component-name="componentName" :type="type" />
+      <component-rail :component-name="componentName" :type="type" />
     </sui-container>
   </div>
 </template>
