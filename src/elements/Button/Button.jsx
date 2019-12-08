@@ -4,6 +4,7 @@ import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiButton',
+  description: 'A button indicates a possible user action',
   mixins: [SemanticUIVueMixin],
   props: {
     active: {
