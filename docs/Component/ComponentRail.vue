@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import * as examples from './examples';
+import * as examples from '../examples';
 import capitalize from 'lodash/capitalize';
 
 export default {

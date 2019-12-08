@@ -17,7 +17,23 @@
     <p :v-if="example.description" :class="$style.p">
       {{example.description}}
     </p>
-    <div :is="example.component" />
+    <div
+      :is="previewContainerComponent"
+      attached="top"
+      :class="open ? $style.open : $style.closed"
+    >
+      <div :is="example.component" />
+      <sui-label attached="top" :class="$style.label">
+        Example
+      </sui-label>
+    </div>
+    <div>
+      <sui-segment attached="bottom">
+        <pre>
+          hello
+        </pre>
+      </sui-segment>
+    </div>
   </div>
 </template>
 
@@ -27,6 +43,11 @@ export default {
     example: Object,
     open: Boolean,
   },
+  computed: {
+    previewContainerComponent() {
+      return this.open ? 'sui-segment' : 'div';
+    }
+  }
 };
 </script>
 
@@ -51,5 +72,14 @@ export default {
 
 .action:hover {
   opacity: 1 !important;
+}
+
+.open {
+  padding: 3.5em 1em 1em !important;
+  /* margin-bottom: 0 !important; */
+}
+
+.closed > .label {
+  visibility: collapse;
 }
 </style>
