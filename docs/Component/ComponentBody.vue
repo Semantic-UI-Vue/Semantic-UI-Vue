@@ -8,6 +8,8 @@
           :key="index"
           class="example"
           :example="example"
+          :type="type"
+          :componentName="componentName"
         />
       </div>
     </template>
@@ -22,6 +24,7 @@ import Example from './Example';
 export default {
   props: {
     componentName: String,
+    type: String,
   },
   data() {
     return{

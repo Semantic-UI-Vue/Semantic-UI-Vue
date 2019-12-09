@@ -97,9 +97,9 @@ export default [
         file: 'Fluid',
       },
       {
-        title: 'UnStackable',
+        title: 'Unstackable',
         description: 'A step can prevent itself from stacking on mobile',
-        file: 'UnStackable',
+        file: 'Unstackable',
       },
       {
         title: 'Attached',
