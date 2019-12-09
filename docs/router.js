@@ -6,6 +6,7 @@ import Docs from './Docs';
 import DocsPage from './DocsPage';
 import Features from './Features';
 import Layouts from './Layouts';
+import Maximize from './Maximize';
 import Theming from './Layouts/Theming';
 import Login from './Layouts/Login';
 import FixedMenu from './Layouts/FixedMenu';
@@ -27,6 +28,11 @@ const router = new Router({
     {
       path: '/layouts/fixed_menu',
       component: FixedMenu,
+    },
+    {
+      path: '/maximize/:example',
+      component: Maximize,
+      props: true,
     },
     {
       path: '/',

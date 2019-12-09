@@ -8,7 +8,13 @@
         <sui-menu-item slot="trigger" icon="connectdevelop" :class="$style.action" />
       </sui-popup>
       <sui-popup content="Maximize" position="bottom center">
-        <sui-menu-item slot="trigger" icon="window maximize" :class="$style.action" />
+        <sui-menu-item
+          slot="trigger"
+          :class="$style.action"
+          target="_blank"
+          icon="window maximize"
+          @click="openMaximized"
+        />
       </sui-popup>
     </sui-menu>
     <h4 :v-if="example.title" is="sui-header" :class="$style.h4">
@@ -36,6 +42,7 @@
 </template>
 
 <script>
+import kebabCase from 'lodash/kebabCase';
 import Editor from '../Editor.vue';
 const sourceCodeContext = require.context('!raw-loader!../examples', true, /\.vue$/);
 
@@ -53,10 +60,26 @@ export default {
     previewContainerComponent() {
       return this.open ? 'sui-segment' : 'div';
     },
+    fileName() {
+      return this.example.component.__file;
+    },
     sourceCode() {
-      const fileName = this.example.component.__file.replace('docs/examples', '.');
+      const fileName = this.fileName.replace('docs/examples', '.');
       return sourceCodeContext(fileName).default;
     },
+    maximizeLink() {
+      const exampleName = kebabCase(
+        this.fileName
+          .replace(/.*\/([^/]+\/[^/.]+).*/, '$1')
+          .replace('/', '-')
+      );
+      return `/#/maximize/${exampleName}`;
+    },
+  },
+  methods: {
+    openMaximized() {
+      open(this.maximizeLink, '_blank');
+    }
   }
 };
 </script>
