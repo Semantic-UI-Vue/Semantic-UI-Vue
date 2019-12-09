@@ -5,7 +5,7 @@
         <sui-menu-item slot="trigger" icon="code" :class="$style.action" @click="open = !open" />
       </sui-popup>
       <sui-popup content="Open on CodeSandbox" position="bottom center">
-        <sui-menu-item slot="trigger" icon="connectdevelop" :class="$style.action" />
+        <sui-menu-item slot="trigger" icon="connectdevelop" :class="$style.action" @click="openSandbox(sourceCode)" />
       </sui-popup>
       <sui-popup content="Maximize" position="bottom center">
         <sui-menu-item
@@ -44,6 +44,7 @@
 <script>
 import kebabCase from 'lodash/kebabCase';
 import Editor from '../Editor.vue';
+import { openSandbox } from './codesandbox';
 const sourceCodeContext = require.context('!raw-loader!../examples', true, /\.vue$/);
 
 export default {
@@ -79,7 +80,8 @@ export default {
   methods: {
     openMaximized() {
       open(this.maximizeLink, '_blank');
-    }
+    },
+    openSandbox,
   }
 };
 </script>
