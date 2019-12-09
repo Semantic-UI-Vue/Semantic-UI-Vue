@@ -113,8 +113,11 @@ export default {
 }
 
 .open {
+  padding: 0 !important;
+}
+
+.open > .exampleContainer {
   padding: 3.5em 1em 1em !important;
-  /* margin-bottom: 0 !important; */
 }
 
 .closed > .label {
