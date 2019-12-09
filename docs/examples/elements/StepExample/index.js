@@ -1,30 +1,3 @@
-import Step from './Step.example';
-import Steps from './Steps.example';
-import Ordered from './Ordered.example';
-import Vertical from './Vertical.example';
-import Description from './Description.example';
-import Description2 from './Description2.example';
-import Icon from './Icon.example';
-import Link from './Link.example';
-import Link2 from './Link2.example';
-import Active from './Active.example';
-import Completed from './Completed.example';
-import Completed2 from './Completed2.example';
-import Disabled from './Disabled.example';
-import Stackable from './Stackable.example';
-import Fluid from './Fluid.example';
-import UnStackable from './Unstackable.example';
-import Attached from './Attached.example';
-import EvenlyDivided from './EvenlyDivided.example';
-import EvenlyDivided2 from './EvenlyDivided2.example';
-import SizeMini from './SizeMini.example';
-import SizeTiny from './SizeTiny.example';
-import SizeSmall from './SizeSmall.example';
-import SizeLarge from './SizeLarge.example';
-import SizeBig from './SizeBig.example';
-import SizeHuge from './SizeHuge.example';
-import SizeMassive from './SizeMassive.example';
-
 export default [
   {
     title: 'Types',
@@ -32,7 +5,7 @@ export default [
       {
         title: 'Step',
         description: 'A single step',
-        component: Step,
+        file: 'Step',
       },
     ],
   },
@@ -42,17 +15,17 @@ export default [
       {
         title: 'Steps',
         description: 'A set of steps',
-        component: Steps,
+        file: 'Steps',
       },
       {
         title: 'Ordered',
         description: 'A step can show a ordered sequence of steps',
-        component: Ordered,
+        file: 'Ordered',
       },
       {
         title: 'Vertical',
         description: 'A step can be displayed stacked vertically',
-        component: Vertical,
+        file: 'Vertical',
       },
     ],
   },
@@ -63,26 +36,26 @@ export default [
         title: 'Description',
         description: 'A step can contain a description',
         info: 'Using props',
-        component: Description,
+        file: 'Description',
       },
       {
         info: 'Using component',
-        component: Description2,
+        file: 'Description2',
       },
       {
         title: 'Icon',
         description: 'A step can contain an icon',
-        component: Icon,
+        file: 'Icon',
       },
       {
         title: 'Link',
         description: 'A step can link',
         info: 'Using `a` tag',
-        component: Link,
+        file: 'Link',
       },
       {
         info: 'Using `link` props',
-        component: Link2,
+        file: 'Link2',
       },
     ],
   },
@@ -92,21 +65,21 @@ export default [
       {
         title: 'Active',
         description: 'A step can be highlighted as active',
-        component: Active,
+        file: 'Active',
       },
       {
         title: 'Completed',
         description: 'A step can show that a user has completed it',
-        component: Completed,
+        file: 'Completed',
       },
       {
         info: 'when no `icon props`, there must be `ordered props`',
-        component: Completed2,
+        file: 'Completed2',
       },
       {
         title: 'Disabled',
         description: 'A step can show that it cannot be selected',
-        component: Disabled,
+        file: 'Disabled',
       },
     ],
   },
@@ -116,53 +89,53 @@ export default [
       {
         title: 'Stackable',
         description: 'A step can stack vertically only on smaller screens',
-        component: Stackable,
+        file: 'Stackable',
       },
       {
         title: 'Fluid',
         description: 'A fluid step takes up the width of its container',
-        component: Fluid,
+        file: 'Fluid',
       },
       {
         title: 'UnStackable',
         description: 'A step can prevent itself from stacking on mobile',
-        component: UnStackable,
+        file: 'UnStackable',
       },
       {
         title: 'Attached',
         description: 'Steps can be attached to other elements',
-        component: Attached,
+        file: 'Attached',
       },
       {
         title: 'EvenlyDivided',
         description: 'Steps can be divided evenly inside their parent',
-        component: EvenlyDivided,
+        file: 'EvenlyDivided',
       },
       {
-        component: EvenlyDivided2,
+        file: 'EvenlyDivided2',
       },
       {
         title: 'Size',
         description: 'Steps can have different sizes',
-        component: SizeMini,
+        file: 'SizeMini',
       },
       {
-        component: SizeTiny,
+        file: 'SizeTiny',
       },
       {
-        component: SizeSmall,
+        file: 'SizeSmall',
       },
       {
-        component: SizeLarge,
+        file: 'SizeLarge',
       },
       {
-        component: SizeBig,
+        file: 'SizeBig',
       },
       {
-        component: SizeHuge,
+        file: 'SizeHuge',
       },
       {
-        component: SizeMassive,
+        file: 'SizeMassive',
       },
     ],
   },

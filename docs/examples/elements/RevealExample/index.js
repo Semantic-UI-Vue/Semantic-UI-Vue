@@ -1,16 +1,3 @@
-import Fade from './Fade.example';
-import MoveUp from './MoveUp.example';
-import MoveDown from './MoveDown.example';
-import MoveLeft from './MoveLeft.example';
-import MoveRight from './MoveRight.example';
-import RotateRight from './RotateRight.example';
-import RotateLeft from './RotateLeft.example';
-import VisibleContent from './VisibleContent.example';
-import HiddenContent from './HiddenContent.example';
-import Active from './Active.example';
-import Instant from './Instant.example';
-import Disabled from './Disabled.example';
-
 export default [
   {
     title: 'Types',
@@ -18,29 +5,29 @@ export default [
       {
         title: 'Fade',
         description: 'An element can disappear to reveal content below',
-        component: Fade,
+        file: 'Fade',
       },
       {
         title: 'Move',
         description: 'An element can move in a direction to reveal content.',
-        component: MoveLeft,
+        file: 'MoveLeft',
       },
       {
-        component: MoveRight,
+        file: 'MoveRight',
       },
       {
-        component: MoveUp,
+        file: 'MoveUp',
       },
       {
-        component: MoveDown,
+        file: 'MoveDown',
       },
       {
         title: 'Rotate',
         description: 'An element can rotate to reveal content below.',
-        component: RotateRight,
+        file: 'RotateRight',
       },
       {
-        component: RotateLeft,
+        file: 'RotateLeft',
       },
     ],
   },
@@ -50,11 +37,11 @@ export default [
       {
         title: 'Visible content',
         description: 'A reveal may contain content that is visible before interaction.',
-        component: VisibleContent,
+        file: 'VisibleContent',
       }, {
         title: 'Hidden content',
         description: 'A reveal may contain content that is hidden before user interaction.',
-        component: HiddenContent,
+        file: 'HiddenContent',
       },
     ],
   },
@@ -64,7 +51,7 @@ export default [
       {
         title: 'Instant',
         description: 'An element can show its content without delay.',
-        component: Instant,
+        file: 'Instant',
       },
     ],
   },
@@ -74,12 +61,12 @@ export default [
       {
         title: 'Active',
         description: 'An active reveal displays its hidden content.',
-        component: Active,
+        file: 'Active',
       },
       {
         title: 'Disabled',
         description: 'A disabled reveal will not animate when hovered.',
-        component: Disabled,
+        file: 'Disabled',
       },
     ],
   },

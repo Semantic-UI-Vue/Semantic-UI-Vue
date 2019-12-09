@@ -1,21 +1,3 @@
-import Input from './Input.example';
-import Error from './Error.example';
-import Focus from './Focus.example';
-import Loading from './Loading.example';
-import Loading2 from './Loading2.example';
-import Disabled from './Disabled.example';
-import Icon from './Icon.example';
-import Size from './Size.example';
-import Size2 from './Size2.example';
-import Size3 from './Size3.example';
-import Size4 from './Size4.example';
-import Size5 from './Size5.example';
-import Size6 from './Size6.example';
-import Fluid from './Fluid.example';
-import Transparent from './Transparent.example';
-import Transparent2 from './Transparent2.example';
-import Transparent3 from './Transparent3.example';
-
 export default [
   {
     title: 'Types',
@@ -23,7 +5,7 @@ export default [
       {
         title: 'Input',
         description: 'A standard input field',
-        component: Input,
+        file: 'Input',
       },
     ],
   },
@@ -33,25 +15,25 @@ export default [
       {
         title: 'Focus',
         description: 'An input field can show a user is currently interacting with it',
-        component: Focus,
+        file: 'Focus',
       },
       {
         title: 'Loading',
         description: 'An icon input field can show that it is currently loading data',
-        component: Loading,
+        file: 'Loading',
       },
       {
-        component: Loading2,
+        file: 'Loading2',
       },
       {
         title: 'Disabled',
         description: 'An input field can show that it is disabled',
-        component: Disabled,
+        file: 'Disabled',
       },
       {
         title: 'Error',
         description: 'An input field can show the data contains errors',
-        component: Error,
+        file: 'Error',
       },
     ],
   },
@@ -61,43 +43,43 @@ export default [
       {
         title: 'Icon',
         description: 'An input can be formatted with an icon',
-        component: Icon,
+        file: 'Icon',
       },
       {
         title: 'Size',
         description: 'An input can vary in size',
-        component: Size,
+        file: 'Size',
       },
       {
-        component: Size2,
+        file: 'Size2',
       },
       {
-        component: Size3,
+        file: 'Size3',
       },
       {
-        component: Size4,
+        file: 'Size4',
       },
       {
-        component: Size5,
+        file: 'Size5',
       },
       {
-        component: Size6,
+        file: 'Size6',
       },
       {
         title: 'Fluid',
         description: 'An input can take the size of its container',
-        component: Fluid,
+        file: 'Fluid',
       },
       {
         title: 'Transparent',
         description: 'A transparent input has no background',
-        component: Transparent,
+        file: 'Transparent',
       },
       {
-        component: Transparent2,
+        file: 'Transparent2',
       },
       {
-        component: Transparent3,
+        file: 'Transparent3',
       },
     ],
   },

@@ -1,14 +1,3 @@
-import Statistic from './Statistic.example';
-import StatisticGroup from './StatisticGroup.example';
-import StatisticContentValue from './StatisticContentValue.example';
-import StatisticContentLabel from './StatisticContentLabel.example';
-import StatisticHorizontal from './StatisticHorizontal.example';
-import StatisticColored from './StatisticColored.example';
-import StatisticInverted from './StatisticInverted.example';
-import StatisticEvenlyDivided from './StatisticEvenlyDivided.example';
-import StatisticFloated from './StatisticFloated.example';
-import StatisticSize from './StatisticSize.example';
-
 export default [
   {
     title: 'Types',
@@ -16,12 +5,12 @@ export default [
       {
         title: 'Statistic',
         description: 'A statistic can display a value with a label above or below it',
-        component: Statistic,
+        file: 'Statistic',
       },
       {
         title: 'Statistic Group',
         description: 'A group of statistics',
-        component: StatisticGroup,
+        file: 'StatisticGroup',
       },
     ],
   },
@@ -31,12 +20,12 @@ export default [
       {
         title: 'Value',
         description: 'A statistic can contain a numeric, icon, image, or text value',
-        component: StatisticContentValue,
+        file: 'StatisticContentValue',
       },
       {
         title: 'Label',
         description: 'A statistic can contain a label to help provide context for the presented value',
-        component: StatisticContentLabel,
+        file: 'StatisticContentLabel',
       },
     ],
   },
@@ -46,32 +35,32 @@ export default [
       {
         title: 'Horizontal Statistic',
         description: 'A statistic can present its measurement horizontally',
-        component: StatisticHorizontal,
+        file: 'StatisticHorizontal',
       },
       {
         title: 'Colored',
         description: 'A statistic can be formatted to be different colors',
-        component: StatisticColored,
+        file: 'StatisticColored',
       },
       {
         title: 'Inverted',
         description: 'A statistic can be formatted to fit on a dark background',
-        component: StatisticInverted,
+        file: 'StatisticInverted',
       },
       {
         title: 'Evenly Divided',
         description: 'A statistic group can have its items divided evenly',
-        component: StatisticEvenlyDivided,
+        file: 'StatisticEvenlyDivided',
       },
       {
         title: 'Floated',
         description: 'An statistic can sit to the left or right of other content',
-        component: StatisticFloated,
+        file: 'StatisticFloated',
       },
       {
         title: 'Size',
         description: 'A statistic can vary in size',
-        component: StatisticSize,
+        file: 'StatisticSize',
       },
     ],
   },

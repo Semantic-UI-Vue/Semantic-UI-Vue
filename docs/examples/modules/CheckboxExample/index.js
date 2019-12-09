@@ -1,13 +1,3 @@
-import CheckboxBasic from './CheckboxBasic.example';
-import CheckboxModel from './CheckboxModel.example';
-import CheckboxToggle from './CheckboxToggle.example';
-import CheckboxDisabled from './CheckboxDisabled.example';
-import CheckboxToggleDisabled from './CheckboxToggleDisabled.example';
-import Radio from './Radio.example';
-import RadioGroup from './RadioGroup.example';
-import RadioDisabled from './RadioDisabled.example';
-import RadioGroupInline from './RadioGroupInline.example';
-
 export default [
   {
     title: 'Types',
@@ -15,42 +5,42 @@ export default [
       {
         title: 'Checkbox Basic',
         description: 'A standard Checkbox',
-        component: CheckboxBasic,
+        file: 'CheckboxBasic',
       },
       {
         title: 'Checkbox Disabled',
         description: 'A checkbox can be disabled.',
-        component: CheckboxDisabled,
+        file: 'CheckboxDisabled',
       },
       {
         title: 'Radio',
         description: 'A checkbox can be formatted as a radio element. This means it is an exclusive option',
-        component: Radio,
+        file: 'Radio',
       },
       {
-        component: RadioGroupInline,
+        file: 'RadioGroupInline',
       },
       {
-        component: RadioGroup,
+        file: 'RadioGroup',
       },
       {
         description: 'A radio button can be disabled.',
-        component: RadioDisabled,
+        file: 'RadioDisabled',
       },
       {
         title: 'Checkbox with two way binding',
         description: 'Checkbox with two way binding',
-        component: CheckboxModel,
+        file: 'CheckboxModel',
       },
       {
         title: 'Toggle style input',
         description: 'Toggle style input',
-        component: CheckboxToggle,
+        file: 'CheckboxToggle',
       },
       {
         title: 'Toggle style input disabled',
         description: 'A toggle can be disabled, too.',
-        component: CheckboxToggleDisabled,
+        file: 'CheckboxToggleDisabled',
       },
     ],
   },

@@ -1,20 +1,3 @@
-import ContentDateExample from './ContentDate.example';
-import ContentDateShorthandExample from './ContentDateShorthand.example';
-import ExtraImagesExample from './ExtraImages.example';
-import ExtraImagesShorthandExample from './ExtraImagesShorthand.example';
-import ExtraTextExample from './ExtraText.example';
-import ExtraTextShorthandExample from './ExtraTextShorthand.example';
-import FeedExample from './Feed.example';
-import FeedShorthandExample from './FeedShorthand.example';
-import IconLabelExample from './IconLabel.example';
-import IconLabelShorthandExample from './IconLabelShorthand.example';
-import ImageLabelExample from './ImageLabel.example';
-import ImageLabelShorthandExample from './ImageLabelShorthand.example';
-import SummaryDateExample from './SummaryDate.example';
-import SummaryDateShorthandExample from './SummaryDateShorthand.example';
-import SizeLargeExample from './SizeLarge.example';
-import SizeSmallExample from './SizeSmall.example';
-
 export default [
   {
     title: 'Types',
@@ -22,11 +5,11 @@ export default [
       {
         title: 'Feed',
         description: 'A feed',
-        component: FeedExample,
+        file: 'FeedExample',
       },
       {
         description: 'You can also pass an array of events to generate the markup',
-        component: FeedShorthandExample,
+        file: 'FeedShorthandExample',
       },
     ],
   },
@@ -36,56 +19,56 @@ export default [
       {
         title: 'Image Label',
         description: 'An event can contain an image label',
-        component: ImageLabelExample,
+        file: 'ImageLabelExample',
       },
       {
         description: 'You can do the same using shorthands',
-        component: ImageLabelShorthandExample,
+        file: 'ImageLabelShorthandExample',
       },
       {
         title: 'Icon Label',
         description: 'An event can contain an icon label',
-        component: IconLabelExample,
+        file: 'IconLabelExample',
       },
       {
         description: 'You can do the same using shorthands',
-        component: IconLabelShorthandExample,
+        file: 'IconLabelShorthandExample',
       },
       {
         title: 'Content Date',
         description: 'Event content can contain a date',
-        component: ContentDateExample,
+        file: 'ContentDateExample',
       },
       {
         description: 'You can do the same using shorthands',
-        component: ContentDateShorthandExample,
+        file: 'ContentDateShorthandExample',
       },
       {
         title: 'Summary Date',
         description: 'An event summary can contain a date',
-        component: SummaryDateExample,
+        file: 'SummaryDateExample',
       },
       {
         description: 'You can do the same using shorthands',
-        component: SummaryDateShorthandExample,
+        file: 'SummaryDateShorthandExample',
       },
       {
         title: 'Extra Images',
         description: 'An event can contain extra images.',
-        component: ExtraImagesExample,
+        file: 'ExtraImagesExample',
       },
       {
         description: 'You can do the same using shorthands',
-        component: ExtraImagesShorthandExample,
+        file: 'ExtraImagesShorthandExample',
       },
       {
         title: 'Extra Text',
         description: 'An event can contain extra text.',
-        component: ExtraTextExample,
+        file: 'ExtraTextExample',
       },
       {
         description: 'You can do the same using shorthands',
-        component: ExtraTextShorthandExample,
+        file: 'ExtraTextShorthandExample',
       },
     ],
   },
@@ -95,10 +78,10 @@ export default [
       {
         title: 'Size',
         description: 'A feed can have different sizes',
-        component: SizeSmallExample,
+        file: 'SizeSmallExample',
       },
       {
-        component: SizeLargeExample,
+        file: 'SizeLargeExample',
       },
     ],
   },

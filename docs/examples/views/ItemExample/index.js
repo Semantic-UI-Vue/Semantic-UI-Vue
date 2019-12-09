@@ -1,9 +1,3 @@
-import ItemGroup from './ItemGroup.example';
-import ContentImage from './ContentImage.example';
-import ContentContent from './ContentContent.example';
-import ContentHeader from './ContentHeader.example';
-import ContentMeta from './ContentMeta.example';
-
 export default [
   {
     title: 'Types',
@@ -11,7 +5,7 @@ export default [
       {
         title: 'Items',
         description: 'A group of items',
-        component: ItemGroup,
+        file: 'ItemGroup',
       },
     ],
   },
@@ -21,22 +15,22 @@ export default [
       {
         title: 'Image',
         description: 'An item can contain an image',
-        component: ContentImage,
+        file: 'ContentImage',
       },
       {
         title: 'Content',
         description: 'An item can contain content',
-        component: ContentContent,
+        file: 'ContentContent',
       },
       {
         title: 'Header',
         description: 'An item can contain a header',
-        component: ContentHeader,
+        file: 'ContentHeader',
       },
       {
         title: 'Metadata',
         description: 'An item can contain content metadata',
-        component: ContentMeta,
+        file: 'ContentMeta',
       },
     ],
   },

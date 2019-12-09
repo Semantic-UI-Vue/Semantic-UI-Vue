@@ -1,5 +1,3 @@
-import Comment from './Comment.example';
-
 export default [
   {
     title: 'Types',
@@ -7,7 +5,7 @@ export default [
       {
         title: 'Comments',
         description: 'A basic list of comments',
-        component: Comment,
+        file: 'Comment',
       },
     ],
   },

@@ -1,6 +1,3 @@
-import Callback from './Callback.example';
-import Rating from './Rating.example';
-
 export default [
   {
     title: 'Types',
@@ -8,12 +5,12 @@ export default [
       {
         title: 'Rating',
         description: 'A basic rating element',
-        component: Rating,
+        file: 'Rating',
       },
       {
         title: 'onRate Callback',
         description: 'A rating calls back when the rating changes',
-        component: Callback,
+        file: 'Callback',
       },
     ],
   },

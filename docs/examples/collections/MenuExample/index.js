@@ -1,14 +1,3 @@
-import Menu from './Menu.example';
-import TopAttachedMenu from './TopAttachedMenu.example';
-import SecondaryMenu from './SecondaryMenu.example';
-import PointingMenu from './PointingMenu.example';
-import PointingSecondaryMenu from './PointingSecondaryMenu.example';
-import TabularMenu from './TabularMenu.example';
-import TabularMenuBottom from './TabularMenuBottom.example';
-import TabularMenuLeft from './TabularMenuLeft.example';
-import TabularMenuRight from './TabularMenuRight.example';
-import TextMenu from './TextMenu.example';
-
 export default [
   {
     title: 'Types',
@@ -16,42 +5,42 @@ export default [
       {
         title: 'Menu',
         description: 'A menu',
-        component: Menu,
+        file: 'Menu',
       },
       {
-        component: TopAttachedMenu,
+        file: 'TopAttachedMenu',
       },
       {
         title: 'Secondary Menu',
         description: 'A menu can adjust its appearance to de-emphasize its contents.',
-        component: SecondaryMenu,
+        file: 'SecondaryMenu',
       },
       {
         title: 'Pointing',
         description: 'A menu can point to show its relationship to nearby content.',
-        component: PointingMenu,
+        file: 'PointingMenu',
       },
       {
-        component: PointingSecondaryMenu,
+        file: 'PointingSecondaryMenu',
       },
       {
         title: 'Tabular',
         description: 'A menu can be formatted to show tabs of information.',
-        component: TabularMenu,
+        file: 'TabularMenu',
       },
       {
-        component: TabularMenuBottom,
+        file: 'TabularMenuBottom',
       },
       {
-        component: TabularMenuLeft,
+        file: 'TabularMenuLeft',
       },
       {
-        component: TabularMenuRight,
+        file: 'TabularMenuRight',
       },
       {
         title: 'Text',
         description: 'A menu can be formatted for text content.',
-        component: TextMenu,
+        file: 'TextMenu',
       },
     ],
   },

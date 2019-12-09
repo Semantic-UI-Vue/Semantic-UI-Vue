@@ -1,6 +1,3 @@
-import Dimmer from './Dimmer.example';
-import DimmerInverted from './DimmerInverted.example';
-
 export default [
   {
     title: 'Types',
@@ -8,12 +5,12 @@ export default [
       {
         title: 'Dimmer',
         description: 'A basic dimmer',
-        component: Dimmer,
+        file: 'Dimmer',
       },
       {
         title: 'Dimmer Inverted',
         description: 'A basic inverted dimmer',
-        component: DimmerInverted,
+        file: 'DimmerInverted',
       },
     ],
   },

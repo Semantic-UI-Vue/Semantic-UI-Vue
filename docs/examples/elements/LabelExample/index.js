@@ -1,27 +1,3 @@
-import Label from './Label.example';
-import Image from './Image.example';
-import Image2 from './Image2.example';
-import Image3 from './Image3.example';
-import Corner from './Corner.example';
-import Pointing from './Pointing.example';
-import PointingRed from './PointingRed.example';
-import Tag from './Tag.example';
-import Ribbon from './Ribbon.example';
-import RibbonImage from './RibbonImage.example';
-import Attached from './Attached.example';
-import Horizontal from './Horizontal.example';
-import Floating from './Floating.example';
-import Detail from './Detail.example';
-import Icon from './Icon.example';
-import ContentImage from './ContentImage.example';
-import Link from './Link.example';
-import LinkText from './LinkText.example';
-import Circular from './Circular.example';
-import CircularEmpty from './CircularEmpty.example';
-import Basic from './Basic.example';
-import Colored from './Colored.example';
-import Size from './Size.example';
-
 export default [
   {
     title: 'Types',
@@ -29,59 +5,59 @@ export default [
       {
         title: 'Label',
         description: 'A label',
-        component: Label,
+        file: 'Label',
       },
       {
         title: 'Image',
         description: 'A label can be formatted to emphasize an image',
-        component: Image,
+        file: 'Image',
       },
       {
-        component: Image2,
+        file: 'Image2',
       },
       {
-        component: Image3,
+        file: 'Image3',
       },
       {
         title: 'Pointing',
         description: 'A label can point to Variations next to it.',
-        component: Pointing,
+        file: 'Pointing',
       },
       {
-        component: PointingRed,
+        file: 'PointingRed',
       },
       {
         title: 'Corner',
         description: 'A label can position itself in the corner of an element.',
-        component: Corner,
+        file: 'Corner',
       },
       {
         title: 'Tag',
         description: 'A label can appear as a tag.',
-        component: Tag,
+        file: 'Tag',
       },
       {
         title: 'Ribbon',
         description: 'A label can appear as a ribbon attaching itself to an element.',
-        component: Ribbon,
+        file: 'Ribbon',
       },
       {
-        component: RibbonImage,
+        file: 'RibbonImage',
       },
       {
         title: 'Attached',
         description: 'A label can attach to a content segment.',
-        component: Attached,
+        file: 'Attached',
       },
       {
         title: 'Horizontal',
         description: 'A horizontal label is formatted to label content along-side it horizontally.',
-        component: Horizontal,
+        file: 'Horizontal',
       },
       {
         title: 'Floating',
         description: 'A label can float above another element.',
-        component: Floating,
+        file: 'Floating',
       },
     ],
   },
@@ -91,25 +67,25 @@ export default [
       {
         title: 'Detail',
         description: 'A label can contain a detail.',
-        component: Detail,
+        file: 'Detail',
       },
       {
         title: 'Icon',
         description: 'A label can include an icon.',
-        component: Icon,
+        file: 'Icon',
       },
       {
         title: 'Image',
         description: 'A label can include an image.',
-        component: ContentImage,
+        file: 'ContentImage',
       },
       {
         title: 'Link',
         description: 'A label can be a link or contain an item that links.',
-        component: Link,
+        file: 'Link',
       },
       {
-        component: LinkText,
+        file: 'LinkText',
       },
     ],
   },
@@ -119,25 +95,25 @@ export default [
       {
         title: 'Circular',
         description: 'A label can be circular.',
-        component: Circular,
+        file: 'Circular',
       },
       {
-        component: CircularEmpty,
+        file: 'CircularEmpty',
       },
       {
         title: 'Basic',
         description: 'A label can reduce its complexity',
-        component: Basic,
+        file: 'Basic',
       },
       {
         title: 'Colored',
         description: 'A label can have different colors.',
-        component: Colored,
+        file: 'Colored',
       },
       {
         title: 'Size',
         description: 'A label can be small or large.',
-        component: Size,
+        file: 'Size',
       },
     ],
   },

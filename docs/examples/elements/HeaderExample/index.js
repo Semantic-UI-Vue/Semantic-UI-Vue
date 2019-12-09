@@ -1,22 +1,3 @@
-import PageHeaders from './PageHeaders.example';
-import ContentHeaders from './ContentHeaders.example';
-import IconHeaders from './IconHeaders.example';
-import IconFriends from './IconFriends.example';
-import SubHeader from './SubHeader.example';
-import ImageAvatar from './ImageAvatar.example';
-import ImageLearnMore from './ImageLearnMore.example';
-import Icon from './Icon.example';
-import IconSubheader from './IconSubheader.example';
-import SubheaderContent from './SubheaderContent.example';
-import Disabled from './Disabled.example';
-import Dividing from './Dividing.example';
-import Block from './Block.example';
-import Attached from './Attached.example';
-import Floating from './Floating.example';
-import TextAlignment from './TextAlignment.example';
-import Colored from './Colored.example';
-import Inverted from './Inverted.example';
-
 export default [
   {
     title: 'Types',
@@ -24,25 +5,25 @@ export default [
       {
         title: 'Page Headers',
         description: 'Headers may be oriented to give the hierarchy of a section in the context of the page.',
-        component: PageHeaders,
+        file: 'PageHeaders',
       },
       {
         title: 'Content Headers',
         description: 'Headers may be oriented to give the importance of a section.',
-        component: ContentHeaders,
+        file: 'ContentHeaders',
       },
       {
         title: 'Icon Headers',
         description: 'A header can be formatted to emphasize an icon.',
-        component: IconHeaders,
+        file: 'IconHeaders',
       },
       {
-        component: IconFriends,
+        file: 'IconFriends',
       },
       {
         title: 'Sub Headers',
         description: 'Headers may be formatted to label smaller or de-emphasized content.',
-        component: SubHeader,
+        file: 'SubHeader',
       },
     ],
   },
@@ -52,23 +33,23 @@ export default [
       {
         title: 'Image',
         description: 'A header may contain an image.',
-        component: ImageAvatar,
+        file: 'ImageAvatar',
       },
       {
-        component: ImageLearnMore,
+        file: 'ImageLearnMore',
       },
       {
         title: 'Icon',
         description: 'A header may contain an icon.',
-        component: Icon,
+        file: 'Icon',
       },
       {
-        component: IconSubheader,
+        file: 'IconSubheader',
       },
       {
         title: 'Subheader',
         description: 'Headers may contain subheaders.',
-        component: SubheaderContent,
+        file: 'SubheaderContent',
       },
     ],
   },
@@ -78,7 +59,7 @@ export default [
       {
         title: 'Disabled',
         description: 'A header can show that it is inactive.',
-        component: Disabled,
+        file: 'Disabled',
       },
     ],
   },
@@ -88,37 +69,37 @@ export default [
       {
         title: 'Dividing',
         description: 'A header can be formatted to divide itself from the content below it.',
-        component: Dividing,
+        file: 'Dividing',
       },
       {
         title: 'Block',
         description: 'A header can be formatted to appear inside a content block.',
-        component: Block,
+        file: 'Block',
       },
       {
         title: 'Attached',
         description: 'A header can be attached to other content, like a segment.',
-        component: Attached,
+        file: 'Attached',
       },
       {
         title: 'Floating',
         description: 'A header can sit to the left or right of other content.',
-        component: Floating,
+        file: 'Floating',
       },
       {
         title: 'Text Alignment',
         description: 'A header can have its text aligned to a side.',
-        component: TextAlignment,
+        file: 'TextAlignment',
       },
       {
         title: 'Colored',
         description: 'A header can be formatted with different colors.',
-        component: Colored,
+        file: 'Colored',
       },
       {
         title: 'Inverted',
         description: 'A header can have its colors inverted for contrast.',
-        component: Inverted,
+        file: 'Inverted',
       },
     ],
   },

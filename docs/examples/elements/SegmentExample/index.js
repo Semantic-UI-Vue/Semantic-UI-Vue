@@ -1,34 +1,3 @@
-import Segment from './Segment.example';
-import Raised from './Raised.example';
-import Stacked from './Stacked.example';
-import StackedTall from './StackedTall.example';
-import Piled from './Piled.example';
-import Vertical from './Vertical.example';
-import Disabled from './Disabled.example';
-import Loading from './Loading.example';
-import Inverted from './Inverted.example';
-import Attached from './Attached.example';
-import Attached2 from './Attached2.example';
-import Padded from './Padded.example';
-import Padded2 from './Padded2.example';
-import Compact from './Compact.example';
-import Color from './Color.example';
-import Color2 from './Color2.example';
-import Emphasis from './Emphasis.example';
-import Emphasis2 from './Emphasis2.example';
-import Emphasis3 from './Emphasis3.example';
-import Circular from './Circular.example';
-import Clearing from './Clearing.example';
-import Floated from './Floated.example';
-import TextAlign from './TextAlign.example';
-import Basic from './Basic.example';
-import Segments from './Segments.example';
-import NestedSegments from './NestedSegments.example';
-import HorizontalSegments from './HorizontalSegments.example';
-import RaisedSegments from './RaisedSegments.example';
-import StackedSegments from './StackedSegments.example';
-import PiledSegments from './PiledSegments.example';
-
 export default [
   {
     title: 'Types',
@@ -36,30 +5,30 @@ export default [
       {
         title: 'Segment',
         description: 'A segment of content',
-        component: Segment,
+        file: 'Segment',
       },
       {
         title: 'Raised',
         description: 'A segment may be formatted to raise above the page',
-        component: Raised,
+        file: 'Raised',
       },
       {
         title: 'Stacked',
         description: 'A segment can be formatted to show it contains multiple pages',
-        component: Stacked,
+        file: 'Stacked',
       },
       {
-        component: StackedTall,
+        file: 'StackedTall',
       },
       {
         title: 'Piled',
         description: 'A segment can be formatted to look like a pile of pages',
-        component: Piled,
+        file: 'Piled',
       },
       {
         title: 'Vertical Segment',
         description: 'A vertical segment formats content to be aligned as part of a vertical group',
-        component: Vertical,
+        file: 'Vertical',
       },
     ],
   },
@@ -69,12 +38,12 @@ export default [
       {
         title: 'Disabled',
         description: 'A segment may show its content is disabled',
-        component: Disabled,
+        file: 'Disabled',
       },
       {
         title: 'Loading',
         description: 'A segment may show its content is being loaded',
-        component: Loading,
+        file: 'Loading',
       },
     ],
   },
@@ -84,77 +53,77 @@ export default [
       {
         title: 'Inverted',
         description: 'A segment can have its colors inverted for contrast',
-        component: Inverted,
+        file: 'Inverted',
       },
       {
         title: 'Attached',
         description: 'A segment can be attached to other content on a page',
         info:
           'Attached segments are designed to be used with other `attached` variations like `attached header` or `attached messages`.',
-        component: Attached,
+        file: 'Attached',
       },
       {
-        component: Attached2,
+        file: 'Attached2',
       },
       {
         title: 'Padded',
         description: 'A segment can increase its padding',
-        component: Padded,
+        file: 'Padded',
       },
       {
-        component: Padded2,
+        file: 'Padded2',
       },
       {
         title: 'Compact',
         description: 'A segment may take up only as much space as is necessary',
-        component: Compact,
+        file: 'Compact',
       },
       {
         title: 'Colored',
         description: 'A segment can be colored',
-        component: Color,
+        file: 'Color',
       },
       {
         description: 'These colors can be inverted',
-        component: Color2,
+        file: 'Color2',
       },
       {
         title: 'Emphasis',
         description: 'A segment can be formatted to appear more or less noticeable',
-        component: Emphasis,
+        file: 'Emphasis',
       },
       {
         description: 'Inverted colors may also be more or less noticeable',
-        component: Emphasis2,
+        file: 'Emphasis2',
       },
       {
-        component: Emphasis3,
+        file: 'Emphasis3',
       },
       {
         title: 'Circular',
         info: 'A circular segment will most likely have to have its content manually sized to be equal width and height, otherwise it will flow to the size of your content',
         description: 'A segment can be circular',
-        component: Circular,
+        file: 'Circular',
       },
       {
         title: 'Clearing',
         description: 'A segment can clear floated content',
-        component: Clearing,
+        file: 'Clearing',
       },
       {
         title: 'Floated',
         description: 'A segment can appear to the left or right of other content',
-        component: Floated,
+        file: 'Floated',
       },
       {
         title: 'TextAlign',
         description: 'A segment can have its text aligned to a side',
-        component: TextAlign,
+        file: 'TextAlign',
       },
       {
         title: 'Basic',
         description: 'A basic segment has no special formatting',
-        component: Basic,
+        file: 'Basic',
       },
     ],
   },
@@ -164,32 +133,32 @@ export default [
       {
         title: 'Segments',
         description: 'A group of segments',
-        component: Segments,
+        file: 'Segments',
       },
       {
         title: 'Nested Segments',
         description: 'A group of segments can be nested in another group of segments',
-        component: NestedSegments,
+        file: 'NestedSegments',
       },
       {
         title: 'Horizontal Segments',
         description: 'A segment group can appear horizontally',
-        component: HorizontalSegments,
+        file: 'HorizontalSegments',
       },
       {
         title: 'Raised Segments',
         description: 'A group of segments can be raised',
-        component: RaisedSegments,
+        file: 'RaisedSegments',
       },
       {
         title: 'Stacked Segments',
         description: 'A group of segments can be stacked',
-        component: StackedSegments,
+        file: 'StackedSegments',
       },
       {
         title: 'Piled Segments',
         description: 'A group of segments can be piled',
-        component: PiledSegments,
+        file: 'PiledSegments',
       },
     ],
   },

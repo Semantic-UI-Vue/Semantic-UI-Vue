@@ -1,10 +1,3 @@
-import Breadcrumb from './Breadcrumb.example';
-import BreadcrumbAngle from './BreadcrumbAngle.example';
-import Divider from './Divider.example';
-import DividerArrow from './DividerArrow.example';
-import Section from './Section.example';
-import Link from './Link.example';
-
 export default [
   {
     title: 'Types',
@@ -12,10 +5,10 @@ export default [
       {
         title: 'Breadcrumb',
         description: 'A standard breadcrumb',
-        component: Breadcrumb,
+        file: 'Breadcrumb',
       },
       {
-        component: BreadcrumbAngle,
+        file: 'BreadcrumbAngle',
       },
     ],
   },
@@ -25,20 +18,20 @@ export default [
       {
         title: 'Divider',
         description: 'A breadcrumb can contain a divider to show the relationship between sections, this can be formatted as an icon or text',
-        component: Divider,
+        file: 'Divider',
       },
       {
-        component: DividerArrow,
+        file: 'DividerArrow',
       },
       {
         title: 'Section',
         description: 'A breadcrumb can contain sections that can either be formatted as a link or text',
-        component: Section,
+        file: 'Section',
       },
       {
         title: 'Link',
         description: 'A section may be linkable or contain a link',
-        component: Link,
+        file: 'Link',
       },
     ],
   },
