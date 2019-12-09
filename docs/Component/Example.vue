@@ -28,7 +28,9 @@
       attached="top"
       :class="open ? $style.open : $style.closed"
     >
-      <div :is="example.component" />
+      <div :class="$style.exampleContainer">
+        <div :is="example.component" />
+      </div>
       <sui-label attached="top" :class="$style.label">
         Example
       </sui-label>
@@ -117,5 +119,9 @@ export default {
 
 .closed > .label {
   visibility: collapse;
+}
+
+.exampleContainer {
+  overflow-x: auto;
 }
 </style>
