@@ -63,6 +63,7 @@ export default {
     handleOpen() {
       this.coords = this.$slots.trigger[0].elm.getBoundingClientRect();
       this.open = true;
+      this.$emit('open');
     },
     handleBlur() {
       if (this.hoverable) {
@@ -78,6 +79,7 @@ export default {
     },
     close() {
       this.open = false;
+      this.$emit('close');
     },
   },
   render() {
@@ -97,6 +99,7 @@ export default {
             )}
             triggerCoords={this.coords}
             position={this.position}
+            content={this.content}
           >
             {this.header && (
               <PopupHeader>{this.header}</PopupHeader>

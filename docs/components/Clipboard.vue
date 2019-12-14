@@ -1,0 +1,36 @@
+<template>
+  <sui-popup content="Copy code" position="top center">
+    <sui-icon name="copy" slot="trigger" @click="copy" ref="button" :class="classProp" />
+  </sui-popup>
+</template>
+
+<script>
+import Clipboard from 'clipboard';
+
+export default {
+  name: 'Clipboard',
+  inheritAttrs: false,
+  props: {
+    classProp: String,
+    content: String,
+  },
+  data() {
+    return {
+      clipboard: null,
+    };
+  },
+  mounted() {
+    this.clipboard = new Clipboard(this.$refs.button.$el, {
+      text: () => this.content,
+    });
+  },
+  unmount() {
+    this.clipboard.destroy();
+  },
+  methods: {
+    copy() {
+      this.message = COPY_MESSAGE;
+    },
+  },
+};
+</script>

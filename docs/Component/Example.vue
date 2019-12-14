@@ -33,6 +33,7 @@
       </div>
       <sui-label attached="top" :class="$style.label">
         Example
+        <clipboard :content="sourceCode" :class-prop="$style.copy" />
       </sui-label>
     </div>
     <div v-if="open">
@@ -132,5 +133,16 @@ export default {
 
 .exampleContainer {
   overflow-x: auto;
+}
+
+.copy {
+  float: right;
+  color: #AAAAAA;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.copy:hover {
+  color: #666;
 }
 </style>
