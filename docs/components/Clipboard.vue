@@ -1,6 +1,6 @@
 <template>
   <sui-popup content="Copy code" position="top center">
-    <sui-icon name="copy" slot="trigger" @click="copy" ref="button" :class="classProp" />
+    <sui-icon name="copy" slot="trigger" ref="button" :class="classProp" />
   </sui-popup>
 </template>
 
@@ -26,11 +26,6 @@ export default {
   },
   unmount() {
     this.clipboard.destroy();
-  },
-  methods: {
-    copy() {
-      this.message = COPY_MESSAGE;
-    },
   },
 };
 </script>
