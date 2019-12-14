@@ -64,6 +64,11 @@ export default {
       open: false,
     };
   },
+  watch: {
+    example() {
+      this.open = false;
+    },
+  },
   computed: {
     previewContainerComponent() {
       return this.open ? 'sui-segment' : 'div';
