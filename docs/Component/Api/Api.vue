@@ -4,7 +4,7 @@
     <docs-body :elements="subComponents">
       <template v-slot="subComponent">
         <h4 is="sui-header" class="api-h4">Props</h4>
-        <api-table :fields="propsFields" :data="getProps(subComponent)" />
+        <api-table class="table" :fields="propsFields" :data="getProps(subComponent)" />
       </template>
     </docs-body>
   </div>
@@ -73,5 +73,9 @@ export default {
 .api-h4 {
   font-size: 18px !important;
   margin: 0em 0em 0em !important;
+}
+
+.table {
+  margin-bottom: 3em !important;
 }
 </style>
