@@ -4,7 +4,7 @@
     <docs-body :elements="elements">
       <template v-slot="element">
         <template v-for="(example, index) in element.examples">
-          <example :key="index" :example="example" />
+          <example :key="index" :example="example" :class="getClass(example)" />
         </template>
       </template>
     </docs-body>
@@ -14,8 +14,10 @@
 <script>
 import upperFirst from 'lodash/upperFirst';
 import definitions from '../../definitions';
+import Example from './Example';
 
 export default {
+  components: { Example },
   props: {
     componentName: String,
     type: String,
@@ -28,9 +30,21 @@ export default {
       return definitions[this.title];
     },
   },
+  methods: {
+    getClass(example) {
+      return `${example.title ? '' : 'another '}example`;
+    }
+  },
 }
 </script>
 
-<style>
+<style scoped>
+.another.example {
+  margin-top: 0;
+}
 
+.example {
+  margin: 2em 0;
+  padding: 2em 0;
+}
 </style>

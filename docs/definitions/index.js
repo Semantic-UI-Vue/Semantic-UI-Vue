@@ -16,7 +16,7 @@ const definitions = definitionContext.keys().reduce((defAcc, key) => {
       return {
         ...example,
         source: sourceContext(exampleFile).default,
-        runtime: exampleContext(exampleFile).default,
+        component: exampleContext(exampleFile).default,
       };
     });
   });

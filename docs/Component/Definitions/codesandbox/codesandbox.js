@@ -1,7 +1,7 @@
 import { getParameters } from 'codesandbox/lib/api/define';
-import indexJs from '!raw-loader!./files/index';
+import indexJs from '!raw-loader!./files';
 import indexHtml from '!raw-loader!./files/index.html';
-import packageJson from './files/package.json';
+import packageJson from './files/package';
 
 export function openSandbox(exampleCode) {
   const parameters = getParameters({

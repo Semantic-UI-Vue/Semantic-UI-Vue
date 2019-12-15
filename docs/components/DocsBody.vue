@@ -4,7 +4,7 @@
       <div :key="element.title">
         <h2 is="sui-header" dividing>{{element.title}}</h2>
         <div class="example">
-          <slot v-bind:element="element" />
+          <slot v-bind="element" />
         </div>
       </div>
     </template>
