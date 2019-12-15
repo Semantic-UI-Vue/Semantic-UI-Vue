@@ -93,9 +93,12 @@ export default {
     },
     social: Enum.Social(),
   },
-  events: {
-    click: {
-      description: 'Click event passed to the button',
+  meta: {
+    events: {
+      click: {
+        description: 'Click event passed to the button',
+        value: Event,
+      },
     },
   },
   render() {

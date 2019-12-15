@@ -4,7 +4,17 @@
     <docs-body :elements="subComponents">
       <template v-slot="subComponent">
         <h4 is="sui-header" class="api-h4">Props</h4>
-        <api-table class="table" :fields="propsFields" :data="getProps(subComponent)" />
+        <api-table class="table" :fields="propsFields" :data="subComponent.props" />
+
+        <template v-if="subComponent.events">
+          <h4 is="sui-header" class="api-h4">Events</h4>
+          <api-table class="table" :fields="propsFields" :data="subComponent.events" />
+        </template>
+
+        <template v-if="subComponent.slots">
+          <h4 is="sui-header" class="api-h4">Slots</h4>
+          <api-table class="table" :fields="propsFields" :data="subComponent.slots" />
+        </template>
       </template>
     </docs-body>
   </div>
@@ -14,6 +24,37 @@
 import * as SemanticUIVue from 'semantic-ui-vue';
 import upperFirst from 'lodash/upperFirst';
 import ApiTable from './ApiTable.vue';
+
+function getProps(component) {
+  const props = component.props;
+  return Object.keys(props)
+    .map(propName => ({
+      name: propName,
+      type: props[propName].type.name,
+      description: props[propName].description,
+      default: props[propName].default,
+    }));
+}
+
+function getEvents(component) {
+  const events = component.meta && component.meta.events;
+  return events ? Object.keys(events)
+    .map(name => ({
+      name,
+      description: events[name].description,
+      value: events[name].value.name,
+    })) : null;
+}
+
+function getSlots(component) {
+  const slots = component.meta && component.meta.slots;
+  return slots ? Object.keys(slots)
+    .map(name => ({
+      name,
+      description: slots[name].description,
+      props: slots.props ? JSON.stringify(slots.props, true, 2) : '',
+    })) : null;
+}
 
 export default {
   components: {
@@ -51,19 +92,13 @@ export default {
         .filter(Component =>
           Component.name === this.suiName ||
           (Component.meta && Component.meta.parent === this.suiName)
-        );
-    },
-  },
-  methods: {
-    getProps(subComponent) {
-      const props = subComponent.props;
-      return Object.keys(props)
-        .map(propName => ({
-          name: propName,
-          type: props[propName].type.name,
-          description: props[propName].description,
-          default: props[propName].default,
-        }))
+        )
+        .map(Component => ({
+          name: Component.name,
+          props: getProps(Component),
+          events: getEvents(Component),
+          slots: getSlots(Component),
+        }));
     },
   },
 }
