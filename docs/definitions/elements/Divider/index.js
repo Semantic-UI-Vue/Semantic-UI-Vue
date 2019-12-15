@@ -1,14 +1,14 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Divider',
+        name: 'Divider',
         description: 'A standard divider',
         file: 'Divider',
       },
       {
-        title: 'Vertical Divider',
+        name: 'Vertical Divider',
         description: 'A divider can segment content vertically',
         file: 'VerticalDivider',
       },
@@ -16,7 +16,7 @@ export default [
         file: 'VerticalDivider2',
       },
       {
-        title: 'Horizontal Divider',
+        name: 'Horizontal Divider',
         description: 'A divider can segment content horizontally',
         file: 'HorizontalDivider',
       },
@@ -26,30 +26,30 @@ export default [
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A divider can have its colors inverted',
         file: 'InvertedDivider',
       },
       {
-        title: 'Fitted',
+        name: 'Fitted',
         description: 'A divider can be fitted, without any space above or below it',
         file: 'FittedDivider',
       },
       {
-        title: 'Hidden',
+        name: 'Hidden',
         description: 'A hidden divider divides content without creating a dividing line',
         file: 'HiddenDivider',
       },
       {
-        title: 'Section',
+        name: 'Section',
         description: 'A divider can provide greater margins to divide sections of content',
         file: 'SectionDivider',
       },
       {
-        title: 'Clearing',
+        name: 'Clearing',
         description: 'A divider can clear the contents above it',
         file: 'ClearingDivider',
       },

@@ -1,11 +1,9 @@
 <template>
   <div class="component-body">
     <template v-for="element in elements">
-      <div :key="element.title">
-        <h2 is="sui-header" dividing>{{element.title}}</h2>
-        <div class="example">
-          <slot v-bind="element" />
-        </div>
+      <div :key="element.name">
+        <h2 is="sui-header" dividing>{{element.name}}</h2>
+        <slot v-bind="element" />
       </div>
     </template>
   </div>

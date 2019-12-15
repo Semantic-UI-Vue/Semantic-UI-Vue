@@ -1,14 +1,14 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Dimmer',
+        name: 'Dimmer',
         description: 'A basic dimmer',
         file: 'Dimmer',
       },
       {
-        title: 'Dimmer Inverted',
+        name: 'Dimmer Inverted',
         description: 'A basic inverted dimmer',
         file: 'DimmerInverted',
       },

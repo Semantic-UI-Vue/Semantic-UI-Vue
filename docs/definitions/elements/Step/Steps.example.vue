@@ -34,19 +34,19 @@ export default {
       steps: [
         {
           icon: 'truck',
-          title: 'Shipping',
+          name: 'Shipping',
           description: 'Choose your shipping options',
         },
         {
           active: true,
           icon: 'payment',
-          title: 'Billing',
+          name: 'Billing',
           description: 'Enter billing information',
         },
         {
           disabled: true,
           icon: 'info',
-          title: 'Confirm Order',
+          name: 'Confirm Order',
         },
       ],
     };

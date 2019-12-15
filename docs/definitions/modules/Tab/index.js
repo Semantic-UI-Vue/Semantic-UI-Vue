@@ -1,49 +1,49 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Basic',
+        name: 'Basic',
         description: 'A basic Tab',
         file: 'Basic',
       },
       {
-        title: 'Pointing Menu',
+        name: 'Pointing Menu',
         description: 'A tab menu can point to its tab panes',
         file: 'Pointing',
       },
       {
-        title: 'Secondary Menu',
+        name: 'Secondary Menu',
         description: 'A tab menu can adjust its appearance to de-emphasize its contents',
         file: 'Secondary',
       },
       {
-        title: 'Text Menu',
+        name: 'Text Menu',
         description: 'A tab menu can be formatted for text content',
         file: 'Text',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Loading',
+        name: 'Loading',
         description: 'A tab can display a loading indicator.',
         file: 'Loading',
       },
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'A tab can be disabled',
         file: 'Disabled',
       },
     ],
   },
   {
-    title: 'Menu Variations',
+    name: 'Menu Variations',
     examples: [
       {
-        title: 'Attached',
+        name: 'Attached',
         description: 'A tab menu can be attached on bottom',
         file: 'Attached',
       },
@@ -52,17 +52,17 @@ export default [
         file: 'NotAttached',
       },
       {
-        title: 'Not Tabular',
+        name: 'Not Tabular',
         description: 'A tab menu can disable its tabular appearance',
         file: 'NotTabular',
       },
       {
-        title: 'Borderless',
+        name: 'Borderless',
         description: 'A tab menu can remove its borders',
         file: 'Borderless',
       },
       {
-        title: 'Colored',
+        name: 'Colored',
         description: 'A tab menu can be colored',
         info: 'Color only applies to the menu, not the pane, so they look best not attached',
         file: 'Colored',
@@ -72,7 +72,7 @@ export default [
         file: 'ColoredInverted',
       },
       {
-        title: 'Vertical Tabular',
+        name: 'Vertical Tabular',
         description: 'A vertical tab menu can be positioned on either side',
         file: 'VerticalTabular',
       },
@@ -80,32 +80,32 @@ export default [
         file: 'VerticalTabularRight',
       },
       {
-        title: 'Menu Position',
+        name: 'Menu Position',
         description: 'A vertical non tabular menu can be positioned on either side',
         file: 'MenuPositionRight',
       },
     ],
   },
   {
-    title: 'Usage',
+    name: 'Usage',
     examples: [
       {
-        title: 'Active Index',
+        name: 'Active Index',
         description: 'A tab can be controlled component',
         file: 'ActiveIndex',
       },
       {
-        title: 'Default Active Index',
+        name: 'Default Active Index',
         description: 'A tab can define which pane is active by default',
         file: 'DefaultActiveIndex',
       },
       {
-        title: 'On Tab Change',
+        name: 'On Tab Change',
         description: 'You can capture the tab change event',
         file: 'OnTabChange',
       },
       {
-        title: 'Adding Icons and Labels',
+        name: 'Adding Icons and Labels',
         description: 'You can use icon and label props on sui-tab-pane to add label and icon',
         file: 'CustomMenuItems',
       },

@@ -1,14 +1,14 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Fade',
+        name: 'Fade',
         description: 'An element can disappear to reveal content below',
         file: 'Fade',
       },
       {
-        title: 'Move',
+        name: 'Move',
         description: 'An element can move in a direction to reveal content.',
         file: 'MoveLeft',
       },
@@ -22,7 +22,7 @@ export default [
         file: 'MoveDown',
       },
       {
-        title: 'Rotate',
+        name: 'Rotate',
         description: 'An element can rotate to reveal content below.',
         file: 'RotateRight',
       },
@@ -32,39 +32,39 @@ export default [
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Visible content',
+        name: 'Visible content',
         description: 'A reveal may contain content that is visible before interaction.',
         file: 'VisibleContent',
       }, {
-        title: 'Hidden content',
+        name: 'Hidden content',
         description: 'A reveal may contain content that is hidden before user interaction.',
         file: 'HiddenContent',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Instant',
+        name: 'Instant',
         description: 'An element can show its content without delay.',
         file: 'Instant',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Active',
+        name: 'Active',
         description: 'An active reveal displays its hidden content.',
         file: 'Active',
       },
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'A disabled reveal will not animate when hovered.',
         file: 'Disabled',
       },

@@ -1,9 +1,9 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Feed',
+        name: 'Feed',
         description: 'A feed',
         file: 'Feed',
       },
@@ -14,10 +14,10 @@ export default [
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Image Label',
+        name: 'Image Label',
         description: 'An event can contain an image label',
         file: 'ImageLabel',
       },
@@ -26,7 +26,7 @@ export default [
         file: 'ImageLabelShorthand',
       },
       {
-        title: 'Icon Label',
+        name: 'Icon Label',
         description: 'An event can contain an icon label',
         file: 'IconLabel',
       },
@@ -35,7 +35,7 @@ export default [
         file: 'IconLabelShorthand',
       },
       {
-        title: 'Content Date',
+        name: 'Content Date',
         description: 'Event content can contain a date',
         file: 'ContentDate',
       },
@@ -44,7 +44,7 @@ export default [
         file: 'ContentDateShorthand',
       },
       {
-        title: 'Summary Date',
+        name: 'Summary Date',
         description: 'An event summary can contain a date',
         file: 'SummaryDate',
       },
@@ -53,7 +53,7 @@ export default [
         file: 'SummaryDateShorthand',
       },
       {
-        title: 'Extra Images',
+        name: 'Extra Images',
         description: 'An event can contain extra images.',
         file: 'ExtraImages',
       },
@@ -62,7 +62,7 @@ export default [
         file: 'ExtraImagesShorthand',
       },
       {
-        title: 'Extra Text',
+        name: 'Extra Text',
         description: 'An event can contain extra text.',
         file: 'ExtraText',
       },
@@ -73,10 +73,10 @@ export default [
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Size',
+        name: 'Size',
         description: 'A feed can have different sizes',
         file: 'SizeSmall',
       },

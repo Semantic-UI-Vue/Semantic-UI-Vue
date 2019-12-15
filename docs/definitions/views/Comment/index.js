@@ -1,9 +1,9 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Comments',
+        name: 'Comments',
         description: 'A basic list of comments',
         file: 'Comment',
       },

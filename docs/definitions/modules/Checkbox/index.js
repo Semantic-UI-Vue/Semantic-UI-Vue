@@ -1,19 +1,19 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Checkbox Basic',
+        name: 'Checkbox Basic',
         description: 'A standard Checkbox',
         file: 'CheckboxBasic',
       },
       {
-        title: 'Checkbox Disabled',
+        name: 'Checkbox Disabled',
         description: 'A checkbox can be disabled.',
         file: 'CheckboxDisabled',
       },
       {
-        title: 'Radio',
+        name: 'Radio',
         description: 'A checkbox can be formatted as a radio element. This means it is an exclusive option',
         file: 'Radio',
       },
@@ -28,17 +28,17 @@ export default [
         file: 'RadioDisabled',
       },
       {
-        title: 'Checkbox with two way binding',
+        name: 'Checkbox with two way binding',
         description: 'Checkbox with two way binding',
         file: 'CheckboxModel',
       },
       {
-        title: 'Toggle style input',
+        name: 'Toggle style input',
         description: 'Toggle style input',
         file: 'CheckboxToggle',
       },
       {
-        title: 'Toggle style input disabled',
+        name: 'Toggle style input disabled',
         description: 'A toggle can be disabled, too.',
         file: 'CheckboxToggleDisabled',
       },

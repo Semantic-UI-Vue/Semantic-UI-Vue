@@ -1,29 +1,29 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Container',
+        name: 'Container',
         description: 'A standard container',
         file: 'Container',
       },
       {
-        title: 'Text Container',
+        name: 'Text Container',
         description: 'A button can be formatted to show different levels of emphasis',
         file: 'TextContainer',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Text Alignment',
+        name: 'Text Alignment',
         description: 'A container can specify its text alignment',
         file: 'TextAlignment',
       },
       {
-        title: 'Fluid',
+        name: 'Fluid',
         description: 'A fluid container has no maximum width',
         file: 'Fluid',
       },

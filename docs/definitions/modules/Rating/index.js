@@ -1,14 +1,14 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Rating',
+        name: 'Rating',
         description: 'A basic rating element',
         file: 'Rating',
       },
       {
-        title: 'onRate Callback',
+        name: 'onRate Callback',
         description: 'A rating calls back when the rating changes',
         file: 'Callback',
       },

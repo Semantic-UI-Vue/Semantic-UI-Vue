@@ -1,74 +1,74 @@
 export default [
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'An icon can show that it is disabled',
         file: 'Disabled',
       },
       {
-        title: 'Loading',
+        name: 'Loading',
         description: 'An icon can be used as a simple loader',
         file: 'Loading',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Fitted',
+        name: 'Fitted',
         description: 'An icon can be fitted, without any space to the left or right of it.',
         file: 'Fitted',
       },
       {
-        title: 'Size',
+        name: 'Size',
         description: 'An icon can vary in size',
         file: 'Size',
       },
       {
-        title: 'Link',
+        name: 'Link',
         description: 'An icon can be formatted as a link',
         file: 'Link',
       },
       {
-        title: 'Flipped',
+        name: 'Flipped',
         description: 'An icon can be flipped',
         file: 'Flipped',
       },
       {
-        title: 'Rotated',
+        name: 'Rotated',
         description: 'An icon can be rotated',
         file: 'Rotated',
       },
       {
-        title: 'Circular',
+        name: 'Circular',
         description: 'An icon can be formatted to appear circular',
         file: 'Circular',
       },
       {
-        title: 'Bordered',
+        name: 'Bordered',
         description: 'An icon can be formatted to appear bordered',
         file: 'Bordered',
       },
       {
-        title: 'Colored',
+        name: 'Colored',
         description: 'An icon can be formatted with different colors',
         file: 'Colored',
       },
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'An icon can have its colors inverted for contrast',
         file: 'Inverted',
       },
     ],
   },
   {
-    title: 'Groups',
+    name: 'Groups',
     examples: [
       {
-        title: 'Icons',
+        name: 'Icons',
         description: 'Several icons can be used together as a group',
         file: 'IconGroup',
       },
@@ -76,7 +76,7 @@ export default [
         file: 'IconGroup2',
       },
       {
-        title: 'Corner Icon',
+        name: 'Corner Icon',
         description: 'A group of icons can display a smaller corner icon',
         file: 'IconGroupCorner',
       },

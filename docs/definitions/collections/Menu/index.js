@@ -1,9 +1,9 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Menu',
+        name: 'Menu',
         description: 'A menu',
         file: 'Menu',
       },
@@ -11,12 +11,12 @@ export default [
         file: 'TopAttachedMenu',
       },
       {
-        title: 'Secondary Menu',
+        name: 'Secondary Menu',
         description: 'A menu can adjust its appearance to de-emphasize its contents.',
         file: 'SecondaryMenu',
       },
       {
-        title: 'Pointing',
+        name: 'Pointing',
         description: 'A menu can point to show its relationship to nearby content.',
         file: 'PointingMenu',
       },
@@ -24,7 +24,7 @@ export default [
         file: 'PointingSecondaryMenu',
       },
       {
-        title: 'Tabular',
+        name: 'Tabular',
         description: 'A menu can be formatted to show tabs of information.',
         file: 'TabularMenu',
       },
@@ -38,7 +38,7 @@ export default [
         file: 'TabularMenuRight',
       },
       {
-        title: 'Text',
+        name: 'Text',
         description: 'A menu can be formatted for text content.',
         file: 'TextMenu',
       },

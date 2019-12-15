@@ -1,9 +1,9 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'List',
+        name: 'List',
         description: 'A list groups related content',
         file: 'List',
       },
@@ -21,7 +21,7 @@ export default [
         file: 'ListTree',
       },
       {
-        title: 'Bulleted',
+        name: 'Bulleted',
         description: 'A list can mark items with a bullet.',
         file: 'Bulleted',
       },
@@ -29,7 +29,7 @@ export default [
         file: 'BulletedHorizontal',
       },
       {
-        title: 'Ordered',
+        name: 'Ordered',
         description: 'A list can be ordered numerically.',
         file: 'Ordered',
       },
@@ -38,32 +38,32 @@ export default [
         file: 'OrderedNumber',
       },
       {
-        title: 'Link',
+        name: 'Link',
         description: 'A list can be specially formatted for navigation links.',
         file: 'Link',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Item',
+        name: 'Item',
         description: 'A list item can contain a set of items.',
         file: 'Item',
       },
       {
-        title: 'Icon',
+        name: 'Icon',
         description: 'A list item can contain an icon.',
         file: 'Icon',
       },
       {
-        title: 'Image',
+        name: 'Image',
         description: 'A list item can contain an image.',
         file: 'Image',
       },
       {
-        title: 'Link',
+        name: 'Link',
         description: 'A list can contain links.',
         file: 'LinkContent',
       },
@@ -71,22 +71,22 @@ export default [
         file: 'LinkDescription',
       },
       {
-        title: 'Header',
+        name: 'Header',
         description: 'A list item can contain a header.',
         file: 'Header',
       },
       {
-        title: 'Description',
+        name: 'Description',
         description: 'A list item can contain a description.',
         file: 'Description',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A list can be inverted to appear on a dark background.',
         file: 'ListInverted',
       },

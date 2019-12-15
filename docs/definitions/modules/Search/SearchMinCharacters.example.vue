@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       value: null,
-      source: [{ title: 'Horse' }, { title: 'Parrot' }, { title: 'Cat' }, { title: 'Catfish' }],
+      source: [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'Catfish' }],
     };
   },
 };

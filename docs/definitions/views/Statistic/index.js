@@ -1,64 +1,64 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Statistic',
+        name: 'Statistic',
         description: 'A statistic can display a value with a label above or below it',
         file: 'Statistic',
       },
       {
-        title: 'Statistic Group',
+        name: 'Statistic Group',
         description: 'A group of statistics',
         file: 'StatisticGroup',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Value',
+        name: 'Value',
         description: 'A statistic can contain a numeric, icon, image, or text value',
         file: 'StatisticContentValue',
       },
       {
-        title: 'Label',
+        name: 'Label',
         description: 'A statistic can contain a label to help provide context for the presented value',
         file: 'StatisticContentLabel',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Horizontal Statistic',
+        name: 'Horizontal Statistic',
         description: 'A statistic can present its measurement horizontally',
         file: 'StatisticHorizontal',
       },
       {
-        title: 'Colored',
+        name: 'Colored',
         description: 'A statistic can be formatted to be different colors',
         file: 'StatisticColored',
       },
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A statistic can be formatted to fit on a dark background',
         file: 'StatisticInverted',
       },
       {
-        title: 'Evenly Divided',
+        name: 'Evenly Divided',
         description: 'A statistic group can have its items divided evenly',
         file: 'StatisticEvenlyDivided',
       },
       {
-        title: 'Floated',
+        name: 'Floated',
         description: 'An statistic can sit to the left or right of other content',
         file: 'StatisticFloated',
       },
       {
-        title: 'Size',
+        name: 'Size',
         description: 'A statistic can vary in size',
         file: 'StatisticSize',
       },

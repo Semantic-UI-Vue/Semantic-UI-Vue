@@ -1,42 +1,42 @@
 export default [{
-  title: 'Types',
+  name: 'Types',
   examples: [{
-    title: 'Popup',
+    name: 'Popup',
     description: 'An element can specify popup content to appear.',
     file: 'Popup',
   }, {
-    title: 'Titled',
+    name: 'Titled',
     description: 'An element can specify popup content with a title.',
     file: 'Titled',
   }, {
-    title: 'Html',
+    name: 'Html',
     description: 'An element can specify HTML for a popup.',
     file: 'Html',
   }],
 }, {
-  title: 'Variations',
+  name: 'Variations',
   examples: [{
-    title: 'Basic',
+    name: 'Basic',
     description: 'A popup can provide more basic formatting.',
     file: 'Basic',
   }, {
-    title: 'Width',
+    name: 'Width',
     description: 'A popup can be extra wide to allow for longer content.',
     file: 'Width',
   }, {
-    title: 'Size',
+    name: 'Size',
     description: 'A popup can vary in size.',
     file: 'Size',
   }, {
-    title: 'Flowing',
+    name: 'Flowing',
     description: 'A popup can have no maximum width and continue to flow to fit its content.',
     file: 'Flowing',
   }, {
-    title: 'Inverted',
+    name: 'Inverted',
     description: 'A popup can have its colors inverted.',
     file: 'Inverted',
   }, {
-    title: 'Position',
+    name: 'Position',
     description: 'A popup can be position around its trigger.',
     file: 'Position',
   }],

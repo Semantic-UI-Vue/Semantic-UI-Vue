@@ -1,15 +1,15 @@
 
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Loader',
+        name: 'Loader',
         description: 'A loader',
         file: 'Loader',
       },
       {
-        title: 'Text Loader',
+        name: 'Text Loader',
         description: 'A loader can contain text',
         file: 'TextLoader',
       },
@@ -20,41 +20,41 @@ export default [
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Indeterminate',
+        name: 'Indeterminate',
         description: "A loader can show it's unsure of how long a task will take",
         file: 'Indeterminate',
       },
       {
-        title: 'Active',
+        name: 'Active',
         description: 'A loader can be active or visible',
         info: 'An active loader may not be clearly visible without using a `ui dimmer`',
         file: 'Active',
       },
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'A loader can be disabled or hidden',
         file: 'Disabled',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Inline',
+        name: 'Inline',
         description: 'Loaders can appear inline with content',
         file: 'Inline',
       },
       {
-        title: 'Inline Center',
+        name: 'Inline Center',
         description: 'Loaders can appear inline centered with content',
         file: 'InlineCentered',
       },
       {
-        title: 'Size',
+        name: 'Size',
         description: 'Loaders can have different sizes',
         file: 'SizeMini',
       },
@@ -87,7 +87,7 @@ export default [
         file: 'SizeMassive',
       },
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'Loaders can have their colors inverted.',
         file: 'Inverted',
       },

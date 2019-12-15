@@ -1,19 +1,19 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Search',
+        name: 'Search',
         description: 'A basic search element',
         file: 'SearchStandard',
       },
       {
-        title: 'Min characters',
+        name: 'Min characters',
         description: 'An example of minimal characters to search requirement (min 3)',
         file: 'SearchMinCharacters',
       },
       {
-        title: 'Category',
+        name: 'Category',
         description: 'A search can display results ordered by categories',
         file: 'SearchCategory',
       },

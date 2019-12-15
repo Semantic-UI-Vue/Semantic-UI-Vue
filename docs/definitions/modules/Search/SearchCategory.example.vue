@@ -16,10 +16,10 @@ export default {
     return {
       value: null,
       source: [
-        { title: 'Camel', category: 'Mammal', description: 'Camel description' },
-        { title: 'Canary', category: 'Bird', description: 'Cannary description' },
-        { title: 'Cat', category: 'Mammal' },
-        { title: 'Catfish', category: 'Fish' },
+        { name: 'Camel', category: 'Mammal', description: 'Camel description' },
+        { name: 'Canary', category: 'Bird', description: 'Cannary description' },
+        { name: 'Cat', category: 'Mammal' },
+        { name: 'Catfish', category: 'Fish' },
       ],
     };
   },

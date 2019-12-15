@@ -1,19 +1,19 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Segment',
+        name: 'Segment',
         description: 'A segment of content',
         file: 'Segment',
       },
       {
-        title: 'Raised',
+        name: 'Raised',
         description: 'A segment may be formatted to raise above the page',
         file: 'Raised',
       },
       {
-        title: 'Stacked',
+        name: 'Stacked',
         description: 'A segment can be formatted to show it contains multiple pages',
         file: 'Stacked',
       },
@@ -21,42 +21,42 @@ export default [
         file: 'StackedTall',
       },
       {
-        title: 'Piled',
+        name: 'Piled',
         description: 'A segment can be formatted to look like a pile of pages',
         file: 'Piled',
       },
       {
-        title: 'Vertical Segment',
+        name: 'Vertical Segment',
         description: 'A vertical segment formats content to be aligned as part of a vertical group',
         file: 'Vertical',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'A segment may show its content is disabled',
         file: 'Disabled',
       },
       {
-        title: 'Loading',
+        name: 'Loading',
         description: 'A segment may show its content is being loaded',
         file: 'Loading',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A segment can have its colors inverted for contrast',
         file: 'Inverted',
       },
       {
-        title: 'Attached',
+        name: 'Attached',
         description: 'A segment can be attached to other content on a page',
         info:
           'Attached segments are designed to be used with other `attached` variations like `attached header` or `attached messages`.',
@@ -66,7 +66,7 @@ export default [
         file: 'Attached2',
       },
       {
-        title: 'Padded',
+        name: 'Padded',
         description: 'A segment can increase its padding',
         file: 'Padded',
       },
@@ -74,12 +74,12 @@ export default [
         file: 'Padded2',
       },
       {
-        title: 'Compact',
+        name: 'Compact',
         description: 'A segment may take up only as much space as is necessary',
         file: 'Compact',
       },
       {
-        title: 'Colored',
+        name: 'Colored',
         description: 'A segment can be colored',
         file: 'Color',
       },
@@ -88,7 +88,7 @@ export default [
         file: 'Color2',
       },
       {
-        title: 'Emphasis',
+        name: 'Emphasis',
         description: 'A segment can be formatted to appear more or less noticeable',
         file: 'Emphasis',
       },
@@ -100,63 +100,63 @@ export default [
         file: 'Emphasis3',
       },
       {
-        title: 'Circular',
+        name: 'Circular',
         info: 'A circular segment will most likely have to have its content manually sized to be equal width and height, otherwise it will flow to the size of your content',
         description: 'A segment can be circular',
         file: 'Circular',
       },
       {
-        title: 'Clearing',
+        name: 'Clearing',
         description: 'A segment can clear floated content',
         file: 'Clearing',
       },
       {
-        title: 'Floated',
+        name: 'Floated',
         description: 'A segment can appear to the left or right of other content',
         file: 'Floated',
       },
       {
-        title: 'TextAlign',
+        name: 'TextAlign',
         description: 'A segment can have its text aligned to a side',
         file: 'TextAlign',
       },
       {
-        title: 'Basic',
+        name: 'Basic',
         description: 'A basic segment has no special formatting',
         file: 'Basic',
       },
     ],
   },
   {
-    title: 'Groups',
+    name: 'Groups',
     examples: [
       {
-        title: 'Segments',
+        name: 'Segments',
         description: 'A group of segments',
         file: 'Segments',
       },
       {
-        title: 'Nested Segments',
+        name: 'Nested Segments',
         description: 'A group of segments can be nested in another group of segments',
         file: 'NestedSegments',
       },
       {
-        title: 'Horizontal Segments',
+        name: 'Horizontal Segments',
         description: 'A segment group can appear horizontally',
         file: 'HorizontalSegments',
       },
       {
-        title: 'Raised Segments',
+        name: 'Raised Segments',
         description: 'A group of segments can be raised',
         file: 'RaisedSegments',
       },
       {
-        title: 'Stacked Segments',
+        name: 'Stacked Segments',
         description: 'A group of segments can be stacked',
         file: 'StackedSegments',
       },
       {
-        title: 'Piled Segments',
+        name: 'Piled Segments',
         description: 'A group of segments can be piled',
         file: 'PiledSegments',
       },

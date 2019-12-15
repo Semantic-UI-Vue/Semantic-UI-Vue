@@ -4,10 +4,10 @@
 // Group variations
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Form',
+        name: 'Form',
         description: 'A form',
         file: 'Form',
       },
@@ -17,15 +17,15 @@ export default [
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Field',
+        name: 'Field',
         description: 'A field is a form element containing a label and an input',
         file: 'FormField',
       },
       {
-        title: 'Fields',
+        name: 'Fields',
         description: 'A set of fields can appear grouped together',
         file: 'FormFields',
       },
@@ -36,22 +36,22 @@ export default [
         file: 'FormFields3',
       },
       {
-        title: 'Text Area',
+        name: 'Text Area',
         description: 'A textarea can be used to allow for extended user input.',
         file: 'FormTextArea',
       },
       {
-        title: 'Checkbox',
+        name: 'Checkbox',
         description: 'A form can contain a checkbox',
         file: 'FormCheckbox',
       },
       {
-        title: 'Radio Checkbox',
+        name: 'Radio Checkbox',
         description: 'A form can include a radio checkbox',
         file: 'FormRadioCheckbox',
       },
       {
-        title: 'Dropdown',
+        name: 'Dropdown',
         description: 'A form can contain a dropdown',
         file: 'FormDropdown',
       },
@@ -59,67 +59,67 @@ export default [
         file: 'FormDropdown2',
       },
       {
-        title: 'Multiple Select',
+        name: 'Multiple Select',
         description: 'A multiple select is used to include several choices with one form field',
         file: 'FormMultipleSelect',
       },
       {
-        title: 'HTML Select',
+        name: 'HTML Select',
         description: 'Forms also can provide basic styling for select elements',
         file: 'FormHTMLSelect',
       },
       {
-        title: 'Message',
+        name: 'Message',
         description: 'A form can contain a message',
         file: 'FormMessage',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Loading',
+        name: 'Loading',
         description: 'If a form is in loading state, it will automatically show a loading indicator.',
         file: 'FormLoading',
       },
       {
-        title: 'Success',
+        name: 'Success',
         description: 'If a form is in an success state, it will automatically show any success message blocks.',
         file: 'FormSuccess',
       },
       {
-        title: 'Error',
+        name: 'Error',
         description: 'If a form is in an error state, it will automatically show any error message blocks.',
         file: 'FormError',
       },
       {
-        title: 'Warning',
+        name: 'Warning',
         description: 'If a form is in warning state, it will automatically show any warning message block.',
         file: 'FormWarning',
       },
       {
-        title: 'Field Error',
+        name: 'Field Error',
         description: 'Individual fields may display an error state',
         file: 'FormFieldError',
       },
       {
-        title: 'Disabled Field',
+        name: 'Disabled Field',
         description: 'Individual fields may be disabled',
         file: 'FormDisabled',
       },
       {
-        title: 'Read-Only Field',
+        name: 'Read-Only Field',
         description: 'Individual fields may be read only',
         file: 'FormReadOnly',
       },
     ],
   },
   {
-    title: 'Form Variations',
+    name: 'Form Variations',
     examples: [
       {
-        title: 'Size',
+        name: 'Size',
         description: 'A form can vary in size',
         file: 'FormSizeVariationMini',
       },
@@ -142,57 +142,57 @@ export default [
         file: 'FormSizeVariationMassive',
       },
       {
-        title: 'Equal Width Form',
+        name: 'Equal Width Form',
         description: 'Forms can automatically divide fields to be equal width',
         file: 'FormEqualWidth',
       },
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A form on a dark background may have to invert its color scheme',
         file: 'FormInverted',
       },
     ],
   },
   {
-    title: 'Field Variations',
+    name: 'Field Variations',
     examples: [
       {
-        title: 'Inline Field',
+        name: 'Inline Field',
         description: 'A field can have its label next to instead of above it.',
         file: 'FieldInline',
       },
       {
-        title: 'Width',
+        name: 'Width',
         description: 'A field can specify its width in grid columns',
         file: 'FieldWidth',
       },
       {
-        title: 'Required',
+        name: 'Required',
         description: 'A field can show that input is mandatory',
         file: 'FieldRequired',
       },
     ],
   },
   {
-    title: 'Group Variations',
+    name: 'Group Variations',
     examples: [
       {
-        title: 'Evenly Divided',
+        name: 'Evenly Divided',
         description: 'Fields can have their widths divided evenly',
         file: 'GroupEvenlyDivided',
       },
       {
-        title: 'Grouped Fields',
+        name: 'Grouped Fields',
         description: 'Fields can show related choices',
         file: 'GroupedFields',
       },
       {
-        title: 'Equal Width Fields',
+        name: 'Equal Width Fields',
         description: 'Fields can automatically divide fields to be equal width',
         file: 'GroupEqualWidth',
       },
       {
-        title: 'Inline Fields',
+        name: 'Inline Fields',
         description: 'Multiple fields may be inline in a row',
         file: 'GroupFieldsInline',
       },

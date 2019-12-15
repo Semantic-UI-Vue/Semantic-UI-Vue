@@ -1,94 +1,94 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Image',
+        name: 'Image',
         description: 'An image',
         file: 'Image',
       },
       {
-        title: 'Image Link',
+        name: 'Image Link',
         description: 'An image can be formatted to link to other content',
         file: 'ImageLink',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Hidden',
+        name: 'Hidden',
         description: 'An image can be hidden',
         file: 'Hidden',
       },
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'An image can show that it is disabled and cannot be selected',
         file: 'Disabled',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Avatar',
+        name: 'Avatar',
         description: 'An image may be formatted to appear inline with text as an avatar.',
         file: 'Avatar',
       },
       {
-        title: 'Bordered',
+        name: 'Bordered',
         description: 'An image may include a border to emphasize the edges of white or transparent content.',
         file: 'Bordered',
       },
       {
-        title: 'Fluid',
+        name: 'Fluid',
         description: 'An image can take up the width of its container.',
         file: 'Fluid',
       },
       {
-        title: 'Rounded',
+        name: 'Rounded',
         description: 'An image may appear rounded.',
         file: 'Rounded',
       },
       {
-        title: 'Circular',
+        name: 'Circular',
         description: 'An image may appear circular.',
         file: 'Circular',
       },
       {
-        title: 'Vertically Aligned',
+        name: 'Vertically Aligned',
         description: 'An image may appear circular.',
         file: 'VerticallyAligned',
       },
       {
-        title: 'Centered',
+        name: 'Centered',
         description: 'An image can appear centered in a content block.',
         file: 'Centered',
       },
       {
-        title: 'Spaced',
+        name: 'Spaced',
         description: 'An image can specify that it needs an additional spacing to separate it from nearby content.',
         file: 'Spaced',
       },
       {
-        title: 'Floated',
+        name: 'Floated',
         description: 'An image can sit to the left or right of other content.',
         file: 'Floated',
       },
       {
-        title: 'Size',
+        name: 'Size',
         description: 'An image may appear at different sizes',
         file: 'Size',
       },
     ],
   },
   {
-    title: 'Groups',
+    name: 'Groups',
     examples: [
       {
-        title: 'Size',
+        name: 'Size',
         description: 'A group of images can be formatted to have the same size.',
         file: 'GroupSize',
       },

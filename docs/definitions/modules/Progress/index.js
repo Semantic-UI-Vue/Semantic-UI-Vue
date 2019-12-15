@@ -1,71 +1,71 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Standard',
+        name: 'Standard',
         description: 'A standard progress bar',
         file: 'Standard',
       },
       {
-        title: 'Indicating',
+        name: 'Indicating',
         description: 'An indicating progress bar visually indicates the current level of progress of a task',
         file: 'Indicating',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Bar',
+        name: 'Bar',
         description: 'A progress element can contain a bar visually indicating progress',
         file: 'Bar',
       },
       {
-        title: 'Progress',
+        name: 'Progress',
         description: 'A progress bar can contain a text value indicating current progress',
         file: 'Progress',
       },
       {
-        title: 'Label',
+        name: 'Label',
         description: 'A progress element can contain a label',
         file: 'Label',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Active',
+        name: 'Active',
         description: 'A progress bar can show activity',
         file: 'Active',
       },
       {
-        title: 'Success',
+        name: 'Success',
         description: 'A progress bar can show a success state',
         file: 'Success',
       },
       {
-        title: 'Warning',
+        name: 'Warning',
         description: 'A progress bar can show a warning state',
         file: 'Warning',
       },
       {
-        title: 'Error',
+        name: 'Error',
         description: 'A progress bar can show an error state',
         file: 'Error',
       },
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'A progress bar can be disabled',
         file: 'Disabled',
       },
     ],
   },
   {
-    title: 'Size',
+    name: 'Size',
     examples: [
       {
         description: 'A progress bar can vary in size',
@@ -74,7 +74,7 @@ export default [
     ],
   },
   {
-    title: 'Color',
+    name: 'Color',
     examples: [
       {
         description: 'Can have different colors:',
@@ -83,15 +83,15 @@ export default [
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A progress bar can have its colors inverted',
         file: 'Inverted',
       },
       {
-        title: 'Attached',
+        name: 'Attached',
         description: 'A progress bar can show progress of an element',
         file: 'Attached',
       },

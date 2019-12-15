@@ -1,24 +1,24 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Button',
+        name: 'Button',
         description: 'A standard button',
         file: 'Button',
       },
       {
-        title: 'Emphasis',
+        name: 'Emphasis',
         description: 'A button can be formatted to show different levels of emphasis',
         file: 'Emphasis',
       },
       {
-        title: 'Animated',
+        name: 'Animated',
         description: 'A button can animate to show hidden content',
         file: 'Animated',
       },
       {
-        title: 'Labeled',
+        name: 'Labeled',
         description: 'A button can appear alongside a label',
         file: 'Labeled',
       },
@@ -26,17 +26,17 @@ export default [
         file: 'Labeled2',
       },
       {
-        title: 'Icon',
+        name: 'Icon',
         description: 'A button can have only an icon',
         file: 'Icon',
       },
       {
-        title: 'LabeledIcon',
+        name: 'LabeledIcon',
         description: 'A button can use an icon as a label',
         file: 'LabeledIcon',
       },
       {
-        title: 'Basic',
+        name: 'Basic',
         description: 'A basic button is less pronounced',
         file: 'Basic',
       },
@@ -47,7 +47,7 @@ export default [
         file: 'Basic3',
       },
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A button can be formatted to appear on dark backgrounds',
         file: 'Inverted',
       },
@@ -57,25 +57,25 @@ export default [
     ],
   },
   {
-    title: 'Groups',
+    name: 'Groups',
     examples: [
       {
-        title: 'Buttons',
+        name: 'Buttons',
         description: 'Buttons can exist together as a group',
         file: 'Buttons',
       },
       {
-        title: 'IconButtons',
+        name: 'IconButtons',
         description: 'Button groups can show groups of icons',
         file: 'IconButtons',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Conditional',
+        name: 'Conditional',
         description: 'Button groups can contain conditionals',
         file: 'Conditional',
       },
@@ -88,84 +88,84 @@ export default [
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Active',
+        name: 'Active',
         description: 'A button can show it is currently the active user selection',
         file: 'Active',
       },
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'A button can show it is currently unable to be interacted with',
         file: 'Disabled',
       },
       {
-        title: 'Loading',
+        name: 'Loading',
         description: 'A button can show a loading indicator',
         file: 'Loading',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Social',
+        name: 'Social',
         description: 'A button can be formatted to link to a social websiten',
         file: 'Social',
       },
       {
-        title: 'Size',
+        name: 'Size',
         description: 'A button can have different sizes',
         file: 'Size',
       },
       {
-        title: 'Floated',
+        name: 'Floated',
         description: 'A button can be aligned to the left or right of its container',
         file: 'Floated',
       },
       {
-        title: 'Colored',
+        name: 'Colored',
         description: 'A button can have different colors',
         file: 'Colored',
       },
       {
-        title: 'Compact',
+        name: 'Compact',
         description: 'A button can reduce its padding to fit into tighter spaces',
         file: 'Compact',
       },
       {
-        title: 'Toggle',
+        name: 'Toggle',
         description: 'A button can be formatted to toggle on and off',
         file: 'Toggle',
       },
       {
-        title: 'Positive',
+        name: 'Positive',
         description: 'A button can hint towards a positive consequence',
         file: 'Positive',
       },
       {
-        title: 'Negative',
+        name: 'Negative',
         description: 'A button can hint towards a negative consequence',
         file: 'Negative',
       },
       {
-        title: 'Fluid',
+        name: 'Fluid',
         description: 'A button can take the width of its container',
         file: 'Fluid',
       },
       {
-        title: 'Circular',
+        name: 'Circular',
         description: 'A button can be circular',
         file: 'Circular',
       },
       {
-        title: 'CircularSocial',
+        name: 'CircularSocial',
         file: 'CircularSocial',
       },
       {
-        title: 'Vertically Attached',
+        name: 'Vertically Attached',
         description: 'A button can be attached to the top or bottom of other content',
         info: 'You should use `<div is="sui-button">...</div>` to make button attachable',
         file: 'Attached',
@@ -174,47 +174,47 @@ export default [
         file: 'AttachedGroup',
       },
       {
-        title: 'Horizontally Attached',
+        name: 'Horizontally Attached',
         description: 'A button can be attached to the left or right of other content',
         file: 'AttachedHorizontally',
       },
     ],
   },
   {
-    title: 'Group Variations',
+    name: 'Group Variations',
     examples: [
       {
-        title: 'Vertical Buttons',
+        name: 'Vertical Buttons',
         description: 'Groups can be formatted to appear vertically',
         file: 'ButtonsVertical',
       },
       {
-        title: 'Icon Buttons',
+        name: 'Icon Buttons',
         description: 'Groups can be formatted as icons',
         file: 'ButtonsIcon',
       },
       {
-        title: 'Labeled Icon Buttons',
+        name: 'Labeled Icon Buttons',
         description: 'Groups can be formatted as labeled icons',
         file: 'ButtonsIconLabeled',
       },
       {
-        title: 'Mixed Group',
+        name: 'Mixed Group',
         description: 'Groups can be formatted to use multiple button types together',
         file: 'ButtonsMixed',
       },
       {
-        title: 'Equal Width',
+        name: 'Equal Width',
         description: 'Groups can have their widths divided evenly',
         file: 'ButtonsEqualWidth',
       },
       {
-        title: 'Colored Buttons',
+        name: 'Colored Buttons',
         description: 'Groups can have a shared color',
         file: 'ButtonsColored',
       },
       {
-        title: 'Basic Buttons',
+        name: 'Basic Buttons',
         description: 'A button group can be less pronounced',
         file: 'ButtonsBasic',
       },
@@ -223,7 +223,7 @@ export default [
         file: 'ButtonsBasicColored',
       },
       {
-        title: 'Group Sizes',
+        name: 'Group Sizes',
         description: 'Groups can have a shared size',
         file: 'ButtonsSizes',
       },

@@ -1,19 +1,19 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Modal',
+        name: 'Modal',
         description: 'A standard modal',
         file: 'Modal',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Scrolling Content',
+        name: 'Scrolling Content',
         description: 'A modal can use the entire size of the screen.',
         file: 'ScrollingModal',
       },

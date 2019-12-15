@@ -1,14 +1,14 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Label',
+        name: 'Label',
         description: 'A label',
         file: 'Label',
       },
       {
-        title: 'Image',
+        name: 'Image',
         description: 'A label can be formatted to emphasize an image',
         file: 'Image',
       },
@@ -19,7 +19,7 @@ export default [
         file: 'Image3',
       },
       {
-        title: 'Pointing',
+        name: 'Pointing',
         description: 'A label can point to Variations next to it.',
         file: 'Pointing',
       },
@@ -27,17 +27,17 @@ export default [
         file: 'PointingRed',
       },
       {
-        title: 'Corner',
+        name: 'Corner',
         description: 'A label can position itself in the corner of an element.',
         file: 'Corner',
       },
       {
-        title: 'Tag',
+        name: 'Tag',
         description: 'A label can appear as a tag.',
         file: 'Tag',
       },
       {
-        title: 'Ribbon',
+        name: 'Ribbon',
         description: 'A label can appear as a ribbon attaching itself to an element.',
         file: 'Ribbon',
       },
@@ -45,42 +45,42 @@ export default [
         file: 'RibbonImage',
       },
       {
-        title: 'Attached',
+        name: 'Attached',
         description: 'A label can attach to a content segment.',
         file: 'Attached',
       },
       {
-        title: 'Horizontal',
+        name: 'Horizontal',
         description: 'A horizontal label is formatted to label content along-side it horizontally.',
         file: 'Horizontal',
       },
       {
-        title: 'Floating',
+        name: 'Floating',
         description: 'A label can float above another element.',
         file: 'Floating',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Detail',
+        name: 'Detail',
         description: 'A label can contain a detail.',
         file: 'Detail',
       },
       {
-        title: 'Icon',
+        name: 'Icon',
         description: 'A label can include an icon.',
         file: 'Icon',
       },
       {
-        title: 'Image',
+        name: 'Image',
         description: 'A label can include an image.',
         file: 'ContentImage',
       },
       {
-        title: 'Link',
+        name: 'Link',
         description: 'A label can be a link or contain an item that links.',
         file: 'Link',
       },
@@ -90,10 +90,10 @@ export default [
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Circular',
+        name: 'Circular',
         description: 'A label can be circular.',
         file: 'Circular',
       },
@@ -101,17 +101,17 @@ export default [
         file: 'CircularEmpty',
       },
       {
-        title: 'Basic',
+        name: 'Basic',
         description: 'A label can reduce its complexity',
         file: 'Basic',
       },
       {
-        title: 'Colored',
+        name: 'Colored',
         description: 'A label can have different colors.',
         file: 'Colored',
       },
       {
-        title: 'Size',
+        name: 'Size',
         description: 'A label can be small or large.',
         file: 'Size',
       },

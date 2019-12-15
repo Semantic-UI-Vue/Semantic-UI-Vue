@@ -1,24 +1,24 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Input',
+        name: 'Input',
         description: 'A standard input field',
         file: 'Input',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Focus',
+        name: 'Focus',
         description: 'An input field can show a user is currently interacting with it',
         file: 'Focus',
       },
       {
-        title: 'Loading',
+        name: 'Loading',
         description: 'An icon input field can show that it is currently loading data',
         file: 'Loading',
       },
@@ -26,27 +26,27 @@ export default [
         file: 'Loading2',
       },
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'An input field can show that it is disabled',
         file: 'Disabled',
       },
       {
-        title: 'Error',
+        name: 'Error',
         description: 'An input field can show the data contains errors',
         file: 'Error',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Icon',
+        name: 'Icon',
         description: 'An input can be formatted with an icon',
         file: 'Icon',
       },
       {
-        title: 'Size',
+        name: 'Size',
         description: 'An input can vary in size',
         file: 'Size',
       },
@@ -66,12 +66,12 @@ export default [
         file: 'Size6',
       },
       {
-        title: 'Fluid',
+        name: 'Fluid',
         description: 'An input can take the size of its container',
         file: 'Fluid',
       },
       {
-        title: 'Transparent',
+        name: 'Transparent',
         description: 'A transparent input has no background',
         file: 'Transparent',
       },

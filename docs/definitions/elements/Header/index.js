@@ -1,19 +1,19 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Page Headers',
+        name: 'Page Headers',
         description: 'Headers may be oriented to give the hierarchy of a section in the context of the page.',
         file: 'PageHeaders',
       },
       {
-        title: 'Content Headers',
+        name: 'Content Headers',
         description: 'Headers may be oriented to give the importance of a section.',
         file: 'ContentHeaders',
       },
       {
-        title: 'Icon Headers',
+        name: 'Icon Headers',
         description: 'A header can be formatted to emphasize an icon.',
         file: 'IconHeaders',
       },
@@ -21,17 +21,17 @@ export default [
         file: 'IconFriends',
       },
       {
-        title: 'Sub Headers',
+        name: 'Sub Headers',
         description: 'Headers may be formatted to label smaller or de-emphasized content.',
         file: 'SubHeader',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Image',
+        name: 'Image',
         description: 'A header may contain an image.',
         file: 'ImageAvatar',
       },
@@ -39,7 +39,7 @@ export default [
         file: 'ImageLearnMore',
       },
       {
-        title: 'Icon',
+        name: 'Icon',
         description: 'A header may contain an icon.',
         file: 'Icon',
       },
@@ -47,57 +47,57 @@ export default [
         file: 'IconSubheader',
       },
       {
-        title: 'Subheader',
+        name: 'Subheader',
         description: 'Headers may contain subheaders.',
         file: 'SubheaderContent',
       },
     ],
   },
   {
-    title: 'States',
+    name: 'States',
     examples: [
       {
-        title: 'Disabled',
+        name: 'Disabled',
         description: 'A header can show that it is inactive.',
         file: 'Disabled',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Dividing',
+        name: 'Dividing',
         description: 'A header can be formatted to divide itself from the content below it.',
         file: 'Dividing',
       },
       {
-        title: 'Block',
+        name: 'Block',
         description: 'A header can be formatted to appear inside a content block.',
         file: 'Block',
       },
       {
-        title: 'Attached',
+        name: 'Attached',
         description: 'A header can be attached to other content, like a segment.',
         file: 'Attached',
       },
       {
-        title: 'Floating',
+        name: 'Floating',
         description: 'A header can sit to the left or right of other content.',
         file: 'Floating',
       },
       {
-        title: 'Text Alignment',
+        name: 'Text Alignment',
         description: 'A header can have its text aligned to a side.',
         file: 'TextAlignment',
       },
       {
-        title: 'Colored',
+        name: 'Colored',
         description: 'A header can be formatted with different colors.',
         file: 'Colored',
       },
       {
-        title: 'Inverted',
+        name: 'Inverted',
         description: 'A header can have its colors inverted for contrast.',
         file: 'Inverted',
       },

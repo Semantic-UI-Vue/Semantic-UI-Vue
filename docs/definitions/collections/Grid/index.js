@@ -1,54 +1,54 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Grid',
+        name: 'Grid',
         description: 'A basic grid',
         file: 'Grid',
       },
       {
-        title: 'Divided',
+        name: 'Divided',
         description: 'A grid can have dividers between its columns',
         file: 'Divided',
       },
       {
-        title: 'Vertically Divided',
+        name: 'Vertically Divided',
         description: 'A grid can have dividers between rows',
         file: 'VerticallyDivided',
       },
       {
-        title: 'Celled',
+        name: 'Celled',
         description: 'A grid can have rows divided into cells',
         file: 'Celled',
       },
       {
-        title: 'Internally Celled',
+        name: 'Internally Celled',
         description: 'A grid can have rows divisions only between internal rows.',
         file: 'InternallyCelled',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Rows',
+        name: 'Rows',
         description: 'A row is a horizontal grouping of columns.',
         file: 'Rows',
       },
       {
-        title: 'Columns',
+        name: 'Columns',
         description: 'Columns each contain gutters giving them equal spacing from other columns.',
         file: 'Columns',
       },
     ],
   },
   {
-    title: 'Variations',
+    name: 'Variations',
     examples: [
       {
-        title: 'Stretched',
+        name: 'Stretched',
         description: 'A row can automatically resize all elements to split the available width evenly.',
         file: 'Stretched',
       },

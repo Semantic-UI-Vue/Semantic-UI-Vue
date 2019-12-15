@@ -83,10 +83,10 @@ import Example1 from './Example1.example';
 
 export default [
   {
-    title: 'Section\'s title',
+    name: 'Section\'s title',
     examples: [
       {
-        title: 'Example1',
+        name: 'Example1',
         description: 'This is the first example',
         component: Example1,
       },

@@ -73,7 +73,7 @@ export default {
     table: {
       inside: null,
       index: null,
-      title: null,
+      name: null,
     },
     activeIndex: null,
   }),

@@ -1,34 +1,34 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Items',
+        name: 'Items',
         description: 'A group of items',
         file: 'ItemGroup',
       },
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Image',
+        name: 'Image',
         description: 'An item can contain an image',
         file: 'ContentImage',
       },
       {
-        title: 'Content',
+        name: 'Content',
         description: 'An item can contain content',
         file: 'ContentContent',
       },
       {
-        title: 'Header',
+        name: 'Header',
         description: 'An item can contain a header',
         file: 'ContentHeader',
       },
       {
-        title: 'Metadata',
+        name: 'Metadata',
         description: 'An item can contain content metadata',
         file: 'ContentMeta',
       },

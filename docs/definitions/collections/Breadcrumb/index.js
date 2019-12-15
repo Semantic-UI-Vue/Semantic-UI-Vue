@@ -1,9 +1,9 @@
 export default [
   {
-    title: 'Types',
+    name: 'Types',
     examples: [
       {
-        title: 'Breadcrumb',
+        name: 'Breadcrumb',
         description: 'A standard breadcrumb',
         file: 'Breadcrumb',
       },
@@ -13,10 +13,10 @@ export default [
     ],
   },
   {
-    title: 'Content',
+    name: 'Content',
     examples: [
       {
-        title: 'Divider',
+        name: 'Divider',
         description: 'A breadcrumb can contain a divider to show the relationship between sections, this can be formatted as an icon or text',
         file: 'Divider',
       },
@@ -24,12 +24,12 @@ export default [
         file: 'DividerArrow',
       },
       {
-        title: 'Section',
+        name: 'Section',
         description: 'A breadcrumb can contain sections that can either be formatted as a link or text',
         file: 'Section',
       },
       {
-        title: 'Link',
+        name: 'Link',
         description: 'A section may be linkable or contain a link',
         file: 'Link',
       },
