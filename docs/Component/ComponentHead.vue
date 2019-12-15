@@ -17,8 +17,8 @@
       <sui-menu :widths="2" class="component-head-menu">
         <router-link
           is="sui-menu-item"
-          :active="tab === 'definitions'"
-          :to="`/${type}/${componentName}/definitions`"
+          :active="!tab"
+          :to="`/${type}/${componentName}`"
         >
           Definitions
         </router-link>

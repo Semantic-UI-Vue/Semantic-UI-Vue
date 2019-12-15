@@ -1,7 +1,7 @@
 <template>
   <div>
     <component-head :component-name="componentName" :type="type" :tab="tab" />
-    <definitions :component-name="componentName" :type="type" v-if="tab === 'definitions'" />
+    <definitions :component-name="componentName" :type="type" v-if="!tab" />
     <api :component-name="componentName" :type="type" v-if="tab === 'api'" />
   </div>
 </template>
@@ -23,7 +23,6 @@ export default {
     type: String,
     tab: {
       type: String,
-      default: 'definitions',
     },
   },
 };

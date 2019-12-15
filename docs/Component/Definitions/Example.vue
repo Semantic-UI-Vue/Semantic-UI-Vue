@@ -17,8 +17,8 @@
         />
       </sui-popup>
     </sui-menu>
-    <h4 :v-if="example.title" is="sui-header" :class="$style.h4">
-      {{example.title}}
+    <h4 :v-if="example.name" is="sui-header" :class="$style.h4">
+      {{example.name}}
     </h4>
     <p :v-if="example.description" :class="$style.p">
       {{example.description}}

@@ -69,6 +69,7 @@
         <sui-menu-menu>
           <router-link
             is="sui-menu-item"
+            active-class="active"
             :key="comp"
             :to="getUrl(mod.name, comp)"
             v-for="comp in mod.components"
