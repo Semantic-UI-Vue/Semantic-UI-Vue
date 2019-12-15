@@ -154,7 +154,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .ui.menu:last-child {
   margin-bottom: 110px;
 }

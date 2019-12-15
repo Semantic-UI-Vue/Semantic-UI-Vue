@@ -1,7 +1,9 @@
-import Wireframe from './Wireframe';
-import Clipboard from './Clipboard';
+const componentsContext = require.context('.', false, /\.vue$/);
 
 export default (Vue) => {
-  Vue.component(Wireframe.name, Wireframe);
-  Vue.component(Clipboard.name, Clipboard);
+  componentsContext.keys().forEach((key) => {
+    const name = key.replace('./', '').replace('.vue', '');
+    const Component = componentsContext(key).default;
+    Vue.component(name, Component);
+  });
 };

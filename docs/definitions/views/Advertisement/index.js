@@ -5,13 +5,13 @@ export default [
       {
         title: 'Ad',
         description: 'A standard ad.',
-        file: 'StandardAdvertisement',
+        file: 'StandardAd',
       },
       {
         title: 'Common Units',
         description: 'An advertisement can appear in common ad unit sizes.',
         info: 'These additional examples use the testvariation to appear on the page. The Ad component is best used as a wrapper for third party ad network content.',
-        file: 'CommonUnits',
+        file: 'CommonUnitsAd',
       },
       {
         title: 'Mobile',
@@ -37,7 +37,7 @@ export default [
       {
         title: 'Leaderboards',
         description: 'An ad can use leaderboard ad unit size.',
-        file: 'LeaderboardsAd',
+        file: 'Leaderboards',
       },
       {
         title: 'Panorama',

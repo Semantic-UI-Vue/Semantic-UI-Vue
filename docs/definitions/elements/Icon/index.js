@@ -70,21 +70,21 @@ export default [
       {
         title: 'Icons',
         description: 'Several icons can be used together as a group',
-        file: 'Group',
+        file: 'IconGroup',
       },
       {
-        file: 'Group2',
+        file: 'IconGroup2',
       },
       {
         title: 'Corner Icon',
         description: 'A group of icons can display a smaller corner icon',
-        file: 'GroupCorner',
+        file: 'IconGroupCorner',
       },
       {
-        file: 'GroupCorner2',
+        file: 'IconGroupCorner2',
       },
       {
-        file: 'GroupCornerHeader',
+        file: 'IconGroupCornerHeader',
       },
     ],
   },

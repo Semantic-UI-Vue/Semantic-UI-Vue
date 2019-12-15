@@ -5,11 +5,11 @@ export default [
       {
         title: 'Feed',
         description: 'A feed',
-        file: 'FeedExample',
+        file: 'Feed',
       },
       {
         description: 'You can also pass an array of events to generate the markup',
-        file: 'FeedShorthandExample',
+        file: 'FeedShorthand',
       },
     ],
   },
@@ -19,56 +19,56 @@ export default [
       {
         title: 'Image Label',
         description: 'An event can contain an image label',
-        file: 'ImageLabelExample',
+        file: 'ImageLabel',
       },
       {
         description: 'You can do the same using shorthands',
-        file: 'ImageLabelShorthandExample',
+        file: 'ImageLabelShorthand',
       },
       {
         title: 'Icon Label',
         description: 'An event can contain an icon label',
-        file: 'IconLabelExample',
+        file: 'IconLabel',
       },
       {
         description: 'You can do the same using shorthands',
-        file: 'IconLabelShorthandExample',
+        file: 'IconLabelShorthand',
       },
       {
         title: 'Content Date',
         description: 'Event content can contain a date',
-        file: 'ContentDateExample',
+        file: 'ContentDate',
       },
       {
         description: 'You can do the same using shorthands',
-        file: 'ContentDateShorthandExample',
+        file: 'ContentDateShorthand',
       },
       {
         title: 'Summary Date',
         description: 'An event summary can contain a date',
-        file: 'SummaryDateExample',
+        file: 'SummaryDate',
       },
       {
         description: 'You can do the same using shorthands',
-        file: 'SummaryDateShorthandExample',
+        file: 'SummaryDateShorthand',
       },
       {
         title: 'Extra Images',
         description: 'An event can contain extra images.',
-        file: 'ExtraImagesExample',
+        file: 'ExtraImages',
       },
       {
         description: 'You can do the same using shorthands',
-        file: 'ExtraImagesShorthandExample',
+        file: 'ExtraImagesShorthand',
       },
       {
         title: 'Extra Text',
         description: 'An event can contain extra text.',
-        file: 'ExtraTextExample',
+        file: 'ExtraText',
       },
       {
         description: 'You can do the same using shorthands',
-        file: 'ExtraTextShorthandExample',
+        file: 'ExtraTextShorthand',
       },
     ],
   },
@@ -78,10 +78,10 @@ export default [
       {
         title: 'Size',
         description: 'A feed can have different sizes',
-        file: 'SizeSmallExample',
+        file: 'SizeSmall',
       },
       {
-        file: 'SizeLargeExample',
+        file: 'SizeLarge',
       },
     ],
   },

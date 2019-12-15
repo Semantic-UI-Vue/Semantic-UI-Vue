@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import * as examples from '../examples';
 import capitalize from 'lodash/capitalize';
 
 export default {
@@ -32,7 +31,8 @@ export default {
   },
   computed: {
     examples() {
-      return examples[`${this.title}Example`];
+      // const component = examples[`${this.title}Example`];
+      return 1;
     },
     title() {
       return capitalize(this.componentName);

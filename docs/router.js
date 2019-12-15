@@ -30,7 +30,7 @@ const router = new Router({
       component: FixedMenu,
     },
     {
-      path: '/maximize/:example',
+      path: '/maximize/:type/:componentName/:fileName',
       component: Maximize,
       props: true,
     },
@@ -58,6 +58,11 @@ const router = new Router({
         },
         {
           path: '/:type/:componentName',
+          component: Component,
+          props: true,
+        },
+        {
+          path: '/:type/:componentName/:tab',
           component: Component,
           props: true,
         },

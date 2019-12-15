@@ -5,19 +5,19 @@ export default [
       {
         title: 'YouTube',
         description: 'An embed can be used to display YouTube Content',
-        file: 'YouTubeExample',
+        file: 'YouTube',
       },
       {
         title: 'Vimeo',
         description: 'An embed can be used to display Vimeo content',
-        file: 'VimeoExample',
+        file: 'Vimeo',
       },
       {
         title: 'Custom Content',
         description: 'An embed can display any web content',
         info: 'Embeds use an intrinsic aspect ratios to embed content responsively.' +
           ' Content will preserve their intrinsic aspect ratio for all browser sizes responsively',
-        file: 'CustomContentExample',
+        file: 'CustomContent',
       },
     ],
   },
@@ -27,7 +27,7 @@ export default [
       {
         title: 'Active',
         description: 'An embed can be active',
-        file: 'ActiveExample',
+        file: 'Active',
       },
     ],
   },
@@ -37,7 +37,7 @@ export default [
       {
         title: 'Aspect Ratio',
         description: 'An embed can specify an alternative aspect ratio',
-        file: 'AspectRatioExample',
+        file: 'AspectRatio',
       },
     ],
   },
@@ -47,12 +47,12 @@ export default [
       {
         title: 'Source settings',
         description: 'Settings to configure video behavior',
-        file: 'SourceSettingsExample',
+        file: 'SourceSettings',
       },
       {
         title: 'Iframe',
         description: 'You can pass props to a shorthand',
-        file: 'IframeExample',
+        file: 'Iframe',
       },
     ],
   },

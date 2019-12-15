@@ -55,7 +55,7 @@ export default [
       {
         title: 'Error',
         description: 'A progress bar can show an error state',
-        file: 'ErrorState',
+        file: 'Error',
       },
       {
         title: 'Disabled',

@@ -8,7 +8,6 @@
 import Clipboard from 'clipboard';
 
 export default {
-  name: 'Clipboard',
   inheritAttrs: false,
   props: {
     classProp: String,

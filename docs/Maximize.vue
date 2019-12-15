@@ -3,30 +3,27 @@
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase';
-const examplesContext = require.context('./examples/', true, /\.vue$/);
+import camelCase from 'lodash/camelCase';
+import upperFirst from 'lodash/upperFirst';
+const examplesContext = require.context('./definitions/', true, /\.vue$/);
 
-const examples = examplesContext.keys().reduce((examplesAccumulator, key) => {
-  const exampleName = kebabCase(
-    key
-      .replace(/.*\/([^/]+\/[^/.]+).*/, '$1')
-      .replace('/', '-')
-  );
-
-  return {
-    ...examplesAccumulator,
-    [exampleName]: examplesContext(key).default,
-  };
-});
+const upperCamelCase = str => upperFirst(camelCase(str));
 
 export default {
   props: {
-    example: String,
+    type: String,
+    componentName: String,
+    fileName: String,
   },
-  data() {
-    return {
-      component: examples[this.example],
-    };
+  computed: {
+    key() {
+      const componentName = upperCamelCase(this.componentName);
+      const fileName = upperCamelCase(this.fileName);
+      return `./definitions/${this.type}/${componentName}/${fileName}`
+    },
+    component() {
+      return examplesContext(this.key).default;
+    },
   },
 }
 </script>

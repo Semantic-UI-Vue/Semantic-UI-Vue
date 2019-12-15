@@ -13,6 +13,23 @@
         {{title}}
         <sui-header-subheader sub>{{currentComponent.description}}</sui-header-subheader>
       </h1>
+
+      <sui-menu :widths="2" class="component-head-menu">
+        <router-link
+          is="sui-menu-item"
+          :active="tab === 'definitions'"
+          :to="`/${type}/${componentName}/definitions`"
+        >
+          Definitions
+        </router-link>
+        <router-link
+          is="sui-menu-item"
+          :active="tab === 'api'"
+          :to="`/${type}/${componentName}/api`"
+        >
+          API
+        </router-link>
+      </sui-menu>
     </sui-container>
   </sui-segment>
 </template>
@@ -28,6 +45,7 @@ export default {
   props: {
     type: String,
     componentName: String,
+    tab: String,
   },
   data() {
     return {
@@ -58,5 +76,9 @@ export default {
   margin-right: 3em !important;
   margin-left: 3em !important;
   width: auto !important;
+}
+
+.component-head-menu {
+  margin: 3rem 0rem 0rem !important;
 }
 </style>

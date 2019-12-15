@@ -56,7 +56,7 @@ export default [
       {
         title: 'Loading',
         description: 'A dropdown can show that it is currently loading data',
-        file: 'LoadingExample',
+        file: 'Loading',
       },
       {
         title: 'Button',

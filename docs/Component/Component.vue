@@ -1,39 +1,30 @@
 <template>
   <div>
-    <component-head :component-name="componentName" :type="type" />
-    <sui-container class="main">
-      <component-body :component-name="componentName" :type="type" />
-      <component-rail :component-name="componentName" :type="type" />
-    </sui-container>
+    <component-head :component-name="componentName" :type="type" :tab="tab" />
+    <definitions :component-name="componentName" :type="type" />
   </div>
 </template>
 
 <script>
 import ComponentHead from './ComponentHead';
-import ComponentRail from './ComponentRail';
-import ComponentBody from './ComponentBody';
+import Definitions from './Definitions/Definitions';
 
 export default {
   name: 'SuiComponent',
   components: {
     ComponentHead,
-    ComponentRail,
-    ComponentBody,
+    Definitions,
   },
   props: {
     componentName: String,
     type: String,
+    tab: {
+      type: String,
+      default: 'definitions',
+    },
   },
 };
 </script>
 
 <style lang="css" scoped>
-.main {
-  position: relative;
-  margin-left: 3em !important;
-  margin-right: 387px !important;
-  max-width: 980px !important;
-  padding: 2em 0em 7em;
-  width: auto;
-}
 </style>
