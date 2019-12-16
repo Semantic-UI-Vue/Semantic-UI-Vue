@@ -3,6 +3,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   runtimeCompiler: true,
+  outputDir: path.resolve(__dirname, 'dist/docs'),
   pages: {
     app: {
       entry: path.resolve(__dirname, './docs/main.js'),
@@ -29,7 +30,7 @@ module.exports = {
         [
           {
             from: path.resolve(__dirname, 'docs/public'),
-            to: path.resolve(__dirname, 'dist'),
+            to: path.resolve(__dirname, 'dist/docs'),
             toType: 'dir',
           }
         ]
