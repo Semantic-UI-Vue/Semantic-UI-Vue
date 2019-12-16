@@ -73,6 +73,7 @@ export default {
 }
 
 .masthead > .ui.container {
+  max-width: 960px !important;
   margin-right: 3em !important;
   margin-left: 3em !important;
   width: auto !important;
