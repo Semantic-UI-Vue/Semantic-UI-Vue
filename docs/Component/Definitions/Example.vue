@@ -29,7 +29,7 @@
       :class="open ? $style.open : $style.closed"
     >
       <div :class="$style.exampleContainer">
-        <div :is="example.component" />
+        <div :is="example.runtime" />
       </div>
       <sui-label attached="top" :class="$style.label">
         Example
@@ -46,7 +46,6 @@
 
 <script>
 import kebabCase from 'lodash/kebabCase';
-import upperFirst from 'lodash/upperFirst';
 import { openSandbox } from './codesandbox';
 
 export default {
@@ -68,16 +67,10 @@ export default {
     previewContainerComponent() {
       return this.open ? 'sui-segment' : 'div';
     },
-    fileName() {
-      return `${this.type}/${upperFirst(this.componentName)}Example/${this.example.file}.example.vue`;
-    },
     maximizeLink() {
-      const exampleName = kebabCase(
-        this.fileName
-          .replace(/.*\/([^/]+\/[^/.]+).*/, '$1')
-          .replace('/', '-')
-      );
-      return `/#/maximize/${exampleName}`;
+      const componentName = kebabCase(this.example.componentName);
+      const fileName = kebabCase(this.example.file);
+      return `/#/maximize/${this.example.type}/${componentName}/${fileName}`;
     },
   },
   methods: {

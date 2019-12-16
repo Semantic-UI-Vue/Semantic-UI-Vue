@@ -19,7 +19,8 @@ export default {
     key() {
       const componentName = upperCamelCase(this.componentName);
       const fileName = upperCamelCase(this.fileName);
-      return `./definitions/${this.type}/${componentName}/${fileName}`
+      console.log(examplesContext.keys()); // eslint-disable-line
+      return `./${this.type}/${componentName}/${fileName}.example.vue`
     },
     component() {
       return examplesContext(this.key).default;
