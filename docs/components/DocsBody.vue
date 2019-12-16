@@ -60,7 +60,7 @@ export default {
   position: relative;
   margin-left: 3em !important;
   margin-right: 387px !important;
-  max-width: 980px !important;
+  max-width: 960px !important;
   padding: 2em 0em 7em;
   width: auto;
 }
