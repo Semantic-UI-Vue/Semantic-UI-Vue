@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     getClass(example) {
-      return `${example.title ? '' : 'another '}example`;
+      return `${example.name ? '' : 'another '}example`;
     }
   },
 }
