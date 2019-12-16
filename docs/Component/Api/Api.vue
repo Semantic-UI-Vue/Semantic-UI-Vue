@@ -1,23 +1,22 @@
 <template>
-  <div>
-    <docs-rail :title="title" />
-    <docs-body :elements="subComponents">
-      <template v-slot="subComponent">
-        <h4 is="sui-header" class="api-h4">Props</h4>
-        <api-table class="table" :fields="propsFields" :data="subComponent.props" />
-
-        <template v-if="subComponent.events">
-          <h4 is="sui-header" class="api-h4">Events</h4>
-          <api-table class="table" :fields="propsFields" :data="subComponent.events" />
-        </template>
-
-        <template v-if="subComponent.slots">
-          <h4 is="sui-header" class="api-h4">Slots</h4>
-          <api-table class="table" :fields="propsFields" :data="subComponent.slots" />
-        </template>
+  <docs-body :title="title" :elements="subComponents" sub-elements-key="sections">
+    <template v-slot="bindings">
+      <template v-if="bindings.element.data">
+        <h4
+          is="sui-header"
+          :id="bindings.id"
+          class="api-h4"
+        >
+          {{bindings.element.name}}
+        </h4>
+        <api-table
+          class="table"
+          :fields="bindings.element.fields"
+          :data="bindings.element.data"
+        />
       </template>
-    </docs-body>
-  </div>
+    </template>
+  </docs-body>
 </template>
 
 <script>
@@ -77,6 +76,11 @@ export default {
         { key: 'description', text: 'Description' },
         { key: 'value', text: 'Value' },
       ],
+      slotsFields: [
+        { key: 'name', text: 'Event' },
+        { key: 'description', text: 'Description' },
+        { key: 'props', text: 'Props' },
+      ],
     };
   },
   computed: {
@@ -93,12 +97,41 @@ export default {
           Component.name === this.suiName ||
           (Component.meta && Component.meta.parent === this.suiName)
         )
-        .map(Component => ({
-          name: Component.name,
-          props: getProps(Component),
-          events: getEvents(Component),
-          slots: getSlots(Component),
-        }));
+        .map(Component => {
+          const sections = [];
+          const props = getProps(Component);
+          const events = getEvents(Component);
+          const slots = getSlots(Component);
+
+          if (props) {
+            sections.push({
+              name: 'Props',
+              fields: this.propsFields,
+              data: getProps(Component),
+            });
+          }
+
+          if (events) {
+            sections.push({
+              name: 'Events',
+              fields: this.eventsFields,
+              data: getEvents(Component),
+            });
+          }
+
+          if (slots) {
+            sections.push({
+              name: 'Slots',
+              fields: this.slotsFields,
+              data: getSlots(Component),
+            });
+          }
+
+          return {
+            name: Component.name,
+            sections,
+          };
+        });
     },
   },
 }

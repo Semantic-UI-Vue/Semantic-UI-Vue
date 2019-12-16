@@ -1,11 +1,13 @@
 <template>
   <div>
-    <docs-rail :title="title" />
-    <docs-body :elements="elements">
-      <template v-slot="element">
-        <template v-for="(example, index) in element.examples">
-          <example :key="index" :example="example" :class="getClass(example)" />
-        </template>
+    <docs-body :elements="elements" sub-elements-key="examples" :title="title">
+      <template v-slot="bindings">
+        <example
+          :key="index"
+          class="example"
+          :example="bindings.element"
+          :id="bindings.id"
+        />
       </template>
     </docs-body>
   </div>
@@ -30,19 +32,10 @@ export default {
       return definitions[this.title];
     },
   },
-  methods: {
-    getClass(example) {
-      return `${example.name ? '' : 'another '}example`;
-    }
-  },
 }
 </script>
 
 <style scoped>
-.another.example {
-  margin-top: 0;
-}
-
 .example {
   margin: 2em 0;
   padding: 2em 0;

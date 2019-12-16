@@ -1,9 +1,40 @@
 <template>
   <div class="component-body">
+    <sui-rail dividing position="right" id="docs-rail">
+      <h4 is="sui-header">
+        {{title}}
+      </h4>
+
+      <sui-accordion vertical fluid text is="sui-menu">
+        <sui-menu-item v-for="(element, i) in elements" :key="i">
+          <sui-accordion-title is="sui-menu-header" active>
+            {{element.name}}
+            <sui-icon name="dropdown" />
+          </sui-accordion-title>
+          <sui-accordion-content is="sui-menu" text class="sub-menu">
+            <template v-for="(subElement, j) in element[subElementsKey]">
+              <router-link
+                v-if="subElement.name"
+                is="sui-menu-item"
+                :to="`#${getId(element, subElement)}`"
+                :key="j"
+              >
+                {{subElement.name}}
+              </router-link>
+            </template>
+          </sui-accordion-content>
+        </sui-menu-item>
+      </sui-accordion>
+    </sui-rail>
     <template v-for="element in elements">
       <div :key="element.name">
         <h2 is="sui-header" dividing>{{element.name}}</h2>
-        <slot v-bind="element" />
+        <template v-for="subElement in element[subElementsKey]">
+          <slot
+            v-bind:id="getId(element, subElement)"
+            v-bind:element="subElement"
+          />
+        </template>
       </div>
     </template>
   </div>
@@ -12,8 +43,14 @@
 <script>
 export default {
   props: {
-    elementComponent: Object,
     elements: Array,
+    subElementsKey: String,
+    title: String,
+  },
+  methods: {
+    getId(element, subElement) {
+      return `${element.name}-${subElement.name}`;
+    }
   },
 }
 </script>
@@ -41,5 +78,15 @@ export default {
 .component-body .example:first-child,
 .component-body .ui.header + .example {
   margin-top: 0;
+}
+
+#docs-rail {
+  margin-left: 3em;
+  padding-top: 2em;
+  width: 319px;
+}
+
+.sub-menu {
+  min-height: 0 !important;
 }
 </style>

@@ -96,8 +96,13 @@ export default {
   meta: {
     events: {
       click: {
-        description: 'Click event passed to the button',
+        description: 'Click event passed to the button.',
         value: Event,
+      },
+    },
+    slots: {
+      default: {
+        description: 'Primary content.',
       },
     },
   },

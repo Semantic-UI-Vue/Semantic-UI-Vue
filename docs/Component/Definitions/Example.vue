@@ -17,7 +17,7 @@
         />
       </sui-popup>
     </sui-menu>
-    <h4 :v-if="example.name" is="sui-header" :class="$style.h4">
+    <h4 :v-if="example.name" is="sui-header" :class="$style.h4" :id="id">
       {{example.name}}
     </h4>
     <p :v-if="example.description" :class="$style.p">
@@ -51,6 +51,7 @@ import { openSandbox } from './codesandbox';
 
 export default {
   props: {
+    id: String,
     example: Object,
   },
   data() {
