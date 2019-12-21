@@ -2,6 +2,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist/docs'),
     publicPath: '/',
-    filename: 'main.js',
+    filename: '[name].[hash].js',
   },
   module: {
     rules: [
@@ -45,7 +46,8 @@ module.exports = {
           {
             use: [
               'vue-style-loader',
-              'css-loader'
+              MiniCssExtractPlugin.loader,
+              'css-loader',
             ],
           },
         ],
@@ -68,6 +70,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'docs/public/index.html',
       publicPath: '/',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].css',
     }),
   ],
   resolve: {
