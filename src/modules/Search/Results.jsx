@@ -1,7 +1,5 @@
-import groupBy from 'lodash.groupby';
-import sortBy from 'lodash.sortby';
-import forIn from 'lodash.forin';
 import { SemanticUIVueMixin } from '../../lib';
+import { forIn, groupBy, sortBy } from '../../lib/underscore';
 import EmptyMessage from './EmptyMessage';
 import Result from './Result';
 

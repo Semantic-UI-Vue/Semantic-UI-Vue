@@ -1,5 +1,5 @@
-import escapeRegExp from 'lodash/escapeRegExp';
 import { SemanticUIVueMixin } from '../../lib';
+import { escapeRegExp } from '../../lib/underscore';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../../elements/Icon/Icon';
 import Input from '../../elements/Input/Input';

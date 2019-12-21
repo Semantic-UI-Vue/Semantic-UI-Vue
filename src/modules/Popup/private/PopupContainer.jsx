@@ -1,6 +1,5 @@
-import mapValues from 'lodash/mapValues';
-import without from 'lodash/without';
 import { isBrowser, SemanticUIVueMixin } from '../../../lib';
+import { mapValues, without } from '../../../lib/underscore';
 import { POSITIONS } from './popupConstants';
 
 export default {

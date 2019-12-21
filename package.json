@@ -21,11 +21,6 @@
     "lint": "vue-cli-service lint src docs test",
     "test": "vue-cli-service test:unit"
   },
-  "dependencies": {
-    "lodash.forin": "^4.4.0",
-    "lodash.groupby": "^4.6.0",
-    "lodash.sortby": "^4.7.0"
-  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
@@ -41,6 +36,7 @@
     "core-js": "^3.3.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "lodash": "^4.17.15",
     "marked": "^0.7.0",
     "portal-vue": "^2.1.6",
     "raw-loader": "^3.1.0",

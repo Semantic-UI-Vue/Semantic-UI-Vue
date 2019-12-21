@@ -1,4 +1,4 @@
-import kebabCase from 'lodash/kebabCase';
+import { kebabCase } from '../../underscore';
 
 export default function getElementType(defaultEl = 'div') {
   const tag = this.$vnode && this.$vnode.data.tag;

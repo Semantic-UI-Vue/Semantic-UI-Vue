@@ -1,5 +1,4 @@
-import camelCase from 'lodash/camelCase';
-import upperFirst from 'lodash/upperFirst';
+import { camelCase, upperFirst } from '../../underscore';
 
 export default function getChildProps() {
   if (!(this.$vnode && this.$vnode.data.attrs)) return {};
