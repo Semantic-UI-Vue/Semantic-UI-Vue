@@ -3,7 +3,6 @@
     <docs-body :elements="elements" sub-elements-key="examples" :title="title">
       <template v-slot="bindings">
         <example
-          :key="index"
           class="example"
           :example="bindings.element"
           :id="bindings.id"
