@@ -1,4 +1,4 @@
-import uniq from 'lodash/uniq';
+import { uniq } from './underscore';
 
 export function Enum(values = [], obj = {}) {
   let type;
