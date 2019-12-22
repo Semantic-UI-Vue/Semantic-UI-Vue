@@ -18,11 +18,11 @@
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.docs.config.js --progress --colors --devtool eval-source-map",
     "build:docs": "webpack --config config/webpack.docs.config.js --progress --colors",
-    "build:multi": "webpack --config config/webpack.multi.config.js --progress --colors",
-    "build:lib": "webpack --config config/webpack.lib.config.js --progress --colors",
-    "build:min": "webpack --config config/webpack.min.config.js --progress --colors",
-    "build:multi-min": "webpack --config config/webpack.multi-min.config.js --progress --colors",
-    "build": "yarn run build:docs && yarn run build:lib && yarn run build:multi && yarn run build:min && yarn run build::multi-min"
+    "build:cjs": "webpack --config config/webpack.cjs.config.js --progress --colors",
+    "build:multi-cjs": "webpack --config config/webpack.multi-cjs.config.js --progress --colors",
+    "build:umd": "webpack --config config/webpack.umd.config.js --progress --colors",
+    "build:multi-umd": "webpack --config config/webpack.multi-umd.config.js --progress --colors",
+    "build": "rm -rf dist && yarn run build:docs && yarn run build:umd && yarn run build:multi-umd && yarn run build:cjs && yarn run build:multi-cjs"
   },
   "eslintConfig": {
     "root": true,

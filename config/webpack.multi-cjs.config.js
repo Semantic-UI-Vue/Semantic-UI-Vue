@@ -3,7 +3,7 @@ const path = require('path');
 const config = require('./webpack.base.config');
 
 config.output = {
-  path: path.resolve(__dirname, '../dist'),
+  path: path.resolve(__dirname, '../dist/commonjs'),
   publicPath: '/',
   filename: (options) => {
     const entryModule = options.chunk.entryModule
@@ -12,7 +12,7 @@ config.output = {
       .replace('./src', '')
       .replace('.jsx', '.js')
   },
-  libraryTarget: 'umd',
+  libraryTarget: 'commonjs',
 };
 
 config.entry = glob.sync('./src/*/*/*.jsx').reduce((entry, file) => {

@@ -3,11 +3,11 @@ const path = require('path');
 const config = require('./webpack.base.config');
 
 config.output = {
-  path: path.resolve(__dirname, '../dist'),
+  path: path.resolve(__dirname, '../dist/commonjs'),
   publicPath: '/',
-  filename: 'semantic-ui-vue.min.js',
+  filename: 'semantic-ui-vue.js',
   library: 'SemanticUIVue',
-  libraryTarget: 'var',
+  libraryTarget: 'commonjs',
 };
 
 config.entry = './src/index.js';
