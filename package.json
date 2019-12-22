@@ -8,7 +8,7 @@
     "url": "https://github.com/Semantic-UI-Vue/Semantic-UI-Vue.git"
   },
   "homepage": "https://semantic-ui-vue.github.io",
-  "main": "dist/commonjs/index.js",
+  "main": "dist/lib/semantic-ui-vue.js",
   "files": [
     "src",
     "dist",
@@ -20,7 +20,9 @@
     "build:docs": "webpack --config config/webpack.docs.config.js --progress --colors",
     "build:multi": "webpack --config config/webpack.multi.config.js --progress --colors",
     "build:lib": "webpack --config config/webpack.lib.config.js --progress --colors",
-    "build": "yarn run build:docs && yarn run build:lib && yarn run build:multi"
+    "build:min": "webpack --config config/webpack.min.config.js --progress --colors",
+    "build:multi-min": "webpack --config config/webpack.multi-min.config.js --progress --colors",
+    "build": "yarn run build:docs && yarn run build:lib && yarn run build:multi && yarn run build:min && yarn run build::multi-min"
   },
   "eslintConfig": {
     "root": true,

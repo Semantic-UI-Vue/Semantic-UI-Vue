@@ -1,10 +1,9 @@
-const glob = require("glob");
+const glob = require('glob');
 const path = require('path');
-const kebabCase = require('lodash/kebabCase');
 const config = require('./webpack.base.config');
 
 config.output = {
-  path: path.resolve(__dirname, '../dist/lib'),
+  path: path.resolve(__dirname, '../dist'),
   publicPath: '/',
   filename: (options) => {
     const entryModule = options.chunk.entryModule
@@ -13,8 +12,6 @@ config.output = {
       .replace('./src', '')
       .replace('.jsx', '.js')
   },
-  library: ['SemanticUIVue', '[name]'],
-  libraryExport: 'default',
   libraryTarget: 'umd',
 };
 

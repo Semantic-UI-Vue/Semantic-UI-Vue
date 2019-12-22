@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const config = require('./webpack.base.config');
 
 config.output = {
-  path: path.resolve(__dirname, '../dist/docs'),
+  path: path.resolve(__dirname, '../docs'),
   publicPath: '/',
   filename: '[name].[hash].js',
 };
