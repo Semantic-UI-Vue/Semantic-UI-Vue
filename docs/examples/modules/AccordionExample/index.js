@@ -26,7 +26,8 @@ export default [
     examples: [
       {
         title: 'Inverted',
-        description: 'An accordion can be formatted to appear on dark backgrounds',
+        description:
+          'An accordion can be formatted to appear on dark backgrounds',
         component: AccordionInverted,
       },
     ],
@@ -36,17 +37,20 @@ export default [
     examples: [
       {
         title: 'Nested Accordions',
-        description: 'An accordion can have multiple levels of nested content. This content can either be in a nested accordion or simply another level of title and content',
+        description:
+          'An accordion can have multiple levels of nested content. This content can either be in a nested accordion or simply another level of title and content',
         component: NestedAccordions,
       },
       {
         title: 'Form Fields',
-        description: 'An accordion can be used anywhere where content can be shown or hidden. For example, to show optional form fields',
+        description:
+          'An accordion can be used anywhere where content can be shown or hidden. For example, to show optional form fields',
         component: FormFieldsAccordion,
       },
       {
         title: 'Accordion Menus',
-        description: 'An accordion can be used to create content drawers inside a menu',
+        description:
+          'An accordion can be used to create content drawers inside a menu',
         component: AccordionMenu,
       },
     ],
