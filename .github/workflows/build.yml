@@ -28,9 +28,8 @@ jobs:
     if: github.ref == 'refs/heads/master'
     - name: Deploy docs
       uses: JamesIves/github-pages-deploy-action@releases/v3
-      env:
-        GITHUB_WORKSPACE: git@github.com:Semantic-UI-Vue/semantic-ui-vue.github.io.git
       with:
+        GITHUB_WORKSPACE: Semantic-UI-Vue/semantic-ui-vue.github.io
         ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         BRANCH: gh-pages
         FOLDER: dist/docs
