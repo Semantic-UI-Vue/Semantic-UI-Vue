@@ -28,7 +28,9 @@ export default {
     }
 
     if (!this.accordion) {
-      throw new Error(`${this.$options.name} must be place as a child of a SuiAccordion`);
+      throw new Error(
+        `${this.$options.name} must be place as a child of a SuiAccordion`,
+      );
     }
 
     this.accordion.register(this);

@@ -5,15 +5,15 @@
 
 const directive = {
   inserted: function(element) {
-  /*
+    /*
     This hack is a bit strong, but it works great.
     The fragment feature cannot be made with Vue.js vDOM, so we use regular DOM instead. We just transport the DOM nodes after vDOM rendering from one DOM node (the fragment's node) to its parent node.
   */
 
     const fragment = document.createDocumentFragment();
     const children = Array.from(element.childNodes);
-    const parent   = element.parentNode;
-    const tail     = document.createComment('fragment tail');
+    const parent = element.parentNode;
+    const tail = document.createComment('fragment tail');
 
     fragment.appendChild(tail);
     children.forEach(child => fragment.appendChild(child));
@@ -34,36 +34,34 @@ const directive = {
 
     // backup of original functions to put them back in place later.
     element.__hooks__ = {
-      appendChild  : element.appendChild,
-      insertBefore : element.insertBefore,
-      removeChild  : element.removeChild
+      appendChild: element.appendChild,
+      insertBefore: element.insertBefore,
+      removeChild: element.removeChild,
     };
 
     // override of node ops 1/3
     element.appendChild = function(child) {
       const op = parent.insertBefore(child, tail);
 
-      if (child.parentNode !== element)
-        freeze(child, element);
+      if (child.parentNode !== element) freeze(child, element);
 
       return op;
-    }
+    };
 
     // override of node ops 2/3
     element.insertBefore = function(child, reference) {
       const op = parent.insertBefore(child, reference);
 
-      if (child.parentNode !== element)
-        freeze(child, element);
+      if (child.parentNode !== element) freeze(child, element);
 
       return op;
-    }
+    };
 
     // override of node ops 3/3
     element.removeChild = function(child) {
       unfreeze(child);
       return parent.removeChild(child);
-    }
+    };
   },
 
   unbind(element) {
@@ -74,7 +72,7 @@ const directive = {
 
       delete element.__hooks__;
     }
-  }
+  },
 };
 
 // we keep the configurable flag on, so we can delete the property later to bring it back to normal
@@ -95,17 +93,17 @@ const unfreeze = child => {
   });
 };
 
-
 export default {
   abstract: true,
-  directives: { 'fragment': directive },
+  directives: { fragment: directive },
   render: function(h) {
     return h(
-      'div', {
+      'div',
+      {
         attrs: { class: 'v-fragment' },
-        directives: [{ name: 'fragment' }]
+        directives: [{ name: 'fragment' }],
       },
-      [this.$slots.default]
-    )
-  }
-}
+      [this.$slots.default],
+    );
+  },
+};

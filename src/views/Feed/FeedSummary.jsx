@@ -24,17 +24,13 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'summary',
-        )}
+        class={this.classes('summary')}
       >
-        {
-          this.$slots.default || [
-            this.user && <FeedUser content={this.user} />,
-            this.content,
-            this.date && <FeedDate content={this.date} />,
-          ]
-        }
+        {this.$slots.default || [
+          this.user && <FeedUser content={this.user} />,
+          this.content,
+          this.date && <FeedDate content={this.date} />,
+        ]}
       </ElementType>
     );
   },

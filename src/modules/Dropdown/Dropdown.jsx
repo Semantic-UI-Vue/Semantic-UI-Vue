@@ -1,5 +1,5 @@
-import escapeRegExp from 'lodash/escapeRegExp';
 import { SemanticUIVueMixin } from '../../lib';
+import { escapeRegExp } from '../../lib/underscore';
 import { Enum } from '../../lib/PropTypes';
 import Icon from '../../elements/Icon/Icon';
 import Input from '../../elements/Input/Input';
@@ -52,7 +52,8 @@ export default {
     },
     floating: {
       type: Boolean,
-      description: 'A dropdown menu can appear to be floating below an element.',
+      description:
+        'A dropdown menu can appear to be floating below an element.',
     },
     fluid: {
       type: Boolean,
@@ -78,7 +79,8 @@ export default {
     options: {
       type: Array,
       default: () => [],
-      description: "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
+      description:
+        "Array of SuiDropdownItem props e.g. `{ text: '', value: '' }`",
     },
     placeholder: {
       type: String,
@@ -94,11 +96,13 @@ export default {
     },
     searchInMenu: {
       type: Object,
-      description: 'A dropdown can have a search input in dropdown menu. Should be passed an Object with SuiInput props.',
+      description:
+        'A dropdown can have a search input in dropdown menu. Should be passed an Object with SuiInput props.',
     },
     selection: {
       type: Boolean,
-      description: 'A dropdown can be used to select between choices in a form.',
+      description:
+        'A dropdown can be used to select between choices in a form.',
     },
     simple: {
       type: Boolean,
@@ -120,12 +124,14 @@ export default {
     openOnFocus: {
       type: Boolean,
       default: true,
-      description: 'Whether or not the menu should open when the dropdown is focused.',
+      description:
+        'Whether or not the menu should open when the dropdown is focused.',
     },
     closeOnBlur: {
       type: Boolean,
       default: true,
-      description: 'Whether or not the menu should close when the dropdown is blurred.',
+      description:
+        'Whether or not the menu should close when the dropdown is blurred.',
     },
     noResultsMessage: {
       type: String,
@@ -135,7 +141,8 @@ export default {
     maxSelectionsMessage: {
       type: String,
       default: 'Max {selections} selections',
-      description: 'Message to display when the maximum amount of selections is reached.',
+      description:
+        'Message to display when the maximum amount of selections is reached.',
     },
     disabled: {
       type: Boolean,
@@ -164,7 +171,10 @@ export default {
       return this.multipleValue.length >= this.maxSelections;
     },
     downward() {
-      if (this.direction !== directions.auto && this.direction !== directions.autoUpward) {
+      if (
+        this.direction !== directions.auto &&
+        this.direction !== directions.autoUpward
+      ) {
         return this.direction === directions.downward;
       }
       this.calculateMenuDirection();
@@ -186,21 +196,24 @@ export default {
       return false;
     },
     animation() {
-      return `${animations.name} ${this.downward ? animations.down : animations.up}`;
+      return `${animations.name} ${
+        this.downward ? animations.down : animations.up
+      }`;
     },
     filteredOptions() {
       if (!this.search && !this.multiple && !this.searchInMenu) {
         return this.options;
       }
       const re = new RegExp(escapeRegExp(this.filter), 'i');
-      return this.options.filter((option) => {
+      return this.options.filter(option => {
         if (this.filter && !re.test(option.text)) {
           return false;
         }
 
         if (
           this.multiple &&
-          (this.maximumValuesSelected || this.multipleValue.indexOf(option.value) > -1)
+          (this.maximumValuesSelected ||
+            this.multipleValue.indexOf(option.value) > -1)
         ) {
           return false;
         }
@@ -212,7 +225,10 @@ export default {
       if (this.filteredOptions.length === 0) {
         if (this.multiple) {
           if (this.maximumValuesSelected) {
-            return this.maxSelectionsMessage.replace('{selections}', this.maxSelections);
+            return this.maxSelectionsMessage.replace(
+              '{selections}',
+              this.maxSelections,
+            );
           }
         }
         if (this.filter && !this.allowAdditions) {
@@ -225,24 +241,32 @@ export default {
       return (
         <DropdownMenu>
           {[
-            this.searchInMenu && [<Input {...{ props: this.searchInMenu, ref: 'searchInMenu' }}
-              onInput={this.updateFilter}
-              value={this.filter}
-              onKeydown={this.handleSearchKeyDown}
-            />, <Divider/>],
-            this.message ? <div class="message">{this.message}</div> : this.filteredOptions.map((option, index) => (
-              <DropdownItem
-                {...{ props: option }}
-                active={
-                  this.multiple
-                    ? this.multipleValue.indexOf(option.value) !== -1
-                    : this.value === option.value
-                }
-                class={option.class}
-                selected={this.selectedIndex === index}
-                onSelect={this.selectItem}
-              />
-            )),
+            this.searchInMenu && [
+              <Input
+                {...{ props: this.searchInMenu, ref: 'searchInMenu' }}
+                onInput={this.updateFilter}
+                value={this.filter}
+                onKeydown={this.handleSearchKeyDown}
+              />,
+              <Divider />,
+            ],
+            this.message ? (
+              <div class="message">{this.message}</div>
+            ) : (
+              this.filteredOptions.map((option, index) => (
+                <DropdownItem
+                  {...{ props: option }}
+                  active={
+                    this.multiple
+                      ? this.multipleValue.indexOf(option.value) !== -1
+                      : this.value === option.value
+                  }
+                  class={option.class}
+                  selected={this.selectedIndex === index}
+                  onSelect={this.selectItem}
+                />
+              ))
+            ),
           ]}
         </DropdownMenu>
       );
@@ -271,22 +295,30 @@ export default {
       if (!this.multiple) {
         return null;
       }
-      return this.multipleValue.map((value) => {
-        const existingOption = this.findOption(value);
-        const option = this.allowAdditions && !existingOption ? { text: value } : existingOption;
-        if (!option) {
-          return null;
-        }
-        return (
-          <Label nativeOnClick={this.handleClickOnSelectedNode}>
-            {option.icon && <Icon name={option.icon} />}
-            {option.image && <Image {...{ props: option.image }} />}
-            {option.flag && <Flag name={option.flag} />}
-            {option.text}
-            <Icon name="delete" nativeOnClick={() => this.deselectItem(value)} />
-          </Label>
-        );
-      }).filter(v => v != null);
+      return this.multipleValue
+        .map(value => {
+          const existingOption = this.findOption(value);
+          const option =
+            this.allowAdditions && !existingOption
+              ? { text: value }
+              : existingOption;
+          if (!option) {
+            return null;
+          }
+          return (
+            <Label nativeOnClick={this.handleClickOnSelectedNode}>
+              {option.icon && <Icon name={option.icon} />}
+              {option.image && <Image {...{ props: option.image }} />}
+              {option.flag && <Flag name={option.flag} />}
+              {option.text}
+              <Icon
+                name="delete"
+                nativeOnClick={() => this.deselectItem(value)}
+              />
+            </Label>
+          );
+        })
+        .filter(v => v != null);
     },
     textNode() {
       const defaultText = this.text || this.placeholder;
@@ -308,7 +340,10 @@ export default {
 
       const className = this.classes(
         this.placeholder && !shouldHideText && 'default',
-        !this.searchInMenu && this.filter && !shouldShowSelectedItem && 'filtered',
+        !this.searchInMenu &&
+          this.filter &&
+          !shouldShowSelectedItem &&
+          'filtered',
         'text',
       );
 
@@ -348,7 +383,7 @@ export default {
       if (this.search && this.filteredOptions.length >= 0) {
         this.selectedIndex = 0;
       }
-      if (this.menu) {
+      if (this.menu && this.menu.setOpen) {
         this.menu.setOpen(value);
       }
     },
@@ -357,7 +392,10 @@ export default {
       this.setOpen(false);
     },
     deselectItem(selectedValue) {
-      this.$emit('input', this.multipleValue.filter(value => value !== selectedValue));
+      this.$emit(
+        'input',
+        this.multipleValue.filter(value => value !== selectedValue),
+      );
     },
     findOption(value) {
       return this.options.find(option => option.value === value);
@@ -386,7 +424,11 @@ export default {
           this.addEventPath();
         }
 
-        if (this.searchInMenu && e.target === this.$refs.searchInMenu.$refs.input) return;
+        if (
+          this.searchInMenu &&
+          e.target === this.$refs.searchInMenu.$refs.input
+        )
+          return;
         if (this.multiple && path.indexOf(this.menu.$el) !== -1) {
           this.$nextTick(() => this.focusSearch());
           return;
@@ -443,11 +485,17 @@ export default {
       e.stopPropagation();
     },
     toggleFilteredText(filteredText, filter) {
-      if (!this.searchInMenu && !this.multiple && !filteredText.classList.contains('filtered') && filter.trim() !== '') {
+      if (
+        !this.searchInMenu &&
+        !this.multiple &&
+        !filteredText.classList.contains('filtered') &&
+        filter.trim() !== ''
+      ) {
         filteredText.classList.add('filtered');
       }
 
-      if (!this.multiple && filter.trim() === '') filteredText.classList.remove('filtered');
+      if (!this.multiple && filter.trim() === '')
+        filteredText.classList.remove('filtered');
     },
     handleKeyDown(e) {
       if (this.$refs.text) {
@@ -472,7 +520,11 @@ export default {
         case KEYS.ENTER: {
           const filter = this.filter;
           if (!this.multiple && this.selectedIndex !== -1) this.filter = '';
-          if (this.allowAdditions && this.selectedIndex === -1 && filter.trim() !== '') {
+          if (
+            this.allowAdditions &&
+            this.selectedIndex === -1 &&
+            filter.trim() !== ''
+          ) {
             e.preventDefault();
             this.selectItem(filter);
           } else if (this.selection || this.searchInMenu || this.search) {
@@ -508,7 +560,10 @@ export default {
       } else {
         this.selectedIndex = newValue;
       }
-      if ((this.selection || this.searchInMenu || this.search) && !this.multiple) {
+      if (
+        (this.selection || this.searchInMenu || this.search) &&
+        !this.multiple
+      ) {
         this.$emit('input', this.filteredOptions[this.selectedIndex].value);
       }
     },
@@ -518,7 +573,9 @@ export default {
     selectItem(selectedValue) {
       if (this.multiple && this.maximumValuesSelected) return;
       const newValue = this.multiple
-        ? this.multipleValue.filter(value => value !== selectedValue).concat(selectedValue)
+        ? this.multipleValue
+            .filter(value => value !== selectedValue)
+            .concat(selectedValue)
         : selectedValue;
       this.$emit('input', newValue);
       this.filter = '';
@@ -533,7 +590,9 @@ export default {
             ? this.selectedIndex
             : this.selectedIndex - 1;
       } else {
-        this.selectedIndex = this.filteredOptions.findIndex(item => item.value === this.value);
+        this.selectedIndex = this.filteredOptions.findIndex(
+          item => item.value === this.value,
+        );
       }
     },
     resizeInput() {
@@ -556,7 +615,13 @@ export default {
       this.$emit('input', this.multipleValue);
     },
     calculateMenuDirection() {
-      if (typeof window === 'undefined' || !this.menu || !this.menu.$el || !this.open) return;
+      if (
+        typeof window === 'undefined' ||
+        !this.menu ||
+        !this.menu.$el ||
+        !this.open
+      )
+        return;
 
       this.menu.$el.classList.add('loading');
       this.$el.classList.remove('upward');
@@ -581,14 +646,19 @@ export default {
   },
   render() {
     const ElementType = this.getElementType('div');
+    const isNativeElement =
+      typeof ElementType === 'string' && !ElementType.includes('-');
 
     const eventHandlers = {
-      '!mousedown': this.handleMouseDown,
-      click: this.handleClick,
-      '!focus': this.handleFocus,
-      '!blur': this.handleBlur,
-      '!keydown': this.handleKeyDown,
+      [isNativeElement ? 'on' : 'nativeOn']: {
+        '!mousedown': this.handleMouseDown,
+        click: this.handleClick,
+        '!focus': this.handleFocus,
+        '!blur': this.handleBlur,
+        '!keydown': this.handleKeyDown,
+      },
     };
+
     return (
       <ElementType
         role="listbox"
@@ -613,16 +683,17 @@ export default {
           !this.downward && directions.upward,
           'dropdown',
         )}
-        {...{
-          on: eventHandlers,
-          nativeOn: eventHandlers,
-        }}
+        {...eventHandlers}
       >
         {this.selectedNodes}
         {this.searchNode}
         {this.textNode}
         {this.icon !== null && (
-          <i ref="icon" aria-hidden="true" class={`${this.icon || 'dropdown'} icon`} />
+          <i
+            ref="icon"
+            aria-hidden="true"
+            class={`${this.icon || 'dropdown'} icon`}
+          />
         )}
         <span class="sizer" ref="sizer" />
         {this.$slots.default || this.menuNode}

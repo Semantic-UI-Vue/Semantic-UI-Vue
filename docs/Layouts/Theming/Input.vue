@@ -11,7 +11,7 @@
         />
         <div class="ui action left icon input">
           <i class="search icon"></i>
-          <input type="text" placeholder="Search...">
+          <input type="text" placeholder="Search..." />
           <div class="ui teal button">Search</div>
         </div>
 
@@ -22,7 +22,7 @@
         <div is="sui-divider" />
 
         <div class="ui right labeled input">
-          <input placeholder="Placeholder" type="text">
+          <input placeholder="Placeholder" type="text" />
           <div class="ui dropdown label" tabindex="0">
             <div class="text">Dropdown</div>
             <i class="dropdown icon"></i>
@@ -59,17 +59,12 @@
           icon-position="left"
           loading
         />
-        <sui-input
-          type="text"
-          placeholder="Loading..."
-          icon="search"
-          loading
-        />
+        <sui-input type="text" placeholder="Loading..." icon="search" loading />
       </div>
       <div is="sui-grid-column">
         <div class="ui right labeled left icon input">
           <i class="tags icon"></i>
-          <input placeholder="Enter tags" type="text">
+          <input placeholder="Enter tags" type="text" />
           <a class="ui tag label">
             Add Tag
           </a>
@@ -79,11 +74,11 @@
           <a class="ui label">
             Label
           </a>
-          <input type="text" placeholder="Placeholder...">
+          <input type="text" placeholder="Placeholder..." />
         </div>
         <div is="sui-divider" />
         <div class="ui right labeled input">
-          <input type="text" placeholder="Placeholder...">
+          <input type="text" placeholder="Placeholder..." />
           <a class="ui label">
             Label
           </a>
@@ -93,11 +88,11 @@
           <div class="ui label">
             http://
           </div>
-          <input type="text" placeholder="domain.com">
+          <input type="text" placeholder="domain.com" />
           <i class="add circle link icon"></i>
         </div>
         <div class="ui right action input">
-          <input type="text" placeholder="domain.com">
+          <input type="text" placeholder="domain.com" />
           <div class="ui teal button">
             <i class="add icon"></i>
             Add
@@ -105,7 +100,7 @@
         </div>
         <div is="sui-divider" />
         <div class="ui corner labeled input">
-          <input type="text" placeholder="Required Field">
+          <input type="text" placeholder="Required Field" />
           <div class="ui corner label">
             <i class="asterisk icon"></i>
           </div>
@@ -117,9 +112,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
-<style lang="css">
-</style>
+<style lang="css"></style>

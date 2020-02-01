@@ -3,8 +3,7 @@ import { SemanticUIVueMixin } from '../../lib';
 export default {
   name: 'SuiModalHeader',
   mixins: [SemanticUIVueMixin],
-  props: {
-  },
+  props: {},
   render() {
     const ElementType = this.getElementType();
     return (

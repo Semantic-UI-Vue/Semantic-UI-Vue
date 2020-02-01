@@ -6,11 +6,9 @@ export default {
   props: {
     visible: {
       type: Boolean,
-      description: 'Visible content of button',
     },
     hidden: {
       type: Boolean,
-      description: 'Hidden content of button',
     },
   },
   render() {
@@ -23,10 +21,7 @@ export default {
     );
 
     return (
-      <ElementType
-        {...this.getChildPropsAndListeners()}
-        class={classList}
-      >
+      <ElementType {...this.getChildPropsAndListeners()} class={classList}>
         {this.content || this.$slots.default}
       </ElementType>
     );

@@ -14,7 +14,8 @@ export default {
       description: 'A row can have its columns centered.',
     },
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
-      description: 'A row can appear only for a specific device, or screen sizes.',
+      description:
+        'A row can appear only for a specific device, or screen sizes.',
     }),
     divided: {
       type: Boolean,
@@ -24,17 +25,20 @@ export default {
       description: 'A grid row can be colored.',
     }),
     reversed: Enum(['mobile', 'tablet', 'computer'], {
-      description: 'A row can specify that its columns should reverse order at different device types.',
+      description:
+        'A row can specify that its columns should reverse order at different device types.',
     }),
     stretched: {
       type: Boolean,
-      description: 'A row can stretch its contents to take up the entire column height.',
+      description:
+        'A row can stretch its contents to take up the entire column height.',
     },
     textAlign: Enum.TextAlign({
       description: 'A row can specify its text alignment.',
     }),
     verticalAlign: Enum.VerticalAlign({
-      description: 'A row can specify its vertical alignment to have all its columns vertically centered.',
+      description:
+        'A row can specify its vertical alignment to have all its columns vertically centered.',
     }),
   },
   render() {

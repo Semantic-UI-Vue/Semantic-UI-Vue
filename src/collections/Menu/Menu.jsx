@@ -20,7 +20,8 @@ export default {
     }),
     compact: {
       type: Boolean,
-      description: 'A menu can take up only the space necessary to fit its content.',
+      description:
+        'A menu can take up only the space necessary to fit its content.',
     },
     fixed: Enum(['right', 'left', 'bottom', 'top'], {
       description: 'A menu can be fixed to a side of its context.',
@@ -32,7 +33,8 @@ export default {
     }),
     inverted: {
       type: Boolean,
-      description: 'A menu may have its colors inverted to show greater contrast.',
+      description:
+        'A menu may have its colors inverted to show greater contrast.',
     },
     items: {
       type: Array,
@@ -49,11 +51,13 @@ export default {
     },
     secondary: {
       type: Boolean,
-      description: 'A menu can adjust its appearance to de-emphasize its contents.',
+      description:
+        'A menu can adjust its appearance to de-emphasize its contents.',
     },
     pointing: {
       type: Boolean,
-      description: 'A menu can point to show its relationship to nearby content.',
+      description:
+        'A menu can point to show its relationship to nearby content.',
     },
     tabular: Enum(['right'], {
       type: Boolean,
@@ -77,7 +81,8 @@ export default {
     },
     pagination: {
       type: Boolean,
-      description: 'A pagination menu is specially formatted to present links to pages of content.',
+      description:
+        'A pagination menu is specially formatted to present links to pages of content.',
     },
   },
   render() {
@@ -93,22 +98,30 @@ export default {
           this.compact && 'compact',
           this.fixed && `${this.fixed} fixed`,
           this.text && 'text',
-          this.icon, this.icon && 'icon',
+          this.icon,
+          this.icon && 'icon',
           this.inverted && 'inverted',
           this.pagination && 'pagination',
           this.borderless && 'borderless',
-          this.floated, this.floated && 'floated',
+          this.floated,
+          this.floated && 'floated',
           this.widths && `${this.num(this.widths)} item`,
           this.secondary && 'secondary',
           this.pointing && 'pointing',
-          this.tabular, this.tabular && 'tabular',
+          this.tabular,
+          this.tabular && 'tabular',
           this.color,
           'menu',
         )}
       >
-        {this.$slots.default || (this.items && this.items.map((item, index) => (
-          <SuiMenuItem {...{ props: item }} active={item.active || this.activeIndex === index} />
-        )))}
+        {this.$slots.default ||
+          (this.items &&
+            this.items.map((item, index) => (
+              <SuiMenuItem
+                {...{ props: item }}
+                active={item.active || this.activeIndex === index}
+              />
+            )))}
       </ElementType>
     );
   },

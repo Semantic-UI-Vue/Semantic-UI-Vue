@@ -26,7 +26,7 @@ export default {
     tabMenu() {
       return (
         <sui-menu {...{ props: this.menu }}>
-          {this.tabs.map(tab =>
+          {this.tabs.map(tab => (
             <a
               class={['item', { active: tab.active, disabled: tab.disabled }]}
               onClick={e => this.openTab(e, tab)}
@@ -34,8 +34,8 @@ export default {
               {tab.icon && <sui-icon name={tab.icon} />}
               <span>{tab.title}</span>
               {tab.label && <sui-label>{tab.label}</sui-label>}
-            </a>,
-          )}
+            </a>
+          ))}
         </sui-menu>
       );
     },
@@ -50,7 +50,7 @@ export default {
       throw new Error('tab used without tab-pane');
     }
 
-    const pane = (this.tabs[this.activeIndex] || this.tabs[0]);
+    const pane = this.tabs[this.activeIndex] || this.tabs[0];
     pane.open();
 
     this.activeTab = pane;
@@ -78,10 +78,7 @@ export default {
   render() {
     const slot = this.$slots.default;
 
-    let renderable = [
-      this.tabMenu,
-      slot,
-    ];
+    let renderable = [this.tabMenu, slot];
 
     if (this.menu.attached === 'bottom') {
       renderable.reverse();
@@ -89,9 +86,7 @@ export default {
 
     if (this.menu.vertical) {
       renderable = [
-        <sui-grid-column width={4}>
-          {this.tabMenu}
-        </sui-grid-column>,
+        <sui-grid-column width={4}>{this.tabMenu}</sui-grid-column>,
         <sui-grid-column width={12} class="stretched">
           {slot}
         </sui-grid-column>,
@@ -103,17 +98,13 @@ export default {
 
       renderable = (
         <sui-grid>
-          <sui-grid-row>
-            {renderable}
-          </sui-grid-row>
+          <sui-grid-row>{renderable}</sui-grid-row>
         </sui-grid>
       );
     }
 
     return (
-      <div>
-        {Array.isArray(renderable) ? [...renderable] : renderable}
-      </div>
+      <div>{Array.isArray(renderable) ? [...renderable] : renderable}</div>
     );
   },
 };

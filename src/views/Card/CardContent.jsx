@@ -15,9 +15,7 @@ export default {
       >
         {this.$slots.default}
         {this.$slots.right && (
-          <div class="right floated">
-            {this.$slots.right}
-          </div>
+          <div class="right floated">{this.$slots.right}</div>
         )}
       </ElementType>
     );

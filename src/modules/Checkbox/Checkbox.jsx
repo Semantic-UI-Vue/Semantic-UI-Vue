@@ -70,7 +70,10 @@ export default {
         if (checked) {
           this.$emit('change', this.inputValue.concat([this.value]));
         } else {
-          this.$emit('change', this.inputValue.filter(v => v !== this.value));
+          this.$emit(
+            'change',
+            this.inputValue.filter(v => v !== this.value),
+          );
         }
       } else {
         this.$emit('change', checked);
@@ -104,9 +107,7 @@ export default {
           onChange={this.setValue}
           required={this.required}
         />
-        <label
-          onClick={() => this.$refs.input.click()}
-          for={this.name}>
+        <label onClick={() => this.$refs.input.click()} for={this.name}>
           {this.label || this.$slots.default}
         </label>
       </ElementType>

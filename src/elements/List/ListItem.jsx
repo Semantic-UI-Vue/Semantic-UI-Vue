@@ -25,7 +25,9 @@ export default {
         {this.icon && <SuiListIcon name={this.icon} />}
         {this.content ? (
           <SuiListContent>{this.content}</SuiListContent>
-        ) : this.$slots.default}
+        ) : (
+          this.$slots.default
+        )}
       </ElementType>
     );
   },

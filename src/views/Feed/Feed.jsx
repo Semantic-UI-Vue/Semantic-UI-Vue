@@ -20,19 +20,11 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'ui',
-          this.size,
-          'feed',
-        )}
+        class={this.classes('ui', this.size, 'feed')}
       >
-        {
-          this.$slots.default ||
-          (
-            this.events &&
-            this.events.map(event => <FeedEvent {...{ props: event }} />)
-          )
-        }
+        {this.$slots.default ||
+          (this.events &&
+            this.events.map(event => <FeedEvent {...{ props: event }} />))}
       </ElementType>
     );
   },

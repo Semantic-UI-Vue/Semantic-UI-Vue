@@ -17,7 +17,8 @@ export default {
     collapsing: Boolean,
     compact: Enum(['very'], {
       type: Boolean,
-      description: 'A table may sometimes need to be more compact to make more rows visible at a time.',
+      description:
+        'A table may sometimes need to be more compact to make more rows visible at a time.',
     }),
     definition: Boolean,
     striped: Boolean,
@@ -39,12 +40,16 @@ export default {
         {...this.getChildPropsAndListeners()}
         class={this.classes(
           'ui',
-          this.textAlign, this.textAlign && 'aligned',
-          this.basic, this.basic && 'basic',
+          this.textAlign,
+          this.textAlign && 'aligned',
+          this.basic,
+          this.basic && 'basic',
           this.celled && 'celled',
-          this.padded, this.padded && 'padded',
+          this.padded,
+          this.padded && 'padded',
           this.collapsing && 'collapsing',
-          this.compact, this.compact && 'compact',
+          this.compact,
+          this.compact && 'compact',
           this.definition && 'definition',
           this.striped && 'striped',
           this.fixed && 'fixed',

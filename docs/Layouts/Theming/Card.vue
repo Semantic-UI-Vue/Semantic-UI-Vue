@@ -8,22 +8,22 @@
           @mouseover.native="isActive[0] = true"
           @mouseleave.native="isActive[0] = false"
         >
-        <sui-dimmer blurring inverted :active="isActive[0]">
-          <sui-button color="teal">Add Friend</sui-button>
-        </sui-dimmer>
-      </sui-image>
-      <div is="sui-card-content">
-        <div is="sui-card-header">Title</div>
-        <div is="sui-card-meta">
-          <a>Meta</a>
+          <sui-dimmer blurring inverted :active="isActive[0]">
+            <sui-button color="teal">Add Friend</sui-button>
+          </sui-dimmer>
+        </sui-image>
+        <div is="sui-card-content">
+          <div is="sui-card-header">Title</div>
+          <div is="sui-card-meta">
+            <a>Meta</a>
+          </div>
+          <div is="sui-card-description">
+            One or two sentence description that may go to several lines
+          </div>
         </div>
-        <div is="sui-card-description">
-          One or two sentence description that may go to several lines
-        </div>
-      </div>
-      <div is="sui-card-content" extra>
-        <a>Arbitrary</a>
-        <a slot="right">Arbitrary</a>
+        <div is="sui-card-content" extra>
+          <a>Arbitrary</a>
+          <a slot="right">Arbitrary</a>
         </div>
       </div>
 
@@ -50,27 +50,33 @@
       <div is="sui-card">
         <div class="ui slide right reveal image">
           <div class="visible content">
-            <img class="ui fluid image" src="static/images/avatar/nan.jpg">
+            <img class="ui fluid image" src="static/images/avatar/nan.jpg" />
           </div>
           <div class="hidden content">
-            <img class="ui fluid image" src="static/images/avatar/tom.jpg">
+            <img class="ui fluid image" src="static/images/avatar/tom.jpg" />
           </div>
         </div>
         <div is="sui-card-content">
-          <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
+          <img
+            src="static/images/wireframes/paragraph.png"
+            class="ui wireframe image"
+          />
         </div>
       </div>
       <div is="sui-card">
         <div class="ui move reveal image">
           <div class="visible content">
-            <img class="ui fluid image" src="static/images/avatar/tom.jpg">
+            <img class="ui fluid image" src="static/images/avatar/tom.jpg" />
           </div>
           <div class="hidden content">
-            <img class="ui fluid image" src="static/images/avatar/nan.jpg">
+            <img class="ui fluid image" src="static/images/avatar/nan.jpg" />
           </div>
         </div>
         <div is="sui-card-content">
-          <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
+          <img
+            src="static/images/wireframes/paragraph.png"
+            class="ui wireframe image"
+          />
         </div>
       </div>
     </div>
@@ -79,9 +85,7 @@
       <div is="sui-card">
         <div is="sui-card-content" extra>
           <sui-icon name="like" /> Like
-          <span slot="right">
-            <sui-icon name="star" /> Favorite
-          </span>
+          <span slot="right"> <sui-icon name="star" /> Favorite </span>
         </div>
         <div is="sui-card-content">
           <sui-image src="static/images/wireframes/paragraph.png" />
@@ -93,7 +97,7 @@
             <img
               src="static/images/wireframes/square-image.png"
               class="ui avatar right spaced image"
-            >
+            />
             Abbreviated Header
           </div>
           <div class="description">
@@ -116,12 +120,19 @@
             <span class="category">Animals</span>
           </div>
           <div class="description">
-            <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
+            <img
+              src="static/images/wireframes/paragraph.png"
+              class="ui wireframe image"
+            />
           </div>
         </div>
         <div is="sui-card-content" extra>
           <div class="right floated author">
-            <img src="static/images/wireframes/square-image.png" class="ui avatar image"> Username
+            <img
+              src="static/images/wireframes/square-image.png"
+              class="ui avatar image"
+            />
+            Username
           </div>
         </div>
       </a>
@@ -135,7 +146,10 @@
           </div>
         </div>
         <div is="sui-card-content">
-          <img src="static/images/wireframes/paragraph.png" class="ui wireframe image">
+          <img
+            src="static/images/wireframes/paragraph.png"
+            class="ui wireframe image"
+          />
         </div>
         <div class="ui two bottom attached basic buttons">
           <div class="ui button">
@@ -210,7 +224,7 @@
     <div is="sui-card-group" :items-per-row="4">
       <div class="card">
         <div class="image">
-          <img src="static/images/wireframes/image.png">
+          <img src="static/images/wireframes/image.png" />
         </div>
         <div class="extra center aligned">
           <div data-rating="4" class="ui star rating">
@@ -223,7 +237,7 @@
       </div>
       <div class="card">
         <div class="image">
-          <img src="static/images/wireframes/image.png">
+          <img src="static/images/wireframes/image.png" />
         </div>
         <div class="extra center aligned">
           <div data-rating="2" class="ui star rating">
@@ -236,7 +250,7 @@
       </div>
       <div class="card">
         <div class="image">
-          <img src="static/images/wireframes/image.png">
+          <img src="static/images/wireframes/image.png" />
         </div>
         <div class="extra center aligned">
           <div data-rating="3" class="ui star rating">
@@ -249,7 +263,7 @@
       </div>
       <div class="card">
         <div class="image">
-          <img src="static/images/wireframes/image.png">
+          <img src="static/images/wireframes/image.png" />
         </div>
         <div class="extra center aligned">
           <div data-rating="4" class="ui star rating">
@@ -274,5 +288,4 @@ export default {
 };
 </script>
 
-<style lang="css">
-</style>
+<style lang="css"></style>

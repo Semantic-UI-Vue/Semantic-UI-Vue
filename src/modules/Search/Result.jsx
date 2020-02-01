@@ -19,7 +19,9 @@ export default {
       <a onClick={this.handleClick} class="result">
         <div class="content">
           <div class="title">{this.item.title}</div>
-          {this.item.description && <div class="description">{this.item.description}</div>}
+          {this.item.description && (
+            <div class="description">{this.item.description}</div>
+          )}
         </div>
       </a>
     );

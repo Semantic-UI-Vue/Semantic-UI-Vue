@@ -11,7 +11,8 @@ export default {
     },
     equalWidth: {
       type: Boolean,
-      description: 'Field group can automatically divide fields to be equal width.',
+      description:
+        'Field group can automatically divide fields to be equal width.',
     },
     grouped: {
       type: Boolean,

@@ -183,7 +183,7 @@
         <table class="ui definition celled right aligned table">
           <thead>
             <tr>
-              <th ></th>
+              <th></th>
               <th>Calories</th>
               <th>Fat</th>
               <th>Protein</th>
@@ -289,5 +289,4 @@ export default {
 };
 </script>
 
-<style lang="css">
-</style>
+<style lang="css"></style>

@@ -11,7 +11,8 @@ export default {
       description: 'An embed can be active',
     },
     aspectRatio: Enum(['4:3', '16:9', '21:9'], {
-      description: 'An embed can specify an alternative aspect ratio (4:3 | 16:9 | 21:9)',
+      description:
+        'An embed can specify an alternative aspect ratio (4:3 | 16:9 | 21:9)',
     }),
     icon: {
       type: String,
@@ -23,11 +24,13 @@ export default {
       description: 'A placeholder image for embed',
     },
     source: Enum(['youtube', 'vimeo'], {
-      description: 'Specifies a source to use. Cannot be used together with url',
+      description:
+        'Specifies a source to use. Cannot be used together with url',
     }),
     url: {
       type: String,
-      description: 'Specifies a url to use for embed. Cannot be used together with source',
+      description:
+        'Specifies a url to use for embed. Cannot be used together with source',
     },
     autoplay: {
       type: Boolean,
@@ -36,7 +39,8 @@ export default {
     },
     brandedUI: {
       type: Boolean,
-      description: 'Whether to show networks branded UI like title cards, or after video calls to action',
+      description:
+        'Whether to show networks branded UI like title cards, or after video calls to action',
     },
     color: {
       type: String,
@@ -45,7 +49,8 @@ export default {
     },
     hd: {
       type: Boolean,
-      description: 'Specifies whether to display YouTuber/Vimeo video in high-definition',
+      description:
+        'Specifies whether to display YouTuber/Vimeo video in high-definition',
       default: true,
     },
     id: {
@@ -111,9 +116,10 @@ export default {
     }
 
     function getStyleString(styleObj) {
-      return Object.entries(styleObj).reduce((styleString, entry) => (
-        `${styleString}${entry[0]}:${entry[1]};`
-      ), '');
+      return Object.entries(styleObj).reduce(
+        (styleString, entry) => `${styleString}${entry[0]}:${entry[1]};`,
+        '',
+      );
     }
 
     function renderEmbed() {
@@ -123,14 +129,18 @@ export default {
       const embedSrc = getSrc();
       const style = iframe.style ? getStyleString(iframe.style) : '';
       return (
-        <div class='embed'>
-          <iframe src={iframe.src || embedSrc}
+        <div class="embed">
+          <iframe
+            src={iframe.src || embedSrc}
             allowFullScreen={iframe.allowFullScreen || false}
             frameBorder={iframe.frameBorder || 0}
             width={iframe.width || '100%'}
             height={iframe.height || '100%'}
             scrolling={iframe.scrolling || 'no'}
-            title={iframe.title || `Embedded content from ${self.source || 'custom host'}`}
+            title={
+              iframe.title ||
+              `Embedded content from ${self.source || 'custom host'}`
+            }
             style={style}
           />
         </div>
@@ -150,7 +160,7 @@ export default {
         )}
       >
         {this.icon && <Icon name={this.icon} />}
-        {this.placeholder && <img class='placeholder' src={this.placeholder} />}
+        {this.placeholder && <img class="placeholder" src={this.placeholder} />}
         {renderEmbed()}
       </ElementType>
     );

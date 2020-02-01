@@ -1,11 +1,12 @@
 /* eslint-disable */
 import Vue from 'vue';
 import Router from 'vue-router';
-import Component from './Component';
+import Component from './Component/Component';
 import Docs from './Docs';
 import DocsPage from './DocsPage';
 import Features from './Features';
 import Layouts from './Layouts';
+import Maximize from './Maximize';
 import Theming from './Layouts/Theming';
 import Login from './Layouts/Login';
 import FixedMenu from './Layouts/FixedMenu';
@@ -27,6 +28,11 @@ const router = new Router({
     {
       path: '/layouts/fixed_menu',
       component: FixedMenu,
+    },
+    {
+      path: '/maximize/:type/:componentName/:fileName',
+      component: Maximize,
+      props: true,
     },
     {
       path: '/',
@@ -52,6 +58,11 @@ const router = new Router({
         },
         {
           path: '/:type/:componentName',
+          component: Component,
+          props: true,
+        },
+        {
+          path: '/:type/:componentName/:tab',
           component: Component,
           props: true,
         },

@@ -41,26 +41,30 @@ export default {
   },
   render() {
     const ElementType = this.getElementType();
-    const hasContent = this.content || this.date || this.summary ||
-      this.extraImages || this.extraText || this.meta;
+    const hasContent =
+      this.content ||
+      this.date ||
+      this.summary ||
+      this.extraImages ||
+      this.extraText ||
+      this.meta;
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'event',
-        )}
+        class={this.classes('event')}
       >
         {this.image && <FeedLabel image={this.image} />}
         {this.icon && <FeedLabel icon={this.icon} />}
-        {hasContent &&
-        <FeedContent
-          content={this.content}
-          date={this.date}
-          summary={this.summary}
-          extraImages={this.extraImages}
-          extraText={this.extraText}
-          meta={this.meta}
-        /> }
+        {hasContent && (
+          <FeedContent
+            content={this.content}
+            date={this.date}
+            summary={this.summary}
+            extraImages={this.extraImages}
+            extraText={this.extraText}
+            meta={this.meta}
+          />
+        )}
         {this.$slots.default}
       </ElementType>
     );

@@ -58,7 +58,8 @@ export default {
           (this.selected || this.active) && 'active',
           this.warning && 'warning',
           this.state,
-        )}>
+        )}
+      >
         {this.$slots.default}
       </ElementType>
     );

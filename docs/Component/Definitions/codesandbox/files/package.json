@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "portal-vue": "2.1.6",
+    "semantic-ui-vue": "latest",
+    "semantic-ui-css": "2.4.1",
+    "vue": "2.5.22"
+  }
+}

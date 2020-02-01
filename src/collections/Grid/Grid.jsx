@@ -20,7 +20,8 @@ export default {
     }),
     container: {
       type: Boolean,
-      description: 'A grid can be combined with a container to use the available layout and alignment.',
+      description:
+        'A grid can be combined with a container to use the available layout and alignment.',
     },
     divided: Enum(['vertically'], {
       type: Boolean,
@@ -28,35 +29,43 @@ export default {
     }),
     doubling: {
       type: Boolean,
-      description: 'A grid can double its column width on tablet and mobile sizes.',
+      description:
+        'A grid can double its column width on tablet and mobile sizes.',
     },
     padded: Enum(['horizontally', 'vertically'], {
       type: Boolean,
-      description: 'A grid can preserve its vertical and horizontal gutters on first and last columns.',
+      description:
+        'A grid can preserve its vertical and horizontal gutters on first and last columns.',
     }),
     relaxed: Enum(['very'], {
       type: Boolean,
-      description: 'A grid can increase its gutters to allow for more negative space.',
+      description:
+        'A grid can increase its gutters to allow for more negative space.',
     }),
     reversed: Enum(['mobile', 'tablet', 'computer'], {
-      description: 'A grid can specify that its columns should reverse order at different device types.',
+      description:
+        'A grid can specify that its columns should reverse order at different device types.',
     }),
     stackable: {
       type: Boolean,
-      description: 'A grid can have its columns stack on-top of each other after reaching mobile breakpoints.',
+      description:
+        'A grid can have its columns stack on-top of each other after reaching mobile breakpoints.',
     },
     stretched: {
       type: Boolean,
-      description: 'A grid can stretch its contents to take up the entire grid height.',
+      description:
+        'A grid can stretch its contents to take up the entire grid height.',
     },
     textAlign: Enum.TextAlign({
       description: 'A grid can specify its text alignment.',
     }),
     verticalAlign: Enum.VerticalAlign({
-      description: 'A grid can specify its vertical alignment to have all its columns vertically centered.',
+      description:
+        'A grid can specify its vertical alignment to have all its columns vertically centered.',
     }),
     verticallyReversed: Enum(['mobile', 'tablet', 'computer'], {
-      description: 'A grid can specify that its rows should reverse order at different device types.',
+      description:
+        'A grid can specify that its rows should reverse order at different device types.',
     }),
   },
   render() {
@@ -67,18 +76,24 @@ export default {
         class={this.classes(
           'ui',
           this.reversed && `${this.reversed} reversed`,
-          this.verticallyReversed && `${this.verticallyReversed} vertically reversed`,
+          this.verticallyReversed &&
+            `${this.verticallyReversed} vertically reversed`,
           this.columns && `${this.num(this.columns)} column`,
           this.stackable && 'stackable',
           this.stretched && 'stretched',
           this.doubling && 'doubling',
-          this.padded, this.padded && 'padded',
-          this.verticalAlign, this.verticalAlign && 'aligned',
+          this.padded,
+          this.padded && 'padded',
+          this.verticalAlign,
+          this.verticalAlign && 'aligned',
           textAlign(this.textAlign),
           this.centered && 'centered',
-          this.divided, this.divided && 'divided',
-          this.celled, this.celled && 'celled',
-          this.relaxed, this.relaxed && 'relaxed',
+          this.divided,
+          this.divided && 'divided',
+          this.celled,
+          this.celled && 'celled',
+          this.relaxed,
+          this.relaxed && 'relaxed',
           'grid',
           this.container && 'container',
         )}

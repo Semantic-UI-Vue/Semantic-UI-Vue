@@ -1,4 +1,9 @@
-import { SemanticUIVueMixin, iconFlipped, iconRotation, iconCorner } from '../../lib';
+import {
+  SemanticUIVueMixin,
+  iconFlipped,
+  iconRotation,
+  iconCorner,
+} from '../../lib';
 import { Enum } from '../../lib/PropTypes';
 
 export default {
@@ -33,7 +38,8 @@ export default {
     }),
     inverted: {
       type: Boolean,
-      description: 'Add black background to icon, also change icon color to contrasted variant.',
+      description:
+        'Add black background to icon, also change icon color to contrasted variant.',
     },
     link: {
       type: Boolean,

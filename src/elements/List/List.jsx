@@ -31,7 +31,9 @@ export default {
     let children;
 
     if (this.items) {
-      children = this.items.map(item => <SuiItemContent>{item}</SuiItemContent>);
+      children = this.items.map(item => (
+        <SuiItemContent>{item}</SuiItemContent>
+      ));
     } else {
       children = this.$slots.default;
     }

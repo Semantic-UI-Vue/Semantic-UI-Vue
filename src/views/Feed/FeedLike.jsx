@@ -20,16 +20,12 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'like',
-        )}
+        class={this.classes('like')}
       >
-        {
-          this.$slots.default || [
-            this.icon && <Icon name={this.icon} />,
-            this.content,
-          ]
-        }
+        {this.$slots.default || [
+          this.icon && <Icon name={this.icon} />,
+          this.content,
+        ]}
       </ElementType>
     );
   },

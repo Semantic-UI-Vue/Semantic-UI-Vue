@@ -11,11 +11,7 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          this.icon,
-          this.icon && 'icon',
-          'divider',
-        )}
+        class={this.classes(this.icon, this.icon && 'icon', 'divider')}
       >
         {!this.icon && (this.$slots.default || '/')}
       </ElementType>

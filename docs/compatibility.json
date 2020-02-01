@@ -1,2440 +1,3374 @@
-[{
+[
+  {
     "name": "elements",
-    "components": [{
+    "components": [
+      {
         "name": "button",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "button",
-            "implemented": true
-          }, {
-            "name": "emphasis",
-            "implemented": true
-          }, {
-            "name": "animated",
-            "implemented": true
-          }, {
-            "name": "labeled",
-            "implemented": true
-          }, {
-            "name": "icon",
-            "implemented": true
-          }, {
-            "name": "labeled icon",
-            "implemented": true
-          }, {
-            "name": "basic",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }]
-        }, {
-          "name": "groups",
-          "examples": [{
-            "name": "buttons",
-            "implemented": true
-          }, {
-            "name": "icon buttons",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "conditionals",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }, {
-            "name": "loading",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "social",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }, {
-            "name": "floated",
-            "implemented": true
-          }, {
-            "name": "colored",
-            "implemented": true
-          }, {
-            "name": "compact",
-            "implemented": true
-          }, {
-            "name": "toggle",
-            "implemented": false
-          }, {
-            "name": "positive",
-            "implemented": true
-          }, {
-            "name": "negative",
-            "implemented": true
-          }, {
-            "name": "fluid",
-            "implemented": true
-          }, {
-            "name": "circular",
-            "implemented": true
-          }, {
-            "name": "vertically attached",
-            "implemented": true
-          }, {
-            "name": "horizontally attached",
-            "implemented": true
-          }]
-        }, {
-          "name": "group variations",
-          "examples": [{
-            "name": "vertical buttons",
-            "implemented": true
-          }, {
-            "name": "icon buttons",
-            "implemented": true
-          }, {
-            "name": "labeled icon buttons",
-            "implemented": true
-          }, {
-            "name": "mixed group",
-            "implemented": true
-          }, {
-            "name": "equal width",
-            "implemented": true
-          }, {
-            "name": "colored buttons",
-            "implemented": true
-          }, {
-            "name": "basic buttons",
-            "implemented": true
-          }, {
-            "name": "group sizes",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "button",
+                "implemented": true
+              },
+              {
+                "name": "emphasis",
+                "implemented": true
+              },
+              {
+                "name": "animated",
+                "implemented": true
+              },
+              {
+                "name": "labeled",
+                "implemented": true
+              },
+              {
+                "name": "icon",
+                "implemented": true
+              },
+              {
+                "name": "labeled icon",
+                "implemented": true
+              },
+              {
+                "name": "basic",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "groups",
+            "examples": [
+              {
+                "name": "buttons",
+                "implemented": true
+              },
+              {
+                "name": "icon buttons",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "conditionals",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              },
+              {
+                "name": "loading",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "social",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              },
+              {
+                "name": "floated",
+                "implemented": true
+              },
+              {
+                "name": "colored",
+                "implemented": true
+              },
+              {
+                "name": "compact",
+                "implemented": true
+              },
+              {
+                "name": "toggle",
+                "implemented": false
+              },
+              {
+                "name": "positive",
+                "implemented": true
+              },
+              {
+                "name": "negative",
+                "implemented": true
+              },
+              {
+                "name": "fluid",
+                "implemented": true
+              },
+              {
+                "name": "circular",
+                "implemented": true
+              },
+              {
+                "name": "vertically attached",
+                "implemented": true
+              },
+              {
+                "name": "horizontally attached",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "group variations",
+            "examples": [
+              {
+                "name": "vertical buttons",
+                "implemented": true
+              },
+              {
+                "name": "icon buttons",
+                "implemented": true
+              },
+              {
+                "name": "labeled icon buttons",
+                "implemented": true
+              },
+              {
+                "name": "mixed group",
+                "implemented": true
+              },
+              {
+                "name": "equal width",
+                "implemented": true
+              },
+              {
+                "name": "colored buttons",
+                "implemented": true
+              },
+              {
+                "name": "basic buttons",
+                "implemented": true
+              },
+              {
+                "name": "group sizes",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "container",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "container",
-            "implemented": true
-          }, {
-            "name": "text container",
-            "implemented": true
-          }, {
-            "name": "header",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "text alignment",
-            "implemented": true
-          }, {
-            "name": "fluid",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "container",
+                "implemented": true
+              },
+              {
+                "name": "text container",
+                "implemented": true
+              },
+              {
+                "name": "header",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "text alignment",
+                "implemented": true
+              },
+              {
+                "name": "fluid",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "divider",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "divider",
-            "implemented": true
-          }, {
-            "name": "vertical divider",
-            "implemented": true
-          }, {
-            "name": "horizontal divider",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "inverted",
-            "implemented": true
-          }, {
-            "name": "fitted",
-            "implemented": true
-          }, {
-            "name": "hidden",
-            "implemented": true
-          }, {
-            "name": "section",
-            "implemented": true
-          }, {
-            "name": "clearing",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "divider",
+                "implemented": true
+              },
+              {
+                "name": "vertical divider",
+                "implemented": true
+              },
+              {
+                "name": "horizontal divider",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "inverted",
+                "implemented": true
+              },
+              {
+                "name": "fitted",
+                "implemented": true
+              },
+              {
+                "name": "hidden",
+                "implemented": true
+              },
+              {
+                "name": "section",
+                "implemented": true
+              },
+              {
+                "name": "clearing",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "flag",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "flag",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "flag",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "header",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "page headers",
-            "implemented": true
-          }, {
-            "name": "content headers",
-            "implemented": true
-          }, {
-            "name": "icon headers",
-            "implemented": true
-          }, {
-            "name": "sub headers",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "image",
-            "implemented": true
-          }, {
-            "name": "icon",
-            "implemented": true
-          }, {
-            "name": "subheader",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "dividing",
-            "implemented": true
-          }, {
-            "name": "block",
-            "implemented": true
-          }, {
-            "name": "attached",
-            "implemented": true
-          }, {
-            "name": "floating",
-            "implemented": true
-          }, {
-            "name": "text alignment",
-            "implemented": true
-          }, {
-            "name": "colored",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "page headers",
+                "implemented": true
+              },
+              {
+                "name": "content headers",
+                "implemented": true
+              },
+              {
+                "name": "icon headers",
+                "implemented": true
+              },
+              {
+                "name": "sub headers",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "image",
+                "implemented": true
+              },
+              {
+                "name": "icon",
+                "implemented": true
+              },
+              {
+                "name": "subheader",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "dividing",
+                "implemented": true
+              },
+              {
+                "name": "block",
+                "implemented": true
+              },
+              {
+                "name": "attached",
+                "implemented": true
+              },
+              {
+                "name": "floating",
+                "implemented": true
+              },
+              {
+                "name": "text alignment",
+                "implemented": true
+              },
+              {
+                "name": "colored",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "icon",
-        "definitions": [{
-          "name": "states",
-          "examples": [{
-            "name": "disabled",
-            "implemented": true
-          }, {
-            "name": "loading",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "fitted",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": true
-          }, {
-            "name": "flipped",
-            "implemented": true
-          }, {
-            "name": "rotated",
-            "implemented": true
-          }, {
-            "name": "circular",
-            "implemented": true
-          }, {
-            "name": "bordered",
-            "implemented": true
-          }, {
-            "name": "colored",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }]
-        }, {
-          "name": "groups",
-          "examples": [{
-            "name": "icons",
-            "implemented": true
-          }, {
-            "name": "corner icon",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "disabled",
+                "implemented": true
+              },
+              {
+                "name": "loading",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "fitted",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": true
+              },
+              {
+                "name": "flipped",
+                "implemented": true
+              },
+              {
+                "name": "rotated",
+                "implemented": true
+              },
+              {
+                "name": "circular",
+                "implemented": true
+              },
+              {
+                "name": "bordered",
+                "implemented": true
+              },
+              {
+                "name": "colored",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "groups",
+            "examples": [
+              {
+                "name": "icons",
+                "implemented": true
+              },
+              {
+                "name": "corner icon",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "image",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "image",
-            "implemented": true
-          }, {
-            "name": "image link",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "hidden",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "avatar",
-            "implemented": true
-          }, {
-            "name": "bordered",
-            "implemented": true
-          }, {
-            "name": "fluid",
-            "implemented": true
-          }, {
-            "name": "rounded",
-            "implemented": true
-          }, {
-            "name": "circular",
-            "implemented": true
-          }, {
-            "name": "vertically aligned",
-            "implemented": true
-          }, {
-            "name": "centered",
-            "implemented": true
-          }, {
-            "name": "spaced",
-            "implemented": true
-          }, {
-            "name": "floated",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }]
-        }, {
-          "name": "groups",
-          "examples": [{
-            "name": "size",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "image",
+                "implemented": true
+              },
+              {
+                "name": "image link",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "hidden",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "avatar",
+                "implemented": true
+              },
+              {
+                "name": "bordered",
+                "implemented": true
+              },
+              {
+                "name": "fluid",
+                "implemented": true
+              },
+              {
+                "name": "rounded",
+                "implemented": true
+              },
+              {
+                "name": "circular",
+                "implemented": true
+              },
+              {
+                "name": "vertically aligned",
+                "implemented": true
+              },
+              {
+                "name": "centered",
+                "implemented": true
+              },
+              {
+                "name": "spaced",
+                "implemented": true
+              },
+              {
+                "name": "floated",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "groups",
+            "examples": [
+              {
+                "name": "size",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "input",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "input",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "focus",
-            "implemented": true
-          }, {
-            "name": "loading",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }, {
-            "name": "error",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "icon",
-            "implemented": true
-          }, {
-            "name": "labeled",
-            "implemented": false
-          }, {
-            "name": "action",
-            "implemented": false
-          }, {
-            "name": "transparent",
-            "implemented": false
-          }, {
-            "name": "inverted",
-            "implemented": false
-          }, {
-            "name": "fluid",
-            "implemented": false
-          }, {
-            "name": "size",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "input",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "focus",
+                "implemented": true
+              },
+              {
+                "name": "loading",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              },
+              {
+                "name": "error",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "icon",
+                "implemented": true
+              },
+              {
+                "name": "labeled",
+                "implemented": false
+              },
+              {
+                "name": "action",
+                "implemented": false
+              },
+              {
+                "name": "transparent",
+                "implemented": false
+              },
+              {
+                "name": "inverted",
+                "implemented": false
+              },
+              {
+                "name": "fluid",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "label",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "label",
-            "implemented": true
-          }, {
-            "name": "image",
-            "implemented": true
-          }, {
-            "name": "pointing",
-            "implemented": true
-          }, {
-            "name": "corner",
-            "implemented": true
-          }, {
-            "name": "tag",
-            "implemented": true
-          }, {
-            "name": "ribbon",
-            "implemented": true
-          }, {
-            "name": "attached",
-            "implemented": true
-          }, {
-            "name": "horizontal",
-            "implemented": true
-          }, {
-            "name": "floating",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "detail",
-            "implemented": true
-          }, {
-            "name": "icon",
-            "implemented": true
-          }, {
-            "name": "image",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "circular",
-            "implemented": true
-          }, {
-            "name": "basic",
-            "implemented": true
-          }, {
-            "name": "colored",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }]
-        }, {
-          "name": "groups",
-          "examples": [{
-            "name": "group size",
-            "implemented": false
-          }, {
-            "name": "colored group",
-            "implemented": false
-          }, {
-            "name": "tag group",
-            "implemented": false
-          }, {
-            "name": "circular group",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "label",
+                "implemented": true
+              },
+              {
+                "name": "image",
+                "implemented": true
+              },
+              {
+                "name": "pointing",
+                "implemented": true
+              },
+              {
+                "name": "corner",
+                "implemented": true
+              },
+              {
+                "name": "tag",
+                "implemented": true
+              },
+              {
+                "name": "ribbon",
+                "implemented": true
+              },
+              {
+                "name": "attached",
+                "implemented": true
+              },
+              {
+                "name": "horizontal",
+                "implemented": true
+              },
+              {
+                "name": "floating",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "detail",
+                "implemented": true
+              },
+              {
+                "name": "icon",
+                "implemented": true
+              },
+              {
+                "name": "image",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "circular",
+                "implemented": true
+              },
+              {
+                "name": "basic",
+                "implemented": true
+              },
+              {
+                "name": "colored",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "groups",
+            "examples": [
+              {
+                "name": "group size",
+                "implemented": false
+              },
+              {
+                "name": "colored group",
+                "implemented": false
+              },
+              {
+                "name": "tag group",
+                "implemented": false
+              },
+              {
+                "name": "circular group",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "list",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "list",
-            "implemented": true
-          }, {
-            "name": "bulleted",
-            "implemented": true
-          }, {
-            "name": "ordered",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "item",
-            "implemented": true
-          }, {
-            "name": "icon",
-            "implemented": true
-          }, {
-            "name": "image",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": true
-          }, {
-            "name": "header",
-            "implemented": true
-          }, {
-            "name": "description",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "horizontal",
-            "implemented": false
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }, {
-            "name": "selection",
-            "implemented": false
-          }, {
-            "name": "animated",
-            "implemented": false
-          }, {
-            "name": "relaxed",
-            "implemented": false
-          }, {
-            "name": "divided",
-            "implemented": false
-          }, {
-            "name": "celled",
-            "implemented": false
-          }, {
-            "name": "size",
-            "implemented": false
-          }]
-        }, {
-          "name": "content variations",
-          "examples": [{
-            "name": "vertically aligned",
-            "implemented": false
-          }, {
-            "name": "floated",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "list",
+                "implemented": true
+              },
+              {
+                "name": "bulleted",
+                "implemented": true
+              },
+              {
+                "name": "ordered",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "item",
+                "implemented": true
+              },
+              {
+                "name": "icon",
+                "implemented": true
+              },
+              {
+                "name": "image",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": true
+              },
+              {
+                "name": "header",
+                "implemented": true
+              },
+              {
+                "name": "description",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "horizontal",
+                "implemented": false
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              },
+              {
+                "name": "selection",
+                "implemented": false
+              },
+              {
+                "name": "animated",
+                "implemented": false
+              },
+              {
+                "name": "relaxed",
+                "implemented": false
+              },
+              {
+                "name": "divided",
+                "implemented": false
+              },
+              {
+                "name": "celled",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "content variations",
+            "examples": [
+              {
+                "name": "vertically aligned",
+                "implemented": false
+              },
+              {
+                "name": "floated",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "loader",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "loader",
-            "implemented": true
-          }, {
-            "name": "text loader",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "indeterminate",
-            "implemented": true
-          }, {
-            "name": "active",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "inline",
-            "implemented": true
-          }, {
-            "name": "inline center",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "loader",
+                "implemented": true
+              },
+              {
+                "name": "text loader",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "indeterminate",
+                "implemented": true
+              },
+              {
+                "name": "active",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "inline",
+                "implemented": true
+              },
+              {
+                "name": "inline center",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "rail",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-              "name": "rail",
-              "implemented": true
-            },
-            {
-              "name": "internal",
-              "implemented": true
-            },
-            {
-              "name": "dividing",
-              "implemented": true
-            }
-          ]
-        }, {
-          "name": "variations",
-          "examples": [{
-              "name": "attached",
-              "implemented": true
-            },
-            {
-              "name": "close",
-              "implemented": false
-            },
-            {
-              "name": "size",
-              "implemented": false
-            }
-          ]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "rail",
+                "implemented": true
+              },
+              {
+                "name": "internal",
+                "implemented": true
+              },
+              {
+                "name": "dividing",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "attached",
+                "implemented": true
+              },
+              {
+                "name": "close",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "reveal",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "fade",
-            "implemented": true
-          }, {
-            "name": "move",
-            "implemented": true
-          }, {
-            "name": "rotate",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "visible content",
-            "implemented": true
-          }, {
-            "name": "hidden content",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "instant",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "fade",
+                "implemented": true
+              },
+              {
+                "name": "move",
+                "implemented": true
+              },
+              {
+                "name": "rotate",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "visible content",
+                "implemented": true
+              },
+              {
+                "name": "hidden content",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "instant",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "segment",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "segment",
-            "implemented": true
-          }, {
-            "name": "raised",
-            "implemented": true
-          }, {
-            "name": "stacked",
-            "implemented": true
-          }, {
-            "name": "piled",
-            "implemented": true
-          }, {
-            "name": "vertical segment",
-            "implemented": false
-          }]
-        }, {
-          "name": "groups",
-          "examples": [{
-            "name": "segments",
-            "implemented": false
-          }, {
-            "name": "nested segments",
-            "implemented": false
-          }, {
-            "name": "horizontal segments",
-            "implemented": false
-          }, {
-            "name": "raised segments",
-            "implemented": false
-          }, {
-            "name": "stacked segments",
-            "implemented": false
-          }, {
-            "name": "piled segments",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "disabled",
-            "implemented": false
-          }, {
-            "name": "loading",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "inverted",
-            "implemented": false
-          }, {
-            "name": "attached",
-            "implemented": false
-          }, {
-            "name": "padded",
-            "implemented": false
-          }, {
-            "name": "compact",
-            "implemented": false
-          }, {
-            "name": "colored",
-            "implemented": false
-          }, {
-            "name": "emphasis",
-            "implemented": false
-          }, {
-            "name": "circular",
-            "implemented": false
-          }, {
-            "name": "clearing",
-            "implemented": false
-          }, {
-            "name": "floated",
-            "implemented": false
-          }, {
-            "name": "text alignment",
-            "implemented": false
-          }, {
-            "name": "basic",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "segment",
+                "implemented": true
+              },
+              {
+                "name": "raised",
+                "implemented": true
+              },
+              {
+                "name": "stacked",
+                "implemented": true
+              },
+              {
+                "name": "piled",
+                "implemented": true
+              },
+              {
+                "name": "vertical segment",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "groups",
+            "examples": [
+              {
+                "name": "segments",
+                "implemented": false
+              },
+              {
+                "name": "nested segments",
+                "implemented": false
+              },
+              {
+                "name": "horizontal segments",
+                "implemented": false
+              },
+              {
+                "name": "raised segments",
+                "implemented": false
+              },
+              {
+                "name": "stacked segments",
+                "implemented": false
+              },
+              {
+                "name": "piled segments",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "disabled",
+                "implemented": false
+              },
+              {
+                "name": "loading",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "inverted",
+                "implemented": false
+              },
+              {
+                "name": "attached",
+                "implemented": false
+              },
+              {
+                "name": "padded",
+                "implemented": false
+              },
+              {
+                "name": "compact",
+                "implemented": false
+              },
+              {
+                "name": "colored",
+                "implemented": false
+              },
+              {
+                "name": "emphasis",
+                "implemented": false
+              },
+              {
+                "name": "circular",
+                "implemented": false
+              },
+              {
+                "name": "clearing",
+                "implemented": false
+              },
+              {
+                "name": "floated",
+                "implemented": false
+              },
+              {
+                "name": "text alignment",
+                "implemented": false
+              },
+              {
+                "name": "basic",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "step",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "step",
-            "implemented": true
-          }]
-        }, {
-          "name": "groups",
-          "examples": [{
-            "name": "steps",
-            "implemented": true
-          }, {
-            "name": "ordered",
-            "implemented": true
-          }, {
-            "name": "vertical",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "description",
-            "implemented": true
-          }, {
-            "name": "icon",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": true
-          }, {
-            "name": "completed",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "stackable",
-            "implemented": true
-          }, {
-            "name": "fluid",
-            "implemented": true
-          }, {
-            "name": "unstackable",
-            "implemented": true
-          }, {
-            "name": "attached",
-            "implemented": true
-          }, {
-            "name": "evenly divided",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "step",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "groups",
+            "examples": [
+              {
+                "name": "steps",
+                "implemented": true
+              },
+              {
+                "name": "ordered",
+                "implemented": true
+              },
+              {
+                "name": "vertical",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "description",
+                "implemented": true
+              },
+              {
+                "name": "icon",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": true
+              },
+              {
+                "name": "completed",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "stackable",
+                "implemented": true
+              },
+              {
+                "name": "fluid",
+                "implemented": true
+              },
+              {
+                "name": "unstackable",
+                "implemented": true
+              },
+              {
+                "name": "attached",
+                "implemented": true
+              },
+              {
+                "name": "evenly divided",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "name": "collections",
-    "components": [{
+    "components": [
+      {
         "name": "breadcrumb",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "breadcrumb",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "divider",
-            "implemented": true
-          }, {
-            "name": "section",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "size",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "breadcrumb",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "divider",
+                "implemented": true
+              },
+              {
+                "name": "section",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "size",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "form",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "form",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "field",
-            "implemented": true
-          }, {
-            "name": "fields",
-            "implemented": true
-          }, {
-            "name": "text area",
-            "implemented": true
-          }, {
-            "name": {
-              "name": "checkbox",
-              "examples": [{
-                "name": "types",
-                "examples": [{
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "form",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "field",
+                "implemented": true
+              },
+              {
+                "name": "fields",
+                "implemented": true
+              },
+              {
+                "name": "text area",
+                "implemented": true
+              },
+              {
+                "name": {
                   "name": "checkbox",
-                  "implemented": true
-                }, {
-                  "name": "radio",
-                  "implemented": true
-                }, {
-                  "name": "slider",
-                  "implemented": true
-                }, {
-                  "name": "toggle",
-                  "implemented": true
-                }]
-              }, {
-                "name": "states",
-                "examples": [{
-                  "name": "read-only",
-                  "implemented": false
-                }, {
-                  "name": "checked",
-                  "implemented": false
-                }, {
-                  "name": "indeterminate",
-                  "implemented": false
-                }, {
-                  "name": "disabled",
-                  "implemented": false
-                }]
-              }, {
-                "name": "variations",
-                "examples": [{
-                  "name": "fitted",
-                  "implemented": false
-                }]
-              }]
-            },
-            "implemented": false
-          }, {
-            "name": "radio checkbox",
-            "implemented": true
-          }, {
-            "name": {
-              "name": "dropdown",
-              "examples": [{
-                "name": "types",
-                "examples": [{
+                  "examples": [
+                    {
+                      "name": "types",
+                      "examples": [
+                        {
+                          "name": "checkbox",
+                          "implemented": true
+                        },
+                        {
+                          "name": "radio",
+                          "implemented": true
+                        },
+                        {
+                          "name": "slider",
+                          "implemented": true
+                        },
+                        {
+                          "name": "toggle",
+                          "implemented": true
+                        }
+                      ]
+                    },
+                    {
+                      "name": "states",
+                      "examples": [
+                        {
+                          "name": "read-only",
+                          "implemented": false
+                        },
+                        {
+                          "name": "checked",
+                          "implemented": false
+                        },
+                        {
+                          "name": "indeterminate",
+                          "implemented": false
+                        },
+                        {
+                          "name": "disabled",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "variations",
+                      "examples": [
+                        {
+                          "name": "fitted",
+                          "implemented": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "implemented": false
+              },
+              {
+                "name": "radio checkbox",
+                "implemented": true
+              },
+              {
+                "name": {
                   "name": "dropdown",
-                  "implemented": false
-                }, {
-                  "name": "selection",
-                  "implemented": false
-                }, {
-                  "name": "search selection",
-                  "implemented": false
-                }, {
-                  "name": "multiple selection",
-                  "implemented": false
-                }, {
-                  "name": {
-                    "name": "multiple search selection",
-                    "implemented": false
-                  },
-                  "implemented": false
-                }, {
-                  "name": "search dropdown",
-                  "implemented": false
-                }, {
-                  "name": "search in-menu",
-                  "implemented": false
-                }, {
-                  "name": "inline",
-                  "implemented": false
-                }, {
-                  "name": "pointing",
-                  "implemented": false
-                }, {
-                  "name": "floating",
-                  "implemented": false
-                }, {
-                  "name": "simple",
-                  "implemented": false
-                }]
-              }, {
-                "name": "content",
-                "examples": [{
-                  "name": "header",
-                  "implemented": false
-                }, {
-                  "name": "divider",
-                  "implemented": false
-                }, {
-                  "name": "icon",
-                  "implemented": false
-                }, {
-                  "name": "description",
-                  "implemented": false
-                }, {
-                  "name": "label",
-                  "implemented": false
-                }, {
+                  "examples": [
+                    {
+                      "name": "types",
+                      "examples": [
+                        {
+                          "name": "dropdown",
+                          "implemented": false
+                        },
+                        {
+                          "name": "selection",
+                          "implemented": false
+                        },
+                        {
+                          "name": "search selection",
+                          "implemented": false
+                        },
+                        {
+                          "name": "multiple selection",
+                          "implemented": false
+                        },
+                        {
+                          "name": {
+                            "name": "multiple search selection",
+                            "implemented": false
+                          },
+                          "implemented": false
+                        },
+                        {
+                          "name": "search dropdown",
+                          "implemented": false
+                        },
+                        {
+                          "name": "search in-menu",
+                          "implemented": false
+                        },
+                        {
+                          "name": "inline",
+                          "implemented": false
+                        },
+                        {
+                          "name": "pointing",
+                          "implemented": false
+                        },
+                        {
+                          "name": "floating",
+                          "implemented": false
+                        },
+                        {
+                          "name": "simple",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "content",
+                      "examples": [
+                        {
+                          "name": "header",
+                          "implemented": false
+                        },
+                        {
+                          "name": "divider",
+                          "implemented": false
+                        },
+                        {
+                          "name": "icon",
+                          "implemented": false
+                        },
+                        {
+                          "name": "description",
+                          "implemented": false
+                        },
+                        {
+                          "name": "label",
+                          "implemented": false
+                        },
+                        {
+                          "name": "message",
+                          "implemented": false
+                        },
+                        {
+                          "name": "floated content",
+                          "implemented": false
+                        },
+                        {
+                          "name": "input",
+                          "implemented": false
+                        },
+                        {
+                          "name": "image",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "states",
+                      "examples": [
+                        {
+                          "name": "loading",
+                          "implemented": false
+                        },
+                        {
+                          "name": "error",
+                          "implemented": false
+                        },
+                        {
+                          "name": "active",
+                          "implemented": false
+                        },
+                        {
+                          "name": "disabled",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "variations",
+                      "examples": [
+                        {
+                          "name": "scrolling",
+                          "implemented": false
+                        },
+                        {
+                          "name": "compact",
+                          "implemented": false
+                        },
+                        {
+                          "name": "fluid",
+                          "implemented": false
+                        },
+                        {
+                          "name": "menu direction",
+                          "implemented": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "implemented": false
+              },
+              {
+                "name": "multiple select",
+                "implemented": true
+              },
+              {
+                "name": "html select",
+                "implemented": true
+              },
+              {
+                "name": {
                   "name": "message",
-                  "implemented": false
-                }, {
-                  "name": "floated content",
-                  "implemented": false
-                }, {
-                  "name": "input",
-                  "implemented": false
-                }, {
-                  "name": "image",
-                  "implemented": false
-                }]
-              }, {
-                "name": "states",
-                "examples": [{
-                  "name": "loading",
-                  "implemented": false
-                }, {
-                  "name": "error",
-                  "implemented": false
-                }, {
-                  "name": "active",
-                  "implemented": false
-                }, {
-                  "name": "disabled",
-                  "implemented": false
-                }]
-              }, {
-                "name": "variations",
-                "examples": [{
-                  "name": "scrolling",
-                  "implemented": false
-                }, {
-                  "name": "compact",
-                  "implemented": false
-                }, {
-                  "name": "fluid",
-                  "implemented": false
-                }, {
-                  "name": "menu direction",
-                  "implemented": false
-                }]
-              }]
-            },
-            "implemented": false
-          }, {
-            "name": "multiple select",
-            "implemented": true
-          }, {
-            "name": "html select",
-            "implemented": true
-          }, {
-            "name": {
-              "name": "message",
-              "examples": [{
-                "name": "types",
-                "examples": [{
-                  "name": "message",
-                  "implemented": false
-                }, {
-                  "name": "list message",
-                  "implemented": false
-                }, {
-                  "name": "icon message",
-                  "implemented": false
-                }, {
-                  "name": "dismissable block",
-                  "implemented": false
-                }]
-              }, {
-                "name": "states",
-                "examples": [{
-                  "name": "hidden",
-                  "implemented": false
-                }, {
-                  "name": "visible",
-                  "implemented": false
-                }]
-              }, {
-                "name": "variations",
-                "examples": [{
-                  "name": "floating",
-                  "implemented": false
-                }, {
-                  "name": "compact",
-                  "implemented": false
-                }, {
-                  "name": "attached",
-                  "implemented": false
-                }, {
-                  "name": "warning",
-                  "implemented": false
-                }, {
-                  "name": "info",
-                  "implemented": false
-                }, {
-                  "name": "positive / success",
-                  "implemented": false
-                }, {
-                  "name": "negative / error",
-                  "implemented": false
-                }, {
-                  "name": "colored",
-                  "implemented": false
-                }, {
-                  "name": "size",
-                  "implemented": false
-                }]
-              }]
-            },
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "loading",
-            "implemented": true
-          }, {
-            "name": "success",
-            "implemented": true
-          }, {
-            "name": "error",
-            "implemented": true
-          }, {
-            "name": "warning",
-            "implemented": true
-          }, {
-            "name": "field error",
-            "implemented": true
-          }, {
-            "name": "disabled field",
-            "implemented": true
-          }, "read-only field"]
-        }, {
-          "name": "form variations",
-          "examples": [{
-            "name": "size",
-            "implemented": true
-          }, {
-            "name": "equal width form",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }]
-        }, {
-          "name": "field variations",
-          "examples": [{
-            "name": "inline field",
-            "implemented": true
-          }, {
-            "name": "width",
-            "implemented": true
-          }, {
-            "name": "required",
-            "implemented": true
-          }]
-        }, {
-          "name": "group variations",
-          "examples": [{
-            "name": "evenly divided",
-            "implemented": true
-          }, {
-            "name": "grouped fields",
-            "implemented": true
-          }, {
-            "name": "equal width fields",
-            "implemented": true
-          }, {
-            "name": "inline fields",
-            "implemented": true
-          }]
-        }]
+                  "examples": [
+                    {
+                      "name": "types",
+                      "examples": [
+                        {
+                          "name": "message",
+                          "implemented": false
+                        },
+                        {
+                          "name": "list message",
+                          "implemented": false
+                        },
+                        {
+                          "name": "icon message",
+                          "implemented": false
+                        },
+                        {
+                          "name": "dismissable block",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "states",
+                      "examples": [
+                        {
+                          "name": "hidden",
+                          "implemented": false
+                        },
+                        {
+                          "name": "visible",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "variations",
+                      "examples": [
+                        {
+                          "name": "floating",
+                          "implemented": false
+                        },
+                        {
+                          "name": "compact",
+                          "implemented": false
+                        },
+                        {
+                          "name": "attached",
+                          "implemented": false
+                        },
+                        {
+                          "name": "warning",
+                          "implemented": false
+                        },
+                        {
+                          "name": "info",
+                          "implemented": false
+                        },
+                        {
+                          "name": "positive / success",
+                          "implemented": false
+                        },
+                        {
+                          "name": "negative / error",
+                          "implemented": false
+                        },
+                        {
+                          "name": "colored",
+                          "implemented": false
+                        },
+                        {
+                          "name": "size",
+                          "implemented": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "loading",
+                "implemented": true
+              },
+              {
+                "name": "success",
+                "implemented": true
+              },
+              {
+                "name": "error",
+                "implemented": true
+              },
+              {
+                "name": "warning",
+                "implemented": true
+              },
+              {
+                "name": "field error",
+                "implemented": true
+              },
+              {
+                "name": "disabled field",
+                "implemented": true
+              },
+              "read-only field"
+            ]
+          },
+          {
+            "name": "form variations",
+            "examples": [
+              {
+                "name": "size",
+                "implemented": true
+              },
+              {
+                "name": "equal width form",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "field variations",
+            "examples": [
+              {
+                "name": "inline field",
+                "implemented": true
+              },
+              {
+                "name": "width",
+                "implemented": true
+              },
+              {
+                "name": "required",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "group variations",
+            "examples": [
+              {
+                "name": "evenly divided",
+                "implemented": true
+              },
+              {
+                "name": "grouped fields",
+                "implemented": true
+              },
+              {
+                "name": "equal width fields",
+                "implemented": true
+              },
+              {
+                "name": "inline fields",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "grid",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "grid",
-            "implemented": true
-          }, {
-            "name": "divided",
-            "implemented": true
-          }, {
-            "name": "vertically divided",
-            "implemented": true
-          }, {
-            "name": "celled",
-            "implemented": true
-          }, {
-            "name": "internally celled",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "rows",
-            "implemented": true
-          }, {
-            "name": "columns",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "floated",
-            "implemented": false
-          }, {
-            "name": "column width",
-            "implemented": false
-          }, {
-            "name": "column count",
-            "implemented": false
-          }, {
-            "name": "equal width",
-            "implemented": false
-          }, {
-            "name": "stretched",
-            "implemented": true
-          }, {
-            "name": "padded",
-            "implemented": false
-          }, {
-            "name": "relaxed",
-            "implemented": false
-          }, {
-            "name": "colored",
-            "implemented": false
-          }, {
-            "name": "centered",
-            "implemented": false
-          }, {
-            "name": "text alignment",
-            "implemented": false
-          }, {
-            "name": "vertical alignment",
-            "implemented": false
-          }]
-        }, {
-          "name": "responsive variations",
-          "examples": [{
-            "name": "doubling",
-            "implemented": false
-          }, {
-            "name": "stackable",
-            "implemented": false
-          }, {
-            "name": "reversed",
-            "implemented": false
-          }, {
-            "name": "device visibility",
-            "implemented": false
-          }, {
-            "name": "responsive width",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "grid",
+                "implemented": true
+              },
+              {
+                "name": "divided",
+                "implemented": true
+              },
+              {
+                "name": "vertically divided",
+                "implemented": true
+              },
+              {
+                "name": "celled",
+                "implemented": true
+              },
+              {
+                "name": "internally celled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "rows",
+                "implemented": true
+              },
+              {
+                "name": "columns",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "floated",
+                "implemented": false
+              },
+              {
+                "name": "column width",
+                "implemented": false
+              },
+              {
+                "name": "column count",
+                "implemented": false
+              },
+              {
+                "name": "equal width",
+                "implemented": false
+              },
+              {
+                "name": "stretched",
+                "implemented": true
+              },
+              {
+                "name": "padded",
+                "implemented": false
+              },
+              {
+                "name": "relaxed",
+                "implemented": false
+              },
+              {
+                "name": "colored",
+                "implemented": false
+              },
+              {
+                "name": "centered",
+                "implemented": false
+              },
+              {
+                "name": "text alignment",
+                "implemented": false
+              },
+              {
+                "name": "vertical alignment",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "responsive variations",
+            "examples": [
+              {
+                "name": "doubling",
+                "implemented": false
+              },
+              {
+                "name": "stackable",
+                "implemented": false
+              },
+              {
+                "name": "reversed",
+                "implemented": false
+              },
+              {
+                "name": "device visibility",
+                "implemented": false
+              },
+              {
+                "name": "responsive width",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "menu",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "menu",
-            "implemented": true
-          }, {
-            "name": "secondary menu",
-            "implemented": true
-          }, {
-            "name": "pointing",
-            "implemented": true
-          }, {
-            "name": "tabular",
-            "implemented": true
-          }, {
-            "name": "text",
-            "implemented": true
-          }, {
-            "name": "vertical menu",
-            "implemented": false
-          }, {
-            "name": "pagination",
-            "implemented": false
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "header",
-            "implemented": false
-          }, {
-            "name": "text",
-            "implemented": false
-          }, {
-            "name": "input",
-            "implemented": false
-          }, {
-            "name": "button",
-            "implemented": false
-          }, {
-            "name": "link item",
-            "implemented": false
-          }, {
-            "name": "dropdown item",
-            "implemented": false
-          }, {
-            "name": "popup menu",
-            "implemented": false
-          }, {
-            "name": {
-              "name": "search",
-              "examples": [{
-                "name": "types",
-                "examples": [{
-                  "name": "standard",
-                  "implemented": false
-                }, {
-                  "name": "category",
-                  "implemented": false
-                }, {
-                  "name": "local search",
-                  "implemented": false
-                }, {
-                  "name": "local category search",
-                  "implemented": false
-                }]
-              }, {
-                "name": "states",
-                "examples": [{
-                  "name": "loading",
-                  "implemented": false
-                }]
-              }, {
-                "name": "variations",
-                "examples": [{
-                  "name": "disabled",
-                  "implemented": false
-                }, {
-                  "name": "fluid",
-                  "implemented": false
-                }, {
-                  "name": "aligned",
-                  "implemented": false
-                }]
-              }]
-            },
-            "implemented": false
-          }, {
-            "name": "menu",
-            "implemented": false
-          }, {
-            "name": "sub menu",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "hover",
-            "implemented": false
-          }, {
-            "name": "active",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "fixed",
-            "implemented": false
-          }, {
-            "name": "stackable",
-            "implemented": false
-          }, {
-            "name": "inverted",
-            "implemented": false
-          }, {
-            "name": "colored",
-            "implemented": false
-          }, {
-            "name": "icons",
-            "implemented": false
-          }, {
-            "name": "labeled icon",
-            "implemented": false
-          }, {
-            "name": "fluid",
-            "implemented": false
-          }, {
-            "name": "compact",
-            "implemented": false
-          }, {
-            "name": "evenly divided",
-            "implemented": false
-          }, {
-            "name": "attached",
-            "implemented": false
-          }, {
-            "name": "size",
-            "implemented": false
-          }, {
-            "name": "fitted",
-            "implemented": false
-          }, {
-            "name": "borderless",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "menu",
+                "implemented": true
+              },
+              {
+                "name": "secondary menu",
+                "implemented": true
+              },
+              {
+                "name": "pointing",
+                "implemented": true
+              },
+              {
+                "name": "tabular",
+                "implemented": true
+              },
+              {
+                "name": "text",
+                "implemented": true
+              },
+              {
+                "name": "vertical menu",
+                "implemented": false
+              },
+              {
+                "name": "pagination",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "header",
+                "implemented": false
+              },
+              {
+                "name": "text",
+                "implemented": false
+              },
+              {
+                "name": "input",
+                "implemented": false
+              },
+              {
+                "name": "button",
+                "implemented": false
+              },
+              {
+                "name": "link item",
+                "implemented": false
+              },
+              {
+                "name": "dropdown item",
+                "implemented": false
+              },
+              {
+                "name": "popup menu",
+                "implemented": false
+              },
+              {
+                "name": {
+                  "name": "search",
+                  "examples": [
+                    {
+                      "name": "types",
+                      "examples": [
+                        {
+                          "name": "standard",
+                          "implemented": false
+                        },
+                        {
+                          "name": "category",
+                          "implemented": false
+                        },
+                        {
+                          "name": "local search",
+                          "implemented": false
+                        },
+                        {
+                          "name": "local category search",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "states",
+                      "examples": [
+                        {
+                          "name": "loading",
+                          "implemented": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "variations",
+                      "examples": [
+                        {
+                          "name": "disabled",
+                          "implemented": false
+                        },
+                        {
+                          "name": "fluid",
+                          "implemented": false
+                        },
+                        {
+                          "name": "aligned",
+                          "implemented": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "implemented": false
+              },
+              {
+                "name": "menu",
+                "implemented": false
+              },
+              {
+                "name": "sub menu",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "hover",
+                "implemented": false
+              },
+              {
+                "name": "active",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "fixed",
+                "implemented": false
+              },
+              {
+                "name": "stackable",
+                "implemented": false
+              },
+              {
+                "name": "inverted",
+                "implemented": false
+              },
+              {
+                "name": "colored",
+                "implemented": false
+              },
+              {
+                "name": "icons",
+                "implemented": false
+              },
+              {
+                "name": "labeled icon",
+                "implemented": false
+              },
+              {
+                "name": "fluid",
+                "implemented": false
+              },
+              {
+                "name": "compact",
+                "implemented": false
+              },
+              {
+                "name": "evenly divided",
+                "implemented": false
+              },
+              {
+                "name": "attached",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": false
+              },
+              {
+                "name": "fitted",
+                "implemented": false
+              },
+              {
+                "name": "borderless",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "message",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "message",
-            "implemented": true
-          }, {
-            "name": "list message",
-            "implemented": true
-          }, {
-            "name": "icon message",
-            "implemented": true
-          }, {
-            "name": "dismissable block",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "hidden",
-            "implemented": false
-          }, {
-            "name": "visible",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "floating",
-            "implemented": false
-          }, {
-            "name": "compact",
-            "implemented": false
-          }, {
-            "name": "attached",
-            "implemented": false
-          }, {
-            "name": "warning",
-            "implemented": false
-          }, {
-            "name": "info",
-            "implemented": false
-          }, {
-            "name": "positive / success",
-            "implemented": false
-          }, {
-            "name": "negative / error",
-            "implemented": false
-          }, {
-            "name": "colored",
-            "implemented": false
-          }, {
-            "name": "size",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "message",
+                "implemented": true
+              },
+              {
+                "name": "list message",
+                "implemented": true
+              },
+              {
+                "name": "icon message",
+                "implemented": true
+              },
+              {
+                "name": "dismissable block",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "hidden",
+                "implemented": false
+              },
+              {
+                "name": "visible",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "floating",
+                "implemented": false
+              },
+              {
+                "name": "compact",
+                "implemented": false
+              },
+              {
+                "name": "attached",
+                "implemented": false
+              },
+              {
+                "name": "warning",
+                "implemented": false
+              },
+              {
+                "name": "info",
+                "implemented": false
+              },
+              {
+                "name": "positive / success",
+                "implemented": false
+              },
+              {
+                "name": "negative / error",
+                "implemented": false
+              },
+              {
+                "name": "colored",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "table",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "table",
-            "implemented": true
-          }, {
-            "name": "definition",
-            "implemented": true
-          }, {
-            "name": "structured",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "positive / negative",
-            "implemented": true
-          }, {
-            "name": "error",
-            "implemented": true
-          }, {
-            "name": "warning",
-            "implemented": true
-          }, {
-            "name": "active",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "single line",
-            "implemented": true
-          }, {
-            "name": "fixed",
-            "implemented": true
-          }, {
-            "name": "stacking",
-            "implemented": true
-          }, {
-            "name": "selectable row",
-            "implemented": true
-          }, {
-            "name": "selectable cell",
-            "implemented": true
-          }, {
-            "name": "vertical alignment",
-            "implemented": true
-          }, {
-            "name": "text alignment",
-            "implemented": true
-          }, {
-            "name": "striped",
-            "implemented": true
-          }, {
-            "name": "celled",
-            "implemented": true
-          }, {
-            "name": "basic",
-            "implemented": true
-          }, {
-            "name": "collapsing cell",
-            "implemented": true
-          }, {
-            "name": "column count",
-            "implemented": true
-          }, {
-            "name": "column width",
-            "implemented": true
-          }, {
-            "name": "collapsing",
-            "implemented": true
-          }, {
-            "name": "colored",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }, {
-            "name": "sortable",
-            "implemented": false
-          }, {
-            "name": "full-width header / footer",
-            "implemented": true
-          }, {
-            "name": "padded",
-            "implemented": true
-          }, {
-            "name": "compact",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "table",
+                "implemented": true
+              },
+              {
+                "name": "definition",
+                "implemented": true
+              },
+              {
+                "name": "structured",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "positive / negative",
+                "implemented": true
+              },
+              {
+                "name": "error",
+                "implemented": true
+              },
+              {
+                "name": "warning",
+                "implemented": true
+              },
+              {
+                "name": "active",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "single line",
+                "implemented": true
+              },
+              {
+                "name": "fixed",
+                "implemented": true
+              },
+              {
+                "name": "stacking",
+                "implemented": true
+              },
+              {
+                "name": "selectable row",
+                "implemented": true
+              },
+              {
+                "name": "selectable cell",
+                "implemented": true
+              },
+              {
+                "name": "vertical alignment",
+                "implemented": true
+              },
+              {
+                "name": "text alignment",
+                "implemented": true
+              },
+              {
+                "name": "striped",
+                "implemented": true
+              },
+              {
+                "name": "celled",
+                "implemented": true
+              },
+              {
+                "name": "basic",
+                "implemented": true
+              },
+              {
+                "name": "collapsing cell",
+                "implemented": true
+              },
+              {
+                "name": "column count",
+                "implemented": true
+              },
+              {
+                "name": "column width",
+                "implemented": true
+              },
+              {
+                "name": "collapsing",
+                "implemented": true
+              },
+              {
+                "name": "colored",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              },
+              {
+                "name": "sortable",
+                "implemented": false
+              },
+              {
+                "name": "full-width header / footer",
+                "implemented": true
+              },
+              {
+                "name": "padded",
+                "implemented": true
+              },
+              {
+                "name": "compact",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "name": "views",
-    "components": [{
+    "components": [
+      {
         "name": "advertisement",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "ad",
-            "implemented": false
-          }, {
-            "name": "common units",
-            "implemented": false
-          }, {
-            "name": "mobile",
-            "implemented": false
-          }, {
-            "name": "rectangle",
-            "implemented": false
-          }, {
-            "name": "button",
-            "implemented": false
-          }, {
-            "name": "skyscraper",
-            "implemented": false
-          }, {
-            "name": "banner",
-            "implemented": false
-          }, {
-            "name": "leaderboards",
-            "implemented": false
-          }, {
-            "name": "panorama",
-            "implemented": false
-          }, {
-            "name": "netboard",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "centered",
-            "implemented": false
-          }, {
-            "name": "test",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "ad",
+                "implemented": false
+              },
+              {
+                "name": "common units",
+                "implemented": false
+              },
+              {
+                "name": "mobile",
+                "implemented": false
+              },
+              {
+                "name": "rectangle",
+                "implemented": false
+              },
+              {
+                "name": "button",
+                "implemented": false
+              },
+              {
+                "name": "skyscraper",
+                "implemented": false
+              },
+              {
+                "name": "banner",
+                "implemented": false
+              },
+              {
+                "name": "leaderboards",
+                "implemented": false
+              },
+              {
+                "name": "panorama",
+                "implemented": false
+              },
+              {
+                "name": "netboard",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "centered",
+                "implemented": false
+              },
+              {
+                "name": "test",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "card",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "card",
-            "implemented": true
-          }, {
-            "name": "cards",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "content block",
-            "implemented": true
-          }, {
-            "name": "image",
-            "implemented": true
-          }, {
-            "name": "header",
-            "implemented": true
-          }, {
-            "name": "metadata",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": true
-          }, {
-            "name": "buttons",
-            "implemented": true
-          }, {
-            "name": "approval",
-            "implemented": true
-          }, {
-            "name": "description",
-            "implemented": true
-          }, {
-            "name": "extra content",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "fluid card",
-            "implemented": true
-          }, {
-            "name": "centered card",
-            "implemented": true
-          }, {
-            "name": "raised card",
-            "implemented": true
-          }, {
-            "name": "link card",
-            "implemented": true
-          }, {
-            "name": "floated content",
-            "implemented": true
-          }, {
-            "name": "text alignment",
-            "implemented": true
-          }, {
-            "name": "colored",
-            "implemented": true
-          }, {
-            "name": "column count",
-            "implemented": true
-          }, {
-            "name": "stackable",
-            "implemented": true
-          }, {
-            "name": "doubling",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "card",
+                "implemented": true
+              },
+              {
+                "name": "cards",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "content block",
+                "implemented": true
+              },
+              {
+                "name": "image",
+                "implemented": true
+              },
+              {
+                "name": "header",
+                "implemented": true
+              },
+              {
+                "name": "metadata",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": true
+              },
+              {
+                "name": "buttons",
+                "implemented": true
+              },
+              {
+                "name": "approval",
+                "implemented": true
+              },
+              {
+                "name": "description",
+                "implemented": true
+              },
+              {
+                "name": "extra content",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "fluid card",
+                "implemented": true
+              },
+              {
+                "name": "centered card",
+                "implemented": true
+              },
+              {
+                "name": "raised card",
+                "implemented": true
+              },
+              {
+                "name": "link card",
+                "implemented": true
+              },
+              {
+                "name": "floated content",
+                "implemented": true
+              },
+              {
+                "name": "text alignment",
+                "implemented": true
+              },
+              {
+                "name": "colored",
+                "implemented": true
+              },
+              {
+                "name": "column count",
+                "implemented": true
+              },
+              {
+                "name": "stackable",
+                "implemented": true
+              },
+              {
+                "name": "doubling",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "comment",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "comments",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "avatar",
-            "implemented": false
-          }, {
-            "name": "metadata",
-            "implemented": false
-          }, {
-            "name": "actions",
-            "implemented": false
-          }, {
-            "name": "reply form",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "collapsed",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "threaded",
-            "implemented": false
-          }, {
-            "name": "minimal",
-            "implemented": false
-          }, {
-            "name": "size",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "comments",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "avatar",
+                "implemented": false
+              },
+              {
+                "name": "metadata",
+                "implemented": false
+              },
+              {
+                "name": "actions",
+                "implemented": false
+              },
+              {
+                "name": "reply form",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "collapsed",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "threaded",
+                "implemented": false
+              },
+              {
+                "name": "minimal",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "feed",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "feed",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "label",
-            "implemented": true
-          }, {
-            "name": "date",
-            "implemented": true
-          }, {
-            "name": "additional information",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "size",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "feed",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "label",
+                "implemented": true
+              },
+              {
+                "name": "date",
+                "implemented": true
+              },
+              {
+                "name": "additional information",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "size",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "item",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "items",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "image",
-            "implemented": true
-          }, {
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "items",
+                "implemented": true
+              }
+            ]
+          },
+          {
             "name": "content",
-            "implemented": true
-          }, {
-            "name": "header",
-            "implemented": true
-          }, {
-            "name": "metadata",
-            "implemented": true
-          }, {
-            "name": "link",
-            "implemented": false
-          }, {
-            "name": "description",
-            "implemented": false
-          }, {
-            "name": "extra content",
-            "implemented": false
-          }, {
-            "name": "rating",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "stacking",
-            "implemented": false
-          }, {
-            "name": "divided",
-            "implemented": false
-          }, {
-            "name": "relaxed",
-            "implemented": false
-          }, {
-            "name": "link item",
-            "implemented": false
-          }, {
-            "name": "vertical alignment",
-            "implemented": false
-          }, {
-            "name": "floated content",
-            "implemented": false
-          }]
-        }]
+            "examples": [
+              {
+                "name": "image",
+                "implemented": true
+              },
+              {
+                "name": "content",
+                "implemented": true
+              },
+              {
+                "name": "header",
+                "implemented": true
+              },
+              {
+                "name": "metadata",
+                "implemented": true
+              },
+              {
+                "name": "link",
+                "implemented": false
+              },
+              {
+                "name": "description",
+                "implemented": false
+              },
+              {
+                "name": "extra content",
+                "implemented": false
+              },
+              {
+                "name": "rating",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "stacking",
+                "implemented": false
+              },
+              {
+                "name": "divided",
+                "implemented": false
+              },
+              {
+                "name": "relaxed",
+                "implemented": false
+              },
+              {
+                "name": "link item",
+                "implemented": false
+              },
+              {
+                "name": "vertical alignment",
+                "implemented": false
+              },
+              {
+                "name": "floated content",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "statistic",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "statistic",
-            "implemented": true
-          }, {
-            "name": "statistic group",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "value",
-            "implemented": true
-          }, {
-            "name": "label",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "horizontal statistic",
-            "implemented": true
-          }, {
-            "name": "colored",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }, {
-            "name": "evenly divided",
-            "implemented": true
-          }, {
-            "name": "floated",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "statistic",
+                "implemented": true
+              },
+              {
+                "name": "statistic group",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "value",
+                "implemented": true
+              },
+              {
+                "name": "label",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "horizontal statistic",
+                "implemented": true
+              },
+              {
+                "name": "colored",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              },
+              {
+                "name": "evenly divided",
+                "implemented": true
+              },
+              {
+                "name": "floated",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "name": "modules",
-    "components": [{
+    "components": [
+      {
         "name": "accordion",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "accordion",
-            "implemented": true
-          }, {
-            "name": "styled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "fluid",
-            "implemented": false
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "accordion",
+                "implemented": true
+              },
+              {
+                "name": "styled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "fluid",
+                "implemented": false
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "checkbox",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "checkbox",
-            "implemented": true
-          }, {
-            "name": "radio",
-            "implemented": true
-          }, {
-            "name": "slider",
-            "implemented": false
-          }, {
-            "name": "toggle",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "read-only",
-            "implemented": false
-          }, {
-            "name": "checked",
-            "implemented": false
-          }, {
-            "name": "indeterminate",
-            "implemented": false
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "fitted",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "checkbox",
+                "implemented": true
+              },
+              {
+                "name": "radio",
+                "implemented": true
+              },
+              {
+                "name": "slider",
+                "implemented": false
+              },
+              {
+                "name": "toggle",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "read-only",
+                "implemented": false
+              },
+              {
+                "name": "checked",
+                "implemented": false
+              },
+              {
+                "name": "indeterminate",
+                "implemented": false
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "fitted",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "dimmer",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "dimmer",
-            "implemented": true
-          }, {
-            "name": "content dimmer",
-            "implemented": false
-          }, {
-            "name": "page dimmer",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": false
-          }, {
-            "name": "disabled",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "blurring",
-            "implemented": false
-          }, {
-            "name": "vertical alignment",
-            "implemented": false
-          }, {
-            "name": "simple dimmer",
-            "implemented": false
-          }, {
-            "name": "inverted dimmer",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "dimmer",
+                "implemented": true
+              },
+              {
+                "name": "content dimmer",
+                "implemented": false
+              },
+              {
+                "name": "page dimmer",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": false
+              },
+              {
+                "name": "disabled",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "blurring",
+                "implemented": false
+              },
+              {
+                "name": "vertical alignment",
+                "implemented": false
+              },
+              {
+                "name": "simple dimmer",
+                "implemented": false
+              },
+              {
+                "name": "inverted dimmer",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "dropdown",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "dropdown",
-            "implemented": true
-          }, {
-            "name": "selection",
-            "implemented": true
-          }, {
-            "name": "search selection",
-            "implemented": true
-          }, {
-            "name": "multiple selection",
-            "implemented": true
-          }, {
-            "name": "multiple search selection",
-            "implemented": true
-          }, {
-            "name": "search dropdown",
-            "implemented": true
-          }, {
-            "name": "search in-menu",
-            "implemented": false
-          }, {
-            "name": "inline",
-            "implemented": false
-          }, {
-            "name": "pointing",
-            "implemented": false
-          }, {
-            "name": "floating",
-            "implemented": true
-          }, {
-            "name": "simple",
-            "implemented": false
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "header",
-            "implemented": false
-          }, {
-            "name": "divider",
-            "implemented": false
-          }, {
-            "name": "icon",
-            "implemented": false
-          }, {
-            "name": "description",
-            "implemented": false
-          }, {
-            "name": "label",
-            "implemented": false
-          }, {
-            "name": "message",
-            "implemented": false
-          }, {
-            "name": "floated content",
-            "implemented": false
-          }, {
-            "name": "input",
-            "implemented": false
-          }, {
-            "name": "image",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "loading",
-            "implemented": false
-          }, {
-            "name": "error",
-            "implemented": false
-          }, {
-            "name": "active",
-            "implemented": false
-          }, {
-            "name": "disabled",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "scrolling",
-            "implemented": false
-          }, {
-            "name": "compact",
-            "implemented": false
-          }, {
-            "name": "fluid",
-            "implemented": false
-          }, {
-            "name": "menu direction",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "dropdown",
+                "implemented": true
+              },
+              {
+                "name": "selection",
+                "implemented": true
+              },
+              {
+                "name": "search selection",
+                "implemented": true
+              },
+              {
+                "name": "multiple selection",
+                "implemented": true
+              },
+              {
+                "name": "multiple search selection",
+                "implemented": true
+              },
+              {
+                "name": "search dropdown",
+                "implemented": true
+              },
+              {
+                "name": "search in-menu",
+                "implemented": false
+              },
+              {
+                "name": "inline",
+                "implemented": false
+              },
+              {
+                "name": "pointing",
+                "implemented": false
+              },
+              {
+                "name": "floating",
+                "implemented": true
+              },
+              {
+                "name": "simple",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "header",
+                "implemented": false
+              },
+              {
+                "name": "divider",
+                "implemented": false
+              },
+              {
+                "name": "icon",
+                "implemented": false
+              },
+              {
+                "name": "description",
+                "implemented": false
+              },
+              {
+                "name": "label",
+                "implemented": false
+              },
+              {
+                "name": "message",
+                "implemented": false
+              },
+              {
+                "name": "floated content",
+                "implemented": false
+              },
+              {
+                "name": "input",
+                "implemented": false
+              },
+              {
+                "name": "image",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "loading",
+                "implemented": false
+              },
+              {
+                "name": "error",
+                "implemented": false
+              },
+              {
+                "name": "active",
+                "implemented": false
+              },
+              {
+                "name": "disabled",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "scrolling",
+                "implemented": false
+              },
+              {
+                "name": "compact",
+                "implemented": false
+              },
+              {
+                "name": "fluid",
+                "implemented": false
+              },
+              {
+                "name": "menu direction",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "embed",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "youtube",
-            "implemented": true
-          }, {
-            "name": "vimeo",
-            "implemented": true
-          }, {
-            "name": "custom content",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "aspect ratio",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "youtube",
+                "implemented": true
+              },
+              {
+                "name": "vimeo",
+                "implemented": true
+              },
+              {
+                "name": "custom content",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "aspect ratio",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "modal",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "modal",
-            "implemented": true
-          }, {
-            "name": "basic",
-            "implemented": false
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "header",
-            "implemented": false
-          }, {
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "modal",
+                "implemented": true
+              },
+              {
+                "name": "basic",
+                "implemented": false
+              }
+            ]
+          },
+          {
             "name": "content",
-            "implemented": false
-          }, {
-            "name": "image content",
-            "implemented": false
-          }, {
-            "name": "actions",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "full screen",
-            "implemented": false
-          }, {
-            "name": "size",
-            "implemented": false
-          }, {
-            "name": "scrolling content",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": false
-          }]
-        }]
+            "examples": [
+              {
+                "name": "header",
+                "implemented": false
+              },
+              {
+                "name": "content",
+                "implemented": false
+              },
+              {
+                "name": "image content",
+                "implemented": false
+              },
+              {
+                "name": "actions",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "full screen",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": false
+              },
+              {
+                "name": "scrolling content",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "popup",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "popup",
-            "implemented": true
-          }, {
-            "name": "titled",
-            "implemented": true
-          }, {
-            "name": "html",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "basic",
-            "implemented": true
-          }, {
-            "name": "width",
-            "implemented": true
-          }, {
-            "name": "fluid",
-            "implemented": false
-          }, {
-            "name": "size",
-            "implemented": true
-          }, {
-            "name": "flowing",
-            "implemented": true
-          }, {
-            "name": "inverted",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "popup",
+                "implemented": true
+              },
+              {
+                "name": "titled",
+                "implemented": true
+              },
+              {
+                "name": "html",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "basic",
+                "implemented": true
+              },
+              {
+                "name": "width",
+                "implemented": true
+              },
+              {
+                "name": "fluid",
+                "implemented": false
+              },
+              {
+                "name": "size",
+                "implemented": true
+              },
+              {
+                "name": "flowing",
+                "implemented": true
+              },
+              {
+                "name": "inverted",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "progress",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "standard",
-            "implemented": true
-          }, {
-            "name": "indicating",
-            "implemented": true
-          }]
-        }, {
-          "name": "content",
-          "examples": [{
-            "name": "bar",
-            "implemented": true
-          }, {
-            "name": "progress",
-            "implemented": true
-          }, {
-            "name": "label",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": true
-          }, {
-            "name": "success",
-            "implemented": true
-          }, {
-            "name": "warning",
-            "implemented": true
-          }, {
-            "name": "error",
-            "implemented": true
-          }, {
-            "name": "disabled",
-            "implemented": true
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "inverted",
-            "implemented": true
-          }, {
-            "name": "attached",
-            "implemented": true
-          }, {
-            "name": "size",
-            "implemented": true
-          }, {
-            "name": "color",
-            "implemented": true
-          }, {
-            "name": "inverted color",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "standard",
+                "implemented": true
+              },
+              {
+                "name": "indicating",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "content",
+            "examples": [
+              {
+                "name": "bar",
+                "implemented": true
+              },
+              {
+                "name": "progress",
+                "implemented": true
+              },
+              {
+                "name": "label",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": true
+              },
+              {
+                "name": "success",
+                "implemented": true
+              },
+              {
+                "name": "warning",
+                "implemented": true
+              },
+              {
+                "name": "error",
+                "implemented": true
+              },
+              {
+                "name": "disabled",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "inverted",
+                "implemented": true
+              },
+              {
+                "name": "attached",
+                "implemented": true
+              },
+              {
+                "name": "size",
+                "implemented": true
+              },
+              {
+                "name": "color",
+                "implemented": true
+              },
+              {
+                "name": "inverted color",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "rating",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "rating",
-            "implemented": true
-          }, {
-            "name": "star",
-            "implemented": false
-          }, {
-            "name": "heart",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "size",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "rating",
+                "implemented": true
+              },
+              {
+                "name": "star",
+                "implemented": false
+              },
+              {
+                "name": "heart",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "size",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "search",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "standard",
-            "implemented": false
-          }, {
-            "name": "category",
-            "implemented": false
-          }, {
-            "name": "local search",
-            "implemented": false
-          }, {
-            "name": "local category search",
-            "implemented": false
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "loading",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "disabled",
-            "implemented": false
-          }, {
-            "name": "fluid",
-            "implemented": false
-          }, {
-            "name": "aligned",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "standard",
+                "implemented": false
+              },
+              {
+                "name": "category",
+                "implemented": false
+              },
+              {
+                "name": "local search",
+                "implemented": false
+              },
+              {
+                "name": "local category search",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "loading",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "disabled",
+                "implemented": false
+              },
+              {
+                "name": "fluid",
+                "implemented": false
+              },
+              {
+                "name": "aligned",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "shape",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "shape",
-            "implemented": false
-          }, {
-            "name": "cube",
-            "implemented": false
-          }, {
-            "name": "text",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "shape",
+                "implemented": false
+              },
+              {
+                "name": "cube",
+                "implemented": false
+              },
+              {
+                "name": "text",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "sidebar",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "sidebar",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "visible",
-            "implemented": true
-          }, {
-            "name": "dimmed",
-            "implemented": false
-          }]
-        }, {
-          "name": "variations",
-          "examples": [{
-            "name": "direction",
-            "implemented": true
-          }, {
-            "name": "width",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "sidebar",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "visible",
+                "implemented": true
+              },
+              {
+                "name": "dimmed",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "name": "variations",
+            "examples": [
+              {
+                "name": "direction",
+                "implemented": true
+              },
+              {
+                "name": "width",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "sticky",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "sticky",
-            "implemented": false
-          }, {
-            "name": "pushing",
-            "implemented": false
-          }, {
-            "name": "oversized content",
-            "implemented": false
-          }, {
-            "name": "stick to own content",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "sticky",
+                "implemented": false
+              },
+              {
+                "name": "pushing",
+                "implemented": false
+              },
+              {
+                "name": "oversized content",
+                "implemented": false
+              },
+              {
+                "name": "stick to own content",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "tab",
-        "definitions": [{
-          "name": "type",
-          "examples": [{
-            "name": "tab",
-            "implemented": true
-          }]
-        }, {
-          "name": "states",
-          "examples": [{
-            "name": "active",
-            "implemented": true
-          }, {
-            "name": "loading",
-            "implemented": true
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "type",
+            "examples": [
+              {
+                "name": "tab",
+                "implemented": true
+              }
+            ]
+          },
+          {
+            "name": "states",
+            "examples": [
+              {
+                "name": "active",
+                "implemented": true
+              },
+              {
+                "name": "loading",
+                "implemented": true
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "transition",
-        "definitions": [{
-          "name": "types",
-          "examples": [{
-            "name": "transition",
-            "implemented": false
-          }, {
-            "name": "scale",
-            "implemented": false
-          }, {
-            "name": "zoom",
-            "implemented": false
-          }, {
-            "name": "fade",
-            "implemented": false
-          }, {
-            "name": "flip",
-            "implemented": false
-          }, {
-            "name": "drop",
-            "implemented": false
-          }, {
-            "name": "fly",
-            "implemented": false
-          }, {
-            "name": "swing",
-            "implemented": false
-          }, {
-            "name": "browse",
-            "implemented": false
-          }, {
-            "name": "slide",
-            "implemented": false
-          }, {
-            "name": "jiggle",
-            "implemented": false
-          }, {
-            "name": "flash",
-            "implemented": false
-          }, {
-            "name": "shake",
-            "implemented": false
-          }, {
-            "name": "pulse",
-            "implemented": false
-          }, {
-            "name": "tada",
-            "implemented": false
-          }, {
-            "name": "bounce",
-            "implemented": false
-          }, {
-            "name": "glow",
-            "implemented": false
-          }]
-        }]
+        "definitions": [
+          {
+            "name": "types",
+            "examples": [
+              {
+                "name": "transition",
+                "implemented": false
+              },
+              {
+                "name": "scale",
+                "implemented": false
+              },
+              {
+                "name": "zoom",
+                "implemented": false
+              },
+              {
+                "name": "fade",
+                "implemented": false
+              },
+              {
+                "name": "flip",
+                "implemented": false
+              },
+              {
+                "name": "drop",
+                "implemented": false
+              },
+              {
+                "name": "fly",
+                "implemented": false
+              },
+              {
+                "name": "swing",
+                "implemented": false
+              },
+              {
+                "name": "browse",
+                "implemented": false
+              },
+              {
+                "name": "slide",
+                "implemented": false
+              },
+              {
+                "name": "jiggle",
+                "implemented": false
+              },
+              {
+                "name": "flash",
+                "implemented": false
+              },
+              {
+                "name": "shake",
+                "implemented": false
+              },
+              {
+                "name": "pulse",
+                "implemented": false
+              },
+              {
+                "name": "tada",
+                "implemented": false
+              },
+              {
+                "name": "bounce",
+                "implemented": false
+              },
+              {
+                "name": "glow",
+                "implemented": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -1,9 +1,10 @@
 import marked, { Renderer } from 'marked';
 
 const renderer = new Renderer();
-renderer.heading = (text, level) => (
-  `<h${level} class="ui ${level < 3 ? 'dividing' : ''} header">${text}</h${level}>`
-);
+renderer.heading = (text, level) =>
+  `<h${level} class="ui ${
+    level < 3 ? 'dividing' : ''
+  } header">${text}</h${level}>`;
 
 const render = (el, binding) => {
   const data = binding.value || '';
@@ -11,7 +12,7 @@ const render = (el, binding) => {
   el.innerHTML = marked(data, { renderer });
 };
 
-export default (Vue) => {
+export default Vue => {
   Vue.directive('markdown', {
     bind: render,
     update: render,
