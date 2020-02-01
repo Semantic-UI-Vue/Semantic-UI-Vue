@@ -1,7 +1,11 @@
 import { mount, createLocalVue } from '@vue/test-utils';
 import SuiVue from 'semantic-ui-vue';
 import DocsWireframe from '../components/DocsWireframe.vue';
-import * as Examples from '../../docs/examples';
+const exampleContext = require.context(
+  '../definitions',
+  true,
+  /\.example.vue$/,
+);
 
 const localVue = createLocalVue();
 localVue.use(SuiVue);
@@ -20,22 +24,13 @@ describe.only('Examples', () => {
     global.console.error = consoleError;
   });
 
-  Object.keys(Examples).forEach(componentName => {
-    describe(componentName, () => {
-      const exampleSections = Examples[componentName];
-      exampleSections.forEach(section => {
-        describe(section.title, () => {
-          section.examples.forEach(example => {
-            if (example.title) {
-              describe(example.title, () => {
-                it('should match snapshot', () => {
-                  const html = mount(example.component, { localVue }).html();
-                  expect(html).toMatchSnapshot();
-                });
-              });
-            }
-          });
-        });
+  exampleContext.keys().forEach(key => {
+    const Example = exampleContext(key).default;
+    describe(key, () => {
+      it('should match snapshot', () => {
+        // debugger;
+        const html = mount(Example, { localVue }).html();
+        expect(html).toMatchSnapshot();
       });
     });
   });

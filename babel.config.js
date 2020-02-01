@@ -3,7 +3,7 @@ module.exports = {
   plugins: ['@vue/transform-vue-jsx'],
   env: {
     test: {
-      plugins: ['@babel/plugin-transform-runtime'],
+      plugins: ['@babel/plugin-transform-runtime', 'require-context-hook'],
     },
   },
 };
