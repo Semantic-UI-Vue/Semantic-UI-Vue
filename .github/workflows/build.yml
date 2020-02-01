@@ -21,17 +21,24 @@ jobs:
       #     fail_ci_if_error: true
       - name: Build Documentation
         run: yarn run build:docs
+        env:
+          NODE_ENV: production
       # - name: Build library
       #   run: yarn run build:lib
+      #   env:
+      #     NODE_ENV: production
+      - name: Prepare docs
+        run: |
+          cd dist/docs
+          git init
+          git remote add origin git@github.com:mariolamacchia/test.git
+          git commit -m "Generate docs"
+        # if: "github.ref == 'refs/heads/master'"
       - name: Deploy docs
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: ad-m/github-push-action@master
         # if: "github.ref == 'refs/heads/master'"
         with:
-          # GITHUB_WORKSPACE: Semantic-UI-Vue/semantic-ui-vue.github.io
-          GITHUB_WORKSPACE: mariolamacchia/test
-          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages
-          FOLDER: dist/docs
+          github_token: ${{ secrets.GH_PAT }}
       - name: Release version
         if: "startsWith(github.ref, 'refs/tags/')"
         run: npm publish
