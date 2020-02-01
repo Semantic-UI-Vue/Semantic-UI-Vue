@@ -39,7 +39,7 @@ jobs:
           git commit -m "Generate docs"
           git push -f origin master
         env:
-          REPOSITORY: mariolamacchia/test
+          REPOSITORY: Semantic-UI-Vue/semantic-ui-vue@github.io
       - name: Release version
         if: "startsWith(github.ref, 'refs/tags/')"
         run: npm publish
