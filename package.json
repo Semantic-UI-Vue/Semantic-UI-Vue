@@ -8,7 +8,7 @@
     "url": "https://github.com/Semantic-UI-Vue/Semantic-UI-Vue.git"
   },
   "homepage": "https://semantic-ui-vue.github.io",
-  "main": "dist/lib/semantic-ui-vue.js",
+  "main": "dist/commonjs/semantic-ui-vue.js",
   "files": [
     "src",
     "dist",
@@ -17,12 +17,12 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.docs.config.js --progress --colors --devtool eval-source-map",
-    "build:docs": "webpack --config config/webpack.docs.config.js --progress --colors",
-    "build:cjs": "webpack --config config/webpack.cjs.config.js --progress --colors",
-    "build:multi-cjs": "webpack --config config/webpack.multi-cjs.config.js --progress --colors",
-    "build:umd": "webpack --config config/webpack.umd.config.js --progress --colors",
-    "build:multi-umd": "webpack --config config/webpack.multi-umd.config.js --progress --colors",
-    "build": "rm -rf dist && yarn run build:docs && yarn run build:umd && yarn run build:multi-umd && yarn run build:cjs && yarn run build:multi-cjs"
+    "build:docs": "webpack --mode=production --config config/webpack.docs.config.js --progress --colors",
+    "build:cjs": "webpack --mode=production --config config/webpack.cjs.config.js --progress --colors",
+    "build:multi-cjs": "webpack --mode=production --config config/webpack.multi-cjs.config.js --progress --colors",
+    "build:umd": "webpack --mode=production --config config/webpack.umd.config.js --progress --colors",
+    "build:multi-umd": "webpack --mode=production --config config/webpack.multi-umd.config.js --progress --colors",
+    "build": "NODE_ENV=production rm -rf dist && yarn run build:docs && yarn run build:umd && yarn run build:multi-umd && yarn run build:cjs && yarn run build:multi-cjs"
   },
   "eslintConfig": {
     "root": true,
@@ -82,9 +82,13 @@
     "file-loader": "^5.0.2",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.1",
+    "lodash": "^4.17.15",
     "marked": "^0.8.0",
     "mini-css-extract-plugin": "^0.9.0",
     "portal-vue": "^2.1.6",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "raw-loader": "^4.0.0",
     "semantic-ui-css": "^2.4.1",
     "url-loader": "^3.0.0",

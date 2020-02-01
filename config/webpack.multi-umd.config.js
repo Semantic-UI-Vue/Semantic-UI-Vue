@@ -1,9 +1,16 @@
-const config = require('./webpack.multi-cjs.config');
+const path = require("path");
+const kebabCase = require('lodash/kebabCase');
+const config = require("./webpack.base.config");
+const { transformFileName, getMultipleEntries } = require("./configUtils");
 
-const _filename = config.output.filename;
-config.output.filename = (options) => _filename(options).replace('.js', '.min.js');
-config.output.libraryTarget = 'umd';
-config.output.library = ['SemanticUIVue', '[name]'];
-config.output.libraryExport = 'default'
+config.entry = getMultipleEntries();
+config.output = {
+  path: path.resolve(__dirname, "../dist/umd"),
+  publicPath: "/",
+  filename: options => transformFileName(options).replace(/\/([^/]+)\./, name=> `/sui-${kebabCase(name)}.min.`).toLowerCase(),
+  library: ["SemanticUIVue", "[name]"],
+  libraryExport: "default",
+  libraryTarget: "umd"
+};
 
 module.exports = config;
