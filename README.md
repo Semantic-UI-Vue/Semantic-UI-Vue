@@ -41,7 +41,7 @@ $ npm install semantic-ui-vue --save
 
 Installing Semantic UI Vue provides the JavaScript for your components. You'll also need to include a stylesheet to provide the styling for your components.
 
-Once Semantic UI Vue has been installed, you will need to import it in your main file (usually *index.js* or *main.js*) and tell Vue to use it:
+Once Semantic UI Vue has been installed, you will need to import it in your main file (usually _index.js_ or _main.js_) and tell Vue to use it:
 
 ```js
 import Vue from 'vue';
@@ -57,24 +57,25 @@ If you are not using Webpack, you can add the script in your html:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- head -->
-</head>
-<body>
-  <div id="app"></div>
-  <script src="node_modules/vue/dist/vue.min.js"></script>
-  <script src="node_modules/semantic-ui-vue/dist/umd/semantic-ui-vue.min.js"></script>
-  <script>
-  Vue.use(SemanticUIVue);
-  var app = new Vue({
-    el: '#app',
-    data: {
-      message: 'Hello Vue!'
-    },
-    template: '<span><sui-button primary>click me</sui-button>{{message}}</span>'
-  });
-  </script>
-</body>
+  <head>
+    <!-- head -->
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/semantic-ui-vue/dist/umd/semantic-ui-vue.min.js"></script>
+    <script>
+      Vue.use(SemanticUIVue);
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue!',
+        },
+        template:
+          '<span><sui-button primary>click me</sui-button>{{message}}</span>',
+      });
+    </script>
+  </body>
 </html>
 ```
 
@@ -95,8 +96,12 @@ You can use the default Semantic UI stylesheet by including a Semantic UI CDN li
 This is the quickest way to get started with Semantic UI Vue. You won't be able to use custom themes with this method.
 
 ##### **To avoid unexpected behavior please use only the last version of Semantic-UI**
+
 ```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
+<link
+  rel="stylesheet"
+  href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css"
+/>
 ```
 
 #### Semantic UI CSS package
@@ -137,13 +142,14 @@ You can use semantic-ui-vue as [nuxt.js](https://github.com/nuxt/nuxt.js) module
 
 Usage:
 
-* Install semantic-ui-vue and semantic-ui-css packages
-* Add this into your nuxt.config.js file:
+- Install semantic-ui-vue and semantic-ui-css packages
+- Add this into your nuxt.config.js file:
+
 ```js
 {
   modules: [
     'semantic-ui-vue/nuxt', // includes styles from semantic-ui-css
-    ['semantic-ui-vue/nuxt', {css: false}] // if you have your own semantic-ui styles
-  ]
+    ['semantic-ui-vue/nuxt', { css: false }], // if you have your own semantic-ui styles
+  ];
 }
 ```
