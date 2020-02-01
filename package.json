@@ -23,7 +23,10 @@
     "build:umd": "webpack --mode=production --config config/webpack.umd.config.js --progress --colors",
     "build:multi-umd": "webpack --mode=production --config config/webpack.multi-umd.config.js --progress --colors",
     "build": "NODE_ENV=production rm -rf dist && yarn run build:docs && yarn run build:umd && yarn run build:multi-umd && yarn run build:cjs && yarn run build:multi-cjs",
-    "prettier": "prettier --write \"**/*.{yml,md,json,html,js,jsx,vue}\""
+    "prettier": "prettier --check \"**/*.{yml,md,json,html,js,jsx,vue}\"",
+    "prettier:write": "prettier --write \"**/*.{yml,md,json,html,js,jsx,vue}\"",
+    "eslint": "eslint --ext .js,.jsx,.vue .",
+    "lint": "yarn run eslint && yarn run prettier"
   },
   "prettier": {
     "singleQuote": true,
@@ -78,12 +81,15 @@
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-plugin-transform-vue-jsx": "^1.1.2",
     "@vue/babel-preset-jsx": "^1.1.2",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "brace": "^0.11.1",
     "clipboard": "^2.0.4",
     "codesandbox": "^2.1.11",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.1.2",
     "file-loader": "^5.0.2",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^3.2.0",

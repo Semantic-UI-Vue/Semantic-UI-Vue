@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import a from 'abc';
 import * as SemanticUIVue from 'semantic-ui-vue';
 import upperFirst from 'lodash/upperFirst';
 import ApiTable from './ApiTable.vue';

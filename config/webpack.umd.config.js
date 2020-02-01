@@ -1,4 +1,3 @@
-const glob = require('glob');
 const path = require('path');
 const config = require('./webpack.base.config');
 
