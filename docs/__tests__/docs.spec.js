@@ -1,11 +1,11 @@
 import { mount, createLocalVue } from '@vue/test-utils';
 import SuiVue from 'semantic-ui-vue';
-import Wireframe from './../components/Wireframe';
+import DocsWireframe from '../components/DocsWireframe.vue';
 import * as Examples from '../../docs/examples';
 
 const localVue = createLocalVue();
 localVue.use(SuiVue);
-localVue.component('docs-wireframe', Wireframe);
+localVue.component('docs-wireframe', DocsWireframe);
 
 describe.only('Examples', () => {
   const consoleError = global.console.error;

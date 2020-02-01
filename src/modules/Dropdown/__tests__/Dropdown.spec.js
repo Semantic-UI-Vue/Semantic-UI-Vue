@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { shallowMount } from '@vue/test-utils';
 import * as common from 'test/utils';
 import Label from 'semantic-ui-vue/elements/Label/Label';
@@ -72,7 +73,7 @@ describe('Dropdown', () => {
     expect(wrapper.classes()).not.toContain('visible');
   });
 
-  it('should not close the menu when clicking on search input', () => {
+  it('should not close the menu when clicking on search input', async () => {
     const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         search: true,
@@ -81,11 +82,14 @@ describe('Dropdown', () => {
     });
 
     wrapper.trigger('click');
+    await Vue.nextTick();
+
     wrapper.find('input.search').trigger('click');
+    await Vue.nextTick();
     expect(wrapper.classes()).toContain('visible');
   });
 
-  it('should not close the menu when clicking on option when multiple=true', () => {
+  it('should not close the menu when clicking on option when multiple=true', async () => {
     const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         multiple: true,
@@ -94,6 +98,7 @@ describe('Dropdown', () => {
     });
 
     wrapper.trigger('click');
+    await Vue.nextTick();
     const item = wrapper.find(DropdownItem);
     wrapper.vm.register(item.vm);
     item.vm.$listeners.select({ text: 'foo', value: 1 });
@@ -123,7 +128,7 @@ describe('Dropdown', () => {
     expect(options.at(1).props().text).toEqual('bar');
   });
 
-  it('should have icons, flags and images in selected text', () => {
+  it('should have icons, flags and images in selected text', async () => {
     const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         options: [
@@ -142,8 +147,9 @@ describe('Dropdown', () => {
 
     wrapper.find(DropdownItem).trigger('click');
     wrapper.setProps({ value: 1 });
-    const text = wrapper.find('div.text');
+    await Vue.nextTick();
 
+    const text = wrapper.find('div.text');
     const icon = text.find(Icon);
     expect(icon.exists()).toEqual(true);
     const flag = text.find(Flag);
@@ -152,7 +158,7 @@ describe('Dropdown', () => {
     expect(image.exists()).toEqual(true);
   });
 
-  it('should have icons, flags and images in selected options', () => {
+  it('should have icons, flags and images in selected options', async () => {
     const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         multiple: true,
@@ -171,9 +177,9 @@ describe('Dropdown', () => {
     });
 
     wrapper.setProps({ value: [1] });
+    await Vue.nextTick();
 
     const label = wrapper.find(Label);
-
     const icon = label.find(Icon);
     expect(icon.exists()).toEqual(true);
     const flag = label.find(Flag);
@@ -182,7 +188,7 @@ describe('Dropdown', () => {
     expect(image.exists()).toEqual(true);
   });
 
-  it('should filter options', () => {
+  it('should filter options', async () => {
     const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         search: true,
@@ -193,11 +199,13 @@ describe('Dropdown', () => {
     const input = wrapper.find('input.search');
     input.element.value = 'ba';
     input.trigger('input');
+    await Vue.nextTick();
     const options = wrapper.findAll(DropdownItem);
     expect(options.at(0).props().text).toEqual('bar');
     expect(options.at(1).props().text).toEqual('baz');
     input.element.value = 'blah';
     input.trigger('input');
+    await Vue.nextTick();
     const options2 = wrapper.findAll(DropdownItem);
     expect(options2.exists()).toEqual(false);
     const message = wrapper.find('.message');

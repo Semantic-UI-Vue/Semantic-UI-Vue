@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { shallowMount } from '@vue/test-utils';
 import { testClassFromProps } from 'test/utils';
 import Form from 'semantic-ui-vue/collections/Form/Form';
@@ -29,16 +30,19 @@ describe('Form', () => {
     expect(form.classes()).toContain('massive');
   });
 
-  it('should have single state', () => {
+  it('should have single state', async () => {
     const form = shallowMount(Form);
 
     form.setProps({ state: 'success' });
+    await Vue.nextTick();
     expect(form.classes()).toContain('success');
 
     form.setProps({ state: 'warning' });
+    await Vue.nextTick();
     expect(form.classes()).toContain('warning');
 
     form.setProps({ state: 'error' });
+    await Vue.nextTick();
     expect(form.classes()).toContain('error');
   });
 });

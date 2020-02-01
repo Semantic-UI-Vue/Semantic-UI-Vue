@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { shallowMount } from '@vue/test-utils';
 import Embed from 'semantic-ui-vue/modules/Embed/Embed';
 import { Icon } from 'semantic-ui-vue/elements';
@@ -51,12 +52,13 @@ describe('Embed', () => {
     expect(embed.text()).toEqual('');
   });
 
-  it('should create a SUI Embed that active after click', () => {
+  it('should create a SUI Embed that active after click', async () => {
     const embed = shallowMount(Embed);
     expect(embed.classes()).not.toContain('active');
     expect(embed.findAll('div').length).toEqual(1);
     expect(embed.contains('iframe')).toEqual(false);
     embed.trigger('click');
+    await Vue.nextTick();
     expect(embed.classes()).toContain('active');
     expect(embed.findAll('div').length).toEqual(2);
     expect(
