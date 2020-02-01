@@ -27,15 +27,16 @@ jobs:
       #   run: yarn run build:lib
       #   env:
       #     NODE_ENV: production
-      - name: Prepare docs
+      - name: Deploy docs
         run: |
           cd dist/docs
           git init
           git config --global user.email "mariolamacchia@gmail.com"
           git config --global user.name "Semantic UI Vue CI"
-          git remote add origin git@github.com:mariolamacchia/test.git
+          git remote add origin https://mariolamacchia:${{ secrets.GH_TOKEN }}@github.com/mariolamacchia/test.git
           git add -A
           git commit -m "Generate docs"
+          git push -f
         # if: "github.ref == 'refs/heads/master'"
       - name: Deploy docs
         uses: ad-m/github-push-action@master
