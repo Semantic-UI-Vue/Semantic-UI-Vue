@@ -15,9 +15,9 @@ describe.only('Examples', () => {
   const consoleError = global.console.error;
 
   beforeAll(() => {
-    // global.console.error = (message) => {
-    //   throw new Error(message);
-    // }
+    global.console.error = message => {
+      throw new Error(message);
+    };
   });
 
   afterAll(() => {
