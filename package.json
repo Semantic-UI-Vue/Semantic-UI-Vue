@@ -27,6 +27,7 @@
     "prettier:write": "prettier --write \"**/*.{yml,md,json,html,js,jsx,vue}\"",
     "eslint": "eslint --ext .js,.jsx,.vue .",
     "lint": "yarn run eslint && yarn run prettier",
+    "report-coverage": "codecov",
     "test:update": "jest --update-snapshot docs/__tests__/docs.spec.js",
     "test": "jest"
   },
