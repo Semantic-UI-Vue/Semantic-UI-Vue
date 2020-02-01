@@ -7,9 +7,12 @@ export default {
   mixins: [SemanticUIVueMixin],
   description: 'A label displays content classification.',
   props: {
-    attached: Enum(['top', 'bottom', 'top right', 'top left', 'bottom left', 'bottom right'], {
-      description: 'A label can attach to a content segment.',
-    }),
+    attached: Enum(
+      ['top', 'bottom', 'top right', 'top left', 'bottom left', 'bottom right'],
+      {
+        description: 'A label can attach to a content segment.',
+      },
+    ),
     basic: {
       type: Boolean,
       description: 'A label can reduce its complexity.',
@@ -37,7 +40,8 @@ export default {
     }),
     icon: String,
     ribbon: Enum(['left', 'right'], {
-      description: 'A label can appear as a ribbon attaching itself to an element.',
+      description:
+        'A label can appear as a ribbon attaching itself to an element.',
       type: Boolean,
     }),
     size: Enum.Size({
@@ -55,9 +59,11 @@ export default {
       }
 
       let className = '';
-      if (['left', 'right'].includes(this.pointing)) className += `${this.pointing} `;
+      if (['left', 'right'].includes(this.pointing))
+        className += `${this.pointing} `;
       className += 'pointing';
-      if (['above', 'below'].includes(this.pointing)) className += ` ${this.pointing}`;
+      if (['above', 'below'].includes(this.pointing))
+        className += ` ${this.pointing}`;
       return className;
     },
   },
@@ -84,7 +90,6 @@ export default {
           'label',
         )}
       >
-
         {this.icon && <Icon name={this.icon} />}
         {this.$slots.default}
       </ElementType>

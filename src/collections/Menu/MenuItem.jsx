@@ -19,7 +19,8 @@ export default {
     },
     header: {
       type: Boolean,
-      description: 'A menu item may include a header or may itself be a header.',
+      description:
+        'A menu item may include a header or may itself be a header.',
     },
     icon: {
       type: [Boolean, String],
@@ -38,7 +39,8 @@ export default {
     },
     fitted: Enum(['horizontally', 'vertically'], {
       type: Boolean,
-      description: 'A menu item or menu can remove element padding, vertically or horizontally..',
+      description:
+        'A menu item or menu can remove element padding, vertically or horizontally..',
     }),
   },
   render() {
@@ -49,7 +51,8 @@ export default {
         class={this.classes(
           this.disabled && 'disabled',
           this.active && 'active',
-          this.fitted, this.fitted && 'fitted',
+          this.fitted,
+          this.fitted && 'fitted',
           this.header && 'header',
           this.link && 'link',
           this.icon && 'icon',

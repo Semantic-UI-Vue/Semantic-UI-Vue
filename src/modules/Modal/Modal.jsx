@@ -16,12 +16,23 @@ const visualStates = {
 const changedEvent = 'changed';
 
 function animationWithDirections(animation) {
-  return [`${animation} up`, `${animation} down`, `${animation} left`, `${animation} right`];
+  return [
+    `${animation} up`,
+    `${animation} down`,
+    `${animation} left`,
+    `${animation} right`,
+  ];
 }
 
 const animations = [
-  'scale', 'drop', 'horizontal flip', 'vertical flip', 'fade',
-  ...animationWithDirections('fade'), ...animationWithDirections('fly'), ...animationWithDirections('swing'),
+  'scale',
+  'drop',
+  'horizontal flip',
+  'vertical flip',
+  'fade',
+  ...animationWithDirections('fade'),
+  ...animationWithDirections('fly'),
+  ...animationWithDirections('swing'),
 ];
 
 function buildAnimation(name, direction) {
@@ -131,10 +142,18 @@ export default {
     },
   },
   mounted() {
-    this.$el.addEventListener(getEventAnimationEnd(), this.onAnimationEnd, true);
+    this.$el.addEventListener(
+      getEventAnimationEnd(),
+      this.onAnimationEnd,
+      true,
+    );
   },
   beforeDestroy() {
-    this.$el.removeEventListener(getEventAnimationEnd(), this.onAnimationEnd, true);
+    this.$el.removeEventListener(
+      getEventAnimationEnd(),
+      this.onAnimationEnd,
+      true,
+    );
   },
   methods: {
     close() {
@@ -158,32 +177,31 @@ export default {
     return (
       <div
         ref="dimmer"
-        class={
-          this.classes(
-            'ui',
-            this.dimmer,
-            'dimmer modals page transition',
-            this.dimmerClass,
-          )
-        }
-        style={this.dimmerStyle} onClick={this.dimmerClick}
+        class={this.classes(
+          'ui',
+          this.dimmer,
+          'dimmer modals page transition',
+          this.dimmerClass,
+        )}
+        style={this.dimmerStyle}
+        onClick={this.dimmerClick}
       >
         <div
           ref="modal"
           style={this.modalStyle}
-          class={
-            this.classes(
-              'ui',
-              this.size,
-              this.basic && 'basic',
-              this.aligned && `${this.aligned} aligned`,
-              'modal',
-              'transition',
-              this.modalClass,
-            )
-          }
+          class={this.classes(
+            'ui',
+            this.size,
+            this.basic && 'basic',
+            this.aligned && `${this.aligned} aligned`,
+            'modal',
+            'transition',
+            this.modalClass,
+          )}
         >
-          {this.closeIcon && <Icon name="close" nativeOnClick={() => this.close()} />}
+          {this.closeIcon && (
+            <Icon name="close" nativeOnClick={() => this.close()} />
+          )}
           {this.$slots.default}
         </div>
       </div>

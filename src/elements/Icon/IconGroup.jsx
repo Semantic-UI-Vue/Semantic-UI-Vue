@@ -14,12 +14,8 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          this.size,
-          'icons',
-        )}
+        class={this.classes(this.size, 'icons')}
       >
-
         {this.$slots.default}
       </ElementType>
     );

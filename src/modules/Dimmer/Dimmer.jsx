@@ -20,9 +20,7 @@ export default {
         )}
       >
         <div class="content">
-          <div class="center">
-            {this.$slots.default}
-          </div>
+          <div class="center">{this.$slots.default}</div>
         </div>
       </ElementType>
     );

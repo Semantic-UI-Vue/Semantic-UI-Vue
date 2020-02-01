@@ -15,9 +15,7 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'date',
-        )}
+        class={this.classes('date')}
       >
         {this.$slots.default || this.content}
       </ElementType>

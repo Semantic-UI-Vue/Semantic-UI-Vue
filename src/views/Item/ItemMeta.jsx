@@ -8,9 +8,7 @@ export default {
   render() {
     const ElementType = this.getElementType();
     return (
-      <ElementType
-        class={this.classes('meta')}
-      >
+      <ElementType class={this.classes('meta')}>
         {this.$slots.default}
       </ElementType>
     );

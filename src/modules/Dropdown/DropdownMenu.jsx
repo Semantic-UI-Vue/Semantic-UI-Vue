@@ -45,10 +45,16 @@ export default {
     }
 
     if (!this.dropdown) {
-      throw new Error('SuiDropdownMenu must be place as a child of a SuiDropdown');
+      throw new Error(
+        'SuiDropdownMenu must be place as a child of a SuiDropdown',
+      );
     }
     this.dropdown.register(this);
-    this.$el.addEventListener(getEventAnimationEnd(), this.onAnimationEnded, false);
+    this.$el.addEventListener(
+      getEventAnimationEnd(),
+      this.onAnimationEnded,
+      false,
+    );
   },
   methods: {
     onAnimationEnded() {
@@ -64,7 +70,12 @@ export default {
       <ElementType
         tabindex="-1"
         {...this.getChildPropsAndListeners()}
-        class={this.classes('menu', this.open && 'visible active', 'transition', this.animation)}
+        class={this.classes(
+          'menu',
+          this.open && 'visible active',
+          'transition',
+          this.animation,
+        )}
       >
         {this.$slots.default}
       </ElementType>

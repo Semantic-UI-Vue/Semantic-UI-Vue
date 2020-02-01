@@ -8,6 +8,11 @@ export default {
   },
   render() {
     const ElementType = this.getElementType('i');
-    return <ElementType {...this.getChildPropsAndListeners()} class={this.classes('flag', this.name)}/>;
+    return (
+      <ElementType
+        {...this.getChildPropsAndListeners()}
+        class={this.classes('flag', this.name)}
+      />
+    );
   },
 };

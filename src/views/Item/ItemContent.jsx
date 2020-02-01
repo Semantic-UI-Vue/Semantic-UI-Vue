@@ -16,7 +16,8 @@ export default {
       <ElementType
         class={this.classes(
           this.verticalAlign && `${this.verticalAlign} aligned`,
-          'content')}
+          'content',
+        )}
       >
         {this.$slots.default}
       </ElementType>

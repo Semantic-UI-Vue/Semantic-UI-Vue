@@ -52,7 +52,6 @@ export default {
           'header',
         )}
       >
-
         {this.icon !== !!this.icon && <Icon name={this.icon} />}
         {this.image && <img src={this.image} class="ui image" />}
         {this.$slots.default || this.content}

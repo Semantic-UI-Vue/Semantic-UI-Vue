@@ -11,12 +11,9 @@ export default {
     },
   },
   render() {
-    const ElementType = (this.href ? 'a' : this.getElementType());
+    const ElementType = this.href ? 'a' : this.getElementType();
     return (
-      <ElementType
-        href={this.href}
-        class={this.classes('header')}
-      >
+      <ElementType href={this.href} class={this.classes('header')}>
         {this.$slots.default}
       </ElementType>
     );

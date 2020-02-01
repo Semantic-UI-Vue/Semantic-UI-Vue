@@ -42,8 +42,11 @@ export default {
   },
   computed: {
     resultsVisible() {
-      return !!(this.internalQuery && (this.internalQuery.length >= this.minCharacters)
-          && this.focused);
+      return !!(
+        this.internalQuery &&
+        this.internalQuery.length >= this.minCharacters &&
+        this.focused
+      );
     },
   },
   watch: {
@@ -63,7 +66,10 @@ export default {
       this.focused = false;
     },
     checkFirstSearch() {
-      if (this.internalQuery && (this.internalQuery.length >= this.minCharacters)) {
+      if (
+        this.internalQuery &&
+        this.internalQuery.length >= this.minCharacters
+      ) {
         this.firstSearch = true;
       }
     },
@@ -75,15 +81,24 @@ export default {
       this.internalQuery = event.target.value;
     },
     renderInput() {
-      let input = <input onBlur={this.handleBlur}
-        onFocus={this.handleFocus}
-        onInput={this.handleInput}
-        value={this.value}
-        class={this.classes('prompt')}
-        {...{ attrs: this.$attrs }}/>;
-      input = this.input
-        ? <div class={this.classes('ui', 'icon', 'input')}>{input}{this.$slots.icon}</div>
-        : input;
+      let input = (
+        <input
+          onBlur={this.handleBlur}
+          onFocus={this.handleFocus}
+          onInput={this.handleInput}
+          value={this.value}
+          class={this.classes('prompt')}
+          {...{ attrs: this.$attrs }}
+        />
+      );
+      input = this.input ? (
+        <div class={this.classes('ui', 'icon', 'input')}>
+          {input}
+          {this.$slots.icon}
+        </div>
+      ) : (
+        input
+      );
 
       return input;
     },
@@ -93,20 +108,19 @@ export default {
 
     return (
       <ElementType
-        class={this.classes(
-          'ui',
-          'search',
-          this.category ? 'category' : '',
-        )}>
+        class={this.classes('ui', 'search', this.category ? 'category' : '')}
+      >
         {this.renderInput()}
-        {this.firstSearch &&
-          <Results query={this.internalQuery}
+        {this.firstSearch && (
+          <Results
+            query={this.internalQuery}
             source={this.source}
             onSelected={this.handleSelect}
             category={this.category}
             firstFocus={this.firstFocus}
-            visible={this.resultsVisible}/>
-        }
+            visible={this.resultsVisible}
+          />
+        )}
       </ElementType>
     );
   },

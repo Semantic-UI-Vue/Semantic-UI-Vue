@@ -35,7 +35,8 @@ export default {
           this.selectable && 'selectable',
           this.width && `${this.num(this.width)} wide`,
           this.state,
-        )}>
+        )}
+      >
         {this.$slots.default}
       </ElementType>
     );

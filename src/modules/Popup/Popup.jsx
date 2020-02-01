@@ -23,7 +23,8 @@ export default {
     },
     flowing: {
       type: Boolean,
-      description: 'A flowing Popup has no maximum width and continues to flow to fit its content.',
+      description:
+        'A flowing Popup has no maximum width and continues to flow to fit its content.',
     },
     header: {
       type: String,
@@ -95,18 +96,15 @@ export default {
               this.flowing && 'flowing',
               this.inverted && 'inverted',
               this.size,
-              this.wide, this.wide && 'wide',
+              this.wide,
+              this.wide && 'wide',
             )}
             triggerCoords={this.coords}
             position={this.position}
             content={this.content}
           >
-            {this.header && (
-              <PopupHeader>{this.header}</PopupHeader>
-            )}
-            {this.content && (
-              <PopupContent>{this.content}</PopupContent>
-            )}
+            {this.header && <PopupHeader>{this.header}</PopupHeader>}
+            {this.content && <PopupContent>{this.content}</PopupContent>}
             {this.$slots.default}
           </PopupContainer>
         )}

@@ -17,17 +17,23 @@ export default {
         {...this.getChildPropsAndListeners()}
         class={this.classes('ui', 'breadcrumb')}
       >
-        {this.$slots.default || this.sections.map(({ active, content, key, link }, index) => {
-          const sectionEl = (
-            <SuiBreadcrumbSection key={key} active={active} link={link}>
-              {content}
-            </SuiBreadcrumbSection>
-          );
+        {this.$slots.default ||
+          this.sections.map(({ active, content, key, link }, index) => {
+            const sectionEl = (
+              <SuiBreadcrumbSection key={key} active={active} link={link}>
+                {content}
+              </SuiBreadcrumbSection>
+            );
 
-          if (index === 0) return sectionEl;
+            if (index === 0) return sectionEl;
 
-          return [' ', <SuiBreadcrumbDivider icon={this.icon} />, ' ', sectionEl];
-        })}
+            return [
+              ' ',
+              <SuiBreadcrumbDivider icon={this.icon} />,
+              ' ',
+              sectionEl,
+            ];
+          })}
       </ElementType>
     );
   },

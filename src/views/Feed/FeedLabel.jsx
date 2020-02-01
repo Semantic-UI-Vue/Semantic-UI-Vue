@@ -24,17 +24,13 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'label',
-        )}
+        class={this.classes('label')}
       >
-        {
-          this.$slots.default || [
-            this.content,
-            this.icon && <Icon name={this.icon} />,
-            this.image && <Image src={this.image} />,
-          ]
-        }
+        {this.$slots.default || [
+          this.content,
+          this.icon && <Icon name={this.icon} />,
+          this.image && <Image src={this.image} />,
+        ]}
       </ElementType>
     );
   },

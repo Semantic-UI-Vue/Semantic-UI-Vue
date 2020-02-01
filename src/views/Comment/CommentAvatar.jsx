@@ -11,9 +11,7 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'avatar',
-        )}
+        class={this.classes('avatar')}
       >
         <img src={this.src} />
       </ElementType>

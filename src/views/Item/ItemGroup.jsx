@@ -12,15 +12,18 @@ export default {
     },
     divided: {
       type: Boolean,
-      description: 'Items can be divided to better distinguish between grouped content',
+      description:
+        'Items can be divided to better distinguish between grouped content',
     },
     relaxed: Enum(['very'], {
       type: Boolean,
-      description: 'A group of items can relax its padding to provide more negative space',
+      description:
+        'A group of items can relax its padding to provide more negative space',
     }),
     link: {
       type: Boolean,
-      description: 'An item can be formatted so that the entire contents link to another page',
+      description:
+        'An item can be formatted so that the entire contents link to another page',
     },
   },
   render() {
@@ -31,7 +34,8 @@ export default {
           'ui',
           this.unstackable && 'unstackable',
           this.divided && 'divided',
-          this.relaxed, this.relaxed && 'relaxed',
+          this.relaxed,
+          this.relaxed && 'relaxed',
           this.link && 'link',
           'items',
         )}

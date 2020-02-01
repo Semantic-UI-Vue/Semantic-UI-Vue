@@ -17,14 +17,7 @@ export default {
     iconPosition: Enum(['left', 'right']),
     inverted: Boolean,
     loading: Boolean,
-    size: Enum([
-      'mini',
-      'small',
-      'large',
-      'big',
-      'huge',
-      'massive',
-    ]),
+    size: Enum(['mini', 'small', 'large', 'big', 'huge', 'massive']),
     transparent: Boolean,
     type: {
       description: 'The HTML input type.',

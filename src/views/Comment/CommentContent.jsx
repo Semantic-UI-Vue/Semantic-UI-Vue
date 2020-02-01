@@ -8,9 +8,7 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'content',
-        )}
+        class={this.classes('content')}
       >
         {this.$slots.default}
       </ElementType>
