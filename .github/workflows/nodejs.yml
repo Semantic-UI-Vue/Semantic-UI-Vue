@@ -1,32 +1,43 @@
-name: Node.js CI
+name: Build and Deploy
 
 on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.x
+          registry-url: https://registry.npmjs.org/
       - run: yarn install
       - run: yarn run lint
       - run: yarn test
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage/clover.xml #optional
-          # flags: unittests #optional
-          # name: codecov-umbrella #optional
-          # yml: ./codecov.yml #optional
+          file: ./coverage/clover.xml
           fail_ci_if_error: true
       - run: yarn run build
         env:
           CI: true
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Deploy docs
+        uses: maxheld83/ghpages@v0.2.1
+        env:
+          BUILD_DIR: 'dist/docs/'
+        secrets: ['GH_PAT']
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Release version
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
