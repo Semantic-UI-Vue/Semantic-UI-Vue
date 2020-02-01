@@ -17,9 +17,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm run lint
-    - run: npm test
-    - run: npm run report-coverage
-    - run: npm run build
+    - run: yarn install
+    - run: yarn run lint
+    - run: yarn test
+    - run: yarn run report-coverage
+    - run: yarn run build
       env:
         CI: true
