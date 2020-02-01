@@ -28,23 +28,18 @@ jobs:
       #   env:
       #     NODE_ENV: production
       - name: Deploy docs
+        # if: "github.ref == 'refs/heads/master'"
         run: |
           cd dist/docs
           git init
           git config --global user.email "mariolamacchia@gmail.com"
           git config --global user.name "Semantic UI Vue CI"
-          git remote add origin https://mariolamacchia:${{ secrets.GH_TOKEN }}@github.com/mariolamacchia/test.git
+          git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
           git add -A
           git commit -m "Generate docs"
-          git push -f
-        # if: "github.ref == 'refs/heads/master'"
-      - name: Deploy docs
-        uses: ad-m/github-push-action@master
-        # if: "github.ref == 'refs/heads/master'"
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          repository: mariolamacchia/test
-          # force: true
+          git push -f origin master
+        env:
+          REPOSITORY: mariolamacchia/test
       - name: Release version
         if: "startsWith(github.ref, 'refs/tags/')"
         run: npm publish
