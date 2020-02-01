@@ -22,7 +22,7 @@
     "build:multi-cjs": "webpack --mode=production --config config/webpack.multi-cjs.config.js --progress --colors",
     "build:umd": "webpack --mode=production --config config/webpack.umd.config.js --progress --colors",
     "build:multi-umd": "webpack --mode=production --config config/webpack.multi-umd.config.js --progress --colors",
-    "build": "NODE_ENV=production rm -rf dist && yarn run build:docs && yarn run build:umd && yarn run build:multi-umd && yarn run build:cjs && yarn run build:multi-cjs",
+    "build:lib": "yarn run build:umd && yarn run build:multi-umd && yarn run build:cjs && yarn run build:multi-cjs",
     "prettier": "prettier --check \"**/*.{yml,md,json,html,js,jsx,vue}\"",
     "prettier:write": "prettier --write \"**/*.{yml,md,json,html,js,jsx,vue}\"",
     "eslint": "eslint --ext .js,.jsx,.vue .",

@@ -2,8 +2,11 @@ name: Build and Deploy
 
 on: [push]
 
+env:
+  NODE_ENV: production
+
 jobs:
-  build:
+  prepare:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,24 +22,24 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage/clover.xml
           fail_ci_if_error: true
-      - run: yarn run build
-        env:
-          CI: true
 
   deploy:
     needs: build
     if: github.ref == 'refs/heads/master'
     - name: Deploy docs
       uses: JamesIves/github-pages-deploy-action@releases/v3
+      env:
+        GITHUB_WORKSPACE: git@github.com:Semantic-UI-Vue/semantic-ui-vue.github.io.git
       with:
         ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: dist/docs # The folder the action should deploy.
+        BRANCH: gh-pages
+        FOLDER: dist/docs
 
   release:
     needs: build
     if: startsWith(github.ref, 'refs/tags/')
     steps:
+      - run: yarn run build:lib
       - name: Release version
         run: npm publish
         env:
