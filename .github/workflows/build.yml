@@ -3,7 +3,7 @@ name: Build and Deploy
 on: [push]
 
 jobs:
-  prepare:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: 12.x
           registry-url: https://registry.npmjs.org/
-      - run: yarn install --production=false
+      - run: yarn install
       - run: yarn run lint
       - run: yarn test
       - uses: codecov/codecov-action@v1
@@ -19,31 +19,29 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage/clover.xml
           fail_ci_if_error: true
-
-  deploy:
-    env:
-      NODE_ENV: production
-    runs-on: ubuntu-latest
-    needs: prepare
-    if: "github.ref == 'refs/heads/master'"
-    steps:
+      - name: Build Documentation
+        run: yarn run build:docs
+        env:
+          NODE_ENV: production
+      - name: Build library
+        run: yarn run build:lib
+        env:
+          NODE_ENV: production
       - name: Deploy docs
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_WORKSPACE: Semantic-UI-Vue/semantic-ui-vue.github.io
-          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages
-          FOLDER: dist/docs
-
-  release:
-    env:
-      NODE_ENV: production
-    runs-on: ubuntu-latest
-    needs: prepare
-    if: "startsWith(github.ref, 'refs/tags/')"
-    steps:
-      - run: yarn run build:lib
+        if: "github.ref == 'refs/heads/master'"
+        run: |
+          cd dist/docs
+          git init
+          git config --global user.email "mariolamacchia@gmail.com"
+          git config --global user.name "Semantic UI Vue CI"
+          git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
+          git add -A
+          git commit -m "Generate docs"
+          git push -f origin master
+        env:
+          REPOSITORY: Semantic-UI-Vue/semantic-ui-vue@github.io
       - name: Release version
+        if: "startsWith(github.ref, 'refs/tags/')"
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
