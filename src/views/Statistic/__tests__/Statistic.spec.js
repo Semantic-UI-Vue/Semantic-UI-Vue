@@ -34,7 +34,9 @@ describe('Statistic', () => {
   });
 
   it('should not have "ui" class if is child of StatisticGroup', () => {
-    const container = shallowMount(Container, { slots: { default: [Statistic, Statistic] } });
+    const container = shallowMount(Container, {
+      slots: { default: [Statistic, Statistic] },
+    });
     expect(container.is('div')).toEqual(true);
     expect(container.classes()).toContain('ui');
     expect(container.classes()).toContain('container');
@@ -48,7 +50,9 @@ describe('Statistic', () => {
   });
 
   it('should have "ui" class if is child of Component not StatisticGroup', () => {
-    const statistics = shallowMount(StatisticGroup, { slots: { default: [Statistic, Statistic] } });
+    const statistics = shallowMount(StatisticGroup, {
+      slots: { default: [Statistic, Statistic] },
+    });
     expect(statistics.is('div')).toEqual(true);
     expect(statistics.classes()).toContain('ui');
     expect(statistics.classes()).toContain('statistics');
@@ -62,7 +66,9 @@ describe('Statistic', () => {
   });
 
   it('should create a SUI Statistic with default slot', () => {
-    const statistic = shallowMount(Statistic, { slots: { default: '<span>40 meters</span>' } });
+    const statistic = shallowMount(Statistic, {
+      slots: { default: '<span>40 meters</span>' },
+    });
     expect(statistic.is('div')).toEqual(true);
     expect(statistic.classes()).toContain('ui');
     expect(statistic.classes()).toContain('statistic');

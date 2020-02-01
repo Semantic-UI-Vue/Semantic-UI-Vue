@@ -17,7 +17,8 @@ export default [
     examples: [
       {
         name: 'Divider',
-        description: 'A breadcrumb can contain a divider to show the relationship between sections, this can be formatted as an icon or text',
+        description:
+          'A breadcrumb can contain a divider to show the relationship between sections, this can be formatted as an icon or text',
         file: 'Divider',
       },
       {
@@ -25,7 +26,8 @@ export default [
       },
       {
         name: 'Section',
-        description: 'A breadcrumb can contain sections that can either be formatted as a link or text',
+        description:
+          'A breadcrumb can contain sections that can either be formatted as a link or text',
         file: 'Section',
       },
       {

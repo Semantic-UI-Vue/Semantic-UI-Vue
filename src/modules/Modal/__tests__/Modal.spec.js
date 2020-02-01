@@ -38,7 +38,9 @@ describe('Modal', () => {
   });
 
   it('should close modal when clicking on close icon', () => {
-    const wrapper = shallowMount(Modal, { propsData: { open: true, closeIcon: true } });
+    const wrapper = shallowMount(Modal, {
+      propsData: { open: true, closeIcon: true },
+    });
     const icon = wrapper.find(Icon);
     icon.trigger('click');
     expect(wrapper.emitted().changed[0][0]).toEqual(false);
@@ -52,7 +54,9 @@ describe('Modal', () => {
   });
 
   it('should not close modal when clicking on dimmer within closable=false', () => {
-    const wrapper = shallowMount(Modal, { propsData: { open: true, closable: false } });
+    const wrapper = shallowMount(Modal, {
+      propsData: { open: true, closable: false },
+    });
     const dimmer = wrapper.find('.ui.dimmer');
     dimmer.trigger('click');
     expect(wrapper.emitted().changed).toBeUndefined();

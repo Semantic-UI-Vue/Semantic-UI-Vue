@@ -9,7 +9,8 @@ export default [
       },
       {
         name: 'Indicating',
-        description: 'An indicating progress bar visually indicates the current level of progress of a task',
+        description:
+          'An indicating progress bar visually indicates the current level of progress of a task',
         file: 'Indicating',
       },
     ],
@@ -19,12 +20,14 @@ export default [
     examples: [
       {
         name: 'Bar',
-        description: 'A progress element can contain a bar visually indicating progress',
+        description:
+          'A progress element can contain a bar visually indicating progress',
         file: 'Bar',
       },
       {
         name: 'Progress',
-        description: 'A progress bar can contain a text value indicating current progress',
+        description:
+          'A progress bar can contain a text value indicating current progress',
         file: 'Progress',
       },
       {

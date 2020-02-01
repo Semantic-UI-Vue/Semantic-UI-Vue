@@ -21,7 +21,8 @@ export default [
     examples: [
       {
         name: 'Field',
-        description: 'A field is a form element containing a label and an input',
+        description:
+          'A field is a form element containing a label and an input',
         file: 'FormField',
       },
       {
@@ -60,7 +61,8 @@ export default [
       },
       {
         name: 'Multiple Select',
-        description: 'A multiple select is used to include several choices with one form field',
+        description:
+          'A multiple select is used to include several choices with one form field',
         file: 'FormMultipleSelect',
       },
       {
@@ -80,22 +82,26 @@ export default [
     examples: [
       {
         name: 'Loading',
-        description: 'If a form is in loading state, it will automatically show a loading indicator.',
+        description:
+          'If a form is in loading state, it will automatically show a loading indicator.',
         file: 'FormLoading',
       },
       {
         name: 'Success',
-        description: 'If a form is in an success state, it will automatically show any success message blocks.',
+        description:
+          'If a form is in an success state, it will automatically show any success message blocks.',
         file: 'FormSuccess',
       },
       {
         name: 'Error',
-        description: 'If a form is in an error state, it will automatically show any error message blocks.',
+        description:
+          'If a form is in an error state, it will automatically show any error message blocks.',
         file: 'FormError',
       },
       {
         name: 'Warning',
-        description: 'If a form is in warning state, it will automatically show any warning message block.',
+        description:
+          'If a form is in warning state, it will automatically show any warning message block.',
         file: 'FormWarning',
       },
       {
@@ -148,7 +154,8 @@ export default [
       },
       {
         name: 'Inverted',
-        description: 'A form on a dark background may have to invert its color scheme',
+        description:
+          'A form on a dark background may have to invert its color scheme',
         file: 'FormInverted',
       },
     ],

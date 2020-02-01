@@ -19,7 +19,8 @@ export default [
     examples: [
       {
         name: 'Fitted',
-        description: 'An icon can be fitted, without any space to the left or right of it.',
+        description:
+          'An icon can be fitted, without any space to the left or right of it.',
         file: 'Fitted',
       },
       {

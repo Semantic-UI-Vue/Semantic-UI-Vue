@@ -10,13 +10,15 @@ export default [
       {
         name: 'Common Units',
         description: 'An advertisement can appear in common ad unit sizes.',
-        info: 'These additional examples use the testvariation to appear on the page. The Ad component is best used as a wrapper for third party ad network content.',
+        info:
+          'These additional examples use the testvariation to appear on the page. The Ad component is best used as a wrapper for third party ad network content.',
         file: 'CommonUnitsAd',
       },
       {
         name: 'Mobile',
         description: 'An ad can use common mobile ad sizes.',
-        info: 'Mobile ads will automatically only appear on mobile browser viewports.',
+        info:
+          'Mobile ads will automatically only appear on mobile browser viewports.',
         file: 'MobileAd',
       },
       {
@@ -61,8 +63,10 @@ export default [
       },
       {
         name: 'Test',
-        description: 'A advertisement can be formatted to help verify placement.',
-        info: 'You can adjust the text displayed for your test ad placement by changing the value of the prop <code>test</code>',
+        description:
+          'A advertisement can be formatted to help verify placement.',
+        info:
+          'You can adjust the text displayed for your test ad placement by changing the value of the prop <code>test</code>',
         file: 'TestAd',
       },
     ],

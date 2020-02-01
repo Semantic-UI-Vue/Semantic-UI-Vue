@@ -15,7 +15,8 @@ export default [
       {
         name: 'Custom Content',
         description: 'An embed can display any web content',
-        info: 'Embeds use an intrinsic aspect ratios to embed content responsively.' +
+        info:
+          'Embeds use an intrinsic aspect ratios to embed content responsively.' +
           ' Content will preserve their intrinsic aspect ratio for all browser sizes responsively',
         file: 'CustomContent',
       },

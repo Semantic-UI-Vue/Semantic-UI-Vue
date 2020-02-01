@@ -5,9 +5,7 @@ import Icon from 'semantic-ui-vue/elements/Icon/Icon';
 const IconWithRequired = withRequired(Icon, { name: 'test' });
 
 describe('Icon', () => {
-  testClassFromProps(IconWithRequired, [
-    'disabled', 'fitted', 'loading',
-  ]);
+  testClassFromProps(IconWithRequired, ['disabled', 'fitted', 'loading']);
 
   it('should create a SUI Icon', () => {
     const icon = shallowMount(IconWithRequired);
@@ -20,4 +18,3 @@ describe('Icon', () => {
     expect(icon.classes()).toContain('foo');
   });
 });
-

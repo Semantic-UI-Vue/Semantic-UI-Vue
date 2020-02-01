@@ -24,6 +24,10 @@
     "build:multi-umd": "webpack --mode=production --config config/webpack.multi-umd.config.js --progress --colors",
     "build": "NODE_ENV=production rm -rf dist && yarn run build:docs && yarn run build:umd && yarn run build:multi-umd && yarn run build:cjs && yarn run build:multi-cjs"
   },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": true
+  },
   "eslintConfig": {
     "root": true,
     "env": {

@@ -10,7 +10,7 @@ describe('Embed', () => {
     expect(embed.classes()).not.toContain('active');
     expect(embed.classes()).toContain('embed');
     expect(embed.contains(Icon)).toEqual(true);
-    expect(embed.find(Icon).props()).toMatchObject({ name: 'video play'})
+    expect(embed.find(Icon).props()).toMatchObject({ name: 'video play' });
     expect(embed.contains('img')).toEqual(false);
     expect(embed.contains('iframe')).toEqual(false);
     expect(embed.text()).toEqual('');
@@ -36,7 +36,7 @@ describe('Embed', () => {
       },
     });
     expect(embed.contains(Icon)).toEqual(true);
-    expect(embed.find(Icon).props()).toMatchObject({ name: 'pencil'})
+    expect(embed.find(Icon).props()).toMatchObject({ name: 'pencil' });
     expect(embed.text()).toEqual('');
   });
 
@@ -59,7 +59,12 @@ describe('Embed', () => {
     embed.trigger('click');
     expect(embed.classes()).toContain('active');
     expect(embed.findAll('div').length).toEqual(2);
-    expect(embed.findAll('div').at(1).classes()).toContain('embed');
+    expect(
+      embed
+        .findAll('div')
+        .at(1)
+        .classes()
+    ).toContain('embed');
     expect(embed.contains('iframe')).toEqual(true);
     expect(embed.text()).toEqual('');
   });
@@ -149,7 +154,9 @@ describe('Embed', () => {
     expect(iframe.attributes().height).toEqual('100%');
     expect(iframe.attributes().frameborder).toEqual('0');
     expect(iframe.attributes().scrolling).toEqual('no');
-    expect(iframe.attributes().title).toEqual('Embedded content from custom host');
+    expect(iframe.attributes().title).toEqual(
+      'Embedded content from custom host'
+    );
   });
 
   it('should create a SUI Embed with iframe shorthand', () => {
@@ -175,6 +182,8 @@ describe('Embed', () => {
     expect(iframe.attributes().scrolling).toEqual('no');
     expect(iframe.attributes().allowfullscreen).toEqual('true');
     expect(iframe.attributes().style).toEqual('padding: 10px;');
-    expect(iframe.attributes().title).toEqual('Embedded content from custom host');
+    expect(iframe.attributes().title).toEqual(
+      'Embedded content from custom host'
+    );
   });
 });

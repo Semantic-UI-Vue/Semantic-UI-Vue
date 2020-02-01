@@ -4,7 +4,8 @@ export default [
     examples: [
       {
         name: 'Statistic',
-        description: 'A statistic can display a value with a label above or below it',
+        description:
+          'A statistic can display a value with a label above or below it',
         file: 'Statistic',
       },
       {
@@ -19,12 +20,14 @@ export default [
     examples: [
       {
         name: 'Value',
-        description: 'A statistic can contain a numeric, icon, image, or text value',
+        description:
+          'A statistic can contain a numeric, icon, image, or text value',
         file: 'StatisticContentValue',
       },
       {
         name: 'Label',
-        description: 'A statistic can contain a label to help provide context for the presented value',
+        description:
+          'A statistic can contain a label to help provide context for the presented value',
         file: 'StatisticContentLabel',
       },
     ],
@@ -54,7 +57,8 @@ export default [
       },
       {
         name: 'Floated',
-        description: 'An statistic can sit to the left or right of other content',
+        description:
+          'An statistic can sit to the left or right of other content',
         file: 'StatisticFloated',
       },
       {

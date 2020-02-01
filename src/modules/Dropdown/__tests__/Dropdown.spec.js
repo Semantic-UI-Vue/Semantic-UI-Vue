@@ -15,12 +15,20 @@ describe('Dropdown', () => {
   });
   common.testClass(DropdownWithRequired, ['ui', 'dropdown']);
   common.testClassFromProps(DropdownWithRequired, [
-    'button', 'floating', 'fluid', 'labeled', 'multiple', 'selection', 'search',
+    'button',
+    'floating',
+    'fluid',
+    'labeled',
+    'multiple',
+    'selection',
+    'search',
   ]);
 
   it('should open a menu', () => {
     const openSpy = jest.fn();
-    const wrapper = shallowMount(DropdownWithRequired, { propsData: { placeholder: 'foo' } });
+    const wrapper = shallowMount(DropdownWithRequired, {
+      propsData: { placeholder: 'foo' },
+    });
     wrapper.setData({ menu: { setOpen: openSpy } });
     wrapper.trigger('click');
     expect(openSpy).toHaveBeenCalledTimes(1);
@@ -37,7 +45,7 @@ describe('Dropdown', () => {
     expect(openSpy).toHaveBeenCalledWith(false);
   });
 
-  it('should close the menu when clicking on option', (done) => {
+  it('should close the menu when clicking on option', done => {
     const wrapper = shallowMount(DropdownWithRequired, {
       propsData: {
         options: [{ text: 'foo', value: 1 }],
@@ -201,7 +209,11 @@ describe('Dropdown', () => {
       propsData: {
         search: true,
         multiple: true,
-        options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }, { text: 'baz', value: 3 }],
+        options: [
+          { text: 'foo', value: 1 },
+          { text: 'bar', value: 2 },
+          { text: 'baz', value: 3 },
+        ],
       },
     });
 
@@ -222,7 +234,10 @@ describe('Dropdown', () => {
           multiple: true,
           allowAdditions: true,
           value: [1, 2, 4000],
-          options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
+          options: [
+            { text: 'foo', value: 1 },
+            { text: 'bar', value: 2 },
+          ],
         },
       });
       expect(wrapper.vm.selectedNodes.length).toEqual(3);
@@ -233,7 +248,10 @@ describe('Dropdown', () => {
         propsData: {
           multiple: true,
           value: [1, 2, 4000],
-          options: [{ text: 'foo', value: 1 }, { text: 'bar', value: 2 }],
+          options: [
+            { text: 'foo', value: 1 },
+            { text: 'bar', value: 2 },
+          ],
         },
       });
       expect(wrapper.vm.selectedNodes.length).toEqual(2);

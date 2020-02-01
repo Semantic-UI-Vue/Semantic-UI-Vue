@@ -14,7 +14,8 @@ export default [
       },
       {
         name: 'Radio',
-        description: 'A checkbox can be formatted as a radio element. This means it is an exclusive option',
+        description:
+          'A checkbox can be formatted as a radio element. This means it is an exclusive option',
         file: 'Radio',
       },
       {

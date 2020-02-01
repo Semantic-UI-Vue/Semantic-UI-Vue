@@ -8,7 +8,8 @@ export default [
         file: 'Feed',
       },
       {
-        description: 'You can also pass an array of events to generate the markup',
+        description:
+          'You can also pass an array of events to generate the markup',
         file: 'FeedShorthand',
       },
     ],

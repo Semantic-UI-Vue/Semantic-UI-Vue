@@ -11,7 +11,9 @@ describe('Button', () => {
     });
 
     it('should set a width', () => {
-      const buttonGroup = shallowMount(ButtonGroup, { propsData: { widths: 3 } });
+      const buttonGroup = shallowMount(ButtonGroup, {
+        propsData: { widths: 3 },
+      });
       expect(buttonGroup.classes()).toContain('three');
     });
   });

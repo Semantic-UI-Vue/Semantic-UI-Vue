@@ -4,7 +4,7 @@ function toWords(input) {
 }
 
 export function upperFirst(input) {
-  return input.charAt(0).toUpperCase() + input.slice(1)
+  return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
 export function camelCase(input) {
@@ -20,9 +20,8 @@ export function kebabCase(input) {
   return inputArray.map(word => word.toLowerCase()).join('-');
 }
 
-
 export function uniq(array) {
-  return array.filter((v,i) => array.indexOf(v) === i);
+  return array.filter((v, i) => array.indexOf(v) === i);
 }
 
 export function escapeRegExp(r) {
@@ -53,7 +52,7 @@ export function groupBy(array, property) {
 }
 
 export function sortBy(array, property) {
-  return array.sort((a, b) => a[property] > b[property] ? 1 : -1);
+  return array.sort((a, b) => (a[property] > b[property] ? 1 : -1));
 }
 
 export function forIn(object, callback) {

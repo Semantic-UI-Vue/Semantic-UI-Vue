@@ -34,7 +34,8 @@ export default [
         file: 'Ordered',
       },
       {
-        description: 'You can also use an `ol` and `li` to render an ordered list.',
+        description:
+          'You can also use an `ol` and `li` to render an ordered list.',
         file: 'OrderedNumber',
       },
       {

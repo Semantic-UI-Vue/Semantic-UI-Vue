@@ -9,7 +9,8 @@ export default [
       },
       {
         name: 'Emphasis',
-        description: 'A button can be formatted to show different levels of emphasis',
+        description:
+          'A button can be formatted to show different levels of emphasis',
         file: 'Emphasis',
       },
       {
@@ -80,9 +81,11 @@ export default [
         file: 'Conditional',
       },
       {
-        description: 'Or buttons can have their text localized, or adjusted by using the text prop',
-        info: 'Or buttons can have their text localized, or adjusted by using the `text` attribute. ' +
-        'If the size of the conditional changes you will need to adjust `@orCircleSize`',
+        description:
+          'Or buttons can have their text localized, or adjusted by using the text prop',
+        info:
+          'Or buttons can have their text localized, or adjusted by using the `text` attribute. ' +
+          'If the size of the conditional changes you will need to adjust `@orCircleSize`',
         file: 'Conditional2',
       },
     ],
@@ -92,12 +95,14 @@ export default [
     examples: [
       {
         name: 'Active',
-        description: 'A button can show it is currently the active user selection',
+        description:
+          'A button can show it is currently the active user selection',
         file: 'Active',
       },
       {
         name: 'Disabled',
-        description: 'A button can show it is currently unable to be interacted with',
+        description:
+          'A button can show it is currently unable to be interacted with',
         file: 'Disabled',
       },
       {
@@ -122,7 +127,8 @@ export default [
       },
       {
         name: 'Floated',
-        description: 'A button can be aligned to the left or right of its container',
+        description:
+          'A button can be aligned to the left or right of its container',
         file: 'Floated',
       },
       {
@@ -132,7 +138,8 @@ export default [
       },
       {
         name: 'Compact',
-        description: 'A button can reduce its padding to fit into tighter spaces',
+        description:
+          'A button can reduce its padding to fit into tighter spaces',
         file: 'Compact',
       },
       {
@@ -166,8 +173,10 @@ export default [
       },
       {
         name: 'Vertically Attached',
-        description: 'A button can be attached to the top or bottom of other content',
-        info: 'You should use `<div is="sui-button">...</div>` to make button attachable',
+        description:
+          'A button can be attached to the top or bottom of other content',
+        info:
+          'You should use `<div is="sui-button">...</div>` to make button attachable',
         file: 'Attached',
       },
       {
@@ -175,7 +184,8 @@ export default [
       },
       {
         name: 'Horizontally Attached',
-        description: 'A button can be attached to the left or right of other content',
+        description:
+          'A button can be attached to the left or right of other content',
         file: 'AttachedHorizontally',
       },
     ],
@@ -200,7 +210,8 @@ export default [
       },
       {
         name: 'Mixed Group',
-        description: 'Groups can be formatted to use multiple button types together',
+        description:
+          'Groups can be formatted to use multiple button types together',
         file: 'ButtonsMixed',
       },
       {
@@ -219,7 +230,8 @@ export default [
         file: 'ButtonsBasic',
       },
       {
-        info: 'You have to specify `basic` attribute to each button in basic group if you need to use colorful buttons',
+        info:
+          'You have to specify `basic` attribute to each button in basic group if you need to use colorful buttons',
         file: 'ButtonsBasicColored',
       },
       {

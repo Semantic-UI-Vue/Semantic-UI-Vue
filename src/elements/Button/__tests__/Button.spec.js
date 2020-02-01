@@ -5,7 +5,14 @@ import Icon from 'semantic-ui-vue/elements/Icon/Icon';
 
 describe('Button', () => {
   testClassFromProps(Button, [
-    'primary', 'disabled', 'loading', 'compact', 'secondary', 'positive', 'negative', 'basic',
+    'primary',
+    'disabled',
+    'loading',
+    'compact',
+    'secondary',
+    'positive',
+    'negative',
+    'basic',
   ]);
 
   it('should create a SUI Button', () => {
@@ -19,7 +26,9 @@ describe('Button', () => {
     const button1 = shallowMount(Button, { propsData: { content: 'foo' } });
     expect(button1.text()).toEqual('foo');
 
-    const button2 = shallowMount(Button, { slots: { default: '<span>bar</span>' } });
+    const button2 = shallowMount(Button, {
+      slots: { default: '<span>bar</span>' },
+    });
     expect(button2.text()).toEqual('bar');
   });
 
@@ -30,7 +39,9 @@ describe('Button', () => {
   });
 
   it('should be disabled when the Disabled property is true ', () => {
-    const button = shallowMount(Button, { propsData: { content: 'foo', disabled: true } });
+    const button = shallowMount(Button, {
+      propsData: { content: 'foo', disabled: true },
+    });
     expect(button.classes()).toContain('disabled');
   });
 });

@@ -4,7 +4,8 @@ export default [
     examples: [
       {
         name: 'Rail',
-        description: 'A rail can be presented on the left or right side of a container',
+        description:
+          'A rail can be presented on the left or right side of a container',
         file: 'Rail',
       },
       {
@@ -14,7 +15,8 @@ export default [
       },
       {
         name: 'Dividing',
-        description: 'A rail can create a division between itself and a container',
+        description:
+          'A rail can create a division between itself and a container',
         file: 'Dividing',
       },
     ],

@@ -14,7 +14,8 @@ export default [
       },
       {
         name: 'Secondary Menu',
-        description: 'A tab menu can adjust its appearance to de-emphasize its contents',
+        description:
+          'A tab menu can adjust its appearance to de-emphasize its contents',
         file: 'Secondary',
       },
       {
@@ -64,7 +65,8 @@ export default [
       {
         name: 'Colored',
         description: 'A tab menu can be colored',
-        info: 'Color only applies to the menu, not the pane, so they look best not attached',
+        info:
+          'Color only applies to the menu, not the pane, so they look best not attached',
         file: 'Colored',
       },
       {
@@ -81,7 +83,8 @@ export default [
       },
       {
         name: 'Menu Position',
-        description: 'A vertical non tabular menu can be positioned on either side',
+        description:
+          'A vertical non tabular menu can be positioned on either side',
         file: 'MenuPositionRight',
       },
     ],
@@ -106,7 +109,8 @@ export default [
       },
       {
         name: 'Adding Icons and Labels',
-        description: 'You can use icon and label props on sui-tab-pane to add label and icon',
+        description:
+          'You can use icon and label props on sui-tab-pane to add label and icon',
         file: 'CustomMenuItems',
       },
     ],

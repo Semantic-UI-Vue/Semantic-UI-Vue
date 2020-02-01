@@ -5,9 +5,9 @@ export default function getElementType(defaultEl = 'div') {
   if (!tag || tag === 'component') return defaultEl;
 
   const context = this.$vnode.context;
-  const entry = Object
-    .entries(context.$options.components || {})
-    .find(([name]) => kebabCase(name) === tag);
+  const entry = Object.entries(context.$options.components || {}).find(
+    ([name]) => kebabCase(name) === tag
+  );
 
   if (entry) {
     return entry[1];

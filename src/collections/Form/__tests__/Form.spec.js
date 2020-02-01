@@ -4,7 +4,12 @@ import Form from 'semantic-ui-vue/collections/Form/Form';
 
 describe('Form', () => {
   testClassFromProps(Form, [
-    'loading', 'success', 'warning', 'error', 'inverted', 'unstackable',
+    'loading',
+    'success',
+    'warning',
+    'error',
+    'inverted',
+    'unstackable',
   ]);
 
   it('should have class equal width', () => {

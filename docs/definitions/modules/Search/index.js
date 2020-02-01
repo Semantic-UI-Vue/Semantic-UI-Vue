@@ -9,7 +9,8 @@ export default [
       },
       {
         name: 'Min characters',
-        description: 'An example of minimal characters to search requirement (min 3)',
+        description:
+          'An example of minimal characters to search requirement (min 3)',
         file: 'SearchMinCharacters',
       },
       {

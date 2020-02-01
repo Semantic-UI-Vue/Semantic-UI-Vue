@@ -1,29 +1,29 @@
-const path = require("path");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader"
+        loader: 'vue-loader',
       },
       {
         test: /\.jsx?$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         query: {
-          minified: true
-        }
-      }
-    ]
+          minified: true,
+        },
+      },
+    ],
   },
   plugins: [new VueLoaderPlugin()],
   resolve: {
-    extensions: [".js", ".json", ".jsx", ".vue"],
+    extensions: ['.js', '.json', '.jsx', '.vue'],
     alias: {
-      "semantic-ui-vue": path.resolve(__dirname, "../src"),
-      vue: "vue/dist/vue.js"
-    }
+      'semantic-ui-vue': path.resolve(__dirname, '../src'),
+      vue: 'vue/dist/vue.js',
+    },
   },
-  stats: { children: false }
+  stats: { children: false },
 };

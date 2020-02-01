@@ -14,7 +14,8 @@ export default [
       },
       {
         name: 'Stacked',
-        description: 'A segment can be formatted to show it contains multiple pages',
+        description:
+          'A segment can be formatted to show it contains multiple pages',
         file: 'Stacked',
       },
       {
@@ -27,7 +28,8 @@ export default [
       },
       {
         name: 'Vertical Segment',
-        description: 'A vertical segment formats content to be aligned as part of a vertical group',
+        description:
+          'A vertical segment formats content to be aligned as part of a vertical group',
         file: 'Vertical',
       },
     ],
@@ -89,7 +91,8 @@ export default [
       },
       {
         name: 'Emphasis',
-        description: 'A segment can be formatted to appear more or less noticeable',
+        description:
+          'A segment can be formatted to appear more or less noticeable',
         file: 'Emphasis',
       },
       {
@@ -101,7 +104,8 @@ export default [
       },
       {
         name: 'Circular',
-        info: 'A circular segment will most likely have to have its content manually sized to be equal width and height, otherwise it will flow to the size of your content',
+        info:
+          'A circular segment will most likely have to have its content manually sized to be equal width and height, otherwise it will flow to the size of your content',
         description: 'A segment can be circular',
         file: 'Circular',
       },
@@ -112,7 +116,8 @@ export default [
       },
       {
         name: 'Floated',
-        description: 'A segment can appear to the left or right of other content',
+        description:
+          'A segment can appear to the left or right of other content',
         file: 'Floated',
       },
       {
@@ -137,7 +142,8 @@ export default [
       },
       {
         name: 'Nested Segments',
-        description: 'A group of segments can be nested in another group of segments',
+        description:
+          'A group of segments can be nested in another group of segments',
         file: 'NestedSegments',
       },
       {

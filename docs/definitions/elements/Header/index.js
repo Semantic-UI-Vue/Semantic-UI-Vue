@@ -4,12 +4,14 @@ export default [
     examples: [
       {
         name: 'Page Headers',
-        description: 'Headers may be oriented to give the hierarchy of a section in the context of the page.',
+        description:
+          'Headers may be oriented to give the hierarchy of a section in the context of the page.',
         file: 'PageHeaders',
       },
       {
         name: 'Content Headers',
-        description: 'Headers may be oriented to give the importance of a section.',
+        description:
+          'Headers may be oriented to give the importance of a section.',
         file: 'ContentHeaders',
       },
       {
@@ -22,7 +24,8 @@ export default [
       },
       {
         name: 'Sub Headers',
-        description: 'Headers may be formatted to label smaller or de-emphasized content.',
+        description:
+          'Headers may be formatted to label smaller or de-emphasized content.',
         file: 'SubHeader',
       },
     ],
@@ -68,17 +71,20 @@ export default [
     examples: [
       {
         name: 'Dividing',
-        description: 'A header can be formatted to divide itself from the content below it.',
+        description:
+          'A header can be formatted to divide itself from the content below it.',
         file: 'Dividing',
       },
       {
         name: 'Block',
-        description: 'A header can be formatted to appear inside a content block.',
+        description:
+          'A header can be formatted to appear inside a content block.',
         file: 'Block',
       },
       {
         name: 'Attached',
-        description: 'A header can be attached to other content, like a segment.',
+        description:
+          'A header can be attached to other content, like a segment.',
         file: 'Attached',
       },
       {

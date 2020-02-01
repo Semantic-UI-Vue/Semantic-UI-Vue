@@ -38,7 +38,8 @@ export default [
       },
       {
         name: 'Ribbon',
-        description: 'A label can appear as a ribbon attaching itself to an element.',
+        description:
+          'A label can appear as a ribbon attaching itself to an element.',
         file: 'Ribbon',
       },
       {
@@ -51,7 +52,8 @@ export default [
       },
       {
         name: 'Horizontal',
-        description: 'A horizontal label is formatted to label content along-side it horizontally.',
+        description:
+          'A horizontal label is formatted to label content along-side it horizontally.',
         file: 'Horizontal',
       },
       {

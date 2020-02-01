@@ -13,7 +13,9 @@ const allComponents = {
 
 const SemanticUIVue = Vue => {
   Object.values(allComponents).forEach(Comp => Vue.component(Comp.name, Comp));
-  Object.values(directives).forEach(directive => Vue.directive(directive.name, directive));
+  Object.values(directives).forEach(directive =>
+    Vue.directive(directive.name, directive)
+  );
 };
 
 export default SemanticUIVue;

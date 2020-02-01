@@ -9,10 +9,12 @@ export function openSandbox(exampleCode) {
       'index.js': { content: indexJs },
       'package.json': { content: packageJson },
       'Example.vue': { content: exampleCode },
-      'static/index.html': { content: indexHtml }
+      'static/index.html': { content: indexHtml },
     },
   });
 
-  const url = `https://codesandbox.io/api/v1/sandboxes/define?parameters=${parameters}&query=${encodeURIComponent('module=/Example.vue')}`;
+  const url = `https://codesandbox.io/api/v1/sandboxes/define?parameters=${parameters}&query=${encodeURIComponent(
+    'module=/Example.vue'
+  )}`;
   open(url);
 }

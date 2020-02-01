@@ -12,12 +12,14 @@ export default [
       },
       {
         name: 'Secondary Menu',
-        description: 'A menu can adjust its appearance to de-emphasize its contents.',
+        description:
+          'A menu can adjust its appearance to de-emphasize its contents.',
         file: 'SecondaryMenu',
       },
       {
         name: 'Pointing',
-        description: 'A menu can point to show its relationship to nearby content.',
+        description:
+          'A menu can point to show its relationship to nearby content.',
         file: 'PointingMenu',
       },
       {

@@ -34,7 +34,8 @@ export default [
       },
       {
         name: 'Visible',
-        description: 'A message can be set to visible to force itself to be shown.',
+        description:
+          'A message can be set to visible to force itself to be shown.',
         file: 'Visible',
       },
     ],

@@ -3,9 +3,7 @@ import { testClassFromProps } from 'test/utils';
 import Container from 'semantic-ui-vue/elements/Container/Container';
 
 describe('Container', () => {
-  testClassFromProps(Container, [
-    'ui', 'container',
-  ]);
+  testClassFromProps(Container, ['ui', 'container']);
 
   it('should create a SUI Container', () => {
     const container = shallowMount(Container);
@@ -31,7 +29,9 @@ describe('Container', () => {
   });
 
   it('should have content', () => {
-    const container = shallowMount(Container, { slots: { default: '<span>bar</span>' } });
+    const container = shallowMount(Container, {
+      slots: { default: '<span>bar</span>' },
+    });
     expect(container.text()).toEqual('bar');
   });
 });

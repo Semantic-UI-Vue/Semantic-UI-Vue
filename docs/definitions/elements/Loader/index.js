@@ -1,4 +1,3 @@
-
 export default [
   {
     name: 'Types',
@@ -24,13 +23,15 @@ export default [
     examples: [
       {
         name: 'Indeterminate',
-        description: "A loader can show it's unsure of how long a task will take",
+        description:
+          "A loader can show it's unsure of how long a task will take",
         file: 'Indeterminate',
       },
       {
         name: 'Active',
         description: 'A loader can be active or visible',
-        info: 'An active loader may not be clearly visible without using a `ui dimmer`',
+        info:
+          'An active loader may not be clearly visible without using a `ui dimmer`',
         file: 'Active',
       },
       {

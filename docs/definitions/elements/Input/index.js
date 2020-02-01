@@ -14,12 +14,14 @@ export default [
     examples: [
       {
         name: 'Focus',
-        description: 'An input field can show a user is currently interacting with it',
+        description:
+          'An input field can show a user is currently interacting with it',
         file: 'Focus',
       },
       {
         name: 'Loading',
-        description: 'An icon input field can show that it is currently loading data',
+        description:
+          'An icon input field can show that it is currently loading data',
         file: 'Loading',
       },
       {

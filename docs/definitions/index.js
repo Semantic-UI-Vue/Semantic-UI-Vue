@@ -8,9 +8,9 @@ const definitions = definitionContext.keys().reduce((defAcc, key) => {
     return defAcc;
   }
 
-  const [,type, componentName] = match;
+  const [, type, componentName] = match;
   const componentDefs = definitionContext(key).default;
-  componentDefs.forEach((section) => {
+  componentDefs.forEach(section => {
     section.examples = section.examples.map(example => {
       const exampleFile = `./${type}/${componentName}/${example.file}.example.vue`;
       return {

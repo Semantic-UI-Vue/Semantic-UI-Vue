@@ -54,7 +54,8 @@ export default [
       },
       {
         name: 'Link',
-        description: 'A card can contain links as images, headers, or inside content',
+        description:
+          'A card can contain links as images, headers, or inside content',
         file: 'LinkCard',
       },
       {
@@ -69,12 +70,14 @@ export default [
       },
       {
         name: 'Description',
-        description: 'A card can contain a description with one or more paragraphs',
+        description:
+          'A card can contain a description with one or more paragraphs',
         file: 'DescriptionCard',
       },
       {
         name: 'Extra Content',
-        description: 'A card can contain extra content meant to be formatted separately from the main content',
+        description:
+          'A card can contain extra content meant to be formatted separately from the main content',
         file: 'ExtraContentCard',
       },
     ],
@@ -104,7 +107,8 @@ export default [
       },
       {
         name: 'Link Card',
-        description: 'A card can be formatted so that the entire contents link to another page',
+        description:
+          'A card can be formatted so that the entire contents link to another page',
         file: 'LinkCard1',
       },
       {
@@ -119,7 +123,8 @@ export default [
       },
       {
         name: 'Text Alignment',
-        description: 'Any element inside a card can have its text alignment specified',
+        description:
+          'Any element inside a card can have its text alignment specified',
         file: 'TextAlignmentCard',
       },
       {
@@ -129,12 +134,14 @@ export default [
       },
       {
         name: 'Column Count',
-        description: 'A group of cards can set how many cards should exist in a row',
+        description:
+          'A group of cards can set how many cards should exist in a row',
         file: 'ColumnCountCard',
       },
       {
         name: 'Stackable',
-        description: 'A group of cards can automatically stack rows to a single column on mobile devices',
+        description:
+          'A group of cards can automatically stack rows to a single column on mobile devices',
         file: 'StackableCard',
       },
       {

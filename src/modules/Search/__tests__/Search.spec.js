@@ -19,7 +19,7 @@ describe('Search', () => {
   });
 
   it('should display the results when the minimum characters are input', () => {
-    const search = shallowMount(Search, { propsData: { minCharacters: 5 } })
+    const search = shallowMount(Search, { propsData: { minCharacters: 5 } });
     const input = search.find('input.prompt');
     input.element.value = '1234';
     input.trigger('input');
@@ -89,6 +89,6 @@ describe('Search', () => {
     results.vm.$listeners.selected(item);
     results = search.find(Results);
     expect(results.props().query).toEqual(item.title);
-    expect(search.emitted()).toMatchObject({ input: [[item]] })
+    expect(search.emitted()).toMatchObject({ input: [[item]] });
   });
 });

@@ -4,9 +4,7 @@ import Input from 'semantic-ui-vue/elements/Input/Input';
 import Icon from 'semantic-ui-vue/elements/Icon/Icon';
 
 describe('Input', () => {
-  testClassFromProps(Input, [
-    'ui', 'input',
-  ]);
+  testClassFromProps(Input, ['ui', 'input']);
 
   it('should create a SUI Input', () => {
     const input = shallowMount(Input);
@@ -28,7 +26,9 @@ describe('Input', () => {
   });
 
   it('should create a SUI Input with disabled style true ', () => {
-    const input = shallowMount(Input, { propsData: { content: 'foo', disabled: true } });
+    const input = shallowMount(Input, {
+      propsData: { content: 'foo', disabled: true },
+    });
     expect(input.classes()).toContain('disabled');
   });
 });

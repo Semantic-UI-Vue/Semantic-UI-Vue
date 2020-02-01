@@ -4,9 +4,7 @@ import FormFields from 'semantic-ui-vue/collections/Form/FormFields';
 
 describe('Form', () => {
   describe('FormFields', () => {
-    common.testClassFromProps(FormFields, [
-      'inline', 'grouped', 'unstackable',
-    ]);
+    common.testClassFromProps(FormFields, ['inline', 'grouped', 'unstackable']);
     common.testClass(FormFields, ['fields']);
 
     it('should have fields number', () => {

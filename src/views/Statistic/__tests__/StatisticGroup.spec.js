@@ -24,7 +24,9 @@ describe('StatisticGroup', () => {
   });
 
   it('should create a SUI StatisticGroup with default slot', () => {
-    const statistics = shallowMount(StatisticGroup, { slots: { default: '<span>40 meters</span>' } });
+    const statistics = shallowMount(StatisticGroup, {
+      slots: { default: '<span>40 meters</span>' },
+    });
     expect(statistics.is('div')).toEqual(true);
     expect(statistics.classes()).toContain('ui');
     expect(statistics.classes()).toContain('statistics');

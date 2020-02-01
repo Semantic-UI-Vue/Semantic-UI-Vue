@@ -1,17 +1,21 @@
 import { shallowMount } from '@vue/test-utils';
 
 export function testClass(Component, props) {
-  props.forEach(prop => it(`should have class ${prop}`, () => {
-    const wrapper = shallowMount(Component);
-    expect(wrapper.classes()).toContain(prop);
-  }));
+  props.forEach(prop =>
+    it(`should have class ${prop}`, () => {
+      const wrapper = shallowMount(Component);
+      expect(wrapper.classes()).toContain(prop);
+    })
+  );
 }
 
 export function testClassFromProps(Component, props) {
-  props.forEach(prop => it(`should have class ${prop}`, () => {
-    const wrapper = shallowMount(Component, { propsData: { [prop]: true } });
-    expect(wrapper.classes()).toContain(prop);
-  }));
+  props.forEach(prop =>
+    it(`should have class ${prop}`, () => {
+      const wrapper = shallowMount(Component, { propsData: { [prop]: true } });
+      expect(wrapper.classes()).toContain(prop);
+    })
+  );
 }
 
 export function testTag(Component, defaultTag, props = {}) {
@@ -20,7 +24,7 @@ export function testTag(Component, defaultTag, props = {}) {
     expect(wrapper.is(defaultTag)).toEqual(true);
   });
 
-  Object.keys(props).forEach((prop) => {
+  Object.keys(props).forEach(prop => {
     const tag = props[prop];
     it(`should be a \`${tag}\``, () => {
       const wrapper = shallowMount(Component, { propsData: { [prop]: true } });
@@ -30,17 +34,21 @@ export function testTag(Component, defaultTag, props = {}) {
 }
 
 export function withRequired(Component, props) {
-  const getPropType = propName => Component.props[propName].type || Component.props[propName];
+  const getPropType = propName =>
+    Component.props[propName].type || Component.props[propName];
 
-  const requiredProps = Object.keys(props).reduce((propsObject, propName) => ({
-    ...propsObject,
-    [propName]: {
-      type: getPropType(propName),
-      default() {
-        return props[propName];
+  const requiredProps = Object.keys(props).reduce(
+    (propsObject, propName) => ({
+      ...propsObject,
+      [propName]: {
+        type: getPropType(propName),
+        default() {
+          return props[propName];
+        },
       },
-    },
-  }), {});
+    }),
+    {}
+  );
 
   return {
     ...Component,

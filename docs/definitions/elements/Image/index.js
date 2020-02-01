@@ -24,7 +24,8 @@ export default [
       },
       {
         name: 'Disabled',
-        description: 'An image can show that it is disabled and cannot be selected',
+        description:
+          'An image can show that it is disabled and cannot be selected',
         file: 'Disabled',
       },
     ],
@@ -34,12 +35,14 @@ export default [
     examples: [
       {
         name: 'Avatar',
-        description: 'An image may be formatted to appear inline with text as an avatar.',
+        description:
+          'An image may be formatted to appear inline with text as an avatar.',
         file: 'Avatar',
       },
       {
         name: 'Bordered',
-        description: 'An image may include a border to emphasize the edges of white or transparent content.',
+        description:
+          'An image may include a border to emphasize the edges of white or transparent content.',
         file: 'Bordered',
       },
       {
@@ -69,7 +72,8 @@ export default [
       },
       {
         name: 'Spaced',
-        description: 'An image can specify that it needs an additional spacing to separate it from nearby content.',
+        description:
+          'An image can specify that it needs an additional spacing to separate it from nearby content.',
         file: 'Spaced',
       },
       {
@@ -89,7 +93,8 @@ export default [
     examples: [
       {
         name: 'Size',
-        description: 'A group of images can be formatted to have the same size.',
+        description:
+          'A group of images can be formatted to have the same size.',
         file: 'GroupSize',
       },
     ],

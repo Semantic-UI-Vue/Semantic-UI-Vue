@@ -19,7 +19,9 @@ describe('StatisticValue', () => {
   });
 
   it('should create a SUI StatisticValue with default slot', () => {
-    const value = shallowMount(StatisticValue, { slots: { default: '<span>321 votes</span>' } });
+    const value = shallowMount(StatisticValue, {
+      slots: { default: '<span>321 votes</span>' },
+    });
     expect(value.is('div')).toEqual(true);
     expect(value.classes()).toContain('value');
     expect(value.text()).toEqual('321 votes');

@@ -14,7 +14,8 @@ export default [
       },
       {
         name: 'Selection',
-        description: 'A dropdown can be used to select between choices in a form.',
+        description:
+          'A dropdown can be used to select between choices in a form.',
         file: 'Selection',
       },
       {
@@ -22,7 +23,8 @@ export default [
       },
       {
         name: 'Search Selection',
-        description: 'A selection dropdown can allow a user to search through a large list of choices.',
+        description:
+          'A selection dropdown can allow a user to search through a large list of choices.',
         file: 'SearchSelection',
       },
       {
@@ -35,12 +37,14 @@ export default [
       },
       {
         name: 'Multiple Search Selection',
-        description: 'A selection dropdown can allow multiple search selections.',
+        description:
+          'A selection dropdown can allow multiple search selections.',
         file: 'MultipleSearchSelection',
       },
       {
         name: 'Multiple Search Selection With Additions',
-        description: 'A selection dropdown can allow multiple search selections and user additions.',
+        description:
+          'A selection dropdown can allow multiple search selections and user additions.',
         file: 'MultipleSearchSelectionWithAddition',
       },
       {
@@ -65,7 +69,8 @@ export default [
       },
       {
         name: 'Pointing',
-        description: 'A dropdown can be formatted so that its menu is pointing.',
+        description:
+          'A dropdown can be formatted so that its menu is pointing.',
         file: 'DropdownPointing',
       },
       {
@@ -73,7 +78,8 @@ export default [
       },
       {
         name: 'Floating',
-        description: 'A dropdown menu can appear to be floating below an element.',
+        description:
+          'A dropdown menu can appear to be floating below an element.',
         file: 'DropdownFloating',
       },
       {
@@ -88,13 +94,15 @@ export default [
     examples: [
       {
         name: 'Dropdown opening direction',
-        info: 'By default, the dropdown menu opens downward, if the menu does not fit in the screen - it will open upward, but you can force set direction by specifying `direction` prop',
+        info:
+          'By default, the dropdown menu opens downward, if the menu does not fit in the screen - it will open upward, but you can force set direction by specifying `direction` prop',
         description: 'You can set the direction of opening dropdown menu',
         file: 'DropdownDirection',
       },
       {
         name: 'Maximum Selections',
-        description: 'Using `maxSelections` prop lets you force a maximum number of selections.',
+        description:
+          'Using `maxSelections` prop lets you force a maximum number of selections.',
         file: 'MultipleMaxSelections',
       },
     ],

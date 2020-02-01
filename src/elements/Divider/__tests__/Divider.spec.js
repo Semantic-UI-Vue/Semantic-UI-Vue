@@ -4,7 +4,12 @@ import Divider from 'semantic-ui-vue/elements/Divider/Divider';
 
 describe('Divider', () => {
   testClassFromProps(Divider, [
-    'clearing', 'fitted', 'hidden', 'horizontal', 'inverted', 'vertical',
+    'clearing',
+    'fitted',
+    'hidden',
+    'horizontal',
+    'inverted',
+    'vertical',
   ]);
 
   it('should create a SUI Divider', () => {
@@ -15,7 +20,9 @@ describe('Divider', () => {
   });
 
   it('should have content', () => {
-    const divider = shallowMount(Divider, { slots: { default: '<span>bar</span>' } });
+    const divider = shallowMount(Divider, {
+      slots: { default: '<span>bar</span>' },
+    });
     expect(divider.text()).toEqual('bar');
   });
 });

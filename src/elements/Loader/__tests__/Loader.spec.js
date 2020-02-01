@@ -3,9 +3,7 @@ import { testClassFromProps } from 'test/utils';
 import Loader from 'semantic-ui-vue/elements/Loader/Loader';
 
 describe('Loader', () => {
-  testClassFromProps(Loader, [
-    'ui', 'loader',
-  ]);
+  testClassFromProps(Loader, ['ui', 'loader']);
 
   it('should create a SUI Loader', () => {
     const loader = shallowMount(Loader);
@@ -23,15 +21,21 @@ describe('Loader', () => {
   });
 
   it('should be able to set indeterminate', () => {
-    const loader1 = shallowMount(Loader, { propsData: { indeterminate: true } });
+    const loader1 = shallowMount(Loader, {
+      propsData: { indeterminate: true },
+    });
     expect(loader1.classes()).toContain('indeterminate');
 
-    const loader2 = shallowMount(Loader, { propsData: { indeterminate: false } });
+    const loader2 = shallowMount(Loader, {
+      propsData: { indeterminate: false },
+    });
     expect(loader2.classes()).not.toContain('indeterminate');
   });
 
   it('should be able to set content', () => {
-    const loader1 = shallowMount(Loader, { propsData: { content: 'Loading...' } });
+    const loader1 = shallowMount(Loader, {
+      propsData: { content: 'Loading...' },
+    });
     expect(loader1.text()).toEqual('Loading...');
 
     const loader2 = shallowMount(Loader, { propsData: { content: '' } });

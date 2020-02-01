@@ -3,9 +3,7 @@ import { testClassFromProps } from 'test/utils';
 import Header from 'semantic-ui-vue/elements/Header/Header';
 
 describe('Header', () => {
-  testClassFromProps(Header, [
-    'ui', 'header',
-  ]);
+  testClassFromProps(Header, ['ui', 'header']);
 
   it('should create a SUI Header', () => {
     const header = shallowMount(Header);
@@ -31,7 +29,9 @@ describe('Header', () => {
   });
 
   it('should have an image class', () => {
-    const header = shallowMount(Header, { propsData: { image: 'test-image.jpg' } });
+    const header = shallowMount(Header, {
+      propsData: { image: 'test-image.jpg' },
+    });
     expect(header.classes()).toContain('image');
   });
 
@@ -41,10 +41,14 @@ describe('Header', () => {
   });
 
   it('should have content', () => {
-    const header1 = shallowMount(Header, { propsData: { content: 'Content String' } });
+    const header1 = shallowMount(Header, {
+      propsData: { content: 'Content String' },
+    });
     expect(header1.text()).toEqual('Content String');
 
-    const header2 = shallowMount(Header, { slots: { default: '<span>Content String</span>' } });
+    const header2 = shallowMount(Header, {
+      slots: { default: '<span>Content String</span>' },
+    });
     expect(header2.text()).toEqual('Content String');
   });
 

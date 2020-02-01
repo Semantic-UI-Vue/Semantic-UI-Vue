@@ -4,7 +4,14 @@ import Segment from 'semantic-ui-vue/elements/Segment/Segment';
 
 describe('Segment', () => {
   testClassFromProps(Segment, [
-    'attached', 'basic', 'padded', 'inverted', 'stacked', 'piled', 'raised', 'vertical',
+    'attached',
+    'basic',
+    'padded',
+    'inverted',
+    'stacked',
+    'piled',
+    'raised',
+    'vertical',
   ]);
 
   it('should create a SUI Segment', () => {
@@ -15,7 +22,9 @@ describe('Segment', () => {
   });
 
   it('should have content', () => {
-    const segment = shallowMount(Segment, { slots: { default: '<span>bar</span>' } });
+    const segment = shallowMount(Segment, {
+      slots: { default: '<span>bar</span>' },
+    });
     expect(segment.text()).toEqual('bar');
   });
 });

@@ -35,17 +35,20 @@ export default [
       },
       {
         name: 'Fitted',
-        description: 'A divider can be fitted, without any space above or below it',
+        description:
+          'A divider can be fitted, without any space above or below it',
         file: 'FittedDivider',
       },
       {
         name: 'Hidden',
-        description: 'A hidden divider divides content without creating a dividing line',
+        description:
+          'A hidden divider divides content without creating a dividing line',
         file: 'HiddenDivider',
       },
       {
         name: 'Section',
-        description: 'A divider can provide greater margins to divide sections of content',
+        description:
+          'A divider can provide greater margins to divide sections of content',
         file: 'SectionDivider',
       },
       {

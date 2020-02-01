@@ -37,17 +37,24 @@ describe('underscore', () => {
   describe('escapeRegExp', () => {
     it('should escape a regex', () => {
       const chars = '-/\\^$*+?.()|[]{}';
-      expect(_.escapeRegExp(chars)).toEqual('\\-\\/\\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}');
+      expect(_.escapeRegExp(chars)).toEqual(
+        '\\-\\/\\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}'
+      );
       expect(Array.from(chars.match(_.escapeRegExp(chars)))).toEqual([chars]);
     });
   });
 
   describe('mapValues', () => {
     it('should create an object with the same keys as object and values generated', () => {
-      expect(_.mapValues({
-        fred: { user: 'fred', age: 40 },
-        pebbles: { user: 'pebbles', age: 1 },
-      }, o => o.age)).toEqual({
+      expect(
+        _.mapValues(
+          {
+            fred: { user: 'fred', age: 40 },
+            pebbles: { user: 'pebbles', age: 1 },
+          },
+          o => o.age
+        )
+      ).toEqual({
         fred: 40,
         pebbles: 1,
       });
@@ -72,17 +79,17 @@ describe('underscore', () => {
   describe('sortBy', () => {
     it('should sort the collection by the given property', () => {
       const users = [
-        { 'user': 'fred',   'age': 48 },
-        { 'user': 'barney', 'age': 36 },
-        { 'user': 'fred',   'age': 40 },
-        { 'user': 'barney', 'age': 34 },
+        { user: 'fred', age: 48 },
+        { user: 'barney', age: 36 },
+        { user: 'fred', age: 40 },
+        { user: 'barney', age: 34 },
       ];
 
       expect(_.sortBy(users, 'age')).toEqual([
-        { 'user': 'barney', 'age': 34 },
-        { 'user': 'barney', 'age': 36 },
-        { 'user': 'fred',   'age': 40 },
-        { 'user': 'fred',   'age': 48 },
+        { user: 'barney', age: 34 },
+        { user: 'barney', age: 36 },
+        { user: 'fred', age: 40 },
+        { user: 'fred', age: 48 },
       ]);
     });
   });
@@ -96,11 +103,11 @@ describe('underscore', () => {
       Foo.prototype.c = 3;
 
       const spy = jest.fn();
-      _.forIn(new Foo, spy);
+      _.forIn(new Foo(), spy);
 
       expect(spy).toHaveBeenCalledWith(1, 'a');
       expect(spy).toHaveBeenCalledWith(2, 'b');
       expect(spy).toHaveBeenCalledWith(3, 'c');
     });
   });
-})
+});

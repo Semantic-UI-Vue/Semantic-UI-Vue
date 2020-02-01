@@ -24,7 +24,8 @@ export default [
       },
       {
         name: 'Internally Celled',
-        description: 'A grid can have rows divisions only between internal rows.',
+        description:
+          'A grid can have rows divisions only between internal rows.',
         file: 'InternallyCelled',
       },
     ],
@@ -39,7 +40,8 @@ export default [
       },
       {
         name: 'Columns',
-        description: 'Columns each contain gutters giving them equal spacing from other columns.',
+        description:
+          'Columns each contain gutters giving them equal spacing from other columns.',
         file: 'Columns',
       },
     ],
@@ -49,7 +51,8 @@ export default [
     examples: [
       {
         name: 'Stretched',
-        description: 'A row can automatically resize all elements to split the available width evenly.',
+        description:
+          'A row can automatically resize all elements to split the available width evenly.',
         file: 'Stretched',
       },
     ],

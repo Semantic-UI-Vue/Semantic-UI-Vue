@@ -9,7 +9,8 @@ export default [
       },
       {
         name: 'Text Container',
-        description: 'A button can be formatted to show different levels of emphasis',
+        description:
+          'A button can be formatted to show different levels of emphasis',
         file: 'TextContainer',
       },
     ],

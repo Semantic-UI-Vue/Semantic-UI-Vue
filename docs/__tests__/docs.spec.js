@@ -20,12 +20,12 @@ describe.only('Examples', () => {
     global.console.error = consoleError;
   });
 
-  Object.keys(Examples).forEach((componentName) => {
+  Object.keys(Examples).forEach(componentName => {
     describe(componentName, () => {
       const exampleSections = Examples[componentName];
-      exampleSections.forEach((section) => {
+      exampleSections.forEach(section => {
         describe(section.title, () => {
-          section.examples.forEach((example) => {
+          section.examples.forEach(example => {
             if (example.title) {
               describe(example.title, () => {
                 it('should match snapshot', () => {

@@ -36,11 +36,14 @@ export default [
     examples: [
       {
         name: 'Visible content',
-        description: 'A reveal may contain content that is visible before interaction.',
+        description:
+          'A reveal may contain content that is visible before interaction.',
         file: 'VisibleContent',
-      }, {
+      },
+      {
         name: 'Hidden content',
-        description: 'A reveal may contain content that is hidden before user interaction.',
+        description:
+          'A reveal may contain content that is hidden before user interaction.',
         file: 'HiddenContent',
       },
     ],
