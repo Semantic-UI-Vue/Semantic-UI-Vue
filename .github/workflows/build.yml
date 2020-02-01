@@ -12,26 +12,27 @@ jobs:
           node-version: 12.x
           registry-url: https://registry.npmjs.org/
       - run: yarn install
-      - run: yarn run lint
-      - run: yarn test
-      - uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage/clover.xml
-          fail_ci_if_error: true
+      # - run: yarn run lint
+      # - run: yarn test
+      # - uses: codecov/codecov-action@v1
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     file: ./coverage/clover.xml
+      #     fail_ci_if_error: true
 
   deploy:
     env:
       NODE_ENV: production
     runs-on: ubuntu-latest
     needs: prepare
-    if: "github.ref == 'refs/heads/master'"
+    # if: "github.ref == 'refs/heads/master'"
     steps:
-      - run: ls
+      - run: yarn run build:docs
       - name: Deploy docs
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          GITHUB_WORKSPACE: Semantic-UI-Vue/semantic-ui-vue.github.io
+          # GITHUB_WORKSPACE: Semantic-UI-Vue/semantic-ui-vue.github.io
+          GITHUB_WORKSPACE: mariolamacchia/test
           ACCESS_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages
           FOLDER: dist/docs
