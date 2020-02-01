@@ -27,6 +27,7 @@ jobs:
     needs: prepare
     if: "github.ref == 'refs/heads/master'"
     steps:
+      - run: ls
       - name: Deploy docs
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
