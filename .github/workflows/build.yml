@@ -26,13 +26,14 @@ jobs:
   deploy:
     needs: build
     if: "github.ref == 'refs/heads/master'"
-    - name: Deploy docs
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_WORKSPACE: Semantic-UI-Vue/semantic-ui-vue.github.io
-        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-        BRANCH: gh-pages
-        FOLDER: dist/docs
+    steps:
+      - name: Deploy docs
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_WORKSPACE: Semantic-UI-Vue/semantic-ui-vue.github.io
+          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages
+          FOLDER: dist/docs
 
   release:
     needs: build
