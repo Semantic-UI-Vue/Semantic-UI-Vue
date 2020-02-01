@@ -12,18 +12,18 @@
         <sui-table-cell>John</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell vertical-align="top">
-          Notes<br>
-          1<br>
-          2<br>
+          Notes<br />
+          1<br />
+          2<br />
         </sui-table-cell>
       </sui-table-row>
       <sui-table-row>
         <sui-table-cell>Jamie</sui-table-cell>
         <sui-table-cell vertical-align="bottom">Approved</sui-table-cell>
         <sui-table-cell>
-          Notes<br>
-          1<br>
-          2<br>
+          Notes<br />
+          1<br />
+          2<br />
         </sui-table-cell>
       </sui-table-row>
     </sui-table-body>

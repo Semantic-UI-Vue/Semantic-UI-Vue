@@ -1,8 +1,6 @@
 <template>
   <div>
-    <sui-tab
-      :menu="{ pointing: true }"
-    >
+    <sui-tab :menu="{ pointing: true }">
       <sui-tab-pane title="Circle" :attached="false">
         Circle
       </sui-tab-pane>

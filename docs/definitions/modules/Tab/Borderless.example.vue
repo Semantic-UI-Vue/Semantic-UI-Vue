@@ -1,8 +1,6 @@
 <template>
   <div>
-    <sui-tab
-      :menu="{ borderless: true, attached: false, tabular: false }"
-    >
+    <sui-tab :menu="{ borderless: true, attached: false, tabular: false }">
       <sui-tab-pane title="Circle" :attached="false">
         Circle
       </sui-tab-pane>

@@ -31,7 +31,7 @@ export default {
       return definitions[this.title];
     },
   },
-}
+};
 </script>
 
 <style scoped>

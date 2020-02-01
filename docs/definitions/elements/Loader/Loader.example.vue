@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
     <sui-message info>
-      Loaders are hidden unless has prop<code>active</code>
-      or inside an <code>Dimmer active</code>.
+      Loaders are hidden unless has prop<code>active</code> or inside an
+      <code>Dimmer active</code>.
     </sui-message>
 
     <sui-segment>

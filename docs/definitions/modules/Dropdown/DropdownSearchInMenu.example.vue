@@ -1,16 +1,15 @@
 <template lang="html">
   <sui-dropdown
-                text="Filter Posts"
-                icon="filter"
-                floating
-                labeled
-                button
-                class="icon"
-                v-model="selectedValue"
-                :menu-header="menuHeader"
-                :search-in-menu="searchInMenu"
-                :options="options"
-
+    text="Filter Posts"
+    icon="filter"
+    floating
+    labeled
+    button
+    class="icon"
+    v-model="selectedValue"
+    :menu-header="menuHeader"
+    :search-in-menu="searchInMenu"
+    :options="options"
   />
 </template>
 

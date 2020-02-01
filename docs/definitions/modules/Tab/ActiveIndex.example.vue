@@ -2,17 +2,11 @@
   <div>
     <p>Active Index {{ activeIndex }}</p>
 
-    <input
-      type="range"
-      max="2"
-      v-model="activeIndex"
-    >
+    <input type="range" max="2" v-model="activeIndex" />
 
     <sui-divider hidden />
 
-    <sui-tab
-      :active-index.sync="activeIndex"
-    >
+    <sui-tab :active-index.sync="activeIndex">
       <sui-tab-pane title="Circle">
         Circle
       </sui-tab-pane>

@@ -21,7 +21,6 @@
       </sui-list-item>
     </sui-list>
   </sui-segment>
-
 </template>
 
 <script>

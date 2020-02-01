@@ -1,8 +1,6 @@
 <template>
   <div>
-    <sui-tab
-      active-index="2"
-    >
+    <sui-tab active-index="2">
       <sui-tab-pane title="Circle">
         Circle
       </sui-tab-pane>

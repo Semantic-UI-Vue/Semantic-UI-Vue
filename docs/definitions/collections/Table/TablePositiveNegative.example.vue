@@ -16,7 +16,7 @@
       <sui-table-row positive>
         <sui-table-cell>Jimmy</sui-table-cell>
         <sui-table-cell>
-          <sui-icon name="check"/>
+          <sui-icon name="check" />
           Approved
         </sui-table-cell>
         <sui-table-cell>None</sui-table-cell>
@@ -25,7 +25,7 @@
         <sui-table-cell>Jamie</sui-table-cell>
         <sui-table-cell>Unknown</sui-table-cell>
         <sui-table-cell positive>
-          <sui-icon name="close"/>
+          <sui-icon name="close" />
           Requires call
         </sui-table-cell>
       </sui-table-row>

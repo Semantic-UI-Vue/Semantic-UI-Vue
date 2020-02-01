@@ -1,11 +1,6 @@
 <template lang="html">
   <div>
-    <sui-progress
-      state="active"
-      indicating
-      :percent="percent"
-      :label="label"
-    />
+    <sui-progress state="active" indicating :percent="percent" :label="label" />
     <sui-button @click.native="decrease">-</sui-button>
     <sui-button @click.native="increase">+</sui-button>
   </div>

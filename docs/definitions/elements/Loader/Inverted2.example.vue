@@ -3,10 +3,10 @@
     <sui-dimmer active inverted>
       <sui-loader>Loading</sui-loader>
     </sui-dimmer>
-    <br>
-    <br>
-    <br>
- </sui-segment>
+    <br />
+    <br />
+    <br />
+  </sui-segment>
 </template>
 
 <script>

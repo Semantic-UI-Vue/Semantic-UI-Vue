@@ -3,15 +3,22 @@
     <sui-container>
       <sui-menu floated="right">
         <sui-popup position="bottom center" content="View on GitHub">
-          <a slot="trigger" is="sui-menu-item" icon="github" :href="githubLink" />
+          <a
+            slot="trigger"
+            is="sui-menu-item"
+            icon="github"
+            :href="githubLink"
+          />
         </sui-popup>
         <sui-popup position="bottom center" content="View on Semantic UI">
           <a slot="trigger" is="sui-menu-item" icon="book" :href="suiLink" />
         </sui-popup>
       </sui-menu>
       <h1 is="sui-header">
-        {{title}}
-        <sui-header-subheader sub>{{currentComponent.description}}</sui-header-subheader>
+        {{ title }}
+        <sui-header-subheader sub>{{
+          currentComponent.description
+        }}</sui-header-subheader>
       </h1>
 
       <sui-menu :widths="2" class="component-head-menu">
@@ -57,10 +64,10 @@ export default {
       return capitalize(this.componentName);
     },
     suiLink() {
-      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`
+      return `https://semantic-ui.com/${this.type}/${this.componentName}.html`;
     },
     githubLink() {
-      return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/tree/master/src/${this.type}/${this.title}/${this.title}.jsx`
+      return `https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/tree/master/src/${this.type}/${this.title}/${this.title}.jsx`;
     },
   },
 };

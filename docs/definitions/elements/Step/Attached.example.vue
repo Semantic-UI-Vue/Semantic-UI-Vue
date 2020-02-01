@@ -4,17 +4,20 @@
       <sui-step
         title="Shipping"
         description="Choose your shipping options"
-        icon="plane" />
+        icon="plane"
+      />
       <sui-step
         active
         title="Billing"
         description="Enter billing information"
-        icon="dollar" />
+        icon="dollar"
+      />
       <sui-step
         disabled
         title="Confirm Order"
         description="Verify order details"
-        icon="info circle" />
+        icon="info circle"
+      />
     </sui-step-group>
     <sui-segment attached>
       <docs-wireframe name="paragraph" />
@@ -23,17 +26,20 @@
       <sui-step
         title="Shipping"
         description="Choose your shipping options"
-        icon="plane" />
+        icon="plane"
+      />
       <sui-step
         active
         title="Billing"
         description="Enter billing information"
-        icon="dollar" />
+        icon="dollar"
+      />
       <sui-step
         disabled
         title="Confirm Order"
         description="Verify order details"
-        icon="info circle" />
+        icon="info circle"
+      />
     </sui-step-group>
   </div>
 </template>

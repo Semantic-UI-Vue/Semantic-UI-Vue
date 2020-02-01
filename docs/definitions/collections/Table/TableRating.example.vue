@@ -2,7 +2,9 @@
   <sui-table celled padded>
     <sui-table-header>
       <sui-table-row>
-        <sui-table-header-cell single-line>Evidence Rating</sui-table-header-cell>
+        <sui-table-header-cell single-line
+          >Evidence Rating</sui-table-header-cell
+        >
         <sui-table-header-cell>Effect</sui-table-header-cell>
         <sui-table-header-cell>Efficacy</sui-table-header-cell>
         <sui-table-header-cell>Consensus</sui-table-header-cell>
@@ -20,7 +22,7 @@
           <sui-rating icon="star" :rating="3" :max-rating="3" />
         </sui-table-cell>
         <sui-table-cell text-align="right">
-          80% <br >
+          80% <br />
           <a href="#">18 studies</a>
         </sui-table-cell>
         <sui-table-cell>
@@ -38,13 +40,12 @@
           <sui-rating icon="star" :rating="3" :max-rating="3" />
         </sui-table-cell>
         <sui-table-cell text-align="right">
-          100% <br >
+          100% <br />
           <a href="#">65 studies</a>
         </sui-table-cell>
         <sui-table-cell>
           Creatine is the reference compound for power improvement, with numbers
-          from one meta-analysis to assess
-          potency
+          from one meta-analysis to assess potency
         </sui-table-cell>
       </sui-table-row>
     </sui-table-body>

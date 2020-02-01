@@ -3,7 +3,8 @@
     placeholder="Search..."
     transparent
     icon-position="left"
-    icon="search" />
+    icon="search"
+  />
 </template>
 
 <script>

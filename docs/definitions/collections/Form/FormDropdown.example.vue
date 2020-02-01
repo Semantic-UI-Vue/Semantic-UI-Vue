@@ -18,13 +18,16 @@ export default {
   data() {
     return {
       current: null,
-      options: [{
-        text: 'Male',
-        value: 1,
-      }, {
-        text: 'Female',
-        value: 2,
-      }],
+      options: [
+        {
+          text: 'Male',
+          value: 1,
+        },
+        {
+          text: 'Female',
+          value: 2,
+        },
+      ],
     };
   },
 };

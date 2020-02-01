@@ -12,9 +12,7 @@
       </sui-card-content>
       <sui-image src="static/images/wireframes/image.png" />
       <sui-card-content>
-        <span slot="right">
-          <sui-icon name="heart outline" /> 17 likes
-        </span>
+        <span slot="right"> <sui-icon name="heart outline" /> 17 likes </span>
         <sui-icon name="comment" /> 3 comments
       </sui-card-content>
       <sui-card-content extra>

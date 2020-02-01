@@ -1,8 +1,6 @@
 <template>
   <div>
-    <sui-tab
-      :menu="{ vertical: true, fluid: true, tabular: 'right' }"
-    >
+    <sui-tab :menu="{ vertical: true, fluid: true, tabular: 'right' }">
       <sui-tab-pane title="Circle">
         Circle
       </sui-tab-pane>

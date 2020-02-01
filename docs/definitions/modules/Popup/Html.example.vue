@@ -11,12 +11,12 @@
         <sui-card-content>
           <sui-card-header>My Neighbor Totoro</sui-card-header>
           <sui-card-description>
-            Two sisters move to the country with their father in order to be closer to their
-            hospitalized mother, and discover the surrounding trees are inhabited by magical spirits.
+            Two sisters move to the country with their father in order to be
+            closer to their hospitalized mother, and discover the surrounding
+            trees are inhabited by magical spirits.
           </sui-card-description>
         </sui-card-content>
       </sui-card>
-
     </sui-popup>
   </div>
 </template>

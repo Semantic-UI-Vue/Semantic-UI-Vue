@@ -35,9 +35,9 @@
     <sui-table-footer>
       <sui-table-header-cell>3 People</sui-table-header-cell>
       <sui-table-header-cell>2 Approved</sui-table-header-cell>
-      <sui-table-header-cell/>
-      <sui-table-header-cell/>
-      <sui-table-header-cell/>
+      <sui-table-header-cell />
+      <sui-table-header-cell />
+      <sui-table-header-cell />
     </sui-table-footer>
   </sui-table>
 </template>

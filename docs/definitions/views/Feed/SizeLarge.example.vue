@@ -41,8 +41,8 @@
         </sui-feed-summary>
 
         <sui-feed-extra images>
-          <a><img src="static/images/wireframes/image.png" ></a>
-          <a><img src="static/images/wireframes/image.png" ></a>
+          <a><img src="static/images/wireframes/image.png"/></a>
+          <a><img src="static/images/wireframes/image.png"/></a>
         </sui-feed-extra>
 
         <sui-feed-meta like="1 Like" />

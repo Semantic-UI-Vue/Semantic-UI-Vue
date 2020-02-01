@@ -2,7 +2,7 @@
   <sui-form>
     <sui-form-field inline>
       <label>First Name</label>
-      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="First Name" />
     </sui-form-field>
   </sui-form>
 </template>

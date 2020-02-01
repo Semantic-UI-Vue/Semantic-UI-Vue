@@ -41,7 +41,7 @@
           Olive
         </sui-statistic-label>
       </sui-statistic>
-        <sui-statistic color="green" inverted>
+      <sui-statistic color="green" inverted>
         <sui-statistic-value>
           14
         </sui-statistic-value>

@@ -7,7 +7,8 @@
       <sui-feed-content>
         <sui-feed-summary
           content="You added Jenny Hess to your coworker group."
-          date="3 days ago"/>
+          date="3 days ago"
+        />
       </sui-feed-content>
     </sui-feed-event>
   </sui-feed>

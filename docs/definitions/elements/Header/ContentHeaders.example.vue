@@ -2,7 +2,9 @@
   <sui-segment vertical>
     <sui-message info>
       Content headings are sized using
-      <a href="https://j.eremy.net/confused-about-rem-and-em/"><code>em</code></a>
+      <a href="https://j.eremy.net/confused-about-rem-and-em/"
+        ><code>em</code></a
+      >
       and are based on the font-size of their container.
     </sui-message>
 

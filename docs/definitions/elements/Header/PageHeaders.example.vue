@@ -2,7 +2,9 @@
   <div>
     <sui-message info>
       Page headings are sized using
-      <a href="https://j.eremy.net/confused-about-rem-and-em/"><code>rem</code></a>
+      <a href="https://j.eremy.net/confused-about-rem-and-em/"
+        ><code>rem</code></a
+      >
       and are not affected by surrounding content size.
     </sui-message>
 

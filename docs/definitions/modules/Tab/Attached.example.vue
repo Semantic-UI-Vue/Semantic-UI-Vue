@@ -1,8 +1,6 @@
 <template>
   <div>
-    <sui-tab
-      :menu="{ attached: 'bottom' }"
-    >
+    <sui-tab :menu="{ attached: 'bottom' }">
       <sui-tab-pane title="Circle" attached="top">
         Circle
       </sui-tab-pane>

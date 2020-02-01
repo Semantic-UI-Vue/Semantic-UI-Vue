@@ -5,7 +5,9 @@
         <sui-icon name="truck" />
         <sui-step-content>
           <sui-step-title>Shipping</sui-step-title>
-          <sui-step-description>Choose your shipping options</sui-step-description>
+          <sui-step-description
+            >Choose your shipping options</sui-step-description
+          >
         </sui-step-content>
       </sui-step>
 

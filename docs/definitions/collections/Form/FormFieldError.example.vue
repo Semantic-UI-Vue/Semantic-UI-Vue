@@ -3,11 +3,11 @@
     <sui-form-fields fields="two">
       <sui-form-field error>
         <label>First Name</label>
-        <input placeholder="First Name" type="text">
+        <input placeholder="First Name" type="text" />
       </sui-form-field>
       <sui-form-field>
         <label>Last Name</label>
-        <input placeholder="Last Name" type="text">
+        <input placeholder="Last Name" type="text" />
       </sui-form-field>
     </sui-form-fields>
     <sui-form-field error>
@@ -31,13 +31,16 @@ export default {
   data() {
     return {
       current: null,
-      options: [{
-        text: 'Male',
-        value: 1,
-      }, {
-        text: 'Female',
-        value: 2,
-      }],
+      options: [
+        {
+          text: 'Male',
+          value: 1,
+        },
+        {
+          text: 'Female',
+          value: 2,
+        },
+      ],
     };
   },
 };

@@ -16,11 +16,7 @@
       </a>
 
       <sui-menu-menu position="right">
-        <a
-          is="sui-menu-item"
-          :active="isActive('new')"
-          @click="select('new')"
-        >
+        <a is="sui-menu-item" :active="isActive('new')" @click="select('new')">
           <sui-icon name="add" />
           New Tab
         </a>

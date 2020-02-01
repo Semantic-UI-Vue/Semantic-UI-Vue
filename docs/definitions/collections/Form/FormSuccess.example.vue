@@ -2,7 +2,7 @@
   <sui-form success>
     <sui-form-field>
       <label>E-mail</label>
-      <input type="email" placeholder="joe@schmoe.com">
+      <input type="email" placeholder="joe@schmoe.com" />
     </sui-form-field>
     <sui-message success>
       <sui-message-header>Form Completed</sui-message-header>

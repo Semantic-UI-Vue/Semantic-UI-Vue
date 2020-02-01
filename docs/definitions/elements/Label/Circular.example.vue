@@ -1,11 +1,6 @@
 <template>
   <div>
-    <sui-label
-      v-for="color in colors"
-      circular
-      :color="color"
-      :key="color"
-    >
+    <sui-label v-for="color in colors" circular :color="color" :key="color">
       2
     </sui-label>
   </div>

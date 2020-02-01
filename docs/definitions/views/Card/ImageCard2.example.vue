@@ -4,7 +4,8 @@
       <sui-card>
         <sui-dimmer-dimmable
           @mouseenter.native="cardOneActive = true"
-          @mouseleave.native="cardOneActive = false">
+          @mouseleave.native="cardOneActive = false"
+        >
           <sui-image src="static/images/avatar/large/elliot.jpg" />
           <sui-dimmer blurring :active="cardOneActive">
             <sui-button inverted>Add Friend</sui-button>
@@ -21,7 +22,8 @@
       <sui-card>
         <sui-dimmer-dimmable
           @mouseenter.native="cardTwoActive = true"
-          @mouseleave.native="cardTwoActive = false">
+          @mouseleave.native="cardTwoActive = false"
+        >
           <sui-image src="static/images/avatar/large/jenny.jpg" />
           <sui-dimmer blurring inverted :active="cardTwoActive">
             <sui-button primary>Add Friend</sui-button>

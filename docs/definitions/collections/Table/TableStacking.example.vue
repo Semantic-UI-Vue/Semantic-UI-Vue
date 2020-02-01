@@ -5,7 +5,9 @@
         <sui-table-row>
           <sui-table-header-cell>Name</sui-table-header-cell>
           <sui-table-header-cell>Status</sui-table-header-cell>
-          <sui-table-header-cell text-align="right">Description</sui-table-header-cell>
+          <sui-table-header-cell text-align="right"
+            >Description</sui-table-header-cell
+          >
         </sui-table-row>
       </sui-table-header>
       <sui-table-body>
@@ -31,7 +33,9 @@
         <sui-table-row>
           <sui-table-header-cell>Name</sui-table-header-cell>
           <sui-table-header-cell>Status</sui-table-header-cell>
-          <sui-table-header-cell text-align="right">Description</sui-table-header-cell>
+          <sui-table-header-cell text-align="right"
+            >Description</sui-table-header-cell
+          >
         </sui-table-row>
       </sui-table-header>
       <sui-table-body>

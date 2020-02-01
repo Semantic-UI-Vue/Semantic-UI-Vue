@@ -5,7 +5,9 @@
       <sui-breadcrumb-divider>/</sui-breadcrumb-divider>
       <sui-breadcrumb-section link>Registration</sui-breadcrumb-section>
       <sui-breadcrumb-divider>/</sui-breadcrumb-divider>
-      <sui-breadcrumb-section active>Personal Information</sui-breadcrumb-section>
+      <sui-breadcrumb-section active
+        >Personal Information</sui-breadcrumb-section
+      >
     </sui-breadcrumb>
   </div>
 </template>

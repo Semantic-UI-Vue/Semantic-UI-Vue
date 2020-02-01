@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'DividingHeaderExample'
+  name: 'DividingHeaderExample',
 };
 </script>

@@ -56,7 +56,9 @@
       <sui-image avatar src="static/images/avatar/small/veronika.jpg" />
       <sui-list-content>
         <a is="sui-list-header">Veronika Ossi</a>
-        <sui-list-description>Has not watched anything recently</sui-list-description>
+        <sui-list-description
+          >Has not watched anything recently</sui-list-description
+        >
       </sui-list-content>
     </sui-list-item>
   </sui-list>

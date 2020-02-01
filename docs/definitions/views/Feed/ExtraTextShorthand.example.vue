@@ -9,7 +9,11 @@
 
     <sui-feed-event>
       <sui-feed-label :image="image" />
-      <sui-feed-content :date="date" :summary="summary" :extra-text="extraText" />
+      <sui-feed-content
+        :date="date"
+        :summary="summary"
+        :extra-text="extraText"
+      />
     </sui-feed-event>
 
     <sui-feed-event>

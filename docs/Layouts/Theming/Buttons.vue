@@ -29,12 +29,7 @@
 
         <div is="sui-button-group">
           <button is="sui-button">Combo</button>
-          <div
-            is="sui-dropdown"
-            button
-            floating
-            icon="dropdown"
-          >
+          <div is="sui-dropdown" button floating icon="dropdown">
             <div is="sui-dropdown-menu">
               <div is="sui-dropdown-item">Choice 1</div>
               <div is="sui-dropdown-item">Choice 2</div>
@@ -44,7 +39,7 @@
         </div>
 
         <div class="ui floating search dropdown button">
-          <input class="search" autocomplete="off" tabindex="0">
+          <input class="search" autocomplete="off" tabindex="0" />
           <span class="text">Search Dropdown</span>
           <div class="menu" tabindex="-1">
             <div class="item">Arabic</div>
@@ -114,7 +109,7 @@
 
         <div is="sui-button-group">
           <button is="sui-button">1</button>
-          <div is="sui-button-or"/>
+          <div is="sui-button-or" />
           <button is="sui-button">2</button>
         </div>
 
@@ -131,7 +126,6 @@
           <div is="sui-button">One</div>
           <div is="sui-button">Two</div>
         </div>
-
       </div>
       <div class="column">
         <button is="sui-button" size="mini">Mini</button>
@@ -154,34 +148,25 @@
           <button is="sui-button" color="black">Black</button>
         </div>
 
-
         <div is="sui-divider" />
 
         <div is="sui-segment" inverted>
           <button is="sui-button" inverted>Inverted</button>
           <button is="sui-button" inverted color="basic">Basic</button>
           <button is="sui-button" inverted color="blue">Colored</button>
-          <button
-            is="sui-button"
-            inverted
-            color="blue"
-            basic
-          >
+          <button is="sui-button" inverted color="blue" basic>
             Basic Colored
           </button>
         </div>
-
       </div>
     </div>
-
 
     <div style="clear: both; display: block;"></div>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="css">

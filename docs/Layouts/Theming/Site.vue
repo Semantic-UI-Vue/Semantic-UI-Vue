@@ -7,9 +7,9 @@
       <h4 is="sui-header">Heading 4</h4>
       <h5 is="sui-header">Heading 5</h5>
       <p>
-        Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis
-        natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-        mus. Nullam id dolor id nibh ultricies vehicula.
+        Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Nullam id dolor id nibh ultricies vehicula.
       </p>
     </div>
     <div is="sui-grid-column">
@@ -21,10 +21,19 @@
         montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies
         vehicula.
       </p>
-      <p><small>This line of text is meant to be treated as fine print.</small></p>
-      <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-      <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-      <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+      <p>
+        <small>This line of text is meant to be treated as fine print.</small>
+      </p>
+      <p>
+        The following snippet of text is <strong>rendered as bold text</strong>.
+      </p>
+      <p>
+        The following snippet of text is <em>rendered as italicized text</em>.
+      </p>
+      <p>
+        An abbreviation of the word attribute is
+        <abbr title="attribute">attr</abbr>.
+      </p>
     </div>
     <div is="sui-grid-column">
       <div
@@ -55,8 +64,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="css">

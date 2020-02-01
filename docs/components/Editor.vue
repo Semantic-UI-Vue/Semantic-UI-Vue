@@ -46,12 +46,12 @@ export default {
 
 <style scoped>
 .editor {
-  background: transparent!important;
+  background: transparent !important;
 }
 </style>
 
 <style>
 .ace_active-line {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 </style>

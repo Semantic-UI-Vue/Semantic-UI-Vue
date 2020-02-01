@@ -2,13 +2,13 @@
   <div class="component-body">
     <sui-rail dividing position="right" id="docs-rail">
       <h4 is="sui-header">
-        {{title}}
+        {{ title }}
       </h4>
 
       <sui-accordion vertical fluid text is="sui-menu">
         <sui-menu-item v-for="(element, i) in elements" :key="i">
           <sui-accordion-title is="sui-menu-header" active>
-            {{element.name}}
+            {{ element.name }}
             <sui-icon name="dropdown" />
           </sui-accordion-title>
           <sui-accordion-content is="sui-menu" text class="sub-menu">
@@ -19,7 +19,7 @@
                 :to="`#${getId(element, subElement)}`"
                 :key="j"
               >
-                {{subElement.name}}
+                {{ subElement.name }}
               </router-link>
             </template>
           </sui-accordion-content>
@@ -28,7 +28,7 @@
     </sui-rail>
     <template v-for="element in elements">
       <div :key="element.name">
-        <h2 is="sui-header" dividing>{{element.name}}</h2>
+        <h2 is="sui-header" dividing>{{ element.name }}</h2>
         <template v-for="subElement in element[subElementsKey]">
           <slot
             v-bind:id="getId(element, subElement)"
@@ -50,9 +50,9 @@ export default {
   methods: {
     getId(element, subElement) {
       return `${element.name}-${subElement.name}`;
-    }
+    },
   },
-}
+};
 </script>
 
 <style scoped>

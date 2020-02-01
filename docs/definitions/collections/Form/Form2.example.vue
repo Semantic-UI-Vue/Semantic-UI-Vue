@@ -5,10 +5,18 @@
       <label>Name</label>
       <sui-form-fields fields="two">
         <sui-form-field>
-          <input type="text" name="shipping[first-name]" placeholder="First Name">
+          <input
+            type="text"
+            name="shipping[first-name]"
+            placeholder="First Name"
+          />
         </sui-form-field>
         <sui-form-field>
-          <input type="text" name="shipping[last-name]" placeholder="Last Name">
+          <input
+            type="text"
+            name="shipping[last-name]"
+            placeholder="Last Name"
+          />
         </sui-form-field>
       </sui-form-fields>
     </sui-form-field>
@@ -16,10 +24,14 @@
       <label>Billing Address</label>
       <sui-form-fields>
         <sui-form-field width="twelve">
-          <input type="text" name="shipping[address]" placeholder="Street Address">
+          <input
+            type="text"
+            name="shipping[address]"
+            placeholder="Street Address"
+          />
         </sui-form-field>
         <sui-form-field width="four">
-          <input type="text" name="shipping[address-2]" placeholder="Apt #">
+          <input type="text" name="shipping[address-2]" placeholder="Apt #" />
         </sui-form-field>
       </sui-form-fields>
     </sui-form-field>
@@ -62,16 +74,11 @@
           name="card[number]"
           maxlength="16"
           placeholder="Card #"
-        >
+        />
       </sui-form-field>
       <sui-form-field width="three">
         <label>CVC</label>
-        <input
-          type="text"
-          name="card[cvc]"
-          maxlength="3"
-          placeholder="CVC"
-        >
+        <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC" />
       </sui-form-field>
       <sui-form-field width="six">
         <label>Expiration</label>
@@ -90,7 +97,7 @@
               name="card[expire-year]"
               maxlength="4"
               placeholder="Year"
-            >
+            />
           </sui-form-field>
         </sui-form-fields>
       </sui-form-field>
@@ -153,7 +160,10 @@ export default {
           key: 'Christian',
           text: 'Christian',
           value: 'Christian',
-          image: { avatar: true, src: 'static/images/avatar/small/christian.jpg' },
+          image: {
+            avatar: true,
+            src: 'static/images/avatar/small/christian.jpg',
+          },
         },
         {
           key: 'Matt',
@@ -277,7 +287,12 @@ export default {
         { key: 'ca', value: 'ca', flag: 'ca', text: 'Canada' },
         { key: 'cv', value: 'cv', flag: 'cv', text: 'Cape Verde' },
         { key: 'ky', value: 'ky', flag: 'ky', text: 'Cayman Islands' },
-        { key: 'cf', value: 'cf', flag: 'cf', text: 'Central African Republic' },
+        {
+          key: 'cf',
+          value: 'cf',
+          flag: 'cf',
+          text: 'Central African Republic',
+        },
         { key: 'td', value: 'td', flag: 'td', text: 'Chad' },
         { key: 'cl', value: 'cl', flag: 'cl', text: 'Chile' },
         { key: 'cn', value: 'cn', flag: 'cn', text: 'China' },
@@ -397,7 +412,12 @@ export default {
         { key: 'nu', value: 'nu', flag: 'nu', text: 'Niue' },
         { key: 'nf', value: 'nf', flag: 'nf', text: 'Norfolk Island' },
         { key: 'kp', value: 'kp', flag: 'kp', text: 'North Korea' },
-        { key: 'mp', value: 'mp', flag: 'mp', text: 'Northern Mariana Islands' },
+        {
+          key: 'mp',
+          value: 'mp',
+          flag: 'mp',
+          text: 'Northern Mariana Islands',
+        },
         { key: 'no', value: 'no', flag: 'no', text: 'Norway' },
         { key: 'om', value: 'om', flag: 'om', text: 'Oman' },
         { key: 'pk', value: 'pk', flag: 'pk', text: 'Pakistan' },

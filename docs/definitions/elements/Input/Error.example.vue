@@ -1,5 +1,5 @@
 <template lang="html">
-    <sui-input placeholder="Search..." type="text" :error="hasError"/>
+  <sui-input placeholder="Search..." type="text" :error="hasError" />
 </template>
 
 <script>

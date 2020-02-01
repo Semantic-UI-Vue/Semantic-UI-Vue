@@ -1,8 +1,5 @@
 <template>
-  <img
-    :src="`static/images/wireframes/${name}.png`"
-    alt="paragraph"
-  >
+  <img :src="`static/images/wireframes/${name}.png`" alt="paragraph" />
 </template>
 
 <script>

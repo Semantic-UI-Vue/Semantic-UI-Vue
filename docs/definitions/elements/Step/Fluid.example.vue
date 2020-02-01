@@ -6,12 +6,14 @@
           title="Shipping"
           description="Choose your shipping options"
           icon="plane"
-          completed />
+          completed
+        />
         <sui-step
           active
           title="Billing"
           description="Enter billing information"
-          icon="dollar" />
+          icon="dollar"
+        />
       </sui-step-group>
     </sui-grid-column>
     <sui-grid-column>

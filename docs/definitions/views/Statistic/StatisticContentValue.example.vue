@@ -10,7 +10,7 @@
     </sui-statistic>
     <sui-statistic in-group>
       <sui-statistic-value text>
-        Three<br>
+        Three<br />
         Thousand
       </sui-statistic-value>
       <sui-statistic-label>
@@ -18,16 +18,17 @@
       </sui-statistic-label>
     </sui-statistic>
     <sui-statistic in-group>
-      <sui-statistic-value>
-        <i class="plane icon"></i> 5
-      </sui-statistic-value>
+      <sui-statistic-value> <i class="plane icon"></i> 5 </sui-statistic-value>
       <sui-statistic-label>
         Flights
       </sui-statistic-label>
     </sui-statistic>
     <sui-statistic in-group>
       <sui-statistic-value>
-        <img src="static/images/avatar/small/joe.jpg" class="ui circular inline image">
+        <img
+          src="static/images/avatar/small/joe.jpg"
+          class="ui circular inline image"
+        />
         42
       </sui-statistic-value>
       <sui-statistic-label>

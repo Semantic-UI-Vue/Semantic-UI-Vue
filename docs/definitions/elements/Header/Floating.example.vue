@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'FloatingHeaderExample'
+  name: 'FloatingHeaderExample',
 };
 </script>

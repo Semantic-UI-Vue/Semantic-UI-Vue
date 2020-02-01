@@ -20,15 +20,11 @@ export default {
       const componentName = upperCamelCase(this.componentName);
       const fileName = upperCamelCase(this.fileName);
       console.log(examplesContext.keys()); // eslint-disable-line
-      return `./${this.type}/${componentName}/${fileName}.example.vue`
+      return `./${this.type}/${componentName}/${fileName}.example.vue`;
     },
     component() {
       return examplesContext(this.key).default;
     },
   },
-}
+};
 </script>
-
-<style>
-
-</style>

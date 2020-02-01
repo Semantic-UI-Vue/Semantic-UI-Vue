@@ -1,13 +1,13 @@
 <template>
-  <docs-body :title="title" :elements="subComponents" sub-elements-key="sections">
+  <docs-body
+    :title="title"
+    :elements="subComponents"
+    sub-elements-key="sections"
+  >
     <template v-slot="bindings">
       <template v-if="bindings.element.data">
-        <h4
-          is="sui-header"
-          :id="bindings.id"
-          class="api-h4"
-        >
-          {{bindings.element.name}}
+        <h4 is="sui-header" :id="bindings.id" class="api-h4">
+          {{ bindings.element.name }}
         </h4>
         <api-table
           class="table"
@@ -26,33 +26,34 @@ import ApiTable from './ApiTable.vue';
 
 function getProps(component) {
   const props = component.props;
-  return Object.keys(props)
-    .map(propName => ({
-      name: propName,
-      type: props[propName].type.name,
-      description: props[propName].description,
-      default: props[propName].default,
-    }));
+  return Object.keys(props).map(propName => ({
+    name: propName,
+    type: props[propName].type.name,
+    description: props[propName].description,
+    default: props[propName].default,
+  }));
 }
 
 function getEvents(component) {
   const events = component.meta && component.meta.events;
-  return events ? Object.keys(events)
-    .map(name => ({
-      name,
-      description: events[name].description,
-      value: events[name].value.name,
-    })) : null;
+  return events
+    ? Object.keys(events).map(name => ({
+        name,
+        description: events[name].description,
+        value: events[name].value.name,
+      }))
+    : null;
 }
 
 function getSlots(component) {
   const slots = component.meta && component.meta.slots;
-  return slots ? Object.keys(slots)
-    .map(name => ({
-      name,
-      description: slots[name].description,
-      props: slots.props ? JSON.stringify(slots.props, true, 2) : '',
-    })) : null;
+  return slots
+    ? Object.keys(slots).map(name => ({
+        name,
+        description: slots[name].description,
+        props: slots.props ? JSON.stringify(slots.props, true, 2) : '',
+      }))
+    : null;
 }
 
 export default {
@@ -93,9 +94,10 @@ export default {
     subComponents() {
       return Object.keys(SemanticUIVue)
         .map(componentName => SemanticUIVue[componentName])
-        .filter(Component =>
-          Component.name === this.suiName ||
-          (Component.meta && Component.meta.parent === this.suiName)
+        .filter(
+          Component =>
+            Component.name === this.suiName ||
+            (Component.meta && Component.meta.parent === this.suiName),
         )
         .map(Component => {
           const sections = [];
@@ -134,7 +136,7 @@ export default {
         });
     },
   },
-}
+};
 </script>
 
 <style scoped>

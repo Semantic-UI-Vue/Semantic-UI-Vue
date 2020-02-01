@@ -2,7 +2,7 @@
   <sui-table compact celled definition>
     <sui-table-header full-width>
       <sui-table-row>
-        <sui-table-header-cell/>
+        <sui-table-header-cell />
         <sui-table-header-cell>Name</sui-table-header-cell>
         <sui-table-header-cell>Registration Date</sui-table-header-cell>
         <sui-table-header-cell>E-mail address</sui-table-header-cell>
@@ -12,7 +12,7 @@
     <sui-table-body>
       <sui-table-row>
         <sui-table-cell collapsing>
-          <sui-checkbox toggle/>
+          <sui-checkbox toggle />
         </sui-table-cell>
         <sui-table-cell>John Lilki</sui-table-cell>
         <sui-table-cell>September 14, 2013</sui-table-cell>
@@ -21,7 +21,7 @@
       </sui-table-row>
       <sui-table-row>
         <sui-table-cell class="collapsing">
-          <sui-checkbox toggle/>
+          <sui-checkbox toggle />
         </sui-table-cell>
         <sui-table-cell>Jamie Harington</sui-table-cell>
         <sui-table-cell>January 11, 2014</sui-table-cell>
@@ -30,7 +30,7 @@
       </sui-table-row>
       <sui-table-row>
         <sui-table-cell collapsing>
-          <sui-checkbox toggle/>
+          <sui-checkbox toggle />
         </sui-table-cell>
         <sui-table-cell>Jill Lewis</sui-table-cell>
         <sui-table-cell>May 11, 2014</sui-table-cell>
@@ -40,14 +40,10 @@
     </sui-table-body>
     <sui-table-footer full-width>
       <sui-table-row>
-        <sui-table-header-cell/>
+        <sui-table-header-cell />
         <sui-table-header-cell colspan="4">
-          <sui-button
-            floated="right"
-            size="small"
-            primary
-            labeled>
-            <sui-icon name="user"/> Add User
+          <sui-button floated="right" size="small" primary labeled>
+            <sui-icon name="user" /> Add User
           </sui-button>
           <sui-button size="small">
             Approve

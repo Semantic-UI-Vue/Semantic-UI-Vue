@@ -11,7 +11,9 @@
       <sui-table-row>
         <sui-table-cell>John</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
-        <sui-table-cell title="This is much too long to fit I'm sorry about that">
+        <sui-table-cell
+          title="This is much too long to fit I'm sorry about that"
+        >
           This is much too long to fit I'm sorry about that
         </sui-table-cell>
       </sui-table-row>

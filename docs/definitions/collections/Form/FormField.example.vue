@@ -2,7 +2,7 @@
   <sui-form>
     <sui-form-field>
       <label>User Input</label>
-      <input>
+      <input />
     </sui-form-field>
   </sui-form>
 </template>

@@ -41,6 +41,6 @@
 
 <script>
 export default {
-  name: 'ColoredHeaderExample'
+  name: 'ColoredHeaderExample',
 };
 </script>

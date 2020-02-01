@@ -2,7 +2,8 @@
   <sui-grid>
     <sui-grid-column stretched :width="12">
       <sui-segment>
-        This is an stretched grid column. This segment will always match the tab height
+        This is an stretched grid column. This segment will always match the tab
+        height
       </sui-segment>
     </sui-grid-column>
 

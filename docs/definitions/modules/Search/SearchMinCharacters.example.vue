@@ -1,11 +1,12 @@
 <template lang="html">
-    <div>
-        <sui-search
-                :min-characters="3"
-                placeholder="Search animal..."
-                :source="source"
-                v-model="value"/>
-    </div>
+  <div>
+    <sui-search
+      :min-characters="3"
+      placeholder="Search animal..."
+      :source="source"
+      v-model="value"
+    />
+  </div>
 </template>
 
 <script>
@@ -14,7 +15,12 @@ export default {
   data() {
     return {
       value: null,
-      source: [{ name: 'Horse' }, { name: 'Parrot' }, { name: 'Cat' }, { name: 'Catfish' }],
+      source: [
+        { name: 'Horse' },
+        { name: 'Parrot' },
+        { name: 'Cat' },
+        { name: 'Catfish' },
+      ],
     };
   },
 };

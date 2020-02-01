@@ -17,8 +17,8 @@
       people, such as hunting, herding, pulling loads, protection, assisting
       police and military, companionship, and, more recently, aiding handicapped
       individuals. This impact on human society has given them the nickname
-      "man's best friend" in the Western world. In some cultures, however,
-      dogs are also a source of meat.
+      "man's best friend" in the Western world. In some cultures, however, dogs
+      are also a source of meat.
     </p>
   </sui-container>
 </template>

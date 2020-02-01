@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
-    <sui-icon name="cloud" flipped="horizontally"/>
-    <sui-icon name="cloud" flipped="vertically"/>
+    <sui-icon name="cloud" flipped="horizontally" />
+    <sui-icon name="cloud" flipped="vertically" />
   </div>
 </template>
 

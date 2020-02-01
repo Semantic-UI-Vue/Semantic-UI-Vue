@@ -1,9 +1,9 @@
 <template lang="html">
   <div>
     <sui-button-group size="large">
-      <sui-button content="One"/>
-      <sui-button content="Two"/>
-      <sui-button content="Three"/>
+      <sui-button content="One" />
+      <sui-button content="Two" />
+      <sui-button content="Three" />
     </sui-button-group>
     <sui-divider />
     <sui-button-group icons size="small">
@@ -14,9 +14,9 @@
     </sui-button-group>
     <sui-divider />
     <sui-button-group size="large">
-      <sui-button content="One"/>
+      <sui-button content="One" />
       <sui-button-or />
-      <sui-button content="Two"/>
+      <sui-button content="Two" />
     </sui-button-group>
   </div>
 </template>

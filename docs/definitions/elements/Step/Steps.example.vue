@@ -5,14 +5,19 @@
         <sui-icon name="truck" />
         <sui-step-content>
           <sui-step-title>Shipping</sui-step-title>
-          <sui-step-description>Choose your shipping options</sui-step-description>
+          <sui-step-description
+            >Choose your shipping options</sui-step-description
+          >
         </sui-step-content>
       </sui-step>
 
       <sui-step active>
         <sui-icon name="payment" />
         <!-- Shorthand -->
-        <sui-step-content title="Billing" description="Enter billing information" />
+        <sui-step-content
+          title="Billing"
+          description="Enter billing information"
+        />
       </sui-step>
 
       <sui-step disabled>

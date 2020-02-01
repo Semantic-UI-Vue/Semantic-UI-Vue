@@ -2,10 +2,20 @@
   <div :class="$style.example">
     <sui-menu floated="right" text>
       <sui-popup content="View code" position="bottom center">
-        <sui-menu-item slot="trigger" icon="code" :class="$style.action" @click="open = !open" />
+        <sui-menu-item
+          slot="trigger"
+          icon="code"
+          :class="$style.action"
+          @click="open = !open"
+        />
       </sui-popup>
       <sui-popup content="Open on CodeSandbox" position="bottom center">
-        <sui-menu-item slot="trigger" icon="connectdevelop" :class="$style.action" @click="openSandbox(example.source)" />
+        <sui-menu-item
+          slot="trigger"
+          icon="connectdevelop"
+          :class="$style.action"
+          @click="openSandbox(example.source)"
+        />
       </sui-popup>
       <sui-popup content="Maximize" position="bottom center">
         <sui-menu-item
@@ -18,10 +28,10 @@
       </sui-popup>
     </sui-menu>
     <h4 :v-if="example.name" is="sui-header" :class="$style.h4" :id="id">
-      {{example.name}}
+      {{ example.name }}
     </h4>
     <p :v-if="example.description" :class="$style.p">
-      {{example.description}}
+      {{ example.description }}
     </p>
     <div
       :is="previewContainerComponent"
@@ -78,7 +88,7 @@ export default {
       open(this.maximizeLink, '_blank');
     },
     openSandbox,
-  }
+  },
 };
 </script>
 
@@ -97,7 +107,7 @@ export default {
 }
 
 .action {
-  opacity: .5 !important;
+  opacity: 0.5 !important;
   transition: opacity 0.3s ease-out;
   cursor: pointer;
 }
@@ -124,7 +134,7 @@ export default {
 
 .copy {
   float: right;
-  color: #AAAAAA;
+  color: #aaaaaa;
   margin: 0 !important;
   cursor: pointer;
 }

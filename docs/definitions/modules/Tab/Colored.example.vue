@@ -1,20 +1,14 @@
 <template>
   <div>
     <select v-model="selectedColor">
-      <option
-        v-for="color in colors"
-        :key="color"
-        :value="color"
-      >
+      <option v-for="color in colors" :key="color" :value="color">
         {{ color }}
       </option>
     </select>
 
     <sui-divider hidden />
 
-    <sui-tab
-      :menu="{ color: selectedColor, attached: false, tabular: false }"
-    >
+    <sui-tab :menu="{ color: selectedColor, attached: false, tabular: false }">
       <sui-tab-pane title="Circle" :attached="false">
         Circle
       </sui-tab-pane>
@@ -33,14 +27,7 @@ export default {
   name: 'ColoredExample',
   data: () => ({
     selectedColor: 'blue',
-    colors: [
-      'red',
-      'orange',
-      'yellow',
-      'green',
-      'blue',
-      'purple',
-    ],
+    colors: ['red', 'orange', 'yellow', 'green', 'blue', 'purple'],
   }),
 };
 </script>

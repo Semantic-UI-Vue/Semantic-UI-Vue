@@ -1,11 +1,7 @@
 <template>
   <div>
     <template v-for="user in users">
-      <sui-popup
-        :key="user.name"
-        :content="user.bio"
-        :header="user.name"
-      >
+      <sui-popup :key="user.name" :content="user.bio" :header="user.name">
         <sui-image :src="user.avatar" avatar slot="trigger" />
       </sui-popup>
     </template>

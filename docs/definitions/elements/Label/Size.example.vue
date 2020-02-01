@@ -10,7 +10,16 @@
 export default {
   data() {
     return {
-      sizes: ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive'],
+      sizes: [
+        'mini',
+        'tiny',
+        'small',
+        'medium',
+        'large',
+        'big',
+        'huge',
+        'massive',
+      ],
     };
   },
 };

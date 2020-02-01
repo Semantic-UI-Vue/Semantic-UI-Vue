@@ -10,7 +10,10 @@
       Cats
     </h5>
     <sui-segment attached>
-      <p>Cats are thought of as being related to dogs, but only humans think this.</p>
+      <p>
+        Cats are thought of as being related to dogs, but only humans think
+        this.
+      </p>
     </sui-segment>
     <h5 is="sui-header" attached>
       Lions

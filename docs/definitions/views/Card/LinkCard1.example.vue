@@ -9,7 +9,11 @@
         </sui-card-content>
         <sui-card-content extra>
           <span slot="right">
-            <sui-image src="/static/images/avatar/small/matt.jpg" shape="circular" size="mini" />
+            <sui-image
+              src="/static/images/avatar/small/matt.jpg"
+              shape="circular"
+              size="mini"
+            />
             Matt
           </span>
         </sui-card-content>

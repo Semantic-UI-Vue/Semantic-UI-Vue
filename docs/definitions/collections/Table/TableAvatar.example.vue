@@ -11,7 +11,11 @@
       <sui-table-row>
         <sui-table-cell>
           <h4 is="sui-header" image>
-            <sui-image src="static/images/avatar/small/lena.png" shape="rounded" size="mini" />
+            <sui-image
+              src="static/images/avatar/small/lena.png"
+              shape="rounded"
+              size="mini"
+            />
             <sui-header-content>
               Lena
               <sui-header-subheader>Human Resources</sui-header-subheader>
@@ -25,7 +29,11 @@
       <sui-table-row>
         <sui-table-cell>
           <h4 is="sui-header" image>
-            <sui-image src="static/images/avatar/small/matthew.png" shape="rounded" size="mini" />
+            <sui-image
+              src="static/images/avatar/small/matthew.png"
+              shape="rounded"
+              size="mini"
+            />
             <sui-header-content>
               Matthew
               <sui-header-subheader>Fabric Design</sui-header-subheader>
@@ -39,7 +47,11 @@
       <sui-table-row>
         <sui-table-cell>
           <h4 is="sui-header" image>
-            <sui-image src="static/images/avatar/small/lindsay.png" shape="rounded" size="mini" />
+            <sui-image
+              src="static/images/avatar/small/lindsay.png"
+              shape="rounded"
+              size="mini"
+            />
             <sui-header-content>
               Lindsay
               <sui-header-subheader>Entertainment</sui-header-subheader>
@@ -53,7 +65,11 @@
       <sui-table-row>
         <sui-table-cell>
           <h4 is="sui-header" image>
-            <sui-image src="static/images/avatar/small/mark.png" shape="rounded" size="mini" />
+            <sui-image
+              src="static/images/avatar/small/mark.png"
+              shape="rounded"
+              size="mini"
+            />
             <sui-header-content>
               Mark
               <sui-header-subheader>Executive</sui-header-subheader>

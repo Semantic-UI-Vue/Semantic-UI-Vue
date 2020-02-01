@@ -3,11 +3,11 @@
     <sui-form-fields fields="two">
       <sui-form-field>
         <label>First Name</label>
-        <input placeholder="First Name">
+        <input placeholder="First Name" />
       </sui-form-field>
       <sui-form-field>
         <label>Last Name</label>
-        <input placeholder="Last Name">
+        <input placeholder="Last Name" />
       </sui-form-field>
     </sui-form-fields>
     <sui-button type="submit">Submit</sui-button>

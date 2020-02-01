@@ -2,7 +2,7 @@
   <sui-segment>
     <sui-loader disabled />
     <docs-wireframe name="short-paragraph" />
- </sui-segment>
+  </sui-segment>
 </template>
 
 <script>

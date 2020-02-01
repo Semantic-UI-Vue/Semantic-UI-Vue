@@ -12,8 +12,8 @@
         <sui-table-cell>John</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell>
-          He is a very nice guy and I enjoyed talking to
-          him on the telephone. I hope we get to talk again.
+          He is a very nice guy and I enjoyed talking to him on the telephone. I
+          hope we get to talk again.
         </sui-table-cell>
       </sui-table-row>
       <sui-table-row>

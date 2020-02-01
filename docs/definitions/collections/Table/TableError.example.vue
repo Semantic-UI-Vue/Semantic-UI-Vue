@@ -22,7 +22,7 @@
         <sui-table-cell>Jamie</sui-table-cell>
         <sui-table-cell>Approved</sui-table-cell>
         <sui-table-cell state="error">
-          <sui-icon name="attention"/>
+          <sui-icon name="attention" />
           Classified
         </sui-table-cell>
       </sui-table-row>

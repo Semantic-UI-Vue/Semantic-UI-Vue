@@ -2,7 +2,7 @@
   <div class="ui center aligned basic segment">
     <div class="ui left icon action input">
       <i class="search icon"></i>
-      <input type="text" placeholder="Order #">
+      <input type="text" placeholder="Order #" />
       <div class="ui blue submit button">Search</div>
     </div>
 

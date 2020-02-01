@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'IconHeaderExample'
+  name: 'IconHeaderExample',
 };
 </script>

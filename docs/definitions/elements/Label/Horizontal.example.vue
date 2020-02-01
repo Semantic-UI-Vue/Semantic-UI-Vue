@@ -28,4 +28,3 @@
 <script>
 export default {};
 </script>
-

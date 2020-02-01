@@ -1,8 +1,8 @@
 <template lang="html">
-    <div>
-        <img src="/static/images/logo.png" >
-        <sui-dimmer :active="enable" inverted/>
-    </div>
+  <div>
+    <img src="/static/images/logo.png" />
+    <sui-dimmer :active="enable" inverted />
+  </div>
 </template>
 <script>
 export default {
@@ -15,7 +15,6 @@ export default {
 
 <style lang="css">
 .margin-top {
-    margin-top: 40px;
+  margin-top: 40px;
 }
-
 </style>

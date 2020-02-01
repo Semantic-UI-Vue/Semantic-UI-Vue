@@ -5,7 +5,9 @@
         <sui-card-content>
           <sui-card-header>Elliot Fu</sui-card-header>
           <sui-card-meta>Friend</sui-card-meta>
-          <sui-card-description>Elliot Fu is a film-maker from New York.</sui-card-description>
+          <sui-card-description
+            >Elliot Fu is a film-maker from New York.</sui-card-description
+          >
         </sui-card-content>
       </sui-card>
       <sui-card>
@@ -13,8 +15,8 @@
           <sui-card-header>Veronika Ossi</sui-card-header>
           <sui-card-meta>Friend</sui-card-meta>
           <sui-card-description>
-            Veronika Ossi is a set designer living in New York
-            who enjoys kittens, music, and partying.
+            Veronika Ossi is a set designer living in New York who enjoys
+            kittens, music, and partying.
           </sui-card-description>
         </sui-card-content>
       </sui-card>

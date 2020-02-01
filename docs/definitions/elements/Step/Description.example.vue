@@ -1,9 +1,6 @@
 <template lang="html">
   <sui-step-group>
-    <sui-step
-      title="Shipping"
-      description="Choose your shipping options"
-    />
+    <sui-step title="Shipping" description="Choose your shipping options" />
   </sui-step-group>
 </template>
 

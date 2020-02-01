@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style>
-  .single-example {
-    padding: 20px 0;
-  }
+.single-example {
+  padding: 20px 0;
+}
 </style>

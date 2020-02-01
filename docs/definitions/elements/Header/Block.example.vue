@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'BlockHeaderExample'
+  name: 'BlockHeaderExample',
 };
 </script>

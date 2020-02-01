@@ -4,7 +4,11 @@
     <sui-modal v-model="open">
       <sui-modal-header>Select a Photo</sui-modal-header>
       <sui-modal-content scrolling image>
-        <sui-image wrapped size="medium" src="static/images/avatar/large/rachel.png" />
+        <sui-image
+          wrapped
+          size="medium"
+          src="static/images/avatar/large/rachel.png"
+        />
         <sui-modal-description>
           <sui-header>Default Profile Image</sui-header>
           <template v-for="n in 10">

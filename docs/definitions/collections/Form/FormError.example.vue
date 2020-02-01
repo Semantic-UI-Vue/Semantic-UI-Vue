@@ -2,7 +2,7 @@
   <sui-form error>
     <sui-form-field>
       <label>E-mail</label>
-      <input type="email" placeholder="joe@schmoe.com">
+      <input type="email" placeholder="joe@schmoe.com" />
     </sui-form-field>
     <sui-message error>
       <sui-message-header>Action Forbidden</sui-message-header>

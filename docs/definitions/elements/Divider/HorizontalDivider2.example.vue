@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div is="sui-divider" horizontal>
       <h4 is="sui-header">
         <i class="tag icon"></i>
@@ -9,8 +8,8 @@
     </div>
 
     <p>
-      Doggie treats are good for all times of the year.
-      Proven to be eaten by 99.9% of all dogs worldwide.
+      Doggie treats are good for all times of the year. Proven to be eaten by
+      99.9% of all dogs worldwide.
     </p>
 
     <div is="sui-divider" horizontal>

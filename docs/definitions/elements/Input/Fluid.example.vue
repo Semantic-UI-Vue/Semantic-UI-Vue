@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
-    <sui-input placeholder="Search a very wide input..." icon="search" fluid/>
-    <sui-input placeholder="Search..." fluid/>
+    <sui-input placeholder="Search a very wide input..." icon="search" fluid />
+    <sui-input placeholder="Search..." fluid />
   </div>
 </template>
 

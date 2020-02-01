@@ -20,17 +20,17 @@ export default {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   content: '';
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
-  box-shadow: 0px 0px 0px 1px #DDDDDD inset;
+  box-shadow: 0px 0px 0px 1px #dddddd inset;
 }
 
 .column:after {
-  background-color: rgba(86, 61, 124, .1);
+  background-color: rgba(86, 61, 124, 0.1);
   box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset;
-  content: "";
+  content: '';
   display: block;
   min-height: 50px;
 }

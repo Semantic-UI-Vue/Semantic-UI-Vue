@@ -28,9 +28,7 @@
           </div>
           <div class="event">
             <div class="content">
-              <div class="summary">
-                <a>Helen Troy</a> added two pictures
-              </div>
+              <div class="summary"><a>Helen Troy</a> added two pictures</div>
             </div>
           </div>
         </div>

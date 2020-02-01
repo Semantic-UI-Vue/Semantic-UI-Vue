@@ -1,10 +1,6 @@
 <template lang="html">
   <div>
-    <sui-checkbox
-      toggle
-      label="toggle"
-      disabled
-      v-model="value" />
+    <sui-checkbox toggle label="toggle" disabled v-model="value" />
   </div>
 </template>
 
@@ -17,5 +13,4 @@ export default {
 };
 </script>
 
-<style lang="css">
-</style>
+<style lang="css"></style>

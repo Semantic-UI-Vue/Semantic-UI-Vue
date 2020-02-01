@@ -2,7 +2,7 @@
   <sui-form>
     <sui-form-field required>
       <label>Last name</label>
-      <input type="text" placeholder="Last name">
+      <input type="text" placeholder="Last name" />
     </sui-form-field>
     <sui-form-field required inline>
       <sui-checkbox label="I agree to the Terms and Conditions" />

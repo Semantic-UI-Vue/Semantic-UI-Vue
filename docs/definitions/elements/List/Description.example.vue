@@ -5,7 +5,8 @@
       <sui-list-content>
         <a is="sui-list-header">Krowlewskie Jadlo</a>
         <sui-list-description>
-          An excellent polish restaurant, quick delivery and hearty, filling meals.
+          An excellent polish restaurant, quick delivery and hearty, filling
+          meals.
         </sui-list-description>
       </sui-list-content>
     </sui-list-item>
@@ -14,8 +15,8 @@
       <sui-list-content>
         <a is="sui-list-header">Xian Famous Foods</a>
         <sui-list-description>
-          A taste of Shaanxi"s delicious culinary traditions, with delights like spicy cold noodles
-          and lamb burgers.
+          A taste of Shaanxi"s delicious culinary traditions, with delights like
+          spicy cold noodles and lamb burgers.
         </sui-list-description>
       </sui-list-content>
     </sui-list-item>

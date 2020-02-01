@@ -17,7 +17,7 @@ export default {
   display: block;
 }
 
-.markdown a>img {
+.markdown a > img {
   margin: 0;
   display: inline;
 }

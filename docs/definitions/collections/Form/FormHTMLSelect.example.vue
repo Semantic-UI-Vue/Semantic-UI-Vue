@@ -1,10 +1,7 @@
 <template lang="html">
   <sui-form>
     <sui-form-field>
-      <select
-        v-model="current"
-        placeholder="Gender"
-      >
+      <select v-model="current" placeholder="Gender">
         <option disabled value="">Gender</option>
         <option>Male</option>
         <option>Female</option>
