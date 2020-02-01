@@ -42,7 +42,7 @@ config.module.rules.push(
   {
     test: /\.(png|woff|woff2|eot|ttf|svg)$/,
     loader: 'url-loader?limit=100000',
-  }
+  },
 );
 
 config.plugins.push(
@@ -54,7 +54,7 @@ config.plugins.push(
   new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
     chunkFilename: '[id].css',
-  })
+  }),
 );
 
 module.exports = config;

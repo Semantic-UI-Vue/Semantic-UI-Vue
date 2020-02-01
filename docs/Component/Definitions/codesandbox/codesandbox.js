@@ -14,7 +14,7 @@ export function openSandbox(exampleCode) {
   });
 
   const url = `https://codesandbox.io/api/v1/sandboxes/define?parameters=${parameters}&query=${encodeURIComponent(
-    'module=/Example.vue'
+    'module=/Example.vue',
   )}`;
   open(url);
 }

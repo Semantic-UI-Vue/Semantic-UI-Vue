@@ -8,7 +8,7 @@ describe('Checkbox', () => {
   it('should create a SUI Checkbox with label', () => {
     const checkbox = shallowMount(Checkbox, { propsData: { label: 'check' } });
     expect(checkbox.find('input').element.getAttribute('type')).toEqual(
-      'checkbox'
+      'checkbox',
     );
     expect(checkbox.find('label').element.textContent).toEqual('check');
   });
@@ -26,7 +26,7 @@ describe('Checkbox', () => {
       propsData: { label: 'check', radio: true },
     });
     expect(checkbox.find('input').element.getAttribute('type')).toEqual(
-      'radio'
+      'radio',
     );
     expect(checkbox.find('label').element.textContent).toEqual('check');
   });

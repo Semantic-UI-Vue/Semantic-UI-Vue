@@ -103,7 +103,7 @@ export default {
         attrs: { class: 'v-fragment' },
         directives: [{ name: 'fragment' }],
       },
-      [this.$slots.default]
+      [this.$slots.default],
     );
   },
 };

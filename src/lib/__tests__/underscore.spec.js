@@ -38,7 +38,7 @@ describe('underscore', () => {
     it('should escape a regex', () => {
       const chars = '-/\\^$*+?.()|[]{}';
       expect(_.escapeRegExp(chars)).toEqual(
-        '\\-\\/\\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}'
+        '\\-\\/\\\\\\^\\$\\*\\+\\?\\.\\(\\)\\|\\[\\]\\{\\}',
       );
       expect(Array.from(chars.match(_.escapeRegExp(chars)))).toEqual([chars]);
     });
@@ -52,8 +52,8 @@ describe('underscore', () => {
             fred: { user: 'fred', age: 40 },
             pebbles: { user: 'pebbles', age: 1 },
           },
-          o => o.age
-        )
+          o => o.age,
+        ),
       ).toEqual({
         fred: 40,
         pebbles: 1,

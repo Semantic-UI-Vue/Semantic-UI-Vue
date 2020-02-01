@@ -63,7 +63,7 @@ describe('Embed', () => {
       embed
         .findAll('div')
         .at(1)
-        .classes()
+        .classes(),
     ).toContain('embed');
     expect(embed.contains('iframe')).toEqual(true);
     expect(embed.text()).toEqual('');
@@ -155,7 +155,7 @@ describe('Embed', () => {
     expect(iframe.attributes().frameborder).toEqual('0');
     expect(iframe.attributes().scrolling).toEqual('no');
     expect(iframe.attributes().title).toEqual(
-      'Embedded content from custom host'
+      'Embedded content from custom host',
     );
   });
 
@@ -183,7 +183,7 @@ describe('Embed', () => {
     expect(iframe.attributes().allowfullscreen).toEqual('true');
     expect(iframe.attributes().style).toEqual('padding: 10px;');
     expect(iframe.attributes().title).toEqual(
-      'Embedded content from custom host'
+      'Embedded content from custom host',
     );
   });
 });

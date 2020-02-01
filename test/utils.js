@@ -5,7 +5,7 @@ export function testClass(Component, props) {
     it(`should have class ${prop}`, () => {
       const wrapper = shallowMount(Component);
       expect(wrapper.classes()).toContain(prop);
-    })
+    }),
   );
 }
 
@@ -14,7 +14,7 @@ export function testClassFromProps(Component, props) {
     it(`should have class ${prop}`, () => {
       const wrapper = shallowMount(Component, { propsData: { [prop]: true } });
       expect(wrapper.classes()).toContain(prop);
-    })
+    }),
   );
 }
 
@@ -47,7 +47,7 @@ export function withRequired(Component, props) {
         },
       },
     }),
-    {}
+    {},
   );
 
   return {

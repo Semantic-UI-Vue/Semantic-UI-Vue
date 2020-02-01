@@ -6,7 +6,7 @@ export default function getElementType(defaultEl = 'div') {
 
   const context = this.$vnode.context;
   const entry = Object.entries(context.$options.components || {}).find(
-    ([name]) => kebabCase(name) === tag
+    ([name]) => kebabCase(name) === tag,
   );
 
   if (entry) {
