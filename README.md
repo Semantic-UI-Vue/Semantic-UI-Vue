@@ -1,6 +1,6 @@
 ![Semantic UI Vue](/static/images/logo.png)
 
-[![Build Status](https://travis-ci.org/Semantic-UI-Vue/Semantic-UI-Vue.svg?branch=master)](https://travis-ci.org/Semantic-UI-Vue/Semantic-UI-Vue)
+![.github/workflows/build.yml](https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/workflows/.github/workflows/build.yml/badge.svg)
 [![codecov](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue/branch/master/graph/badge.svg)](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue)
 [![Join the chat at https://gitter.im/Semantic-UI-Vue/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Semantic-UI-Vue/Lobby)
 
