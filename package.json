@@ -76,7 +76,9 @@
       ".*\\.(vue)$": "vue-jest",
       "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
     },
-    "setupFiles": ["<rootDir>/.jest/registerContext.js"]
+    "setupFiles": [
+      "<rootDir>/.jest/registerContext.js"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
