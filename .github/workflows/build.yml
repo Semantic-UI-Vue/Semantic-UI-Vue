@@ -34,6 +34,7 @@ jobs:
           git config --global user.email "mariolamacchia@gmail.com"
           git config --global user.name "Semantic UI Vue CI"
           git remote add origin git@github.com:mariolamacchia/test.git
+          git add -A
           git commit -m "Generate docs"
         # if: "github.ref == 'refs/heads/master'"
       - name: Deploy docs
