@@ -16,6 +16,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: yarn run lint
+      - run: yarn test
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -24,9 +27,6 @@ jobs:
           # name: codecov-umbrella #optional
           # yml: ./codecov.yml #optional
           fail_ci_if_error: true
-      - run: yarn install
-      - run: yarn run lint
-      - run: yarn test
       - run: yarn run build
         env:
           CI: true
