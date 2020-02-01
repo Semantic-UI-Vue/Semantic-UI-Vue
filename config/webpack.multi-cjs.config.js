@@ -1,13 +1,13 @@
-const path = require("path");
-const config = require("./webpack.base.config");
-const { transformFileName,getMultipleEntries } = require("./configUtils");
+const path = require('path');
+const config = require('./webpack.base.config');
+const { transformFileName, getMultipleEntries } = require('./configUtils');
 
 config.entry = getMultipleEntries();
 config.output = {
-  path: path.resolve(__dirname, "../dist/commonjs"),
-  publicPath: "/",
+  path: path.resolve(__dirname, '../dist/commonjs'),
+  publicPath: '/',
   filename: transformFileName,
-  libraryTarget: "commonjs"
+  libraryTarget: 'commonjs2',
 };
 
 module.exports = config;

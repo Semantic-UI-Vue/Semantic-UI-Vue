@@ -11,16 +11,10 @@ const allComponents = {
   ...views,
 };
 
-const SemanticUIVue = (Vue) => {
-  Object.values(allComponents)
-    .forEach(Comp => Vue.component(Comp.name, Comp));
-
+const SemanticUIVue = Vue => {
+  Object.values(allComponents).forEach(Comp => Vue.component(Comp.name, Comp));
   Object.values(directives).forEach(directive => Vue.directive(directive.name, directive));
 };
-
-Object.keys(allComponents).forEach(key => {
-  SemanticUIVue[key] = allComponents[key];
-});
 
 export default SemanticUIVue;
 export * from './collections';
