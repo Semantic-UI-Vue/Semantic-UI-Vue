@@ -12,23 +12,23 @@ jobs:
           node-version: 12.x
           registry-url: https://registry.npmjs.org/
       - run: yarn install
-      # - run: yarn run lint
-      # - run: yarn test
-      # - uses: codecov/codecov-action@v1
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     file: ./coverage/clover.xml
-      #     fail_ci_if_error: true
+      - run: yarn run lint
+      - run: yarn test
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/clover.xml
+          fail_ci_if_error: true
       - name: Build Documentation
         run: yarn run build:docs
         env:
           NODE_ENV: production
-      # - name: Build library
-      #   run: yarn run build:lib
-      #   env:
-      #     NODE_ENV: production
+      - name: Build library
+        run: yarn run build:lib
+        env:
+          NODE_ENV: production
       - name: Deploy docs
-        # if: "github.ref == 'refs/heads/master'"
+        if: "github.ref == 'refs/heads/master'"
         run: |
           cd dist/docs
           git init
