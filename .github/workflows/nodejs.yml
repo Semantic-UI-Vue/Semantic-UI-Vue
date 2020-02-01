@@ -26,12 +26,12 @@ jobs:
   deploy:
     needs: build
     if: github.ref == 'refs/heads/master'
-    steps:
-      - name: Deploy docs
-        uses: maxheld83/ghpages@v0.2.1
-        env:
-          BUILD_DIR: 'dist/docs/'
-        secrets: ['GH_PAT']
+    - name: Deploy docs
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: dist/docs # The folder the action should deploy.
 
   release:
     needs: build
