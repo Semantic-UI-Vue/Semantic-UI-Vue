@@ -646,14 +646,19 @@ export default {
   },
   render() {
     const ElementType = this.getElementType('div');
+    const isNativeElement =
+      typeof ElementType === 'string' && !ElementType.includes('-');
 
     const eventHandlers = {
-      '!mousedown': this.handleMouseDown,
-      click: this.handleClick,
-      '!focus': this.handleFocus,
-      '!blur': this.handleBlur,
-      '!keydown': this.handleKeyDown,
+      [isNativeElement ? 'on' : 'nativeOn']: {
+        '!mousedown': this.handleMouseDown,
+        click: this.handleClick,
+        '!focus': this.handleFocus,
+        '!blur': this.handleBlur,
+        '!keydown': this.handleKeyDown,
+      },
     };
+
     return (
       <ElementType
         role="listbox"
@@ -678,10 +683,7 @@ export default {
           !this.downward && directions.upward,
           'dropdown',
         )}
-        {...{
-          on: eventHandlers,
-          nativeOn: eventHandlers,
-        }}
+        {...eventHandlers}
       >
         {this.selectedNodes}
         {this.searchNode}
