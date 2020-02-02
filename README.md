@@ -1,4 +1,4 @@
-![Semantic UI Vue](/static/images/logo.png)
+![Semantic UI Vue](/docs/public/static/images/logo.png)
 
 ![.github/workflows/build.yml](https://github.com/Semantic-UI-Vue/Semantic-UI-Vue/workflows/.github/workflows/build.yml/badge.svg)
 [![codecov](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue/branch/master/graph/badge.svg)](https://codecov.io/gh/Semantic-UI-Vue/Semantic-UI-Vue)
