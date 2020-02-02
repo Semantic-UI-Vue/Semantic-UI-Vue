@@ -118,7 +118,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cache node_modules
+      - name: Restore node_modules
         uses: actions/cache@v1
         with:
           path: node_modules/
@@ -138,6 +138,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Restore node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
       - name: Restore dist
         uses: actions/cache@v1
         with:
