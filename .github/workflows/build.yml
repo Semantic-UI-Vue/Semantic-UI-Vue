@@ -25,8 +25,8 @@ jobs:
         with:
           path: node_modules/
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install dependencies
-        run: yarn install
+      # - name: Install dependencies
+      #   run: yarn install
       # - name: Run linter
       #   run: yarn run lint
       # - name: Run unit tests
@@ -41,10 +41,10 @@ jobs:
       #   run: yarn run build:docs
       #   env:
       #     NODE_ENV: production
-      # - name: Build library
-      #   run: yarn run build:lib
-      #   env:
-      #     NODE_ENV: production
+      - name: Build library
+        run: yarn run build:lib
+        env:
+          NODE_ENV: production
       # - name: Deploy docs
       #   if: "github.ref == 'refs/heads/master'"
       #   run: |
