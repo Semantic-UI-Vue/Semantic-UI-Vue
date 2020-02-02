@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cache node_modules
+      - name: Restore node_modules
         uses: actions/cache@v1
         with:
           path: node_modules/
@@ -50,7 +50,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cache node_modules
+      - name: Restore node_modules
         uses: actions/cache@v1
         with:
           path: node_modules/
@@ -70,12 +70,14 @@ jobs:
     env:
       NODE_ENV: production
     steps:
-      - name: Cache node_modules
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Restore node_modules
         uses: actions/cache@v1
         with:
           path: node_modules/
           key: ${{ runner.os }}-node_modules-${{ github.sha }}
-      - name: Cache docs
+      - name: Cache built docs
         uses: actions/cache@v1
         with:
           path: dist/docs/
@@ -83,12 +85,40 @@ jobs:
       - name: Build Documentation
         run: yarn run build:docs
 
+  deploy-docs:
+    runs-on: ubuntu-latest
+    needs: build-docs
+    # if: "github.ref == 'refs/heads/master'"
+    steps:
+      - name: Restore built docs
+        uses: actions/cache@v1
+        with:
+          path: dist/docs/
+          key: ${{ runner.os }}-docs-${{ github.sha }}
+      - name: Setup git
+        run: |
+          git config --global user.email "mariolamacchia@gmail.com"
+          git config --global user.name "Semantic UI Vue CI"
+      - name: Deploy docs
+        run: |
+          cd dist/docs
+          git init
+          git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
+          git add -A
+          git commit -m "Generate docs"
+          git push -f origin master
+        env:
+          # REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
+          REPOSITORY: mariolamacchia/test
+
   build-lib:
     runs-on: ubuntu-latest
     needs: [lint, test]
     env:
       NODE_ENV: production
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Cache node_modules
         uses: actions/cache@v1
         with:
@@ -101,44 +131,3 @@ jobs:
           key: ${{ runner.os }}-dist-${{ github.sha }}
       - name: Build library
         run: yarn run build:lib
-  # deploy-docs:
-  #   runs-on: ubuntu-latest
-  #   needs: build-docs
-  #   if: "github.ref == 'refs/heads/master'"
-  #   steps:
-  #     - name: Setup git
-  #       run: |
-  #         git config --global user.email "mariolamacchia@gmail.com"
-  #         git config --global user.name "Semantic UI Vue CI"
-  #     - name: Setup Node
-  #     uses: actions/setup-node@v1
-  #     with:
-  #       node-version: 12.x
-  #       registry-url: https://registry.npmjs.org/
-  # - name: Setup git
-  #   run: |
-  #     git config --global user.email "mariolamacchia@gmail.com"
-  #     git config --global user.name "Semantic UI Vue CI"
-  # # - name: Deploy docs
-  # #   run: |
-  # #     cd dist/docs
-  # #     git init
-  # #     git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
-  # #     git add -A
-  # #     git commit -m "Generate docs"
-  # #     git push -f origin master
-  # #   env:
-  # #     REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
-  # # - name: Release version on npm
-  # #   if: "startsWith(github.ref, 'refs/tags/v')"
-  # #   run: npm publish
-  # #   env:
-  # #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  # # - name: Release version on github
-  # #   if: "startsWith(github.ref, 'refs/tags/v')"
-  # #   uses: actions/create-release@v1
-  # #   env:
-  # #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  # #   with:
-  # #     tag_name: ${{ github.ref }}
-  # #     release_name: Release ${{ github.ref }}
