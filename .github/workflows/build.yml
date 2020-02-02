@@ -2,8 +2,11 @@ name: Build and Deploy
 
 on: [push]
 
+env:
+  NODE_VERSION: 12.x
+
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -11,61 +14,126 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-          registry-url: https://registry.npmjs.org/
-      - name: Setup git
-        run: |
-          git config --global user.email "mariolamacchia@gmail.com"
-          git config --global user.name "Semantic UI Vue CI"
-      # - name: Get yarn cache
-      #   id: yarn-cache
-      #   run: echo "::set-output name=dir::$(yarn cache dir)"
+          node-version: $NODE_VERSION
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache yarn
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
       - name: Cache node_modules
         uses: actions/cache@v1
         with:
           path: node_modules/
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
-      # - name: Install dependencies
-      #   run: yarn install
-      # - name: Run linter
-      #   run: yarn run lint
-      # - name: Run unit tests
-      #   run: yarn test
-      # - name: Upload code coverage
-      #   uses: codecov/codecov-action@v1
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     file: ./coverage/clover.xml
-      #     fail_ci_if_error: true
-      # - name: Build Documentation
-      #   run: yarn run build:docs
-      #   env:
-      #     NODE_ENV: production
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Install dependencies
+        run: yarn install
+
+  lint:
+    needs: install
+    steps:
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Run linter
+        run: yarn run lint
+
+  test:
+    needs: install
+    steps:
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Run unit tests
+        run: yarn test
+      - name: Upload code coverage
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/clover.xml
+          fail_ci_if_error: true
+
+  build-docs:
+    needs: [lint, test]
+    env:
+      NODE_ENV: production
+    steps:
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Cache docs
+        uses: actions/cache@v1
+        with:
+          path: dist/docs/
+          key: ${{ runner.os }}-docs-${{ github.sha }}
+      - name: Build Documentation
+        run: yarn run build:docs
+
+  build-lib:
+    needs: [lint, test]
+    env:
+      NODE_ENV: production
+    steps:
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Cache docs
+        uses: actions/cache@v1
+        with:
+          path: dist/
+          key: ${{ runner.os }}-dist-${{ github.sha }}
       - name: Build library
         run: yarn run build:lib
-        env:
-          NODE_ENV: production
-      # - name: Deploy docs
-      #   if: "github.ref == 'refs/heads/master'"
-      #   run: |
-      #     cd dist/docs
-      #     git init
-      #     git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
-      #     git add -A
-      #     git commit -m "Generate docs"
-      #     git push -f origin master
-      #   env:
-      #     REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
-      # - name: Release version on npm
-      #   if: "startsWith(github.ref, 'refs/tags/v')"
-      #   run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      # - name: Release version on github
-      #   if: "startsWith(github.ref, 'refs/tags/v')"
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: Release ${{ github.ref }}
+
+  deploy-docs:
+    needs: build-docs
+    if: "github.ref == 'refs/heads/master'"
+    steps:
+      - name: Setup git
+        run: |
+          git config --global user.email "mariolamacchia@gmail.com"
+          git config --global user.name "Semantic UI Vue CI"
+    #     - name: Setup Node
+    #     uses: actions/setup-node@v1
+    #     with:
+    #       node-version: 12.x
+    #       registry-url: https://registry.npmjs.org/
+    # - name: Setup git
+    #   run: |
+    #     git config --global user.email "mariolamacchia@gmail.com"
+    #     git config --global user.name "Semantic UI Vue CI"
+    # # - name: Deploy docs
+    # #   run: |
+    # #     cd dist/docs
+    # #     git init
+    # #     git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
+    # #     git add -A
+    # #     git commit -m "Generate docs"
+    # #     git push -f origin master
+    # #   env:
+    # #     REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
+    # # - name: Release version on npm
+    # #   if: "startsWith(github.ref, 'refs/tags/v')"
+    # #   run: npm publish
+    # #   env:
+    # #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+    # # - name: Release version on github
+    # #   if: "startsWith(github.ref, 'refs/tags/v')"
+    # #   uses: actions/create-release@v1
+    # #   env:
+    # #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # #   with:
+    # #     tag_name: ${{ github.ref }}
+    # #     release_name: Release ${{ github.ref }}
