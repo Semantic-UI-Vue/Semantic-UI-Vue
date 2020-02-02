@@ -150,3 +150,6 @@ jobs:
           key: ${{ runner.os }}-dist-${{ github.sha }}
       - name: Release
         run: yarn run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_USER }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
