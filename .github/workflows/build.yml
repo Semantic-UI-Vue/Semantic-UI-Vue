@@ -52,7 +52,7 @@ jobs:
         run: |
           cd dist/docs
           git init
-          git remote add origin https://${{ secrets.GITHUB_TOKEN }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
+          git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GITHUB_TOKEN }}@github.com/$REPOSITORY.git
           git add -A
           git commit -m "Generate docs"
           git push -f origin master
