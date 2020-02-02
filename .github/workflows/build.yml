@@ -88,7 +88,7 @@ jobs:
   deploy-docs:
     runs-on: ubuntu-latest
     needs: build-docs
-    # if: "github.ref == 'refs/heads/master'"
+    if: "github.ref == 'refs/heads/master'"
     steps:
       - name: Restore built docs
         uses: actions/cache@v1
@@ -108,8 +108,7 @@ jobs:
           git commit -m "Generate docs"
           git push -f origin master
         env:
-          # REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
-          REPOSITORY: mariolamacchia/test
+          REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
 
   build-lib:
     runs-on: ubuntu-latest
@@ -124,10 +123,25 @@ jobs:
         with:
           path: node_modules/
           key: ${{ runner.os }}-node_modules-${{ github.sha }}
-      - name: Cache docs
+      - name: Cache dist
         uses: actions/cache@v1
         with:
           path: dist/
           key: ${{ runner.os }}-dist-${{ github.sha }}
       - name: Build library
         run: yarn run build:lib
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build-lib
+    if: "github.ref == 'refs/heads/master'"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Restore dist
+        uses: actions/cache@v1
+        with:
+          path: dist/
+          key: ${{ runner.os }}-dist-${{ github.sha }}
+      - name: Release
+        run: yarn run semantic-release

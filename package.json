@@ -29,7 +29,8 @@
     "lint": "yarn run eslint && yarn run prettier",
     "report-coverage": "codecov",
     "test:update": "jest --update-snapshot docs/__tests__/docs.spec.js",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "prettier": {
     "singleQuote": true,
@@ -122,6 +123,7 @@
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.10.1",
+    "semantic-release": "^17.0.2"
   }
 }
