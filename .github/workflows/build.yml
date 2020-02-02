@@ -33,7 +33,7 @@ jobs:
         run: yarn run lint
       - name: Run unit tests
         run: yarn test
-      - name: Upload code
+      - name: Upload code coverage
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -48,7 +48,7 @@ jobs:
         env:
           NODE_ENV: production
       - name: Deploy docs
-        # if: "github.ref == 'refs/heads/master'"
+        if: "github.ref == 'refs/heads/master'"
         run: |
           cd dist/docs
           git init
@@ -57,8 +57,7 @@ jobs:
           git commit -m "Generate docs"
           git push -f origin master
         env:
-          # REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
-          REPOSITORY: mariolamacchia/test
+          REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
       - name: Release version on npm
         if: "startsWith(github.ref, 'refs/tags/v')"
         run: npm publish
