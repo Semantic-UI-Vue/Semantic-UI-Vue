@@ -1,9 +1,19 @@
 <template>
-  <docs-body :title="title" :elements="subComponents" sub-elements-key="sections">
+  <docs-body
+    :title="title"
+    :elements="subComponents"
+    sub-elements-key="sections"
+  >
     <template v-slot="bindings">
       <template v-if="bindings.element.data">
-        <h4 is="sui-header" :id="bindings.id" class="api-h4">{{ bindings.element.name }}</h4>
-        <api-table class="table" :fields="bindings.element.fields" :data="bindings.element.data" />
+        <h4 is="sui-header" :id="bindings.id" class="api-h4">
+          {{ bindings.element.name }}
+        </h4>
+        <api-table
+          class="table"
+          :fields="bindings.element.fields"
+          :data="bindings.element.data"
+        />
       </template>
     </template>
   </docs-body>
