@@ -105,7 +105,7 @@ export default {
     events: {
       click: {
         description: 'Click event passed to the button.',
-        value: Event,
+        value: 'Event',
       },
     },
     slots: {
