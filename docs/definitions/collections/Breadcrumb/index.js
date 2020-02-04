@@ -37,4 +37,14 @@ export default [
       },
     ],
   },
+  {
+    name: 'Variations',
+    examples: [
+      {
+        name: 'Size',
+        description: 'A breadcrumb can vary in size',
+        file: 'Size',
+      },
+    ],
+  },
 ];
