@@ -68,6 +68,35 @@ exports[`Examples ./collections/Breadcrumb/Section.example.vue should match snap
 </div>"
 `;
 
+exports[`Examples ./collections/Breadcrumb/Size.example.vue should match snapshot 1`] = `
+"<div>
+  <div class=\\"ui mini breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+  <div class=\\"ui tiny breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+  <div class=\\"ui small breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+  <div class=\\"ui medium breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+  <div class=\\"ui large breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+  <div class=\\"ui big breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+  <div class=\\"ui huge breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+  <div class=\\"ui massive breadcrumb\\"><a class=\\"link section\\">Home</a> <i class=\\"right chevron icon divider\\"></i> <a class=\\"link section\\">Registration</a> <i class=\\"right chevron icon divider\\"></i>
+    <div class=\\"active section\\">Personal Information</div>
+  </div>
+</div>"
+`;
+
 exports[`Examples ./collections/Form/FieldInline.example.vue should match snapshot 1`] = `
 "<form class=\\"ui form\\">
   <div class=\\"inline field\\"><label>First Name</label> <input type=\\"text\\" placeholder=\\"First Name\\"></div>
@@ -7574,6 +7603,66 @@ exports[`Examples ./modules/Search/SearchStandard.example.vue should match snaps
 </div>"
 `;
 
+exports[`Examples ./modules/Sidebar/Sidebar.example.vue should match snapshot 1`] = `
+"<div>
+  <div class=\\"ui segment\\">
+    <div class=\\"ui checkbox\\"><input readonly=\\"readonly\\" tabindex=\\"0\\" type=\\"checkbox\\" class=\\"hidden\\"><label>visible</label></div>
+  </div>
+  <div class=\\"pushable\\">
+    <div class=\\"ui vertical labeled icon inverted menu ui sidebar left thin overlay\\" icon=\\"labeled\\" inverted=\\"\\" vertical=\\"\\">
+      <div class=\\"item\\" to=\\"/\\"><i class=\\"home icon\\"></i> Home </div>
+      <div class=\\"item\\" to=\\"/\\"><i class=\\"gamepad icon\\"></i> Games
+      </div>
+      <div class=\\"item\\" to=\\"/\\"><i class=\\"camera icon\\"></i> Channels
+      </div>
+    </div>
+    <div class=\\"pusher\\">
+      <div class=\\"ui segment\\">
+        <h3 class=\\"ui header\\">Application Content</h3> <img src=\\"static/images/wireframes/paragraph.png\\" alt=\\"paragraph\\">
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Examples ./modules/Sidebar/SidebarDimmed.example.vue should match snapshot 1`] = `
+"<div>
+  <div class=\\"ui segment\\">
+    <div class=\\"ui checkbox\\"><input readonly=\\"readonly\\" tabindex=\\"0\\" type=\\"checkbox\\" class=\\"hidden\\"><label>visible</label></div>
+  </div>
+  <div class=\\"pushable\\">
+    <div class=\\"ui vertical labeled icon inverted menu ui sidebar left thin overlay\\" icon=\\"labeled\\" inverted=\\"\\" vertical=\\"\\">
+      <div class=\\"item\\" to=\\"/\\"><i class=\\"home icon\\"></i> Home </div>
+      <div class=\\"item\\" to=\\"/\\"><i class=\\"gamepad icon\\"></i> Games
+      </div>
+      <div class=\\"item\\" to=\\"/\\"><i class=\\"camera icon\\"></i> Channels
+      </div>
+    </div>
+    <div class=\\"pusher\\">
+      <div class=\\"ui segment\\">
+        <h3 class=\\"ui header\\">Application Content</h3> <img src=\\"static/images/wireframes/paragraph.png\\" alt=\\"paragraph\\">
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Examples ./modules/Sidebar/SidebarVisible.example.vue should match snapshot 1`] = `
+"<div class=\\"pushable\\">
+  <div class=\\"ui vertical labeled icon inverted menu ui sidebar left thin overlay visible\\" icon=\\"labeled\\" inverted=\\"\\" vertical=\\"\\">
+    <div class=\\"item\\" to=\\"/\\"><i class=\\"home icon\\"></i> Home </div>
+    <div class=\\"item\\" to=\\"/\\"><i class=\\"gamepad icon\\"></i> Games </div>
+    <div class=\\"item\\" to=\\"/\\"><i class=\\"camera icon\\"></i> Channels
+    </div>
+  </div>
+  <div class=\\"pusher\\">
+    <div class=\\"ui segment\\">
+      <h3 class=\\"ui header\\">Application Content</h3> <img src=\\"static/images/wireframes/paragraph.png\\" alt=\\"paragraph\\">
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Examples ./modules/Tab/ActiveIndex.example.vue should match snapshot 1`] = `
 "<div>
   <p>Active Index 1</p> <input type=\\"range\\" max=\\"2\\">
@@ -8539,7 +8628,7 @@ exports[`Examples ./views/Card/TextAlignmentCard.example.vue should match snapsh
 `;
 
 exports[`Examples ./views/Comment/Comment.example.vue should match snapshot 1`] = `
-"<div class=\\"ui comments\\">
+"<div class=\\"comments ui\\">
   <h3 class=\\"ui dividing header\\">Comments</h3>
   <div class=\\"ui comment\\">
     <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/matt.jpg\\"></div>
@@ -8562,7 +8651,7 @@ exports[`Examples ./views/Comment/Comment.example.vue should match snapshot 1`] 
       </div>
       <div class=\\"actions\\"><a>Reply</a></div>
     </div>
-    <div class=\\"ui comments\\">
+    <div class=\\"comments\\">
       <div class=\\"ui comment\\">
         <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/jenny.jpg\\"></div>
         <div class=\\"content\\"><a class=\\"author\\">Jenny Hess</a>
@@ -8590,6 +8679,171 @@ exports[`Examples ./views/Comment/Comment.example.vue should match snapshot 1`] 
     </div>
   </div>
   <form reply=\\"\\"><button role=\\"button\\" class=\\"ui icon left labeled primary button\\"><i class=\\"edit icon\\"></i>Add Reply</button></form>
+</div>"
+`;
+
+exports[`Examples ./views/Comment/Minimal.example.vue should match snapshot 1`] = `
+"<div class=\\"comments minimal ui\\">
+  <h3 class=\\"ui dividing header\\">Comments</h3>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/matt.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Matt</a>
+      <div class=\\"metadata\\">
+        <div>Today at 5:42PM</div>
+      </div>
+      <div class=\\"text\\">How artistic!</div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+  </div>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/elliot.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Elliot Fu</a>
+      <div class=\\"metadata\\">
+        <div>Yesterday at 12:30AM</div>
+      </div>
+      <div class=\\"text\\">
+        <p>This has been very useful for my research. Thanks as well!</p>
+      </div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+    <div class=\\"comments\\">
+      <div class=\\"ui comment\\">
+        <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/jenny.jpg\\"></div>
+        <div class=\\"content\\"><a class=\\"author\\">Jenny Hess</a>
+          <div class=\\"metadata\\">
+            <div>Just now</div>
+          </div>
+          <div class=\\"text\\">
+            Elliot you are always so right :)
+          </div>
+          <div class=\\"actions\\"><a>Reply</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/joe.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Joe Henderson</a>
+      <div class=\\"metadata\\">
+        <div>5 days ago</div>
+      </div>
+      <div class=\\"text\\">
+        Dude, this is awesome. Thanks so much
+      </div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+  </div>
+  <form class=\\"ui form\\" reply=\\"\\"><textarea></textarea> <button role=\\"button\\" class=\\"ui icon left labeled primary button\\"><i class=\\"edit icon\\"></i>Add Reply</button></form>
+</div>"
+`;
+
+exports[`Examples ./views/Comment/Size.example.vue should match snapshot 1`] = `
+"<div class=\\"comments threaded massive ui\\">
+  <h3 class=\\"ui dividing header\\">Comments</h3>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/matt.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Matt</a>
+      <div class=\\"metadata\\">
+        <div>Today at 5:42PM</div>
+      </div>
+      <div class=\\"text\\">How artistic!</div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+  </div>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/elliot.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Elliot Fu</a>
+      <div class=\\"metadata\\">
+        <div>Yesterday at 12:30AM</div>
+      </div>
+      <div class=\\"text\\">
+        <p>This has been very useful for my research. Thanks as well!</p>
+      </div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+    <div class=\\"comments\\">
+      <div class=\\"ui comment\\">
+        <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/jenny.jpg\\"></div>
+        <div class=\\"content\\"><a class=\\"author\\">Jenny Hess</a>
+          <div class=\\"metadata\\">
+            <div>Just now</div>
+          </div>
+          <div class=\\"text\\">
+            Elliot you are always so right :)
+          </div>
+          <div class=\\"actions\\"><a>Reply</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/joe.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Joe Henderson</a>
+      <div class=\\"metadata\\">
+        <div>5 days ago</div>
+      </div>
+      <div class=\\"text\\">
+        Dude, this is awesome. Thanks so much
+      </div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+  </div>
+  <form class=\\"ui form\\" reply=\\"\\"><textarea></textarea> <button role=\\"button\\" class=\\"ui icon left labeled primary button\\"><i class=\\"edit icon\\"></i>Add Reply</button></form>
+</div>"
+`;
+
+exports[`Examples ./views/Comment/Threaded.example.vue should match snapshot 1`] = `
+"<div class=\\"comments threaded ui\\">
+  <h3 class=\\"ui dividing header\\">Comments</h3>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/matt.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Matt</a>
+      <div class=\\"metadata\\">
+        <div>Today at 5:42PM</div>
+      </div>
+      <div class=\\"text\\">How artistic!</div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+  </div>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/elliot.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Elliot Fu</a>
+      <div class=\\"metadata\\">
+        <div>Yesterday at 12:30AM</div>
+      </div>
+      <div class=\\"text\\">
+        <p>This has been very useful for my research. Thanks as well!</p>
+      </div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+    <div class=\\"comments\\">
+      <div class=\\"ui comment\\">
+        <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/jenny.jpg\\"></div>
+        <div class=\\"content\\"><a class=\\"author\\">Jenny Hess</a>
+          <div class=\\"metadata\\">
+            <div>Just now</div>
+          </div>
+          <div class=\\"text\\">
+            Elliot you are always so right :)
+          </div>
+          <div class=\\"actions\\"><a>Reply</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/joe.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Joe Henderson</a>
+      <div class=\\"metadata\\">
+        <div>5 days ago</div>
+      </div>
+      <div class=\\"text\\">
+        Dude, this is awesome. Thanks so much
+      </div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+  </div>
+  <form class=\\"ui form\\" reply=\\"\\"><textarea></textarea> <button role=\\"button\\" class=\\"ui icon left labeled primary button\\"><i class=\\"edit icon\\"></i>Add Reply</button></form>
 </div>"
 `;
 
