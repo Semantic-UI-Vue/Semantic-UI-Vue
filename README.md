@@ -26,7 +26,6 @@
 
 There is a lot to do and few maintainers with little time :). If you'd like to help with this project, please let us know.
 
-
 Semantic UI Vue is the Vue integration for <a src="https://semantic-ui.com/">Semantic UI</a>. It is highly inspired on <a src="https://react.semantic-ui.com">Semantic UI React</a>
 If you have used it already, you will find Semantic UI Vue's API to be almost the same. Semantic UI Vue is still **under heavy development**. Please, feel free to contribute. You can see the feature completion state [here](https://semantic-ui-vue.github.io/#/features)
 
@@ -109,7 +108,7 @@ This is the quickest way to get started with Semantic UI Vue. You **won't be abl
   rel="stylesheet"
   href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
 />
-````
+```
 
 #### Semantic UI CSS package
 
