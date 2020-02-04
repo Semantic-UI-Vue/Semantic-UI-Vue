@@ -13,15 +13,13 @@
         inverted
         vertical
       >
-        <router-link is="sui-menu-item" to="/">
-          <sui-icon name="home" /> Home
-        </router-link>
-        <router-link is="sui-menu-item" to="/">
+        <sui-menu-item to="/"> <sui-icon name="home" /> Home </sui-menu-item>
+        <sui-menu-item to="/">
           <sui-icon name="gamepad" /> Games
-        </router-link>
-        <router-link is="sui-menu-item" to="/">
+        </sui-menu-item>
+        <sui-menu-item to="/">
           <sui-icon name="camera" /> Channels
-        </router-link>
+        </sui-menu-item>
       </sui-menu>
       <sui-sidebar-pusher>
         <sui-segment>
