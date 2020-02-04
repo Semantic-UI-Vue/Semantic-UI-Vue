@@ -3481,7 +3481,7 @@ exports[`Examples ./elements/Button/Fluid.example.vue should match snapshot 1`] 
 
 exports[`Examples ./elements/Button/Group.example.vue should match snapshot 1`] = `"<div class=\\"ui buttons\\"><button role=\\"button\\" class=\\"ui button\\">One</button> <button role=\\"button\\" class=\\"ui button\\">Two</button> <button role=\\"button\\" class=\\"ui button\\">Three</button></div>"`;
 
-exports[`Examples ./elements/Button/Icon.example.vue should match snapshot 1`] = `"<div><button role=\\"button\\" class=\\"ui icon button\\"><i class=\\"cloud icon\\"></i></button></div>"`;
+exports[`Examples ./elements/Button/Icon.example.vue should match snapshot 1`] = `"<div><button role=\\"button\\" class=\\"ui icon button\\"><i class=\\"cloud icon\\"></i></button> <button role=\\"button\\" class=\\"ui icon button\\"><i class=\\"cloud icon\\"></i></button></div>"`;
 
 exports[`Examples ./elements/Button/IconButtons.example.vue should match snapshot 1`] = `
 "<div>

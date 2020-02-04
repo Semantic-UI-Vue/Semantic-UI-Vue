@@ -55,7 +55,7 @@ export default {
       type: Boolean,
       description: 'A button can take the width of its container.',
     },
-    icon: String,
+    icon: [Boolean, String],
     inverted: {
       type: Boolean,
       description: 'A button can be formatted to appear on dark backgrounds.',
@@ -114,9 +114,15 @@ export default {
       },
     },
   },
+  computed: {
+    hasIconClass() {
+      if (!this.icon) return false;
+      if (typeof this.icon !== 'string') return true;
+      return !(this.content || this.$slots.default);
+    },
+  },
   render() {
     const ElementType = this.getElementType('button');
-
     const label = this.$slots.label;
 
     const classList = this.classes(
@@ -133,7 +139,7 @@ export default {
       this.disabled && 'disabled',
       this.floated && `${this.floated} floated`,
       this.fluid && 'fluid',
-      this.icon && !(this.content || this.$slots.default) && 'icon',
+      this.hasIconClass && 'icon',
       !label && this.icon && this.labelPosition && 'icon',
       this.inverted && 'inverted',
       !label && this.labelPosition && this.labelPosition,
@@ -155,7 +161,7 @@ export default {
         class={classList}
         role="button"
       >
-        {this.icon && <Icon name={this.icon} />}
+        {typeof this.icon === 'string' && <Icon name={this.icon} />}
         {this.content || this.$slots.default}
       </ElementType>
     );
