@@ -35,7 +35,9 @@ export default {
         {this.title || this.description ? (
           <SuiStepContent>
             {this.title && <SuiStepTitle>{this.title}</SuiStepTitle>}
-            {this.description && <SuiStepDescription>{this.description}</SuiStepDescription>}
+            {this.description && (
+              <SuiStepDescription>{this.description}</SuiStepDescription>
+            )}
           </SuiStepContent>
         ) : (
           this.$slots.default

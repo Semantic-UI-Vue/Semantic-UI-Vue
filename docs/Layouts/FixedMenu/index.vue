@@ -3,7 +3,7 @@
     <sui-menu fixed inverted>
       <sui-container>
         <a href="#" is="sui-menu-item" class="header">
-          <img src="/static/images/logo.png" class="logo">
+          <img src="/static/images/logo.png" class="logo" />
           Project Name
         </a>
 
@@ -36,7 +36,8 @@
       <sui-header size="huge">Semantic UI Vue Fixed Template</sui-header>
       <p>This is a basic fixed menu template using fixed size containers.</p>
       <p>
-        A text container is used for the main container, which is useful for single column layouts.
+        A text container is used for the main container, which is useful for
+        single column layouts.
       </p>
 
       <docs-wireframe name="media-paragraph" />
@@ -44,7 +45,8 @@
         v-for="n in 5"
         :key="n"
         class="wireframe"
-        name="paragraph" />
+        name="paragraph"
+      />
     </sui-container>
 
     <sui-segment inverted vertical class="footer">
@@ -63,7 +65,8 @@
             <sui-grid-column :width="3">
               <h4 is="sui-header" content="Footer Header" class="inverted" />
               <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
+                Extra space for a call to action inside the footer that could
+                help re-engage users.
               </p>
             </sui-grid-column>
           </sui-grid-row>
@@ -72,12 +75,7 @@
         <sui-divider inverted section />
 
         <sui-image src="/static/images/logo.png" size="mini" centered />
-        <sui-list
-          horizontal
-          divided
-          link
-          class="inverted">
-
+        <sui-list horizontal divided link class="inverted">
           <a is="sui-list-item" href="#">Site Map</a>
           <a is="sui-list-item" href="#">Contact Us</a>
           <a is="sui-list-item" href="#">Terms and Conditions</a>
@@ -89,8 +87,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="css" scoped>

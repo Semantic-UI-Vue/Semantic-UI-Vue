@@ -20,16 +20,12 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'meta',
-        )}
+        class={this.classes('meta')}
       >
-        {
-          this.$slots.default || [
-            this.like && <FeedLike content={this.like} />,
-            this.content,
-          ]
-        }
+        {this.$slots.default || [
+          this.like && <FeedLike content={this.like} />,
+          this.content,
+        ]}
       </ElementType>
     );
   },

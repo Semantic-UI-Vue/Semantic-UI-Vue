@@ -1,4 +1,4 @@
-import uniq from 'lodash/uniq';
+import { uniq } from './underscore';
 
 export function Enum(values = [], obj = {}) {
   let type;
@@ -26,7 +26,8 @@ export function Enum(values = [], obj = {}) {
     ...obj,
     choices,
     type,
-    validator: value => !types.includes(value.constructor) || choices.includes(value),
+    validator: value =>
+      !types.includes(value.constructor) || choices.includes(value),
   };
 }
 
@@ -35,24 +36,87 @@ Object.defineProperty(Enum, 'Extend', {
 });
 
 Enum.State = Enum.Extend(['active', 'disabled', 'error', 'warning', 'success']);
-Enum.Size = Enum.Extend(['mini', 'tiny', 'small', 'standard', 'medium', 'large', 'big', 'huge', 'massive']);
+Enum.Size = Enum.Extend([
+  'mini',
+  'tiny',
+  'small',
+  'standard',
+  'medium',
+  'large',
+  'big',
+  'huge',
+  'massive',
+]);
 Enum.Color = Enum.Extend([
-  'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
-  'violet', 'purple', 'pink', 'brown', 'grey', 'black',
+  'red',
+  'orange',
+  'yellow',
+  'olive',
+  'green',
+  'teal',
+  'blue',
+  'violet',
+  'purple',
+  'pink',
+  'brown',
+  'grey',
+  'black',
 ]);
 Enum.Attached = Enum.Extend(['top', 'bottom']);
 Enum.TextAlign = Enum.Extend(['left', 'right', 'center', 'justified']);
 Enum.VerticalAlign = Enum.Extend(['top', 'middle', 'bottom']);
-Enum.Social = Enum.Extend(['facebook', 'twitter', 'google', 'google plus', 'vk', 'instagram', 'linkedin', 'youtube']);
+Enum.Social = Enum.Extend([
+  'facebook',
+  'twitter',
+  'google',
+  'google plus',
+  'vk',
+  'instagram',
+  'linkedin',
+  'youtube',
+]);
 Enum.Number = Enum.Extend([
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-  'one', 'two', 'three', 'four', 'five', 'six', 'seven',
-  'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
-  'fourteen', 'fifteen', 'sixteen',
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+  'ten',
+  'eleven',
+  'twelve',
+  'thirteen',
+  'fourteen',
+  'fifteen',
+  'sixteen',
 ]);
 Enum.Padded = Enum.Extend(['very']);
 Enum.Emphasis = Enum.Extend(['secondary', 'tertiary']);
 Enum.Floated = Enum.Extend(['right', 'left']);
 Enum.Direction = Enum.Extend(['horizontally', 'vertically']);
 Enum.RotateDirection = Enum.Extend(['clockwise', 'counterclockwise']);
-Enum.Corner = Enum.Extend(['top left', 'top right', 'bottom left', 'bottom right']);
+Enum.Corner = Enum.Extend([
+  'top left',
+  'top right',
+  'bottom left',
+  'bottom right',
+]);

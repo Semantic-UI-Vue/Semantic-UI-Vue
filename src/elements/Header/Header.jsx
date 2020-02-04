@@ -1,5 +1,6 @@
 import { SemanticUIVueMixin, textAlign } from '../../lib';
 import { Enum } from '../../lib/PropTypes';
+import Icon from '../Icon/Icon';
 
 export default {
   name: 'SuiHeader',
@@ -51,8 +52,7 @@ export default {
           'header',
         )}
       >
-
-        {this.icon !== !!this.icon && <sui-icon name={this.icon} />}
+        {this.icon !== !!this.icon && <Icon name={this.icon} />}
         {this.image && <img src={this.image} class="ui image" />}
         {this.$slots.default || this.content}
       </ElementType>

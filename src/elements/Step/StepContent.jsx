@@ -15,7 +15,9 @@ export default {
     return (
       <ElementType {...this.getChildPropsAndListeners()} class="content">
         {this.title && <SuiStepTitle>{this.title}</SuiStepTitle>}
-        {this.description && <SuiStepDescription>{this.description}</SuiStepDescription>}
+        {this.description && (
+          <SuiStepDescription>{this.description}</SuiStepDescription>
+        )}
         {this.$slots.default}
       </ElementType>
     );

@@ -36,8 +36,8 @@ export default {
       let panelIndex = -1;
       let found;
 
-      const walkChildren = (children) => {
-        children.some((child) => {
+      const walkChildren = children => {
+        children.some(child => {
           if (child.$options.name === 'SuiAccordion') return false;
           if (child.$options.name === 'SuiAccordionTitle') panelIndex += 1;
           if (child === el) {
@@ -59,7 +59,10 @@ export default {
     },
     toggleEl(el) {
       this.panelElms.some((panel, index) => {
-        if (panel.SuiAccordionTitle === el || panel.SuiAccordionContent === el) {
+        if (
+          panel.SuiAccordionTitle === el ||
+          panel.SuiAccordionContent === el
+        ) {
           this.toggle(index);
           return true;
         }
@@ -101,21 +104,37 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes('ui', this.inverted && 'inverted', this.fluid && 'fluid', this.styled && 'styled', 'accordion')}
+        class={this.classes(
+          'ui',
+          this.inverted && 'inverted',
+          this.fluid && 'fluid',
+          this.styled && 'styled',
+          'accordion',
+        )}
       >
-        {this.panels ? this.panels.map(({ title, content }, index) => (
-          <template>
-            <div
-              class={this.classes('title', this.isPanelActive(index) && 'active')}
-              onClick={() => this.toggle(index)}
-            >
-              {title}
-            </div>
-            <div class={this.classes('content', this.isPanelActive(index) && 'active')}>
-              {content}
-            </div>
-          </template>
-        )) : this.$slots.default}
+        {this.panels
+          ? this.panels.map(({ title, content }, index) => (
+              <template>
+                <div
+                  class={this.classes(
+                    'title',
+                    this.isPanelActive(index) && 'active',
+                  )}
+                  onClick={() => this.toggle(index)}
+                >
+                  {title}
+                </div>
+                <div
+                  class={this.classes(
+                    'content',
+                    this.isPanelActive(index) && 'active',
+                  )}
+                >
+                  {content}
+                </div>
+              </template>
+            ))
+          : this.$slots.default}
       </ElementType>
     );
   },

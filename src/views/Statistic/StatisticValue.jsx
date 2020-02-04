@@ -11,10 +11,7 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          this.text && 'text',
-          'value',
-        )}
+        class={this.classes(this.text && 'text', 'value')}
       >
         {this.$slots.default}
       </ElementType>

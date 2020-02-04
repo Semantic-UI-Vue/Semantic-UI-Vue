@@ -7,11 +7,13 @@ export default {
   props: {
     avatar: {
       type: Boolean,
-      description: 'An image may be formatted to appear inline with text as an avatar.',
+      description:
+        'An image may be formatted to appear inline with text as an avatar.',
     },
     bordered: {
       type: Boolean,
-      description: 'An image may include a border to emphasize the edges of white or transparent content.',
+      description:
+        'An image may include a border to emphasize the edges of white or transparent content.',
     },
     circular: {
       type: Boolean,
@@ -50,7 +52,8 @@ export default {
       this.bordered && 'bordered',
       this.rounded && 'rounded',
       this.circular && 'circular',
-      this.spaced, this.spaced && 'spaced',
+      this.spaced,
+      this.spaced && 'spaced',
       this.hidden && 'hidden',
       this.disabled && 'disabled',
       'image',

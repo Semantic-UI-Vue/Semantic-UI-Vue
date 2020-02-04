@@ -1,13 +1,14 @@
 <template>
   <sui-menu
     is="sui-sidebar"
+    id="docs-menu"
     inverted="true"
     vertical="true"
     animation="overlay"
     :visible="visible"
   >
     <sui-menu-item>
-      <sui-image :src="`${publicPath}static/images/logo.png`" spaced="right" size="mini" />
+      <sui-image :src="`/static/images/logo.png`" spaced="right" size="mini" />
       <strong>
         Semantic UI Vue
         <small>
@@ -28,14 +29,17 @@
         <router-link is="sui-menu-item" to="/features">
           Feature Status
         </router-link>
-        <a is="sui-menu-item" href="https://github.com/Semantic-UI-Vue/Semantic-UI-Vue">
+        <a
+          is="sui-menu-item"
+          href="https://github.com/Semantic-UI-Vue/Semantic-UI-Vue"
+        >
           Github
           <sui-icon name="github" />
         </a>
         <a is="sui-menu-item" href="https://semantic-ui.com/">
           Semantic UI
           <i class="icon semantic-ui">
-            <img src="https://semantic-ui.com/favicon.ico">
+            <img src="https://semantic-ui.com/favicon.ico" />
           </i>
         </a>
       </sui-menu-menu>
@@ -68,6 +72,7 @@
         <sui-menu-menu>
           <router-link
             is="sui-menu-item"
+            active-class="active"
             :key="comp"
             :to="getUrl(mod.name, comp)"
             v-for="comp in mod.components"
@@ -82,55 +87,61 @@
 
 <script>
 import 'semantic-ui-css/semantic.css';
-import * as collections from 'src/collections';
-import * as elements from 'src/elements';
-import * as modules from 'src/modules';
-import * as views from 'src/views';
+import * as collections from 'semantic-ui-vue/collections';
+import * as elements from 'semantic-ui-vue/elements';
+import * as modules from 'semantic-ui-vue/modules';
+import * as views from 'semantic-ui-vue/views';
 
 export default {
   props: {
     visible: Boolean,
   },
   data() {
-    const shouldShow = ([, component]) => (
-      !(component.meta && component.meta.parent)
-    );
+    const shouldShow = ([, component]) =>
+      !(component.meta && component.meta.parent);
 
     return {
       modules: [
         {
           name: 'Elements',
-          components: Object.entries(elements).filter(shouldShow).map(([k]) => k),
+          components: Object.entries(elements)
+            .filter(shouldShow)
+            .map(([k]) => k),
         },
         {
           name: 'Collections',
-          components: Object.entries(collections).filter(shouldShow).map(([k]) => k),
+          components: Object.entries(collections)
+            .filter(shouldShow)
+            .map(([k]) => k),
         },
         {
           name: 'Views',
-          components: Object.entries(views).filter(shouldShow).map(([k]) => k),
+          components: Object.entries(views)
+            .filter(shouldShow)
+            .map(([k]) => k),
         },
         {
           name: 'Modules',
-          components: Object.entries(modules).filter(shouldShow).map(([k]) => k),
+          components: Object.entries(modules)
+            .filter(shouldShow)
+            .map(([k]) => k),
         },
       ],
       search: '',
-      publicPath,
       version: process.version,
     };
   },
   computed: {
     matchingComponents() {
       return this.modules
-        .map(({ name, components }) => (
+        .map(({ name, components }) =>
           components
             .filter(compName => new RegExp(this.search, 'i').test(compName))
             .map(component => ({
               content: component,
               href: this.getUrl(name, component),
-            }))
-        ))
+            })),
+        )
         .reduce((acc, arr) => acc.concat(arr), [])
         .sort((a, b) => a.component > b.component);
     },
@@ -156,5 +167,17 @@ export default {
 
 .semantic-ui.icon img {
   height: 12px;
+}
+
+#docs-menu:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#docs-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#docs-menu::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
 }
 </style>

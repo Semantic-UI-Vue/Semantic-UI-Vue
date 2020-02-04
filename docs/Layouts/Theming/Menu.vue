@@ -9,9 +9,9 @@
           <div is="sui-dropdown-item">Action</div>
           <div is="sui-dropdown-item">Another Action</div>
           <div is="sui-dropdown-item">Something else here</div>
-          <div is="sui-dropdown-divider"/>
+          <div is="sui-dropdown-divider" />
           <div is="sui-dropdown-item">Separated Link</div>
-          <div is="sui-dropdown-divider"/>
+          <div is="sui-dropdown-divider" />
           <div is="sui-dropdown-item">One more separated link</div>
         </div>
       </sui-dropdown>
@@ -39,9 +39,9 @@
           <div is="sui-dropdown-item">Action</div>
           <div is="sui-dropdown-item">Another Action</div>
           <div is="sui-dropdown-item">Something else here</div>
-          <div is="sui-dropdown-divider"/>
+          <div is="sui-dropdown-divider" />
           <div is="sui-dropdown-item">Separated Link</div>
-          <div is="sui-dropdown-divider"/>
+          <div is="sui-dropdown-divider" />
           <div is="sui-dropdown-item">One more separated link</div>
         </div>
       </sui-dropdown>
@@ -59,7 +59,6 @@
         <a is="sui-menu-item">Link</a>
       </div>
     </div>
-
 
     <div is="sui-menu" secondary>
       <div is="sui-menu-item" active>Link</div>
@@ -86,7 +85,7 @@
             icon="search"
             icon-position="left"
           />
-        <!-- <div class="ui dropdown item" tabindex="0">
+          <!-- <div class="ui dropdown item" tabindex="0">
           Dropdown Left<i class="dropdown icon"></i>
           <div is="sui-menu" class="menu" tabindex="-1">
             <a class="item">Link</a>
@@ -144,17 +143,15 @@
       </div>
     </div>
 
-
     <div style="clear: both; display: block;"></div>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .ui.menu:last-child {
   margin-bottom: 110px;
 }

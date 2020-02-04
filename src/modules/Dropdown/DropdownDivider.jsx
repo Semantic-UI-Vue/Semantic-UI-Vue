@@ -6,7 +6,11 @@ export default {
   render() {
     const ElementType = this.getElementType();
     return (
-      <ElementType {...this.getChildPropsAndListeners()} role="option" class={this.classes('divider')}/>
+      <ElementType
+        {...this.getChildPropsAndListeners()}
+        role="option"
+        class={this.classes('divider')}
+      />
     );
   },
   meta: {

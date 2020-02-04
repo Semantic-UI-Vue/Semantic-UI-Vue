@@ -6,21 +6,21 @@ Semantic UI Vue is a very young project. Every kind of contribution is very welc
 
 It is very easy:
 
-* Find something to do. There's plenty of it, just check the *What you can do* section to get any ideas.
-* It is suggested to submit an issue first: this can help you avoiding any extra work
+- Find something to do. There's plenty of it, just check the _What you can do_ section to get any ideas.
+- It is suggested to submit an issue first: this can help you avoiding any extra work
 
 Once it is clear what you need to do:
 
-* Fork the project
-* Clone it:
+- Fork the project
+- Clone it:
   ```
   $ git clone https://github.com/<your username>/Semantic-UI-Vue
   ```
-* Make your changes. Here are some good guidelines:
-  * Don't worry about making a lot of commits, they will be squashed when the PR is merged
-  * Write clear commit messages
-  * Respect the coding style. If you don't have it already, install an eslint plugin for your editor
-* Test your code
+- Make your changes. Here are some good guidelines:
+  - Don't worry about making a lot of commits, they will be squashed when the PR is merged
+  - Write clear commit messages
+  - Respect the coding style. If you don't have it already, install an eslint plugin for your editor
+- Test your code
 
 As soon as you get started, submit a pull request. Don't worry if it's still WIP. We don't want more people to work on the same thing. That's frustrating.
 
@@ -43,10 +43,10 @@ Have a look around, if you see anything of this kind, you are very welcome to co
 
 ### Add a component
 
-Every component is in the folder: *src/&lt;component type>/&lt;component name>*.
-There is a *.jsx* file for each component and subcomponent and an *index.js* that only exports them.
+Every component is in the folder: _src/&lt;component type>/&lt;component name>_.
+There is a _.jsx_ file for each component and subcomponent and an _index.js_ that only exports them.
 
-After adding a component, make sure it is correctly exported in the *index.js* in the parent level too.
+After adding a component, make sure it is correctly exported in the _index.js_ in the parent level too.
 
 ### Document a component
 
@@ -74,19 +74,19 @@ There is currently no way to document components' slots.
 
 ### Add an example
 
-Every component has its examples in the folder *docs/examples/&lt;component type>/&lt;component name>Example*.
+Every component has its examples in the folder _docs/examples/&lt;component type>/&lt;component name>Example_.
 
-There is an *index.js* that will export all the sections and examples in the following format:
+There is an _index.js_ that will export all the sections and examples in the following format:
 
 ```
 import Example1 from './Example1.example';
 
 export default [
   {
-    title: 'Section\'s title',
+    name: 'Section\'s title',
     examples: [
       {
-        title: 'Example1',
+        name: 'Example1',
         description: 'This is the first example',
         component: Example1,
       },
@@ -97,7 +97,7 @@ export default [
 ];
 ```
 
-It is important that every example's extension is *.example.vue*. This will allow webpack to load the example as a text file.
+It is important that every example's extension is _.example.vue_. This will allow webpack to load the example as a text file.
 
 It's very important to run tests after adding/deleting/updating an example. Read the following sections for details.
 
@@ -111,4 +111,4 @@ npm run test:update
 
 Have a look at the diff and make sure there were no regressions.
 
-*Note*: this will only test that the output of the components didn't change. You still need to manually test any interaction.
+_Note_: this will only test that the output of the components didn't change. You still need to manually test any interaction.

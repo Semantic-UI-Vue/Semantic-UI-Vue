@@ -4,17 +4,21 @@ import * as elements from './elements';
 import * as modules from './modules';
 import * as views from './views';
 
-export default (Vue) => {
-  Object.values({
-    ...collections,
-    ...elements,
-    ...modules,
-    ...views,
-  }).forEach(Comp => Vue.component(Comp.name, Comp));
-
-  Object.values(directives).forEach(directive => Vue.directive(directive.name, directive));
+const allComponents = {
+  ...collections,
+  ...elements,
+  ...modules,
+  ...views,
 };
 
+const SemanticUIVue = Vue => {
+  Object.values(allComponents).forEach(Comp => Vue.component(Comp.name, Comp));
+  Object.values(directives).forEach(directive =>
+    Vue.directive(directive.name, directive),
+  );
+};
+
+export default SemanticUIVue;
 export * from './collections';
 export * from './directives';
 export * from './elements';

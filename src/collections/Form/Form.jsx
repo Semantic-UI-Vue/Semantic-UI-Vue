@@ -10,7 +10,8 @@ export default {
     }),
     loading: {
       type: Boolean,
-      description: 'If a form is in loading state, it will automatically show a loading indicator.',
+      description:
+        'If a form is in loading state, it will automatically show a loading indicator.',
     },
     success: {
       type: Boolean,

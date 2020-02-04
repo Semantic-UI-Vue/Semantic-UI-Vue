@@ -12,7 +12,8 @@ export default {
     },
     images: {
       type: [Array, Boolean],
-      description: 'An event can contain additional information like a set of images',
+      description:
+        'An event can contain additional information like a set of images',
     },
     text: {
       type: Boolean,
@@ -22,14 +23,11 @@ export default {
   render() {
     const ElementType = this.getElementType();
 
-    const defaultContentImage = (
-      Array.isArray(this.images) && this.images.map(image => <Image src={image} />)
-    );
+    const defaultContentImage =
+      Array.isArray(this.images) &&
+      this.images.map(image => <Image src={image} />);
 
-    const defaultContent = [
-      this.content,
-      defaultContentImage,
-    ];
+    const defaultContent = [this.content, defaultContentImage];
 
     return (
       <ElementType

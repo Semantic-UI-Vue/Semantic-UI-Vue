@@ -7,12 +7,7 @@
       </div>
     </div>
 
-    <div
-      class="docs-mobile docs-top-bar"
-      is="sui-menu"
-      fixed
-      inverted
-    >
+    <div class="docs-mobile docs-top-bar" is="sui-menu" fixed inverted>
       <sui-container>
         <a
           is="sui-menu-item"
@@ -52,10 +47,6 @@ export default {
 </script>
 
 <style scoped>
-#docs {
-  background-color: #F7F7F7;
-}
-
 .docs-container {
   margin-left: 250px;
   min-width: 550px;
@@ -64,18 +55,18 @@ export default {
 }
 
 .docs-sidebar {
-  position: fixed!important;
-  top: 0px!important;
-  bottom: 0px!important;
-  left: 0px!important;
-  width: 250px!important;
-  padding-bottom: 1em!important;
-  background: rgb(27, 28, 29)!important;
-  overflow-y: scroll!important;
+  position: fixed !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  width: 250px !important;
+  padding-bottom: 1em !important;
+  background: rgb(27, 28, 29) !important;
+  overflow-y: scroll !important;
 }
 
 .docs-mobile {
-  display: none!important;
+  display: none !important;
 }
 
 .docs-mobile-container {
@@ -85,11 +76,11 @@ export default {
 
 @media screen and (max-width: 767px) {
   .docs-desktop {
-    display: none!important;
+    display: none !important;
   }
 
   .docs-mobile {
-    display: block!important;
+    display: block !important;
   }
 }
 </style>

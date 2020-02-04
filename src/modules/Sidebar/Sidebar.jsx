@@ -5,7 +5,14 @@ export default {
   name: 'SuiSidebar',
   mixins: [SemanticUIVueMixin],
   props: {
-    animation: Enum(['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']),
+    animation: Enum([
+      'overlay',
+      'push',
+      'scale down',
+      'uncover',
+      'slide out',
+      'slide along',
+    ]),
     direction: Enum(['top', 'right', 'bottom', 'left'], { default: 'left' }),
     visible: Boolean,
     width: Enum(['very thin', 'thin', 'wide', 'very wide']),
@@ -29,7 +36,10 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={`ui sidebar ${this.direction} ${this.width} ${this.animation || ''}${this.visible ? ' visible' : ''}${this.animating ? ' animating' : ''}`}
+        class={`ui sidebar ${this.direction} ${this.width} ${this.animation ||
+          ''}${this.visible ? ' visible' : ''}${
+          this.animating ? ' animating' : ''
+        }`}
       >
         {this.$slots.default}
       </ElementType>

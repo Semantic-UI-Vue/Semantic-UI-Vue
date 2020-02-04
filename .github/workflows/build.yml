@@ -1,0 +1,155 @@
+name: Build and Deploy
+
+on: [push]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache yarn
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Install dependencies
+        run: yarn install
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Restore node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Run linter
+        run: yarn run lint
+
+  test:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Restore node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Run unit tests
+        run: yarn test
+      - name: Upload code coverage
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/clover.xml
+          fail_ci_if_error: true
+
+  build-docs:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    env:
+      NODE_ENV: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Restore node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Cache built docs
+        uses: actions/cache@v1
+        with:
+          path: dist/docs/
+          key: ${{ runner.os }}-docs-${{ github.sha }}
+      - name: Build Documentation
+        run: yarn run build:docs
+
+  deploy-docs:
+    runs-on: ubuntu-latest
+    needs: build-docs
+    if: "github.ref == 'refs/heads/master'"
+    steps:
+      - name: Restore built docs
+        uses: actions/cache@v1
+        with:
+          path: dist/docs/
+          key: ${{ runner.os }}-docs-${{ github.sha }}
+      - name: Setup git
+        run: |
+          git config --global user.email "mariolamacchia@gmail.com"
+          git config --global user.name "Semantic UI Vue CI"
+      - name: Deploy docs
+        run: |
+          cd dist/docs
+          git init
+          git remote add origin https://${{ secrets.GH_USER }}:${{ secrets.GH_TOKEN }}@github.com/$REPOSITORY.git
+          git add -A
+          git commit -m "Generate docs"
+          git push -f origin master
+        env:
+          REPOSITORY: Semantic-UI-Vue/semantic-ui-vue.github.io
+
+  build-lib:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    env:
+      NODE_ENV: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Restore node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Cache dist
+        uses: actions/cache@v1
+        with:
+          path: dist/
+          key: ${{ runner.os }}-dist-${{ github.sha }}
+      - name: Build library
+        run: yarn run build:lib
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build-lib
+    if: "github.ref == 'refs/heads/master'"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Restore node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node_modules-${{ github.sha }}
+      - name: Restore dist
+        uses: actions/cache@v1
+        with:
+          path: dist/
+          key: ${{ runner.os }}-dist-${{ github.sha }}
+      - name: Release
+        run: yarn run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

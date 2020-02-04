@@ -29,20 +29,24 @@ export default {
       description: 'A column can specify a width for a widescreen device.',
     }),
     floated: Enum(['left', 'right'], {
-      description: 'A column can sit flush against the left or right edge of a row.',
+      description:
+        'A column can sit flush against the left or right edge of a row.',
     }),
     textAlign: Enum.TextAlign({
       description: 'A column can specify its text alignment.',
     }),
     verticalAlign: Enum.VerticalAlign({
-      description: 'A column can specify its vertical alignment to have all its columns vertically centered.',
+      description:
+        'A column can specify its vertical alignment to have all its columns vertically centered.',
     }),
     only: Enum(['mobile', 'tablet', 'computer', 'widescreen', 'large screen'], {
-      description: 'A column can appear only for a specific device, or screen sizes.',
+      description:
+        'A column can appear only for a specific device, or screen sizes.',
     }),
     stretched: {
       type: Boolean,
-      description: 'A column can stretch its contents to take up the entire grid or row height.',
+      description:
+        'A column can stretch its contents to take up the entire grid or row height.',
     },
   },
   render() {

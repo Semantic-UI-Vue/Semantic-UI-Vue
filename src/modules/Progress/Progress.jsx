@@ -51,14 +51,15 @@ export default {
         data-percent={this.percent}
       >
         <div
-          class='bar'
+          class="bar"
           style={{
             width: this.percentString,
             'transition-duration': '300ms',
-          }}>
-          {this.progress && <div class='progress'> {this.percentString} </div>}
+          }}
+        >
+          {this.progress && <div class="progress"> {this.percentString} </div>}
         </div>
-        {this.label && <div class='label'>{this.label}</div>}
+        {this.label && <div class="label">{this.label}</div>}
       </ElementType>
     );
   },

@@ -1,6 +1,5 @@
-import mapValues from 'lodash/mapValues';
-import without from 'lodash/without';
 import { isBrowser, SemanticUIVueMixin } from '../../../lib';
+import { mapValues, without } from '../../../lib/underscore';
 import { POSITIONS } from './popupConstants';
 
 export default {
@@ -35,26 +34,37 @@ export default {
       const { clientWidth, clientHeight } = document.documentElement;
 
       if (positions.includes('right')) {
-        style.right = Math.round(clientWidth - (this.triggerCoords.right + pageXOffset));
+        style.right = Math.round(
+          clientWidth - (this.triggerCoords.right + pageXOffset),
+        );
         style.left = 'auto';
       } else if (positions.includes('left')) {
         style.left = Math.round(this.triggerCoords.left + pageXOffset);
         style.right = 'auto';
-      } else { // if not left nor right, we are horizontally centering the element
+      } else {
+        // if not left nor right, we are horizontally centering the element
         const xOffset = (this.triggerCoords.width - this.popupCoords.width) / 2;
-        style.left = Math.round(this.triggerCoords.left + xOffset + pageXOffset);
+        style.left = Math.round(
+          this.triggerCoords.left + xOffset + pageXOffset,
+        );
         style.right = 'auto';
       }
 
       if (positions.includes('top')) {
-        style.bottom = Math.round(clientHeight - (this.triggerCoords.top + pageYOffset));
+        style.bottom = Math.round(
+          clientHeight - (this.triggerCoords.top + pageYOffset),
+        );
         style.top = 'auto';
       } else if (positions.includes('bottom')) {
         style.top = Math.round(this.triggerCoords.bottom + pageYOffset);
         style.bottom = 'auto';
-      } else { // if not top nor bottom, we are vertically centering the element
-        const yOffset = (this.triggerCoords.height + this.popupCoords.height) / 2;
-        style.top = Math.round((this.triggerCoords.bottom + pageYOffset) - yOffset);
+      } else {
+        // if not top nor bottom, we are vertically centering the element
+        const yOffset =
+          (this.triggerCoords.height + this.popupCoords.height) / 2;
+        style.top = Math.round(
+          this.triggerCoords.bottom + pageYOffset - yOffset,
+        );
         style.bottom = 'auto';
 
         const xOffset = this.popupCoords.width + 8;
@@ -96,11 +106,13 @@ export default {
       // hidden on top
       if (element.top < pageYOffset) return false;
       // hidden on the bottom
-      if (element.top + element.height > pageYOffset + clientHeight) return false;
+      if (element.top + element.height > pageYOffset + clientHeight)
+        return false;
       // hidden the left
       if (element.left < pageXOffset) return false;
       // hidden on the right
-      if (element.left + element.width > pageXOffset + clientWidth) return false;
+      if (element.left + element.width > pageXOffset + clientWidth)
+        return false;
 
       return true;
     },
@@ -112,13 +124,19 @@ export default {
       // Lets detect if the popup is out of the viewport and adjust
       // the position accordingly
       const positions = without(POSITIONS, position).concat([position]);
-      for (let i = 0; !this.isStyleInViewport(style) && i < positions.length; i += 1) {
+      for (
+        let i = 0;
+        !this.isStyleInViewport(style) && i < positions.length;
+        i += 1
+      ) {
         style = this.computePopupStyle(positions[i]);
         position = positions[i];
       }
 
       // Append 'px' to every numerical values in the style
-      style = mapValues(style, value => (typeof value === 'number' ? `${value}px` : value));
+      style = mapValues(style, value =>
+        typeof value === 'number' ? `${value}px` : value,
+      );
       this.mountedStyle = style;
       this.mountedPosition = position;
     },

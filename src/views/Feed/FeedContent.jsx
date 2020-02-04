@@ -35,20 +35,16 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'content',
-        )}
+        class={this.classes('content')}
       >
-        {
-          this.$slots.default || [
-            this.date && <FeedDate content={this.date} />,
-            this.content,
-            this.summary && <FeedSummary content={this.summary} />,
-            this.extraText && <FeedExtra text={true} content={this.extraText} />,
-            this.extraImages && <FeedExtra images={this.extraImages} />,
-            this.meta && <FeedMeta content={this.meta} />,
-          ]
-        }
+        {this.$slots.default || [
+          this.date && <FeedDate content={this.date} />,
+          this.content,
+          this.summary && <FeedSummary content={this.summary} />,
+          this.extraText && <FeedExtra text={true} content={this.extraText} />,
+          this.extraImages && <FeedExtra images={this.extraImages} />,
+          this.meta && <FeedMeta content={this.meta} />,
+        ]}
       </ElementType>
     );
   },

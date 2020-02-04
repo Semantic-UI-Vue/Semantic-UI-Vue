@@ -42,11 +42,7 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes(
-          'ui',
-          this.icon,
-          'rating',
-        )}
+        class={this.classes('ui', this.icon, 'rating')}
         role="radiogroup"
       >
         {[...new Array(this.maxRating)].map((v, i) => {
@@ -58,7 +54,11 @@ export default {
               aria-checked={active.toString()}
               aria-posinset={elementValue}
               aria-setsize={this.maxRating}
-              class={this.classes(active && 'active', selected && 'selected', 'icon')}
+              class={this.classes(
+                active && 'active',
+                selected && 'selected',
+                'icon',
+              )}
               tabindex="0"
               role="radio"
               onClick={this.onRate}

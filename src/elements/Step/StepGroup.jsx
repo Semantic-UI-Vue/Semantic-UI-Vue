@@ -43,7 +43,9 @@ export default {
           'steps',
         )}
       >
-        {this.steps ? this.steps.map(props => <SuiStep {...{ props }} />) : this.$slots.default}
+        {this.steps
+          ? this.steps.map(props => <SuiStep {...{ props }} />)
+          : this.$slots.default}
       </ElementType>
     );
   },

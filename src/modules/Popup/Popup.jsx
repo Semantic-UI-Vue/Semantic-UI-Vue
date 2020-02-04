@@ -23,7 +23,8 @@ export default {
     },
     flowing: {
       type: Boolean,
-      description: 'A flowing Popup has no maximum width and continues to flow to fit its content.',
+      description:
+        'A flowing Popup has no maximum width and continues to flow to fit its content.',
     },
     header: {
       type: String,
@@ -44,7 +45,7 @@ export default {
     size: Enum(['mini', 'tiny', 'small', 'large', 'huge'], {
       description: 'Popup size.',
     }),
-    wide: Enum(['wide'], {
+    wide: Enum(['very'], {
       type: Boolean,
       description: 'Popup width.',
     }),
@@ -63,6 +64,7 @@ export default {
     handleOpen() {
       this.coords = this.$slots.trigger[0].elm.getBoundingClientRect();
       this.open = true;
+      this.$emit('open');
     },
     handleBlur() {
       if (this.hoverable) {
@@ -78,6 +80,7 @@ export default {
     },
     close() {
       this.open = false;
+      this.$emit('close');
     },
   },
   render() {
@@ -93,17 +96,15 @@ export default {
               this.flowing && 'flowing',
               this.inverted && 'inverted',
               this.size,
-              this.wide, this.wide && 'wide',
+              this.wide,
+              this.wide && 'wide',
             )}
             triggerCoords={this.coords}
             position={this.position}
+            content={this.content}
           >
-            {this.header && (
-              <PopupHeader>{this.header}</PopupHeader>
-            )}
-            {this.content && (
-              <PopupContent>{this.content}</PopupContent>
-            )}
+            {this.header && <PopupHeader>{this.header}</PopupHeader>}
+            {this.content && <PopupContent>{this.content}</PopupContent>}
             {this.$slots.default}
           </PopupContainer>
         )}

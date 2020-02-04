@@ -10,7 +10,9 @@
     <div is="sui-segment" basic padded>
       <h2 is="sui-header">
         Starter
-        <p is="sui-header-subheader">Examples to introduce components and their function</p>
+        <p is="sui-header-subheader">
+          Examples to introduce components and their function
+        </p>
       </h2>
 
       <div is="sui-card-group" :widths="3" stackable>
@@ -19,12 +21,12 @@
           <sui-card-content>
             <sui-card-header>Theming</sui-card-header>
             <sui-card-description>
-              Examples of many common UI components, useful for testing custom themes.
+              Examples of many common UI components, useful for testing custom
+              themes.
             </sui-card-description>
           </sui-card-content>
         </router-link>
       </div>
-
     </div>
 
     <div is="sui-segment" basic padded>
@@ -56,7 +58,6 @@
           </sui-card-content>
         </router-link>
       </div>
-
     </div>
   </div>
 </template>

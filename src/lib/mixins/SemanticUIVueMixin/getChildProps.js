@@ -1,5 +1,4 @@
-import camelCase from 'lodash/camelCase';
-import upperFirst from 'lodash/upperFirst';
+import { camelCase, upperFirst } from '../../underscore';
 
 export default function getChildProps() {
   if (!(this.$vnode && this.$vnode.data.attrs)) return {};
@@ -11,9 +10,10 @@ export default function getChildProps() {
     const components = this.$options.components;
     let camelizedEl;
 
-    const component = components[el]
-      || components[(camelizedEl = camelCase(el))]
-      || components[upperFirst(camelizedEl)];
+    const component =
+      components[el] ||
+      components[(camelizedEl = camelCase(el))] ||
+      components[upperFirst(camelizedEl)];
 
     if (!component) return {};
 
