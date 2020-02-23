@@ -1,126 +1,171 @@
 import { SemanticUIVueMixin } from '../../lib';
-import Results from './Results';
+import Result from './Result';
+import { debounce } from '../../lib/underscore';
 
 export default {
   name: 'SuiSearch',
-  components: { Results },
   mixins: [SemanticUIVueMixin],
   props: {
-    value: {
+    apiSettings: {
       type: Object,
-      default: () => null,
-      description: 'Value of the search',
+      description: 'Settings for API call.',
+      default: () => ({
+        action: 'search',
+      }),
     },
-    source: {
-      type: Array,
-      default: () => [],
-      description: 'Specify a Javascript object which will be searched locally',
-    },
-    minCharacters: {
+    duration: {
       type: Number,
-      default: 1,
-      descriptiom: 'Minimum characters to query for results',
+      description: 'Duration of animation events.',
+      default: () => 300,
     },
-    category: {
-      type: Boolean,
-      default: false,
-      description: 'Whether to display search component in category mode.',
+    placeholder: {
+      type: String,
+      description: "Input's placeholder.",
     },
-    input: {
-      type: Boolean,
-      default: false,
-      description: 'Whether the search component should has input class.',
+    searchFields: {
+      type: Array,
+      default() {
+        return ['title', 'description'];
+      },
+      description:
+        'Specify object properties inside local source object which will be searched.',
+    },
+    searchDelay: {
+      type: Number,
+      default() {
+        return 1000;
+      },
+      description: 'Delay before querying results on inputchange',
+    },
+    results: {
+      type: Array,
+      description:
+        "One of:\n- array of results e.g. `{ title: '', description: '' }` or\n- object of categories e.g. `{ name: '', results: [{ title: '', description: '' }]`",
+      default() {
+        return [];
+      },
+    },
+  },
+  meta: {
+    slots: {
+      input: {
+        description: 'Search input.',
+      },
+      result: {
+        description: 'Render the result.',
+        scope: {
+          result: {
+            type: Object,
+            description: 'Object in the result prop matching the search term.',
+          },
+        },
+      },
     },
   },
   data() {
     return {
-      focused: false,
-      firstSearch: null,
-      firstFocus: false,
-      internalQuery: null,
+      animationTimeout: null,
+      searchTerm: '',
+      focus: false,
+      request: null,
+      loading: true,
+      fetchedResults: [],
     };
   },
-  computed: {
-    resultsVisible() {
-      return !!(
-        this.internalQuery &&
-        this.internalQuery.length >= this.minCharacters &&
-        this.focused
+  created() {
+    this.search = debounce(this.search, this.searchDelay);
+  },
+  methods: {
+    handleInput(e) {
+      this.searchTerm = e.target.value;
+    },
+    handleFocus() {
+      this.focus = true;
+    },
+    handleBlur() {
+      this.focus = false;
+    },
+    search(value) {
+      this.executeAction(this.getEndpoint('search', { value })).then(
+        results => {
+          console.log(results);
+          if (this.searchTerm === value) {
+            this.loading = false;
+            this.fetchedResults = results;
+          }
+        },
       );
+    },
+  },
+  computed: {
+    open() {
+      return (
+        this.searchTerm &&
+        this.focus &&
+        !this.loading &&
+        this.fetchedResults.length
+      );
+    },
+    filteredResults() {
+      return this.results.filter(result => {
+        for (let property of this.searchFields) {
+          if (result[property].includes(this.searchTerm)) return true;
+        }
+        return false;
+      });
     },
   },
   watch: {
-    internalQuery() {
-      this.checkFirstSearch();
+    open() {
+      this.animationTimeout = setTimeout(() => {
+        this.animationTimeout = null;
+      }, this.duration);
     },
-  },
-  created() {
-    this.checkFirstSearch();
-  },
-  methods: {
-    handleFocus() {
-      this.focused = true;
-      if (!this.firstFocus) this.firstFocus = true;
-    },
-    handleBlur() {
-      this.focused = false;
-    },
-    checkFirstSearch() {
-      if (
-        this.internalQuery &&
-        this.internalQuery.length >= this.minCharacters
-      ) {
-        this.firstSearch = true;
+    searchTerm() {
+      if (this.searchTerm) {
+        this.loading = true;
+        this.search(this.searchTerm);
+      } else {
+        this.loading = false;
       }
-    },
-    handleSelect(item) {
-      this.$emit('input', item);
-      this.internalQuery = item.title;
-    },
-    handleInput(event) {
-      this.internalQuery = event.target.value;
-    },
-    renderInput() {
-      let input = (
-        <input
-          onBlur={this.handleBlur}
-          onFocus={this.handleFocus}
-          onInput={this.handleInput}
-          value={this.value}
-          class={this.classes('prompt')}
-          {...{ attrs: this.$attrs }}
-        />
-      );
-      input = this.input ? (
-        <div class={this.classes('ui', 'icon', 'input')}>
-          {input}
-          {this.$slots.icon}
-        </div>
-      ) : (
-        input
-      );
-
-      return input;
     },
   },
   render() {
     const ElementType = this.getElementType();
-
     return (
       <ElementType
-        class={this.classes('ui', 'search', this.category ? 'category' : '')}
+        {...this.getChildPropsAndListeners()}
+        class={this.classes('ui', 'search')}
       >
-        {this.renderInput()}
-        {this.firstSearch && (
-          <Results
-            query={this.internalQuery}
-            source={this.source}
-            onSelected={this.handleSelect}
-            category={this.category}
-            firstFocus={this.firstFocus}
-            visible={this.resultsVisible}
+        {this.$slots.input || (
+          <input
+            class="prompt"
+            type="text"
+            placeholder={this.placeholder}
+            onInput={this.handleInput}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
           />
         )}
+        <div
+          class={this.classes(
+            'results',
+            'transition',
+            this.animationTimeout &&
+              `visible animating scale ${this.open ? 'in' : 'out'}`,
+            !this.animationTimeout && (this.open ? 'visible' : 'hidden'),
+          )}
+        >
+          {this.results.map(result =>
+            this.$slots.result ? (
+              this.$slots.result({
+                result,
+              })
+            ) : (
+              <Result {...result} />
+            ),
+          )}
+        </div>
       </ElementType>
     );
   },

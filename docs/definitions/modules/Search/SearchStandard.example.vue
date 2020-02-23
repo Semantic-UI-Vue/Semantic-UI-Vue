@@ -6,14 +6,14 @@
       v-model="valueBasic"
     />
     <sui-message :content="message" />
-    <sui-search
+    <!-- <sui-search
       input
       placeholder="Search animal..."
       :source="source"
       v-model="valueSelectIcon"
     >
       <i slot="icon" class="search icon"></i>
-    </sui-search>
+    </sui-search> -->
   </div>
 </template>
 

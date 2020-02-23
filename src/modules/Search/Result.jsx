@@ -4,26 +4,36 @@ export default {
   name: 'SuiSearchResult',
   mixins: [SemanticUIVueMixin],
   props: {
-    item: {
-      type: Object,
-      default: null,
+    title: {
+      type: String,
+      description: 'Display title.',
     },
-  },
-  methods: {
-    handleClick() {
-      this.$emit('selected', this.item);
+    description: {
+      type: String,
+      description: 'Additional text with less emphasis.',
+    },
+    url: {
+      type: String,
+      description: 'Link to open on click.',
     },
   },
   render() {
+    const ElementType = this.getElementType(this.url ? 'a' : 'div');
+    const urlProps = this.url ? { url: this.url } : {};
+
     return (
-      <a onClick={this.handleClick} class="result">
+      <ElementType
+        {...this.getChildPropsAndListeners()}
+        {...urlProps}
+        class={this.classes('result')}
+      >
         <div class="content">
-          <div class="title">{this.item.title}</div>
-          {this.item.description && (
-            <div class="description">{this.item.description}</div>
+          {this.title && <div class="title">{this.title}</div>}
+          {this.description && (
+            <div class="description">{this.description}</div>
           )}
         </div>
-      </a>
+      </ElementType>
     );
   },
 };
