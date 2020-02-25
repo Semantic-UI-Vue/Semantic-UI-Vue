@@ -55,6 +55,6 @@
 
 <script>
 export default {
-  name: 'MinimalExample',
+  name: 'CollapsedExample',
 };
 </script>
