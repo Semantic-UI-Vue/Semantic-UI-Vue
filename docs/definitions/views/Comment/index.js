@@ -10,6 +10,16 @@ export default [
     ],
   },
   {
+    name: 'States',
+    examples: [
+      {
+        name: 'Collapsed',
+        description: 'Comments can be collapsed, or hidden from view',
+        file: 'Collapsed',
+      },
+    ],
+  },
+  {
     name: 'Variations',
     examples: [
       {
