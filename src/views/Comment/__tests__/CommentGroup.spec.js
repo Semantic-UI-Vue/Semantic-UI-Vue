@@ -28,6 +28,15 @@ describe('CommentGroup', () => {
     expect(wrapper.classes()).toContain('minimal');
   });
 
+  it('It applies collapsed state', () => {
+    wrapper = shallowMount(CommentGroup, {
+      propsData: {
+        collapsed: true,
+      },
+    });
+    expect(wrapper.classes()).toContain('collapsed');
+  });
+
   // this is required because the ui class will override the font-size
   it('It does not apply ui class when its inside a Comment', () => {
     wrapper = shallowMount(CommentGroup, {
