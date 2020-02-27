@@ -8,13 +8,18 @@ export default {
     threaded: {
       type: Boolean,
       description:
-        'A comment list can be threaded to showing the relationship between conversations.',
+        'A comment list can be threaded to showing the relationship between conversations',
       default: false,
     },
     minimal: {
       type: Boolean,
       description:
-        'Comments can hide extra information unless a user shows intent to interact with a comment.',
+        'Comments can hide extra information unless a user shows intent to interact with a comment',
+      default: false,
+    },
+    collapsed: {
+      type: Boolean,
+      description: 'Comments can be collapsed, or hidden from view',
       default: false,
     },
     size: Enum.Size(),
@@ -25,6 +30,7 @@ export default {
       'comments',
       this.threaded && 'threaded',
       this.minimal && 'minimal',
+      this.collapsed && 'collapsed',
       this.size,
     ];
     const parentName = this.getParentName();

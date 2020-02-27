@@ -8627,6 +8627,50 @@ exports[`Examples ./views/Card/TextAlignmentCard.example.vue should match snapsh
 </div>"
 `;
 
+exports[`Examples ./views/Comment/Collapsed.example.vue should match snapshot 1`] = `
+"<div class=\\"comments ui\\">
+  <div class=\\"ui comment\\">
+    <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/christian.jpg\\"></div>
+    <div class=\\"content\\"><a class=\\"author\\">Christian Rocha</a>
+      <div class=\\"metadata\\">
+        <div>2 days ago</div>
+      </div>
+      <div class=\\"text\\">I'm very interested in this motherboard. Do you know if it'd work in
+        an Intel LGA775 CPU socket?</div>
+      <div class=\\"actions\\"><a>Reply</a></div>
+    </div>
+    <div class=\\"comments collapsed\\">
+      <div class=\\"ui comment\\">
+        <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/elliot.jpg\\"></div>
+        <div class=\\"content\\"><a class=\\"author\\">Elliot Fu</a>
+          <div class=\\"metadata\\">
+            <div>1 day ago</div>
+          </div>
+          <div class=\\"text\\">
+            No it won't.
+          </div>
+          <div class=\\"actions\\"><a>Reply</a></div>
+        </div>
+        <div class=\\"comments\\">
+          <div class=\\"ui comment\\">
+            <div class=\\"avatar\\"><img src=\\"static/images/avatar/small/jenny.jpg\\"></div>
+            <div class=\\"content\\"><a class=\\"author\\">Jenny Hess</a>
+              <div class=\\"metadata\\">
+                <div>20 minutes ago</div>
+              </div>
+              <div class=\\"text\\">
+                Maybe it would.
+              </div>
+              <div class=\\"actions\\"><a>Reply</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Examples ./views/Comment/Comment.example.vue should match snapshot 1`] = `
 "<div class=\\"comments ui\\">
   <h3 class=\\"ui dividing header\\">Comments</h3>
