@@ -1,15 +1,12 @@
 import { SemanticUIVueMixin } from '../../lib';
-import Result from './Result';
 import { debounce } from '../../lib/underscore';
 import Input from '../../elements/Input/Input';
-
-const inputPropsDef = Input.props;
+import Results from './Results';
 
 export default {
   name: 'SuiSearch',
   mixins: [SemanticUIVueMixin],
   props: {
-    ...inputPropsDef,
     apiSettings: {
       type: Object,
       description: 'Settings for API call.',
@@ -98,30 +95,11 @@ export default {
     },
   },
   computed: {
-    open() {
-      return !!(
-        this.searchTerm &&
-        this.searchFocused &&
-        !this.searchLoading &&
-        this.filteredResults.length
-      );
-    },
-    inputProps() {
-      const result = Object.keys(inputPropsDef).reduce((result, propKey) => {
-        result[propKey] = this.$props[propKey];
-        return result;
-      }, {});
-      result.inputClass = 'prompt';
-      result.value = this.searchTerm;
-      return result;
+    category() {
+      return !Array.isArray(this.filteredResults);
     },
   },
   watch: {
-    open() {
-      this.animationTimeout = setTimeout(() => {
-        this.animationTimeout = null;
-      }, this.duration);
-    },
     searchTerm() {
       if (this.searchTerm) {
         this.searchLoading = true;
@@ -134,38 +112,43 @@ export default {
   },
   render() {
     const ElementType = this.getElementType();
+
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes('ui', 'search')}
+        class={this.classes('ui', this.category && 'category', 'search')}
       >
-        <Input
-          {...{ props: this.inputProps }}
-          placeholder={this.placeholder}
-          onInput={this.handleInput}
-          onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
-          type="text"
+        {this.$scopedSlots.input ? (
+          this.$scopedSlots.input({
+            props: {
+              inputClass: 'prompt',
+              value: this.searchTerm,
+            },
+            handlers: {
+              blur: this.handleBlur,
+              input: this.handleInput,
+              focus: this.handleFocus,
+            },
+          })
+        ) : (
+          <input
+            class="prompt"
+            placeholder={this.placeholder}
+            onInput={this.handleInput}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+            type="text"
+          />
+        )}
+        <Results
+          category={this.category}
+          duration={this.duration}
+          animationTimeout={this.animationTimeout}
+          searchTerm={this.searchTerm}
+          searchFocused={this.searchFocused}
+          searchLoading={this.searchLoading}
+          results={this.filteredResults}
         />
-        <div
-          class={this.classes(
-            'results',
-            'transition',
-            this.animationTimeout &&
-              `visible animating scale ${this.open ? 'in' : 'out'}`,
-            !this.animationTimeout && (this.open ? 'visible' : 'hidden'),
-          )}
-        >
-          {this.filteredResults.map(result =>
-            this.$slots.result ? (
-              this.$slots.result({
-                result,
-              })
-            ) : (
-              <Result {...{ props: result }} />
-            ),
-          )}
-        </div>
       </ElementType>
     );
   },

@@ -21,7 +21,11 @@ const root = new Vue({
   provide: {
     sui: {
       api: {
-        api: { search: 'https://api.semantic-ui.com/search/{value}' },
+        base: 'https://api.semantic-ui.com',
+        api: {
+          search: '/search/{value}',
+          'search category': '/search/category/{value}',
+        },
         onResponse(response) {
           return response.results;
         },

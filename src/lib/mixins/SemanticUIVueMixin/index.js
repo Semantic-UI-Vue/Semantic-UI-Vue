@@ -3,7 +3,7 @@ import getChildListeners from './getChildListeners';
 import getElementType from './getElementType';
 import { num, classes } from './utils';
 import ajax from '../../ajax';
-import { defaultsDeep } from '../../underscore';
+import { defaultsDeep, get } from '../../underscore';
 import api from './api';
 
 export const SemanticUIVueMixin = {
@@ -31,10 +31,9 @@ export const SemanticUIVueMixin = {
     num,
     classes,
     getEndpoint(action, params) {
-      const endpoint =
-        this.sui && this.sui.api && this.sui.api.api && this.sui.api.api[action]
-          ? this.sui.api.api[action]
-          : '/';
+      const baseUrl = get(this.sui, 'api.base', '');
+      const path = get(this.sui, `api.api.${action}`);
+      const endpoint = `${baseUrl}${path}`;
       return Object.keys(params).reduce(
         (url, key) => url.replace(`{${key}}`, params[key]),
         endpoint,

@@ -11,12 +11,12 @@ export default [
         name: 'SearchInput',
         file: 'SearchInput',
       },
-      // {
-      //   name: 'Min characters',
-      //   description:
-      //     'An example of minimal characters to search requirement (min 3)',
-      //   file: 'SearchMinCharacters',
-      // },
+      {
+        name: 'Category',
+        description:
+          'A search can display results from remote content ordered by categories.',
+        file: 'SearchCategory',
+      },
       // {
       //   name: 'Category',
       //   description: 'A search can display results ordered by categories',

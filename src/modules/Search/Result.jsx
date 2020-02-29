@@ -25,7 +25,7 @@ export default {
       <ElementType
         {...this.getChildPropsAndListeners()}
         {...urlProps}
-        class={this.classes('result')}
+        class="result"
       >
         <div class="content">
           {this.title && <div class="title">{this.title}</div>}

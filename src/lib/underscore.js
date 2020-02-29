@@ -89,3 +89,16 @@ export function defaultsDeep(current, defaults) {
   });
   return target;
 }
+
+export function get(obj, path, def = null) {
+  return path
+    .split('.')
+    .reduce(
+      (currentObject, key) =>
+        currentObject &&
+        Object.prototype.hasOwnProperty.call(currentObject, key)
+          ? currentObject[key]
+          : def,
+      obj,
+    );
+}
