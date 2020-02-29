@@ -11,7 +11,7 @@ export default {
     duration: Number,
     searchTerm: String,
     searchFocused: Boolean,
-    searchLoading: Boolean,
+    loading: Boolean,
     results: [Array, Object],
   },
   data() {
@@ -24,8 +24,15 @@ export default {
       return !!(
         this.searchTerm &&
         this.searchFocused &&
-        !this.searchLoading &&
+        !this.loading &&
         this.results
+      );
+    },
+    empty() {
+      return !(
+        this.results &&
+        typeof this.results === 'object' &&
+        (this.results.length || Object.keys(this.results).length)
       );
     },
   },
@@ -43,7 +50,7 @@ export default {
   },
   render() {
     const Component = this.category ? CategoryResults : SimpleResults;
-    return (
+    return this.empty ? null : (
       <div
         class={this.classes(
           'results',
@@ -54,23 +61,18 @@ export default {
           !this.animationTimeout && (this.open ? 'visible' : 'hidden'),
         )}
       >
-        {this.results && (
-          <Component
-            results={this.results}
-            {...{
-              scopedSlots: {
-                default: ({ result }) => {
-                  return (
-                    <Result
-                      {...{ props: result }}
-                      onSelect={this.handleSelect}
-                    />
-                  );
-                },
+        <Component
+          results={this.results}
+          {...{
+            scopedSlots: {
+              default: ({ result }) => {
+                return (
+                  <Result {...{ props: result }} onSelect={this.handleSelect} />
+                );
               },
-            }}
-          ></Component>
-        )}
+            },
+          }}
+        ></Component>
       </div>
     );
   },

@@ -8,7 +8,6 @@ export default [
         file: 'SearchStandard',
       },
       {
-        name: 'SearchInput',
         file: 'SearchInput',
       },
       {
@@ -23,11 +22,16 @@ export default [
           'A search can look for results inside a static local source.',
         file: 'SearchLocal',
       },
-      // {
-      //   name: 'Category',
-      //   description: 'A search can display results ordered by categories',
-      //   file: 'SearchCategory',
-      // },
+    ],
+  },
+  {
+    name: 'States',
+    examples: [
+      {
+        name: 'Loading',
+        description: 'A search can show a loading indicator.',
+        file: 'SearchLoading',
+      },
     ],
   },
 ];

@@ -92,7 +92,7 @@ export default {
       searchTerm: this.value,
       searchFocused: false,
       request: null,
-      searchLoading: true,
+      loading: false,
       filteredResults: null,
     };
   },
@@ -124,12 +124,12 @@ export default {
           this.searchFields,
           this.fullTextSearch,
         ).slice(0, this.maxResults);
-        this.searchLoading = false;
+        this.loading = false;
       } else {
         this.executeAction(this.getEndpoint(this.action, { value })).then(
           results => {
             if (this.searchTerm === value) {
-              this.searchLoading = false;
+              this.loading = false;
               this.filteredResults = results;
             }
           },
@@ -139,7 +139,11 @@ export default {
   },
   computed: {
     category() {
-      return !Array.isArray(this.filteredResults);
+      return (
+        this.filteredResults &&
+        typeof this.filteredResults === 'object' &&
+        !Array.isArray(this.filteredResults)
+      );
     },
   },
   watch: {
@@ -148,10 +152,10 @@ export default {
     },
     searchTerm() {
       if (this.searchTerm) {
-        this.searchLoading = true;
+        this.loading = true;
         this.search(this.searchTerm);
       } else {
-        this.searchLoading = false;
+        this.loading = false;
         this.filteredResults = null;
       }
     },
@@ -171,6 +175,7 @@ export default {
             props: {
               inputClass: promptClass,
               value: this.searchTerm,
+              loading: this.loading,
             },
             handlers: {
               blur: this.handleBlur,
@@ -195,7 +200,7 @@ export default {
           animationTimeout={this.animationTimeout}
           searchTerm={this.searchTerm}
           searchFocused={this.searchFocused}
-          searchLoading={this.searchLoading}
+          loading={this.loading}
           results={this.filteredResults}
           onSelect={this.handleSelect}
         />
