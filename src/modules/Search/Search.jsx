@@ -50,6 +50,10 @@ export default {
       description:
         "One of:\n- array of results e.g. `{ title: '', description: '' }` or\n- object of categories e.g. `{ name: '', results: [{ title: '', description: '' }]`",
     },
+    value: {
+      type: String,
+      description: 'Current value of the search input.',
+    },
   },
   meta: {
     slots: {
@@ -85,7 +89,7 @@ export default {
   data() {
     return {
       animationTimeout: null,
-      searchTerm: '',
+      searchTerm: this.value,
       searchFocused: false,
       request: null,
       searchLoading: true,
@@ -100,6 +104,11 @@ export default {
   methods: {
     handleInput(event) {
       this.searchTerm = typeof event === 'string' ? event : event.target.value;
+      this.$emit('input', this.searchTerm);
+    },
+    handleSelect(result) {
+      this.$emit('select', result);
+      this.handleInput(result.title);
     },
     handleFocus() {
       this.searchFocused = true;
@@ -134,6 +143,9 @@ export default {
     },
   },
   watch: {
+    value() {
+      this.searchTerm = this.value;
+    },
     searchTerm() {
       if (this.searchTerm) {
         this.searchLoading = true;
@@ -173,6 +185,7 @@ export default {
             onInput={this.handleInput}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
+            value={this.searchTerm}
             type="text"
           />
         )}
@@ -184,6 +197,7 @@ export default {
           searchFocused={this.searchFocused}
           searchLoading={this.searchLoading}
           results={this.filteredResults}
+          onSelect={this.handleSelect}
         />
       </ElementType>
     );

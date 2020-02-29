@@ -1,6 +1,7 @@
 import { SemanticUIVueMixin } from '../../lib';
 import CategoryResults from './CategoryResults';
 import SimpleResults from './SimpleResults';
+import Result from './Result';
 
 export default {
   name: 'SuiSearchResults',
@@ -35,6 +36,11 @@ export default {
       }, this.duration);
     },
   },
+  methods: {
+    handleSelect(result) {
+      this.$emit('select', result);
+    },
+  },
   render() {
     const Component = this.category ? CategoryResults : SimpleResults;
     return (
@@ -48,7 +54,23 @@ export default {
           !this.animationTimeout && (this.open ? 'visible' : 'hidden'),
         )}
       >
-        {this.results && <Component results={this.results} />}
+        {this.results && (
+          <Component
+            results={this.results}
+            {...{
+              scopedSlots: {
+                default: ({ result }) => {
+                  return (
+                    <Result
+                      {...{ props: result }}
+                      onSelect={this.handleSelect}
+                    />
+                  );
+                },
+              },
+            }}
+          ></Component>
+        )}
       </div>
     );
   },

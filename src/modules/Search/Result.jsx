@@ -25,6 +25,7 @@ export default {
       <ElementType
         {...this.getChildPropsAndListeners()}
         {...urlProps}
+        onClick={() => this.$emit('select', this.$props)}
         class="result"
       >
         <div class="content">
