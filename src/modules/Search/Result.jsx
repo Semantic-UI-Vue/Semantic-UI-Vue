@@ -1,8 +1,6 @@
-import { SemanticUIVueMixin } from '../../lib';
-
 export default {
   name: 'SuiSearchResult',
-  mixins: [SemanticUIVueMixin],
+  functional: true,
   props: {
     title: {
       type: String,
@@ -17,24 +15,17 @@ export default {
       description: 'Link to open on click.',
     },
   },
-  render() {
-    const ElementType = this.getElementType(this.url ? 'a' : 'div');
-    const urlProps = this.url ? { url: this.url } : {};
+  render(_, { props, listeners }) {
+    const { title, description, url } = props;
+    const urlProps = url ? { url } : {};
 
     return (
-      <ElementType
-        {...this.getChildPropsAndListeners()}
-        {...urlProps}
-        onClick={() => this.$emit('select', this.$props)}
-        class="result"
-      >
+      <div {...urlProps} onClick={() => listeners.select(props)} class="result">
         <div class="content">
-          {this.title && <div class="title">{this.title}</div>}
-          {this.description && (
-            <div class="description">{this.description}</div>
-          )}
+          {title && <div class="title">{title}</div>}
+          {description && <div class="description">{description}</div>}
         </div>
-      </ElementType>
+      </div>
     );
   },
 };
