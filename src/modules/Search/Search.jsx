@@ -1,6 +1,8 @@
 import { SemanticUIVueMixin } from '../../lib';
 import { debounce } from '../../lib/underscore';
 import Results from './Results';
+import { Enum } from '../../lib/PropTypes';
+import search from './search';
 
 export default {
   name: 'SuiSearch',
@@ -15,6 +17,14 @@ export default {
       type: Number,
       description: 'Duration of animation events.',
       default: () => 300,
+    },
+    fullTextSearch: Enum(['exact'], {
+      type: [Boolean],
+      default: () => true,
+    }),
+    maxResults: {
+      type: Number,
+      default: () => 7,
     },
     placeholder: {
       type: String,
@@ -35,17 +45,32 @@ export default {
       },
       description: 'Delay before querying results on inputchange',
     },
-    results: {
+    source: {
       type: Array,
       description:
         "One of:\n- array of results e.g. `{ title: '', description: '' }` or\n- object of categories e.g. `{ name: '', results: [{ title: '', description: '' }]`",
-      default() {
-        return [];
-      },
     },
   },
   meta: {
     slots: {
+      input: {
+        description: 'Custom input.',
+        scope: {
+          class: {
+            type: String,
+            description:
+              'CSS class to give to the input. Do not use with sui-input, use `props` instead.',
+          },
+          props: {
+            type: Object,
+            description: 'Props to pass to sui-input.',
+          },
+          handlers: {
+            type: Object,
+            description: 'Handlers to pass to the input.',
+          },
+        },
+      },
       result: {
         description: 'Render the result.',
         scope: {
@@ -68,7 +93,9 @@ export default {
     };
   },
   created() {
-    this.search = debounce(this.search, this.searchDelay);
+    if (!this.source) {
+      this.search = debounce(this.search, this.searchDelay);
+    }
   },
   methods: {
     handleInput(event) {
@@ -81,14 +108,24 @@ export default {
       this.searchFocused = false;
     },
     search(value) {
-      this.executeAction(this.getEndpoint(this.action, { value })).then(
-        results => {
-          if (this.searchTerm === value) {
-            this.searchLoading = false;
-            this.filteredResults = results;
-          }
-        },
-      );
+      if (this.source) {
+        this.filteredResults = search(
+          this.searchTerm,
+          this.source,
+          this.searchFields,
+          this.fullTextSearch,
+        ).slice(0, this.maxResults);
+        this.searchLoading = false;
+      } else {
+        this.executeAction(this.getEndpoint(this.action, { value })).then(
+          results => {
+            if (this.searchTerm === value) {
+              this.searchLoading = false;
+              this.filteredResults = results;
+            }
+          },
+        );
+      }
     },
   },
   computed: {
@@ -109,6 +146,7 @@ export default {
   },
   render() {
     const ElementType = this.getElementType();
+    const promptClass = 'prompt';
 
     return (
       <ElementType
@@ -117,8 +155,9 @@ export default {
       >
         {this.$scopedSlots.input ? (
           this.$scopedSlots.input({
+            class: promptClass,
             props: {
-              inputClass: 'prompt',
+              inputClass: promptClass,
               value: this.searchTerm,
             },
             handlers: {
