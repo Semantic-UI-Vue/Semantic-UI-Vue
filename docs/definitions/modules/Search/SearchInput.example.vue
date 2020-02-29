@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <sui-search placeholder="Common passwords..." />
+    <sui-search placeholder="Common passwords..." icon="search" />
     <sui-message :content="message" />
   </div>
 </template>

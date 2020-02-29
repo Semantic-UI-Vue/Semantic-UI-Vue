@@ -1,11 +1,15 @@
 import { SemanticUIVueMixin } from '../../lib';
 import Result from './Result';
 import { debounce } from '../../lib/underscore';
+import Input from '../../elements/Input/Input';
+
+const inputPropsDef = Input.props;
 
 export default {
   name: 'SuiSearch',
   mixins: [SemanticUIVueMixin],
   props: {
+    ...inputPropsDef,
     apiSettings: {
       type: Object,
       description: 'Settings for API call.',
@@ -48,9 +52,6 @@ export default {
   },
   meta: {
     slots: {
-      input: {
-        description: 'Search input.',
-      },
       result: {
         description: 'Render the result.',
         scope: {
@@ -66,32 +67,31 @@ export default {
     return {
       animationTimeout: null,
       searchTerm: '',
-      focus: false,
+      searchFocused: false,
       request: null,
-      loading: true,
-      fetchedResults: [],
+      searchLoading: true,
+      filteredResults: [],
     };
   },
   created() {
     this.search = debounce(this.search, this.searchDelay);
   },
   methods: {
-    handleInput(e) {
-      this.searchTerm = e.target.value;
+    handleInput(value) {
+      this.searchTerm = value;
     },
     handleFocus() {
-      this.focus = true;
+      this.searchFocused = true;
     },
     handleBlur() {
-      this.focus = false;
+      this.searchFocused = false;
     },
     search(value) {
       this.executeAction(this.getEndpoint('search', { value })).then(
         results => {
-          console.log(results);
           if (this.searchTerm === value) {
-            this.loading = false;
-            this.fetchedResults = results;
+            this.searchLoading = false;
+            this.filteredResults = results || [];
           }
         },
       );
@@ -99,20 +99,21 @@ export default {
   },
   computed: {
     open() {
-      return (
+      return !!(
         this.searchTerm &&
-        this.focus &&
-        !this.loading &&
-        this.fetchedResults.length
+        this.searchFocused &&
+        !this.searchLoading &&
+        this.filteredResults.length
       );
     },
-    filteredResults() {
-      return this.results.filter(result => {
-        for (let property of this.searchFields) {
-          if (result[property].includes(this.searchTerm)) return true;
-        }
-        return false;
-      });
+    inputProps() {
+      const result = Object.keys(inputPropsDef).reduce((result, propKey) => {
+        result[propKey] = this.$props[propKey];
+        return result;
+      }, {});
+      result.inputClass = 'prompt';
+      result.value = this.searchTerm;
+      return result;
     },
   },
   watch: {
@@ -123,10 +124,11 @@ export default {
     },
     searchTerm() {
       if (this.searchTerm) {
-        this.loading = true;
+        this.searchLoading = true;
         this.search(this.searchTerm);
       } else {
-        this.loading = false;
+        this.searchLoading = false;
+        this.filteredResults = [];
       }
     },
   },
@@ -137,16 +139,14 @@ export default {
         {...this.getChildPropsAndListeners()}
         class={this.classes('ui', 'search')}
       >
-        {this.$slots.input || (
-          <input
-            class="prompt"
-            type="text"
-            placeholder={this.placeholder}
-            onInput={this.handleInput}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-          />
-        )}
+        <Input
+          {...{ props: this.inputProps }}
+          placeholder={this.placeholder}
+          onInput={this.handleInput}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
+          type="text"
+        />
         <div
           class={this.classes(
             'results',
@@ -156,13 +156,13 @@ export default {
             !this.animationTimeout && (this.open ? 'visible' : 'hidden'),
           )}
         >
-          {this.results.map(result =>
+          {this.filteredResults.map(result =>
             this.$slots.result ? (
               this.$slots.result({
                 result,
               })
             ) : (
-              <Result {...result} />
+              <Result {...{ props: result }} />
             ),
           )}
         </div>

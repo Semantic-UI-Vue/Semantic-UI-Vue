@@ -7,6 +7,10 @@ export default [
         description: 'A basic search element',
         file: 'SearchStandard',
       },
+      {
+        name: 'SearchInput',
+        file: 'SearchInput',
+      },
       // {
       //   name: 'Min characters',
       //   description:
