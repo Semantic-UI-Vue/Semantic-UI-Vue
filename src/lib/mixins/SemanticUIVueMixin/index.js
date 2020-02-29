@@ -31,8 +31,13 @@ export const SemanticUIVueMixin = {
     num,
     classes,
     getEndpoint(action, params) {
-      const baseUrl = get(this.sui, 'api.base', '');
       const path = get(this.sui, `api.api.${action}`);
+
+      if (!path) {
+        throw new Error(`Action '${action}' not provided`);
+      }
+
+      const baseUrl = get(this.sui, 'api.base', '');
       const endpoint = `${baseUrl}${path}`;
       return Object.keys(params).reduce(
         (url, key) => url.replace(`{${key}}`, params[key]),

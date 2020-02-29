@@ -1,24 +1,20 @@
-import VFragment from '../../lib/VFragment';
 import Result from './Result';
 
 export default {
   name: 'SuiSearchSimpleResults',
+  functional: true,
   props: {
     results: Array,
   },
-  render() {
-    return (
-      <VFragment>
-        {this.results.map(result =>
-          this.$slots.result ? (
-            this.$slots.result({
-              result,
-            })
-          ) : (
-            <Result {...{ props: result }} />
-          ),
-        )}
-      </VFragment>
+  render(_, { props, slots }) {
+    return props.results.map(result =>
+      slots.result ? (
+        slots.result({
+          result,
+        })
+      ) : (
+        <Result {...{ props: result }} />
+      ),
     );
   },
 };

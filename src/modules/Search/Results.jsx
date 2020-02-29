@@ -24,7 +24,7 @@ export default {
         this.searchTerm &&
         this.searchFocused &&
         !this.searchLoading &&
-        this.results.length
+        this.results
       );
     },
   },
@@ -48,7 +48,7 @@ export default {
           !this.animationTimeout && (this.open ? 'visible' : 'hidden'),
         )}
       >
-        <Component results={this.results} />
+        {this.results && <Component results={this.results} />}
       </div>
     );
   },

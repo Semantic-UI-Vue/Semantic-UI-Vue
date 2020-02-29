@@ -1,18 +1,15 @@
 import { SemanticUIVueMixin } from '../../lib';
 import { debounce } from '../../lib/underscore';
-import Input from '../../elements/Input/Input';
 import Results from './Results';
 
 export default {
   name: 'SuiSearch',
   mixins: [SemanticUIVueMixin],
   props: {
-    apiSettings: {
-      type: Object,
-      description: 'Settings for API call.',
-      default: () => ({
-        action: 'search',
-      }),
+    action: {
+      type: String,
+      description: 'API action to use',
+      default: () => 'search',
     },
     duration: {
       type: Number,
@@ -67,15 +64,15 @@ export default {
       searchFocused: false,
       request: null,
       searchLoading: true,
-      filteredResults: [],
+      filteredResults: null,
     };
   },
   created() {
     this.search = debounce(this.search, this.searchDelay);
   },
   methods: {
-    handleInput(value) {
-      this.searchTerm = value;
+    handleInput(event) {
+      this.searchTerm = typeof event === 'string' ? event : event.target.value;
     },
     handleFocus() {
       this.searchFocused = true;
@@ -84,11 +81,11 @@ export default {
       this.searchFocused = false;
     },
     search(value) {
-      this.executeAction(this.getEndpoint('search', { value })).then(
+      this.executeAction(this.getEndpoint(this.action, { value })).then(
         results => {
           if (this.searchTerm === value) {
             this.searchLoading = false;
-            this.filteredResults = results || [];
+            this.filteredResults = results;
           }
         },
       );
@@ -106,7 +103,7 @@ export default {
         this.search(this.searchTerm);
       } else {
         this.searchLoading = false;
-        this.filteredResults = [];
+        this.filteredResults = null;
       }
     },
   },

@@ -1,25 +1,20 @@
-import VFragment from '../../lib/VFragment';
 import SimpleResults from './SimpleResults';
 
 export default {
   name: 'SuiSearchCategoryResults',
+  functional: true,
   props: {
     results: Object,
   },
-  computed: {
-    categories() {
-      return Object.keys(this.results);
-    },
-  },
-  render() {
-    return (
-      <VFragment>
-        {this.categories.map(category => (
-          <div class="category" key={category}>
-            <SimpleResults results={this.results[category]} />
-          </div>
-        ))}
-      </VFragment>
-    );
+  render(_, { props }) {
+    const categories = Object.keys(props.results);
+    return categories.map(category => (
+      <div class="category" key={category}>
+        <div class="name">{props.results[category].name}</div>
+        <div class="results">
+          <SimpleResults results={props.results[category].results} />
+        </div>
+      </div>
+    ));
   },
 };
