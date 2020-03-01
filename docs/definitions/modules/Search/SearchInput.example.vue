@@ -4,8 +4,8 @@
       <sui-input
         v-bind="props"
         v-on="handlers"
-        icon="search"
         placeholder="Common passwords..."
+        icon="search"
       />
     </template>
   </sui-search>

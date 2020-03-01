@@ -2,7 +2,7 @@ import { SemanticUIVueMixin } from '../../lib';
 import { debounce } from '../../lib/underscore';
 import Results from './Results';
 import { Enum } from '../../lib/PropTypes';
-import search from './search';
+import search from './utils/search';
 
 export default {
   name: 'SuiSearch',
@@ -48,11 +48,15 @@ export default {
     source: {
       type: Array,
       description:
-        "One of:\n- array of results e.g. `{ title: '', description: '' }` or\n- object of categories e.g. `{ name: '', results: [{ title: '', description: '' }]`",
+        "One of:\n- array of results e.g. `{ title: '', description: '' }` or\n- object of categories e.g. `{ name: '', results: [{ title: '', description: '' }] }`",
     },
     value: {
       type: String,
       description: 'Current value of the search input.',
+    },
+    loading: {
+      type: Boolean,
+      description: 'A search can show a loading indicator.',
     },
   },
   meta: {
@@ -89,12 +93,39 @@ export default {
   data() {
     return {
       animationTimeout: null,
-      searchTerm: this.value,
       searchFocused: false,
       request: null,
-      loading: false,
       filteredResults: null,
+      valueState: null,
+      loadingState: false,
     };
+  },
+  computed: {
+    category() {
+      return (
+        this.filteredResults &&
+        typeof this.filteredResults === 'object' &&
+        !Array.isArray(this.filteredResults)
+      );
+    },
+    internalLoading() {
+      return this.loading || this.loadingState;
+    },
+    internalValue() {
+      if (typeof this.value === 'undefined') return this.valueState;
+      return this.value;
+    },
+  },
+  watch: {
+    internalValue() {
+      if (this.internalValue) {
+        this.loadingState = true;
+        this.search(this.internalValue);
+      } else {
+        this.loadingState = false;
+        this.filteredResults = null;
+      }
+    },
   },
   created() {
     if (!this.source) {
@@ -103,8 +134,8 @@ export default {
   },
   methods: {
     handleInput(event) {
-      this.searchTerm = typeof event === 'string' ? event : event.target.value;
-      this.$emit('input', this.searchTerm);
+      this.valueState = typeof event === 'string' ? event : event.target.value;
+      this.$emit('input', this.valueState);
     },
     handleSelect(result) {
       this.$emit('select', result);
@@ -119,44 +150,21 @@ export default {
     search(value) {
       if (this.source) {
         this.filteredResults = search(
-          this.searchTerm,
+          this.internalValue,
           this.source,
           this.searchFields,
           this.fullTextSearch,
         ).slice(0, this.maxResults);
-        this.loading = false;
+        this.loadingState = false;
       } else {
         this.executeAction(this.getEndpoint(this.action, { value })).then(
           results => {
-            if (this.searchTerm === value) {
-              this.loading = false;
+            if (this.internalValue === value) {
+              this.loadingState = false;
               this.filteredResults = results;
             }
           },
         );
-      }
-    },
-  },
-  computed: {
-    category() {
-      return (
-        this.filteredResults &&
-        typeof this.filteredResults === 'object' &&
-        !Array.isArray(this.filteredResults)
-      );
-    },
-  },
-  watch: {
-    value() {
-      this.searchTerm = this.value;
-    },
-    searchTerm() {
-      if (this.searchTerm) {
-        this.loading = true;
-        this.search(this.searchTerm);
-      } else {
-        this.loading = false;
-        this.filteredResults = null;
       }
     },
   },
@@ -167,15 +175,19 @@ export default {
     return (
       <ElementType
         {...this.getChildPropsAndListeners()}
-        class={this.classes('ui', this.category && 'category', 'search')}
+        class={this.classes(
+          'ui',
+          this.category && 'category',
+          this.internalLoading && 'loading',
+          'search',
+        )}
       >
         {this.$scopedSlots.input ? (
           this.$scopedSlots.input({
             class: promptClass,
             props: {
               inputClass: promptClass,
-              value: this.searchTerm,
-              loading: this.loading,
+              value: this.internalValue,
             },
             handlers: {
               blur: this.handleBlur,
@@ -187,21 +199,21 @@ export default {
           <input
             class="prompt"
             placeholder={this.placeholder}
-            onInput={this.handleInput}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-            value={this.searchTerm}
             type="text"
+            value={this.internalValue}
+            onBlur={this.handleBlur}
+            onFocus={this.handleFocus}
+            onInput={this.handleInput}
           />
         )}
         <Results
+          animationTimeout={this.animationTimeout}
           category={this.category}
           duration={this.duration}
-          animationTimeout={this.animationTimeout}
-          searchTerm={this.searchTerm}
-          searchFocused={this.searchFocused}
-          loading={this.loading}
+          loading={this.internalLoading}
           results={this.filteredResults}
+          searchFocused={this.searchFocused}
+          value={this.internalValue}
           onSelect={this.handleSelect}
         />
       </ElementType>

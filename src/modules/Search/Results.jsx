@@ -9,9 +9,9 @@ export default {
   props: {
     category: Boolean,
     duration: Number,
-    searchTerm: String,
     searchFocused: Boolean,
     loading: Boolean,
+    value: String,
     results: [Array, Object],
   },
   data() {
@@ -22,7 +22,7 @@ export default {
   computed: {
     open() {
       return !!(
-        this.searchTerm &&
+        this.value &&
         this.searchFocused &&
         !this.loading &&
         this.results
