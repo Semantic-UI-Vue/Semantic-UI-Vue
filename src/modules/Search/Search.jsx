@@ -13,15 +13,33 @@ export default {
       description: 'API action to use',
       default: () => 'search',
     },
+    aligned: Enum.Floated({
+      description:
+        'A search can have its results aligned to its left or right container edge.',
+    }),
+    disabled: {
+      type: Boolean,
+      description:
+        'A search can show it is currently unable to be interacted with.',
+    },
     duration: {
       type: Number,
       description: 'Duration of animation events.',
       default: () => 300,
     },
+    fluid: {
+      type: Boolean,
+      description:
+        'A search can have its results take up the width of its container.',
+    },
     fullTextSearch: Enum(['exact'], {
       type: [Boolean],
       default: () => true,
     }),
+    loading: {
+      type: Boolean,
+      description: 'A search can show a loading indicator.',
+    },
     maxResults: {
       type: Number,
       default: () => 7,
@@ -29,6 +47,13 @@ export default {
     placeholder: {
       type: String,
       description: "Input's placeholder.",
+    },
+    searchDelay: {
+      type: Number,
+      default() {
+        return 1000;
+      },
+      description: 'Delay before querying results on inputchange',
     },
     searchFields: {
       type: Array,
@@ -38,13 +63,6 @@ export default {
       description:
         'Specify object properties inside local source object which will be searched.',
     },
-    searchDelay: {
-      type: Number,
-      default() {
-        return 1000;
-      },
-      description: 'Delay before querying results on inputchange',
-    },
     source: {
       type: Array,
       description:
@@ -53,10 +71,6 @@ export default {
     value: {
       type: String,
       description: 'Current value of the search input.',
-    },
-    loading: {
-      type: Boolean,
-      description: 'A search can show a loading indicator.',
     },
   },
   meta: {
@@ -178,6 +192,10 @@ export default {
         class={this.classes(
           'ui',
           this.category && 'category',
+          this.disabled && 'disabled',
+          this.fluid && 'fluid',
+          this.aligned,
+          this.aligned && 'aligned',
           this.internalLoading && 'loading',
           'search',
         )}
