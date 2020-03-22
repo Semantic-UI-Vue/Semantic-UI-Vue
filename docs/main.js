@@ -18,6 +18,20 @@ const root = new Vue({
   components: { App },
   router,
   template: '<App/>',
+  provide: {
+    sui: {
+      api: {
+        base: 'https://api.semantic-ui.com',
+        api: {
+          search: '/search/{value}',
+          'search category': '/search/category/{value}',
+        },
+        onResponse(response) {
+          return response.results;
+        },
+      },
+    },
+  },
 });
 
 document.addEventListener('DOMContentLoaded', () => {

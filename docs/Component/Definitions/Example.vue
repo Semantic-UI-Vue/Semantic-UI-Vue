@@ -128,10 +128,6 @@ export default {
   visibility: collapse;
 }
 
-.exampleContainer {
-  overflow-x: auto;
-}
-
 .copy {
   float: right;
   color: #aaaaaa;

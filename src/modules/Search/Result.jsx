@@ -1,29 +1,31 @@
-import { SemanticUIVueMixin } from '../../lib';
-
 export default {
   name: 'SuiSearchResult',
-  mixins: [SemanticUIVueMixin],
+  functional: true,
   props: {
-    item: {
-      type: Object,
-      default: null,
+    title: {
+      type: String,
+      description: 'Display title.',
+    },
+    description: {
+      type: String,
+      description: 'Additional text with less emphasis.',
+    },
+    url: {
+      type: String,
+      description: 'Link to open on click.',
     },
   },
-  methods: {
-    handleClick() {
-      this.$emit('selected', this.item);
-    },
-  },
-  render() {
+  render(_, { props, listeners }) {
+    const { title, description, url } = props;
+    const urlProps = url ? { url } : {};
+
     return (
-      <a onClick={this.handleClick} class="result">
+      <div {...urlProps} onClick={() => listeners.select(props)} class="result">
         <div class="content">
-          <div class="title">{this.item.title}</div>
-          {this.item.description && (
-            <div class="description">{this.item.description}</div>
-          )}
+          {title && <div class="title">{title}</div>}
+          {description && <div class="description">{description}</div>}
         </div>
-      </a>
+      </div>
     );
   },
 };

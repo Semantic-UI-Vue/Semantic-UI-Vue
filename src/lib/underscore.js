@@ -60,3 +60,45 @@ export function forIn(object, callback) {
   Object.keys(object).forEach(_callback);
   Object.keys(object.__proto__).forEach(_callback);
 }
+
+export function debounce(func, wait, immediate) {
+  let timeout;
+  return function() {
+    const context = this;
+    const args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+export function defaultsDeep(current, defaults) {
+  const target = Object.assign({}, current);
+  Object.keys(defaults).forEach(key => {
+    const value = defaults[key];
+    if (!Object.prototype.hasOwnProperty.call(target, key)) {
+      target[key] = value;
+    } else if (typeof value === 'object' && typeof target[key] === 'object') {
+      target[key] = defaultsDeep(target[key], value);
+    }
+  });
+  return target;
+}
+
+export function get(obj, path, def = null) {
+  return path
+    .split('.')
+    .reduce(
+      (currentObject, key) =>
+        currentObject &&
+        Object.prototype.hasOwnProperty.call(currentObject, key)
+          ? currentObject[key]
+          : def,
+      obj,
+    );
+}

@@ -1,5 +1,5 @@
 <template lang="html">
-  <sui-search action="search category">
+  <sui-search disabled>
     <template v-slot:input="{ props, handlers }">
       <sui-input
         v-bind="props"

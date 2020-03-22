@@ -16,6 +16,7 @@ export default {
     icon: String,
     iconPosition: Enum(['left', 'right']),
     inverted: Boolean,
+    inputClass: String,
     loading: Boolean,
     size: Enum(['mini', 'small', 'large', 'big', 'huge', 'massive']),
     transparent: Boolean,
@@ -68,8 +69,10 @@ export default {
         )}
       >
         <input
+          class={this.inputClass}
           value={this.value}
           onInput={this.handleChange}
+          onFocus={e => this.$emit('focus', e)}
           onBlur={e => this.$emit('blur', e)}
           ref="input"
           type={this.type}
