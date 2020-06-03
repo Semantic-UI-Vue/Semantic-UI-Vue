@@ -89,7 +89,7 @@ Or, in alternative, you can import it using a CDN:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-<script src="https://unpkg.com/semantic-ui-vue/dist/semantic-ui-vue.min.js"></script>
+<script src="https://unpkg.com/semantic-ui-vue/dist/commonjs/semantic-ui-vue.js"></script>
 ```
 
 Now you are ready to go! Check out the components' examples to see how to use them.
