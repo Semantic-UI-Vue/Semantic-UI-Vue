@@ -22,7 +22,7 @@ export const SemanticUIVueMixin = {
       type: Object,
       default() {
         return {
-          api: defaultsDeep(this._sui.api, api),
+          api: defaultsDeep(this._sui ? this._sui.api : {}, api),
         };
       },
     },
