@@ -28,7 +28,6 @@ describe.only('Examples', () => {
     const Example = exampleContext(key).default;
     describe(key, () => {
       it('should match snapshot', () => {
-        // debugger;
         const html = mount(Example, { localVue }).html();
         expect(html).toMatchSnapshot();
       });

@@ -7575,31 +7575,58 @@ exports[`Examples ./modules/Rating/Rating.example.vue should match snapshot 1`] 
 </div>"
 `;
 
-exports[`Examples ./modules/Search/Search.example.vue should match snapshot 1`] = `
-"<div>
-  <div class=\\"ui search\\" placeholder=\\"Search animal...\\"><input placeholder=\\"Search animal...\\" class=\\"prompt\\"></div>
+exports[`Examples ./modules/Search/SearchAligned.example.vue should match snapshot 1`] = `
+"<div class=\\"ui right aligned search\\">
+  <div class=\\"ui icon input\\" placeholder=\\"Common animals...\\"><input type=\\"text\\" placeholder=\\"Common animals...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
+  <!---->
 </div>"
 `;
 
 exports[`Examples ./modules/Search/SearchCategory.example.vue should match snapshot 1`] = `
-"<div>
-  <div class=\\"ui search category\\" placeholder=\\"Search animal...\\"><input placeholder=\\"Search animal...\\" class=\\"prompt\\"></div>
+"<div class=\\"ui search\\">
+  <div class=\\"ui icon input\\" placeholder=\\"Common animals...\\"><input type=\\"text\\" placeholder=\\"Common animals...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
+  <!---->
 </div>"
 `;
 
-exports[`Examples ./modules/Search/SearchMinCharacters.example.vue should match snapshot 1`] = `
-"<div>
-  <div class=\\"ui search\\" placeholder=\\"Search animal...\\"><input placeholder=\\"Search animal...\\" class=\\"prompt\\"></div>
+exports[`Examples ./modules/Search/SearchDisabled.example.vue should match snapshot 1`] = `
+"<div class=\\"ui disabled search\\">
+  <div class=\\"ui icon input\\" placeholder=\\"Common animals...\\"><input type=\\"text\\" placeholder=\\"Common animals...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
+  <!---->
+</div>"
+`;
+
+exports[`Examples ./modules/Search/SearchFluid.example.vue should match snapshot 1`] = `
+"<div class=\\"ui fluid search\\">
+  <div class=\\"ui icon input\\" placeholder=\\"Common animals...\\"><input type=\\"text\\" placeholder=\\"Common animals...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
+  <!---->
+</div>"
+`;
+
+exports[`Examples ./modules/Search/SearchInput.example.vue should match snapshot 1`] = `
+"<div class=\\"ui search\\">
+  <div class=\\"ui icon input\\" placeholder=\\"Common passwords...\\"><input type=\\"text\\" placeholder=\\"Common passwords...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
+  <!---->
+</div>"
+`;
+
+exports[`Examples ./modules/Search/SearchLoading.example.vue should match snapshot 1`] = `
+"<div class=\\"ui loading search\\">
+  <div class=\\"ui icon input\\" placeholder=\\"Search...\\"><input type=\\"text\\" placeholder=\\"Search...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
+  <!---->
+</div>"
+`;
+
+exports[`Examples ./modules/Search/SearchLocal.example.vue should match snapshot 1`] = `
+"<div class=\\"ui search\\">
+  <div class=\\"ui icon input\\" placeholder=\\"Common passwords...\\"><input type=\\"text\\" placeholder=\\"Common passwords...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
+  <!---->
 </div>"
 `;
 
 exports[`Examples ./modules/Search/SearchStandard.example.vue should match snapshot 1`] = `
-"<div>
-  <div class=\\"ui search\\" placeholder=\\"Search animal...\\"><input placeholder=\\"Search animal...\\" class=\\"prompt\\"></div>
-  <div class=\\"ui message\\">Using a ui input allows you to use additional input types, like this icon input</div>
-  <div class=\\"ui search\\" placeholder=\\"Search animal...\\">
-    <div class=\\"ui icon input\\"><input placeholder=\\"Search animal...\\" class=\\"prompt\\"><i class=\\"search icon\\"></i></div>
-  </div>
+"<div class=\\"ui search\\"><input placeholder=\\"Common passwords...\\" type=\\"text\\" class=\\"prompt\\">
+  <!---->
 </div>"
 `;
 
