@@ -10,3 +10,9 @@
     </template>
   </sui-search>
 </template>
+
+<script>
+export default {
+  name: 'SearchDisabled',
+};
+</script>
