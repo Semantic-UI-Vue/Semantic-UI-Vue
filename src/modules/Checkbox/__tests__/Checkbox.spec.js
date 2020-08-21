@@ -44,4 +44,11 @@ describe('Checkbox', () => {
     });
     expect(checkbox.classes()).toContain('disabled');
   });
+
+  it('should create a SUI Checkbox in Indeterminate mode', () => {
+    const checkbox = shallowMount(Checkbox, {
+      propsData: { indeterminate: true },
+    });
+    expect(checkbox.find('input').element.indeterminate).toEqual(true);
+  });
 });

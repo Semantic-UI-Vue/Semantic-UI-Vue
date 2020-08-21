@@ -38,6 +38,7 @@ export default {
       type: Boolean,
       description: 'Make checkbox looks like a two-positional slider',
     },
+    indeterminate: Boolean,
   },
   events: {
     change: {
@@ -92,6 +93,7 @@ export default {
           this.toggle && 'toggle',
           this.slider && 'slider',
           this.disabled && 'disabled',
+          this.indeterminate && 'indeterminate',
           'checkbox',
         )}
       >
@@ -111,6 +113,13 @@ export default {
           {this.label || this.$slots.default}
         </label>
       </ElementType>
+    );
+  },
+  mounted() {
+    this.$watch(
+      'indeterminate',
+      val => (this.$refs.input.indeterminate = val),
+      { immediate: true },
     );
   },
 };
