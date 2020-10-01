@@ -40,4 +40,14 @@ export default [
       },
     ],
   },
+  {
+    name: 'Variations',
+    examples: [
+      {
+        name: 'Floating',
+        description: 'A message can float above content that it is related to.',
+        file: 'Floating',
+      },
+    ],
+  },
 ];
