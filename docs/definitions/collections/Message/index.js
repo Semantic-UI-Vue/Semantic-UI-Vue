@@ -48,6 +48,21 @@ export default [
         description: 'A message can float above content that it is related to.',
         file: 'Floating',
       },
+      {
+        name: 'Compact',
+        description: 'A message can take up only the width of its content.',
+        file: 'Compact',
+      },
+      {
+        name: 'Warning',
+        description: 'A message may be formatted to display warning messages.',
+        file: 'Warning',
+      },
+      {
+        name: 'Info',
+        description: 'A message may be formatted to display infomation.',
+        file: 'Info',
+      },
     ],
   },
 ];
