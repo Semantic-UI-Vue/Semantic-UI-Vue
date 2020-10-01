@@ -75,6 +75,16 @@ export default [
           'A message may be formatted to display a negative message.',
         file: 'Negative',
       },
+      {
+        name: 'Colored',
+        description: 'A message can be formatted to be different colors.',
+        file: 'Colored',
+      },
+      {
+        name: 'Size',
+        description: 'A message can have different sizes.',
+        file: 'Size',
+      },
     ],
   },
 ];
