@@ -63,6 +63,18 @@ export default [
         description: 'A message may be formatted to display infomation.',
         file: 'Info',
       },
+      {
+        name: 'Positive / Success',
+        description:
+          'A message may be formatted to display a positive message.',
+        file: 'Positive',
+      },
+      {
+        name: 'Negative / Error',
+        description:
+          'A message may be formatted to display a negative message.',
+        file: 'Negative',
+      },
     ],
   },
 ];
