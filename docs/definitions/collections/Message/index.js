@@ -40,4 +40,63 @@ export default [
       },
     ],
   },
+  {
+    name: 'Variations',
+    examples: [
+      {
+        name: 'Floating',
+        description: 'A message can float above content that it is related to.',
+        file: 'Floating',
+      },
+      {
+        name: 'Compact',
+        description: 'A message can take up only the width of its content.',
+        file: 'Compact',
+      },
+      {
+        name: 'Attached',
+        description:
+          'A message can be formatted to attach itself to other content.',
+        file: 'Attached',
+      },
+      {
+        name: 'Warning',
+        description: 'A message may be formatted to display warning messages.',
+        file: 'Warning',
+      },
+      {
+        name: 'Info',
+        description: 'A message may be formatted to display infomation.',
+        file: 'Info',
+      },
+      {
+        name: 'Positive / Success',
+        description:
+          'A message may be formatted to display a positive message.',
+        file: 'Positive',
+      },
+      {
+        file: 'Positive2',
+      },
+      {
+        name: 'Negative / Error',
+        description:
+          'A message may be formatted to display a negative message.',
+        file: 'Negative',
+      },
+      {
+        file: 'Negative2',
+      },
+      {
+        name: 'Colored',
+        description: 'A message can be formatted to be different colors.',
+        file: 'Colored',
+      },
+      {
+        name: 'Size',
+        description: 'A message can have different sizes.',
+        file: 'Size',
+      },
+    ],
+  },
 ];
