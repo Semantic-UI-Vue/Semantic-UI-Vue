@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
-    <sui-message info>
-      <sui-icon name="close" />
+    <sui-message info dismissable>
       <sui-message-header>
         Was this what you wanted?
       </sui-message-header>

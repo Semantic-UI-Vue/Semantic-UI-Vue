@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
-    <sui-message warning>
-      <sui-icon name="close" />
+    <sui-message warning dismissable>
       <sui-message-header>
         You must register before you can do that!
       </sui-message-header>

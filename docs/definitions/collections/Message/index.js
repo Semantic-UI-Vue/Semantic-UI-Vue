@@ -49,14 +49,15 @@ export default [
         file: 'Floating',
       },
       {
-        name: 'Attached',
-        description: 'A message can be formatted to attach itself to other content.',
-        file: 'Attached',
-      },
-      {
         name: 'Compact',
         description: 'A message can take up only the width of its content.',
         file: 'Compact',
+      },
+      {
+        name: 'Attached',
+        description:
+          'A message can be formatted to attach itself to other content.',
+        file: 'Attached',
       },
       {
         name: 'Warning',
@@ -75,10 +76,16 @@ export default [
         file: 'Positive',
       },
       {
+        file: 'Positive2',
+      },
+      {
         name: 'Negative / Error',
         description:
           'A message may be formatted to display a negative message.',
         file: 'Negative',
+      },
+      {
+        file: 'Negative2',
       },
       {
         name: 'Colored',
