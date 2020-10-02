@@ -49,6 +49,11 @@ export default [
         file: 'Floating',
       },
       {
+        name: 'Attached',
+        description: 'A message can be formatted to attach itself to other content.',
+        file: 'Attached',
+      },
+      {
         name: 'Compact',
         description: 'A message can take up only the width of its content.',
         file: 'Compact',
