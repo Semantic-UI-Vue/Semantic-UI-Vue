@@ -2,11 +2,11 @@ export default {
   props: {
     active: Boolean,
   },
+  inject: ['registerToParent', 'toggleEl'],
   data() {
     return {
       dataActive: this.active,
       currentIndex: null,
-      accordion: null,
     };
   },
   methods: {
@@ -14,26 +14,17 @@ export default {
       this.dataActive = value;
     },
     toggle() {
-      this.accordion.toggleEl(this);
+      this.toggleEl(this);
     },
   },
   mounted() {
-    let parent = this.$parent;
-    while (parent && !this.accordion) {
-      if (parent.$options.name === 'SuiAccordion') {
-        this.accordion = parent;
-      }
-
-      parent = parent.$parent;
-    }
-
-    if (!this.accordion) {
+    if (!this.registerToParent || !this.toggleEl) {
       throw new Error(
         `${this.$options.name} must be place as a child of a SuiAccordion`,
       );
     }
 
-    this.accordion.register(this);
+    this.registerToParent(this);
   },
   watch: {
     active(value) {

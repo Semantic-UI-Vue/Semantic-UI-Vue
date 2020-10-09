@@ -3,6 +3,12 @@ import { SemanticUIVueMixin } from '../../lib';
 export default {
   name: 'SuiAccordion',
   mixins: [SemanticUIVueMixin],
+  provide: function() {
+    return {
+      registerToParent: this.registerChild,
+      toggleEl: this.toggleEl,
+    };
+  },
   props: {
     activeIndex: [Number, Array],
     exclusive: Boolean,
@@ -32,7 +38,7 @@ export default {
     };
   },
   methods: {
-    register(el) {
+    registerChild(el) {
       let panelIndex = -1;
       let found;
 
@@ -79,7 +85,7 @@ export default {
       } else if (!Array.isArray(this.active)) {
         this.active = [index];
       } else if (!this.active.includes(index)) {
-        this.active.push(index)
+        this.active.push(index);
       }
     },
     toggle(index) {
