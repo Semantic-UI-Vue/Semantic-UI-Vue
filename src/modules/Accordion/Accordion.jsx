@@ -3,6 +3,12 @@ import { SemanticUIVueMixin } from '../../lib';
 export default {
   name: 'SuiAccordion',
   mixins: [SemanticUIVueMixin],
+  provide: function() {
+    return {
+      registerToParent: this.registerChild,
+      toggleEl: this.toggleEl,
+    };
+  },
   props: {
     activeIndex: [Number, Array],
     exclusive: Boolean,
@@ -14,16 +20,16 @@ export default {
   data() {
     let active;
 
-    if (this.exclusive) {
-      if (Array.isArray(this.activeIndex)) {
-        active = this.activeIndex[0];
+    if (this.activeIndex) {
+      if (this.exclusive) {
+        active = Array.isArray(this.activeIndex)
+          ? this.activeIndex[0]
+          : this.activeIndex;
       } else {
-        active = this.activeIndex;
+        active = !Array.isArray(this.activeIndex)
+          ? [this.activeIndex]
+          : this.activeIndex;
       }
-    } else if (!Array.isArray(this.activeIndex)) {
-      active = [this.activeIndex];
-    } else {
-      active = this.activeIndex;
     }
 
     return {
@@ -32,7 +38,7 @@ export default {
     };
   },
   methods: {
-    register(el) {
+    registerChild(el) {
       let panelIndex = -1;
       let found;
 
@@ -45,6 +51,10 @@ export default {
               ...(this.panelElms[panelIndex] || {}),
               [child.$options.name]: child,
             };
+
+            if (child.active) {
+              this.setActive(panelIndex);
+            }
 
             found = true;
             return true;
@@ -68,6 +78,15 @@ export default {
         }
         return false;
       });
+    },
+    setActive(index) {
+      if (this.exclusive) {
+        this.active = index;
+      } else if (!Array.isArray(this.active)) {
+        this.active = [index];
+      } else if (!this.active.includes(index)) {
+        this.active.push(index);
+      }
     },
     toggle(index) {
       if (this.exclusive) {
