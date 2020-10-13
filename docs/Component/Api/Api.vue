@@ -26,12 +26,14 @@ import ApiTable from './ApiTable.vue';
 
 function getProps(component) {
   const props = component.props;
-  return Object.keys(props).map(propName => ({
-    name: propName,
-    type: props[propName].type.name,
-    description: props[propName].description,
-    default: props[propName].default,
-  }));
+  return props
+    ? Object.keys(props).map(propName => ({
+        name: propName,
+        type: props[propName].type.name,
+        description: props[propName].description,
+        default: props[propName].default,
+      }))
+    : null;
 }
 
 function getEvents(component) {
