@@ -1434,9 +1434,11 @@ exports[`Examples ./collections/Menu/TopAttachedMenu.example.vue should match sn
 
 exports[`Examples ./collections/Message/DismissableBlock.example.vue should match snapshot 1`] = `
 "<div>
-  <div class=\\"ui message\\"><i class=\\"close icon\\"></i>
-    <div class=\\"header\\">Welcome back!</div>This is a special notification which you can dismiss.
-  </div>
+  <transition-stub name=\\"fade\\">
+    <div class=\\"ui message\\"><i class=\\"close icon\\"></i>
+      <div class=\\"header\\">Welcome back!</div>This is a special notification which you can dismiss.
+    </div>
+  </transition-stub>
   <!---->
 </div>"
 `;
