@@ -22,6 +22,12 @@ export default [
           'A table may be formatted to emphasize a first column that defines a rows content',
         file: 'TableDefinition',
       },
+      {
+        name: 'Structured',
+        description:
+          'A table can be formatted to display complex structured data',
+        file: 'TableStructured',
+      },
     ],
   },
   {
