@@ -1434,9 +1434,11 @@ exports[`Examples ./collections/Menu/TopAttachedMenu.example.vue should match sn
 
 exports[`Examples ./collections/Message/DismissableBlock.example.vue should match snapshot 1`] = `
 "<div>
-  <div class=\\"ui message\\"><i class=\\"close icon\\"></i>
-    <div class=\\"header\\">Welcome back!</div>This is a special notification which you can dismiss.
-  </div>
+  <transition-stub name=\\"fade\\">
+    <div class=\\"ui message\\"><i class=\\"close icon\\"></i>
+      <div class=\\"header\\">Welcome back!</div>This is a special notification which you can dismiss.
+    </div>
+  </transition-stub>
   <!---->
 </div>"
 `;
@@ -3253,6 +3255,56 @@ exports[`Examples ./collections/Table/TableStriped.example.vue should match snap
       <td class=\\"\\">September 14, 2013</td>
       <td class=\\"\\">jhlilk22@yahoo.com</td>
       <td class=\\"\\">No</td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Examples ./collections/Table/TableStructured.example.vue should match snapshot 1`] = `
+"<table class=\\"ui celled structured table\\">
+  <thead class=\\"\\">
+    <tr class=\\"\\">
+      <th class=\\"\\" rowspan=\\"2\\">Name</th>
+      <th class=\\"\\" rowspan=\\"2\\">Type</th>
+      <th class=\\"\\" rowspan=\\"2\\">Files</th>
+      <th class=\\"\\" colspan=\\"3\\">Languages</th>
+    </tr>
+    <tr class=\\"\\">
+      <th class=\\"\\">Ruby</th>
+      <th class=\\"\\">Javascript</th>
+      <th class=\\"\\">Python</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class=\\"\\">
+      <td class=\\"\\">Alpha Team</td>
+      <td class=\\"\\">Project 1</td>
+      <td class=\\"right aligned\\">2</td>
+      <td class=\\"center aligned\\"><i class=\\"green check large icon\\"></i></td>
+      <td class=\\"\\"></td>
+      <td class=\\"\\"></td>
+    </tr>
+    <tr class=\\"\\">
+      <td class=\\"\\" rowspan=\\"3\\">Beta Team</td>
+      <td class=\\"\\">Project 1</td>
+      <td class=\\"right aligned\\">52</td>
+      <td class=\\"center aligned\\"><i class=\\"green check large icon\\"></i></td>
+      <td class=\\"\\"></td>
+      <td class=\\"\\"></td>
+    </tr>
+    <tr class=\\"\\">
+      <td class=\\"\\">Project 2</td>
+      <td class=\\"right aligned\\">12</td>
+      <td class=\\"\\"></td>
+      <td class=\\"center aligned\\"><i class=\\"green check large icon\\"></i></td>
+      <td class=\\"\\"></td>
+    </tr>
+    <tr class=\\"\\">
+      <td class=\\"\\">Project 3</td>
+      <td class=\\"right aligned\\">21</td>
+      <td class=\\"center aligned\\"><i class=\\"green check large icon\\"></i></td>
+      <td class=\\"\\"></td>
+      <td class=\\"\\"></td>
     </tr>
   </tbody>
 </table>"
