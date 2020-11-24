@@ -75,4 +75,12 @@ describe('Image', () => {
     });
     expect(image.classes()).toContain('rounded');
   });
+  
+  it('should create image with alt attribute', () => {
+    const altText = "alt text";
+    const image = shallowMount(ImageWithRequired, { 
+      propsData: { alt: altText } 
+    });
+    expect(image.element.getAttribute('alt')).toEqual(altText);
+  });
 });
