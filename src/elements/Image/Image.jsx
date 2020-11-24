@@ -10,6 +10,7 @@ export default {
       description:
         'An image may be formatted to appear inline with text as an avatar.',
     },
+    alt: String,
     bordered: {
       type: Boolean,
       description:
@@ -58,17 +59,18 @@ export default {
       this.disabled && 'disabled',
       'image',
     );
+    const altText = this.alt || "";
 
     if (this.wrapped || this.$slots.corner || this.$slots.label) {
       return (
         <ElementType class={classNames}>
           {this.$slots.corner}
-          <img src={this.src} />
+          <img src={this.src} alt={altText} />
           {this.$slots.label}
         </ElementType>
       );
     }
 
-    return <img class={classNames} src={this.src} />;
+    return <img class={classNames} src={this.src} alt={altText} />;
   },
 };
